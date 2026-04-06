@@ -1,0 +1,11 @@
+# UI & Design System Rules for HTML + Vanilla CSS
+
+## 1. Spacing System (Strict 4-Point Grid)
+- **4的倍数原则**：所有的外边距 (margin)、内边距 (padding)、间距 (gap) 和宽高尺寸，必须严格是 4 的倍数 (如 4px, 8px, 12px, 16px, 20px, 24px 等)。
+- **强制原生 CSS**：严禁使用 Tailwind CSS 的类名（如 p-4, flex-col, gap-5 等）。你必须输出标准的 CSS 样式属性（如 `padding: 16px; display: flex; gap: 20px;`）。
+- **自动纠错**：如果从 Figma MCP 读取到的数据存在非标准瑕疵值（如 15px），必须自动四舍五入对齐到最近的 4 的倍数（如 16px）。
+
+## 2. Structure & Output Constraints (结构与输出约束)
+- **输出格式**：请输出该模块的 HTML 结构，并将对应的 CSS 样式统一写在代码顶部的 `<style>` 标签中。不要生成整个页面的骨架。
+- **图片处理**：严禁使用 `https://www.figma.com/api/mcp/asset/...` 这种无法加载的临时链接。遇到图片，统一使用占位图（如 `<img src="https://via.placeholder.com/800x600" alt="placeholder">`），留给我后续自己替换。
+- **现代布局**：优先使用 CSS Flexbox 或 Grid 来还原 Figma 的 Auto Layout。

@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P3 — 设计工程化的三次进化</title>
+<!-- System fonts used - no external dependency -->
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+  /* ===== GOOGLE FONTS ===== */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+  /* ===== DESIGN TOKENS ===== */
+  :root {
+    --bg-base:        #0A0A0C;
+    --bg-surface:     #111114;
+    --bg-card:        #18181C;
+    --bg-card-hover:  #1E1E26;
+    --bg-code:        #0D0D10;
+
+    --text-primary:   #E8E6E3;
+    --text-secondary: #9A9A9E;
+    --text-muted:     #4E4E58;
+    --text-dim:       #333340;
+
+    --accent-blue:    #4A7BF7;
+    --accent-blue-dim:#2A4A8F;
+    --accent-orange:  #E8834A;
+    --accent-green:   #4AE88A;
+    --accent-red:     #E84A5A;
+
+    --border:         #222228;
+    --border-mid:     #2A2A32;
+    --border-accent:  #38384A;
+
+    --glow-blue:      rgba(74, 123, 247, 0.12);
+    --glow-blue-sm:   rgba(74, 123, 247, 0.07);
+    --glow-orange:    rgba(232, 131, 74, 0.1);
+    --glow-green:     rgba(74, 232, 138, 0.1);
+
+    --font-sans:  'Inter', 'PingFang SC', 'Hiragino Sans GB', -apple-system, sans-serif;
+    --font-mono:  'Geist Mono', 'JetBrains Mono', 'Courier New', monospace;
+    --font-serif: 'Inter', 'PingFang SC', -apple-system, sans-serif;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    --transition: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ===== RESET ===== */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* ===== SUBTLE GRID TEXTURE ===== */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(74,123,247,0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74,123,247,0.015) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ===== CONTAINERS ===== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 56px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container--wide {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 56px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== PAGE SECTIONS ===== */
+  .page-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page-section::after { display: none; }
+
+  /* ===== ASYMMETRIC GRID LAYOUT ===== */
+  /* Only applies to sections that have a .section-label child */
+  .page-section:not(.hero) .container:has(.section-label) {
+    display: grid;
+    grid-template-columns: 148px 1fr;
+    column-gap: 72px;
+    align-items: start;
+  }
+
+  .page-section:not(.hero) .container:has(.section-label) > *:not(.section-label) {
+    grid-column: 2;
+  }
+
+  /* ===== SECTION LABEL (Left vertical sidebar) ===== */
+  .page-section:not(.hero) .container .section-label {
+    grid-column: 1;
+    grid-row: 1 / 999;
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    transition: color 0.3s var(--transition);
+  }
+
+  /* Remove horizontal line from section-label in grid context */
+  .page-section:not(.hero) .container .section-label::after {
+    display: none;
+  }
+
+  /* Decorative dot */
+  .page-section:not(.hero) .container .section-label::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    flex-shrink: 0;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  /* Radial glow top-right */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -300px;
+    right: -200px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle at 50% 50%,
+      rgba(74,123,247,0.06) 0%,
+      rgba(74,123,247,0.02) 40%,
+      transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Radial glow bottom-left */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle at 50% 50%,
+      rgba(232,131,74,0.04) 0%,
+      transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero .container {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .hero__tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent-blue);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.6s var(--transition) 0.1s forwards;
+  }
+
+  .hero__tag::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent-blue);
+    opacity: 0.6;
+  }
+
+  .hero__title {
+    font-family: var(--font-sans);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    max-width: 760px;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s var(--transition) 0.25s forwards;
+  }
+
+  .hero__subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    max-width: 520px;
+    margin-bottom: 72px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s var(--transition) 0.4s forwards;
+  }
+
+  .hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    width: fit-content;
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.7s var(--transition) 0.55s forwards;
+  }
+
+  .hero__meta span {
+    padding: 12px 20px;
+    border-right: 1px solid var(--border-mid);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-card);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .hero__meta span:last-child { border-right: none; }
+
+  .hero__meta span:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-secondary);
+  }
+
+  .hero__meta span::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--border-accent);
+    flex-shrink: 0;
+  }
+
+  /* ===== SECTION HEADINGS ===== */
+  .section-heading {
+    font-family: var(--font-sans);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+    margin-bottom: 36px;
+  }
+
+  /* ===== BODY TEXT ===== */
+  .body-text {
+    font-size: 0.96rem;
+    font-weight: 400;
+    line-height: 1.95;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .body-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  .body-text--emphasis {
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    line-height: 1.85;
+    border-left: 2px solid var(--accent-blue);
+    padding: 16px 20px;
+    margin: 36px 0;
+    background: rgba(74,123,247,0.04);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    letter-spacing: 0.02em;
+  }
+
+  .body-text--emphasis strong {
+    color: var(--accent-blue);
+  }
+
+  /* ===== INSIGHT BOX (Glassmorphism) ===== */
+  .insight-box {
+    position: relative;
+    background: rgba(74,123,247,0.05);
+    border: 1px solid rgba(74,123,247,0.2);
+    border-left: 2px solid var(--accent-blue);
+    padding: 24px 28px;
+    margin: 32px 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    overflow: hidden;
+  }
+
+  .insight-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(135deg, rgba(74,123,247,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .insight-box p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--text-primary);
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== EVOLUTION BLOCKS ===== */
+  .evolution-block {
+    margin-bottom: 56px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .evolution-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .evolution-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .evolution-number {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+  }
+
+  .evolution-title {
+    font-family: var(--font-sans);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  .evolution-year {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-blue);
+    background: rgba(74,123,247,0.1);
+    border: 1px solid rgba(74,123,247,0.2);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+    letter-spacing: 0.06em;
+  }
+
+  /* ===== TOKEN ARCHITECTURE DIAGRAM ===== */
+  .token-diagram {
+    background: var(--bg-card);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    margin: 36px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .token-diagram::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(74,123,247,0.4), transparent);
+  }
+
+  .token-diagram__title {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  .token-layers {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .token-layer {
+    display: grid;
+    grid-template-columns: 160px 1fr 1fr;
+    gap: 16px;
+    padding: 14px 20px;
+    border-radius: var(--radius-sm);
+    align-items: center;
+    transition: filter 0.2s;
+  }
+
+  .token-layer:hover { filter: brightness(1.15); }
+
+  .token-layer--primitives { background: rgba(74,123,247,0.07); border: 1px solid rgba(74,123,247,0.12); }
+  .token-layer--semantics  { background: rgba(232,131,74,0.07);  border: 1px solid rgba(232,131,74,0.12); }
+  .token-layer--components { background: rgba(74,232,138,0.07);  border: 1px solid rgba(74,232,138,0.12); }
+
+  .token-layer__name {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+  }
+  .token-layer--primitives .token-layer__name { color: var(--accent-blue); }
+  .token-layer--semantics  .token-layer__name { color: var(--accent-orange); }
+  .token-layer--components .token-layer__name { color: var(--accent-green); }
+
+  .token-layer__example {
+    font-family: var(--font-mono);
+    font-size: 0.73rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.01em;
+  }
+
+  .token-layer__desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .token-arrow {
+    display: flex;
+    justify-content: flex-start;
+    padding: 6px 0 6px 20px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    opacity: 0.5;
+  }
+
+  /* ===== CODE BLOCK ===== */
+  .code-block {
+    background: var(--bg-code);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-md);
+    padding: 24px 28px;
+    margin: 28px 0;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .code-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(74,232,138,0.3), transparent);
+  }
+
+  .code-block__label {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .code-block__label::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    opacity: 0.7;
+    box-shadow: 0 0 6px rgba(74,232,138,0.5);
+  }
+
+  .code-block code {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    display: block;
+  }
+
+  .code-block .comment  { color: var(--text-dim); font-style: italic; }
+  .code-block .property { color: #79B8FF; }
+  .code-block .value    { color: var(--accent-green); }
+  .code-block .func     { color: var(--accent-orange); }
+
+  /* ===== DEVICE CARD DEMO ===== */
+  .device-card-demo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 40px 0;
+  }
+
+  .device-card-demo__item {
+    border-radius: var(--radius-md);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid var(--border-mid);
+    transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition);
+  }
+
+  .device-card-demo__item:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 24px 48px rgba(0,0,0,0.4), 0 0 0 1px var(--border-accent);
+  }
+
+  .device-card-demo__item--light { background: #F5F5F7; }
+  .device-card-demo__item--dark  { background: #1A1A1E; }
+
+  .device-card-demo__label { font-size: 1.05rem; font-weight: 500; }
+  .device-card-demo__item--light .device-card-demo__label { color: #171717; }
+  .device-card-demo__item--dark  .device-card-demo__label { color: #E8E6E3; }
+
+  .device-card-demo__badge {
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    background: var(--accent-blue);
+    color: #fff;
+    letter-spacing: 0.04em;
+  }
+
+  .device-card-demo__tag {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== MCP FLOW STEPS ===== */
+  .flow-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 40px 0;
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .flow-step {
+    background: var(--bg-card);
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+    transition: background 0.3s, transform 0.3s var(--transition);
+    border-right: 1px solid var(--border);
+  }
+
+  .flow-step:last-child { border-right: none; }
+
+  .flow-step:hover {
+    background: var(--bg-card-hover);
+  }
+
+  .flow-step:not(:last-child)::after {
+    content: '›';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    z-index: 2;
+    background: var(--bg-base);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    font-size: 0.8rem;
+  }
+
+  .flow-step__number {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+  }
+
+  .flow-step__name {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .flow-step__desc {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* ===== RESULTS GRID ===== */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 40px 0;
+  }
+
+  .result-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition), border-color 0.3s;
+    cursor: default;
+  }
+
+  .result-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    border-color: var(--border-accent);
+  }
+
+  .result-card:nth-child(1):hover { box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(74,123,247,0.12); }
+  .result-card:nth-child(2):hover { box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(232,131,74,0.12); }
+  .result-card:nth-child(3):hover { box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(74,232,138,0.12); }
+
+  .result-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    transition: opacity 0.3s;
+  }
+
+  .result-card:nth-child(1)::before { background: var(--accent-blue); }
+  .result-card:nth-child(2)::before { background: var(--accent-orange); }
+  .result-card:nth-child(3)::before { background: var(--accent-green); }
+
+  .result-card__label {
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .result-card__value {
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  .result-card__desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-left: 36px;
+    margin: 40px 0;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent-blue), var(--border), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 36px;
+  }
+
+  .timeline-item:last-child { padding-bottom: 0; }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-blue);
+    background: var(--bg-base);
+    box-shadow: 0 0 8px rgba(74,123,247,0.4);
+    transition: box-shadow 0.3s;
+  }
+
+  .timeline-item:hover::before {
+    box-shadow: 0 0 16px rgba(74,123,247,0.7);
+  }
+
+  .timeline-item__year {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+  }
+
+  .timeline-item__title {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .timeline-item__desc {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+  }
+
+  /* ===== SCREENSHOT CONTAINERS ===== */
+  /* Real screenshot wrapper */
+  .real-screenshot {
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .real-screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-mid);
+    background: var(--bg-card);
+    transition: transform 0.5s var(--transition), box-shadow 0.5s var(--transition);
+  }
+
+  .real-screenshot:hover img {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--border-accent);
+  }
+
+  /* MCP screenshots */
+  .mcp-screenshots {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .mcp-screenshot-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-mid);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.5s var(--transition), box-shadow 0.5s var(--transition), border-color 0.3s;
+    isolation: isolate;
+  }
+
+  .mcp-screenshot-item:hover {
+    transform: translateY(-5px) scale(1.005);
+    box-shadow: 0 28px 60px rgba(0,0,0,0.5), 0 0 40px rgba(74,123,247,0.08);
+    border-color: var(--border-accent);
+  }
+
+  /* Top-edge glow on screenshots */
+  .mcp-screenshot-item::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(74,123,247,0.3), transparent);
+    z-index: 1;
+  }
+
+  .mcp-screenshot-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    /* Use mix-blend-mode to remove white halos on dark bg */
+  }
+
+  /* Screenshot caption */
+  .screenshot-caption {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 14px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  /* Old screenshot-area (placeholder) */
+  .screenshot-area {
+    background: var(--bg-card);
+    border: 1px dashed var(--border-accent);
+    border-radius: var(--radius-md);
+    padding: 48px;
+    text-align: center;
+    margin: 32px 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .screenshot-area__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+  }
+
+  .screenshot-area__desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ===== DIVIDER ===== */
+  .divider {
+    height: 1px;
+    background: transparent;
+    margin: 52px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .divider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+    transform: translateX(-50%);
+    transition: width 1s var(--transition);
+  }
+
+  .divider.is-visible::before {
+    width: 100%;
+  }
+
+  /* ===== CLOSING QUOTE ===== */
+  .closing-quote {
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+  }
+
+  .closing-quote::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(74,123,247,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .closing-quote__text {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.55;
+    max-width: 560px;
+    margin: 0 auto 24px;
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .closing-quote__text::before {
+    content: '"';
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    line-height: 0;
+    vertical-align: -0.6rem;
+    margin-right: 4px;
+    opacity: 0.6;
+  }
+
+  .closing-quote__text::after {
+    content: '"';
+    color: var(--accent-blue);
+    font-size: 2.5rem;
+    line-height: 0;
+    vertical-align: -0.6rem;
+    margin-left: 4px;
+    opacity: 0.6;
+  }
+
+  .closing-quote__attr {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--text-muted);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== UTILITIES ===== */
+  .spacer-sm { height: 20px; }
+  .spacer-md { height: 44px; }
+  .spacer-lg { height: 72px; }
+
+  /* ===== FADE-IN ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--transition), transform 0.7s var(--transition);
+  }
+
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Staggered delay for children */
+  .fade-up:nth-child(1) { transition-delay: 0s; }
+  .fade-up:nth-child(2) { transition-delay: 0.08s; }
+  .fade-up:nth-child(3) { transition-delay: 0.16s; }
+  .fade-up:nth-child(4) { transition-delay: 0.24s; }
+
+  /* ===== SELECTION ===== */
+  ::selection {
+    background: rgba(74,123,247,0.3);
+    color: var(--text-primary);
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-base); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-mid);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-accent); }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .page-section:not(.hero) .container:has(.section-label) {
+      grid-template-columns: 1fr;
+    }
+    .page-section:not(.hero) .container:has(.section-label) > *:not(.section-label) {
+      grid-column: 1;
+    }
+    .page-section:not(.hero) .container .section-label {
+      writing-mode: horizontal-tb;
+      transform: none;
+      position: static;
+      grid-row: auto;
+      margin-bottom: 20px;
+    }
+    .flow-steps { grid-template-columns: 1fr 1fr; }
+    .results-grid { grid-template-columns: 1fr; }
+    .device-card-demo { grid-template-columns: 1fr; }
+    .hero__meta span { font-size: 0.65rem; padding: 10px 14px; }
+    .hero__title { font-size: 2.2rem; }
+  }
+
+  @media (max-width: 600px) {
+    .container, .container--wide { padding: 0 24px; }
+    .flow-steps { grid-template-columns: 1fr; }
+    .hero__meta { flex-direction: column; }
+    .hero__meta span { border-right: none; border-bottom: 1px solid var(--border-mid); }
+    .hero__meta span:last-child { border-bottom: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PORTFOLIO NAVBAR -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;padding:20px 80px;mix-blend-mode:difference;pointer-events:none;">
+  <a href="/" style="font-family:'Dancing Script',cursive;font-size:40px;font-weight:600;color:#fff;text-decoration:none;pointer-events:auto;line-height:1;">miki.</a>
+  <nav style="display:flex;gap:32px;pointer-events:auto;">
+    <a href="/" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">主页</a>
+    <a href="/#works" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">项目</a>
+    <a href="/#contact" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">关于我</a>
+  </nav>
+</header>
+
+<!-- ============================================================ -->
+<!-- SECTION 1: HERO / COVER                                       -->
+<!-- ============================================================ -->
+<section class="hero page-section">
+  <div class="container">
+    <div class="hero__tag">Project 03 — 基建</div>
+    <h1 class="hero__title">设计工程化的三次进化</h1>
+    <p class="hero__subtitle">
+      从手搓规范到 Machine-Readable Design System
+    </p>
+    <div class="hero__meta">
+      <span>2019 — 2025</span>
+      <span>Design System</span>
+      <span>Token Architecture</span>
+      <span>Figma MCP + Cursor</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 2: SITUATION                                          -->
+<!-- ============================================================ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-label">01 Situation</div>
+    <h2 class="section-heading">一半的时间，花在了不创造价值的事情上</h2>
+
+    <p class="body-text">
+      做了十年B端，我反复遇到同一个问题：设计师每天真正花在设计决策上的时间大概只有一半。另一半都在整理标注文档、开会、跟开发解释"这个颜色为什么是这个值"、来回确认样式有没有还原对。
+    </p>
+    <p class="body-text">
+      这个问题在2019年CYG仓储系统的时候第一次逼到我面前——项目要快速出28个页面、48个弹窗，纯靠逐页出稿根本来不及。到了2025年质检机项目，问题换了个形态：深色工控界面，完全不同的视觉语言，但设计和开发之间的翻译损耗一模一样。
+    </p>
+
+    <p class="body-text--emphasis">
+      三个不同阶段，同一个问题，我给了三次不同的回答。
+    </p>
+
+    <!-- 时间浪费可视化 -->
+    <div class="token-diagram">
+      <div class="token-diagram__title">一次组件样式迭代的时间消耗分布</div>
+      <div class="token-layers">
+        <div class="token-layer token-layer--primitives" style="grid-template-columns: 140px 1fr auto;">
+          <span class="token-layer__name">设计出稿</span>
+          <div style="background:rgba(74,123,247,0.15); height:8px; border-radius:4px; width:100%;"></div>
+          <span class="token-layer__desc">100% 时间投入</span>
+        </div>
+        <div class="token-layer token-layer--semantics" style="grid-template-columns: 140px 1fr auto;">
+          <span class="token-layer__name">整理标注文档</span>
+          <div style="background:rgba(232,131,74,0.15); height:8px; border-radius:4px; width:60%;"></div>
+          <span class="token-layer__desc">30% 用于标注</span>
+        </div>
+        <div class="token-layer token-layer--components" style="grid-template-columns: 140px 1fr auto;">
+          <span class="token-layer__name">开发理解设计</span>
+          <div style="background:rgba(74,232,138,0.15); height:8px; border-radius:4px; width:40%;"></div>
+          <span class="token-layer__desc">20% 用于解释</span>
+        </div>
+        <div class="token-layer" style="grid-template-columns: 140px 1fr auto; background:rgba(255,255,255,0.02);">
+          <span class="token-layer__name" style="color:var(--text-muted);">样式来回确认</span>
+          <div style="background:rgba(255,255,255,0.04); height:8px; border-radius:4px; width:30%;"></div>
+          <span class="token-layer__desc">15% 用于对齐</span>
+        </div>
+        <div class="token-layer" style="grid-template-columns: 140px 1fr auto; background:rgba(255,255,255,0.01);">
+          <span class="token-layer__name" style="color:var(--text-muted);">最终还原</span>
+          <div style="background:rgba(255,255,255,0.03); height:8px; border-radius:4px; width:15%;"></div>
+          <span class="token-layer__desc">实际创造价值的部分</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 3: TENSION                                            -->
+<!-- ============================================================ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-label">02 Tension</div>
+    <h2 class="section-heading">同一个矛盾，不同阶段的不同重量</h2>
+
+    <p class="body-text--emphasis">
+      核心矛盾始终只有一个：<strong>设计系统化的投入成本 vs 项目实际能承受的资源。</strong>
+    </p>
+
+    <p class="body-text">
+      2019年在CYG，我有团队协作条件，但话语权有限，项目周期紧。2025年在质检机项目，我是独立设计顾问，客户从零开始，连B端组件库都没有，开发资源更紧。每一次，"该不该建系统、建多重"这个判断都不一样。
+    </p>
+
+    <div class="insight-box">
+      <p>造轮子和不造轮子，从来都不是技术问题，是投入产出比问题。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 4: TRADE-OFF — THREE EVOLUTIONS                       -->
+<!-- ============================================================ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-label">03 Trade-off</div>
+    <h2 class="section-heading">三次选择，三种回答</h2>
+
+    <!-- EVOLUTION 1 -->
+    <div class="evolution-block">
+      <div class="evolution-header">
+        <span class="evolution-year">2019</span>
+        <h3 class="evolution-title">第一次：我造了轮子</h3>
+      </div>
+      <div class="evolution-number">CYG 仓储管理系统 · WMS + RF 双端</div>
+
+      <div class="spacer-sm"></div>
+
+      <p class="body-text">
+        参考Material Design，手搓了CYG自己的组件规范，做了文档化交付。目的很实际——让开发拿到组件和组合规则后，能自行构建大部分标准页面，不需要我逐页出详细稿。Web端28个页面、48个弹窗能在周期内交付，这套规范起了关键作用。
+      </p>
+      <p class="body-text">
+        后来我离开了，公司主营业务从智能制造转向新能源汽车，WMS系统随业务方向一起退役。这件事让我第一次真正理解：设计系统的生命周期是跟着业务走的，不是跟着设计师走的。
+      </p>
+
+      <div class="insight-box">
+        <p>这件事让我重新理解了一个问题：设计系统的生命周期是跟着业务走的，不是跟着设计师走的。</p>
+      </div>
+    </div>
+
+    <!-- EVOLUTION 2 -->
+    <div class="evolution-block">
+      <div class="evolution-header">
+        <span class="evolution-year">2025</span>
+        <h3 class="evolution-title">第二次：我选择不造轮子</h3>
+      </div>
+      <div class="evolution-number">挤压型材表面质检系统 · 独立设计顾问</div>
+
+      <div class="spacer-sm"></div>
+
+      <p class="body-text">
+        质检机客户没有任何B端组件基础，开发资源有限，产品要尽快上线。我评估之后选了Ant Design做适配，在它的基础上定制了覆盖11个核心模块的完整组件体系，而不是从零自建一套独立体系。
+      </p>
+      <p class="body-text">
+        判断逻辑很直接：Ant Design持续迭代、社区活跃、开发团队熟悉。在这个项目的资源条件下，借用成熟开源体系做定制化适配，比自建一套注定没人长期维护的组件库，投入产出比高得多。
+      </p>
+      <p class="body-text">
+        但这次我多做了一件事：给这套定制组件建了<strong>三层Token架构</strong>。
+      </p>
+
+      <!-- TOKEN ARCHITECTURE -->
+      <div class="token-diagram">
+        <div class="token-diagram__title">三层 Token 架构 — 三种不同的"被读取需求"</div>
+        <div class="token-layers">
+          <div class="token-layer token-layer--primitives">
+            <span class="token-layer__name">1 — Primitives</span>
+            <span class="token-layer__example">gray-900 / blue-500 / red-500 / white</span>
+            <span class="token-layer__desc">原材料色值，AI读到的是精确值</span>
+          </div>
+          <div class="token-arrow">↓ 引用</div>
+          <div class="token-layer token-layer--semantics">
+            <span class="token-layer__name">2 — Semantics</span>
+            <span class="token-layer__example">surface-primary / text-primary / brand-primary</span>
+            <span class="token-layer__desc">语义层，AI读到的是用途</span>
+          </div>
+          <div class="token-arrow">↓ 引用</div>
+          <div class="token-layer token-layer--components">
+            <span class="token-layer__name">3 — Components</span>
+            <span class="token-layer__example">button-bg → brand-primary / card-bg → surface-primary</span>
+            <span class="token-layer__desc">组件层规则，改一处全局生效</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text">
+        为什么三层不是两层？因为两层解决不了主题切换的问题。如果组件直接引用原始色值，每次改主题色就要逐个组件去改。三层架构下，Primitives层改1个值，所有引用链路自动更新。
+      </p>
+
+      <!-- DEVICE CARD LIGHT/DARK DEMO — 真实截图 -->
+      <div class="real-screenshot" style="margin:40px 0;">
+        <img src="images/evolution-hero.jpg">
+        <div class="screenshot-caption">Device Card 亮暗双模对比 — 同一组件，改1个Token值切换主题，不出新稿</div>
+      </div>
+
+      <div class="insight-box">
+        <p>主题切换成本 = 改1个Token值，不出新稿。</p>
+      </div>
+
+      <p class="body-text">
+        Token架构解决了"设计内部的一致性管理"问题，但没有解决另一个更老的问题：设计意图在翻译成代码的过程中仍然会衰减。标注文档写得再结构化，开发看到的终究是数值，看不到的是语义。
+      </p>
+    </div>
+
+    <!-- EVOLUTION 3 -->
+    <div class="evolution-block">
+      <div class="evolution-header">
+        <span class="evolution-year">2025+</span>
+        <h3 class="evolution-title">第三次：重构"造轮子的方式"本身</h3>
+      </div>
+      <div class="evolution-number">Figma MCP + Cursor · MVP 阶段</div>
+
+      <div class="spacer-sm"></div>
+
+      <p class="body-text">
+        既然Token架构已经把设计意图结构化了——Token名本身就是语义，surface-primary不是"某个灰色"，而是"主表面色"——那AI应该能直接读懂它，跳过人工翻译这个环节。
+      </p>
+      <p class="body-text">
+        我用Figma MCP协议把Figma和Cursor连起来，写了一份<strong>.cursorrules</strong>文件作为约束规则：所有颜色必须用CSS变量，禁止硬编码色值，组件Token必须通过Semantics层引用Primitives。Cursor Agent直接读取Figma的组件节点，按规则生成CSS代码。
+      </p>
+
+      <!-- MCP FLOW DIAGRAM -->
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step__number">Step 1</div>
+          <div class="flow-step__name">Figma Variables</div>
+          <div class="flow-step__desc">三层Token架构定义</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step__number">Step 2</div>
+          <div class="flow-step__name">MCP Connected</div>
+          <div class="flow-step__desc">Figma ↔ Cursor桥接</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step__number">Step 3</div>
+          <div class="flow-step__name">Cursor Rules</div>
+          <div class="flow-step__desc">.cursorrules约束文件</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step__number">Step 4</div>
+          <div class="flow-step__name">代码输出</div>
+          <div class="flow-step__desc">CSS变量，零硬编码</div>
+        </div>
+      </div>
+
+      <!-- CODE OUTPUT EXAMPLE -->
+      <div class="code-block">
+        <div class="code-block__label">Cursor Agent 输出 — device-card.css</div>
+        <code>
+<span class="comment">/**</span><br>
+<span class="comment"> * Device Card — 从 Figma 节点 63:12 转换</span><br>
+<span class="comment"> * 严格使用 Semantic/Component 层变量，无硬编码色值</span><br>
+<span class="comment"> */</span><br><br>
+.<span class="property">device-card</span> {<br>
+&nbsp;&nbsp;<span class="property">background-color</span>: <span class="func">var</span>(<span class="value">--surface-primary</span>);<br>
+&nbsp;&nbsp;<span class="property">color</span>: <span class="func">var</span>(<span class="value">--text-primary</span>);<br>
+}<br><br>
+.<span class="property">device-card__button</span> {<br>
+&nbsp;&nbsp;<span class="property">background-color</span>: <span class="func">var</span>(<span class="value">--button-bg-primary</span>);<br>
+}
+        </code>
+      </div>
+
+      <p class="body-text">
+        开发拿到的不再是一张需要人工翻译的图片，而是一份带完整语义信息、可直接使用的代码。传统流程里"出稿→标注→开发理解→来回校对"这条链路，被压缩成了"Figma定义Token→MCP读取→Cursor按规则输出代码"。
+      </p>
+
+      <div class="insight-box">
+        <p>体感估算，样式层面的沟通成本至少节省80%——中间的标注和解释环节被整段跳过了。</p>
+      </div>
+
+      <p class="body-text" style="color:var(--text-muted); font-size:0.85rem;">
+        目前还是MVP阶段，只基于质检机的Device Card组件跑通了最小闭环。复杂交互逻辑（表单联动、条件显隐）还没有覆盖到，只验证了样式层面的自动化。
+      </p>
+
+      <!-- MCP 工作流真实截图 -->
+      <div class="mcp-screenshots">
+        <div class="mcp-screenshot-item">
+        <img src="images/p3image-1.png">
+          <div class="screenshot-caption">Step 3 · .cursorrules 约束文件 — 禁止硬编码色值，强制使用Semantic层变量</div>
+        </div>
+        <div class="mcp-screenshot-item">
+        <img src="images/p3image-2.png">
+          <div class="screenshot-caption">Step 4 · Cursor Agent 读取Figma组件节点，按规则生成CSS — 所有色值均为变量引用</div>
+        </div>
+        <div class="mcp-screenshot-item">
+        <img src="images/p3image-3.png">
+          <div class="screenshot-caption">Step 2 · Cursor Settings — Figma MCP Server 连接状态（13 tools, 25 resources enabled）</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SECTION 5: EVIDENCE                                           -->
+<!-- ============================================================ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-label">04 Evidence</div>
+    <h2 class="section-heading">三次选择，一条线索</h2>
+
+    <p class="body-text--emphasis">
+      系统化的程度必须匹配项目的承载力。
+    </p>
+
+    <!-- RESULTS CARDS -->
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-card__label">第一次 · 2019</div>
+        <div class="result-card__value">28页 + 48弹窗</div>
+        <div class="result-card__desc">手搓组件规范支撑周期内交付，生命周期随业务方向终结</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card__label">第二次 · 2025</div>
+        <div class="result-card__value">完整组件体系<br>三层Token</div>
+        <div class="result-card__desc">基于Ant Design适配，主题切换改1个值全局生效</div>
+      </div>
+      <div class="result-card">
+        <div class="result-card__label">第三次 · MVP</div>
+        <div class="result-card__value">↓ 80%+</div>
+        <div class="result-card__desc">样式沟通成本体感节省，标注和解释环节被整段跳过</div>
+      </div>
+    </div>
+
+    <!-- TIMELINE SUMMARY -->
+    <div class="divider"></div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-item__year">2019 · CYG WMS</div>
+        <div class="timeline-item__title">我能造轮子</div>
+        <div class="timeline-item__desc">参考Material Design手搓组件规范，文档化交付，解决了交付效率问题</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__year">2025 · 质检机</div>
+        <div class="timeline-item__title">我知道什么时候不该造轮子</div>
+        <div class="timeline-item__desc">借用Ant Design做定制化适配，引入三层Token架构实现结构化表达</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-item__year">2025+ · MCP MVP</div>
+        <div class="timeline-item__title">我在重构造轮子的方式本身</div>
+        <div class="timeline-item__desc">用MCP打通Figma到代码的最后一公里，让设计意图不在翻译过程中失真</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- IF I COULD DO IT AGAIN -->
+    <div class="section-label" style="margin-top:48px;">反思</div>
+    <h2 class="section-heading">如果重来</h2>
+
+    <p class="body-text">
+      三次决策，放回各自的资源条件下，我不会改。手里有什么牌就打什么牌，这是执行层的本分。老板的战略方向不归我判断，我的职责是在给定的框里找最优解。
+    </p>
+
+    <p class="body-text--emphasis">
+      <strong>资源决定方案的重量，目的决定方案的方向。先跑起来，再往完美走。</strong>
+    </p>
+
+    <p class="body-text">
+      如果去一家新公司被问怎么搞设计系统，我不会先给方案，会先问两个问题——你们想用它达成什么，手里有多少资源。回答决定路径。
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CLOSING                                                        -->
+<!-- ============================================================ -->
+<section class="page-section">
+  <div class="container">
+    <div class="closing-quote">
+      <p class="closing-quote__text">设计系统不是交付物，是生产力基础设施</p>
+      <div class="closing-quote__attr">杨蜜萁 — P3 设计工程化的三次进化</div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+(function() {
+  // IntersectionObserver for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  // Divider observer (from-center expand)
+  const dividerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        dividerObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Apply fade-up to main content blocks (not already animated)
+    const targets = document.querySelectorAll(
+      '.section-heading, .body-text, .body-text--emphasis, ' +
+      '.insight-box, .token-diagram, .code-block, ' +
+      '.evolution-block, .flow-steps, .results-grid, ' +
+      '.timeline, .mcp-screenshots, .real-screenshot, ' +
+      '.closing-quote'
+    );
+    targets.forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+
+    // Divider animation
+    document.querySelectorAll('.divider').forEach(el => {
+      dividerObserver.observe(el);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

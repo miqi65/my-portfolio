@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P4 — 5G消息Chatbot交互规范体系</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ice: #28B5D8;
+  --ice-light: #72D8F4;
+  --ice-dim: rgba(40, 181, 216, 0.14);
+  --ink: #FFFFFF;
+  --ink-2: rgba(255,255,255,0.88);
+  --ink-3: rgba(255,255,255,0.72);
+  --ink-4: rgba(255,255,255,0.55);
+  --ink-5: rgba(255,255,255,0.45);
+  --rule: rgba(255,255,255,0.08);
+  --rule-strong: rgba(255,255,255,0.14);
+  --bg-page: #050B10;
+  --bg-card: #080F15;
+  --bg-section: #0B1520;
+  --bg-elevated: #101E2A;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg-page);
+  display: flex;
+  justify-content: center;
+  padding: 60px 24px 80px;
+  min-height: 100vh;
+}
+
+.page {
+  width: 960px;
+  background: var(--bg-card);
+  border: 1px solid var(--rule-strong);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+/* ── HEADER ── */
+.header {
+  padding: 64px 72px 0;
+  position: relative;
+  background: linear-gradient(135deg, #080F15 0%, #0D1C28 100%);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 80% 0%, rgba(40,181,216,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.header-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.project-num {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+}
+
+.project-tag-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--ice-light);
+  text-transform: uppercase;
+  padding: 4px 10px;
+  background: rgba(40,181,216,0.12);
+  border: 1px solid rgba(40,181,216,0.32);
+  border-radius: 100px;
+}
+
+.project-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.project-context {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  z-index: 1;
+}
+
+.ctx-item {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--ink-4);
+  line-height: 1;
+}
+
+.ctx-sep {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--ink-5);
+}
+
+/* ── AWARDS ── */
+.awards-section {
+  padding: 40px 72px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg-section);
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ink-5);
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.awards-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.award-item {
+  padding: 0 28px 0 0;
+  border-right: 1px solid var(--rule);
+  position: relative;
+}
+.award-item:first-child { padding-left: 0; }
+.award-item:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 28px;
+}
+.award-item:nth-child(2),
+.award-item:nth-child(3) { padding-left: 28px; }
+
+.award-num {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ice-light);
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 0.05em;
+}
+
+.award-text {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ── NARRATIVE GRID ── */
+.narrative {
+  padding: 56px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg-card);
+}
+
+.block-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ice-light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.block-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--ice), transparent);
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+.block-body {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+/* ── IMAGE SECTION ── */
+.images-section {
+  padding: 56px 72px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg-section);
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.image-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--rule-strong);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.image-frame:hover {
+  border-color: rgba(40,181,216,0.4);
+}
+
+.image-frame img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  opacity: 0.92;
+  transition: opacity 0.3s ease;
+}
+
+.image-frame:hover img {
+  opacity: 1;
+}
+
+.image-caption {
+  padding: 14px 18px 16px;
+  border-top: 1px solid var(--rule);
+}
+
+.caption-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--ice-light);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.caption-text {
+  font-size: 12px;
+  color: var(--ink-4);
+  line-height: 1.65;
+}
+
+/* ── RESULT SECTION ── */
+.result-section {
+  padding: 56px 72px 72px;
+  background: var(--bg-card);
+  position: relative;
+}
+
+.result-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(40,181,216,0.5) 40%, rgba(40,181,216,0.5) 60%, transparent);
+}
+
+.result-block {
+  padding-left: 28px;
+  border-left: 2px solid var(--ice);
+  position: relative;
+}
+
+.result-block::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: 40px;
+  background: var(--ice-light);
+  border-radius: 1px;
+  box-shadow: 0 0 12px rgba(40,181,216,0.55);
+}
+
+.result-headline {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--ice-light);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.result-text {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.9;
+  font-weight: 400;
+  max-width: 620px;
+}
+
+.result-metrics {
+  display: flex;
+  gap: 0;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 52px;
+  border-right: 1px solid var(--rule);
+  margin-right: 52px;
+}
+
+.metric:last-child {
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  background: linear-gradient(135deg, #fff 40%, rgba(40,181,216,0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--ink-4);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+</style>
+</head>
+<body>
+
+<!-- PORTFOLIO NAVBAR -->
+<header style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;padding:20px 80px;mix-blend-mode:difference;pointer-events:none;">
+  <a href="/" style="font-family:'Dancing Script',cursive;font-size:40px;font-weight:600;color:#fff;text-decoration:none;pointer-events:auto;line-height:1;">miki.</a>
+  <nav style="display:flex;gap:32px;pointer-events:auto;">
+    <a href="/" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">主页</a>
+    <a href="/#works" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">项目</a>
+    <a href="/#contact" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">关于我</a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-meta">
+      <span class="project-num">PROJECT 04 &mdash; SUPPLEMENT</span>
+      <span class="project-tag-label">Interaction Design</span>
+    </div>
+    <div class="project-title">5G消息 Chatbot<br>交互规范体系</div>
+    <div class="project-context">
+      <span class="ctx-item">某运营商5G消息服务商</span>
+      <span class="ctx-sep"></span>
+      <span class="ctx-item">团队唯一交互与视觉设计负责人</span>
+      <span class="ctx-sep"></span>
+      <span class="ctx-item">2021&ndash;2022</span>
+    </div>
+  </div>
+
+  <!-- AWARDS -->
+  <div class="awards-section">
+    <div class="section-label">Awards &amp; Recognition</div>
+    <div class="awards-list">
+      <div class="award-item">
+        <span class="award-num">01</span>
+        <span class="award-text">2021绽放杯<br>三等奖</span>
+      </div>
+      <div class="award-item">
+        <span class="award-num">02</span>
+        <span class="award-text">行业优秀<br>创新奖</span>
+      </div>
+      <div class="award-item">
+        <span class="award-num">03</span>
+        <span class="award-text">智慧教育<br>优秀奖</span>
+      </div>
+      <div class="award-item">
+        <span class="award-num">04</span>
+        <span class="award-text">入选国家5G+<br>智慧教育试点</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NARRATIVE -->
+  <div class="narrative">
+    <div class="narrative-block">
+      <div class="block-label">挑战</div>
+      <p class="block-body">5G消息运行在手机原生短信入口，交互被锁死在「1-1-1」线性链路——用户只能逐步选择推进，容错成本极高。各主流手机厂商对卡片渲染差异大，且无法分版本下发。用户画像从学生到政务办事人员，跨度极宽。</p>
+    </div>
+    <div class="narrative-block">
+      <div class="block-label">解法</div>
+      <p class="block-body">放弃单项目最优解，转而建立一套「最小公约数」适配规范——视觉只保证各厂商渲染安全区内的信息传达；交互上把每步选项压到不需要用户思考的颗粒度。通过40+次培训将规范推行到15人团队，后续项目直接复用。</p>
+    </div>
+  </div>
+
+  <!-- IMAGES -->
+  <div class="images-section">
+    <div class="section-label">Design Output</div>
+    <div class="images-grid">
+      <div class="image-frame">
+        <img src="images/interaction flow.png" alt="交互规范">
+        <div class="image-caption">
+          <span class="caption-tag">Fig. 01 &mdash; Interaction Flow</span>
+          <span class="caption-text">Chatbot交互优化分析 — 基于「贴近用户真实环境」原则拆解线性对话流程与信息传达策略</span>
+        </div>
+      </div>
+      <div class="image-frame">
+        <img src="images/Design System.jpg" alt="设计规范">
+        <div class="image-caption">
+          <span class="caption-tag">Fig. 02 &mdash; Design System</span>
+          <span class="caption-text">5G消息视觉规范 — 定义色彩、字体、图片等「最小公约数」适配标准</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT -->
+  <div class="result-section">
+    <div class="result-block">
+      <div class="result-headline">Key Results</div>
+      <p class="result-text">3个直接负责设计的项目于2021年分别获得「绽放杯」三等奖、优秀创新奖及智慧教育优秀奖，其中智慧校园项目入选国家5G+智慧教育应用试点。</p>
+      <div class="result-metrics">
+        <div class="metric">
+          <span class="metric-value">3</span>
+          <span class="metric-label">获奖项目</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">40+</span>
+          <span class="metric-label">内部培训场次</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">15</span>
+          <span class="metric-label">规范推行团队人数</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
