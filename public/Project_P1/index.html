@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P1 质检机 — 作品集</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
+
+/* ================================================================
+   RESET + ROOT TOKENS
+   ================================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* Color System — WCAG AA compliant */
+  --bg:       #080808;   /* 主背景 */
+  --bg-card:  #0f0f0f;   /* 卡片背景 */
+  --accent:   #C8F73B;   /* 强调色：荧光黄绿，对比度 ~11:1 on --bg */
+  --title:    #FFFFFF;   /* 标题文字，对比度 ~19:1 on --bg */
+  --body:     #B0B0B0;   /* 正文文字，对比度 ~7:1 on --bg */
+  --sub:      #707070;   /* 次要说明，对比度 ~4.6:1 on --bg (大字号AA) */
+  --line:     #1C1C1C;   /* 分割线 */
+
+  /* 禁止：渐变色 / box-shadow 装饰 / border-radius > 2px */
+}
+
+body {
+  background: #040404;
+  font-family: var(--font-sans);
+  padding: 40px 0;
+}
+
+/* ================================================================
+   NAV
+   ================================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #000;
+  z-index: 100;
+  padding: 18px 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  font-size: 44px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+.nav-logo:hover { opacity: 0.6; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
+  font-weight: 400;
+  transition: opacity 0.2s;
+  padding: 12px 8px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-links a:hover { opacity: 0.6; }
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+  opacity: 1;
+}
+.nav-logo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+/* ================================================================
+   PAGE WRAPPER + FRAME
+   ================================================================ */
+.page-wrapper {
+  max-width: 1540px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+.pg-label {
+  color: #2a2a2a;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding-left: 2px;
+  text-transform: uppercase;
+}
+.pg-label span { color: #3a3a3a; margin-left: 10px; }
+
+.page {
+  width: 1440px;
+  height: 900px;
+  background: var(--bg);
+  border-radius: 2px;
+  margin-bottom: 80px;
+  overflow: hidden;
+  position: relative;
+  transform-origin: top left;
+  border: 1px solid #111;
+}
+
+@media (max-width: 1520px) {
+  .page { transform: scale(0.85); margin-bottom: -40px; }
+  .page-wrapper { max-width: 1280px; }
+}
+
+/* ================================================================
+   ALUMINUM TEXTURE OVERLAY
+   ================================================================ */
+.aluminum-bg {
+  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=60');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ================================================================
+   SHARED SECTION PRIMITIVES
+   ================================================================ */
+.sec-lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--sub);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.sec-ttl {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.sec-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--body);
+}
+
+
+/* ================================================================
+   PAGE 1  HERO COVER
+   Full-bleed .png 背景 · 左侧固定面板 · 无渐变
+   ================================================================ */
+.p1-hero {
+  width: 100%;
+  height: 900px;
+  position: relative;
+  display: flex;
+}
+
+/* 全出血背景图 */
+.p1-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  z-index: 0;
+}
+
+/* 左侧纯色内容面板 */
+.p1-panel {
+  position: relative;
+  z-index: 1;
+  width: 520px;
+  flex-shrink: 0;
+  background: var(--bg);
+  padding: 0 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+
+.p1-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+/* Hero Title: 64px, weight 600 */
+.p1-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--title);
+  line-height: 1.12;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.p1-sub {
+  font-size: 16px;
+  color: var(--body);
+  line-height: 1.85;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+/* Meta bar */
+.p1-meta {
+  display: flex;
+  width: fit-content;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.p1-meta-cell { padding: 12px 20px; }
+.p1-meta-cell + .p1-meta-cell { border-left: 1px solid var(--line); }
+.p1-meta-k {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--sub);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.p1-meta-v {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* Bullet list */
+.p1-bullets { display: flex; flex-direction: column; gap: 10px; }
+.p1-b {
+  font-size: 14px;
+  color: var(--sub);
+  line-height: 1.75;
+  padding-left: 20px;
+  position: relative;
+}
+.p1-b::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  opacity: 0.55;
+}
+
+
+/* ================================================================
+   PAGE 2  SITUATION + BEFORE/AFTER
+   Split grid · 全暗色主题
+   ================================================================ */
+.p2 {
+  height: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.p2-left {
+  padding: 56px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.p2-right {
+  padding: 44px 44px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Constraint mini-table */
+.ctable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+.ctable tr { border-bottom: 1px solid var(--line); }
+.ctable tr:last-child { border-bottom: none; }
+.ctable td {
+  padding: 10px 0;
+  color: var(--body);
+  font-size: 14px;
+  vertical-align: top;
+  line-height: 1.75;
+}
+.ctable td:first-child {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--sub);
+  width: 56px;
+  padding-right: 16px;
+  white-space: nowrap;
+  padding-top: 11px;
+  letter-spacing: 0.5px;
+}
+
+/* Tension box */
+.tnbox {
+  border-left: 2px solid var(--line);
+  padding: 14px 18px;
+  margin-top: 12px;
+  background: var(--bg-card);
+}
+.tnbox + .tnbox { margin-top: 8px; }
+.tnbox-ttl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
+}
+.tnbox-body {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--body);
+}
+
+/* Before/After image frames */
+.ba-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+.ba-lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.ba-frame {
+  flex: 1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg);
+  min-height: 0;
+}
+.ba-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top left;
+  display: block;
+}
+
+
+/* ================================================================
+   PAGE 3  TRADE-OFF 1 — A/B Layout Comparison
+   铝材纹理叠层 · 选中方案 #C8F73B 左侧 border
+   ================================================================ */
+.p3 {
+  height: 900px;
+  padding: 52px 60px;
+  display: flex;
+  flex-direction: column;
+}
+.p3-hd {
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+.p3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.p3-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+}
+
+/* 选中方案：Plan A — 绿色左border已移除 */
+.p3-card.selected {
+  border: 1px solid var(--line);
+}
+
+/* 图片区：铝材纹理 + #0d0d0d 底色 */
+.p3-img {
+  flex: 1;
+  overflow: hidden;
+  background: #0d0d0d;
+  position: relative;
+  min-height: 0;
+}
+.p3-img img {
+  width: 100%;
+  height: calc(100% - 80px);
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: 80px;
+}
+/* aluminum-bg inside .p3-img uses opacity: 0.05 via inline style */
+
+.p3-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 16px 16px 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+.p3-ba {
+  background: var(--accent);
+  color: #080808;
+}
+.p3-bb {
+  background: transparent;
+  color: var(--sub);
+  border: 1px solid #2a2a2a;
+}
+
+.p3-body {
+  padding: 20px 22px;
+  border-top: 1px solid var(--line);
+  background: var(--bg-card);
+  flex-shrink: 0;
+}
+
+/* Card title: 17px, font-weight 500 */
+.p3-plan-ttl {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 14px;
+  letter-spacing: 0.2px;
+}
+.p3-anno {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--body);
+}
+.p3-dsh {
+  font-family: var(--font-mono);
+  color: var(--sub);
+  flex-shrink: 0;
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.5;
+}
+
+
+/* ================================================================
+   PAGE 4  TRADE-OFF 2&3 — Permission + Fault Tolerance
+   铝材纹理整体叠层 · 删除大块死区 · 正文 ≥ 16px
+   ================================================================ */
+.p4 {
+  height: 900px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 64px;
+}
+/* aluminum-bg for P4: opacity 0.03 via inline style */
+
+.p4-inner {
+  position: relative;
+  z-index: 1;
+}
+.p4-hd { margin-bottom: 36px; }
+
+.p4-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+}
+
+/* Card title: 18px */
+.p4-col-ttl {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+/* Body text: 16px */
+.p4-col-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--body);
+  margin-bottom: 24px;
+}
+
+/* Permission table */
+.ptable {
+  width: 100%;
+  border-collapse: collapse;
+}
+.ptable th {
+  padding: 9px 10px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--sub);
+  border-bottom: 1px solid var(--line);
+  letter-spacing: 1px;
+}
+.ptable th:first-child { text-align: left; }
+.ptable td {
+  padding: 9px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: #484848;
+}
+.ptable td:first-child {
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--body);
+}
+.ptable tr:last-child td { border-bottom: none; }
+.ck { color: var(--accent); font-weight: 500; }
+.ro { color: var(--sub); font-size: 12px; }
+
+/* Fault tolerance list */
+.fault-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.fi {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.fi-lvl {
+  padding: 8px 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+.lv-light { background: #161616; color: var(--sub); border: 1px solid #222; }
+.lv-mid   { background: #1a1a1a; color: var(--body); border: 1px solid #272727; }
+.lv-crit  { background: var(--accent); color: #080808; }
+
+/* Body text 16px */
+.fi-txt {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--body);
+}
+/* Caption/Sub 14px */
+.fi-sub {
+  display: block;
+  font-size: 14px;
+  color: var(--sub);
+  margin-top: 4px;
+  line-height: 1.75;
+}
+.fi-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 10px;
+  letter-spacing: 1px;
+  margin-top: 6px;
+  border-radius: 8px;
+}
+.t-done {
+  background: rgba(255,255,255,0.4);
+  color: #080808;
+  border: none;
+}
+.t-miss {
+  background: transparent;
+  color: var(--sub);
+  border: 1px solid #404040;
+}
+
+.p4-note {
+  border-left: 2px solid var(--line);
+  padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.82;
+  color: var(--sub);
+}
+
+
+/* ================================================================
+   PAGE 5  BENTO — ALGO DEEP DIVE
+   左侧主图 object-fit: contain · 右侧卡片铝材纹理
+   ================================================================ */
+.p5 {
+  height: 900px;
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+}
+.p5-hd { margin-bottom: 24px; }
+
+.dark-lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--sub);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+/* Section title: 22px */
+.dark-ttl {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--title);
+  line-height: 1.4;
+}
+
+/* Bento grid: 主图 left · 3 注释卡 right */
+.p5-bento {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+.bcard {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 主图：object-fit: contain，不裁切 */
+.bcard.main-img {
+  grid-row: 1 / 4;
+  grid-column: 1;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bcard.main-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.bcard-inner {
+  padding: 22px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+/* Mono label: 12px */
+.bcard-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Card title: 17px */
+.bcard-ttl {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--title);
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+/* Caption: 14px */
+.bcard-body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--body);
+  flex: 1;
+}
+.bcard-em { color: var(--accent); }
+
+.honest-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #080808;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  padding: 3px 8px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+
+/* ================================================================
+   PAGE 6  BENTO — EVIDENCE + REFLECTION
+   ================================================================ */
+.p6 {
+  height: 900px;
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+}
+.p6-hd { margin-bottom: 24px; }
+
+.p6-bento {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.25fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  min-height: 0;
+}
+
+/* Metric cards */
+.mcard {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mcard-num {
+  font-family: var(--font-mono);
+  font-weight: 300;
+  font-size: 72px;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -3px;
+  display: inline;
+}
+.mcard-lbl {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--sub);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.mcard-sub {
+  font-size: 14px;
+  color: var(--sub);
+  line-height: 1.65;
+  margin-top: 4px;
+}
+
+/* Delivery confirmed card */
+.dcard {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: 1 / 3;
+}
+.dcard-icon {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.dcard-body {
+  font-size: 14px;
+  line-height: 1.82;
+  color: var(--body);
+}
+.dcard-lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--sub);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+/* Extra note card */
+.ncard {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.ncard-body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--sub);
+}
+
+/* Reflection card: full right column, 2 rows */
+.rcard {
+  grid-column: 4;
+  grid-row: 1 / 3;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-card);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.rcard-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+/* Card title: 18px */
+.rcard-ttl {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--title);
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.rcard-body {
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--body);
+  flex: 1;
+}
+.rcard-em { color: var(--title); }
+.rcard-dim { color: var(--sub); font-size: 13px; }
+.rcard-foot {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--sub);
+  line-height: 1.7;
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="主导航">
+  <a class="nav-logo" href="/">miki.</a>
+  <div class="nav-links">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
+  </div>
+</nav>
+
+<main class="page-wrapper">
+
+
+<!-- ========================================================
+     PAGE 1  HERO COVER
+     背景图：p1-cover-hero.png · 全出血 · 左侧固定面板
+     ======================================================== -->
+<div class="pg-label" id="p1">PAGE 01 / 06 <span>封面页 — 第一印象</span></div>
+<div class="page">
+  <div class="p1-hero">
+
+    <!-- 全出血背景图（.png 非 .jpg） -->
+    <img class="p1-bg" src="./images/p1-cover-hero.png" alt="封面背景">
+
+    <!-- 左侧内容面板（纯色 #080808，无渐变） -->
+    <div class="p1-panel">
+      <div class="p1-eyebrow">Project 01 &nbsp;·&nbsp; 2025</div>
+      <div class="p1-title">挤压型材表面<br>质检系统</div>
+      <div class="p1-sub">AI + HMI 全链路设计 · 独立设计顾问 · 从 0 到 1</div>
+
+      <div class="p1-meta">
+        <div class="p1-meta-cell">
+          <div class="p1-meta-k">Role</div>
+          <div class="p1-meta-v">独立设计顾问</div>
+        </div>
+        <div class="p1-meta-cell">
+          <div class="p1-meta-k">Client</div>
+          <div class="p1-meta-v">新文合智能</div>
+        </div>
+        <div class="p1-meta-cell">
+          <div class="p1-meta-k">Scope</div>
+          <div class="p1-meta-v">0 → 1</div>
+        </div>
+      </div>
+
+      <div class="p1-bullets">
+        <div class="p1-b">11 个核心模块从 0 到 1 完整设计交付</div>
+        <div class="p1-b">4 类角色权限分层方案（工程师 / 操作员 / 维护 / 质检）</div>
+        <div class="p1-b">2D + 3D 双模态 · 16 路工业相机监控布局</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ========================================================
+     PAGE 2  SITUATION + BEFORE/AFTER
+     全暗色 · 左文右图 · #C8F73B 标签
+     ======================================================== -->
+<div class="pg-label" id="p2">PAGE 02 / 06 <span>Situation + Tension — 交代坑位和矛盾</span></div>
+<div class="page">
+  <div class="p2">
+
+    <!-- LEFT: text content -->
+    <div class="p2-left">
+      <div class="sec-lbl">Situation</div>
+      <div class="sec-body">
+        新文合智能要做一套铝型材挤压产线的 AI 表面质检系统，替代人工目视检测。系统接入 2D + 3D 双模态共 16 路工业相机，覆盖 11 类缺陷的自动识别和分拣，同时服务工厂里四类角色——工程师调算法、操作员盯预警、维护管急停、质检查数据。
+        <br><br>
+        我作为独立设计顾问介入时，拿到的是一份 107 页的工程文档和一套黑底工程师工具界面，没有角色区分，没有信息分层，所有功能堆在一个平面上。
+      </div>
+
+      <table class="ctable">
+        <tr>
+          <td>场景</td>
+          <td>工厂产线旁，工控屏操作</td>
+        </tr>
+        <tr>
+          <td>用户</td>
+          <td>4 类角色（工程师 / 操作员 / 维护 / 质检）</td>
+        </tr>
+        <tr>
+          <td>数据</td>
+          <td>2D + 3D 双传感器，16 路相机并发</td>
+        </tr>
+        <tr>
+          <td>硬件</td>
+          <td>工控屏分辨率 / 工业级显示器色差</td>
+        </tr>
+      </table>
+
+      <div style="margin-top: 28px;">
+        <div class="sec-lbl">Tension</div>
+        <div class="tnbox">
+          <div class="tnbox-ttl">矛盾一：信息密度 vs 操作容错</div>
+          <div class="tnbox-body">16 路相机实时画面、统计数据、缺陷柱状图、设备状态、处理日志——监控首页天然过载。每个窗口还需支持独立操作（保存图片、开启检测、缩放）。</div>
+        </div>
+        <div class="tnbox">
+          <div class="tnbox-ttl">矛盾二：设计判断 vs 工厂既有习惯</div>
+          <div class="tnbox-body">我的判断和工厂端需求经常对不上。首页放破坏性操作（清除工位信息）——从 UX 角度不合理，但客户和开发都说工厂反复要求。所有需求经开发转述，信息不对称。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Before / After images -->
+    <div class="p2-right">
+      <div class="ba-block">
+        <div class="ba-lbl">Before &nbsp;—&nbsp; 原始工程界面</div>
+        <div class="ba-frame">
+          <img src="./images/p2-layout-before.png" alt="旧版界面">
+        </div>
+      </div>
+      <div class="ba-block">
+        <div class="ba-lbl">After &nbsp;—&nbsp; 重构方案</div>
+        <div class="ba-frame">
+          <img src="./images/p2-layout-after.jpg" alt="重构后界面">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ========================================================
+     PAGE 3  TRADE-OFF 1 — A/B LAYOUT COMPARISON
+     图片区：铝材纹理叠层 opacity 0.05 + #0d0d0d 底色
+     选中方案：#C8F73B 左侧 3px border
+     ======================================================== -->
+<div class="pg-label" id="p3">PAGE 03 / 06 <span>Trade-off 1 — 布局方案 A/B 对比</span></div>
+<div class="page">
+  <div class="p3">
+
+    <div class="p3-hd">
+      <div class="sec-lbl">Trade-off · 布局决策</div>
+      <div class="sec-ttl">传感器分组 vs 16 路全平铺：我出了两版，客户选了 A</div>
+    </div>
+
+    <div class="p3-grid">
+
+      <!-- Plan A — 客户选择 -->
+      <div class="p3-card selected">
+        <div class="p3-badge p3-ba">客户选择 ✓</div>
+        <div class="p3-img">
+          <!-- 铝材纹理叠层，opacity: 0.05 -->
+          <div class="aluminum-bg" aria-hidden="true" style="opacity:0.05;"></div>
+          <img src="./images/p3-layout-plan-a.jpg" alt="方案A：按物理方位分组布局">
+        </div>
+        <div class="p3-body">
+          <div class="p3-plan-ttl">Plan A — 按物理方位分组</div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            上 / 下 / 左 / 右 4 组，映射产线实际传感器安装位置
+          </div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            操作员看到「上组」报警，直觉知道是型材顶面问题
+          </div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            代价：牺牲约 15% 屏幕利用率，总览性弱于 B
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan B — 我的倾向 -->
+      <div class="p3-card">
+        <div class="p3-badge p3-bb">我的倾向</div>
+        <div class="p3-img">
+          <!-- 铝材纹理叠层，opacity: 0.05 -->
+          <div class="aluminum-bg" aria-hidden="true" style="opacity:0.05;"></div>
+          <img src="./images/p3-layout-plan-b.jpg" alt="方案B：16路独立平铺加3D截面布局">
+        </div>
+        <div class="p3-body">
+          <div class="p3-plan-ttl">Plan B — 16 路独立平铺 + 3D 截面</div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            所有相机同时可见，信息完整度最高
+          </div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            中间放铝型材 3D 截面标注缺陷空间方位
+          </div>
+          <div class="p3-anno">
+            <span class="p3-dsh">—</span>
+            未被选择：开发成本更高，客户优先控成本
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================
+     PAGE 4  TRADE-OFF 2&3 — PERMISSION + FAULT TOLERANCE
+     整体背景：铝材纹理 opacity 0.03
+     均匀 padding/gap · 正文全部 ≥ 16px
+     ======================================================== -->
+<div class="pg-label" id="p4">PAGE 04 / 06 <span>Trade-off 2 &amp; 3 — 权限分层 + 容错机制</span></div>
+<div class="page">
+  <div class="p4">
+
+    <!-- P4 整体铝材纹理叠层，opacity: 0.03 -->
+    <div class="aluminum-bg" aria-hidden="true" style="opacity:0.03;"></div>
+
+    <div class="p4-inner">
+      <div class="p4-hd">
+        <div class="sec-lbl">Trade-off · 系统架构决策</div>
+      </div>
+
+      <div class="p4-cols">
+
+        <!-- Left: Permission matrix -->
+        <div>
+          <div class="p4-col-ttl">权限分层：菜单级，不做按钮级</div>
+          <div class="p4-col-body">
+            通用版产品，不同客户权限需求不同。按钮级粒度的开发成本和维护成本对初创公司来说 ROI 不够。四类角色各看各的模块，已经比原来「所有人看同一个界面」好太多了。
+          </div>
+          <table class="ptable">
+            <tr>
+              <th style="text-align:left; width:32%">模块</th>
+              <th>工程师</th>
+              <th>操作员</th>
+              <th>维护</th>
+              <th>质检</th>
+            </tr>
+            <tr>
+              <td>实时监控</td>
+              <td class="ck">✓</td><td class="ck">✓</td><td>—</td><td>—</td>
+            </tr>
+            <tr>
+              <td>算法调参</td>
+              <td class="ck">✓</td><td>—</td><td>—</td><td>—</td>
+            </tr>
+            <tr>
+              <td>统计信息</td>
+              <td class="ck">✓</td><td class="ro">只读</td><td>—</td><td class="ck">✓</td>
+            </tr>
+            <tr>
+              <td>缺陷分析</td>
+              <td class="ck">✓</td><td>—</td><td>—</td><td class="ck">✓</td>
+            </tr>
+            <tr>
+              <td>工控急停</td>
+              <td class="ck">✓</td><td>—</td><td class="ck">✓</td><td>—</td>
+            </tr>
+            <tr>
+              <td>相机配置</td>
+              <td class="ck">✓</td><td>—</td><td>—</td><td>—</td>
+            </tr>
+            <tr>
+              <td>用户权限</td>
+              <td class="ck">✓</td><td>—</td><td>—</td><td>—</td>
+            </tr>
+            <tr>
+              <td>通讯日志</td>
+              <td class="ck">✓</td><td class="ro">只读</td><td class="ck">✓</td><td>—</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Right: Fault tolerance -->
+        <div>
+          <div class="p4-col-ttl">三级容错：只落地了急停层</div>
+          <div class="p4-col-body">
+            AI 不是万能的。挤压是连续生产，一旦漏报 / 误报来不及干预，整批几吨铝材将报废。我提出了分级容错方案：
+          </div>
+
+          <div class="fault-list">
+            <div class="fi">
+              <div class="fi-lvl lv-light">轻度</div>
+              <div class="fi-txt">
+                在线调参修正 AI 判定
+                <span class="fi-sub">工程师在系统内微调 2D/3D 算法的置信度和 IoU</span>
+                <span class="fi-tag t-done">已落地</span>
+              </div>
+            </div>
+            <div class="fi">
+              <div class="fi-lvl lv-mid">中度</div>
+              <div class="fi-txt">
+                缺陷开关手动接管
+                <span class="fi-sub">操作员手动禁用某路 AI 检测，降级为人工目视</span>
+                <span class="fi-tag t-miss">未落地</span>
+              </div>
+            </div>
+            <div class="fi">
+              <div class="fi-lvl lv-crit">极端</div>
+              <div class="fi-txt">
+                软硬联动急停
+                <span class="fi-sub">物理按钮触发，软件切断检测流程，伺服电机归位</span>
+                <span class="fi-tag t-done">已落地</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p4-note">
+            中度容错没推动落地，是我妥协让得太快的地方。急停是最后一道防线，但中间缺一层缓冲，系统鲁棒性在实际运行中可能暴露问题。
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ========================================================
+     PAGE 5  BENTO — ALGO DEEP DIVE
+     左侧主图：object-fit: contain，不裁切
+     右侧注释卡：铝材纹理叠层 opacity 0.06
+     ======================================================== -->
+<div class="pg-label" id="p5">PAGE 05 / 06 <span>算法调参界面 — 工程师角色深度设计</span></div>
+<div class="page">
+  <div class="p5">
+
+    <div class="p5-hd">
+      <div class="dark-lbl">Deep Dive · 算法参数设置</div>
+      <div class="dark-ttl">让工程师在线调 AI，但没做防呆——这是真实情况</div>
+    </div>
+
+    <div class="p5-bento">
+
+      <!-- 主截图：spans all 3 rows, col 1 · object-fit: contain -->
+      <div class="bcard main-img">
+        <img src="./images/p5-algo-settings-ui.jpg" alt="算法调参界面">
+      </div>
+
+      <!-- 注释卡 1 -->
+      <div class="bcard">
+        <div class="bcard-inner">
+          <div class="bcard-num">01</div>
+          <div class="bcard-ttl">检测条件表</div>
+          <div class="bcard-body">
+            每个缺陷类型（bump / scratch / seam）独立设置判定值、置信度、IoU。工程师可针对不同铝材型号微调参数，实现 AI 检测行为的精细控制。
+          </div>
+        </div>
+      </div>
+
+      <!-- 注释卡 2 -->
+      <div class="bcard">
+        <div class="bcard-inner">
+          <div class="bcard-num">02</div>
+          <div class="bcard-ttl">全局参数区</div>
+          <div class="bcard-body">
+            全局置信度阈值 / IoU 阈值 / 前最优个数 / 数据维度作为兜底，局部参数覆盖全局。两层参数结构平衡了通用性和精细度。
+          </div>
+        </div>
+      </div>
+
+      <!-- 注释卡 3：坦诚说 -->
+      <div class="bcard">
+        <div class="honest-tag">坦诚说</div>
+        <div class="bcard-inner">
+          <div class="bcard-num">03</div>
+          <div class="bcard-ttl">只有「应用」和「取消」</div>
+          <div class="bcard-body">
+            没有参数范围提示，没有二次确认，没有历史回溯，没有模拟预览。客户没提这个需求，我当时也没主动做。
+            <br><br>
+            <span class="bcard-em">如果重来，至少会加参数范围校验和修改确认弹层。</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ========================================================
+     PAGE 6  BENTO — EVIDENCE + REFLECTION
+     指标数字 #C8F73B · Reflection 完整文字保留
+     ======================================================== -->
+<div class="pg-label" id="p6">PAGE 06 / 06 <span>Evidence + Reflection — 结果和反思</span></div>
+<div class="page">
+  <div class="p6">
+
+    <div class="p6-hd">
+      <div class="dark-lbl">Evidence · 交付结果</div>
+    </div>
+
+    <div class="p6-bento">
+
+      <!-- 指标 1：模块数 -->
+      <div class="mcard">
+        <div class="mcard-top">
+          <span class="mcard-num">11</span>
+        </div>
+        <div>
+          <div class="mcard-lbl">核心模块</div>
+          <div class="mcard-sub">从 0 到 1 完整设计交付</div>
+        </div>
+      </div>
+
+      <!-- 指标 2：角色数 -->
+      <div class="mcard">
+        <div class="mcard-top">
+          <span class="mcard-num">4</span>
+        </div>
+        <div>
+          <div class="mcard-lbl">角色权限方案</div>
+          <div class="mcard-sub">工程师 / 操作员 / 维护 / 质检</div>
+        </div>
+      </div>
+
+      <!-- 指标 3：相机路数 -->
+      <div class="mcard">
+        <div class="mcard-top">
+          <span class="mcard-num">16</span>
+        </div>
+        <div>
+          <div class="mcard-lbl">路工业相机</div>
+          <div class="mcard-sub">2D + 3D 双模态并发监控</div>
+        </div>
+      </div>
+
+      <!-- Reflection：右列 2 行 -->
+      <div class="rcard">
+        <div class="rcard-tag">Reflection</div>
+        <div class="rcard-ttl">如果重来，我会做两件事不同</div>
+        <div class="rcard-body">
+          <span class="rcard-em">第一，去工厂。</span>
+          无论如何争取至少去一次，看操作员实际怎么用，而不是全程依赖开发转述需求。很多争论的根源就是信息不对称，我和开发都在猜工厂的真实场景。
+          <br><br>
+          <span class="rcard-em">第二，推动中度容错落地。</span>
+          急停是最后一道防线，但中间缺一层缓冲。当时没推是考虑了初创公司的现实处境，但现在回头看，这个妥协让得太快了。
+          <br><br>
+          <span class="rcard-dim">产品设计不只是用户体验的事，成本和现实约束也是设计决策的一部分。信息架构的优化可以迭代，但如果第一版因为方案分歧迟迟上不了线，什么都是零。</span>
+        </div>
+        <div class="rcard-foot">
+          外部顾问角色的现实：你能影响方案，但控制不了最后一公里。<br>
+          开发最终在颜色和部分信息排布上按自己的判断做了删减。
+        </div>
+      </div>
+
+      <!-- 交付确认 -->
+      <div class="dcard">
+        <div>
+          <div class="dcard-icon">✓ &nbsp;确认通过</div>
+          <div class="dcard-body">
+            开发团队 + 项目负责人审核确认交付通过。
+          </div>
+        </div>
+        <div class="dcard-lbl">Delivery Status</div>
+      </div>
+
+      <!-- 落地备注 -->
+      <div class="ncard">
+        <div class="ncard-body">
+          落地还原度：开发未完全按设计实现，在颜色和部分信息排布上按其自身判断做了删减。这是外部顾问角色的常态约束。
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+</main><!-- end .page-wrapper -->
+</body>
+</html>
