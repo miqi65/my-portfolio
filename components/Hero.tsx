@@ -75,7 +75,7 @@ export default function Hero() {
           className="mt-8 text-[15px] leading-[1.9] text-white/50 max-w-sm"
           style={{ fontFamily: "'PingFang SC', 'Noto Sans SC', sans-serif" }}
         >
-          从冷库IoT监控到AI视觉质检机，10年复杂B端经验<br />
+          从冷库IoT监控到AI视觉质检机，11年复杂B端经验<br />
           约束越多，设计越有意思
         </motion.p>
 
@@ -87,8 +87,8 @@ export default function Hero() {
           className="mt-10"
         >
           <a
-            href="#projects"
-            className="inline-flex items-center px-10 py-[10px] border-[3px] border-white rounded-[24px] text-[15px] text-white/80 transition-all duration-300 hover:bg-white hover:text-[#0d0d0d] hover:border-white"
+            href="#works"
+            className="inline-flex items-center px-10 py-[10px] border-2 border-white rounded-[24px] text-[15px] text-white/80 transition-all duration-300 hover:bg-white hover:text-[#0d0d0d] hover:border-white"
             style={{ fontFamily: "'PingFang SC', 'Noto Sans SC', sans-serif" }}
           >
             看看我做过什么

@@ -222,19 +222,9 @@ function PlaceholderPlane() {
 // ─── Main export ─────────────────────────────────────────────────────────────
 export default function WebGLProject() {
   return (
-    <section className="relative w-full py-24 px-8 md:px-12 overflow-hidden" id="works">
+    <section className="relative w-full py-24 overflow-hidden border-t border-[#F0F0F0]" id="works">
+      <div className="max-w-[1170px] mx-auto px-5">
       {/* Section label */}
-      <motion.div
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="mb-8 flex items-center gap-4"
-      >
-        <div className="w-8 h-px bg-ink" />
-        <span className="text-[11px] tracking-[0.3em] uppercase text-muted">Featured Project</span>
-      </motion.div>
-
       <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 items-end">
         {/* Project info */}
         <motion.div
@@ -306,7 +296,7 @@ export default function WebGLProject() {
           />
         </motion.div>
       </div>
-
+      </div>
     </section>
   )
 }

@@ -47,21 +47,23 @@ function StatItem({ stat, index }: { stat: typeof stats[0]; index: number }) {
 
 export default function Stats() {
   return (
-    <section className="py-24 px-8 md:px-12 border-t border-[#F0F0F0]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="flex items-center gap-4 mb-16"
-      >
-        <div className="w-8 h-px bg-ink" />
-        <span className="text-[11px] tracking-[0.3em] uppercase text-muted">By the Numbers</span>
-      </motion.div>
+    <section className="py-24">
+      <div className="max-w-[1170px] mx-auto px-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex items-center gap-4 mb-16"
+        >
+          <div className="w-8 h-px bg-ink" />
+          <span className="text-[11px] tracking-[0.3em] uppercase text-muted">By the Numbers</span>
+        </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
-        {stats.map((stat, i) => (
-          <StatItem key={stat.label} stat={stat} index={i} />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
+          {stats.map((stat, i) => (
+            <StatItem key={stat.label} stat={stat} index={i} />
+          ))}
+        </div>
       </div>
     </section>
   )

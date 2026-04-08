@@ -5,120 +5,157 @@ import Image from 'next/image'
 
 const projects = [
   {
-    id: 'left1',
+    num: '01',
+    label: 'Industrial AI · HMI',
     title: '铝材 AI 视觉质检系统',
-    subtitle: '让 AI 辅助视觉检测',
-    image: '/images/p1-cover.png',
-    href: '../Project_P1/index.html',
+    desc: '让 AI 辅助视觉检测。将机器视觉算法结果以对操作者友好的方式呈现，软硬件一体化 HMI 设计，适配工厂环境的强光与噪声干扰。',
+    tags: ['HMI', 'Industrial AI', 'Vision Inspection', 'Embedded UI'],
+    image: '/images/p1-cover-hero.png',
+    href: '/Project_P1/index.html',
   },
   {
-    id: 'right1',
+    num: '02',
+    label: 'B端 · 双端全链路',
     title: 'CYG 智能仓储管理系统',
-    subtitle: 'Web管理端 + RF手持终端 | 双端全链路设计',
-    image: '/images/p2-cover.png',
+    desc: '覆盖 Web 管理端与 RF 手持终端的双端全链路设计，打通入库、拣货、盘点全流程，在高密度信息环境下保持操作效率与可读性。',
+    tags: ['WMS', 'B端设计', 'RF Terminal', 'Full-Stack Design'],
+    image: '/Project_P2/images/P2_01_hero_mockup.png',
     href: '/Project_P2/index.html',
   },
   {
-    id: 'left2',
+    num: '03',
+    label: 'Design System',
     title: '设计工程化的三次进化',
-    subtitle: '从手搓规范到 Machine–Readable Design System',
+    desc: '从手搓规范到 Machine–Readable Design System，记录设计与工程协作三个阶段的演进路径，探索让设计决策可被机器理解与消费的方法论。',
+    tags: ['Design System', 'Design Tokens', 'Engineering', 'Figma'],
     image: '/images/p3-cover.png',
     href: '/Project_P3/index.html',
   },
   {
-    id: 'right2',
-    title: '5G消息Chatbot交互规范体系',
-    subtitle: '制定通用交互规范，在受限环境中保持品牌一致性与可读性',
+    num: '04',
+    label: 'Interaction Spec',
+    title: '5G消息 Chatbot 交互规范体系',
+    desc: '制定通用交互规范，在 5G 消息受限渲染环境中保持品牌一致性与可读性，覆盖组件定义、状态规则与多场景适配指南。',
+    tags: ['Chatbot', '5G Message', 'Interaction Spec', 'Brand'],
     image: '/images/p4-cover.png',
     href: '/Project_P4/index.html',
   },
 ]
 
 export default function ProjectGrid() {
-  const leftProjects = [projects[0], projects[2]]
-  const rightProjects = [projects[1], projects[3]]
-
   return (
-    <section id="projects" className="py-24 px-8 md:px-12 border-t border-[#F0F0F0]">
-      {/* Header row */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="flex items-end justify-between mb-16"
-      >
-        <div>
-          <div className="flex items-center gap-4 mb-4">
-            <div className="w-8 h-px bg-ink" />
-            <span className="text-[11px] tracking-[0.3em] uppercase text-muted">More Works</span>
-          </div>
-          <h2 className="text-[6vw] md:text-[4vw] font-bold leading-none text-ink">项目案例</h2>
-        </div>
-        <span className="text-[13px] text-muted hidden md:block">2018 — 2026</span>
-      </motion.div>
-
-      {/* 2-column staggered grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-16">
-        {/* Left column */}
-        <div className="flex flex-col gap-16 md:gap-20">
-          {leftProjects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i * 2} />
-          ))}
-        </div>
-
-        {/* Right column — offset downward for staggered effect */}
-        <div className="flex flex-col gap-16 md:gap-20 md:mt-[18%]">
-          {rightProjects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i * 2 + 1} />
-          ))}
-        </div>
-      </div>
+    <section id="works" className="w-full">
+      {projects.map((project, i) => (
+        <ProjectRow key={project.num} project={project} index={i} />
+      ))}
     </section>
   )
 }
 
-function ProjectCard({
+function ProjectRow({
   project,
   index,
 }: {
   project: (typeof projects)[0]
   index: number
 }) {
-  const inner = (
+  const reversed = index % 2 === 0
+
+  const textBlock = (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.1 }}
+      className={`flex flex-col gap-6 ${reversed ? 'order-1 lg:order-2' : ''}`}
+    >
+      <div>
+        <p className="text-[11px] tracking-[0.3em] uppercase text-muted mb-3">
+          {project.num} / {project.label}
+        </p>
+        <h2 className="text-[28px] md:text-[32px] font-bold leading-tight text-ink">
+          {project.title}
+        </h2>
+      </div>
+
+      <p className="text-[15px] leading-relaxed text-[#666666]">
+        {project.desc}
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-[11px] border border-faint px-3 py-1 rounded-full text-muted tracking-wide"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <a href={project.href} target="_blank" rel="noopener noreferrer">
+        <motion.div
+          className="flex items-center gap-2 group w-fit"
+          whileHover={{ gap: '12px' }}
+        >
+          <span className="text-[13px] tracking-wider uppercase font-medium text-ink">
+            View Case
+          </span>
+          <div className="w-6 h-px bg-ink transition-all duration-300 group-hover:w-10" />
+        </motion.div>
+      </a>
+    </motion.div>
+  )
+
+  const imageBlock = (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
-      transition={{ duration: 0.7, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className="group"
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+      className={`relative w-full overflow-hidden ${reversed ? 'order-2 lg:order-1' : ''}`}
+      style={{ aspectRatio: '16/9' }}
     >
-      {/* Image */}
-      <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#F5F5F5]">
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative block w-full h-full group cursor-scale"
+      >
         <Image
           src={project.image}
           alt={project.title}
           fill
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 1024px) 100vw, calc(100vw - 340px)"
         />
-      </div>
-
-      {/* Caption */}
-      <div className="mt-5 space-y-1">
-        <p className="text-[18px] font-semibold leading-snug text-ink">{project.title}</p>
-        <p className="text-[14px] font-normal text-muted leading-snug">{project.subtitle}</p>
-      </div>
+      </a>
     </motion.div>
   )
 
-  if (project.href) {
-    return (
-      <a href={project.href} target="_blank" rel="noopener noreferrer" className="block cursor-scale">
-        {inner}
-      </a>
-    )
-  }
-
-  return <div className="cursor-scale">{inner}</div>
+  return (
+    <div className="relative w-full py-24 overflow-hidden border-t border-[#F0F0F0]">
+      <div className="max-w-[1170px] mx-auto px-5">
+      <div
+        className={`grid grid-cols-1 gap-12 items-end ${
+          reversed
+            ? 'lg:grid-cols-[1fr_280px]'
+            : 'lg:grid-cols-[280px_1fr]'
+        }`}
+      >
+        {reversed ? (
+          <>
+            {imageBlock}
+            {textBlock}
+          </>
+        ) : (
+          <>
+            {textBlock}
+            {imageBlock}
+          </>
+        )}
+      </div>
+      </div>
+    </div>
+  )
 }

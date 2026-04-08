@@ -19,6 +19,7 @@
 
 :root {
   --font-inter: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+  --font-sans: 'Noto Sans SC', system-ui, sans-serif;
 
   /* ProfileIntroSection tokens */
   --surface-primary: #ffffff;
@@ -79,15 +80,35 @@ html.lenis {
   color: #ffffff;
 }
 
-/* Scrollbar */
+/* Scrollbar — matches Chrome default (~12px) */
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #111111;
+  background: #c1c1c1;
+  border-radius: 6px;
+  border: 3px solid #f1f1f1; /* creates padding effect like Chrome */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Mobile: overlay scrollbar, no visible track */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 2px;
+    border: none;
+  }
 }
 
 /* Custom cursor */

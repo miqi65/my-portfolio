@@ -9,7 +9,7 @@
 .bgLayer {
   position: absolute;
   inset: 0;
-  background-color: #E5E5E5;
+  background-color: #e5e7eb;
   z-index: 0;
 }
 
@@ -33,7 +33,7 @@
 
 .title {
   margin: 0;
-  font-family: var(--font-sans, "PingFang SC", sans-serif);
+  font-family: var(--font-sans, sans-serif);
   font-size: 50px;
   line-height: 65px;
   letter-spacing: -1.5px;
@@ -47,7 +47,7 @@
   margin: 0;
   width: 895px;
   max-width: 100%;
-  font-family: var(--font-sans, "PingFang SC", sans-serif);
+  font-family: var(--font-sans, sans-serif);
   font-size: 18px;
   line-height: 32.4px;
   font-weight: 400;

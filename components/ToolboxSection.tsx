@@ -11,9 +11,9 @@ const tools: Tool[] = [
   // Row 1 (highest usage frequency)
   { name: "Figma", url: "https://www.figma.com/", logo: "/icons/figma.svg", size: 57.67 },
   { name: "Notion", url: "https://www.notion.so/", logo: "/icons/notion.svg", size: 54.88 },
-  { name: "Miro", url: "https://miro.com/", logo: "/icons/miro.svg", size: 46 },
-  { name: "Slack", url: "https://slack.com/", logo: "/icons/slack.svg", size: 50.59 },
-  { name: "Jira", url: "https://www.atlassian.com/software/jira", logo: "/icons/jira.svg", size: 48.3 },
+  { name: "Stitch", url: "https://stitch.withgoogle.com/", logo: "/icons/stitch.svg", size: 52 },
+  { name: "Gemini", url: "https://gemini.google.com/", logo: "/icons/gemini.svg", size: 64 },
+  { name: "Mobbin", url: "https://mobbin.com/", logo: "/icons/mobbin.svg", size: 72 },
 
   // Row 2
   { name: "ChatGPT", url: "https://chat.openai.com/", logo: "/icons/openai.svg", size: 48.3 },
@@ -24,10 +24,10 @@ const tools: Tool[] = [
 
   // Row 3
   { name: "Framer", url: "https://www.framer.com/", logo: "/icons/framer.svg", size: 66.69 },
-  { name: "Webflow", url: "https://webflow.com/", logo: "/icons/webflow.svg", size: 58.64 },
-  { name: "Linear", url: "https://linear.app/", logo: "/icons/linear.svg", size: 52.89 },
+  { name: "UX Pilot", url: "https://uxpilot.ai/", logo: "/icons/UX Pilot AI.svg", size: 56 },
+  { name: "Vercel v0", url: "https://v0.app/", logo: "/icons/Vercel v0.svg", size: 80 },
   { name: "Midjourney", url: "https://www.midjourney.com/", logo: "/icons/midjourney.svg", size: 75.89 },
-  { name: "Perplexity", url: "https://www.perplexity.ai/", logo: "/icons/perplexity.svg", size: 50.59 },
+  { name: "Maze", url: "https://maze.co/", logo: "/icons/maze.svg", size: 54 },
 ];
 
 export function ToolboxSection() {

@@ -27,7 +27,7 @@
 
 .title {
   margin: 22px 0;
-  font-family: "PingFang SC", var(--font-sans, sans-serif);
+  font-family: var(--font-sans, sans-serif);
   font-size: 50px;
   line-height: 65px;
   letter-spacing: -1.5px;
@@ -38,7 +38,7 @@
 .desc {
   margin: 0 auto;
   max-width: 934px;
-  font-family: "PingFang SC", var(--font-sans, sans-serif);
+  font-family: var(--font-sans, sans-serif);
   font-size: 18px;
   line-height: 32.4px;
   color: var(--text-secondary);
