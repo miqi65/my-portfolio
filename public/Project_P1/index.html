@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>P1 质检机 — 作品集</title>
+<title>P1 AI 视觉质检系统 — 作品集</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
 
@@ -929,7 +929,7 @@ body {
     <!-- 左侧内容面板（纯色 #080808，无渐变） -->
     <div class="p1-panel">
       <div class="p1-eyebrow">Project 01 &nbsp;·&nbsp; 2025</div>
-      <div class="p1-title">挤压型材表面<br>质检系统</div>
+      <div class="p1-title">AI 视觉<br>质检系统</div>
       <div class="p1-sub">AI + HMI 全链路设计 · 独立设计顾问 · 从 0 到 1</div>
 
       <div class="p1-meta">
@@ -939,7 +939,7 @@ body {
         </div>
         <div class="p1-meta-cell">
           <div class="p1-meta-k">Client</div>
-          <div class="p1-meta-v">新文合智能</div>
+          <div class="p1-meta-v">某 AI 工业视觉企业</div>
         </div>
         <div class="p1-meta-cell">
           <div class="p1-meta-k">Scope</div>
@@ -950,7 +950,7 @@ body {
       <div class="p1-bullets">
         <div class="p1-b">11 个核心模块从 0 到 1 完整设计交付</div>
         <div class="p1-b">4 类角色权限分层方案（工程师 / 操作员 / 维护 / 质检）</div>
-        <div class="p1-b">2D + 3D 双模态 · 16 路工业相机监控布局</div>
+        <div class="p1-b">多模态工业相机监控布局</div>
       </div>
     </div>
 
@@ -970,7 +970,7 @@ body {
     <div class="p2-left">
       <div class="sec-lbl">Situation</div>
       <div class="sec-body">
-        新文合智能要做一套铝型材挤压产线的 AI 表面质检系统，替代人工目视检测。系统接入 2D + 3D 双模态共 16 路工业相机，覆盖 11 类缺陷的自动识别和分拣，同时服务工厂里四类角色——工程师调算法、操作员盯预警、维护管急停、质检查数据。
+        该 AI 工业视觉企业要做一套工业产线的 AI 视觉质检系统，替代人工目视检测。系统接入多模态工业相机，覆盖多类缺陷的自动识别和分拣，同时服务工厂里四类角色——工程师调算法、操作员盯预警、维护管急停、质检查数据。
         <br><br>
         我作为独立设计顾问介入时，拿到的是一份 107 页的工程文档和一套黑底工程师工具界面，没有角色区分，没有信息分层，所有功能堆在一个平面上。
       </div>
@@ -986,7 +986,7 @@ body {
         </tr>
         <tr>
           <td>数据</td>
-          <td>2D + 3D 双传感器，16 路相机并发</td>
+          <td>多模态传感器，多路相机并发</td>
         </tr>
         <tr>
           <td>硬件</td>
@@ -998,7 +998,7 @@ body {
         <div class="sec-lbl">Tension</div>
         <div class="tnbox">
           <div class="tnbox-ttl">矛盾一：信息密度 vs 操作容错</div>
-          <div class="tnbox-body">16 路相机实时画面、统计数据、缺陷柱状图、设备状态、处理日志——监控首页天然过载。每个窗口还需支持独立操作（保存图片、开启检测、缩放）。</div>
+          <div class="tnbox-body">多路相机实时画面、统计数据、缺陷柱状图、设备状态、处理日志——监控首页天然过载。每个窗口还需支持独立操作（保存图片、开启检测、缩放）。</div>
         </div>
         <div class="tnbox">
           <div class="tnbox-ttl">矛盾二：设计判断 vs 工厂既有习惯</div>
@@ -1038,7 +1038,7 @@ body {
 
     <div class="p3-hd">
       <div class="sec-lbl">Trade-off · 布局决策</div>
-      <div class="sec-ttl">传感器分组 vs 16 路全平铺：我出了两版，客户选了 A</div>
+      <div class="sec-ttl">传感器分组 vs 全路平铺：我出了两版，客户选了 A</div>
     </div>
 
     <div class="p3-grid">
@@ -1055,11 +1055,11 @@ body {
           <div class="p3-plan-ttl">Plan A — 按物理方位分组</div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
-            上 / 下 / 左 / 右 4 组，映射产线实际传感器安装位置
+            按物理方位分组，映射产线实际传感器安装位置
           </div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
-            操作员看到「上组」报警，直觉知道是型材顶面问题
+            操作员看到分组报警，直觉关联到具体检测区域
           </div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
@@ -1077,14 +1077,14 @@ body {
           <img src="./images/p3-layout-plan-b.jpg" alt="方案B：16路独立平铺加3D截面布局">
         </div>
         <div class="p3-body">
-          <div class="p3-plan-ttl">Plan B — 16 路独立平铺 + 3D 截面</div>
+          <div class="p3-plan-ttl">Plan B — 全路独立平铺 + 3D 截面</div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
             所有相机同时可见，信息完整度最高
           </div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
-            中间放铝型材 3D 截面标注缺陷空间方位
+            中间放检测对象 3D 截面标注缺陷空间方位
           </div>
           <div class="p3-anno">
             <span class="p3-dsh">—</span>
@@ -1170,7 +1170,7 @@ body {
         <div>
           <div class="p4-col-ttl">三级容错：只落地了急停层</div>
           <div class="p4-col-body">
-            AI 不是万能的。挤压是连续生产，一旦漏报 / 误报来不及干预，整批几吨铝材将报废。我提出了分级容错方案：
+            AI 不是万能的。产线是连续生产，一旦漏报 / 误报来不及干预，整批产品将报废。我提出了分级容错方案：
           </div>
 
           <div class="fault-list">
@@ -1223,7 +1223,7 @@ body {
 
     <div class="p5-hd">
       <div class="dark-lbl">Deep Dive · 算法参数设置</div>
-      <div class="dark-ttl">让工程师在线调 AI，但没做防呆——这是真实情况</div>
+      <div class="dark-ttl">完整的调参控制权，缺失的安全边界</div>
     </div>
 
     <div class="p5-bento">
@@ -1239,7 +1239,7 @@ body {
           <div class="bcard-num">01</div>
           <div class="bcard-ttl">检测条件表</div>
           <div class="bcard-body">
-            每个缺陷类型（bump / scratch / seam）独立设置判定值、置信度、IoU。工程师可针对不同铝材型号微调参数，实现 AI 检测行为的精细控制。
+            每个缺陷类型独立设置判定值、置信度、IoU。工程师可针对不同产品型号微调参数，实现 AI 检测行为的精细控制。
           </div>
         </div>
       </div>
@@ -1316,18 +1316,18 @@ body {
           <span class="mcard-num">16</span>
         </div>
         <div>
-          <div class="mcard-lbl">路工业相机</div>
-          <div class="mcard-sub">2D + 3D 双模态并发监控</div>
+          <div class="mcard-lbl">路视觉传感器</div>
+          <div class="mcard-sub">多模态并发监控</div>
         </div>
       </div>
 
       <!-- Reflection：右列 2 行 -->
       <div class="rcard">
         <div class="rcard-tag">Reflection</div>
-        <div class="rcard-ttl">如果重来，我会做两件事不同</div>
+        <div class="rcard-ttl">如果重来，我会做这两件事</div>
         <div class="rcard-body">
           <span class="rcard-em">第一，去工厂。</span>
-          无论如何争取至少去一次，看操作员实际怎么用，而不是全程依赖开发转述需求。很多争论的根源就是信息不对称，我和开发都在猜工厂的真实场景。
+          无论如何争取至少去一次，看操作员实际怎么用，而不是全程依赖开发转述需求。很多争论的根源就是信息不对称，我通过开发的描述以及来回沟通，以确认工厂的真实场景。
           <br><br>
           <span class="rcard-em">第二，推动中度容错落地。</span>
           急停是最后一道防线，但中间缺一层缓冲。当时没推是考虑了初创公司的现实处境，但现在回头看，这个妥协让得太快了。

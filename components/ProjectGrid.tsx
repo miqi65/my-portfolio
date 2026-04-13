@@ -7,7 +7,7 @@ const projects = [
   {
     num: '01',
     label: 'Industrial AI · HMI',
-    title: '铝材 AI 视觉质检系统',
+    title: 'AI 视觉质检系统',
     desc: '让 AI 辅助视觉检测。将机器视觉算法结果以对操作者友好的方式呈现，软硬件一体化 HMI 设计，适配工厂环境的强光与噪声干扰。',
     tags: ['HMI', 'Industrial AI', 'Vision Inspection', 'Embedded UI'],
     image: '/images/p1-cover-hero.png',
@@ -126,6 +126,7 @@ function ProjectRow({
           src={project.image}
           alt={project.title}
           fill
+          priority={index === 0}
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="(max-width: 1024px) 100vw, calc(100vw - 340px)"
         />

@@ -164,7 +164,7 @@ function PlaceholderPlane() {
     ctx.fillStyle = '#ffffff'
     ctx.font = 'bold 48px Inter, system-ui, sans-serif'
     ctx.textAlign = 'center'
-    ctx.fillText('铝材 AI 视觉质检系统', 640, 340)
+    ctx.fillText('AI 视觉质检系统', 640, 340)
 
     ctx.fillStyle = '#888888'
     ctx.font = '20px Inter, system-ui, sans-serif'
@@ -237,7 +237,7 @@ export default function WebGLProject() {
           <div>
             <p className="text-[11px] tracking-[0.3em] uppercase text-muted mb-3">01 / Featured</p>
             <h2 className="text-[28px] md:text-[32px] font-bold leading-tight text-ink">
-              铝材 AI 视觉质检系统
+              AI 视觉质检系统
             </h2>
           </div>
 
@@ -292,7 +292,7 @@ export default function WebGLProject() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ position: 'absolute', inset: 0, zIndex: 10 }}
-            aria-label="查看铝材 AI 视觉质检系统案例"
+            aria-label="查看AI 视觉质检系统案例"
           />
         </motion.div>
       </div>

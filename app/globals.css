@@ -20,6 +20,7 @@
 :root {
   --font-inter: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
   --font-sans: 'Noto Sans SC', system-ui, sans-serif;
+  --font-display: 'PingFang SC', 'Noto Sans SC', sans-serif;
 
   /* ProfileIntroSection tokens */
   --surface-primary: #ffffff;
@@ -46,15 +47,19 @@ body {
   background: #ffffff;
   color: #111111;
   font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
-  cursor: none;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hide default cursor everywhere */
-*, *::before, *::after {
-  cursor: none !important;
+/* Custom cursor: desktop only */
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+  *, *::before, *::after {
+    cursor: none !important;
+  }
 }
 
 /* Lenis smooth scroll */
@@ -111,7 +116,13 @@ html.lenis {
   }
 }
 
-/* Custom cursor */
+/* Custom cursor — desktop (pointer: fine) only */
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
 .cursor {
   position: fixed;
   width: 40px;
@@ -146,5 +157,18 @@ html.lenis {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor {
+    display: none;
   }
 }

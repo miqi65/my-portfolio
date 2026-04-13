@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 md:px-12 xl:px-[160px] py-5 md:py-6 mix-blend-difference"
+        className={`${scrolled ? 'fixed' : 'absolute'} top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 md:px-12 xl:px-[160px] py-5 md:py-6 mix-blend-difference`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
@@ -53,7 +53,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className="cursor-scale small text-[18px] font-normal text-white relative group"
-              style={{ fontFamily: "'PingFang SC', 'Noto Sans SC', sans-serif", lineHeight: '28.8px' }}
+              style={{ fontFamily: "var(--font-display)", lineHeight: '28.8px' }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 + i * 0.08 }}
@@ -105,7 +105,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={handleLinkClick}
                   className="text-white text-[32px] font-normal tracking-wide"
-                  style={{ fontFamily: "'PingFang SC', 'Noto Sans SC', sans-serif" }}
+                  style={{ fontFamily: "var(--font-display)" }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}

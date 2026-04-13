@@ -125,11 +125,11 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="border-t border-[#1C1C1E] pt-8 flex flex-col items-center gap-4 text-center"
         >
-          <p className="text-[12px] text-[#ffffff] tracking-wide">
+          <p className="text-[12px] text-white/40 tracking-wide">
             Yang Miki · Portfolio · UX / Product Designer / AI
           </p>
 
-          <p className="text-[10px] text-[#ffffff] tracking-wider">
+          <p className="text-[10px] text-white/30 tracking-wider">
             © All rights reserved.
           </p>
         </motion.div>
