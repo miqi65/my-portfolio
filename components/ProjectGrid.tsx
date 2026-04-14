@@ -59,7 +59,8 @@ function ProjectRow({
   project: (typeof projects)[0]
   index: number
 }) {
-  const reversed = index % 2 === 0
+  // Fix: index 0 → text left, image right (natural reading order)
+  const reversed = index % 2 !== 0
 
   const textBlock = (
     <motion.div
@@ -86,16 +87,22 @@ function ProjectRow({
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="text-[11px] border border-faint px-3 py-1 rounded-full text-muted tracking-wide"
+            className="text-[11px] border border-faint px-3 py-1 rounded-full text-[#555555] tracking-wide"
           >
             {tag}
           </span>
         ))}
       </div>
 
-      <a href={project.href} target="_blank" rel="noopener noreferrer">
+      {/* Enlarged touch target: py-3 -my-3 */}
+      <a
+        href={project.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block py-3 -my-3 w-fit"
+      >
         <motion.div
-          className="flex items-center gap-2 group w-fit"
+          className="flex items-center gap-2 group"
           whileHover={{ gap: '12px' }}
         >
           <span className="text-[13px] tracking-wider uppercase font-medium text-ink">
@@ -120,42 +127,42 @@ function ProjectRow({
         href={project.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative block w-full h-full group cursor-scale"
+        className="relative block w-full h-full overflow-hidden group cursor-scale"
       >
         <Image
           src={project.image}
           alt={project.title}
           fill
           priority={index === 0}
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          sizes="(max-width: 1024px) 100vw, calc(100vw - 340px)"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+          sizes="(max-width: 1024px) 100vw, 722px"
         />
       </a>
     </motion.div>
   )
 
   return (
-    <div className="relative w-full py-24 overflow-hidden border-t border-[#F0F0F0]">
+    <div className="relative w-full py-16 lg:py-24 overflow-hidden border-t border-[#F0F0F0]">
       <div className="max-w-[1170px] mx-auto px-5">
-      <div
-        className={`grid grid-cols-1 gap-12 items-end ${
-          reversed
-            ? 'lg:grid-cols-[1fr_280px]'
-            : 'lg:grid-cols-[280px_1fr]'
-        }`}
-      >
-        {reversed ? (
-          <>
-            {imageBlock}
-            {textBlock}
-          </>
-        ) : (
-          <>
-            {textBlock}
-            {imageBlock}
-          </>
-        )}
-      </div>
+        <div
+          className={`grid grid-cols-1 gap-8 lg:gap-12 items-center ${
+            reversed
+              ? 'lg:grid-cols-[1fr_400px]'
+              : 'lg:grid-cols-[400px_1fr]'
+          }`}
+        >
+          {reversed ? (
+            <>
+              {imageBlock}
+              {textBlock}
+            </>
+          ) : (
+            <>
+              {textBlock}
+              {imageBlock}
+            </>
+          )}
+        </div>
       </div>
     </div>
   )

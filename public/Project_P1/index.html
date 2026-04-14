@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="P1 AI 视觉质检系统 — 工业 AI HMI 全链路设计案例，11 个核心模块从 0 到 1 独立设计顾问作品">
+<meta property="og:title" content="P1 AI 视觉质检系统 — 作品集">
+<meta property="og:description" content="AI + HMI 全链路设计 · 独立设计顾问 · 从 0 到 1。11 个核心模块完整交付，4 类角色权限分层方案。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <title>P1 AI 视觉质检系统 — 作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Geist+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600&display=swap');
 
 /* ================================================================
    RESET + ROOT TOKENS
@@ -32,6 +39,7 @@ body {
   background: #040404;
   font-family: var(--font-sans);
   padding: 40px 0;
+  overflow-x: hidden;
 }
 
 /* ================================================================
@@ -93,7 +101,7 @@ body {
   padding: 0 40px;
 }
 .pg-label {
-  color: #2a2a2a;
+  color: #505050;
   font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 2px;
@@ -101,7 +109,7 @@ body {
   padding-left: 2px;
   text-transform: uppercase;
 }
-.pg-label span { color: #3a3a3a; margin-left: 10px; }
+.pg-label span { color: #626262; margin-left: 10px; }
 
 .page {
   width: 1440px;
@@ -113,20 +121,52 @@ body {
   position: relative;
   transform-origin: top left;
   border: 1px solid #111;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+.page.in-view {
+  opacity: 1;
 }
 
 @media (max-width: 1520px) {
   .page { transform: scale(0.85); margin-bottom: -40px; }
   .page-wrapper { max-width: 1280px; }
 }
+@media (max-width: 1280px) {
+  .page { transform: scale(0.74); margin-bottom: -130px; }
+  .page-wrapper { max-width: 1060px; }
+  .nav { padding: 16px 40px; }
+}
+@media (max-width: 1060px) {
+  .page { transform: scale(0.63); margin-bottom: -230px; }
+  .page-wrapper { padding: 0 20px; }
+}
+@media (max-width: 860px) {
+  .page { transform: scale(0.52); margin-bottom: -330px; }
+  .nav { padding: 14px 24px; }
+  .nav-logo { font-size: 36px; }
+}
+@media (max-width: 680px) {
+  .page { transform: scale(0.43); margin-bottom: -415px; }
+  .nav-logo { font-size: 28px; }
+  .nav-links a { font-size: 15px; }
+}
+@media (max-width: 480px) {
+  .page { transform: scale(0.31); margin-bottom: -525px; }
+  .nav-links { gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page { opacity: 1 !important; transition: none !important; }
+  .nav-logo, .nav-links a { transition: none !important; }
+}
 
 /* ================================================================
    ALUMINUM TEXTURE OVERLAY
    ================================================================ */
 .aluminum-bg {
-  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=60');
-  background-size: cover;
-  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  background-repeat: repeat;
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -615,7 +655,7 @@ body {
   border-radius: 8px;
 }
 .t-done {
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.58);
   color: #080808;
   border: none;
 }
@@ -924,7 +964,7 @@ body {
   <div class="p1-hero">
 
     <!-- 全出血背景图（.png 非 .jpg） -->
-    <img class="p1-bg" src="./images/p1-cover-hero.png" alt="封面背景">
+    <img class="p1-bg" src="./images/p1-cover-hero.png" alt="">
 
     <!-- 左侧内容面板（纯色 #080808，无渐变） -->
     <div class="p1-panel">
@@ -1012,13 +1052,13 @@ body {
       <div class="ba-block">
         <div class="ba-lbl">Before &nbsp;—&nbsp; 原始工程界面</div>
         <div class="ba-frame">
-          <img src="./images/p2-layout-before.png" alt="旧版界面">
+          <img src="./images/p2-layout-before.png" alt="旧版界面" loading="lazy">
         </div>
       </div>
       <div class="ba-block">
         <div class="ba-lbl">After &nbsp;—&nbsp; 重构方案</div>
         <div class="ba-frame">
-          <img src="./images/p2-layout-after.jpg" alt="重构后界面">
+          <img src="./images/p2-layout-after.jpg" alt="重构后界面" loading="lazy">
         </div>
       </div>
     </div>
@@ -1049,7 +1089,7 @@ body {
         <div class="p3-img">
           <!-- 铝材纹理叠层，opacity: 0.05 -->
           <div class="aluminum-bg" aria-hidden="true" style="opacity:0.05;"></div>
-          <img src="./images/p3-layout-plan-a.jpg" alt="方案A：按物理方位分组布局">
+          <img src="./images/p3-layout-plan-a.jpg" alt="方案A：按物理方位分组布局" loading="lazy">
         </div>
         <div class="p3-body">
           <div class="p3-plan-ttl">Plan A — 按物理方位分组</div>
@@ -1074,7 +1114,7 @@ body {
         <div class="p3-img">
           <!-- 铝材纹理叠层，opacity: 0.05 -->
           <div class="aluminum-bg" aria-hidden="true" style="opacity:0.05;"></div>
-          <img src="./images/p3-layout-plan-b.jpg" alt="方案B：16路独立平铺加3D截面布局">
+          <img src="./images/p3-layout-plan-b.jpg" alt="方案B：16路独立平铺加3D截面布局" loading="lazy">
         </div>
         <div class="p3-body">
           <div class="p3-plan-ttl">Plan B — 全路独立平铺 + 3D 截面</div>
@@ -1230,7 +1270,7 @@ body {
 
       <!-- 主截图：spans all 3 rows, col 1 · object-fit: contain -->
       <div class="bcard main-img">
-        <img src="./images/p5-algo-settings-ui.jpg" alt="算法调参界面">
+        <img src="./images/p5-algo-settings-ui.jpg" alt="算法调参界面" loading="lazy">
       </div>
 
       <!-- 注释卡 1 -->
@@ -1343,7 +1383,7 @@ body {
       <!-- 交付确认 -->
       <div class="dcard">
         <div>
-          <div class="dcard-icon">✓ &nbsp;确认通过</div>
+          <div class="dcard-icon"><svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:5px;margin-bottom:1px"><path d="M2 6.5L5 9.5L11 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>确认通过</div>
           <div class="dcard-body">
             开发团队 + 项目负责人审核确认交付通过。
           </div>
@@ -1364,5 +1404,24 @@ body {
 
 
 </main><!-- end .page-wrapper -->
+
+<script>
+(function () {
+  var pages = document.querySelectorAll('.page');
+  if (!window.IntersectionObserver) {
+    pages.forEach(function (p) { p.classList.add('in-view'); });
+    return;
+  }
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05 });
+  pages.forEach(function (p) { observer.observe(p); });
+})();
+</script>
 </body>
 </html>

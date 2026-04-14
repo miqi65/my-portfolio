@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>P2 CYG仓储管理系统 - 作品集排版参考</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 /* ═══════════════════════════════════════════════════════════
    DESIGN SYSTEM · CYG WMS Portfolio
@@ -20,7 +21,7 @@
   --bg-card-hover: #242428;
   --text-primary:  #EAE8E3;
   --text-secondary:#8A8884;
-  --text-dim:      #4A4846;
+  --text-dim:      #908D8A;
 
   --accent:        #EA2028;
   --accent-soft:   rgba(234,32,40,0.10);
@@ -54,7 +55,7 @@ body > .page-wrapper:nth-child(even) > .page {
   --bg-card-hover: #E4E2DC;
   --text-primary:  #111111;
   --text-secondary:#55524E;
-  --text-dim:      #9A9592;
+  --text-dim:      #6B6865;
   --border:        rgba(0,0,0,0.09);
   --border-accent: rgba(234,32,40,0.24);
   --accent-soft:   rgba(234,32,40,0.07);
@@ -99,7 +100,7 @@ body {
 .page-number {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
-  color: #6A6660;
+  color: #5A5856;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -123,30 +124,37 @@ body > .page-wrapper:nth-child(even) > .page {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   SCROLL-DRIVEN FADE-IN ANIMATION
-   图片从下方 20px 处平滑淡入
+   SCROLL-TRIGGERED FADE-IN
+   IntersectionObserver 触发；添加 .animated 类后过渡入场
    ═══════════════════════════════════════════════════════════ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .img-frame,
 .img-frame-bare {
-  animation: fadeInUp 0.6s ease both;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.img-frame.animated,
+.img-frame-bare.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* stagger children */
-.img-frame:nth-child(2), .img-frame-bare:nth-child(2) { animation-delay: 0.08s; }
-.img-frame:nth-child(3), .img-frame-bare:nth-child(3) { animation-delay: 0.16s; }
-.img-frame:nth-child(4), .img-frame-bare:nth-child(4) { animation-delay: 0.24s; }
-.img-frame:nth-child(5), .img-frame-bare:nth-child(5) { animation-delay: 0.32s; }
+.img-frame:nth-child(2), .img-frame-bare:nth-child(2) { transition-delay: 0.08s; }
+.img-frame:nth-child(3), .img-frame-bare:nth-child(3) { transition-delay: 0.16s; }
+.img-frame:nth-child(4), .img-frame-bare:nth-child(4) { transition-delay: 0.24s; }
+.img-frame:nth-child(5), .img-frame-bare:nth-child(5) { transition-delay: 0.32s; }
+
+/* 尊重用户减弱动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  .img-frame,
+  .img-frame-bare {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════
    IMAGE FRAME SYSTEM
@@ -1076,6 +1084,13 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 .mb-12 { margin-bottom: 12px; }
 .mb-16 { margin-bottom: 16px; }
 
+/* ── Navbar Focus States ────────────────────────────────── */
+.nav-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 @media print { .page-wrapper { page-break-after: always; } }
 
 /* ═══════════════════════════════════════════════════════════
@@ -1293,9 +1308,9 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 <header style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;padding:20px 80px;mix-blend-mode:difference;pointer-events:none;">
   <a href="/" style="font-family:'Dancing Script',cursive;font-size:40px;font-weight:600;color:#fff;text-decoration:none;pointer-events:auto;line-height:1;">miki.</a>
   <nav style="display:flex;gap:32px;pointer-events:auto;">
-    <a href="/" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">主页</a>
-    <a href="/#works" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">项目</a>
-    <a href="/#contact" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">关于我</a>
+    <a href="/" class="nav-link" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">主页</a>
+    <a href="/#works" class="nav-link" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">项目</a>
+    <a href="/#contact" class="nav-link" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">关于我</a>
   </nav>
 </header>
 
@@ -1371,7 +1386,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
       <div>
         <div class="small-text mb-12">Web端侧边导航 — 系统体量一览</div>
         <div class="sidebar-img-frame">
-          <img src="images/p2_02_status_sidebar.png" alt="Web sidebar navigation">
+          <img src="images/p2_02_status_sidebar.png" alt="Web sidebar navigation" loading="lazy">
         </div>
       </div>
     </div>
@@ -1447,7 +1462,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
           <div style="display:flex;gap:16px;align-items:flex-start;">
             <div style="display:flex;flex-direction:column;gap:8px;flex:3;">
               <div style="height:400px;overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.10);box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-                <img src="images/p2_03_web_view.png" alt="Web view" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" />
+                <img src="images/p2_03_web_view.png" alt="Web view" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;" loading="lazy"/>
               </div>
               <div style="display:inline-flex;align-items:center;border-radius:8px;background:rgba(0,0,0,0.80);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:6px 12px;border:1px solid rgba(255,255,255,0.10);font-size:11px;font-weight:500;color:#e8e6e1;">
                 <span>Web端物料新增</span><span style="color:#7a7874;font-weight:400;">&nbsp;— 5个信息区块</span>
@@ -1455,7 +1470,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             </div>
             <div style="display:flex;flex-direction:column;gap:8px;flex:1;">
               <div style="height:400px;overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.10);box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-                <img src="images/p2_03_rf_view.png" alt="RF view" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block;" />
+                <img src="images/p2_03_rf_view.png" alt="RF view" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block;" loading="lazy"/>
               </div>
               <div style="display:inline-flex;align-items:center;border-radius:8px;background:rgba(0,0,0,0.80);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:6px 12px;border:1px solid rgba(255,255,255,0.10);font-size:11px;font-weight:500;color:#e8e6e1;">
                 <span>RF标准收货</span><span style="color:#7a7874;font-weight:400;">-按优先级重新分层</span>
@@ -1483,7 +1498,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 
           <div style="display:flex;flex-direction:column;gap:8px;">
             <div style="height:487px;overflow:hidden;border-radius:10px;border:1px solid rgba(0,0,0,0.10);box-shadow:0 2px 12px rgba(0,0,0,0.08);">
-              <img src="images/p2_03_template_all.png" alt="Template showcase" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block;" />
+              <img src="images/p2_03_template_all.png" alt="Template showcase" style="width:100%;height:100%;object-fit:cover;object-position:left top;display:block;" loading="lazy"/>
             </div>
             <div style="display:inline-flex;align-items:center;border-radius:8px;background:rgba(0,0,0,0.80);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:6px 12px;border:1px solid rgba(255,255,255,0.10);font-size:11px;font-weight:500;color:#e8e6e1;">
               勾选版 / 序号版列表模板
@@ -1511,7 +1526,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
       <div class="rf-image-row">
         <div class="rf-image-col">
           <div class="rf-gallery-frame">
-            <img src="images/p2_04_rf_main.png" alt="RF main flow">
+            <img src="images/p2_04_rf_main.png" alt="RF main flow" loading="lazy">
           </div>
           <div>
             <span class="rf-mode-tag main">总入口</span>
@@ -1522,7 +1537,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 
         <div class="rf-image-col">
           <div class="rf-gallery-frame">
-            <img src="images/p2_04_mode_lite.png" alt="Lite mode">
+            <img src="images/p2_04_mode_lite.png" alt="Lite mode" loading="lazy">
           </div>
           <div>
             <span class="rf-mode-tag light">轻流程</span>
@@ -1533,7 +1548,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 
         <div class="rf-image-col">
           <div class="rf-gallery-frame">
-            <img src="images/p2_04_mode_standard.png" alt="Standard mode">
+            <img src="images/p2_04_mode_standard.png" alt="Standard mode" loading="lazy">
           </div>
           <div>
             <span class="rf-mode-tag medium">中流程</span>
@@ -1544,7 +1559,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
 
         <div class="rf-image-col">
           <div class="rf-gallery-frame">
-            <img src="images/p2_04_mode_complex.png" alt="Complex mode">
+            <img src="images/p2_04_mode_complex.png" alt="Complex mode" loading="lazy">
           </div>
           <div>
             <span class="rf-mode-tag heavy">重流程</span>
@@ -1585,7 +1600,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             <span class="flow-title">按单 · 步骤1</span>
           </div>
           <div class="rf-flow-frame">
-            <img src="images/p2_05_flow_1.png" alt="Light flow step 1">
+            <img src="images/p2_05_flow_1.png" alt="Light flow step 1" loading="lazy">
           </div>
           <div class="flow-annotation">
             <strong>默认折叠</strong>：品名、应收/已收、收货数量三个关键字段。
@@ -1599,7 +1614,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             <span class="flow-title">按单 · 步骤2</span>
           </div>
           <div class="rf-flow-frame">
-            <img src="images/p2_05_flow_1.1.png" alt="Light flow step 2">
+            <img src="images/p2_05_flow_1.1.png" alt="Light flow step 2" loading="lazy">
           </div>
           <div class="flow-annotation">
             点击<strong>展开</strong>查看完整信息（重量、批次号、物料形态）。
@@ -1613,7 +1628,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             <span class="flow-title">按箱收货</span>
           </div>
           <div class="rf-flow-frame">
-            <img src="images/p2_05_flow_2.png" alt="Medium flow">
+            <img src="images/p2_05_flow_2.png" alt="Medium flow" loading="lazy">
           </div>
           <div class="flow-annotation">
             <strong>Tab切换双视角</strong>：箱明细 / 物料汇总。
@@ -1627,7 +1642,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             <span class="flow-title">标准 · 步骤1</span>
           </div>
           <div class="rf-flow-frame">
-            <img src="images/p2_05_flow_3.png" alt="Heavy flow step 1">
+            <img src="images/p2_05_flow_3.png" alt="Heavy flow step 1" loading="lazy">
           </div>
           <div class="flow-annotation">
             十几个字段全量展示，<strong>扫码自动填充</strong>减少手动输入。
@@ -1641,7 +1656,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             <span class="flow-title">标准 · 步骤2</span>
           </div>
           <div class="rf-flow-frame">
-            <img src="images/p2_05_flow_3.1.png" alt="Heavy flow step 2">
+            <img src="images/p2_05_flow_3.1.png" alt="Heavy flow step 2" loading="lazy">
           </div>
           <div class="flow-annotation">
             <strong>逐件扫描开关</strong>：关闭批量，开启逐件确认。
@@ -1675,19 +1690,19 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
           <div class="p6-rf-images">
             <div class="p6-rf-item">
               <div class="p6-rf-frame">
-                <img src="images/p2_06_feedback_1.1.png" alt="Left swipe delete" />
+                <img src="images/p2_06_feedback_1.1.png" alt="Left swipe delete" loading="lazy"/>
               </div>
               <div class="p6-img-caption">收货核对 — 左滑删除</div>
             </div>
             <div class="p6-rf-item">
               <div class="p6-rf-frame">
-                <img src="images/p2_06_feedback_1.2.png" alt="Delete confirmation" />
+                <img src="images/p2_06_feedback_1.2.png" alt="Delete confirmation" loading="lazy"/>
               </div>
               <div class="p6-img-caption">删除二次确认弹窗</div>
             </div>
             <div class="p6-rf-item">
               <div class="p6-rf-frame">
-                <img src="images/p2_06_feedback_1.3.png" alt="Success toast" />
+                <img src="images/p2_06_feedback_1.3.png" alt="Success toast" loading="lazy"/>
               </div>
               <div class="p6-img-caption">上架成功 — 可选继续/不再提示</div>
             </div>
@@ -1701,7 +1716,7 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
             菜单权限 + 用户范围 + 仓库维度
           </h2>
           <div class="p6-perm-frame">
-            <img src="images/p2_06_feedback_2.png" alt="Permission settings" />
+            <img src="images/p2_06_feedback_2.png" alt="Permission settings" loading="lazy"/>
           </div>
           <div class="p6-perm-caption">
             与P1不同，WMS天然需要仓库维度的数据隔离。不做按钮级——同一角色进入页面后操作权限基本一致。两个项目权限粒度不同，是业务场景和资源条件的差异，不是设计标准的差异。
@@ -1744,13 +1759,13 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
       <div class="spec-images-row">
         <div class="spec-img-wrap">
           <div class="img-frame" style="height: 500px;">
-            <img src="images/p2_07_spec_1.png" style="height: 858px;" alt="Color, font, icon spec">
+            <img src="images/p2_07_spec_1.png" style="height: 858px;" alt="Color, font, icon spec" loading="lazy">
           </div>
           <div class="small-text mt-8" style="text-align:center;">色彩 · 字体 · 图标规范</div>
         </div>
         <div class="spec-img-wrap">
           <div class="img-frame" style="height: 500px;">
-            <img src="images/p2_07_spec_2.png" style="height: 630px;" alt="Popup component spec">
+            <img src="images/p2_07_spec_2.png" style="height: 630px;" alt="Popup component spec" loading="lazy">
           </div>
           <div class="small-text mt-8" style="text-align:center;">弹窗组件规范</div>
         </div>
@@ -1848,5 +1863,20 @@ body > .page-wrapper:nth-child(even) > .page .img-frame {
   </div>
 </div>
 
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var els = document.querySelectorAll('.img-frame, .img-frame-bare');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function (el) { observer.observe(el); });
+})();
+</script>
 </body>
 </html>

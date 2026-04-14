@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
@@ -10,14 +10,33 @@ const links = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [menuOpen, setMenuOpen] = useState(false)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    const onScroll = () => {
+      const current = window.scrollY
+      const diff = current - lastScrollY.current
+
+      // 始终在顶部附近时保持可见
+      if (current < 80) {
+        setVisible(true)
+      } else if (diff > 6) {
+        // 向下滚动超过 6px 才隐藏，避免抖动
+        setVisible(false)
+        if (menuOpen) setMenuOpen(false)
+      } else if (diff < -6) {
+        // 向上滚动超过 6px 才显示
+        setVisible(true)
+      }
+
+      lastScrollY.current = current
+    }
+
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [menuOpen])
 
   // 锁定/解锁 body 滚动
   useEffect(() => {
@@ -30,10 +49,10 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        className={`${scrolled ? 'fixed' : 'absolute'} top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 md:px-12 xl:px-[160px] py-5 md:py-6 mix-blend-difference`}
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 md:px-12 xl:px-[160px] py-5 md:py-6 mix-blend-difference"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1], delay: 0.2 }}
+        animate={{ opacity: 1, y: visible ? 0 : '-100%' }}
+        transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
       >
         {/* Logo */}
         <motion.a

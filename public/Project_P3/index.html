@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="设计工程化的三次进化 — 从手搓规范到 Machine-Readable Design System，记录 2019–2025 年三个阶段的设计决策与 Token 架构实践。">
 <title>P3 — 设计工程化的三次进化</title>
-<!-- System fonts used - no external dependency -->
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  /* ===== GOOGLE FONTS ===== */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
   /* ===== DESIGN TOKENS ===== */
   :root {
@@ -21,7 +21,7 @@
     --text-primary:   #E8E6E3;
     --text-secondary: #9A9A9E;
     --text-muted:     #76767E;
-    --text-dim:       #5A5A68;
+    --text-dim:       #717182;
 
     --accent-blue:    #4A7BF7;
     --accent-blue-dim:#2A4A8F;
@@ -40,7 +40,7 @@
 
     --font-sans:  'Inter', 'PingFang SC', 'Hiragino Sans GB', -apple-system, sans-serif;
     --font-mono:  'Geist Mono', 'JetBrains Mono', 'Courier New', monospace;
-    --font-serif: 'Inter', 'PingFang SC', -apple-system, sans-serif;
+    --font-serif: Georgia, 'Noto Serif SC', 'STSong', serif;
 
     --radius-sm: 6px;
     --radius-md: 10px;
@@ -300,15 +300,9 @@
     align-items: center;
     gap: 8px;
     background: var(--bg-card);
-    transition: background 0.2s, color 0.2s;
   }
 
   .hero__meta span:last-child { border-right: none; }
-
-  .hero__meta span:hover {
-    background: var(--bg-card-hover);
-    color: var(--text-secondary);
-  }
 
   .hero__meta span::before {
     content: '';
@@ -332,7 +326,7 @@
 
   /* ===== BODY TEXT ===== */
   .body-text {
-    font-size: 0.96rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.95;
     color: var(--text-secondary);
@@ -701,7 +695,7 @@
 
   .flow-step__number {
     font-family: var(--font-mono);
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     color: var(--accent-blue);
     margin-bottom: 10px;
     letter-spacing: 0.12em;
@@ -739,7 +733,6 @@
     position: relative;
     overflow: hidden;
     transition: transform 0.4s var(--transition), box-shadow 0.4s var(--transition), border-color 0.3s;
-    cursor: default;
     box-shadow: 0 1px 4px rgba(0,0,0,0.28);
   }
 
@@ -1236,7 +1229,7 @@
   }
 
   .slide .screenshot-caption {
-    font-size: 0.6rem;
+    font-size: 0.72rem;
     margin-top: 8px;
     line-height: 1.45;
   }
@@ -1459,7 +1452,7 @@
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-left .token-arrow {
     padding: 2px 0 2px 10px;
-    font-size: 0.58rem;
+    font-size: 0.7rem;
   }
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-left .token-layer {
@@ -1469,11 +1462,11 @@
   }
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-left .token-layer__example {
-    font-size: 0.58rem;
+    font-size: 0.7rem;
   }
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-left .token-layer__desc {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-right .real-screenshot {
@@ -1488,7 +1481,7 @@
   }
 
   .slide--tradeoff-quad .slide__tradeoff-cell--bottom-right .screenshot-caption {
-    font-size: 0.55rem;
+    font-size: 0.7rem;
     margin-top: 4px;
   }
 
@@ -1525,11 +1518,11 @@
   }
 
   .slide--ev3-merge .flow-step__name {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
   }
 
   .slide--ev3-merge .flow-step__desc {
-    font-size: 0.62rem;
+    font-size: 0.7rem;
   }
 
   .slide--ev3-merge .code-block {
@@ -1557,7 +1550,7 @@
   }
 
   .slide--ev3-merge .screenshot-caption {
-    font-size: 0.55rem;
+    font-size: 0.7rem;
     margin-top: 4px;
   }
 
@@ -1782,7 +1775,7 @@
     .result-card::before { forced-color-adjust: none; }
   }
 
-  /* ===== 导航栏无障碍增强 ===== */
+  /* ===== 导航栏无障碍增强 + 响应式 ===== */
   header[role="banner"] nav a {
     min-height: 44px;
     display: inline-flex;
@@ -1791,6 +1784,22 @@
     transition: opacity 0.2s;
   }
   header[role="banner"] nav a:hover { opacity: 0.72; }
+
+  @media (max-width: 768px) {
+    header[role="banner"] {
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+    }
+    header[role="banner"] > a:first-child {
+      font-size: 28px !important;
+    }
+    header[role="banner"] nav {
+      gap: 20px !important;
+    }
+    header[role="banner"] nav a {
+      font-size: 15px !important;
+    }
+  }
 
   /* ===== 苹果风格：token-layer hover 更克制 ===== */
   .token-layer:hover { filter: brightness(1.08); }
@@ -1803,6 +1812,23 @@
   /* ===== insight-box 更清晰的左边线 ===== */
   .insight-box {
     border-left-width: 3px;
+  }
+
+  /* ===== slide--packed 内的 fade-up 直接显示 ===== */
+  /* slide--packed 有 overflow-y:auto，视口 IntersectionObserver 无法感知内部滚动，
+     直接跳过动画避免内容永久隐藏 */
+  .slide--packed .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* ===== prefers-reduced-motion: divider 始终可见 ===== */
+  @media (prefers-reduced-motion: reduce) {
+    .divider::before {
+      width: 100% !important;
+      transition: none !important;
+    }
   }
 </style>
 </head>
@@ -1861,7 +1887,7 @@
 
       <h3 class="section-heading" id="slide-chart-heading">一次组件样式迭代的时间消耗分布</h3>
       <div class="token-diagram">
-        <div class="token-diagram__title" aria-hidden="true">一次组件样式迭代的时间消耗分布</div>
+        <div class="token-diagram__title">一次组件样式迭代的时间消耗分布</div>
         <div class="token-layers">
           <div class="token-layer token-layer--primitives" style="grid-template-columns: 140px 1fr auto;">
             <span class="token-layer__name">设计出稿</span>
@@ -1974,7 +2000,7 @@
       <div class="slide__tradeoff-cell slide__tradeoff-cell--bottom-left">
         <h3 class="section-heading" id="slide-token-arch-heading">三层 Token 架构 — 三种不同的"被读取需求"</h3>
         <div class="token-diagram">
-          <div class="token-diagram__title" aria-hidden="true">三层 Token 架构 — 三种不同的"被读取需求"</div>
+          <div class="token-diagram__title">三层 Token 架构 — 三种不同的"被读取需求"</div>
           <div class="token-layers">
             <div class="token-layer token-layer--primitives">
               <span class="token-layer__name">1 — Primitives</span>
@@ -2003,7 +2029,7 @@
         </p>
 
         <div class="real-screenshot">
-          <img src="images/evolution-hero.jpg" alt="Device Card 组件在亮色和暗色主题下的对比截图，展示同一组件通过修改一个 Token 值实现主题切换">
+          <img src="images/evolution-hero.jpg" width="1680" height="894" loading="lazy" alt="Device Card 组件在亮色和暗色主题下的对比截图，展示同一组件通过修改一个 Token 值实现主题切换">
           <div class="screenshot-caption">Device Card 亮暗双模对比 — 同一组件，改1个Token值切换主题，不出新稿</div>
         </div>
       </div>
@@ -2015,12 +2041,12 @@
 <section class="slide slide--ev3-merge slide--packed" role="region" aria-labelledby="slide-ev3-title">
   <div class="container">
     <div class="section-label">03 Trade-off</div>
-    <h2 class="section-heading">三次选择，三种回答</h2>
+    <h2 class="section-heading" id="slide-ev3-heading">第三次进化 — 重构造轮子的方式本身</h2>
 
     <div class="evolution-block">
       <div class="evolution-header">
         <span class="evolution-year">2025+</span>
-        <h3 class="evolution-title" id="slide-ev3-title">第三次：重构"造轮子的方式"本身</h3>
+        <h3 class="evolution-title" id="slide-ev3-title">Figma MCP + Cursor：让设计意图直接变成代码</h3>
       </div>
       <div class="evolution-number">Figma MCP + Cursor · MVP 阶段</div>
 
@@ -2090,15 +2116,15 @@
 
         <div class="mcp-screenshots">
           <div class="mcp-screenshot-item">
-            <img src="images/p3image-1.png" alt=".cursorrules 约束文件截图，定义禁止硬编码色值、强制使用 Semantic 层变量的规则">
+            <img src="images/p3image-1.png" width="1551" height="982" loading="lazy" alt=".cursorrules 约束文件截图，定义禁止硬编码色值、强制使用 Semantic 层变量的规则">
             <div class="screenshot-caption">Step 3 · .cursorrules 约束文件 — 禁止硬编码色值，强制使用Semantic层变量</div>
           </div>
           <div class="mcp-screenshot-item">
-            <img src="images/p3image-2.png" alt="Cursor Agent 读取 Figma 组件节点后生成的 CSS 代码截图，所有色值均为语义变量引用，无硬编码">
+            <img src="images/p3image-2.png" width="1539" height="1084" loading="lazy" alt="Cursor Agent 读取 Figma 组件节点后生成的 CSS 代码截图，所有色值均为语义变量引用，无硬编码">
             <div class="screenshot-caption">Step 4 · Cursor Agent 读取Figma组件节点，按规则生成CSS — 所有色值均为变量引用</div>
           </div>
           <div class="mcp-screenshot-item">
-            <img src="images/p3image-3.png" alt="Cursor Settings 页面截图，显示 Figma MCP Server 已连接，启用 13 个工具和 25 个资源">
+            <img src="images/p3image-3.png" width="1117" height="1130" loading="lazy" alt="Cursor Settings 页面截图，显示 Figma MCP Server 已连接，启用 13 个工具和 25 个资源">
             <div class="screenshot-caption">Step 2 · Cursor Settings — Figma MCP Server 连接状态（13 tools, 25 resources enabled）</div>
           </div>
         </div>

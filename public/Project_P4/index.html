@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>P4 — 5G消息Chatbot交互规范体系</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
 
@@ -33,12 +34,67 @@ body {
   background: var(--bg-page);
   display: flex;
   justify-content: center;
-  padding: 60px 24px 80px;
+  padding: 96px 24px 80px;
   min-height: 100vh;
 }
 
+/* ── FOCUS VISIBLE ── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ice);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 80px;
+  background: rgba(5, 11, 16, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.3s ease;
+}
+
+.navbar-logo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-links a {
+  font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--ink);
+}
+
+/* ── PAGE CONTAINER ── */
 .page {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   background: var(--bg-card);
   border: 1px solid var(--rule-strong);
   border-radius: 16px;
@@ -61,11 +117,35 @@ body {
   pointer-events: none;
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-4);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover { color: var(--ice-light); }
+
+.back-link::before {
+  content: '←';
+  font-size: 14px;
+}
+
 .header-meta {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 36px;
+  position: relative;
+  z-index: 1;
 }
 
 .project-num {
@@ -107,10 +187,12 @@ body {
   border-bottom: 1px solid var(--rule);
   position: relative;
   z-index: 1;
+  flex-wrap: wrap;
+  row-gap: 8px;
 }
 
 .ctx-item {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--ink-4);
   line-height: 1;
@@ -121,6 +203,7 @@ body {
   height: 3px;
   border-radius: 50%;
   background: var(--ink-5);
+  flex-shrink: 0;
 }
 
 /* ── AWARDS ── */
@@ -134,7 +217,7 @@ body {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
-  color: var(--ink-5);
+  color: var(--ink-4);
   text-transform: uppercase;
   margin-bottom: 28px;
 }
@@ -234,6 +317,7 @@ body {
   background: var(--bg-elevated);
   border: 1px solid var(--rule-strong);
   border-radius: 10px;
+  cursor: pointer;
   transition: border-color 0.3s ease;
 }
 
@@ -332,6 +416,8 @@ body {
   margin-top: 36px;
   padding-top: 28px;
   border-top: 1px solid var(--rule);
+  flex-wrap: wrap;
+  row-gap: 28px;
 }
 
 .metric {
@@ -368,55 +454,138 @@ body {
   font-weight: 400;
 }
 
+/* ── SCROLL ENTRANCE ANIMATION ── */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-in:nth-child(2) { transition-delay: 0.08s; }
+.animate-in:nth-child(3) { transition-delay: 0.16s; }
+.animate-in:nth-child(4) { transition-delay: 0.24s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 960px) {
+  .navbar { padding: 14px 32px; }
+}
+
+@media (max-width: 768px) {
+  body { padding: 72px 12px 60px; }
+
+  .navbar { padding: 14px 20px; }
+  .navbar-logo { font-size: 28px; }
+  .navbar-links { gap: 20px; }
+  .navbar-links a { font-size: 14px; }
+
+  .header { padding: 40px 24px 0; }
+  .awards-section { padding: 32px 24px; }
+  .narrative { padding: 40px 24px; grid-template-columns: 1fr; gap: 36px; }
+  .images-section { padding: 40px 24px; }
+  .result-section { padding: 40px 24px 52px; }
+
+  .project-title { font-size: 26px; }
+  .ctx-item { font-size: 12px; }
+  .ctx-sep { display: none; }
+  .project-context { gap: 10px; }
+
+  .awards-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 0;
+  }
+  .award-item { padding: 0 16px 0 0 !important; border-right: none; }
+  .award-item:nth-child(odd) { border-right: 1px solid var(--rule) !important; }
+  .award-item:nth-child(n) { padding-left: 0 !important; }
+  .award-item:nth-child(even) { padding-left: 16px !important; }
+  .award-text { font-size: 13px; }
+
+  .images-grid { grid-template-columns: 1fr; }
+  .image-frame img { height: 200px; }
+
+  .result-block { padding-left: 20px; }
+  .result-text { max-width: 100%; }
+
+  .metric { padding-right: 28px; margin-right: 28px; }
+  .metric-value { font-size: 26px; }
+}
+
+@media (max-width: 480px) {
+  .navbar-links a:not(:last-child) { display: none; }
+  .project-title { font-size: 22px; }
+}
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .image-frame,
+  .image-frame img,
+  .navbar,
+  .back-link,
+  .navbar-links a {
+    transition: none;
+  }
+
+  .animate-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 </style>
 </head>
 <body>
 
-<!-- PORTFOLIO NAVBAR -->
-<header style="position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;padding:20px 80px;mix-blend-mode:difference;pointer-events:none;">
-  <a href="/" style="font-family:'Dancing Script',cursive;font-size:40px;font-weight:600;color:#fff;text-decoration:none;pointer-events:auto;line-height:1;">miki.</a>
-  <nav style="display:flex;gap:32px;pointer-events:auto;">
-    <a href="/" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">主页</a>
-    <a href="/#works" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">项目</a>
-    <a href="/#contact" style="font-family:'PingFang SC','Noto Sans SC',sans-serif;font-size:18px;font-weight:400;color:#fff;text-decoration:none;">关于我</a>
+<!-- NAVBAR -->
+<header class="navbar" role="banner">
+  <a href="/" class="navbar-logo" aria-label="回到首页 — miki">miki.</a>
+  <nav class="navbar-links" aria-label="主导航">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
   </nav>
 </header>
 
-<div class="page">
+<main class="page">
 
   <!-- HEADER -->
-  <div class="header">
+  <div class="header animate-in">
+    <a href="/" class="back-link" aria-label="返回项目列表">返回项目列表</a>
     <div class="header-meta">
       <span class="project-num">PROJECT 04 &mdash; SUPPLEMENT</span>
       <span class="project-tag-label">Interaction Design</span>
     </div>
-    <div class="project-title">5G消息 Chatbot<br>交互规范体系</div>
+    <h1 class="project-title">5G消息 Chatbot<br>交互规范体系</h1>
     <div class="project-context">
       <span class="ctx-item">某运营商5G消息服务商</span>
-      <span class="ctx-sep"></span>
+      <span class="ctx-sep" aria-hidden="true"></span>
       <span class="ctx-item">团队唯一交互与视觉设计负责人</span>
-      <span class="ctx-sep"></span>
+      <span class="ctx-sep" aria-hidden="true"></span>
       <span class="ctx-item">2021&ndash;2022</span>
     </div>
   </div>
 
   <!-- AWARDS -->
-  <div class="awards-section">
-    <div class="section-label">Awards &amp; Recognition</div>
-    <div class="awards-list">
-      <div class="award-item">
+  <div class="awards-section animate-in" aria-labelledby="awards-label">
+    <div class="section-label" id="awards-label">Awards &amp; Recognition</div>
+    <div class="awards-list" role="list">
+      <div class="award-item" role="listitem">
         <span class="award-num">01</span>
         <span class="award-text">2021绽放杯<br>三等奖</span>
       </div>
-      <div class="award-item">
+      <div class="award-item" role="listitem">
         <span class="award-num">02</span>
         <span class="award-text">行业优秀<br>创新奖</span>
       </div>
-      <div class="award-item">
+      <div class="award-item" role="listitem">
         <span class="award-num">03</span>
         <span class="award-text">智慧教育<br>优秀奖</span>
       </div>
-      <div class="award-item">
+      <div class="award-item" role="listitem">
         <span class="award-num">04</span>
         <span class="award-text">入选国家5G+<br>智慧教育试点</span>
       </div>
@@ -424,60 +593,85 @@ body {
   </div>
 
   <!-- NARRATIVE -->
-  <div class="narrative">
+  <section class="narrative animate-in" aria-label="项目背景">
     <div class="narrative-block">
-      <div class="block-label">挑战</div>
+      <div class="block-label" aria-hidden="true">挑战</div>
       <p class="block-body">5G消息运行在手机原生短信入口，交互被锁死在「1-1-1」线性链路——用户只能逐步选择推进，容错成本极高。各主流手机厂商对卡片渲染差异大，且无法分版本下发。用户画像从学生到政务办事人员，跨度极宽。</p>
     </div>
     <div class="narrative-block">
-      <div class="block-label">解法</div>
+      <div class="block-label" aria-hidden="true">解法</div>
       <p class="block-body">放弃单项目最优解，转而建立一套「最小公约数」适配规范——视觉只保证各厂商渲染安全区内的信息传达；交互上把每步选项压到不需要用户思考的颗粒度。通过40+次培训将规范推行到15人团队，后续项目直接复用。</p>
     </div>
-  </div>
+  </section>
 
   <!-- IMAGES -->
-  <div class="images-section">
-    <div class="section-label">Design Output</div>
+  <section class="images-section animate-in" aria-labelledby="design-output-label">
+    <div class="section-label" id="design-output-label">Design Output</div>
     <div class="images-grid">
-      <div class="image-frame">
-        <img src="images/interaction flow.png" alt="交互规范">
+      <div class="image-frame" role="figure" aria-label="交互流程设计稿">
+        <img
+          src="images/interaction flow.png"
+          alt="Chatbot交互优化分析图，展示5G消息线性对话流程拆解与各节点信息传达策略"
+          loading="lazy"
+        >
         <div class="image-caption">
           <span class="caption-tag">Fig. 01 &mdash; Interaction Flow</span>
           <span class="caption-text">Chatbot交互优化分析 — 基于「贴近用户真实环境」原则拆解线性对话流程与信息传达策略</span>
         </div>
       </div>
-      <div class="image-frame">
-        <img src="images/Design System.jpg" alt="设计规范">
+      <div class="image-frame" role="figure" aria-label="设计规范系统">
+        <img
+          src="images/Design System.jpg"
+          alt="5G消息视觉规范设计稿，包含色彩、字体、图片比例等最小公约数适配标准"
+          loading="lazy"
+        >
         <div class="image-caption">
           <span class="caption-tag">Fig. 02 &mdash; Design System</span>
           <span class="caption-text">5G消息视觉规范 — 定义色彩、字体、图片等「最小公约数」适配标准</span>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- RESULT -->
-  <div class="result-section">
+  <section class="result-section animate-in" aria-labelledby="results-label">
     <div class="result-block">
-      <div class="result-headline">Key Results</div>
+      <div class="result-headline" id="results-label">Key Results</div>
       <p class="result-text">3个直接负责设计的项目于2021年分别获得「绽放杯」三等奖、优秀创新奖及智慧教育优秀奖，其中智慧校园项目入选国家5G+智慧教育应用试点。</p>
-      <div class="result-metrics">
-        <div class="metric">
-          <span class="metric-value">3</span>
+      <div class="result-metrics" role="list" aria-label="项目成果数据">
+        <div class="metric" role="listitem">
+          <span class="metric-value" aria-label="3个获奖项目">3</span>
           <span class="metric-label">获奖项目</span>
         </div>
-        <div class="metric">
-          <span class="metric-value">40+</span>
+        <div class="metric" role="listitem">
+          <span class="metric-value" aria-label="40次以上内部培训">40+</span>
           <span class="metric-label">内部培训场次</span>
         </div>
-        <div class="metric">
-          <span class="metric-value">15</span>
+        <div class="metric" role="listitem">
+          <span class="metric-value" aria-label="15人团队">15</span>
           <span class="metric-label">规范推行团队人数</span>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-</div>
+</main>
+
+<script>
+  // Scroll entrance animation
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.animate-in').forEach((el) => observer.observe(el));
+</script>
 </body>
 </html>
