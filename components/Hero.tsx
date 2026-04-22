@@ -41,10 +41,10 @@ export default function Hero() {
       >
         <motion.div variants={containerVariants} initial="hidden" animate="show">
           {/* Greeting */}
-          <div className="overflow-hidden mb-1">
+          <div className="overflow-hidden mb-2">
             <motion.p
               variants={lineVariants}
-              className="text-[19px] leading-[1.8] text-white/80"
+              className="text-[15px] leading-[1.6] text-white/40 tracking-[0.12em]"
               style={{ fontFamily: "var(--font-display)", fontWeight: 400 }}
             >
               嗨！
@@ -52,14 +52,14 @@ export default function Hero() {
           </div>
 
           {/* Headline — 3 lines */}
-          {['我是杨蜜萁', '在AI与智能硬件之间', '做设计的高级产品设计师'].map((line) => (
+          {['我是杨蜜萁', '高级产品设计师', 'AI 产品 · B 端体验 · 软硬一体'].map((line) => (
             <div key={line} className="overflow-hidden">
               <motion.h1
                 variants={lineVariants}
-                className="text-[36px] md:text-[44px] xl:text-[52px] font-normal leading-[1.3] text-white"
+                className="text-[40px] md:text-[52px] xl:text-[60px] font-bold leading-[1.18] text-white"
                 style={{
                   fontFamily: "var(--font-display)",
-                  letterSpacing: '-0.04em',
+                  letterSpacing: '-0.025em',
                 }}
               >
                 {line}
@@ -73,11 +73,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.95, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 text-[15px] leading-[1.9] text-white/50 max-w-sm"
+          className="mt-8 text-[17px] leading-[1.7] text-white/45 max-w-lg"
           style={{ fontFamily: "var(--font-display)" }}
         >
-          从冷库IoT监控到AI视觉质检系统，11年复杂B端经验<br />
-          约束越多，设计越有意思
+          十一年复杂场景设计经验，繁处见秩序，简处见功力。
         </motion.p>
 
         {/* CTA Button */}
@@ -89,7 +88,7 @@ export default function Hero() {
         >
           <a
             href="#works"
-            className="inline-flex items-center px-10 py-[10px] border-2 border-white rounded-[24px] text-[15px] text-white/80 transition-all duration-300 hover:bg-white hover:text-[#0d0d0d] hover:border-white"
+            className="inline-flex items-center px-10 py-[12px] border border-white/50 rounded-full text-[14px] tracking-[0.12em] text-white/70 transition-all duration-300 hover:border-white hover:text-white hover:bg-white/10"
             style={{ fontFamily: "var(--font-display)" }}
           >
             看看我做过什么

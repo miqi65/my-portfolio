@@ -1,9 +1,56 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import styles from "./ProfileIntroSection.module.css";
 
 const profileImage = "/images/me.png";
 
+const SUFFIXES = [
+  '一个 B 端产品设计师',
+  'AI builder',
+  '一个跨界杂学家',
+  '设计工程派',
+  '永远在迭代',
+];
+
+const TYPE_SPEED = 80;
+const DELETE_SPEED = 40;
+const PAUSE_AFTER_TYPE = 2000;
+const PAUSE_AFTER_DELETE = 400;
+
 export function ProfileIntroSection() {
+  const [displayed, setDisplayed] = useState('');
+  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = SUFFIXES[index];
+
+    if (!isDeleting && displayed === current) {
+      const t = setTimeout(() => setIsDeleting(true), PAUSE_AFTER_TYPE);
+      return () => clearTimeout(t);
+    }
+
+    if (isDeleting && displayed === '') {
+      const t = setTimeout(() => {
+        setIsDeleting(false);
+        setIndex((i) => (i + 1) % SUFFIXES.length);
+      }, PAUSE_AFTER_DELETE);
+      return () => clearTimeout(t);
+    }
+
+    const t = setTimeout(() => {
+      setDisplayed(
+        isDeleting
+          ? current.slice(0, displayed.length - 1)
+          : current.slice(0, displayed.length + 1)
+      );
+    }, isDeleting ? DELETE_SPEED : TYPE_SPEED);
+
+    return () => clearTimeout(t);
+  }, [displayed, index, isDeleting]);
+
   return (
     <section className={styles.section} aria-label="个人介绍">
       <div className={styles.container}>
@@ -22,20 +69,23 @@ export function ProfileIntroSection() {
         <div className={styles.rightCol}>
           <h2 className={styles.title}>
             <span className={styles.name}>杨蜜萁</span>
-            <span className={styles.role}>AI 产品设计师</span>
+            <span className={styles.typewriter}>
+              {displayed}
+              <span className={styles.cursor} />
+            </span>
           </h2>
 
           <div className={styles.description}>
             <p>
-              凭借 11 年复杂 B 端与智能硬件设计经验，我在工业场景中打磨出一套独特的设计直觉——在约束最多的地方，做最合适的设计。
+              11 年设计功底，专注 AI 产品体验与设计工程化——让设计融合 AI，于繁复中取清明。
             </p>
             <p>
-              我的工作横跨 IoT 监控、WMS/MES 制造执行系统、AI 语义产品与工业视觉质检 HMI，覆盖 Web、App 与工控大屏全端。这些场景的共同点是：系统复杂、数据密集、容错代价高。
+              足迹横跨工业 AI 视觉质检、WMS/MES、IoT 监控与 B 端 SaaS，覆盖 Web、App 与工控大屏。服务过制造业龙头与早期科技团队。
             </p>
             <p>
-              持续深耕工业 AI 与软硬一体化方向。帮助团队将高密度业务逻辑转化为操作者无障碍使用的界面——同时构建让设计规模化交付的AI设计体系：从企业级 Design System变成自动化设计到代码的交付流程。
+              2022 年起深耕 AI 方向，研究算法系统如何在真实生产中落地、融合、增值。与团队协同，把抽象的模型与数据凝练为日常可倚赖的界面。
             </p>
-            <p>快速落地，0-1规模化。期待你的联系。</p>
+            <p>敏捷探边界，从容成规模。</p>
           </div>
 
           <div className={styles.actions}>
