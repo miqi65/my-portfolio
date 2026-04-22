@@ -91,7 +91,7 @@ export function ProfileIntroSection() {
           <div className={styles.actions}>
             <a
               className={`${styles.btn} ${styles.btnPrimary}`}
-              href="/杨蜜萁_高级产品设计师_13622962831.pdf"
+              href="/杨蜜萁_高级UI_UX设计师_13622962831.pdf"
               download
             >
               简历
