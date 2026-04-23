@@ -3,6 +3,7 @@
 import { useRef } from 'react'
 import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import SwirlBackground from './SwirlBackground'
 
 const containerVariants = {
   hidden: {},
@@ -32,8 +33,9 @@ export default function Hero() {
     <section
       ref={ref}
       id="about"
-      className="cursor-scale hero-noise relative flex flex-col bg-[#0d0d0d] overflow-hidden"
+      className="cursor-scale relative flex flex-col overflow-hidden"
     >
+      <SwirlBackground />
       {/* Main hero content */}
       <motion.div
         style={{ y, opacity }}
@@ -73,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.95, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 text-[17px] leading-[1.7] text-white/45 max-w-lg"
+          className="mt-8 text-[17px] leading-[1.7] text-white/60 max-w-lg"
           style={{ fontFamily: "var(--font-display)" }}
         >
           十一年复杂场景设计经验，繁处见秩序，简处见功力。
