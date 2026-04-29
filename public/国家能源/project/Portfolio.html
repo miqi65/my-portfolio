@@ -123,10 +123,15 @@
     background: url('assets/hero-bg.png') center / cover no-repeat;
     opacity: 0.75;
   }
-  .hero-content {
+  .hero-inner {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 80px;
+  }
+  .hero-content {
     max-width: 700px;
   }
   .hero-tag {
@@ -511,7 +516,7 @@
     .feature-trio, .problem-grid, .impact-grid { grid-template-columns: 1fr; }
     .feature-card { border-right: none; border-bottom: 1px solid var(--hairline); }
     .section-inner { padding: 72px 32px; }
-    .hero-content { padding: 0 32px; }
+    .hero-inner { padding: 0 32px; }
     .hero-meta { grid-template-columns: 1fr 1fr; }
     nav { padding: 0 20px; }
     .fence-trio { grid-template-columns: 1fr; max-width: 300px; margin-left: auto; margin-right: auto; }
@@ -550,6 +555,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
+  <div class="hero-inner">
   <div class="hero-content" style="font-family: &quot;PingFang SC&quot;">
     <span class="hero-tag">国家能源集团 · UX 设计</span>
     <h1 class="hero-title">轨迹定位<br>跟踪系统</h1>
@@ -572,6 +578,7 @@
         <span>用户洞察与创意 · 体验策略与愿景 · 设计执行与验证</span>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
