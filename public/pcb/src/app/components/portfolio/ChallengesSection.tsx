@@ -28,7 +28,7 @@ export function ChallengesSection() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src={imgBg}
+          src={imgBg.src}
           alt=""
           className="absolute w-full h-full object-cover"
         />
