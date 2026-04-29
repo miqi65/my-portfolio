@@ -151,7 +151,8 @@ bars.forEach((b, i) => { b.style.height = (heights[i % heights.length]) + '%'; }
   let touchStartY = 0;
 
   function atBottom() {
-    return window.scrollY + window.innerHeight >= document.body.scrollHeight - 4;
+    const scrollH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+    return window.scrollY + window.innerHeight >= scrollH - 16;
   }
 
   window.addEventListener('wheel', function (e) {
