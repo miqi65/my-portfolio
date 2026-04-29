@@ -35,40 +35,68 @@
     overflow-x: hidden;
   }
 
-  /* ── NAV ── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 44px;
-    background: rgba(0,0,0,0.85);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 24px;
-    z-index: 100;
+  /* ── MIKI NAV (homepage-style) ── */
+  #miki-nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 600;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 24px;
+    mix-blend-mode: difference;
+    transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
   }
-  .nav-name {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.85);
-    letter-spacing: -0.12px;
-    text-decoration: none;
+  #miki-nav.nav-hidden { transform: translateY(-110%); }
+  .miki-logo {
+    display: inline-flex; align-items: center;
+    min-height: 44px; min-width: 44px; text-decoration: none;
   }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
+  .miki-logo img { height: 28px; width: auto; display: block; }
+  .miki-nav-links { display: flex; align-items: center; gap: 32px; }
+  .miki-nav-links a {
+    color: #fff; text-decoration: none;
+    font-size: 18px; font-weight: 400; transition: opacity 0.2s;
   }
-  .nav-links a {
-    font-size: 12px;
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    letter-spacing: -0.12px;
-    transition: color .2s;
+  .miki-nav-links a:hover { opacity: 0.6; }
+  .miki-burger {
+    display: none; flex-direction: column;
+    justify-content: center; align-items: center;
+    width: 32px; height: 44px; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 0;
   }
-  .nav-links a:hover { color: #fff; }
+  .miki-burger span {
+    display: block; width: 24px; height: 2px; background: #fff;
+    transform-origin: center;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .miki-burger.open .b1 { transform: rotate(45deg) translate(5px, 5px); }
+  .miki-burger.open .b2 { opacity: 0; transform: scaleX(0); }
+  .miki-burger.open .b3 { transform: rotate(-45deg) translate(5px, -5px); }
+  .miki-overlay {
+    position: fixed; inset: 0; z-index: 590;
+    background: #000;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.23,1,0.32,1);
+  }
+  .miki-overlay.open { opacity: 1; pointer-events: auto; }
+  .miki-overlay-nav {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 40px;
+  }
+  .miki-overlay-nav a {
+    color: #fff; text-decoration: none;
+    font-size: 32px; font-weight: 400; transition: opacity 0.2s;
+  }
+  .miki-overlay-nav a:hover { opacity: 0.5; }
+  @media (max-width: 767px) {
+    .miki-nav-links { display: none; }
+    .miki-burger { display: flex; }
+  }
+  @media (min-width: 768px) {
+    #miki-nav { padding: 24px 48px; }
+  }
+  @media (min-width: 1280px) {
+    #miki-nav { padding: 24px 160px; }
+  }
 
   /* ── SECTION RHYTHM ── */
   section { width: 100%; }
@@ -495,16 +523,29 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-name" href="#">Portfolio</a>
-  <ul class="nav-links">
-    <li><a href="#overview">概览</a></li>
-    <li><a href="#discovery">发现</a></li>
-    <li><a href="#solution">解决方案</a></li>
-    <li><a href="#impact">影响</a></li>
-  </ul>
-</nav>
+<!-- MIKI NAV -->
+<header id="miki-nav">
+  <a href="/" class="miki-logo" aria-label="返回主页">
+    <img src="/images/miki_logo.svg" alt="miki" />
+  </a>
+  <nav class="miki-nav-links">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
+  </nav>
+  <button class="miki-burger" id="mikiBurger" aria-label="打开菜单">
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
+  </button>
+</header>
+<div class="miki-overlay" id="mikiOverlay">
+  <nav class="miki-overlay-nav">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
+  </nav>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1036,6 +1077,53 @@
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
   });
+</script>
+<script>
+(function () {
+  var nav = document.getElementById('miki-nav');
+  var burger = document.getElementById('mikiBurger');
+  var overlay = document.getElementById('mikiOverlay');
+  var lastY = 0;
+  var menuOpen = false;
+
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    var diff = y - lastY;
+    if (y < 80) {
+      nav.classList.remove('nav-hidden');
+    } else if (diff > 6) {
+      nav.classList.add('nav-hidden');
+      if (menuOpen) closeMenu();
+    } else if (diff < -6) {
+      nav.classList.remove('nav-hidden');
+    }
+    lastY = y;
+  }, { passive: true });
+
+  burger.addEventListener('click', function () {
+    menuOpen ? closeMenu() : openMenu();
+  });
+
+  overlay.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  function openMenu() {
+    menuOpen = true;
+    burger.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    burger.setAttribute('aria-label', '关闭菜单');
+  }
+
+  function closeMenu() {
+    menuOpen = false;
+    burger.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    burger.setAttribute('aria-label', '打开菜单');
+  }
+})();
 </script>
 </body>
 </html>

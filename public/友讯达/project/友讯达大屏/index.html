@@ -12,19 +12,30 @@
 </head>
 <body>
 
-<!-- ═══════════════ NAV ════════════════════════════════ -->
-<nav>
-  <div class="nav-brand">友讯达 <span>·</span> 数据大屏</div>
-  <div class="nav-links">
-    <a href="#overview">项目概览</a>
-    <a href="#challenge">难点挑战</a>
-    <a href="#research">用户研究</a>
-    <a href="#solution">解决方案</a>
-    <a href="#visual">视觉原则</a>
-    <a href="#evaluation">设计评估</a>
-  </div>
+<!-- ═══════════════ MIKI NAV ════════════════════════════ -->
+<header id="miki-nav">
+  <a href="/" class="miki-logo" aria-label="返回主页">
+    <img src="/images/miki_logo.svg" alt="miki" />
+  </a>
+  <nav class="miki-nav-links">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
+  </nav>
+  <button class="miki-burger" id="mikiBurger" aria-label="打开菜单">
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
+  </button>
   <div class="nav-progress"></div>
-</nav>
+</header>
+<div class="miki-overlay" id="mikiOverlay">
+  <nav class="miki-overlay-nav">
+    <a href="/">主页</a>
+    <a href="/#works">项目</a>
+    <a href="/#contact">关于我</a>
+  </nav>
+</div>
 
 
 <!-- ═══════════════ S1 · HERO ══════════════════════════ -->
@@ -417,5 +428,52 @@
 </footer>
 
 <script src="main.js"></script>
+<script>
+(function () {
+  var nav = document.getElementById('miki-nav');
+  var burger = document.getElementById('mikiBurger');
+  var overlay = document.getElementById('mikiOverlay');
+  var lastY = 0;
+  var menuOpen = false;
+
+  window.addEventListener('scroll', function () {
+    var y = window.scrollY;
+    var diff = y - lastY;
+    if (y < 80) {
+      nav.classList.remove('nav-hidden');
+    } else if (diff > 6) {
+      nav.classList.add('nav-hidden');
+      if (menuOpen) closeMenu();
+    } else if (diff < -6) {
+      nav.classList.remove('nav-hidden');
+    }
+    lastY = y;
+  }, { passive: true });
+
+  burger.addEventListener('click', function () {
+    menuOpen ? closeMenu() : openMenu();
+  });
+
+  overlay.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
+  function openMenu() {
+    menuOpen = true;
+    burger.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    burger.setAttribute('aria-label', '关闭菜单');
+  }
+
+  function closeMenu() {
+    menuOpen = false;
+    burger.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    burger.setAttribute('aria-label', '打开菜单');
+  }
+})();
+</script>
 </body>
 </html>

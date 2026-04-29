@@ -29,33 +29,73 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ─── Navigation ──────────────────────────────────────── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  height: 64px;
-  background: rgba(0,0,0,0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--hairline);
+/* ─── MIKI NAV (homepage-style) ──────────────────────── */
+#miki-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 600;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 var(--sp-xl);
+  padding: 20px 24px;
+  mix-blend-mode: difference;
+  transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
 }
-.nav-brand {
-  font-size: 13px; font-weight: 700;
-  letter-spacing: 2.5px; text-transform: uppercase;
+#miki-nav.nav-hidden { transform: translateY(-110%); }
+.miki-logo {
+  display: inline-flex; align-items: center;
+  min-height: 44px; min-width: 44px; text-decoration: none;
 }
-.nav-brand span { color: var(--accent); }
-.nav-links { display: flex; gap: 28px; }
-.nav-links a {
-  font-size: 12px; font-weight: 400; color: var(--muted);
-  text-decoration: none; letter-spacing: 0.8px;
-  text-transform: uppercase; transition: color 0.2s;
+.miki-logo img { height: 28px; width: auto; display: block; }
+.miki-nav-links { display: flex; align-items: center; gap: 32px; }
+.miki-nav-links a {
+  color: #fff; text-decoration: none;
+  font-size: 18px; font-weight: 400;
+  transition: opacity 0.2s;
 }
-.nav-links a:hover { color: var(--ink); }
+.miki-nav-links a:hover { opacity: 0.6; }
+.miki-burger {
+  display: none; flex-direction: column;
+  justify-content: center; align-items: center;
+  width: 32px; height: 44px; gap: 5px;
+  background: none; border: none; cursor: pointer; padding: 0;
+}
+.miki-burger span {
+  display: block; width: 24px; height: 2px; background: #fff;
+  transform-origin: center;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.miki-burger.open .b1 { transform: rotate(45deg) translate(5px, 5px); }
+.miki-burger.open .b2 { opacity: 0; transform: scaleX(0); }
+.miki-burger.open .b3 { transform: rotate(-45deg) translate(5px, -5px); }
+.miki-overlay {
+  position: fixed; inset: 0; z-index: 590;
+  background: #000;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.miki-overlay.open { opacity: 1; pointer-events: auto; }
+.miki-overlay-nav {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 40px;
+}
+.miki-overlay-nav a {
+  color: #fff; text-decoration: none;
+  font-size: 32px; font-weight: 400; transition: opacity 0.2s;
+}
+.miki-overlay-nav a:hover { opacity: 0.5; }
 .nav-progress {
   position: absolute; bottom: 0; left: 0; height: 2px;
   background: linear-gradient(to right, var(--m-blue-light), var(--m-blue-dark), var(--m-red));
   width: 0%; transition: width 0.1s;
+}
+@media (max-width: 767px) {
+  .miki-nav-links { display: none; }
+  .miki-burger { display: flex; }
+}
+@media (min-width: 768px) {
+  #miki-nav { padding: 24px 48px; }
+}
+@media (min-width: 1280px) {
+  #miki-nav { padding: 24px 160px; }
 }
 
 /* ─── M-Stripe ────────────────────────────────────────── */

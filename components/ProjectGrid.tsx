@@ -40,6 +40,24 @@ const projects = [
     image: '/images/p4-cover.png',
     href: '/Project_P4/index.html',
   },
+  {
+    num: '05',
+    label: 'Data Visualization · Dashboard',
+    title: '友讯达数据大屏',
+    desc: '从庞大的生产数据中提炼价值，以直觉友好的可视化方式呈现，降低数据分析成本，帮助管理层快速洞察生产态势与业务结构。',
+    tags: ['Dashboard', 'Data Viz', 'B端设计', 'Visual Design'],
+    image: '/友讯达/project/友讯达大屏/友讯达封面图.jpg',
+    href: '/友讯达/project/友讯达大屏/index.html',
+  },
+  {
+    num: '06',
+    label: 'GIS · Tracking System',
+    title: '轨迹定位跟踪系统',
+    desc: '面向大型工业园区的载体定位与轨迹追踪系统，解决传统人工管理效率低下的痛点，实现分区管理、实时追踪与灵活信息呈现。',
+    tags: ['GIS', 'Tracking', 'Industrial', 'B端设计'],
+    image: '/国家能源/project/assets/hero-bg.png',
+    href: '/国家能源/project/Portfolio.html',
+  },
 ]
 
 export default function ProjectGrid() {
