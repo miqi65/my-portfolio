@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>友讯达数据大屏 — 设计案例</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════ NAV ════════════════════════════════ -->
+<nav>
+  <div class="nav-brand">友讯达 <span>·</span> 数据大屏</div>
+  <div class="nav-links">
+    <a href="#overview">项目概览</a>
+    <a href="#challenge">难点挑战</a>
+    <a href="#research">用户研究</a>
+    <a href="#solution">解决方案</a>
+    <a href="#visual">视觉原则</a>
+    <a href="#evaluation">设计评估</a>
+  </div>
+  <div class="nav-progress"></div>
+</nav>
+
+
+<!-- ═══════════════ S1 · HERO ══════════════════════════ -->
+<section id="hero" data-screen-label="01 Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-noise"></div>
+
+  <!-- TV Mockup (right side) -->
+  <div class="hero-tv-area reveal">
+    <div class="hero-img-frame">
+      <img src="友讯达封面图.jpg" alt="友讯达智能工厂数据大屏">
+    </div>
+  </div>
+
+  <!-- Hero Content (left) -->
+  <div class="hero-content">
+    <div class="hero-eyebrow reveal">案例研究 · 数据可视化</div>
+    <h1 class="hero-title reveal reveal-delay-1">友讯达<br>数据大屏</h1>
+    <div class="m-stripe" style="width:64px;margin:24px 0;" ></div>
+    <p class="hero-desc reveal reveal-delay-2">
+      主导设计"友讯达数据大屏"。投入运用后生产效率显著提升，
+      客户满意度高——满意度 1 至 10 分中，给予 6 分及以上的人数占 79%，
+      其中给予 10 分满分的占 31%。
+    </p>
+
+    <!-- KPI Strip -->
+    <div class="hero-kpis reveal reveal-delay-3">
+      <div class="hero-kpi">
+        <div class="hero-kpi-value">
+          +<span data-target="43" data-suffix="%">43%</span>
+        </div>
+        <div class="hero-kpi-label">生产效率提升</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-value">
+          <span data-target="79" data-suffix="%">79%</span>
+        </div>
+        <div class="hero-kpi-label">满意度 ≥6 分占比</div>
+      </div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-value">
+          <span data-target="31" data-suffix="%">31%</span>
+        </div>
+        <div class="hero-kpi-label">满分 10 分占比</div>
+      </div>
+    </div>
+
+    <!-- Meta -->
+    <div class="hero-meta reveal reveal-delay-4">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">职能范围</span>
+        <span class="hero-meta-value">用户洞察与创意<br>体验策略与愿景<br>设计执行与验证</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">担任角色</span>
+        <span class="hero-meta-value">主设计师</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">客户</span>
+        <span class="hero-meta-value">友讯达科技</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">项目时间</span>
+        <span class="hero-meta-value">2 个月</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom"></div>
+</section>
+
+
+<!-- ═══════════════ S2 · 项目概览 ═════════════════════ -->
+<section id="overview" data-screen-label="02 项目概览">
+  <div class="section-inner">
+    <div class="container">
+      <div class="label reveal">01 — 项目背景</div>
+      <h2 class="section-title reveal reveal-delay-1">项目概览</h2>
+
+      <!-- Charts Row -->
+      <div class="overview-charts reveal reveal-delay-2">
+        <!-- Donut: 产业结构 -->
+        <div class="chart-card">
+          <div class="chart-title">2021 年中国大数据产业结构</div>
+          <canvas id="chart2" height="200"></canvas>
+        </div>
+        <!-- Bar: 历年规模 -->
+        <div class="chart-card">
+          <div class="chart-title">互联网大数据产业规模（单位：亿元）</div>
+          <canvas id="chart1" height="180"></canvas>
+        </div>
+        <!-- Bar: 预测 -->
+        <div class="chart-card">
+          <div class="chart-title">2021–2026 年中国大数据产业市场规模预测（单位：亿元）</div>
+          <canvas id="chart3" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dark Bottom Band: 项目背景 + 痛点 -->
+  <div class="overview-bottom">
+    <div class="overview-bottom-inner">
+      <div class="grid-2" style="gap:48px;align-items:start;">
+        <div class="reveal">
+          <div class="label" style="margin-bottom:12px;">项目背景</div>
+          <p class="section-lead" style="font-size:16px;">
+            庞大的生产数据基准上，友讯达期望提升生产数据的价值的同时降低数据分析成本。
+            项目涉及到生产数据设计可视化效果，并设想通过可视化设计能够实现数据驱动的生产管理，
+            从而达到提升效率、降低成本、优化资源利用率以及实现实时决策支持的商业目标和意义。
+          </p>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="pain-card">
+            <div class="label" style="margin-bottom:12px;">核心痛点</div>
+            <p class="body-text" style="color:var(--body-strong);">
+              客户企业拥有大量底层数据，将数据能力有效透出，从而实现数据的价值。
+              传统的方式存在查询难度大、数据分析专业要求高、成本高、时间慢等问题。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-stripe"></div>
+
+
+<!-- ═══════════════ S3 · 难点与挑战 ══════════════════ -->
+<section id="challenge" data-screen-label="03 难点与挑战">
+  <div class="section-inner" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;">
+    <div class="container" style="text-align:center;">
+      <div class="label reveal" style="text-align:center;">02 — 难点与挑战</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align:center;margin-bottom:var(--sp-xxl);">难点与挑战</h2>
+
+      <p class="challenge-quote reveal reveal-delay-2">
+        在 2 个月内，我们要选择重点展示内容与方向，结合平台优势，
+        让这个项目成为公司 TOB 产品平台化的标杆与产品化能力。
+      </p>
+
+      <div style="height:var(--sp-xxl);"></div>
+
+      <div class="challenge-box reveal reveal-delay-3">
+        <div class="label" style="margin-bottom:16px;text-align:left;">更高层次的目标</div>
+        <p class="challenge-box-text" style="text-align:left;">
+          通过智能工厂数据可视化的方式实现数据价值与展现实力。
+          采用图表可视化与生产数据联动的方式解决数据无法及时传递的问题。
+          用设计升华数据价值，用数据驱动产品链接。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ S4 · 怎么做到的 ══════════════════ -->
+<section id="howto" data-screen-label="04 怎么做到的">
+  <div class="section-inner">
+    <div class="container">
+      <div class="label reveal">03 — 设计策略</div>
+      <h2 class="section-title reveal reveal-delay-1">怎么做到的？</h2>
+      <p class="section-lead reveal reveal-delay-2" style="margin-bottom:var(--sp-xl);">用户访谈获得设计策略</p>
+
+      <div class="reveal reveal-delay-3">
+        <img src="../uploads/用户访谈设计策略.svg" alt="用户访谈获得设计策略流程图" style="width:100%;height:auto;display:block;border-radius:4px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-stripe"></div>
+
+
+<!-- ═══════════════ S5 · 探索目标 & 发现 ══════════════ -->
+<section id="research" data-screen-label="05 探索目标">
+  <div class="section-inner">
+  <div class="container">
+  <div class="research-split">
+    <!-- Left: 探索目标 -->
+    <div class="split-left">
+      <div class="label" style="margin-bottom:12px;">04 — 用户研究</div>
+      <h2 class="section-title">探索目标</h2>
+      <p class="body-text" style="max-width:480px;">
+        开始没有准确的项目资料，通过访谈客户安排的管理、生产主管与工程师、
+        质量控制团队、设备维护等职能的相关工作人员，获得了以下信息：
+      </p>
+
+      <div class="interview-list">
+        <div class="interview-item">
+          <span class="interview-num">01</span>
+          <p class="interview-quote">"无实时准确的数据和指标，只能基于不完整的信息或感性判断进行决策。"</p>
+        </div>
+        <div class="interview-item">
+          <span class="interview-num">02</span>
+          <p class="interview-quote">"设备运行状态不及时上报，难以准确判断设备维护的时机和方式。"</p>
+        </div>
+        <div class="interview-item">
+          <span class="interview-num">03</span>
+          <p class="interview-quote">"无质量问题的可视化分析，难以快速定位和解决质量异常。"</p>
+        </div>
+        <div class="interview-item">
+          <span class="interview-num">04</span>
+          <p class="interview-quote">"无法快速处理生产线上的问题和瓶颈，缺乏可靠的数据来进行支持改进方案与决策。"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: 发现 -->
+    <div class="split-right">
+      <div class="label" style="margin-bottom:12px;">发现</div>
+      <h2 class="section-title">发现</h2>
+      <p class="body-text" style="max-width:480px;">
+        虽然访谈对象的职责各不相同，但是共同期望通过数据大屏获得实时、准确的生产数据和指标，
+        以便进行运营分析、决策制定和问题解决。
+      </p>
+
+      <div class="opportunity-box">
+        <div class="label" style="color:rgba(0,0,0,0.4);margin-bottom:12px;">设计机遇</div>
+        <p>我们如何设计可视化数据大屏，才能有效的做到数据传递，实现数据价值？</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ S6 · 解决方案 ════════════════════ -->
+<section id="solution" data-screen-label="06 解决方案">
+  <div class="solution-bg"></div>
+  <div class="solution-inner container">
+    <div class="label reveal" style="text-align:center;margin-bottom:12px;">05 — 解决方案</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">解决方案</h2>
+
+    <div class="solution-tv reveal reveal-delay-2">
+      <div class="tv-frame" style="max-width:860px;margin:0 auto;">
+        <div class="tv-screen" style="padding:0;">
+          <img src="友讯达封面图.jpg" alt="友讯达智能工厂数据大屏" style="width:100%;height:100%;object-fit:cover;display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-stripe"></div>
+
+
+<!-- ═══════════════ S7 · 视觉呈现原则 ════════════════ -->
+<section id="visual" data-screen-label="07 视觉呈现原则">
+  <div class="section-inner">
+    <div class="container">
+      <div class="label reveal">06 — 视觉设计</div>
+      <h2 class="section-title reveal reveal-delay-1">视觉呈现原则</h2>
+      <div class="hairline" style="margin-bottom:var(--sp-xxl);opacity:0;"></div>
+
+      <div class="grid-4">
+        <div class="principle-card reveal reveal-delay-1">
+          <div class="principle-title">布局设计</div>
+          <p class="principle-body">
+            采用整洁、直观的布局，将关键数据指标和图表以明确的方式展示。
+            将不同的数据模块分组，按照相关性或层级进行排列，以便用户快速浏览和理解。
+            使用明显的标题、副标题和标签，帮助用户更好地理解各数据模块的含义和关系。
+          </p>
+        </div>
+        <div class="principle-card reveal reveal-delay-2">
+          <div class="principle-title">色彩设计</div>
+          <p class="principle-body">
+            选择符合工厂品牌主题的配色方案，确保数据大屏与整体环境和企业形象相协调。
+            用明亮和鲜艳的色彩突出重要数据，例如红色或橙色表示警报或异常情况，绿/蓝色表示正常运行等。
+            保持色彩的一致性和对比度，以确保数据的可读性和可视化效果。
+          </p>
+        </div>
+        <div class="principle-card reveal reveal-delay-3">
+          <div class="principle-title">特点和风格</div>
+          <p class="principle-body">
+            结合数据大屏的技术特性，采用科技感强的视觉风格，体现出数据驱动和高效精准的产品特性。
+            视觉元素保持简洁与克制，避免过度装饰，让数据本身成为视觉焦点，传递真实有效的信息价值。
+          </p>
+        </div>
+        <div class="principle-card reveal reveal-delay-4">
+          <div class="principle-title">字体设计</div>
+          <p class="principle-body">
+            选用高可读性字体，确保在大屏环境下数字和文字的清晰辨识。
+            数值和关键指标使用显著的字号和字重，标题与正文保持清晰的字体层级，
+            在视觉上形成自然的信息阅读优先级。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ S8 · 交互设计要点 ════════════════ -->
+<section id="interaction" data-screen-label="08 交互设计要点">
+  <div class="section-inner">
+    <div class="container">
+      <div class="label reveal">07 — 交互设计</div>
+      <h2 class="section-title reveal reveal-delay-1">交互设计要点</h2>
+      <div class="hairline" style="margin-bottom:var(--sp-xxl);opacity:0;"></div>
+
+      <div class="grid-5">
+        <div class="interaction-card reveal reveal-delay-1">
+          <div class="interaction-num">01</div>
+          <div class="interaction-title">动态数据可视化</div>
+          <p class="interaction-body">
+            利用动画效果展示实时数据的变化趋势，例如通过柱状图、线图或雷达图的动态增长和缩小，
+            突出关键指标的变化。通过颜色渐变、闪烁或图标旋转等动画效果，吸引用户注意力，快速传递信息。
+          </p>
+        </div>
+        <div class="interaction-card reveal reveal-delay-2">
+          <div class="interaction-num">02</div>
+          <div class="interaction-title">实时生产线模拟</div>
+          <p class="interaction-body">
+            通过动态图表和流程图，实时呈现生产线各环节的运行状态，
+            使管理人员可以直观了解整体生产流程，及时发现瓶颈并做出调整。
+          </p>
+        </div>
+        <div class="interaction-card reveal reveal-delay-3">
+          <div class="interaction-num">03</div>
+          <div class="interaction-title">多维度数据探索</div>
+          <p class="interaction-body">
+            支持用户通过筛选、钻取和对比等方式对数据进行深度分析，
+            满足不同职能人员对数据的差异化需求，提升数据探索效率。
+          </p>
+        </div>
+        <div class="interaction-card reveal reveal-delay-4">
+          <div class="interaction-num">04</div>
+          <div class="interaction-title">个性化配置和保存</div>
+          <p class="interaction-body">
+            允许用户根据个人偏好自定义大屏布局和关注指标，并保存配置方案，
+            以便快速切换不同的监控视图，提升日常使用效率。
+          </p>
+        </div>
+        <div class="interaction-card reveal reveal-delay-4" style="transition-delay:0.5s;">
+          <div class="interaction-num">05</div>
+          <div class="interaction-title">智能告警和通知</div>
+          <p class="interaction-body">
+            设定关键指标的阈值，当数据异常时自动触发视觉告警和消息推送，
+            帮助相关人员及时响应和处理生产异常，降低故障影响时间。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-stripe"></div>
+
+
+<!-- ═══════════════ S9 · 设计评估 ════════════════════ -->
+<section id="evaluation" data-screen-label="09 设计评估">
+  <div class="eval-inner container">
+    <div class="label reveal" style="text-align:center;">08 — 设计评估</div>
+    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;margin-bottom:var(--sp-xl);">设计评估</h2>
+
+    <!-- Metrics -->
+    <div class="eval-metrics reveal reveal-delay-2">
+      <div class="eval-metric">
+        <div class="eval-metric-value">+<span data-target="43" data-suffix="">43</span><span class="eval-metric-unit">%</span></div>
+        <div class="eval-metric-label">生产效率提升</div>
+      </div>
+      <div class="eval-metric">
+        <div class="eval-metric-value"><span data-target="79" data-suffix="">79</span><span class="eval-metric-unit">%</span></div>
+        <div class="eval-metric-label">客户满意度 ≥6 分</div>
+      </div>
+      <div class="eval-metric">
+        <div class="eval-metric-value"><span data-target="31" data-suffix="">31</span><span class="eval-metric-unit">%</span></div>
+        <div class="eval-metric-label">给予满分 10 分</div>
+      </div>
+    </div>
+
+    <div class="hairline" style="margin-bottom:var(--sp-xl);"></div>
+
+    <p class="eval-text reveal reveal-delay-3">
+      我们不断收集和分析用户的反馈和行为数据，了解用户需求，发现问题，
+      并针对性地进行设计改进和优化。这样的循环反馈过程可以帮助我们逐步提升数据大屏的设计效果
+      和用户满意度，确保其能够真正满足用户的需求，提供有价值的数据展示和管理工具。
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════ FOOTER ════════════════════════════ -->
+<footer>
+  <span class="footer-text">友讯达数据大屏 · 设计案例</span>
+  <span class="footer-text" style="color:var(--hairline);">数据可视化 · 智能工厂 · TOB 产品设计</span>
+  <span class="footer-text">© 设计案例归属原设计师</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
