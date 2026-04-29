@@ -145,3 +145,4 @@ if (ctx3) {
 const bars = document.querySelectorAll('.tv-chart-bar');
 const heights = [30, 55, 42, 70, 48, 85, 38, 62];
 bars.forEach((b, i) => { b.style.height = (heights[i % heights.length]) + '%'; });
+
