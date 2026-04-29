@@ -146,3 +146,30 @@ const bars = document.querySelectorAll('.tv-chart-bar');
 const heights = [30, 55, 42, 70, 48, 85, 38, 62];
 bars.forEach((b, i) => { b.style.height = (heights[i % heights.length]) + '%'; });
 
+/* ─── Bottom boundary: 到底禁止继续下滑，可上滑 ─────── */
+(function () {
+  let touchStartY = 0;
+
+  function atBottom() {
+    return window.scrollY + window.innerHeight >= document.body.scrollHeight - 4;
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (atBottom() && e.deltaY > 0) e.preventDefault();
+  }, { passive: false });
+
+  window.addEventListener('touchstart', function (e) {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', function (e) {
+    const dy = touchStartY - e.touches[0].clientY;
+    if (atBottom() && dy > 0) e.preventDefault();
+  }, { passive: false });
+
+  window.addEventListener('keydown', function (e) {
+    if (!atBottom()) return;
+    if (['ArrowDown', 'PageDown', 'End', ' '].includes(e.key)) e.preventDefault();
+  });
+})();
+
