@@ -57,7 +57,10 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
       renderer.toneMapping = THREE.CineonToneMapping
       renderer.toneMappingExposure = 1.2
       renderer.domElement.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;'
-      container.appendChild(renderer.domElement)
+      // 增加一层判断，如果 container 不是 null 才执行挂载
+      if (container) {
+        container.appendChild(renderer.domElement)
+      }
 
       // --- Scene & Camera ---
       const scene = new THREE.Scene()
@@ -276,13 +279,13 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
       const rndArr = new Float32Array(PC * 3)
       for (let i = 0; i < PC; i++) {
         idxArr[i] = i
-        rndArr[i * 3]     = Math.random()
+        rndArr[i * 3] = Math.random()
         rndArr[i * 3 + 1] = Math.random()
         rndArr[i * 3 + 2] = Math.random()
       }
       geometry.setAttribute('position', new THREE.BufferAttribute(new Float32Array(PC * 3).fill(0), 3))
-      geometry.setAttribute('aIndex',   new THREE.BufferAttribute(idxArr, 1))
-      geometry.setAttribute('aRandom',  new THREE.BufferAttribute(rndArr, 3))
+      geometry.setAttribute('aIndex', new THREE.BufferAttribute(idxArr, 1))
+      geometry.setAttribute('aRandom', new THREE.BufferAttribute(rndArr, 3))
 
       const palettes = [
         { c1: new THREE.Color('#818cf8'), c2: new THREE.Color('#2dd4bf') }, // indigo / teal
@@ -292,13 +295,13 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
 
       const material = new THREE.ShaderMaterial({
         uniforms: {
-          uTime:           { value: 0 },
-          uMode:           { value: 0 },
-          uHandRight:      { value: new THREE.Vector3(100, 0, 0) },
+          uTime: { value: 0 },
+          uMode: { value: 0 },
+          uHandRight: { value: new THREE.Vector3(100, 0, 0) },
           uHandRightState: { value: 0 },
-          uAudio:          { value: 0 },
-          uColor1:         { value: palettes[0].c1.clone() },
-          uColor2:         { value: palettes[0].c2.clone() },
+          uAudio: { value: 0 },
+          uColor1: { value: palettes[0].c1.clone() },
+          uColor2: { value: palettes[0].c2.clone() },
         },
         vertexShader,
         fragmentShader,
@@ -311,11 +314,11 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
 
       // --- Interaction state ---
       let currentMode = 0
-      const handRight       = new THREE.Vector3(100, 0, 0)
+      const handRight = new THREE.Vector3(100, 0, 0)
       const handRightTarget = new THREE.Vector3(100, 0, 0)
 
       const onMouseMove = (e: MouseEvent) => {
-        const x = (e.clientX / window.innerWidth)  * 2 - 1
+        const x = (e.clientX / window.innerWidth) * 2 - 1
         const y = -(e.clientY / window.innerHeight) * 2 + 1
         handRightTarget.set(x * 30, y * 20, 0)
       }
@@ -336,7 +339,7 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
       const animate = () => {
         animId = requestAnimationFrame(animate)
         const delta = clock.getDelta()
-        const time  = clock.elapsedTime
+        const time = clock.elapsedTime
 
         // Mode transition (reads from ref — always fresh)
         const targetM = targetModeRef.current
@@ -345,8 +348,8 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
         } else {
           currentMode = targetM
         }
-        material.uniforms.uMode.value  = currentMode
-        material.uniforms.uTime.value  = time
+        material.uniforms.uMode.value = currentMode
+        material.uniforms.uTime.value = time
         finalPass.uniforms.uTime.value = time
 
         // Hand / mouse lerp
@@ -361,8 +364,8 @@ export default function ParticleUniverse({ targetMode, colorPalette }: ParticleU
         // Gentle camera sway
         const zTarget = cameraZ + Math.sin(time * 0.5) * 2
         camera.position.z += (zTarget - camera.position.z) * 0.02
-        camera.position.x  = Math.sin(time * 0.2) * 2
-        camera.position.y  = Math.cos(time * 0.15) * 2
+        camera.position.x = Math.sin(time * 0.2) * 2
+        camera.position.y = Math.cos(time * 0.15) * 2
         camera.lookAt(0, 0, 0)
 
         composer.render()
