@@ -58,6 +58,15 @@ const projects = [
     image: '/images/p4-cover.png',
     href: '/Project_P4/index.html',
   },
+  {
+    num: '07',
+    label: 'B端 · 工业软件',
+    title: 'PCB 系统',
+    desc: '主导重新设计 PCB 制造执行系统，在保留原有功能框架的基础上全面升级交互体验。提升管理效率 +28%、插件效率 +17%，降低人工介入率 -10% 与工程导入耗时 -17%，支撑 90+ 条产线订单验证。',
+    tags: ['B端设计', 'Industrial Software', 'HMI', 'MES', 'Design System'],
+    image: '/images/pcb2026/f101-hero.png',
+    href: '/pcb/portfolio-PCB-2026.html',
+  },
 ]
 
 export default function ProjectGrid() {
