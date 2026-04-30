@@ -18,7 +18,7 @@ const projects = [
     label: 'GIS · Tracking System',
     title: '轨迹定位跟踪系统',
     desc: '面向大型工业园区的载体定位与轨迹追踪系统，解决传统人工管理效率低下的痛点，实现分区管理、实时追踪与灵活信息呈现。',
-    tags: ['GIS', 'Tracking', 'Industrial', 'B端设计'],
+    tags: ['GIS', 'Tracking', 'Industrial'],
     image: '/国家能源/project/assets/bg-cover.png',
     href: '/国家能源/project/Portfolio.html',
   },
