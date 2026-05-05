@@ -77,7 +77,7 @@ export function ProfileIntroSection() {
 
           <div className={styles.description}>
             <p>
-              11 年设计功底，专注 AI 产品体验与设计工程化——让设计融合 AI，于繁复中取清明。
+              10+ 年设计功底，专注 AI 产品体验与设计工程化——让设计融合 AI，于繁复中取清明。
             </p>
             <p>
               足迹横跨工业 AI 视觉质检、WMS/MES、IoT 监控与 B 端 SaaS，覆盖 Web、App 与工控大屏。服务过制造业龙头与早期科技团队。
@@ -91,7 +91,7 @@ export function ProfileIntroSection() {
           <div className={styles.actions}>
             <a
               className={`${styles.btn} ${styles.btnPrimary}`}
-              href="/杨蜜萁_高级UI_UX设计师_13622962831.pdf"
+              href="/杨蜜萁_作品集与简历_2026.docx"
               download
             >
               简历

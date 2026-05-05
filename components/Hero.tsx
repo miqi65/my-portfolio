@@ -78,7 +78,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            {(['我是杨蜜萁', '高级产品设计师', 'AI 产品 · B 端体验 · 软硬一体'] as const).map((line) => (
+            {(['我是杨蜜萁', '高级 UX / 产品设计师', 'AI 产品 · 复杂 B 端 · Design System'] as const).map((line) => (
               <div key={line} className="overflow-hidden">
                 <motion.h1
                   variants={lineVariants}
@@ -101,7 +101,7 @@ export default function Hero() {
             className="mt-7 text-[15px] md:text-lg leading-[1.75] text-white/55 max-w-xl"
             style={{ fontFamily: 'var(--font-display)' }}
           >
-            十一年复杂场景设计经验，繁处见秩序，简处见功力。
+            10+ 年设计经验，跨 UX / UI / Design System / 视觉与 3D<br />繁处见秩序，简处见功力
           </motion.p>
 
           {/* CTAs */}
@@ -159,43 +159,6 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        {/* ── HUD: Bottom-left — Mode Selector ────────────────── */}
-        <div className="absolute bottom-4 md:bottom-6 left-4 md:left-6 z-20 w-56 pointer-events-auto">
-          <div
-            className="p-3 rounded-xl border border-white/[0.07] shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
-            style={{ background: 'rgba(10,10,12,0.78)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
-          >
-            <div className="flex items-center gap-1.5 mb-2.5 px-0.5">
-              {/* cpu icon */}
-              <svg className="w-3 h-3 text-white/35" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <rect x="4" y="4" width="16" height="16" rx="2" />
-                <path d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" strokeLinecap="round" />
-              </svg>
-              <span className="text-[9px] font-mono tracking-[0.2em] text-white/40 uppercase">Simulation</span>
-            </div>
-
-            <div className="grid grid-cols-2 gap-1.5">
-              {MODE_LABELS.map((label, i) => (
-                <button
-                  key={label}
-                  onClick={() => handleSetMode(i)}
-                  className={`
-                    group relative flex items-center justify-between px-2.5 py-2 rounded-lg
-                    transition-all duration-200 text-left border
-                    ${mode === i
-                      ? 'bg-white/[0.08] border-white/15'
-                      : 'bg-transparent border-transparent hover:bg-white/5 hover:border-white/10'}
-                  `}
-                >
-                  <span className={`text-[10px] font-medium transition-colors ${mode === i ? 'text-white' : 'text-white/55 group-hover:text-white/90'}`}>
-                    {label}
-                  </span>
-                  <span className="text-[9px] font-mono text-white/20">{String(i + 1).padStart(2, '0')}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
 
       </section>
 
