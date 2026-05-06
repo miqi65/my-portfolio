@@ -6,7 +6,7 @@ import { motion, useInView } from 'framer-motion'
 const stats = [
   { number: '12', unit: '年', label: '行业经验', sub: 'Years of Experience' },
   { number: '60', unit: '+', label: '落地项目', sub: 'Delivered Projects' },
-  { number: '100', unit: '%', label: '客户好评', sub: 'Client Satisfaction' },
+  { number: '3', unit: '项', label: '国家级奖项', sub: 'National Awards' },
 ]
 
 function StatItem({ stat, index }: { stat: typeof stats[0]; index: number }) {
