@@ -1,9 +1,12 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
+  const disabledOnV2 = pathname === '/v2'
 
   useEffect(() => {
     const cursor = cursorRef.current
@@ -50,7 +53,11 @@ export default function Cursor() {
       document.removeEventListener('mouseover', onMouseOver)
       document.removeEventListener('mouseout', onMouseOut)
     }
-  }, [])
+  }, [disabledOnV2])
+
+  if (disabledOnV2) {
+    return null
+  }
 
   return (
     <div
