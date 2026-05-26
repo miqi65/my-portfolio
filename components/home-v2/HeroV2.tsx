@@ -15,7 +15,7 @@ const chips = [
 
 const meta = [
   ['Focus', 'B端 / AI应用 / 智能硬件'],
-  ['Experience', '8+ 年产品设计经验'],
+  ['Experience', '10+ 年产品设计经验'],
   ['Method', 'AI 辅助 × 结构化设计'],
   ['Delivery', '从原型到落地的闭环'],
   ['Location', 'Remote / Worldwide'],
@@ -25,13 +25,13 @@ const diagramSteps = [
   {
     num: '01',
     title: '模糊需求',
-    lines: ['信息分散 / 需求模糊', '目标不清 / 范围不明确'],
+    lines: ['信息分散 / 需求模糊', '目标不清 / 范围不明'],
     visual: 'idea',
   },
   {
     num: '02',
     title: '流程拆解',
-    lines: ['梳理业务流程', '识别关键路径与依赖'],
+    lines: ['梳理业务流程', '识别路径与依赖'],
     visual: 'flow',
   },
   {
@@ -44,13 +44,13 @@ const diagramSteps = [
   {
     num: '04',
     title: '风险清单',
-    lines: ['开发前风险识别', '技术 / 体验 / 业务 / 依赖'],
+    lines: ['开发前风险识别', '技术 / 体验 / 业务'],
     visual: 'risk',
   },
   {
     num: '05',
     title: '老板决策卡',
-    lines: ['方案摘要 / 价值评估', '决策依据提前可追踪'],
+    lines: ['方案摘要 / 价值评估', '决策依据可追踪'],
     visual: 'decision',
     verified: true,
   },
@@ -84,25 +84,25 @@ function IdeaClusterVisual() {
   ]
 
   return (
-    <div className="relative h-[78px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA]">
-      <div className="absolute left-1/2 top-1/2 h-11 w-11 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#AEB4BD]" />
-      <div className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D7DBE1] bg-white text-center text-[16px] font-semibold leading-7 text-[#555B64]">
+    <div className="relative h-[96px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA]">
+      <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#AEB4BD]" />
+      <div className="absolute left-1/2 top-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#D7DBE1] bg-white text-center text-[16px] font-semibold leading-8 text-[#555B64]">
         ?
       </div>
       {nodes.map((node) => (
         <span key={node} className={`absolute ${node} rounded-full bg-[#AEB4BD]`} />
       ))}
-      <span className="absolute left-[31px] top-[24px] h-px w-12 rotate-[22deg] bg-[#D7DBE1]" />
-      <span className="absolute right-[32px] top-[27px] h-px w-10 -rotate-[24deg] bg-[#D7DBE1]" />
-      <span className="absolute bottom-[25px] left-[38px] h-px w-11 -rotate-[18deg] bg-[#D7DBE1]" />
+      <span className="absolute left-[26px] top-[30px] h-px w-14 rotate-[22deg] bg-[#D7DBE1]" />
+      <span className="absolute right-[26px] top-[32px] h-px w-12 -rotate-[24deg] bg-[#D7DBE1]" />
+      <span className="absolute bottom-[30px] left-[32px] h-px w-12 -rotate-[18deg] bg-[#D7DBE1]" />
     </div>
   )
 }
 
 function FlowchartVisual() {
   return (
-    <div className="relative h-[78px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA] p-2.5">
-      <div className="grid h-full grid-cols-[1fr_20px_1fr] grid-rows-2 gap-y-3">
+    <div className="relative h-[96px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA] p-2.5">
+      <div className="grid h-full grid-cols-[1fr_20px_1fr] grid-rows-2 gap-y-4">
         {['角色', '任务', '边界', '异常'].map((item, index) => (
           <div
             key={item}
@@ -114,16 +114,16 @@ function FlowchartVisual() {
           </div>
         ))}
       </div>
-      <span className="absolute left-[43%] top-[27px] h-px w-8 bg-[#AEB4BD]" />
-      <span className="absolute left-[50%] top-[47px] h-px w-8 -rotate-45 bg-[#AEB4BD]" />
-      <span className="absolute bottom-[28px] left-[42%] h-px w-8 bg-[#AEB4BD]" />
+      <span className="absolute left-[43%] top-[30px] h-px w-8 bg-[#AEB4BD]" />
+      <span className="absolute left-[50%] top-[56px] h-px w-8 -rotate-45 bg-[#AEB4BD]" />
+      <span className="absolute bottom-[30px] left-[42%] h-px w-8 bg-[#AEB4BD]" />
     </div>
   )
 }
 
 function PrototypeVisual() {
   return (
-    <div className="h-[78px] rounded-[8px] border border-[#0037C5]/40 bg-[#F8FAFF] p-2">
+    <div className="h-[96px] rounded-[8px] border border-[#0037C5]/40 bg-[#F8FAFF] p-2">
       <div className="h-full rounded-[6px] border border-[#D7DBE1] bg-white">
         <div className="flex h-5 items-center gap-1 border-b border-[#E2E4E8] px-2">
           <span className="h-1.5 w-1.5 rounded-full bg-[#0037C5]" />
@@ -158,10 +158,10 @@ function RiskListVisual() {
   ] as const
 
   return (
-    <div className="h-[78px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA] p-2.5">
-      <div className="space-y-2">
+    <div className="h-[96px] rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA] p-2.5">
+      <div className="space-y-2.5">
         {risks.map(([label, level], index) => (
-          <div key={label} className="grid grid-cols-[1fr_24px] items-center gap-2">
+          <div key={label} className="grid grid-cols-[1fr_26px] items-center gap-2">
             <div className="rounded-[5px] border border-[#D7DBE1] bg-white px-2 py-1.5">
               <div className="flex items-center gap-2">
                 <span className={index === 0 ? 'h-1.5 w-1.5 rounded-full bg-[#0037C5]' : 'h-1.5 w-1.5 rounded-full bg-[#AEB4BD]'} />
@@ -180,13 +180,13 @@ function RiskListVisual() {
 
 function DecisionCardVisual() {
   return (
-    <div className="h-[78px] rounded-[8px] border border-[#D4EBDD] bg-[#FAFAFA] p-2.5">
+    <div className="h-[96px] rounded-[8px] border border-[#D4EBDD] bg-[#FAFAFA] p-2.5">
       <div className="flex items-start justify-between">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-[#8A8F98]">
             Value
           </p>
-          <p className="mt-1 text-[24px] font-semibold leading-none tracking-[-0.04em] text-[#111111]">
+          <p className="mt-1 text-[26px] font-semibold leading-none tracking-[-0.04em] text-[#111111]">
             92%
           </p>
         </div>
@@ -194,7 +194,7 @@ function DecisionCardVisual() {
           ✓
         </div>
       </div>
-      <div className="mt-3 flex h-6 items-end gap-1">
+      <div className="mt-4 flex h-8 items-end gap-1">
         {[24, 14, 20, 16, 28, 20].map((height, index) => (
           <span
             key={index}
@@ -215,12 +215,12 @@ function StepVisual({ visual }: { visual: DiagramStep['visual'] }) {
   return <DecisionCardVisual />
 }
 
-function ConnectorArrow() {
+function InlineConnectorArrow() {
   return (
-    <div className="hidden items-center justify-center xl:flex" aria-hidden="true">
-      <span className="relative block h-px w-full bg-[#AEB4BD]">
-        <span className="absolute right-0 top-1/2 h-2 w-2 -translate-y-1/2 rotate-45 border-r border-t border-[#AEB4BD]" />
-      </span>
+    <div className="flex h-[262px] items-center justify-center text-[#9AA1AB]" aria-hidden="true">
+      <svg viewBox="0 0 16 10" className="h-2.5 w-4">
+        <path d="M1 5h12M9 1l4 4-4 4" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" />
+      </svg>
     </div>
   )
 }
@@ -231,7 +231,7 @@ function DiagramCard({ step }: { step: DiagramStep }) {
 
   return (
     <article
-      className={`relative z-10 flex min-h-[224px] flex-col rounded-[10px] border bg-white p-3 shadow-[0_8px_24px_rgba(17,17,17,0.035)] ${
+      className={`relative z-10 flex h-[262px] flex-col rounded-[10px] border bg-white p-3 shadow-[0_8px_24px_rgba(17,17,17,0.035)] ${
         active
           ? 'border-[#0037C5] shadow-[0_12px_30px_rgba(0,55,197,0.08)]'
           : 'border-[#E2E4E8]'
@@ -248,19 +248,21 @@ function DiagramCard({ step }: { step: DiagramStep }) {
         />
       </div>
 
-      <div className="mt-3">
+      <div className="mt-3 h-[96px] shrink-0">
         <StepVisual visual={step.visual} />
       </div>
 
-      <h3 className="mt-4 text-[15px] font-semibold leading-tight tracking-[-0.03em] text-[#111111]">
-        {step.title}
-      </h3>
-      <div className="mt-3 space-y-1">
-        {step.lines.map((line) => (
-          <p key={line} className="text-[11px] leading-[1.55] text-[#555B64]">
-            {line}
-          </p>
-        ))}
+      <div className="mt-4 min-h-[66px]">
+        <h3 className="text-[15px] font-semibold leading-tight tracking-[-0.03em] text-[#111111]">
+          {step.title}
+        </h3>
+        <div className="mt-2 space-y-1">
+          {step.lines.map((line) => (
+            <p key={line} className="text-[11px] leading-[1.5] text-[#555B64]">
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
     </article>
   )
@@ -274,20 +276,44 @@ function StageTimeline() {
   ] as const
 
   return (
-    <div className="mt-5 border-t border-[#E2E4E8] pt-4">
-      <div className="relative grid grid-cols-3 gap-4">
-        <span className="absolute left-0 right-0 top-[7px] h-px bg-[#D7DBE1]" aria-hidden="true" />
-        {stages.map(([label, desc], index) => (
-          <div key={label} className="relative">
-            <span className={index === 1 ? 'relative z-10 block h-[15px] w-[15px] rounded-full border-[3px] border-white bg-[#0037C5] shadow-[0_0_0_1px_rgba(0,55,197,0.25)]' : 'relative z-10 block h-[15px] w-[15px] rounded-full border border-[#D7DBE1] bg-white'} />
-            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#20242A]">
-              {label}
-            </p>
-            <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.08em] text-[#8A8F98]">
-              {desc}
-            </p>
+    <div className="mt-8 h-[102px] border-t border-[#E2E4E8] pt-6">
+      <div className="relative">
+        <span className="absolute left-0 right-0 top-2 h-px bg-[#D7DBE1]" aria-hidden="true" />
+        <div className="relative grid grid-cols-[2fr_1fr_2fr] gap-6">
+          <div>
+            <div className="flex flex-col items-center text-center">
+              <span className="relative z-10 block h-[14px] w-[14px] rounded-full border border-[#D7DBE1] bg-white" />
+              <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#20242A]">
+                {stages[0][0]}
+              </p>
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.08em] text-[#8A8F98]">
+                {stages[0][1]}
+              </p>
+            </div>
           </div>
-        ))}
+          <div>
+            <div className="flex flex-col items-center text-center">
+              <span className="relative z-10 block h-[14px] w-[14px] rounded-full border-[3px] border-white bg-[#0037C5] shadow-[0_0_0_1px_rgba(0,55,197,0.25)]" />
+              <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#20242A]">
+                {stages[1][0]}
+              </p>
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.08em] text-[#8A8F98]">
+                {stages[1][1]}
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="flex flex-col items-center text-center">
+              <span className="relative z-10 block h-[14px] w-[14px] rounded-full border border-[#D7DBE1] bg-white" />
+              <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.13em] text-[#20242A]">
+                {stages[2][0]}
+              </p>
+              <p className="mt-1 text-[10px] font-medium uppercase tracking-[0.08em] text-[#8A8F98]">
+                {stages[2][1]}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -296,36 +322,46 @@ function StageTimeline() {
 function ProductValidationDiagram() {
   return (
     <div className="relative overflow-hidden rounded-[16px] border border-[#E2E4E8] bg-[#FCFCFD] p-4 shadow-[0_18px_56px_rgba(17,17,17,0.05)] md:p-5 min-[1440px]:p-6">
-      <div className="flex items-start justify-between gap-6 border-b border-[#E2E4E8] pb-4">
-        <div>
-          <p className="text-[10px] font-semibold uppercase leading-[1.7] tracking-[0.18em] text-[#0037C5]">
-            WORKFLOW
-            <span className="block text-[#0037C5]">PRODUCT VALIDATION</span>
-          </p>
-          <h2 className="mt-2 max-w-[280px] text-[22px] font-semibold leading-[1.12] tracking-[-0.04em] text-[#111111]">
-            Product Validation Workflow
-          </h2>
-        </div>
-        <div className="rounded-full border border-[#D7DBE1] bg-white px-3 py-2 text-[10px] font-semibold uppercase leading-[1.4] tracking-[0.12em] text-[#555B64]">
-          AI BOUNDARY
-          <span className="block">ASSISTED CREATION</span>
+      <div className="relative h-[110px] border-b border-[#E2E4E8]">
+        <div className="flex h-full items-center justify-between gap-6">
+          <div>
+            <p className="text-[10px] font-semibold uppercase leading-[1.7] tracking-[0.18em] text-[#0037C5]">
+              WORKFLOW
+              <span className="block text-[#0037C5]">PRODUCT VALIDATION</span>
+            </p>
+            <h2 className="mt-2 max-w-[280px] text-[22px] font-semibold leading-[1.12] tracking-[-0.04em] text-[#111111]">
+              Product Validation Workflow
+            </h2>
+          </div>
+          <div className="relative z-20 rounded-full border border-[#D7DBE1] bg-white px-3 py-2 text-[10px] font-semibold uppercase leading-[1.4] tracking-[0.12em] text-[#555B64]">
+            AI BOUNDARY
+            <span className="block">ASSISTED CREATION</span>
+          </div>
         </div>
       </div>
 
-      <div className="-mx-2 mt-5 overflow-x-auto px-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="relative min-w-[760px] min-[1440px]:min-w-0">
-          <div className="pointer-events-none absolute bottom-[84px] left-[40.5%] right-0 top-[-14px] hidden rounded-[14px] border border-dashed border-[#C7CBD2] xl:block" />
-          <div className="pointer-events-none absolute right-4 top-[-7px] hidden bg-[#FCFCFD] px-2 text-[9px] font-semibold uppercase tracking-[0.13em] text-[#8A8F98] xl:block">
-            Assisted creation / Human review
-          </div>
-
-          <div className="grid grid-cols-[minmax(0,1fr)_18px_minmax(0,1fr)_18px_minmax(0,1fr)_18px_minmax(0,1fr)_18px_minmax(0,1fr)] gap-2">
-            {diagramSteps.map((step, index) => (
-              <div key={step.num} className="contents">
-                <DiagramCard step={step} />
-                {index < diagramSteps.length - 1 && <ConnectorArrow />}
+      <div className="-mx-2 mt-6 overflow-x-auto px-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="relative min-w-[820px] pb-1">
+          <div className="relative h-[324px]">
+            <div className="pointer-events-none absolute inset-0 z-0 hidden min-[1100px]:block" aria-hidden="true">
+              <div className="grid h-full grid-cols-[minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)]">
+                <div className="col-start-5 col-end-10 relative">
+                  <span className="absolute inset-x-[-10px] inset-y-[-12px] rounded-[14px] border border-dashed border-[#C7CBD2]" />
+                </div>
               </div>
-            ))}
+            </div>
+
+            <div className="relative z-10 grid h-full grid-cols-[minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)_18px_minmax(136px,1fr)] items-start">
+              <DiagramCard step={diagramSteps[0]} />
+              <InlineConnectorArrow />
+              <DiagramCard step={diagramSteps[1]} />
+              <InlineConnectorArrow />
+              <DiagramCard step={diagramSteps[2]} />
+              <InlineConnectorArrow />
+              <DiagramCard step={diagramSteps[3]} />
+              <InlineConnectorArrow />
+              <DiagramCard step={diagramSteps[4]} />
+            </div>
           </div>
 
           <StageTimeline />
@@ -346,14 +382,14 @@ export default function HeroV2() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-        className="grid flex-1 items-center gap-10 py-8 xl:grid-cols-[minmax(360px,0.38fr)_minmax(0,0.62fr)] xl:gap-8 min-[1440px]:grid-cols-[minmax(420px,0.36fr)_minmax(760px,1fr)] min-[1440px]:gap-6 min-[1600px]:gap-14"
+        className="grid flex-1 items-center gap-10 py-8 xl:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] xl:gap-6 min-[1600px]:gap-10"
       >
         <div className="max-w-5xl">
           <p className="text-[13px] font-semibold tracking-[0.16em] text-[#0037C5]">
             B端 / AI应用 / 智能硬件方向
           </p>
 
-          <h1 className="mt-7 max-w-5xl text-[48px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#111111] sm:text-[60px] md:text-[68px] xl:text-[60px] min-[1440px]:text-[68px] min-[1600px]:text-[84px] min-[1800px]:text-[96px]">
+          <h1 className="mt-7 max-w-5xl text-[48px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#111111] sm:text-[60px] md:text-[68px] xl:text-[58px] min-[1440px]:text-[62px] min-[1600px]:text-[80px] min-[1800px]:text-[92px]">
             <span className="block whitespace-nowrap">高级产品设计师</span>
             <span className="block whitespace-nowrap">B端 / AI应用 /</span>
             <span className="block whitespace-nowrap">智能硬件方向</span>
