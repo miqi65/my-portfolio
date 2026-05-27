@@ -35,7 +35,7 @@ export default function DemoSection() {
           <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#0037C5]">
             04 / Demo
           </p>
-          <h2 className="mt-4 max-w-xl text-[38px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#111111] md:text-[60px]">
+          <h2 className="mt-4 max-w-xl text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#111111] md:text-[52px] xl:text-[56px]">
             60 秒产品验证 Demo
           </h2>
           <p className="mt-6 max-w-xl text-[18px] font-medium leading-[1.7] text-[#20242A]">
@@ -123,14 +123,6 @@ export default function DemoSection() {
             </div>
           </div>
 
-          <div className="grid gap-2 md:grid-cols-6">
-            {validationSteps.map((step, index) => (
-              <div key={step} className="relative min-h-20 rounded-[8px] border border-[#E2E4E8] bg-white p-3">
-                <p className="text-[11px] font-semibold text-[#0037C5]">0{index + 1}</p>
-                <p className="mt-3 text-[13px] font-medium leading-tight text-[#20242A]">{step}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </motion.div>
     </section>

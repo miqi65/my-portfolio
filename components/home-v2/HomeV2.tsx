@@ -104,28 +104,22 @@ function scrollToSection(id: SectionId) {
 
 function SectionRail({ activeSection }: { activeSection: SectionId }) {
   return (
-    <aside className="fixed inset-y-0 left-0 z-[80] hidden w-[160px] overflow-y-auto border-r border-[#E5E7EB] bg-[#FAFAFA] px-6 py-4 [scrollbar-width:none] lg:flex lg:h-screen lg:flex-col [&::-webkit-scrollbar]:hidden">
-      <div className="flex min-h-[120px] shrink-0 items-start">
-        <button
-          type="button"
-          onClick={() => scrollToSection('intro')}
-          className="flex min-h-11 items-center gap-2.5 rounded-[6px] text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAFA]"
-        >
-          <span className="relative block h-6 w-6 shrink-0 overflow-hidden text-[#111111]" aria-hidden="true">
-            <span className="absolute left-0 top-0 h-6 w-[9px] bg-current" />
-            <span className="absolute right-0 top-0 h-6 w-[9px] bg-current" />
-            <span className="absolute left-[8px] top-[4px] h-[18px] w-[9px] -skew-x-[28deg] bg-current" />
-          </span>
-          <span className="block text-[15px] font-semibold tracking-[-0.03em] text-[#111111]">
-            <span className="block whitespace-nowrap">Miki Studio</span>
-            <span className="mt-0.5 block text-[10px] font-medium tracking-[-0.01em] text-[#8A8F98]">
-              Product Design
-            </span>
-          </span>
-        </button>
-      </div>
+    <aside className="fixed inset-y-0 left-0 z-[80] hidden w-[160px] overflow-y-auto border-r border-[#E5E7EB] bg-[#FAFAFA] px-6 py-6 [scrollbar-width:none] lg:flex lg:h-screen lg:flex-col [&::-webkit-scrollbar]:hidden">
+      <a
+        href="#intro"
+        className="mb-6 inline-flex items-start gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FAFAFA]"
+        aria-label="回到首页开头"
+      >
+        <svg viewBox="0 0 20 20" className="mt-0.5 h-5 w-5 text-[#111111]" fill="currentColor" aria-hidden="true">
+          <path d="M2 2h5.4l2.7 4.9L12.8 2H18v16h-5.2V9.9l-2.7 4.9-2.7-4.9V18H2V2z" />
+        </svg>
+        <span>
+          <span className="block text-[14px] font-semibold leading-none tracking-[-0.02em] text-[#111111]">Miki Studio</span>
+          <span className="mt-1 block text-[11px] font-medium leading-none tracking-[-0.01em] text-[#8A8F98]">Product Design</span>
+        </span>
+      </a>
 
-      <div className="flex min-h-0 flex-1 items-start pb-12 pt-14 [@media(min-height:860px)]:items-center [@media(min-height:860px)]:pt-0">
+      <div className="flex min-h-0 flex-1 items-start pb-12 pt-2 [@media(min-height:860px)]:items-center [@media(min-height:860px)]:pt-0">
         <nav className="relative w-full" aria-label="Section navigation">
           <span className="absolute bottom-[52px] left-[8.5px] top-2 w-px bg-[#E5E7EB]" aria-hidden="true" />
           {sections.map((section) => {
@@ -196,7 +190,7 @@ function TopNavigation() {
   return (
     <nav
       aria-label="Global site navigation"
-      className="fixed right-8 top-8 z-[70] hidden items-center gap-6 bg-[#FAFAFA]/80 px-1 py-1 text-[13px] font-medium text-[#555B64] backdrop-blur-sm lg:flex xl:right-12"
+      className="fixed right-8 top-8 z-[70] hidden items-center gap-6 text-[13px] font-medium text-[#555B64] lg:flex xl:right-12"
     >
       {topNavItems.map((item) => (
         <a
@@ -209,7 +203,7 @@ function TopNavigation() {
       ))}
       <a
         href={resumeHref}
-        className="inline-flex min-h-8 items-center rounded-full border border-[#D7DBE1] px-3 text-[12px] font-medium text-[#555B64] transition duration-200 hover:border-[#0037C5] hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
+        className="inline-flex min-h-8 items-center rounded-full border border-[#D7DBE1]/85 bg-white/30 px-3 text-[12px] font-medium text-[#555B64] shadow-[0_2px_10px_rgba(17,17,17,0.06)] backdrop-blur-md transition duration-200 hover:border-[#0037C5]/70 hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
       >
         下载简历
       </a>
@@ -220,25 +214,33 @@ function TopNavigation() {
 function MobileGlobalNav() {
   return (
     <div className="sticky top-0 z-[80] border-b border-[#E2E4E8] bg-[#FAFAFA]/95 backdrop-blur-sm lg:hidden">
-      <div className="flex min-h-16 items-center justify-between gap-4 px-5">
+      <div className="flex min-h-16 items-center justify-between gap-3 px-5">
         <div>
           <p className="text-[14px] font-semibold text-[#111111]">Miki Studio</p>
           <p className="text-[11px] font-medium text-[#8A8F98]">Product Design</p>
         </div>
-        <nav
-          aria-label="Global site navigation"
-          className="flex max-w-[68vw] items-center gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {topNavItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="shrink-0 text-[13px] font-medium text-[#555B64] transition duration-200 hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex min-w-0 items-center gap-3">
+          <nav
+            aria-label="Global site navigation"
+            className="flex max-w-[56vw] items-center gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {topNavItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="shrink-0 text-[13px] font-medium text-[#555B64] transition duration-200 hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <a
+            href={resumeHref}
+            className="shrink-0 rounded-full border border-[#D7DBE1] px-2.5 py-1 text-[11px] font-medium text-[#555B64] transition duration-200 hover:border-[#0037C5] hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
+          >
+            简历
+          </a>
+        </div>
       </div>
     </div>
   )

@@ -43,10 +43,10 @@ export default function ContactCTA() {
           <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#0037C5]">
             09 / Contact
           </p>
-          <h2 className="mt-4 max-w-5xl text-[42px] font-semibold leading-[1.02] tracking-[-0.04em] text-[#111111] md:text-[76px] xl:text-[88px]">
+          <h2 className="mt-4 max-w-5xl text-[38px] font-semibold leading-[1.06] tracking-[-0.035em] text-[#111111] md:text-[56px] xl:text-[72px]">
             想更快判断一个产品想法是否值得做？
           </h2>
-          <p className="mt-8 max-w-3xl text-[20px] leading-[1.75] text-[#5D626B]">
+          <p className="mt-8 max-w-3xl text-[18px] leading-[1.75] text-[#5D626B]">
             用 60 秒 Demo 和验证框架，提前看见方向、边界和风险。
           </p>
         </div>
@@ -88,19 +88,18 @@ export default function ContactCTA() {
                 hello@miki.design
                 <ArrowIcon />
               </a>
-              <button
-                type="button"
-                aria-disabled="true"
-                className="inline-flex min-h-11 cursor-default items-center justify-between gap-3 rounded-[8px] border border-[#E2E4E8] px-4 py-3 text-[14px] font-medium text-[#6F7680]"
+              <a
+                href={emailHref}
+                className="group inline-flex min-h-11 items-center justify-between gap-3 rounded-[8px] border border-[#E2E4E8] px-4 py-3 text-[14px] font-medium text-[#6F7680] transition duration-200 hover:border-[#0037C5] hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
               >
-                微信入口按钮
-                <span className="h-2 w-2 rounded-full bg-[#2EB67D]" />
-              </button>
+                微信沟通（邮件获取二维码）
+                <ArrowIcon />
+              </a>
               <a
                 href={portfolioHref}
                 className="group inline-flex min-h-11 items-center justify-between gap-3 rounded-[8px] border border-[#E2E4E8] px-4 py-3 text-[14px] font-medium text-[#20242A] transition duration-200 hover:border-[#0037C5] hover:text-[#0037C5] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none"
               >
-                PDF 作品集按钮
+                下载 PDF 作品集
                 <ArrowIcon />
               </a>
             </div>

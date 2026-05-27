@@ -72,7 +72,7 @@ export default function FrameworkSection() {
           <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#0037C5]">
             05 / Framework
           </p>
-          <h2 className="mt-4 max-w-4xl text-[38px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#111111] md:text-[60px]">
+          <h2 className="mt-4 max-w-4xl text-[36px] font-semibold leading-[1.08] tracking-[-0.03em] text-[#111111] md:text-[50px] xl:text-[56px]">
             AI 产品判断框架
           </h2>
         </div>
