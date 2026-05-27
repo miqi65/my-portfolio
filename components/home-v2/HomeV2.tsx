@@ -269,34 +269,38 @@ export default function HomeV2() {
   }, [])
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+    const updateActiveSection = () => {
+      const anchorY = window.innerHeight * 0.36
+      let nextActive: SectionId = 'intro'
 
-        const id = visibleEntry?.target.getAttribute('data-section-id') as SectionId | null
+      for (const section of sections) {
+        const element = document.getElementById(section.id)
 
-        if (id) {
-          setActiveSection(id)
+        if (!element) continue
+
+        const rect = element.getBoundingClientRect()
+
+        if (rect.top <= anchorY && rect.bottom > anchorY) {
+          nextActive = section.id
+          break
         }
-      },
-      {
-        root: null,
-        rootMargin: '-34% 0px -46% 0px',
-        threshold: [0, 0.15, 0.35, 0.55, 0.75],
-      },
-    )
 
-    sections.forEach((section) => {
-      const element = document.getElementById(section.id)
-
-      if (element) {
-        observer.observe(element)
+        if (rect.top <= anchorY) {
+          nextActive = section.id
+        }
       }
-    })
 
-    return () => observer.disconnect()
+      setActiveSection(nextActive)
+    }
+
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    window.addEventListener('resize', updateActiveSection)
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection)
+      window.removeEventListener('resize', updateActiveSection)
+    }
   }, [])
 
   return (
