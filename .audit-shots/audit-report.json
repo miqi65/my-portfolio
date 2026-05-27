@@ -1,0 +1,177 @@
+[
+  {
+    "viewport": {
+      "name": "1440",
+      "width": 1440,
+      "height": 900
+    },
+    "screenshots": {
+      "top": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-top.png",
+      "full": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-full.png",
+      "bottom": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-bottom.png",
+      "sections": {
+        "intro": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-intro.png",
+        "problems": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-problems.png",
+        "demo": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-demo.png",
+        "framework": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-framework.png",
+        "contact": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1440-contact.png"
+      }
+    },
+    "console": [
+      {
+        "type": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "metrics": {
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 8331,
+      "hasHorizontalScroll": false,
+      "cls": 0.00016995134602194788
+    }
+  },
+  {
+    "viewport": {
+      "name": "1280",
+      "width": 1280,
+      "height": 800
+    },
+    "screenshots": {
+      "top": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-top.png",
+      "full": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-full.png",
+      "bottom": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-bottom.png",
+      "sections": {
+        "intro": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-intro.png",
+        "problems": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-problems.png",
+        "demo": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-demo.png",
+        "framework": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-framework.png",
+        "contact": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1280-contact.png"
+      }
+    },
+    "console": [
+      {
+        "type": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "metrics": {
+      "innerWidth": 1280,
+      "innerHeight": 800,
+      "scrollWidth": 1280,
+      "scrollHeight": 8755,
+      "hasHorizontalScroll": false,
+      "cls": 0.00023935127258300782
+    }
+  },
+  {
+    "viewport": {
+      "name": "1024",
+      "width": 1024,
+      "height": 768
+    },
+    "screenshots": {
+      "top": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-top.png",
+      "full": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-full.png",
+      "bottom": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-bottom.png",
+      "sections": {
+        "intro": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-intro.png",
+        "problems": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-problems.png",
+        "demo": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-demo.png",
+        "framework": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-framework.png",
+        "contact": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/1024-contact.png"
+      }
+    },
+    "console": [
+      {
+        "type": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "metrics": {
+      "innerWidth": 1024,
+      "innerHeight": 768,
+      "scrollWidth": 1024,
+      "scrollHeight": 14994,
+      "hasHorizontalScroll": false,
+      "cls": 0
+    }
+  },
+  {
+    "viewport": {
+      "name": "768",
+      "width": 768,
+      "height": 1024
+    },
+    "screenshots": {
+      "top": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-top.png",
+      "full": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-full.png",
+      "bottom": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-bottom.png",
+      "sections": {
+        "intro": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-intro.png",
+        "problems": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-problems.png",
+        "demo": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-demo.png",
+        "framework": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-framework.png",
+        "contact": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/768-contact.png"
+      }
+    },
+    "console": [
+      {
+        "type": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "metrics": {
+      "innerWidth": 768,
+      "innerHeight": 1024,
+      "scrollWidth": 768,
+      "scrollHeight": 15777,
+      "hasHorizontalScroll": false,
+      "cls": 0.012286176284154255
+    }
+  },
+  {
+    "viewport": {
+      "name": "390",
+      "width": 390,
+      "height": 844
+    },
+    "screenshots": {
+      "top": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-top.png",
+      "full": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-full.png",
+      "bottom": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-bottom.png",
+      "sections": {
+        "intro": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-intro.png",
+        "problems": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-problems.png",
+        "demo": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-demo.png",
+        "framework": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-framework.png",
+        "contact": "/Users/miqi723163.com/Documents/my-portfolio/.audit-shots/390-contact.png"
+      }
+    },
+    "console": [
+      {
+        "type": "info",
+        "text": "%cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold"
+      }
+    ],
+    "pageErrors": [],
+    "requestFailures": [],
+    "metrics": {
+      "innerWidth": 390,
+      "innerHeight": 844,
+      "scrollWidth": 390,
+      "scrollHeight": 20189,
+      "hasHorizontalScroll": false,
+      "cls": 0
+    }
+  }
+]
