@@ -207,21 +207,15 @@ function PhaseLegend() {
 
 function FlowStepCard({
   step,
-  highlighted = false,
   className = '',
 }: {
   step: FlowStep
-  highlighted?: boolean
   className?: string
 }) {
   return (
-    <article className={`flex h-[236px] min-w-0 w-full flex-col ${className}`}>
+    <article className={`group flex h-[236px] min-w-0 w-full flex-col ${className}`}>
       <div
-        className={`flex h-full w-full flex-col rounded-xl px-3 pb-[15px] pt-[18px] sm:px-[15px] ${
-          highlighted
-            ? 'border border-[#a6e22e]/40 bg-[rgba(166,226,46,0.07)] shadow-[0_0_28px_rgba(166,226,46,0.1)]'
-            : 'border border-white/[0.08] bg-white/[0.03]'
-        }`}
+        className="flex h-full w-full flex-col rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 pb-[15px] pt-[18px] transition duration-200 group-hover:border-[#a6e22e]/40 group-hover:bg-[rgba(166,226,46,0.07)] group-hover:shadow-[0_0_28px_rgba(166,226,46,0.1)] sm:px-[15px]"
       >
         <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-[16.5px] tracking-[0.88px] text-[#a6e22e]">
           {step.id}
@@ -249,24 +243,27 @@ function FlowStepCard({
 }
 
 const FLOW_ARROW_SLOT = 'w-4 shrink-0'
+const FLOW_STEP_DESKTOP_GRID = 'lg:grid-cols-[132px_1fr_132px_1fr_132px_1fr_132px_1fr_132px]'
 
 function FlowStepsRow() {
   return (
     <>
-      {/* Desktop: 5 等分列占满面板宽度，箭头叠在缝上，列间距最小 */}
-      <div className="hidden w-full min-w-0 lg:grid lg:grid-cols-5 lg:gap-px lg:items-stretch">
+      {/* Desktop: card and arrow columns alternate so arrows stay centered in the interval. */}
+      <div className={`hidden w-full min-w-0 lg:grid lg:items-stretch ${FLOW_STEP_DESKTOP_GRID}`}>
         {flowSteps.map((step, index) => (
-          <div key={step.id} className="relative min-w-0">
-            <FlowStepCard step={step} highlighted={index >= 3} />
+          <Fragment key={step.id}>
+            <div className="relative min-w-0">
+              <FlowStepCard step={step} />
+            </div>
             {index < flowSteps.length - 1 ? (
               <div
-                className="pointer-events-none absolute -right-px top-1/2 z-10 flex w-4 -translate-y-1/2 translate-x-1/2 items-center justify-center"
+                className="pointer-events-none flex min-w-0 items-center justify-center"
                 aria-hidden
               >
                 <FlowArrow />
               </div>
             ) : null}
-          </div>
+          </Fragment>
         ))}
       </div>
 
@@ -276,7 +273,7 @@ function FlowStepsRow() {
           {flowSteps.map((step, index) => (
             <Fragment key={step.id}>
               <div className="w-[118px] shrink-0 sm:w-[124px]">
-                <FlowStepCard step={step} highlighted={index >= 3} />
+                <FlowStepCard step={step} />
               </div>
               {index < flowSteps.length - 1 ? (
                 <div className={`flex ${FLOW_ARROW_SLOT} items-center justify-center self-center`}>
@@ -288,21 +285,6 @@ function FlowStepsRow() {
         </div>
       </div>
     </>
-  )
-}
-
-function FlowProgressDots() {
-  return (
-    <div className="relative mt-4 hidden h-4 w-full min-w-0 lg:block" aria-hidden="true">
-      <div className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-white/10" />
-      <div className="relative grid w-full grid-cols-5 gap-px">
-        {flowSteps.map((step) => (
-          <div key={step.id} className="flex justify-center">
-            <span className="relative z-[1] size-1.5 rounded-full bg-[#a6e22e] ring-2 ring-[rgba(8,11,7,0.9)]" />
-          </div>
-        ))}
-      </div>
-    </div>
   )
 }
 
@@ -321,7 +303,6 @@ function FlowDiagram() {
 
       <div className="mt-6 min-w-0">
         <FlowStepsRow />
-        <FlowProgressDots />
       </div>
 
       <div className="mt-6 border-t border-white/[0.08] pt-5">
@@ -387,17 +368,6 @@ export default function HeroV2() {
       data-section-id="intro"
       className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#050505] text-[#f2f5ef] lg:scroll-mt-0"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-16 top-[-5rem] h-[min(520px,70vw)] w-[min(640px,75vw)] opacity-80 sm:-right-8 lg:right-0 lg:top-[-83px] lg:h-[min(641px,55vw)] lg:w-[min(729px,60vw)]"
-      >
-        <img
-          src={heroIcons.glow}
-          alt=""
-          className="h-full w-full object-contain object-right-top [mask-image:radial-gradient(ellipse_at_top_right,black_42%,transparent_74%)]"
-        />
-      </div>
-
       <header className="relative z-20 bg-[rgba(3,5,3,0.72)] backdrop-blur-sm">
         <div className={`${HERO_CONTAINER} flex h-16 items-center justify-between gap-4`}>
           <a
@@ -411,7 +381,7 @@ export default function HeroV2() {
             </div>
           </a>
 
-          <nav aria-label="主导航" className="hidden items-center gap-10 md:flex">
+          <nav aria-label="主导航" className="ml-auto hidden items-center gap-10 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -427,20 +397,7 @@ export default function HeroV2() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
-            <a
-              href="#about"
-              className="hidden cursor-pointer items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] py-2 pl-3 pr-2 text-[13px] font-medium text-[#f2f5ef] transition hover:border-[#a6e22e]/40 hover:bg-white/[0.05] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] md:inline-flex"
-            >
-              <span className="size-1.5 shrink-0 rounded-full bg-[#a6e22e]" />
-              合作咨询
-              <span className="flex size-6 items-center justify-center rounded-full bg-[#a6e22e] text-[#030503]">
-                <svg aria-hidden="true" viewBox="0 0 16 16" className="size-3.5" fill="none">
-                  <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
-            </a>
-
+          <div className="flex items-center gap-3 md:hidden">
             <button
               type="button"
               className="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-white/[0.05] text-[#f2f5ef] md:hidden"
@@ -501,15 +458,12 @@ export default function HeroV2() {
                 </p>
 
                 <h1 className="relative mt-3">
-                  <span
-                    aria-hidden="true"
-                    className="pointer-events-none absolute -left-4 top-2 h-[calc(100%+8px)] w-[calc(100%+32px)] rounded-3xl bg-[radial-gradient(ellipse_at_left_center,rgba(166,226,46,0.14),transparent_68%)]"
-                  />
                   <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-[-1.28px] text-[#f2f5ef] sm:text-[48px] lg:text-[56px]">
                     高级产品设计师
                   </span>
                   <p className="relative mt-1 text-[28px] font-normal leading-[1.15] text-[#f2f5ef] sm:text-[34px] lg:text-[40px] lg:leading-[46px]">
-                    B端 / AI应用 / 智能硬件方向
+                    <span className="block whitespace-nowrap">B端 / AI应用 /</span>
+                    <span className="block whitespace-nowrap">智能硬件方向</span>
                   </p>
                 </h1>
 
