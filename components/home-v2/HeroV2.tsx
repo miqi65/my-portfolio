@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Fragment, useState } from 'react'
 
 const ASSET = '/images/home-v2/hero'
+const RESUME_HREF = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
 
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
 const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
@@ -501,11 +502,12 @@ export default function HeroV2() {
                     </span>
                   </a>
                   <a
-                    href="#method"
+                    href={RESUME_HREF}
+                    download
                     className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-lg border border-white/[0.12] bg-transparent px-6 font-medium text-[#f2f5ef] transition hover:border-[#a6e22e]/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]`}
                   >
-                    查看方法
-                    <span aria-hidden="true">→</span>
+                    下载简历
+                    <span aria-hidden="true">↓</span>
                   </a>
                 </div>
               </div>
