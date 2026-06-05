@@ -137,30 +137,32 @@ const keyElements = [
 
 const capabilityCards = [
   {
-    label: 'FOCUS',
-    title: 'B端 / AI应用 / 智能硬件',
-    body: '聚焦复杂系统与高价值业务场景',
+    label: 'PROJECT',
+    title: 'AI 视觉质检系统',
+    body: '工业 AI / HMI / 机器视觉结果呈现',
     icon: heroIcons.capability.focus,
   },
   {
-    label: 'EXPERIENCE',
-    title: '10+ 年产品设计经验',
-    body: '覆盖企业级系统、智能硬件与消费级产品',
+    label: 'IMPACT',
+    title: 'PCB 系统 90+ 产线验证',
+    body: '管理效率 +28%，工程导入耗时 -17%',
     icon: heroIcons.capability.experience,
   },
   {
-    label: 'METHOD',
-    title: 'AI辅助 + 结构化设计',
-    body: '用流程、原型和验证方法推动方案落地',
+    label: 'ROLE',
+    title: '从需求拆解到原型验证',
+    body: '流程、原型、Design System 与交付协作',
     icon: heroIcons.capability.method,
   },
   {
-    label: 'DELIVERY',
-    title: '从原型到落地的闭环',
-    body: '验证驱动决策，设计转化为可交付结果',
+    label: 'OUTPUT',
+    title: '可落地方案闭环',
+    body: '决策依据、风险清单、路线图与交互规范',
     icon: heroIcons.capability.delivery,
   },
 ] as const
+
+const appliedProjectTags = ['AI 视觉质检系统', 'PCB 系统', '智能仓储管理系统'] as const
 
 function HeroIcon({
   src,
@@ -286,6 +288,19 @@ function FlowDiagram() {
           <p className="mt-1 text-[13px] leading-[19.5px] text-[#6f776b]">
             从模糊需求到清晰方案，从原型验证到决策支持
           </p>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            <span className="font-['Space_Grotesk'] text-[9px] font-medium uppercase tracking-[1.44px] text-[#6f776b]">
+              Applied in
+            </span>
+            {appliedProjectTags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[10px] leading-[14px] text-[#a7aea1]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -293,7 +308,7 @@ function FlowDiagram() {
         <FlowStepsRow />
       </div>
 
-      <div className="mt-6 border-t border-white/[0.08] pt-5">
+      <div className="mt-6 hidden border-t border-white/[0.08] pt-5 sm:block">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-6">
           <div className="shrink-0 text-[10px] leading-[15px] text-[#6f776b]">
             <p>关键要素</p>
@@ -350,11 +365,13 @@ function CapabilityBar() {
 type HeroV2Props = {
   navItems?: HeroV2NavItem[]
   primaryCtaHref?: string
+  primaryCtaLabel?: string
 }
 
 export default function HeroV2({
   navItems = defaultNavItems,
   primaryCtaHref = '#cases',
+  primaryCtaLabel = '查看核心案例',
 }: HeroV2Props = {}) {
   const [navOpen, setNavOpen] = useState(false)
 
@@ -474,14 +491,14 @@ export default function HeroV2({
                 </p>
 
                 <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#6f776b] lg:max-w-none lg:text-pretty">
-                  把复杂、模糊的产品需求，拆解为清晰流程、可演示原型、人机协作边界与可落地设计方案，帮助团队更快判断方向，减少沟通成本、返工成本和无效开发
+                  把模糊需求变成可验证原型、清晰决策和可落地方案，帮助团队更快判断方向，减少沟通、返工和无效开发
                 </p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
-                  {skillTags.map((tag) => (
+                  {skillTags.map((tag, index) => (
                     <span
                       key={tag}
-                      className="inline-flex h-7 items-center gap-2 rounded-[9px] border border-white/[0.08] bg-white/[0.03] px-3 text-[12px] tracking-[0.24px] text-[#6f776b]"
+                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[9px] border border-white/[0.08] bg-white/[0.03] px-3 text-[12px] tracking-[0.24px] text-[#6f776b]`}
                     >
                       <span className="size-1 shrink-0 rounded-full bg-[#a6e22e]" aria-hidden="true" />
                       {tag}
@@ -494,7 +511,7 @@ export default function HeroV2({
                     href={primaryCtaHref}
                     className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#a6e22e] pl-[22px] pr-1.5 font-bold text-[#030503] transition hover:bg-[#b8f24a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] sm:min-w-[148px]`}
                   >
-                    查看核心案例
+                    {primaryCtaLabel}
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#030503]/10">
                       <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none">
                         <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

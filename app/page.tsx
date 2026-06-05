@@ -24,7 +24,7 @@ export default function Home() {
           display: none !important;
         }
       `}</style>
-      <HeroV2 navItems={homeHeroNavItems} primaryCtaHref="#works" />
+      <HeroV2 navItems={homeHeroNavItems} primaryCtaHref="#works" primaryCtaLabel="查看作品" />
       <ProfileIntroSection />
       <ProjectGrid />
       <ScrollRevealText />
