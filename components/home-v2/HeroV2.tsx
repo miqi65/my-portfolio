@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { Fragment, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 
 const ASSET = '/images/home-v2/hero'
 const RESUME_HREF = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
@@ -374,6 +374,67 @@ export default function HeroV2({
   primaryCtaLabel = '查看核心案例',
 }: HeroV2Props = {}) {
   const [navOpen, setNavOpen] = useState(false)
+  const [activeHref, setActiveHref] = useState(() => {
+    if (typeof window === 'undefined') {
+      return navItems.find((item) => item.active)?.href ?? '#intro'
+    }
+
+    return window.location.hash || navItems.find((item) => item.active)?.href || '#intro'
+  })
+
+  useEffect(() => {
+    const sectionEntries = navItems
+      .filter((item) => item.href.startsWith('#'))
+      .map((item) => ({
+        href: item.href,
+        section: document.getElementById(item.href.slice(1)),
+      }))
+      .filter((entry): entry is { href: string; section: HTMLElement } => Boolean(entry.section))
+
+    const updateActiveHref = () => {
+      const activationLine = window.innerHeight * 0.35
+      let nextHref = sectionEntries[0]?.href ?? '#intro'
+
+      sectionEntries.forEach(({ href, section }) => {
+        if (section.getBoundingClientRect().top <= activationLine) {
+          nextHref = href
+        }
+      })
+
+      if (window.location.hash && sectionEntries.some((entry) => entry.href === window.location.hash)) {
+        const hashSection = document.getElementById(window.location.hash.slice(1))
+        const hashRect = hashSection?.getBoundingClientRect()
+
+        if (hashRect && hashRect.top < window.innerHeight && hashRect.bottom > 0) {
+          nextHref = window.location.hash
+        }
+      }
+
+      document.querySelectorAll<HTMLAnchorElement>('[data-miki-nav-href]').forEach((link) => {
+        if (link.dataset.mikiNavHref === nextHref) {
+          link.setAttribute('aria-current', 'page')
+        } else {
+          link.removeAttribute('aria-current')
+        }
+      })
+
+      setActiveHref(nextHref)
+    }
+
+    updateActiveHref()
+    const timeout = window.setTimeout(updateActiveHref, 250)
+
+    window.addEventListener('hashchange', updateActiveHref)
+    window.addEventListener('resize', updateActiveHref)
+    window.addEventListener('scroll', updateActiveHref, { passive: true })
+
+    return () => {
+      window.clearTimeout(timeout)
+      window.removeEventListener('hashchange', updateActiveHref)
+      window.removeEventListener('resize', updateActiveHref)
+      window.removeEventListener('scroll', updateActiveHref)
+    }
+  }, [navItems])
 
   return (
     <section
@@ -400,19 +461,25 @@ export default function HeroV2({
           </a>
 
           <nav aria-label="主导航" className="ml-auto hidden items-center gap-10 md:flex">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className={`relative pb-1 text-[14px] leading-[21px] transition-colors hover:text-[#f2f5ef] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] ${
-                  'active' in item && item.active
+            {navItems.map((item) => {
+              const isActive = activeHref === item.href || (!activeHref && 'active' in item && item.active)
+
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  data-miki-nav-href={item.href}
+                  className={`relative pb-1 text-[14px] leading-[21px] transition-colors hover:text-[#f2f5ef] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] ${
+                    isActive
                     ? 'font-medium text-[#f2f5ef] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-sm after:bg-[#a6e22e]'
                     : 'text-[#a7aea1]'
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+                  }`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              )
+            })}
           </nav>
 
           <div className="flex items-center gap-3 md:hidden">
@@ -438,21 +505,27 @@ export default function HeroV2({
         {navOpen ? (
           <nav id="hero-mobile-nav" className={`${HERO_CONTAINER} py-4 md:hidden`} aria-label="移动端导航">
             <ul className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    className={`block cursor-pointer rounded-lg px-3 py-2.5 text-[14px] ${
-                      'active' in item && item.active
+              {navItems.map((item) => {
+                const isActive = activeHref === item.href || (!activeHref && 'active' in item && item.active)
+
+                return (
+                  <li key={item.href}>
+                    <a
+                      href={item.href}
+                      data-miki-nav-href={item.href}
+                      className={`block cursor-pointer rounded-lg px-3 py-2.5 text-[14px] ${
+                        isActive
                         ? 'bg-[rgba(166,226,46,0.12)] font-medium text-[#a6e22e]'
                         : 'text-[#a7aea1]'
-                    }`}
-                    onClick={() => setNavOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+                      }`}
+                      aria-current={isActive ? 'page' : undefined}
+                      onClick={() => setNavOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
           </nav>
         ) : null}

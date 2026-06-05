@@ -1,6 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import type { CSSProperties, PointerEvent } from 'react'
+import { useRef } from 'react'
 
 type CaseMeta = {
   label: string
@@ -19,6 +21,8 @@ type CaseItem = {
   previewPosition?: 'object-center' | 'object-top'
   info: [CaseMeta, CaseMeta, CaseMeta]
 }
+
+const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
 const cases: CaseItem[] = [
   {
@@ -78,7 +82,7 @@ function CasePreview({ item }: { item: CaseItem }) {
   const fitClass = item.num === '01' ? 'object-contain' : 'object-cover'
 
   return (
-    <div className="h-full overflow-hidden rounded-[20px] border border-[rgba(16,24,40,0.08)] bg-[rgba(15,23,42,0.04)]">
+    <div className="h-full overflow-hidden rounded-[8px] border border-[rgba(16,24,40,0.08)] bg-[#F4F4EF]">
       <img
         src={item.previewMain}
         alt={item.previewAlt}
@@ -95,123 +99,182 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
   return (
     <motion.article
       aria-labelledby={`case-title-${item.num}`}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.45, delay: index * 0.05 }}
-      className="case-card group flex h-[560px] flex-col overflow-hidden rounded-[24px] border border-[rgba(16,24,40,0.08)] bg-[rgba(255,255,255,0.9)] px-6 py-4 shadow-[0_24px_80px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[rgba(16,24,40,0.14)] hover:shadow-[0_30px_92px_rgba(15,23,42,0.09)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+      className="case-card relative z-[var(--case-z,0)]"
+      style={
+        {
+          '--case-scale': '1',
+          '--case-z': '0',
+        } as CSSProperties
+      }
     >
-      <div className="case-card-meta mb-5 flex items-center gap-4">
-        <p className="case-card-kicker text-[13px] font-semibold uppercase leading-none tracking-[0.08em]">
-          <span className="number text-[#123A6F]">{metaNum}</span>
-          <span className="text-[rgba(15,23,42,0.48)]"> / {metaName}</span>
+      <div
+        className="case-card-surface group flex min-h-[440px] origin-center flex-col overflow-hidden rounded-[14px] border border-[rgba(16,24,40,0.08)] bg-white px-4 py-4 shadow-[0_18px_54px_rgba(15,23,42,0.055)] transition-[border-color,box-shadow,transform] duration-300 will-change-transform hover:border-[rgba(117,171,42,0.4)] hover:shadow-[0_24px_70px_rgba(15,23,42,0.09)] focus-within:border-[rgba(117,171,42,0.4)] focus-within:shadow-[0_24px_70px_rgba(15,23,42,0.09)] sm:px-5 motion-reduce:transition-none"
+        style={{ transform: 'scale(var(--case-scale))' }}
+      >
+        <div className="case-card-meta flex items-center gap-4">
+          <p className="case-card-kicker text-[10px] font-semibold uppercase leading-none tracking-[0.1em]">
+            <span className="number text-[#7FB12B]">{metaNum}</span>
+            <span className="text-[rgba(15,23,42,0.42)]"> / {metaName}</span>
+          </p>
+        </div>
+
+        <div className="case-card-preview mt-3 h-[148px] flex-shrink-0 sm:h-[168px] lg:h-[190px] xl:h-[178px]">
+          <CasePreview item={item} />
+        </div>
+
+        <h3
+          id={`case-title-${item.num}`}
+          className={`case-card-title mt-5 min-h-[30px] text-[20px] font-semibold leading-[1.15] tracking-[-0.04em] text-[#101318] sm:text-[22px] ${
+            item.num === '01' ? 'max-w-[360px]' : 'max-w-full'
+          }`}
+          style={{
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+            textWrap: 'balance',
+          }}
+        >
+          {item.name}
+        </h3>
+
+        <p
+          className="case-card-description mt-3 min-h-[46px] text-[12px] font-normal leading-[1.65] text-[rgba(15,23,42,0.6)] sm:text-[13px]"
+          style={{
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+            overflow: 'hidden',
+          }}
+        >
+          {item.description}
         </p>
+
+        <div className="case-card-tags mt-5 flex min-h-[62px] flex-wrap content-start gap-2">
+          {item.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-[rgba(16,24,40,0.08)] bg-[#F8F7F3] px-3 py-1 text-[11px] leading-none text-[rgba(15,23,42,0.55)]"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="case-card-info mt-auto grid grid-cols-3 gap-3 border-t border-[rgba(16,24,40,0.08)] pt-4">
+          {item.info.map((entry) => (
+            <div key={entry.label} className="min-w-0">
+              <p className="case-card-info-label text-[10px] font-normal leading-[1.4] text-[rgba(15,23,42,0.38)]">
+                {entry.label}
+              </p>
+              <p className="case-card-info-value mt-1 h-5 truncate text-[12px] font-medium leading-5 text-[#101318]">
+                {entry.value}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href={item.href}
+          className="case-card-link mt-4 inline-flex min-h-[32px] items-center gap-1 self-start text-[13px] font-bold leading-none text-[#7FB12B] transition duration-200 hover:translate-x-[2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7FB12B] motion-reduce:transition-none motion-reduce:hover:translate-x-0"
+          aria-label={`查看案例：${item.name}`}
+        >
+          查看案例
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
-
-      <h3
-        id={`case-title-${item.num}`}
-        className={`case-card-title min-h-[40px] text-[24px] font-normal leading-[1.15] tracking-[-0.04em] text-[#101318] ${
-          item.num === '01' ? 'max-w-[400px]' : 'max-w-full'
-        }`}
-        style={{
-          display: '-webkit-box',
-          WebkitLineClamp: 2,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-          textWrap: 'balance',
-        }}
-      >
-        {item.name}
-      </h3>
-
-      <p
-        className="case-card-description -mt-1 min-h-[56px] text-[14px] font-normal leading-[1.68] text-[rgba(15,23,42,0.62)]"
-        style={{
-          display: '-webkit-box',
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-        }}
-      >
-        {item.description}
-      </p>
-
-      <p
-        className="case-card-tags -mt-1 min-h-5 pt-0 text-[12px] leading-5 text-[rgba(15,23,42,0.52)]"
-        style={{
-          display: '-webkit-box',
-          WebkitLineClamp: 1,
-          WebkitBoxOrient: 'vertical',
-          overflow: 'hidden',
-        }}
-      >
-        {item.tags.join(' / ')}
-      </p>
-
-      <div className="case-card-preview mt-5 h-[226px] flex-shrink-0">
-        <CasePreview item={item} />
-      </div>
-
-      <div className="case-card-info mt-5 grid grid-cols-3 gap-4 border-t border-[rgba(16,24,40,0.08)] pt-5">
-        {item.info.map((entry) => (
-          <div key={entry.label} className="min-w-0">
-            <p className="case-card-info-label text-[13px] font-normal leading-[1.4] text-[rgba(15,23,42,0.42)]">
-              {entry.label}
-            </p>
-            <p className="case-card-info-value mt-2 h-5 truncate text-[14px] font-normal leading-5 text-[#101318]">
-              {entry.value}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <a
-        href={item.href}
-        className="case-card-link mt-5 inline-flex min-h-[44px] items-center gap-2 self-start px-1 text-[16px] font-bold leading-none text-[#123A6F] transition duration-200 hover:translate-x-[2px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0037C5] motion-reduce:transition-none motion-reduce:hover:translate-x-0"
-        aria-label={`查看案例：${item.name}`}
-      >
-        查看案例
-        <span aria-hidden="true">→</span>
-      </a>
     </motion.article>
   )
 }
 
 export default function CoreCasesSection() {
+  const gridRef = useRef<HTMLDivElement>(null)
+
+  const resetCardScale = () => {
+    const grid = gridRef.current
+
+    if (!grid) {
+      return
+    }
+
+    grid.querySelectorAll<HTMLElement>('.case-card').forEach((card) => {
+      card.style.setProperty('--case-scale', '1')
+      card.style.setProperty('--case-z', '0')
+    })
+  }
+
+  const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    if (
+      event.pointerType !== 'mouse' ||
+      window.innerWidth < 1024 ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      resetCardScale()
+      return
+    }
+
+    const grid = gridRef.current
+
+    if (!grid || window.matchMedia('(pointer: coarse)').matches) {
+      return
+    }
+
+    grid.querySelectorAll<HTMLElement>('.case-card').forEach((card) => {
+      const rect = card.getBoundingClientRect()
+      const distance = Math.abs(event.clientX - rect.left - rect.width / 2)
+      const strength = Math.max(0, 1 - distance / 260)
+      const scale = 1 + strength * 0.075
+
+      card.style.setProperty('--case-scale', scale.toFixed(3))
+      card.style.setProperty('--case-z', strength > 0.45 ? '2' : '0')
+    })
+  }
+
   return (
     <section
       id="cases"
       data-section-id="cases"
-      className="relative scroll-mt-16 overflow-hidden border-b border-[rgba(16,24,40,0.08)] bg-[#F8F7F3] px-4 py-24 sm:px-8 lg:scroll-mt-0 lg:px-12 xl:px-16"
+      className="relative scroll-mt-16 overflow-hidden border-b border-[rgba(16,24,40,0.08)] bg-[#F8F7F3] py-14 sm:py-20 lg:scroll-mt-0 lg:py-24"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,rgba(15,23,42,0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.45)_1px,transparent_1px)] [background-size:64px_64px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,rgba(15,23,42,0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.45)_1px,transparent_1px)] [background-size:64px_64px]"
       />
 
-      <div className="relative">
+      <div className={`relative ${SECTION_CONTAINER}`}>
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.45 }}
-          className="max-w-[1040px]"
+          className="max-w-[820px]"
         >
-          <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#1E3A8A]">
-            03 / SELECTED WORK
+          <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.12em] text-[rgba(15,23,42,0.58)]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#7FB12B]" aria-hidden="true" />
+            02 / SELECTED WORK
           </p>
-          <h2 className="mt-4 text-[48px] font-semibold leading-[1.04] tracking-[-0.03em] text-[#111827]">
-            项目
+          <h2 className="mt-2 text-[44px] font-semibold leading-none tracking-[-0.05em] text-[#111111] sm:text-[58px] lg:text-[64px]">
+            核心项目
           </h2>
-          <p className="mt-3 text-[17px] font-medium leading-7 text-[#4B5565]">
+          <p className="mt-4 text-[15px] font-semibold leading-6 text-[#252A31]">
             复杂系统 / AI 应用 / 产品验证
           </p>
-          <p className="mt-0 max-w-[920px] text-[16px] leading-7 text-[#5B6575]">
+          <p className="mt-2 max-w-[760px] text-[13px] leading-6 text-[rgba(15,23,42,0.58)] sm:text-[14px]">
             用真实项目展示复杂系统、AI 应用和智能硬件产品从需求到方案落地的能力。
           </p>
         </motion.div>
 
-        <div className="cases-grid mt-10 grid grid-cols-1 items-stretch gap-6 xl:grid-cols-3">
+        <div
+          ref={gridRef}
+          className="cases-grid mt-6 grid grid-cols-1 items-stretch gap-5 sm:mt-8 lg:grid-cols-3 lg:gap-6"
+          onPointerMove={handlePointerMove}
+          onPointerLeave={resetCardScale}
+          onBlur={resetCardScale}
+        >
           {cases.map((item, index) => (
             <CaseCard key={item.num} item={item} index={index} />
           ))}

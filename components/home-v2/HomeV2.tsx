@@ -23,8 +23,27 @@ export default function HomeV2() {
       globalNavbar.style.display = 'none'
     }
 
+    const syncNavCurrent = () => {
+      const hash = window.location.hash
+      const activeHash = ['#cases', '#method', '#about'].includes(hash) ? hash : '#intro'
+
+      document.querySelectorAll<HTMLAnchorElement>('[data-miki-nav-href]').forEach((link) => {
+        if (link.dataset.mikiNavHref === activeHash) {
+          link.setAttribute('aria-current', 'page')
+        } else {
+          link.removeAttribute('aria-current')
+        }
+      })
+    }
+
+    syncNavCurrent()
+    const navSyncTimeout = window.setTimeout(syncNavCurrent, 250)
+    window.addEventListener('hashchange', syncNavCurrent)
+
     return () => {
       document.body.classList.remove('miki-v2-preview')
+      window.clearTimeout(navSyncTimeout)
+      window.removeEventListener('hashchange', syncNavCurrent)
 
       if (globalNavbar) {
         globalNavbar.style.display = previousDisplay ?? ''
@@ -51,11 +70,55 @@ export default function HomeV2() {
             cursor: pointer !important;
           }
         }
+        body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href],
+        body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href],
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href] {
+          color: #a7aea1 !important;
+          font-weight: 400 !important;
+        }
+        body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after,
+        body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after,
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after {
+          opacity: 0 !important;
+        }
+        body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href='#cases'],
+        body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href='#method'],
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about'] {
+          color: #f2f5ef !important;
+          font-weight: 500 !important;
+        }
+        body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href='#cases']::after,
+        body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href='#method']::after,
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about']::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 2px;
+          width: 100%;
+          border-radius: 2px;
+          background: #a6e22e;
+          opacity: 1 !important;
+        }
+        body:has(#cases:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
+        body:has(#method:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
+        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href] {
+          background: transparent !important;
+          color: #a7aea1 !important;
+          font-weight: 400 !important;
+        }
+        body:has(#cases:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#cases'],
+        body:has(#method:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#method'],
+        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#about'] {
+          background: rgba(166, 226, 46, 0.12) !important;
+          color: #a6e22e !important;
+          font-weight: 500 !important;
+        }
       `}</style>
 
       <HeroV2 />
-      <ProblemsSection />
       <CoreCasesSection />
+      <ProblemsSection />
       <DemoSection />
       <FrameworkSection />
       <MoreWorkSection />

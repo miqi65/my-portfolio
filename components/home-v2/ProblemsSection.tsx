@@ -396,7 +396,7 @@ export default function ProblemsSection() {
 
       <div className="problems-main relative mx-auto min-h-screen w-full max-w-[1880px] px-4 pb-14 pt-[88px] sm:px-8 lg:px-16">
         <div className="problems-meta-row flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5F6A79]">
-          <span className="text-[#2E4D7F]">02 / PROBLEMS</span>
+          <span className="text-[#2E4D7F]">03 / PROBLEMS</span>
         </div>
 
         <header className="problems-header mt-3">
