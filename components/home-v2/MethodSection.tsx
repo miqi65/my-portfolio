@@ -13,7 +13,7 @@ const methods = [
     num: '02',
     title: '做判断',
     desc: '先判断问题是否真实、流程是否成立、AI 是否真的能降低成本或提升效率。',
-    output: '判断框架 / 优先级 / Go-No-Go',
+    output: '判断框架 / 优先级 / Go / No-Go',
   },
   {
     num: '03',

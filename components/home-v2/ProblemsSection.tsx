@@ -25,7 +25,7 @@ const problems: ProblemCard[] = [
     title: '旧流程 → Agent 流程',
     desc: '判断哪些步骤适合 AI / Agent 压缩，哪些必须人工确认。',
     footer: 'Validation output / 02',
-    pills: ['AGENT', 'HUMAN CHECK', 'VERIFIED'],
+    pills: ['AGENT', 'HUMAN REVIEW', 'VERIFIED'],
   },
   {
     num: '03',
@@ -78,7 +78,7 @@ function CardPills({ pills }: { pills: string[] }) {
         <span
           key={pill}
           className={`problem-pill inline-flex h-6 shrink-0 items-center rounded-full px-2 text-[10px] font-semibold uppercase tracking-[0.04em] md:px-2.5 md:text-[11px] ${
-            pill === 'VERIFIED' || pill === 'HUMAN CHECK'
+            pill === 'VERIFIED' || pill === 'HUMAN REVIEW'
               ? 'border border-[#D5E4DE] bg-[#F3F9F6] text-[#2F6E63]'
               : index === 0
                 ? 'border border-[#D1DBE9] bg-[#F0F4FA] text-[#314B78]'
@@ -179,7 +179,7 @@ function ClarifyPlanVisual() {
 }
 
 function OldToAgentVisual() {
-  const flowNodes = ['AI', 'Agent', 'AI', 'Human Check'] as const
+  const flowNodes = ['AI', 'Agent', 'AI', 'Human Review'] as const
   return (
     <div className={diagramCanvasClassName} aria-hidden="true">
       <div className="grid h-full grid-cols-[42%_18px_minmax(0,1fr)] items-center gap-2">
@@ -220,7 +220,7 @@ function OldToAgentVisual() {
                   className={`rounded-[4px] px-1.5 py-0.5 text-[7px] font-semibold ${
                     node === 'Agent'
                       ? 'bg-[#2F4F80] text-white'
-                      : node === 'Human Check'
+                      : node === 'Human Review'
                         ? 'bg-[#EAF6F2] text-[#2F6E63]'
                         : 'bg-[#EFF3F9] text-[#3A578A]'
                   }`}
@@ -236,7 +236,7 @@ function OldToAgentVisual() {
               Automation
             </span>
             <span className="rounded-[4px] border border-[#CFE1DB] bg-[#EFF8F4] px-1 py-0.5 text-center text-[7px] text-[#2F6E63]">
-              Human Check
+              Human Review
             </span>
             <span className="rounded-[4px] border border-[#D6DBE2] bg-[#F2F5F7] px-1 py-0.5 text-center text-[7px] text-[#647182]">
               Escalation

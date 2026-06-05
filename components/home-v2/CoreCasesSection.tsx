@@ -35,7 +35,7 @@ const cases: CaseItem[] = [
     info: [
       { label: '客户行业', value: '智能制造' },
       { label: '项目周期', value: '3.5 个月' },
-      { label: '我的角色', value: 'UI&UX' },
+      { label: '我的角色', value: 'UI/UX' },
     ],
   },
   {
@@ -52,7 +52,7 @@ const cases: CaseItem[] = [
     info: [
       { label: '客户行业', value: '制造执行' },
       { label: '项目周期', value: '2–3 个月' },
-      { label: '我的角色', value: 'UI&UX' },
+      { label: '我的角色', value: 'UI/UX' },
     ],
   },
   {
@@ -69,7 +69,7 @@ const cases: CaseItem[] = [
     info: [
       { label: '应用场景', value: '设计交付' },
       { label: '项目周期', value: '持续迭代' },
-      { label: '我的角色', value: 'UI&UX' },
+      { label: '我的角色', value: 'UI/UX' },
     ],
   },
 ]

@@ -5,6 +5,7 @@ import { Fragment, useState } from 'react'
 
 const ASSET = '/images/home-v2/hero'
 const RESUME_HREF = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
+const HERO_BACKGROUND_GLOW = `${ASSET}/ellipse-1.png`
 
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
 const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
@@ -37,12 +38,18 @@ const heroIcons = {
   },
 } as const
 
-const navItems = [
+type HeroV2NavItem = {
+  label: string
+  href: string
+  active?: boolean
+}
+
+const defaultNavItems: HeroV2NavItem[] = [
   { label: '首页', href: '#intro', active: true },
   { label: '作品', href: '#cases' },
   { label: '方法', href: '#method' },
   { label: '关于我', href: '#about' },
-] as const
+]
 
 const skillTags = [
   'B端系统',
@@ -187,25 +194,6 @@ function FlowArrow() {
   )
 }
 
-function PhaseLegend() {
-  const phases = [
-    { label: '洞察阶段', color: 'bg-[#6f776b]' },
-    { label: '方案阶段', color: 'bg-[#a6e22e]' },
-    { label: '落地阶段', color: 'bg-[#65992b]' },
-  ] as const
-
-  return (
-    <div className="flex flex-wrap items-center gap-4">
-      {phases.map((phase) => (
-        <div key={phase.label} className="flex items-center gap-1.5">
-          <span className={`size-[7px] shrink-0 rounded-[3.5px] ${phase.color}`} />
-          <span className="text-[11px] tracking-[0.22px] text-[#6f776b]">{phase.label}</span>
-        </div>
-      ))}
-    </div>
-  )
-}
-
 function FlowStepCard({
   step,
   className = '',
@@ -292,14 +280,13 @@ function FlowStepsRow() {
 function FlowDiagram() {
   return (
     <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/[0.08] bg-[rgba(8,11,7,0.56)] px-4 py-6 shadow-[0_0_80px_rgba(166,226,46,0.04)] sm:px-5 sm:py-7 lg:px-6 lg:py-8">
-      <div className="flex flex-col gap-4 border-b border-white/[0.08] pb-4 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+      <div className="border-b border-white/[0.08] pb-4">
         <div className="min-w-0">
           <h2 className="text-[18px] font-bold leading-[23.4px] text-[#f2f5ef]">产品验证流程</h2>
           <p className="mt-1 text-[13px] leading-[19.5px] text-[#6f776b]">
             从模糊需求到清晰方案，从原型验证到决策支持
           </p>
         </div>
-        <PhaseLegend />
       </div>
 
       <div className="mt-6 min-w-0">
@@ -360,7 +347,15 @@ function CapabilityBar() {
   )
 }
 
-export default function HeroV2() {
+type HeroV2Props = {
+  navItems?: HeroV2NavItem[]
+  primaryCtaHref?: string
+}
+
+export default function HeroV2({
+  navItems = defaultNavItems,
+  primaryCtaHref = '#cases',
+}: HeroV2Props = {}) {
   const [navOpen, setNavOpen] = useState(false)
 
   return (
@@ -369,7 +364,12 @@ export default function HeroV2() {
       data-section-id="intro"
       className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#050505] text-[#f2f5ef] lg:scroll-mt-0"
     >
-      <header className="relative z-20 bg-[rgba(3,5,3,0.72)] backdrop-blur-sm">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-120px] top-[-112px] z-0 h-[360px] w-[280px] bg-[length:100%_100%] bg-no-repeat opacity-40 sm:right-[-96px] sm:h-[520px] sm:w-[404px] sm:opacity-50 lg:right-0 lg:top-[-120px] lg:h-[572px] lg:w-[444px] lg:opacity-55"
+        style={{ backgroundImage: `url(${HERO_BACKGROUND_GLOW})` }}
+      />
+      <header className="relative z-20 border-b border-[#000000] bg-[rgba(3,5,3,0.40)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[24px] backdrop-saturate-150">
         <div className={`${HERO_CONTAINER} flex h-16 items-center justify-between gap-4`}>
           <a
             href="#intro"
@@ -491,7 +491,7 @@ export default function HeroV2() {
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <a
-                    href="#cases"
+                    href={primaryCtaHref}
                     className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#a6e22e] pl-[22px] pr-1.5 font-bold text-[#030503] transition hover:bg-[#b8f24a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] sm:min-w-[148px]`}
                   >
                     查看核心案例
