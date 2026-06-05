@@ -1,16 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import BackToTop from '../BackToTop'
-import AboutSection from './AboutSection'
-import ContactCTA from './ContactCTA'
 import CoreCasesSection from './CoreCasesSection'
-import DemoSection from './DemoSection'
-import FrameworkSection from './FrameworkSection'
 import HeroV2 from './HeroV2'
-import MethodSection from './MethodSection'
-import MoreWorkSection from './MoreWorkSection'
-import ProblemsSection from './ProblemsSection'
 
 export default function HomeV2() {
   useEffect(() => {
@@ -118,15 +110,6 @@ export default function HomeV2() {
 
       <HeroV2 />
       <CoreCasesSection />
-      <ProblemsSection />
-      <DemoSection />
-      <FrameworkSection />
-      <MoreWorkSection />
-      <MethodSection />
-      <AboutSection />
-      <ContactCTA />
-
-      <BackToTop />
     </main>
   )
 }

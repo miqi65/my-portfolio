@@ -374,13 +374,7 @@ export default function HeroV2({
   primaryCtaLabel = '查看核心案例',
 }: HeroV2Props = {}) {
   const [navOpen, setNavOpen] = useState(false)
-  const [activeHref, setActiveHref] = useState(() => {
-    if (typeof window === 'undefined') {
-      return navItems.find((item) => item.active)?.href ?? '#intro'
-    }
-
-    return window.location.hash || navItems.find((item) => item.active)?.href || '#intro'
-  })
+  const [activeHref, setActiveHref] = useState(() => navItems.find((item) => item.active)?.href ?? '#intro')
 
   useEffect(() => {
     const sectionEntries = navItems
