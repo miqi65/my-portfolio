@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import CoreCasesSection from './CoreCasesSection'
 import HeroV2 from './HeroV2'
+import ProblemsSection from './ProblemsSection'
 
 export default function HomeV2() {
   useEffect(() => {
@@ -109,6 +110,7 @@ export default function HomeV2() {
       `}</style>
 
       <HeroV2 />
+      <ProblemsSection />
       <CoreCasesSection />
     </main>
   )

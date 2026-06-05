@@ -53,15 +53,15 @@ const riskRows = [
 ] as const
 
 const cardClassName =
-  'problem-card grid h-auto min-h-[292px] grid-rows-[auto_1fr_24px] gap-4 overflow-hidden rounded-[12px] border border-[rgba(15,23,42,0.12)] bg-[rgba(255,255,255,0.72)] p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-[2px] hover:border-[rgba(15,23,42,0.16)] hover:shadow-[0_14px_28px_rgba(15,23,42,0.06)] xl:h-[292px] xl:min-h-0 motion-reduce:transform-none motion-reduce:transition-none'
+  'problem-card grid h-auto min-h-[292px] grid-rows-[auto_1fr_24px] gap-4 overflow-hidden rounded-[12px] border border-[rgba(15,23,42,0.12)] bg-[rgba(255,255,255,0.72)] p-6 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-1 hover:border-[rgba(15,23,42,0.16)] hover:shadow-[0_16px_28px_rgba(15,23,42,0.06)] xl:h-[292px] xl:min-h-0 motion-reduce:transform-none motion-reduce:transition-none'
 
 const diagramCanvasClassName =
-  'problem-card-diagram min-w-0 h-[152px] overflow-hidden rounded-[8px] border border-[rgba(17,17,17,0.1)] bg-[rgba(246,248,249,0.9)] p-2.5'
+  'problem-card-diagram min-w-0 h-[152px] overflow-hidden rounded-[8px] border border-[rgba(17,17,17,0.1)] bg-[rgba(246,248,249,0.9)] p-3'
 
 function CardArrow() {
   return (
     <span
-      className="inline-flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[rgba(49,75,120,0.34)] text-[#314B78]"
+      className="inline-flex size-8 items-center justify-center rounded-full border border-[rgba(49,75,120,0.34)] text-[#314B78]"
       aria-hidden="true"
     >
       <svg viewBox="0 0 20 20" className="h-3 w-3 fill-none stroke-current">
@@ -73,11 +73,11 @@ function CardArrow() {
 
 function CardPills({ pills }: { pills: string[] }) {
   return (
-    <div className="flex max-w-full flex-wrap items-center justify-end gap-1.5">
+    <div className="flex max-w-full flex-wrap items-center justify-end gap-2">
       {pills.map((pill, index) => (
         <span
           key={pill}
-          className={`problem-pill inline-flex h-6 shrink-0 items-center rounded-full px-2 text-[10px] font-semibold uppercase tracking-[0.04em] md:px-2.5 md:text-[11px] ${
+          className={`problem-pill inline-flex h-6 shrink-0 items-center rounded-full px-2 text-[10px] font-semibold uppercase tracking-[0.04em] md:px-3 md:text-[11px] ${
             pill === 'VERIFIED' || pill === 'HUMAN REVIEW'
               ? 'border border-[#D5E4DE] bg-[#F3F9F6] text-[#2F6E63]'
               : index === 0
@@ -95,7 +95,7 @@ function CardPills({ pills }: { pills: string[] }) {
 function FlowArrow() {
   return (
     <span
-      className="inline-block h-1.5 w-1.5 rotate-45 border-r border-t border-[#365486]"
+      className="inline-block size-2 rotate-45 border-r border-t border-[#365486]"
       aria-hidden="true"
     />
   )
@@ -105,14 +105,14 @@ function ClarifyPlanVisual() {
   return (
     <div className={diagramCanvasClassName} aria-hidden="true">
       <div className="grid h-full grid-cols-[42%_18px_minmax(0,1fr)] items-center gap-2">
-        <div className="relative h-full rounded-[6px] border border-[#D3DAE3] bg-[#F8FAFB] p-2">
+        <div className="relative h-full rounded-[8px] border border-[#D3DAE3] bg-[#F8FAFB] p-2">
           <p className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#8791A0]">
             Messy idea cluster
           </p>
-          <span className="absolute left-2.5 top-7 h-6 w-6 rounded-full bg-[#EDF1F5]" />
+          <span className="absolute left-3 top-7 h-6 w-6 rounded-full bg-[#EDF1F5]" />
           <span className="absolute right-3 top-8 h-5 w-5 rounded-full bg-[#EEF2F6]" />
           <span className="absolute left-6 bottom-3 h-5 w-5 rounded-full bg-[#F1F4F7]" />
-          <div className="mt-2 grid grid-cols-2 gap-1.5 pr-4">
+          <div className="mt-2 grid grid-cols-2 gap-2 pr-4">
             <span className="inline-flex h-6 items-center justify-center rounded-full border border-[#CBD3DD] bg-[#F3F6F9] px-2 text-[8px] text-[#6A7482]">
               想法
             </span>
@@ -129,45 +129,45 @@ function ClarifyPlanVisual() {
         </div>
         <div className="flex items-center justify-center">
           <span className="h-px w-3 bg-[#3A578A]" />
-          <span className="-ml-0.5 inline-block h-1.5 w-1.5 rotate-45 border-r border-t border-[#3A578A]" />
+          <span className="-ml-1 inline-block size-2 rotate-45 border-r border-t border-[#3A578A]" />
         </div>
-        <div className="flex h-full flex-col justify-center rounded-[6px] border border-[#CBD7E8] bg-white p-2">
+        <div className="flex h-full flex-col justify-center rounded-[8px] border border-[#CBD7E8] bg-white p-2">
           <div className="flex flex-wrap items-center justify-center gap-1">
             {['Boss', 'Client', 'Operator', 'Engineer'].map((role) => (
               <span
                 key={role}
-                className="rounded-[4px] border border-[#D4DCE6] bg-[#F6F9FC] px-1.5 py-0.5 text-[7px] font-medium text-[#526071]"
+                className="rounded-[4px] border border-[#D4DCE6] bg-[#F6F9FC] px-1 py-0 text-[7px] font-medium text-[#526071]"
               >
                 {role}
               </span>
             ))}
           </div>
           <div className="mx-auto mt-2 w-full max-w-[140px] space-y-1">
-            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-1.5">
+            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-2">
               <span className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#7A8492]">Role</span>
-              <span className="h-4 rounded-[4px] border border-[#D8DEE7] bg-[#FAFBFC] px-1.5 py-0.5 text-[7px] text-[#586474]">
+              <span className="h-4 rounded-[4px] border border-[#D8DEE7] bg-[#FAFBFC] px-1 py-0 text-[7px] text-[#586474]">
                 Responsibility
               </span>
             </div>
-            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-1.5">
+            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-2">
               <span className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#7A8492]">Flow</span>
               <div className="flex h-4 items-center rounded-[4px] border border-[#CAD6E6] bg-[#F5F8FC] px-1">
-                <span className="h-1 w-2 rounded-[2px] bg-[#3E5F95]" />
+                <span className="h-1 w-2 rounded bg-[#3E5F95]" />
                 <span className="mx-1 h-px w-2 bg-[#3E5F95]" />
                 <FlowArrow />
                 <span className="mx-1 h-px w-2 bg-[#3E5F95]" />
-                <span className="h-1 w-2 rounded-[2px] bg-[#2F4F80]" />
+                <span className="h-1 w-2 rounded bg-[#2F4F80]" />
                 <span className="mx-1 h-px w-2 bg-[#3E5F95]" />
                 <FlowArrow />
                 <span className="mx-1 h-px w-2 bg-[#3E5F95]" />
-                <span className="h-1 w-2 rounded-[2px] bg-[#2F6E63]" />
+                <span className="h-1 w-2 rounded bg-[#2F6E63]" />
               </div>
             </div>
-            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-1.5">
+            <div className="grid grid-cols-[40px_minmax(0,1fr)] items-center gap-2">
               <span className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#7A8492]">
                 Boundary
               </span>
-              <span className="h-4 rounded-[4px] border border-dashed border-[#C0C9D5] bg-[#F8FAFB] px-1.5 py-0.5 text-[7px] text-[#5E6A79]">
+              <span className="h-4 rounded-[4px] border border-dashed border-[#C0C9D5] bg-[#F8FAFB] px-1 py-0 text-[7px] text-[#5E6A79]">
                 Scope / input / output
               </span>
             </div>
@@ -183,14 +183,14 @@ function OldToAgentVisual() {
   return (
     <div className={diagramCanvasClassName} aria-hidden="true">
       <div className="grid h-full grid-cols-[42%_18px_minmax(0,1fr)] items-center gap-2">
-        <div className="flex h-full flex-col items-center justify-center rounded-[6px] border border-[#D4DBE3] bg-[#F8FAFB] p-2">
+        <div className="flex h-full flex-col items-center justify-center rounded-[8px] border border-[#D4DBE3] bg-[#F8FAFB] p-2">
           <p className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#8B93A0]">旧流程 / 人工为主</p>
-          <div className="mt-2 flex items-center justify-center gap-1.5">
+          <div className="mt-2 flex items-center justify-center gap-2">
             {[0, 1, 2, 3].map((index) => (
               <div key={index} className="flex items-center gap-1">
                 <span className="relative inline-flex h-4 w-4 items-center justify-center rounded-full border border-[#CBD3DD] bg-[#F4F6F8]">
-                  <span className="absolute top-[3px] h-1 w-1 rounded-full bg-[#7F8A99]" />
-                  <span className="absolute bottom-[3px] h-1 w-[4px] rounded-[2px] bg-[#97A2B0]" />
+                  <span className="absolute top-1 h-1 w-1 rounded-full bg-[#7F8A99]" />
+                  <span className="absolute bottom-1 h-1 w-1 rounded bg-[#97A2B0]" />
                 </span>
                 {index < 3 ? <FlowArrow /> : null}
               </div>
@@ -200,7 +200,7 @@ function OldToAgentVisual() {
             {['耗时长', '重复多', '易出错'].map((tag) => (
               <span
                 key={tag}
-                className="rounded-[4px] border border-[#D5DBE3] bg-[#F1F4F7] px-1.5 py-0.5 text-[7px] text-[#657181]"
+                className="rounded-[4px] border border-[#D5DBE3] bg-[#F1F4F7] px-1 py-0 text-[7px] text-[#657181]"
               >
                 {tag}
               </span>
@@ -209,15 +209,15 @@ function OldToAgentVisual() {
         </div>
         <div className="flex items-center justify-center">
           <span className="h-px w-3 bg-[#3A578A]" />
-          <span className="-ml-0.5 inline-block h-1.5 w-1.5 rotate-45 border-r border-t border-[#3A578A]" />
+          <span className="-ml-1 inline-block size-2 rotate-45 border-r border-t border-[#3A578A]" />
         </div>
-        <div className="flex h-full flex-col items-center justify-center rounded-[6px] border border-[#CBD7E8] bg-white p-2">
+        <div className="flex h-full flex-col items-center justify-center rounded-[8px] border border-[#CBD7E8] bg-white p-2">
           <p className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#355485]">Agent 流程 / 人机协同</p>
           <div className="mt-2 flex flex-wrap items-center justify-center gap-1">
             {flowNodes.map((node, index) => (
               <div key={`${node}-${index}`} className="flex items-center gap-1">
                 <span
-                  className={`rounded-[4px] px-1.5 py-0.5 text-[7px] font-semibold ${
+                  className={`rounded-[4px] px-1 py-0 text-[7px] font-semibold ${
                     node === 'Agent'
                       ? 'bg-[#2F4F80] text-white'
                       : node === 'Human Review'
@@ -232,13 +232,13 @@ function OldToAgentVisual() {
             ))}
           </div>
           <div className="mt-2 grid w-full max-w-[124px] grid-cols-3 gap-1">
-            <span className="rounded-[4px] border border-[#CCD7E7] bg-[#EDF2F9] px-1 py-0.5 text-center text-[7px] text-[#365486]">
+            <span className="rounded-[4px] border border-[#CCD7E7] bg-[#EDF2F9] px-1 py-0 text-center text-[7px] text-[#365486]">
               Automation
             </span>
-            <span className="rounded-[4px] border border-[#CFE1DB] bg-[#EFF8F4] px-1 py-0.5 text-center text-[7px] text-[#2F6E63]">
+            <span className="rounded-[4px] border border-[#CFE1DB] bg-[#EFF8F4] px-1 py-0 text-center text-[7px] text-[#2F6E63]">
               Human Review
             </span>
-            <span className="rounded-[4px] border border-[#D6DBE2] bg-[#F2F5F7] px-1 py-0.5 text-center text-[7px] text-[#647182]">
+            <span className="rounded-[4px] border border-[#D6DBE2] bg-[#F2F5F7] px-1 py-0 text-center text-[7px] text-[#647182]">
               Escalation
             </span>
           </div>
@@ -252,31 +252,31 @@ function StaticToDemoVisual() {
   return (
     <div className={diagramCanvasClassName} aria-hidden="true">
       <div className="grid h-full grid-cols-[41%_18px_minmax(0,1fr)] items-center gap-2">
-        <div className="h-full rounded-[6px] border border-[#D4DBE3] bg-[#F8FAFB] p-2">
+        <div className="h-full rounded-[8px] border border-[#D4DBE3] bg-[#F8FAFB] p-2">
           <p className="text-[8px] font-semibold uppercase tracking-[0.08em] text-[#8B93A0]">Static wireframe</p>
-          <div className="mt-2 grid h-[78px] grid-cols-[16px_minmax(0,1fr)] gap-1">
-            <div className="rounded-[3px] border border-[#D7DDE6] bg-[#F1F4F7]" />
+          <div className="mt-2 grid h-[80px] grid-cols-[16px_minmax(0,1fr)] gap-1">
+            <div className="rounded-[4px] border border-[#D7DDE6] bg-[#F1F4F7]" />
             <div className="space-y-1">
-              <div className="h-3 rounded-[3px] border border-[#D9DFE8] bg-white" />
+              <div className="h-3 rounded-[4px] border border-[#D9DFE8] bg-white" />
               <div className="grid grid-cols-2 gap-1">
-                <div className="h-3.5 rounded-[3px] border border-[#D9DFE8] bg-white" />
-                <div className="h-3.5 rounded-[3px] border border-[#D9DFE8] bg-white" />
+                <div className="h-4 rounded-[4px] border border-[#D9DFE8] bg-white" />
+                <div className="h-4 rounded-[4px] border border-[#D9DFE8] bg-white" />
               </div>
-              <div className="h-2.5 rounded-[3px] border border-dashed border-[#C9D1DC] bg-[#F6F8FB]" />
-              <div className="h-2.5 rounded-[3px] border border-[#D9DFE8] bg-white" />
+              <div className="h-3 rounded-[4px] border border-dashed border-[#C9D1DC] bg-[#F6F8FB]" />
+              <div className="h-3 rounded-[4px] border border-[#D9DFE8] bg-white" />
             </div>
           </div>
         </div>
         <div className="flex items-center justify-center">
           <span className="h-px w-3 bg-[#3A578A]" />
-          <span className="-ml-0.5 inline-block h-1.5 w-1.5 rotate-45 border-r border-t border-[#3A578A]" />
+          <span className="-ml-1 inline-block size-2 rotate-45 border-r border-t border-[#3A578A]" />
         </div>
-        <div className="relative h-full overflow-hidden rounded-[6px] border border-[#2A3E61] bg-[#121A27] p-2">
+        <div className="relative h-full overflow-hidden rounded-[8px] border border-[#2A3E61] bg-[#121A27] p-2">
           <div className="flex gap-1">
             {['Demo', 'Click', 'Testable'].map((chip, index) => (
               <span
                 key={chip}
-                className={`rounded-[4px] px-1.5 py-0.5 text-[7px] ${
+                className={`rounded-[4px] px-1 py-0 text-[7px] ${
                   index === 0
                     ? 'bg-[#2E4E83] text-[#E8EEFC]'
                     : index === 1
@@ -288,12 +288,12 @@ function StaticToDemoVisual() {
               </span>
             ))}
           </div>
-          <div className="mt-2 h-[74px] rounded-[4px] border border-[#2F4568] bg-[#0F1621] p-1.5">
-            <div className="mb-1.5 h-1.5 w-12 rounded-full bg-[#1F2C43]" />
+          <div className="mt-2 h-[72px] rounded-[4px] border border-[#2F4568] bg-[#0F1621] p-2">
+            <div className="mb-2 h-2 w-12 rounded-full bg-[#1F2C43]" />
             <div className="grid grid-cols-3 gap-1">
-              <div className="h-3 rounded-[3px] bg-[#1A2538]" />
-              <div className="h-3 rounded-[3px] bg-[#1D2A40]" />
-              <div className="h-3 rounded-[3px] bg-[#1A2538]" />
+              <div className="h-3 rounded-[4px] bg-[#1A2538]" />
+              <div className="h-3 rounded-[4px] bg-[#1D2A40]" />
+              <div className="h-3 rounded-[4px] bg-[#1A2538]" />
             </div>
             <svg viewBox="0 0 120 20" className="mt-1 h-[20px] w-full" fill="none">
               <path
@@ -311,7 +311,7 @@ function StaticToDemoVisual() {
             </svg>
           </div>
           <span className="pointer-events-none absolute left-1/2 top-[56%] inline-flex h-7 w-7 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#AFC2E6] bg-[#E8EEF9]">
-            <span className="ml-0.5 inline-block h-0 w-0 border-b-[4px] border-l-[7px] border-t-[4px] border-b-transparent border-l-[#2E4E83] border-t-transparent" />
+            <span className="ml-1 inline-block h-0 w-0 border-b-[4px] border-l-[8px] border-t-[4px] border-b-transparent border-l-[#2E4E83] border-t-transparent" />
           </span>
         </div>
       </div>
@@ -322,14 +322,14 @@ function StaticToDemoVisual() {
 function RiskChecklistVisual() {
   return (
     <div className={diagramCanvasClassName} aria-hidden="true">
-      <div className="h-full rounded-[6px] border border-[#D4DBE3] bg-white">
+        <div className="h-full rounded-[8px] border border-[#D4DBE3] bg-white">
         <div className="grid grid-cols-[52px_minmax(0,1fr)_42px_42px] gap-1 border-b border-[#E3E8EE] px-2 py-1 text-[7px] font-semibold uppercase tracking-[0.08em] text-[#7E8896]">
           <span>维度</span>
           <span>关键问题</span>
           <span>等级</span>
           <span>验证</span>
         </div>
-        <div className="space-y-0.5 px-2 py-1">
+        <div className="space-y-1 px-2 py-1">
           {riskRows.map((row) => (
             <div
               key={row[0]}
@@ -337,7 +337,7 @@ function RiskChecklistVisual() {
             >
               <span className="font-medium text-[#4D5866]">{row[0]}</span>
               <span className="truncate">{row[1]}</span>
-              <span className="inline-flex items-center gap-0.5">
+              <span className="inline-flex items-center gap-1">
                 {[1, 2, 3, 4, 5].map((dot) => (
                   <span
                     key={dot}
@@ -390,13 +390,13 @@ export default function ProblemsSection() {
         aria-hidden="true"
         style={{
           backgroundImage:
-            'repeating-linear-gradient(to right, rgba(22,33,48,0.04) 0px, rgba(22,33,48,0.04) 1px, transparent 1px, transparent 156px)',
+            'repeating-linear-gradient(to right, rgba(22,33,48,0.04) 0px, rgba(22,33,48,0.04) 1px, transparent 1px, transparent 160px)',
         }}
       />
 
       <div className="problems-main relative mx-auto min-h-screen w-full max-w-[1880px] px-4 pb-14 pt-[88px] sm:px-8 lg:px-16">
         <div className="problems-meta-row flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#5F6A79]">
-          <span className="text-[#2E4D7F]">03 / PROBLEMS</span>
+          <span className="text-[#2E4D7F]">02 / PROBLEMS</span>
         </div>
 
         <header className="problems-header mt-3">
@@ -406,7 +406,7 @@ export default function ProblemsSection() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.55 }}
           >
-            <h2 className="problems-title m-0 max-w-[720px] text-[clamp(48px,4.2vw,64px)] font-extrabold leading-[1.08] tracking-[-0.04em] text-[#0E1116]">
+            <h2 className="problems-title m-0 max-w-[720px] text-[clamp(48px,4.2vw,64px)] font-extrabold leading-[1.08] tracking-normal text-[#0E1116]">
               我解决什么问题
             </h2>
             <p className="problems-subtitle mt-4 max-w-[840px] text-[16px] leading-[1.7] text-[rgba(15,23,42,0.68)]">
@@ -433,7 +433,7 @@ export default function ProblemsSection() {
               <div className="problem-card-body grid min-h-0 grid-cols-1 gap-4 xl:grid-cols-[minmax(190px,0.36fr)_minmax(320px,0.64fr)] xl:gap-6">
                 <div className="problem-card-copy min-w-0">
                   <h3
-                    className="problem-card-title m-0 text-[26px] font-bold leading-[1.12] tracking-[-0.04em] text-[#101318]"
+                    className="problem-card-title m-0 text-[28px] font-bold leading-[1.12] tracking-normal text-[#101318]"
                     style={{
                       display: '-webkit-box',
                       WebkitLineClamp: 2,
