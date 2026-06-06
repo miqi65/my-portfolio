@@ -252,7 +252,7 @@ export default function CoreCasesSection() {
           <h2 className="pt-4 text-[40px] font-black leading-[48px] tracking-normal text-[#111111] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
             <span className="text-[#7FB12B]">核心</span>项目
           </h2>
-          <p className="mt-4 text-[16px] font-semibold leading-6 text-[#252A31]">
+          <p className="mt-2 text-[16px] font-semibold leading-6 text-[#252A31]">
             复杂系统 / AI 应用 / 产品验证
           </p>
           <p className="mt-1 max-w-[760px] text-[14px] leading-6 text-[rgba(15,23,42,0.58)] sm:text-[16px] sm:leading-7">
