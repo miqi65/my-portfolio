@@ -243,24 +243,26 @@ export default function CoreCasesSection() {
 
       <div className={`relative ${SECTION_CONTAINER}`}>
         <div className="max-w-[820px]">
-          <p className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-normal text-[rgba(15,23,42,0.58)]">
-            <span className="h-2 w-2 rounded-full bg-[#7FB12B]" aria-hidden="true" />
-            02 / SELECTED WORK
-          </p>
-          <h2 className="mt-2 text-[44px] font-semibold leading-[56px] tracking-normal text-[#111111] sm:text-[56px] sm:leading-[68px] lg:text-[64px] lg:leading-[80px]">
-            核心项目
+          <div className="flex items-center gap-2">
+            <span className="text-[12px] font-bold leading-4 tracking-widest text-[#7FB12B]">02</span>
+            <span className="text-[12px] font-normal uppercase leading-4 tracking-widest text-[rgba(15,23,42,0.48)]">
+              / Selected Work
+            </span>
+          </div>
+          <h2 className="pt-3 text-[40px] font-black leading-[48px] tracking-normal text-[#111111] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
+            <span className="text-[#7FB12B]">核心</span>项目
           </h2>
           <p className="mt-4 text-[16px] font-semibold leading-6 text-[#252A31]">
             复杂系统 / AI 应用 / 产品验证
           </p>
-          <p className="mt-2 max-w-[760px] text-[14px] leading-6 text-[rgba(15,23,42,0.58)] sm:text-[16px] sm:leading-7">
+          <p className="mt-1 max-w-[760px] text-[14px] leading-6 text-[rgba(15,23,42,0.58)] sm:text-[16px] sm:leading-7">
             用真实项目展示复杂系统、AI 应用和智能硬件产品从需求到方案落地的能力。
           </p>
         </div>
 
         <div
           ref={gridRef}
-          className="cases-grid mt-6 grid grid-cols-1 items-stretch gap-5 sm:mt-8 md:grid-cols-2 md:gap-6 xl:grid-cols-3"
+          className="cases-grid mt-8 grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3"
           onPointerMove={handlePointerMove}
           onPointerLeave={resetCardScale}
           onBlur={resetCardScale}

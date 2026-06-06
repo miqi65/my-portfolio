@@ -454,7 +454,7 @@ function SectionHeader() {
       <h2 className="pt-3 text-[40px] font-black leading-[48px] tracking-normal text-[#f2f5ef] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
         我<span className="text-[#8eea1c]">解决</span>什么问题
       </h2>
-      <p className="cases-summary max-w-[688px] text-[14px] font-normal leading-6 text-[#a8aea5] sm:text-[16px] sm:leading-7 lg:max-w-none">
+      <p className="mt-4 max-w-[760px] text-[14px] font-normal leading-6 text-[#a8aea5] sm:text-[16px] sm:leading-7">
         从模糊需求到清晰方案，从旧流程到更可控的协作流程，从静态界面到可验证原型，从开发前到风险识别。
       </p>
     </div>
@@ -508,20 +508,11 @@ export default function CoreCasesSection() {
       data-section-id="problems"
       className="relative scroll-mt-16 overflow-hidden border-b border-[rgba(242,245,239,0.12)] bg-[#030503] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[72px]"
     >
-      <style jsx global>{`
-        @media (min-width: 1024px) {
-          #problems .cases-summary {
-            max-width: none;
-            white-space: nowrap;
-          }
-        }
-      `}</style>
-
       <div className={`relative ${SECTION_CONTAINER}`}>
         <div className="flex w-full flex-col items-start">
           <SectionHeader />
 
-          <div className="grid w-full grid-cols-1 items-stretch gap-6 pt-12 md:grid-cols-2 min-[1680px]:grid-cols-4">
+          <div className="grid w-full grid-cols-1 items-stretch gap-6 pt-8 md:grid-cols-2 min-[1680px]:grid-cols-4">
             <CardShell
               number="01"
               title="模糊需求 -> 清晰方案"
