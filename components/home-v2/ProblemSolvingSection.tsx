@@ -518,10 +518,6 @@ export default function CoreCasesSection() {
       `}</style>
 
       <div className={`relative ${SECTION_CONTAINER}`}>
-        <div className="absolute right-4 top-0 hidden text-[12px] font-normal uppercase leading-4 tracking-widest text-[#747b70] sm:right-6 md:right-8 md:block lg:right-12 xl:right-16">
-          Problem Solving
-        </div>
-
         <div className="flex w-full flex-col items-start">
           <SectionHeader />
 
