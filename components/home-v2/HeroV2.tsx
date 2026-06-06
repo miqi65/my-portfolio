@@ -11,7 +11,7 @@ const HERO_BACKGROUND_GLOW = `${ASSET}/ellipse-1.png`
 const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
 const HERO_CTA_SIZE =
-  'inline-flex h-[43px] min-h-[43px] max-h-[43px] shrink-0 cursor-pointer items-center box-border py-0 text-[14px] leading-none'
+  'inline-flex h-12 min-h-12 shrink-0 cursor-pointer items-center box-border py-0 text-[14px] leading-none'
 
 const heroIcons = {
   logo: `${ASSET}/logo.svg`,
@@ -206,25 +206,25 @@ function FlowStepCard({
   return (
     <article className={`group flex h-[236px] min-w-0 w-full flex-col ${className}`}>
       <div
-        className="flex h-full w-full flex-col rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 pb-[15px] pt-[18px] transition duration-200 group-hover:border-[#a6e22e]/40 group-hover:bg-[rgba(166,226,46,0.07)] group-hover:shadow-[0_0_28px_rgba(166,226,46,0.1)] sm:px-[15px]"
+        className="flex h-full w-full flex-col rounded-[8px] border border-white/[0.08] bg-white/[0.03] px-4 pb-4 pt-5 transition duration-200 group-hover:border-[#a6e22e]/40 group-hover:bg-[rgba(166,226,46,0.07)] group-hover:shadow-[0_0_28px_rgba(166,226,46,0.1)]"
       >
-        <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-[16.5px] tracking-[0.88px] text-[#a6e22e]">
+        <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-4 tracking-[0.88px] text-[#a6e22e]">
           {step.id}
         </p>
         <div className="flex h-8 shrink-0 items-center justify-center py-1">
           <HeroIcon src={step.icon} size={32} className="size-8 object-contain" />
         </div>
-        <h3 className="shrink-0 text-center text-[13px] font-bold leading-[19.5px] text-[#f2f5ef]">{step.title}</h3>
-        <ul className="mt-2.5 flex min-h-[73px] flex-1 flex-col gap-[3px]">
+        <h3 className="shrink-0 text-center text-[13px] font-bold leading-5 text-[#f2f5ef]">{step.title}</h3>
+        <ul className="mt-2 flex min-h-[72px] flex-1 flex-col gap-1">
           {step.items.map((item) => (
-            <li key={item} className="flex gap-1.5 text-[11px] leading-[16.5px] text-[#6f776b]">
-              <span className="mt-[3px] shrink-0 text-[8px] leading-none text-[#65992b]">▸</span>
+            <li key={item} className="flex gap-2 text-[11px] leading-4 text-[#6f776b]">
+              <span className="mt-1 shrink-0 text-[8px] leading-none text-[#65992b]">▸</span>
               <span className="min-w-0">{item}</span>
             </li>
           ))}
         </ul>
         <div className="mt-auto flex shrink-0 justify-center pt-2">
-          <span className="flex h-[34px] w-full max-w-full items-center justify-center rounded-lg border border-[rgba(101,153,43,0.3)] bg-[rgba(101,153,43,0.15)] px-1.5 text-center text-[9px] font-medium leading-[13px] text-[#a6e22e] sm:px-2 sm:text-[10px] sm:leading-[14px]">
+          <span className="flex h-8 w-full max-w-full items-center justify-center rounded-[8px] border border-[rgba(101,153,43,0.3)] bg-[rgba(101,153,43,0.15)] px-2 text-center text-[9px] font-medium leading-4 text-[#a6e22e] sm:text-[10px]">
             {step.badge}
           </span>
         </div>
@@ -260,10 +260,10 @@ function FlowStepsRow() {
 
       {/* Mobile / tablet: horizontal scroll（不突破页面宽度） */}
       <div className="overflow-x-auto [scrollbar-width:none] lg:hidden [&::-webkit-scrollbar]:hidden">
-        <div className="flex w-max items-stretch gap-1 pr-4">
+        <div className="flex w-max items-stretch gap-2 pr-4">
           {flowSteps.map((step, index) => (
             <Fragment key={step.id}>
-              <div className="w-[118px] shrink-0 sm:w-[124px]">
+              <div className="w-[120px] shrink-0 sm:w-[124px]">
                 <FlowStepCard step={step} />
               </div>
               {index < flowSteps.length - 1 ? (
@@ -281,11 +281,11 @@ function FlowStepsRow() {
 
 function FlowDiagram() {
   return (
-    <div className="w-full min-w-0 overflow-hidden rounded-2xl border border-white/[0.08] bg-[rgba(8,11,7,0.56)] px-4 py-6 shadow-[0_0_80px_rgba(166,226,46,0.04)] sm:px-5 sm:py-7 lg:px-6 lg:py-8">
+    <div className="w-full min-w-0 overflow-hidden rounded-[8px] border border-white/[0.08] bg-[rgba(8,11,7,0.56)] px-4 py-6 shadow-[0_0_80px_rgba(166,226,46,0.04)] sm:px-5 sm:py-8 lg:px-6 lg:py-8">
       <div className="border-b border-white/[0.08] pb-4">
         <div className="min-w-0">
-          <h2 className="text-[18px] font-bold leading-[23.4px] text-[#f2f5ef]">产品验证流程</h2>
-          <p className="mt-1 text-[13px] leading-[19.5px] text-[#6f776b]">
+          <h2 className="text-[18px] font-bold leading-6 text-[#f2f5ef]">产品验证流程</h2>
+          <p className="mt-1 text-[13px] leading-5 text-[#6f776b]">
             从模糊需求到清晰方案，从原型验证到决策支持
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -339,7 +339,7 @@ function CapabilityBar() {
           <div
             key={card.label}
             className={[
-              'flex min-h-[128px] items-start gap-3 border-white/[0.08] p-5 sm:p-7 lg:px-6',
+              'flex min-h-[128px] items-start gap-3 border-white/[0.08] p-5 sm:p-8 lg:px-6',
               index < capabilityCards.length - 1 ? 'border-b sm:border-b-0' : '',
               index % 2 === 0 ? 'sm:border-r' : '',
               index < capabilityCards.length - 1 ? 'lg:border-r' : '',
@@ -352,8 +352,8 @@ function CapabilityBar() {
               <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-[1.6px] text-[#6f776b]">
                 {card.label}
               </p>
-              <p className="mt-1.5 text-[15px] font-bold leading-[20.25px] text-[#f2f5ef]">{card.title}</p>
-              <p className="mt-2 text-[13px] leading-[22.1px] text-[#a7aea1]">{card.body}</p>
+              <p className="mt-2 text-[15px] font-bold leading-5 text-[#f2f5ef]">{card.title}</p>
+              <p className="mt-2 text-[13px] leading-6 text-[#a7aea1]">{card.body}</p>
             </div>
           </div>
         ))}
@@ -445,7 +445,7 @@ export default function HeroV2({
         <div className={`${HERO_CONTAINER} flex h-16 items-center justify-between gap-4`}>
           <a
             href="#intro"
-            className="flex shrink-0 items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]"
+            className="flex shrink-0 items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]"
           >
             <HeroIcon src={heroIcons.logo} size={32} className="size-8" />
             <div>
@@ -507,7 +507,7 @@ export default function HeroV2({
                     <a
                       href={item.href}
                       data-miki-nav-href={item.href}
-                      className={`block cursor-pointer rounded-lg px-3 py-2.5 text-[14px] ${
+                      className={`block cursor-pointer rounded-lg px-3 py-3 text-[14px] ${
                         isActive
                         ? 'bg-[rgba(166,226,46,0.12)] font-medium text-[#a6e22e]'
                         : 'text-[#a7aea1]'
@@ -526,13 +526,13 @@ export default function HeroV2({
       </header>
 
       <div className={`${HERO_CONTAINER} relative z-10 pb-12 pt-8 sm:pb-16 sm:pt-10 lg:pb-20 lg:pt-[88px]`}>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-start lg:gap-8 xl:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[420px_minmax(0,1fr)] lg:items-start lg:gap-8 xl:gap-10">
           {/* 桌面：列宽仅由「高级产品设计师」决定；超出部分换行，余量给右侧流程图 */}
-          <div className="relative w-full min-w-0 shrink-0 lg:w-max">
+          <div className="relative w-full min-w-0 shrink-0">
             <div className="w-full lg:grid">
               <div
                 aria-hidden
-                className="pointer-events-none invisible col-start-1 row-start-1 hidden whitespace-nowrap text-[36px] font-bold tracking-[-1.28px] sm:text-[48px] lg:block lg:text-[56px]"
+                className="pointer-events-none invisible col-start-1 row-start-1 hidden whitespace-nowrap text-[36px] font-bold tracking-normal sm:text-[48px] lg:block lg:text-[56px]"
               >
                 高级产品设计师
               </div>
@@ -543,16 +543,15 @@ export default function HeroV2({
                 </p>
 
                 <h1 className="relative mt-3">
-                  <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-[-1.28px] text-[#f2f5ef] sm:text-[48px] lg:text-[56px]">
+                  <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#f2f5ef] sm:text-[48px] lg:text-[56px]">
                     高级产品设计师
                   </span>
-                  <p className="relative mt-1 text-[28px] font-normal leading-[1.15] text-[#f2f5ef] sm:text-[34px] lg:text-[40px] lg:leading-[46px]">
-                    <span className="block whitespace-nowrap">B端 / AI应用 /</span>
-                    <span className="block whitespace-nowrap">智能硬件方向</span>
+                  <p className="hero-direction relative mt-1 text-[28px] font-normal leading-8 text-[#f2f5ef] sm:text-[32px] sm:leading-[40px]">
+                    <span className="block whitespace-nowrap">B端 / AI应用 / 智能硬件方向</span>
                   </p>
                 </h1>
 
-                <p className="mt-4 text-[20px] font-medium leading-[30px] sm:text-[24px] sm:leading-[1.35]">
+                <p className="mt-4 text-[20px] font-medium leading-8 sm:text-[24px]">
                   <span className="text-[#a6e22e]">AI辅助</span>
                   <span className="text-[#a7aea1]"> 原型验证与产品方案落地</span>
                 </p>
@@ -565,7 +564,7 @@ export default function HeroV2({
                   {skillTags.map((tag, index) => (
                     <span
                       key={tag}
-                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[9px] border border-white/[0.08] bg-white/[0.03] px-3 text-[12px] tracking-[0.24px] text-[#6f776b]`}
+                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[8px] border border-white/[0.08] bg-white/[0.03] px-3 text-[12px] tracking-[0.24px] text-[#6f776b]`}
                     >
                       <span className="size-1 shrink-0 rounded-full bg-[#a6e22e]" aria-hidden="true" />
                       {tag}
@@ -576,7 +575,7 @@ export default function HeroV2({
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <a
                     href={primaryCtaHref}
-                    className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#a6e22e] pl-[22px] pr-1.5 font-bold text-[#030503] transition hover:bg-[#b8f24a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] sm:min-w-[148px]`}
+                    className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#a6e22e] pl-6 pr-2 font-bold text-[#030503] transition hover:bg-[#b8f24a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] sm:min-w-[148px]`}
                   >
                     {primaryCtaLabel}
                     <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#030503]/10">

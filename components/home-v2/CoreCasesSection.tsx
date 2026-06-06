@@ -422,15 +422,17 @@ function CardShell({
   children: ReactNode
 }) {
   return (
-    <article className="relative min-w-0 rounded-[16px] bg-[rgba(7,9,7,0.82)]">
-      <div className="pointer-events-none absolute inset-0 rounded-[16px] border border-[rgba(242,245,239,0.16)]" />
+    <article className="group relative min-w-0 rounded-[12px] bg-[rgba(7,9,7,0.82)] transition duration-200 hover:-translate-y-1 hover:bg-[rgba(9,13,8,0.92)] motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+      <div className="pointer-events-none absolute inset-0 rounded-[12px] border border-[rgba(242,245,239,0.16)] transition duration-200 group-hover:border-[rgba(142,234,28,0.32)]" />
       <div className="flex min-h-[512px] flex-col items-start gap-4 p-5 sm:p-6">
         <div className="flex w-full items-center justify-between">
           <span className="text-[36px] font-medium leading-9 text-[#8eea1c]">{number}</span>
           <ArrowRight />
         </div>
         <h3 className="w-full text-[16px] font-bold leading-6 text-[#f2f5ef]">{title}</h3>
-        <p className="min-h-24 text-[13px] font-normal leading-5 text-[#a8aea5] sm:text-[14px] sm:leading-6">{description}</p>
+        <p className="min-h-12 text-[13px] font-normal leading-5 text-[#a8aea5] sm:text-[14px] sm:leading-6 lg:min-h-6 lg:whitespace-nowrap min-[1680px]:min-h-24 min-[1680px]:whitespace-normal">
+          {description}
+        </p>
         <Divider />
         <div className="flex h-52 w-full shrink-0 flex-col">{children}</div>
         <Divider />
@@ -446,7 +448,7 @@ function SectionHeader() {
       <div className="flex items-center gap-2">
         <span className="text-[12px] font-bold leading-4 tracking-widest text-[#8eea1c]">03</span>
         <span className="text-[12px] font-normal uppercase leading-4 tracking-widest text-[#747b70]">
-          / Selected Work
+          / Problem Solving
         </span>
       </div>
       <h2 className="pt-3 text-[40px] font-black leading-[48px] tracking-normal text-[#f2f5ef] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
@@ -502,13 +504,13 @@ function BottomBanner() {
 export default function CoreCasesSection() {
   return (
     <section
-      id="cases"
-      data-section-id="cases"
+      id="problems"
+      data-section-id="problems"
       className="relative scroll-mt-16 overflow-hidden border-b border-[rgba(242,245,239,0.12)] bg-[#030503] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[72px]"
     >
       <style jsx global>{`
         @media (min-width: 1024px) {
-          #cases .cases-summary {
+          #problems .cases-summary {
             max-width: none;
             white-space: nowrap;
           }
@@ -523,7 +525,7 @@ export default function CoreCasesSection() {
         <div className="flex w-full flex-col items-start">
           <SectionHeader />
 
-          <div className="grid w-full grid-cols-1 items-stretch gap-6 pt-12 md:grid-cols-2 2xl:grid-cols-4">
+          <div className="grid w-full grid-cols-1 items-stretch gap-6 pt-12 md:grid-cols-2 min-[1680px]:grid-cols-4">
             <CardShell
               number="01"
               title="模糊需求 -> 清晰方案"
