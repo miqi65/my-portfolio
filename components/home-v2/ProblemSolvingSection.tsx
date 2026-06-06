@@ -454,7 +454,7 @@ function SectionHeader() {
       <h2 className="pt-4 text-[40px] font-black leading-[48px] tracking-normal text-[#f2f5ef] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
         我<span className="text-[#8eea1c]">解决</span>什么问题
       </h2>
-      <p className="mt-4 max-w-[760px] text-[14px] font-normal leading-6 text-[#a8aea5] sm:text-[16px] sm:leading-7">
+      <p className="mt-2 max-w-[760px] text-[14px] font-normal leading-6 text-[#a8aea5] sm:text-[16px] sm:leading-7">
         从模糊需求到清晰方案，从旧流程到更可控的协作流程，从静态界面到可验证原型，从开发前到风险识别。
       </p>
     </div>
