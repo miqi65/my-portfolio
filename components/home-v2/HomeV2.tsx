@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import CoreCasesSection from './CoreCasesSection'
 import HeroV2 from './HeroV2'
+import AboutMkSection from './AboutMkSection'
 import { MethodSection } from './MethodSection'
 import ProblemSolvingSection from './ProblemSolvingSection'
 import MoreWorkSection from './MoreWorkSection'
@@ -116,6 +117,7 @@ export default function HomeV2() {
       <ProblemSolvingSection />
       <MoreWorkSection />
       <MethodSection />
+      <AboutMkSection />
     </main>
   )
 }
