@@ -52,12 +52,12 @@ const works: WorkCardItem[] = [
   },
   {
     num: '04',
-    title: '5G Chatbot 设计规范',
+    title: 'Chatbot 设计规范',
     desc: '建立统一的对话交互标准，保障 AI 产品体验的一致性与可扩展性。',
     caption: 'INTERACTION STANDARD',
     href: '/Project_P4/index.html',
     image: '/images/p4-cover.png',
-    imageAlt: '5G Chatbot 设计规范',
+    imageAlt: 'Chatbot 设计规范',
     previewPosition: 'object-top',
   },
 ]
