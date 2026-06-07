@@ -92,7 +92,7 @@ export default function ProblemSolvingSection() {
     <section
       id="problems"
       data-section-id="problems"
-      className="relative scroll-mt-16 overflow-hidden border-b border-[#222222] bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
+      className="relative scroll-mt-16 overflow-hidden bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
     >
       <div
         aria-hidden="true"

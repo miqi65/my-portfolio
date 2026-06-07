@@ -1,116 +1,214 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-const works = [
+type WorkCardItem = {
+  num: '01' | '02' | '03' | '04'
+  title: string
+  desc: string
+  caption: string
+  href: string
+  image: string
+  imageAlt: string
+  previewPosition?: 'object-center' | 'object-top'
+}
+
+const SPOTIFY_FONT_STACK =
+  '"CircularSp","SpotifyMixUI","SF Pro Display","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'
+
+const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
+
+const works: WorkCardItem[] = [
   {
-    title: '企业数字分析平台',
-    desc: '面向经营与运营团队的数据指标、趋势洞察和权限化分析体验。',
-    tags: ['Dashboard', 'Data Model'],
+    num: '01',
+    title: 'CYG 智能仓储系统',
+    desc: '优化仓储作业流程与库存可视化，提升出入库效率与库存准确率。',
+    caption: 'WAREHOUSE PRODUCT',
+    href: '/Project_P2/index.html',
+    image: '/Project_P2/images/P2_01_hero_mockup.png',
+    imageAlt: 'CYG 智能仓储系统',
+    previewPosition: 'object-center',
   },
   {
-    title: '设备运维监控平台',
-    desc: '整合设备状态、告警等级、派单流转和远程诊断路径。',
-    tags: ['Operation', 'Monitoring'],
+    num: '02',
+    title: '友讯达数据大屏',
+    desc: '整合多源数据，实时呈现关键业务指标，支撑管理层快速决策。',
+    caption: 'DATA DASHBOARD',
+    href: '/友讯达/project/友讯达大屏/index.html',
+    image: '/友讯达/project/友讯达大屏/友讯达封面图.jpg',
+    imageAlt: '友讯达数据大屏',
+    previewPosition: 'object-top',
   },
   {
-    title: 'HMI 操作界面设计',
-    desc: '为工厂现场设备建立低误触、强反馈、可接管的操作界面。',
-    tags: ['HMI', 'Industrial UI'],
+    num: '03',
+    title: '轨迹定位系统',
+    desc: '精准定位与轨迹追踪，为工业场景提供实时位置监控与历史路径分析。',
+    caption: 'TRACKING PLATFORM',
+    href: '/国家能源/project/Portfolio.html',
+    image: '/国家能源/project/assets/bg-cover.png',
+    imageAlt: '轨迹定位系统',
+    previewPosition: 'object-center',
   },
   {
-    title: '设计系统搭建',
-    desc: '沉淀组件、状态、Token、交付规则和跨团队复用规范。',
-    tags: ['Design System', 'Token'],
+    num: '04',
+    title: '5G Chatbot 设计规范',
+    desc: '建立统一的对话交互标准，保障 AI 产品体验的一致性与可扩展性。',
+    caption: 'INTERACTION STANDARD',
+    href: '/Project_P4/index.html',
+    image: '/images/p4-cover.png',
+    imageAlt: '5G Chatbot 设计规范',
+    previewPosition: 'object-top',
   },
-  {
-    title: '硬件配套移动应用',
-    desc: '连接设备绑定、状态查看、远程控制和异常提醒的移动端体验。',
-    tags: ['Mobile', 'Hardware'],
-  },
-  {
-    title: '工业视觉数字化改造',
-    desc: '把传统质检链路拆解为采集、识别、复核、追溯的数字流程。',
-    tags: ['Vision', 'Workflow'],
-  },
-  {
-    title: 'AI 图像验证 Demo',
-    desc: '用可点击原型验证识别结果、置信度、人工确认和回退机制。',
-    tags: ['AI Demo', 'Validation'],
-  },
-  {
-    title: '低代码后台搭建',
-    desc: '快速组织表单、权限、流程、数据表和管理端验证场景。',
-    tags: ['Low-code', 'Admin'],
-  },
-] as const
+]
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 16 16" className="size-3.5" fill="none">
+      <path
+        d="M3 8h9M8.5 3.5 13 8l-4.5 4.5"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+      />
+    </svg>
+  )
+}
+
+function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.5, delay: index * 0.04 }}
+      className="group flex h-full min-h-[404px] flex-col overflow-hidden rounded-[6px] border border-[#313131] bg-[#121212] p-3 transition duration-300 hover:border-[#4D4D4D] hover:bg-[#181818] motion-reduce:transition-none"
+      style={{ fontFamily: SPOTIFY_FONT_STACK }}
+    >
+      <a
+        href={work.href}
+        className="flex h-full min-h-0 w-full flex-col text-left"
+        aria-label={`查看案例：${work.title}`}
+      >
+        <div className="relative h-[208px] overflow-hidden rounded-[4px] bg-[#1F1F1F]">
+          <Image
+            src={work.image}
+            alt={work.imageAlt}
+            fill
+            className={`object-cover ${work.previewPosition ?? 'object-center'} transition duration-500 group-hover:scale-[1.04] motion-reduce:transition-none motion-reduce:group-hover:scale-100`}
+            sizes="(min-width: 1280px) 24vw, (min-width: 768px) 46vw, 100vw"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,18,18,0.02)_0%,rgba(18,18,18,0.12)_55%,rgba(18,18,18,0.42)_100%)]" />
+          <div className="absolute left-3 top-3 text-[10px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
+            {work.num}
+          </div>
+        </div>
+
+        <div className="flex min-w-0 flex-1 flex-col pb-1 pt-4">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <h3
+                className="text-[19px] font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-[21px]"
+                style={{
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden',
+                }}
+              >
+                {work.title}
+              </h3>
+              <p className="mt-2 text-[11px] font-semibold uppercase leading-4 tracking-[0.18em] text-[#8D8D8D]">
+                {work.caption}
+              </p>
+            </div>
+
+            <span className="inline-flex size-7 shrink-0 items-center justify-center rounded-full border border-[#313131] bg-[#181818] text-[#1ed760] transition duration-200 group-hover:border-[#4D4D4D] group-hover:bg-[#1F1F1F] motion-reduce:transition-none">
+              <ArrowIcon />
+            </span>
+          </div>
+
+          <p
+            className="mt-4 max-w-[26ch] text-[13px] leading-[1.6] text-[#B3B3B3]"
+            style={{
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+            }}
+          >
+            {work.desc}
+          </p>
+        </div>
+      </a>
+    </motion.article>
+  )
+}
 
 export default function MoreWorkSection() {
   return (
     <section
       id="more-work"
       data-section-id="more-work"
-      className="scroll-mt-16 border-b border-[#E2E4E8] bg-[#FAFAFA] px-5 py-20 sm:px-8 lg:scroll-mt-0 lg:px-12 lg:py-28 xl:px-16"
+      className="relative scroll-mt-16 overflow-hidden border-b border-[#222222] bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-80px' }}
-        transition={{ duration: 0.5 }}
-        className="grid gap-8 border-b border-[#D7DBE1] pb-10 lg:grid-cols-[minmax(260px,0.5fr)_minmax(0,1fr)] lg:items-end"
-      >
-        <div>
-          <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#0037C5]">
-            06 / More Work
-          </p>
-          <h2 className="mt-4 text-[38px] font-semibold leading-[1.05] tracking-[-0.03em] text-[#111111] md:text-[60px]">
-            更多作品
-          </h2>
-        </div>
-        <p className="max-w-3xl text-[17px] leading-[1.9] text-[#5D626B]">
-          覆盖企业数字化、工业软件、智能硬件、AI 验证和后台工具等不同复杂度的产品场景。
-        </p>
-      </motion.div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            'linear-gradient(to right, rgba(167,174,161,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(167,174,161,0.07) 1px, transparent 1px)',
+          backgroundSize: '72px 72px',
+          opacity: 0.022,
+        }}
+      />
 
-      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {works.map((work, index) => (
-          <motion.article
-            key={work.title}
+      <div className={`relative ${SECTION_CONTAINER}`}>
+        <div className="space-y-8">
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.48, delay: index * 0.035 }}
-            className="group flex min-h-[280px] flex-col rounded-[8px] border border-[#E2E4E8] bg-white p-5 shadow-[0_8px_28px_rgba(17,17,17,0.03)] transition duration-300 hover:-translate-y-1 hover:border-[#0037C5] hover:shadow-[0_18px_44px_rgba(17,17,17,0.06)] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+            transition={{ duration: 0.5 }}
+            className="max-w-[840px]"
           >
-            <div className="flex items-center justify-between">
-              <span className="text-[12px] font-semibold text-[#0037C5]">
-                {String(index + 1).padStart(2, '0')}
+            <div className="flex items-center gap-2">
+              <span className="text-[11px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
+                04
               </span>
-              <span className="h-2 w-2 rounded-full bg-[#C5CAD2] transition duration-200 group-hover:bg-[#0037C5] motion-reduce:transition-none" />
+              <span className="text-[11px] font-normal uppercase leading-4 tracking-[0.2em] text-[#a7aea1]">
+                / More Work
+              </span>
             </div>
-
-            <div className="mt-8 grid gap-2 rounded-[8px] border border-[#E2E4E8] bg-[#FAFAFA] p-3">
-              <span className="h-2 w-1/2 rounded-full bg-[#D7DBE1]" />
-              <span className="h-2 w-4/5 rounded-full bg-[#E2E4E8]" />
-              <span className="h-16 rounded-[6px] border border-[#D7DBE1] bg-white" />
-            </div>
-
-            <h3 className="mt-7 text-[23px] font-semibold leading-tight tracking-[-0.03em] text-[#111111]">
-              {work.title}
-            </h3>
-            <p className="mt-4 text-[14px] leading-[1.75] text-[#5D626B]">
-              {work.desc}
+            <h2 className="mt-4 text-[clamp(44px,4.4vw,64px)] font-black leading-[0.96] tracking-[-0.04em] text-[#f2f5ef] sm:max-w-[720px]">
+              更多<span className="text-[#1ed760]">项目</span>经验
+            </h2>
+            <p className="mt-4 max-w-[760px] text-[15px] leading-7 text-[#b3b3b3] sm:text-[16px] sm:leading-7">
+              覆盖仓储系统、数据大屏、轨迹定位和 5G 消息交互规范等不同复杂度的产品场景。
             </p>
+          </motion.div>
 
-            <div className="mt-auto flex flex-wrap gap-2 pt-6">
-              {work.tags.map((tag) => (
-                <span key={tag} className="rounded-full border border-[#D7DBE1] px-3 py-1 text-[11px] font-medium text-[#6F7680]">
-                  {tag}
-                </span>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.55 }}
+            className="relative overflow-hidden rounded-[8px] border border-[#2A2A2A] bg-[#121212] px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-6"
+            style={{ fontFamily: SPOTIFY_FONT_STACK }}
+          >
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,215,96,0.06),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(83,157,245,0.03),transparent_28%)]"
+            />
+
+            <div className="relative grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+              {works.map((work, index) => (
+                <WorkCard key={work.title} work={work} index={index} />
               ))}
             </div>
-          </motion.article>
-        ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   )

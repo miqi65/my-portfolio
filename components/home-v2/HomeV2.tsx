@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import CoreCasesSection from './CoreCasesSection'
 import HeroV2 from './HeroV2'
 import ProblemSolvingSection from './ProblemSolvingSection'
+import MoreWorkSection from './MoreWorkSection'
 
 export default function HomeV2() {
   useEffect(() => {
@@ -112,6 +113,7 @@ export default function HomeV2() {
       <HeroV2 />
       <CoreCasesSection />
       <ProblemSolvingSection />
+      <MoreWorkSection />
     </main>
   )
 }
