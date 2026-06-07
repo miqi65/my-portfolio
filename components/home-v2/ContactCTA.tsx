@@ -83,7 +83,7 @@ function ContactHeroMessage() {
     <div className="max-w-[840px]">
       <ContactSectionHeader />
 
-      <h2 className="max-w-[720px] text-[clamp(64px,7.2vw,124px)] font-bold leading-[1.05] tracking-[-0.045em] text-[#F2F5EF]">
+      <h2 className="mt-3 max-w-[720px] text-[56px] font-bold leading-[1.05] tracking-[-0.045em] text-[#F2F5EF]">
         <span className="block">让复杂产品</span>
         <span className="block">
           更快变<span className="text-[#75E03A]">清楚</span>
@@ -126,7 +126,7 @@ function ActionCard({
   return (
     <a
       href={href}
-      className="group relative overflow-hidden rounded-[16px] border border-white/14 bg-[rgba(8,10,8,0.78)] p-8 text-left shadow-[rgba(0,0,0,0.5)_0px_8px_24px] transition duration-200 hover:-translate-y-1 hover:border-white/20 motion-reduce:transform-none motion-reduce:transition-none"
+      className="group relative overflow-hidden rounded-[16px] border border-transparent bg-[rgba(8,10,8,0.78)] p-6 text-left shadow-[rgba(0,0,0,0.5)_0px_8px_24px] transition duration-200 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none"
     >
       <div
         aria-hidden="true"
@@ -134,19 +134,19 @@ function ActionCard({
       />
 
       <div className="relative z-10 flex items-start justify-between gap-4">
-        <span className="text-[30px] font-medium leading-none tracking-[-0.02em] text-[#75E03A]">
+        <span className="text-[28px] font-medium leading-none tracking-[-0.02em] text-[#75E03A]">
           {number}
         </span>
-        <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full text-[#F2F5EF] transition-transform duration-200 group-hover:translate-x-1">
+        <span className="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-full text-[#F2F5EF] transition-transform duration-200 group-hover:translate-x-1">
           <ArrowIcon />
         </span>
       </div>
 
-      <div className="relative z-10 mt-10">
-        <h3 className="text-[26px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#F2F5EF]">
+      <div className="relative z-10 mt-8">
+        <h3 className="text-[24px] font-semibold leading-[1.1] tracking-[-0.03em] text-[#F2F5EF]">
           {title}
         </h3>
-        <p className="mt-4 text-[15px] leading-7 text-[#A8AEA5]">{description}</p>
+        <p className="mt-3 text-[14px] leading-6 text-[#A8AEA5]">{description}</p>
       </div>
     </a>
   )
@@ -186,7 +186,7 @@ function ContactInfoRow({
   )
 
   return (
-    <div className="grid gap-2 py-4 sm:grid-cols-[160px_minmax(0,1fr)] sm:items-center">
+    <div className="grid gap-2 py-3 sm:grid-cols-[160px_minmax(0,1fr)] sm:items-center">
       <span className="text-[14px] font-semibold uppercase tracking-[0.08em] text-[#747B70]">
         {label}
       </span>
@@ -197,7 +197,7 @@ function ContactInfoRow({
 
 function ContactInfoPanel() {
   return (
-    <div className="rounded-[16px] border border-white/14 bg-[rgba(8,10,8,0.78)] p-8 shadow-[rgba(0,0,0,0.5)_0px_8px_24px]">
+    <div className="rounded-[16px] border border-transparent bg-[rgba(8,10,8,0.78)] p-6 shadow-[rgba(0,0,0,0.5)_0px_8px_24px]">
       <div className="flex items-center gap-4">
         <span className="text-[14px] font-semibold uppercase tracking-[0.08em] text-[#75E03A]">
           CONTACT
@@ -209,7 +209,7 @@ function ContactInfoPanel() {
         />
       </div>
 
-      <div className="mt-6 divide-y divide-white/[0.08]">
+      <div className="mt-5 divide-y divide-white/[0.08]">
         <ContactInfoRow label="Email" value="hello@miki.design" href="mailto:hello@miki.design" />
         <ContactInfoRow label="WeChat" value="邮件联系后发送二维码" valueClassName="text-[#A8AEA5]" />
         <ContactInfoRow label="Location" value="Shenzhen / Greater Bay Area" valueClassName="text-[#A8AEA5]" />
@@ -225,7 +225,7 @@ function ContactInfoPanel() {
 
 function FooterBar() {
   return (
-    <div className="mt-16 border-t border-white/12 pt-6">
+    <div className="mt-16 border-t border-white/10 pt-6">
       <div className="flex flex-col gap-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#747B70] sm:flex-row sm:items-center sm:justify-between">
         <span>2026 © MIKI. ALL RIGHTS RESERVED.</span>
         <div className="flex items-center gap-3">
@@ -260,7 +260,7 @@ export default function ContactCTA() {
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] lg:gap-20">
           <ContactHeroMessage />
 
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2">
             <ActionCardGrid />
             <ContactInfoPanel />
           </div>
