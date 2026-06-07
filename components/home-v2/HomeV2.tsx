@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import CoreCasesSection from './CoreCasesSection'
 import HeroV2 from './HeroV2'
 import AboutMkSection from './AboutMkSection'
+import ContactCTA from './ContactCTA'
 import { MethodSection } from './MethodSection'
 import ProblemSolvingSection from './ProblemSolvingSection'
 import MoreWorkSection from './MoreWorkSection'
@@ -21,7 +22,7 @@ export default function HomeV2() {
 
     const syncNavCurrent = () => {
       const hash = window.location.hash
-      const activeHash = ['#cases', '#method', '#about'].includes(hash) ? hash : '#intro'
+        const activeHash = ['#cases', '#method', '#about', '#contact'].includes(hash) ? hash : '#intro'
 
       document.querySelectorAll<HTMLAnchorElement>('[data-miki-nav-href]').forEach((link) => {
         if (link.dataset.mikiNavHref === activeHash) {
@@ -68,24 +69,28 @@ export default function HomeV2() {
         }
         body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href],
         body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href],
-        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href] {
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href],
+        body:has(#contact:target) nav[aria-label='主导航'] a[data-miki-nav-href] {
           color: #a7aea1 !important;
           font-weight: 400 !important;
         }
         body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after,
         body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after,
-        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after {
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after,
+        body:has(#contact:target) nav[aria-label='主导航'] a[data-miki-nav-href]::after {
           opacity: 0 !important;
         }
         body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href='#cases'],
         body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href='#method'],
-        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about'] {
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about'],
+        body:has(#contact:target) nav[aria-label='主导航'] a[data-miki-nav-href='#contact'] {
           color: #f2f5ef !important;
           font-weight: 500 !important;
         }
         body:has(#cases:target) nav[aria-label='主导航'] a[data-miki-nav-href='#cases']::after,
         body:has(#method:target) nav[aria-label='主导航'] a[data-miki-nav-href='#method']::after,
-        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about']::after {
+        body:has(#about:target) nav[aria-label='主导航'] a[data-miki-nav-href='#about']::after,
+        body:has(#contact:target) nav[aria-label='主导航'] a[data-miki-nav-href='#contact']::after {
           content: '';
           position: absolute;
           left: 0;
@@ -98,14 +103,16 @@ export default function HomeV2() {
         }
         body:has(#cases:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
         body:has(#method:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
-        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href] {
+        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
+        body:has(#contact:target) nav[aria-label='移动端导航'] a[data-miki-nav-href] {
           background: transparent !important;
           color: #a7aea1 !important;
           font-weight: 400 !important;
         }
         body:has(#cases:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#cases'],
         body:has(#method:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#method'],
-        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#about'] {
+        body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#about'],
+        body:has(#contact:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#contact'] {
           background: rgba(166, 226, 46, 0.12) !important;
           color: #a6e22e !important;
           font-weight: 500 !important;
@@ -118,6 +125,7 @@ export default function HomeV2() {
       <MoreWorkSection />
       <MethodSection />
       <AboutMkSection />
+      <ContactCTA />
     </main>
   )
 }

@@ -49,6 +49,7 @@ const defaultNavItems: HeroV2NavItem[] = [
   { label: '作品', href: '#cases' },
   { label: '方法', href: '#method' },
   { label: '关于我', href: '#about' },
+  { label: '联系', href: '#contact' },
 ]
 
 const skillTags = [
