@@ -14,6 +14,7 @@ const MID_DARK = '#1f1f1f'
 const WHITE = '#ffffff'
 const SILVER = '#b3b3b3'
 const BORDER_GRAY = '#4d4d4d'
+const METHOD_IMAGE_FILTER = 'saturate(0.2) brightness(0.98) contrast(1.04)'
 const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
 function useInView() {
@@ -138,10 +139,10 @@ function MethodCard({
       style={{
         background: hov ? '#1a1a1a' : DARK_SURFACE,
         borderRadius: 24,
-        padding: '18px',
+        padding: '16px',
         display: 'flex',
         flexDirection: 'column',
-        gap: 12,
+        gap: 10,
         boxShadow: hov ? '0 28px 68px rgba(0,0,0,0.42)' : '0 22px 56px rgba(0,0,0,0.32)',
         transform: hov ? 'translateY(-2px)' : 'translateY(0px)',
         transition: 'all 200ms ease',
@@ -152,10 +153,10 @@ function MethodCard({
       }}
     >
       <div className="min-w-0">
-        <h3 className="text-[22px] font-bold leading-[1.12] tracking-[-0.03em] text-[#f2f5ef] sm:text-[24px]">
+        <h3 className="text-[20px] font-bold leading-[1.12] tracking-[-0.03em] text-[#f2f5ef] sm:text-[22px]">
           {card.title}
         </h3>
-        <p className="mt-3 text-[14px] leading-7 text-[#b3b3b3] sm:text-[15px]">{card.desc}</p>
+        <p className="mt-2 text-[13px] leading-7 text-[#b3b3b3] sm:mt-3 sm:text-[14px]">{card.desc}</p>
       </div>
 
       {card.diagramType === 'map' ? (
@@ -165,7 +166,7 @@ function MethodCard({
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
-            minHeight: 178,
+            minHeight: 'clamp(140px, 14vw, 178px)',
             background: MID_DARK,
             borderRadius: 14,
             border: `1px solid ${BORDER_GRAY}`,
@@ -179,6 +180,7 @@ function MethodCard({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              filter: METHOD_IMAGE_FILTER,
             }}
           />
         </div>
@@ -189,7 +191,7 @@ function MethodCard({
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
-            minHeight: 178,
+            minHeight: 'clamp(140px, 14vw, 178px)',
             background: MID_DARK,
             borderRadius: 14,
             border: `1px solid ${BORDER_GRAY}`,
@@ -203,6 +205,7 @@ function MethodCard({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              filter: METHOD_IMAGE_FILTER,
             }}
           />
         </div>
@@ -213,7 +216,7 @@ function MethodCard({
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
-            minHeight: 178,
+            minHeight: 'clamp(140px, 14vw, 178px)',
             background: MID_DARK,
             borderRadius: 14,
             border: `1px solid ${BORDER_GRAY}`,
@@ -227,6 +230,7 @@ function MethodCard({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              filter: METHOD_IMAGE_FILTER,
             }}
           />
         </div>
@@ -237,7 +241,7 @@ function MethodCard({
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
-            minHeight: 178,
+            minHeight: 'clamp(140px, 14vw, 178px)',
             background: MID_DARK,
             borderRadius: 14,
             border: `1px solid ${BORDER_GRAY}`,
@@ -251,6 +255,7 @@ function MethodCard({
               width: '100%',
               height: '100%',
               objectFit: 'cover',
+              filter: METHOD_IMAGE_FILTER,
             }}
           />
         </div>
@@ -310,7 +315,7 @@ export function MethodSection() {
           </p>
         </div>
 
-        <div className="mt-12 mb-12 grid gap-4 lg:grid-cols-4">
+        <div className="mt-12 mb-12 grid gap-4 md:grid-cols-2 2xl:grid-cols-4">
           {CARDS.map((card, i) => (
             <MethodCard key={card.num} card={card} idx={i} vis={vis} />
           ))}

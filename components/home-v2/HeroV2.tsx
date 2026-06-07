@@ -13,6 +13,9 @@ const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px
 const HERO_CTA_SIZE =
   'inline-flex h-12 min-h-12 shrink-0 cursor-pointer items-center box-border py-0 text-[14px] leading-none'
 
+const HERO_ICON_FILTER =
+  'brightness(0) saturate(100%) invert(69%) sepia(94%) saturate(522%) hue-rotate(88deg) brightness(98%) contrast(95%)'
+
 const heroIcons = {
   logo: `${ASSET}/logo.svg`,
   glow: `${ASSET}/glow-ellipse.png`,
@@ -169,23 +172,35 @@ function HeroIcon({
   src,
   size,
   className = '',
+  tone = 'accent',
 }: {
   src: string
   size: number
   className?: string
+  tone?: 'accent' | 'native'
 }) {
+  const filterStyle = tone === 'native' ? undefined : HERO_ICON_FILTER
+
   if (src.endsWith('.svg')) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt="" width={size} height={size} className={className} decoding="async" />
+      <img
+        src={src}
+        alt=""
+        width={size}
+        height={size}
+        className={className}
+        decoding="async"
+        style={filterStyle ? { filter: filterStyle } : undefined}
+      />
     )
   }
-  return <Image src={src} alt="" width={size} height={size} className={className} />
+  return <Image src={src} alt="" width={size} height={size} className={className} style={filterStyle ? { filter: filterStyle } : undefined} />
 }
 
 function FlowArrow() {
   return (
-    <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4 shrink-0 text-[#65992b]" fill="none">
+    <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4 shrink-0 text-[#1ed760]" fill="none">
       <path
         d="M4 8h7M9.5 4.5 13 8l-3.5 3.5"
         stroke="currentColor"
@@ -207,25 +222,25 @@ function FlowStepCard({
   return (
     <article className={`group flex h-[236px] min-w-0 w-full flex-col ${className}`}>
       <div
-        className="flex h-full w-full flex-col rounded-[8px] border border-white/[0.08] bg-white/[0.03] px-4 pb-4 pt-5 transition duration-200 group-hover:border-[#a6e22e]/40 group-hover:bg-[rgba(166,226,46,0.07)] group-hover:shadow-[0_0_28px_rgba(166,226,46,0.1)]"
+        className="flex h-full w-full flex-col rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 pb-4 pt-5 transition duration-200 group-hover:border-[#1ed760]/40 group-hover:bg-[#1f1f1f] group-hover:shadow-[0_0_28px_rgba(30,215,96,0.1)]"
       >
-        <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-4 tracking-[0.88px] text-[#a6e22e]">
+        <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-4 tracking-[0.88px] text-[#1ed760]">
           {step.id}
         </p>
         <div className="flex h-8 shrink-0 items-center justify-center py-1">
           <HeroIcon src={step.icon} size={32} className="size-8 object-contain" />
         </div>
-        <h3 className="shrink-0 text-center text-[13px] font-bold leading-5 text-[#f2f5ef]">{step.title}</h3>
+        <h3 className="shrink-0 text-center text-[13px] font-bold leading-5 text-[#fdfdfd]">{step.title}</h3>
         <ul className="mt-2 flex min-h-[72px] flex-1 flex-col gap-1">
           {step.items.map((item) => (
-            <li key={item} className="flex gap-2 text-[11px] leading-4 text-[#6f776b]">
-              <span className="mt-1 shrink-0 text-[8px] leading-none text-[#65992b]">▸</span>
+            <li key={item} className="flex gap-2 text-[11px] leading-4 text-[#b3b3b3]">
+              <span className="mt-1 shrink-0 text-[8px] leading-none text-[#1ed760]">▸</span>
               <span className="min-w-0">{item}</span>
             </li>
           ))}
         </ul>
         <div className="mt-auto flex shrink-0 justify-center pt-2">
-          <span className="flex h-8 w-full max-w-full items-center justify-center rounded-[8px] border border-[rgba(101,153,43,0.3)] bg-[rgba(101,153,43,0.15)] px-2 text-center text-[9px] font-medium leading-4 text-[#a6e22e] sm:text-[10px]">
+          <span className="flex h-8 w-full max-w-full items-center justify-center rounded-[8px] border border-[rgba(30,215,96,0.3)] bg-[rgba(30,215,96,0.15)] px-2 text-center text-[9px] font-medium leading-4 text-[#1ed760] sm:text-[10px]">
             {step.badge}
           </span>
         </div>
@@ -282,21 +297,21 @@ function FlowStepsRow() {
 
 function FlowDiagram() {
   return (
-    <div className="w-full min-w-0 overflow-hidden rounded-[8px] border border-white/[0.08] bg-[rgba(8,11,7,0.56)] px-4 py-6 shadow-[0_0_80px_rgba(166,226,46,0.04)] sm:px-5 sm:py-8 lg:px-6 lg:py-8">
+    <div className="w-full min-w-0 overflow-hidden rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 py-6 shadow-[0_0_80px_rgba(30,215,96,0.04)] sm:px-5 sm:py-8 lg:px-6 lg:py-8">
       <div className="border-b border-white/[0.08] pb-4">
         <div className="min-w-0">
-          <h2 className="text-[18px] font-bold leading-6 text-[#f2f5ef]">产品验证流程</h2>
-          <p className="mt-1 text-[13px] leading-5 text-[#6f776b]">
+          <h2 className="text-[18px] font-bold leading-6 text-[#fdfdfd]">产品验证流程</h2>
+          <p className="mt-1 text-[13px] leading-5 text-[#b3b3b3]">
             从模糊需求到清晰方案，从原型验证到决策支持
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className="font-['Space_Grotesk'] text-[9px] font-medium uppercase tracking-[1.44px] text-[#6f776b]">
+            <span className="font-['Space_Grotesk'] text-[9px] font-medium uppercase tracking-[1.44px] text-[#7c7c7c]">
               Applied in
             </span>
             {appliedProjectTags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-md border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[10px] leading-[14px] text-[#a7aea1]"
+                className="rounded-md border border-white/[0.08] bg-[#1f1f1f] px-2 py-1 text-[10px] leading-[14px] text-[#cbcbcb]"
               >
                 {tag}
               </span>
@@ -311,7 +326,7 @@ function FlowDiagram() {
 
       <div className="mt-6 hidden border-t border-white/[0.08] pt-5 sm:block">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-6">
-          <div className="shrink-0 text-[10px] leading-[15px] text-[#6f776b]">
+          <div className="shrink-0 text-[10px] leading-[15px] text-[#7c7c7c]">
             <p>关键要素</p>
             <p className="pt-0.5">全程贯穿</p>
           </div>
@@ -320,8 +335,8 @@ function FlowDiagram() {
               <div key={item.title} className="flex min-w-0 gap-2">
                 <HeroIcon src={item.icon} size={18} className="mt-0.5 size-[18px] shrink-0 object-contain" />
                 <div className="min-w-0">
-                  <p className="text-[12px] font-bold leading-[18px] text-[#f2f5ef]">{item.title}</p>
-                  <p className="mt-0.5 text-[10px] leading-[15px] text-[#6f776b]">{item.body}</p>
+                  <p className="text-[12px] font-bold leading-[18px] text-[#fdfdfd]">{item.title}</p>
+                  <p className="mt-0.5 text-[10px] leading-[15px] text-[#b3b3b3]">{item.body}</p>
                 </div>
               </div>
             ))}
@@ -334,7 +349,7 @@ function FlowDiagram() {
 
 function CapabilityBar() {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a0a]">
+    <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#181818]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {capabilityCards.map((card, index) => (
           <div
@@ -350,11 +365,11 @@ function CapabilityBar() {
           >
             <HeroIcon src={card.icon} size={56} className="size-14 shrink-0 object-contain" />
             <div className="flex min-w-0 flex-1 flex-col justify-center">
-              <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-[1.6px] text-[#6f776b]">
+              <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-[1.6px] text-[#7c7c7c]">
                 {card.label}
               </p>
-              <p className="mt-2 text-[15px] font-bold leading-5 text-[#f2f5ef]">{card.title}</p>
-              <p className="mt-2 text-[13px] leading-6 text-[#a7aea1]">{card.body}</p>
+              <p className="mt-2 text-[15px] font-bold leading-5 text-[#fdfdfd]">{card.title}</p>
+              <p className="mt-2 text-[13px] leading-6 text-[#b3b3b3]">{card.body}</p>
             </div>
           </div>
         ))}
@@ -435,27 +450,27 @@ export default function HeroV2({
     <section
       id="intro"
       data-section-id="intro"
-      className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#050505] text-[#f2f5ef] lg:scroll-mt-0"
+      className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#121212] text-[#fdfdfd] lg:scroll-mt-0"
     >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-120px] top-[-112px] z-0 h-[360px] w-[280px] bg-[length:100%_100%] bg-no-repeat opacity-40 sm:right-[-96px] sm:h-[520px] sm:w-[404px] sm:opacity-50 lg:right-0 lg:top-[-120px] lg:h-[572px] lg:w-[444px] lg:opacity-55"
         style={{ backgroundImage: `url(${HERO_BACKGROUND_GLOW})` }}
       />
-      <header className="relative z-20 border-b border-[#000000] bg-[rgba(3,5,3,0.40)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[24px] backdrop-saturate-150">
+      <header className="relative z-20 border-b border-white/[0.08] bg-[rgba(8,8,8,0.45)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[24px] backdrop-saturate-150">
         <div className={`${HERO_CONTAINER} flex h-16 items-center justify-between gap-4`}>
           <a
             href="#intro"
-            className="flex shrink-0 items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]"
+            className="flex shrink-0 items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760]"
           >
-            <HeroIcon src={heroIcons.logo} size={32} className="size-8" />
+            <HeroIcon src={heroIcons.logo} size={32} className="size-8" tone="native" />
             <div>
-              <p className="font-['Space_Grotesk'] text-[15px] font-bold tracking-[1.2px] text-[#f2f5ef]">MIKI</p>
-              <p className="text-[9px] font-medium tracking-[1.26px] text-[#6f776b]">SENIOR PRODUCT DESIGNER</p>
+              <p className="font-['Space_Grotesk'] text-[15px] font-bold tracking-[1.2px] text-[#fdfdfd]">MIKI</p>
+              <p className="text-[9px] font-medium tracking-[1.26px] text-[#7c7c7c]">SENIOR PRODUCT DESIGNER</p>
             </div>
           </a>
 
-          <nav aria-label="主导航" className="ml-auto hidden items-center gap-10 md:flex">
+          <nav aria-label="主导航" className="ml-auto hidden items-center gap-10 pr-4 md:flex lg:pr-6">
             {navItems.map((item) => {
               const isActive = activeHref === item.href || (!activeHref && 'active' in item && item.active)
 
@@ -464,10 +479,10 @@ export default function HeroV2({
                   key={item.href}
                   href={item.href}
                   data-miki-nav-href={item.href}
-                  className={`relative pb-1 text-[14px] leading-[21px] transition-colors hover:text-[#f2f5ef] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] ${
+                  className={`relative pb-1 text-[14px] leading-[21px] transition-colors hover:text-[#fdfdfd] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] ${
                     isActive
-                    ? 'font-medium text-[#f2f5ef] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-sm after:bg-[#a6e22e]'
-                    : 'text-[#a7aea1]'
+                      ? 'font-medium text-[#fdfdfd] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:rounded-sm after:bg-[#1ed760]'
+                      : 'text-[#b3b3b3]'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
@@ -480,7 +495,7 @@ export default function HeroV2({
           <div className="flex items-center gap-3 md:hidden">
             <button
               type="button"
-              className="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-white/[0.05] text-[#f2f5ef] md:hidden"
+              className="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-white/[0.05] text-[#fdfdfd] md:hidden"
               aria-expanded={navOpen}
               aria-controls="hero-mobile-nav"
               onClick={() => setNavOpen((open) => !open)}
@@ -510,8 +525,8 @@ export default function HeroV2({
                       data-miki-nav-href={item.href}
                       className={`block cursor-pointer rounded-lg px-3 py-3 text-[14px] ${
                         isActive
-                        ? 'bg-[rgba(166,226,46,0.12)] font-medium text-[#a6e22e]'
-                        : 'text-[#a7aea1]'
+                          ? 'bg-[rgba(30,215,96,0.12)] font-medium text-[#1ed760]'
+                          : 'text-[#b3b3b3]'
                       }`}
                       aria-current={isActive ? 'page' : undefined}
                       onClick={() => setNavOpen(false)}
@@ -538,26 +553,26 @@ export default function HeroV2({
                 高级产品设计师
               </div>
               <div className="col-start-1 row-start-1 w-full min-w-0 break-words lg:w-0 lg:min-w-full lg:max-w-full">
-                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[1.98px] text-[#6f776b]">
-                  <span className="size-1 shrink-0 rounded-full bg-[#a6e22e]" aria-hidden="true" />
+                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[1.98px] text-[#7c7c7c]">
+                  <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
                   Senior Product Designer
                 </p>
 
                 <h1 className="relative mt-3">
-                  <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#f2f5ef] sm:text-[48px] lg:text-[56px]">
+                  <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
                     高级产品设计师
                   </span>
-                  <p className="hero-direction relative mt-1 text-[28px] font-normal leading-8 text-[#f2f5ef] sm:text-[32px] sm:leading-[40px]">
+                  <p className="hero-direction relative mt-1 text-[28px] font-normal leading-8 text-[#fdfdfd] sm:text-[32px] sm:leading-[40px]">
                     <span className="block whitespace-nowrap">B端 / AI应用 / 智能硬件方向</span>
                   </p>
                 </h1>
 
                 <p className="mt-4 text-[20px] font-medium leading-8 sm:text-[24px]">
-                  <span className="text-[#a6e22e]">AI辅助</span>
-                  <span className="text-[#a7aea1]"> 原型验证与产品方案落地</span>
+                  <span className="text-[#1ed760]">AI辅助</span>
+                  <span className="text-[#b3b3b3]"> 原型验证与产品方案落地</span>
                 </p>
 
-                <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#6f776b] lg:max-w-none lg:text-pretty">
+                <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#b3b3b3] lg:max-w-none lg:text-pretty">
                   把模糊需求变成可验证原型、清晰决策和可落地方案，帮助团队更快判断方向，减少沟通、返工和无效开发
                 </p>
 
@@ -565,9 +580,9 @@ export default function HeroV2({
                   {skillTags.map((tag, index) => (
                     <span
                       key={tag}
-                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[8px] border border-white/[0.08] bg-white/[0.03] px-3 text-[12px] tracking-[0.24px] text-[#6f776b]`}
+                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[8px] border border-white/[0.08] bg-[#1f1f1f] px-3 text-[12px] tracking-[0.24px] text-[#b3b3b3]`}
                     >
-                      <span className="size-1 shrink-0 rounded-full bg-[#a6e22e]" aria-hidden="true" />
+                      <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
                       {tag}
                     </span>
                   ))}
@@ -576,10 +591,10 @@ export default function HeroV2({
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <a
                     href={primaryCtaHref}
-                    className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#a6e22e] pl-6 pr-2 font-bold text-[#030503] transition hover:bg-[#b8f24a] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505] sm:min-w-[148px]`}
+                    className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#1ed760] pl-6 pr-2 font-bold text-[#121212] transition hover:bg-[#32e06e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212] sm:min-w-[148px]`}
                   >
                     {primaryCtaLabel}
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#030503]/10">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#121212]/10">
                       <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none">
                         <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -588,7 +603,7 @@ export default function HeroV2({
                   <a
                     href={RESUME_HREF}
                     download
-                    className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-lg border border-white/[0.12] bg-transparent px-6 font-medium text-[#f2f5ef] transition hover:border-[#a6e22e]/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]`}
+                    className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-lg border border-white/[0.12] bg-transparent px-6 font-medium text-[#fdfdfd] transition hover:border-[#1ed760]/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760]`}
                   >
                     下载简历
                     <span aria-hidden="true">↓</span>

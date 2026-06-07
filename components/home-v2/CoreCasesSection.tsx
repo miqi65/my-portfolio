@@ -79,7 +79,7 @@ const cases: CaseItem[] = [
 
 function CasePreview({ item }: { item: CaseItem }) {
   return (
-    <div className="h-full overflow-hidden rounded-[8px] bg-[#F4F4EF]">
+    <div className="h-full overflow-hidden rounded-[8px] bg-[#1f1f1f]">
       <img
         src={item.previewMain}
         alt={item.previewAlt}
@@ -106,13 +106,13 @@ function CaseCard({ item }: { item: CaseItem }) {
       }
     >
       <div
-        className="case-card-surface group flex min-h-[440px] origin-center flex-col overflow-hidden rounded-[8px] border border-[rgba(16,24,40,0.08)] bg-white px-4 py-4 shadow-[0_16px_48px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,transform] duration-300 will-change-transform hover:border-[rgba(117,171,42,0.4)] hover:shadow-[0_24px_64px_rgba(15,23,42,0.1)] focus-within:border-[rgba(117,171,42,0.4)] focus-within:shadow-[0_24px_64px_rgba(15,23,42,0.1)] sm:px-6 motion-reduce:transition-none"
+        className="case-card-surface group flex min-h-[440px] origin-center flex-col overflow-hidden rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 py-4 shadow-[0_16px_48px_rgba(0,0,0,0.3)] transition-[border-color,box-shadow,transform] duration-300 will-change-transform hover:border-[rgba(30,215,96,0.4)] hover:shadow-[0_24px_64px_rgba(0,0,0,0.5)] focus-within:border-[rgba(30,215,96,0.4)] focus-within:shadow-[0_24px_64px_rgba(0,0,0,0.5)] sm:px-6 motion-reduce:transition-none"
         style={{ transform: 'scale(var(--case-scale))' }}
       >
         <div className="case-card-meta flex items-center gap-4">
           <p className="case-card-kicker text-[12px] font-semibold uppercase leading-4 tracking-normal">
-            <span className="number text-[#7FB12B]">{metaNum}</span>
-            <span className="text-[rgba(15,23,42,0.42)]"> / {metaName}</span>
+            <span className="number text-[#1ed760]">{metaNum}</span>
+            <span className="text-[rgba(255,255,255,0.48)]"> / {metaName}</span>
           </p>
         </div>
 
@@ -122,7 +122,7 @@ function CaseCard({ item }: { item: CaseItem }) {
 
         <h3
           id={`case-title-${item.num}`}
-          className={`case-card-title mt-9 min-h-8 text-[20px] font-semibold leading-6 tracking-normal text-[#101318] sm:text-[24px] sm:leading-7 ${
+          className={`case-card-title mt-9 min-h-8 text-[20px] font-semibold leading-6 tracking-normal text-[#fdfdfd] sm:text-[24px] sm:leading-7 ${
             item.num === '01' ? 'max-w-[360px]' : 'max-w-full'
           }`}
           style={{
@@ -137,7 +137,7 @@ function CaseCard({ item }: { item: CaseItem }) {
         </h3>
 
         <p
-          className="case-card-description mt-3 min-h-12 text-[12px] font-normal leading-5 text-[rgba(15,23,42,0.6)] sm:text-[14px] sm:leading-6"
+          className="case-card-description mt-3 min-h-12 text-[12px] font-normal leading-5 text-[#b3b3b3] sm:text-[14px] sm:leading-6"
           style={{
             display: '-webkit-box',
             WebkitLineClamp: 3,
@@ -152,20 +152,20 @@ function CaseCard({ item }: { item: CaseItem }) {
           {item.tags.map((tag) => (
             <span
               key={tag}
-              className="inline-flex h-6 items-center rounded-[8px] border border-[rgba(16,24,40,0.08)] bg-[#F8F7F3] px-3 text-[12px] leading-4 text-[rgba(15,23,42,0.55)]"
+              className="inline-flex h-6 items-center rounded-[8px] border border-white/[0.08] bg-[#1f1f1f] px-3 text-[12px] leading-4 text-[#cbcbcb]"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="case-card-info mt-3 grid grid-cols-3 gap-3 border-t border-[rgba(16,24,40,0.08)] pt-4">
+        <div className="case-card-info mt-3 grid grid-cols-3 gap-3 border-t border-white/[0.08] pt-4">
           {item.info.map((entry) => (
             <div key={entry.label} className="min-w-0">
-              <p className="case-card-info-label text-[12px] font-normal leading-4 text-[rgba(15,23,42,0.38)]">
+              <p className="case-card-info-label text-[12px] font-normal leading-4 text-[#7c7c7c]">
                 {entry.label}
               </p>
-              <p className="case-card-info-value mt-1 h-5 truncate text-[12px] font-medium leading-5 text-[#101318]">
+              <p className="case-card-info-value mt-1 h-5 truncate text-[12px] font-medium leading-5 text-[#fdfdfd]">
                 {entry.value}
               </p>
             </div>
@@ -174,7 +174,7 @@ function CaseCard({ item }: { item: CaseItem }) {
 
         <a
           href={item.href}
-          className="case-card-link mt-4 inline-flex min-h-12 items-center gap-1 self-start text-[14px] font-bold leading-5 text-[#7FB12B] transition duration-200 hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7FB12B] motion-reduce:transition-none motion-reduce:hover:translate-x-0"
+          className="case-card-link mt-4 inline-flex min-h-12 items-center gap-1 self-start text-[14px] font-bold leading-5 text-[#1ed760] transition duration-200 hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] motion-reduce:transition-none motion-reduce:hover:translate-x-0"
           aria-label={`查看案例：${item.name}`}
         >
           查看案例
@@ -234,28 +234,28 @@ export default function CoreCasesSection() {
     <section
       id="cases"
       data-section-id="cases"
-      className="relative scroll-mt-16 overflow-hidden border-b border-[rgba(16,24,40,0.08)] bg-[#F8F7F3] py-14 sm:py-20 lg:scroll-mt-0 lg:py-24"
+      className="relative scroll-mt-16 overflow-hidden border-b border-white/[0.08] bg-[#121212] py-14 sm:py-20 lg:scroll-mt-0 lg:py-24"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.025] [background-image:linear-gradient(to_right,rgba(15,23,42,0.45)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.45)_1px,transparent_1px)] [background-size:64px_64px]"
+        className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:64px_64px]"
       />
 
       <div className={`relative ${SECTION_CONTAINER}`}>
         <div className="max-w-[820px]">
           <div className="flex items-center gap-2">
-            <span className="text-[12px] font-bold leading-4 tracking-widest text-[#7FB12B]">02</span>
-            <span className="text-[12px] font-normal uppercase leading-4 tracking-widest text-[rgba(15,23,42,0.48)]">
+            <span className="text-[12px] font-bold leading-4 tracking-widest text-[#1ed760]">02</span>
+            <span className="text-[12px] font-normal uppercase leading-4 tracking-widest text-[#7c7c7c]">
               / Selected Work
             </span>
           </div>
-          <h2 className="pt-4 text-[40px] font-black leading-[48px] tracking-normal text-[#111111] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
-            <span className="text-[#7FB12B]">核心</span>项目
+          <h2 className="pt-4 text-[40px] font-black leading-[48px] tracking-normal text-[#fdfdfd] sm:text-[48px] sm:leading-[56px] lg:text-[56px] lg:leading-[64px]">
+            <span className="text-[#1ed760]">核心</span>项目
           </h2>
-          <p className="mt-2 text-[16px] font-semibold leading-6 text-[#252A31]">
+          <p className="mt-2 text-[16px] font-semibold leading-6 text-[#fdfdfd]">
             复杂系统 / AI 应用 / 产品验证
           </p>
-          <p className="mt-1 max-w-[760px] text-[14px] leading-6 text-[rgba(15,23,42,0.58)] sm:text-[16px] sm:leading-7">
+          <p className="mt-1 max-w-[760px] text-[14px] leading-6 text-[#b3b3b3] sm:text-[16px] sm:leading-7">
             用真实项目展示复杂系统、AI 应用和智能硬件产品从需求到方案落地的能力。
           </p>
         </div>

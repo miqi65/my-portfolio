@@ -271,7 +271,10 @@ export default function AboutMkSection() {
                 transition:
                   'transform 200ms cubic-bezier(0.3, 0, 0.4, 1), box-shadow 200ms cubic-bezier(0.3, 0, 0.4, 1)',
                 cursor: 'pointer',
+                width: '100%',
+                maxWidth: 'clamp(280px, 28vw, 420px)',
               }}
+              className="lg:mx-0"
               onMouseEnter={(e) => {
                 const card = e.currentTarget as HTMLElement
                 const glow = card.querySelector('.green-glow') as HTMLElement
@@ -360,7 +363,7 @@ export default function AboutMkSection() {
             </div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 0, paddingTop: '88px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 0, paddingTop: 0 }} className="lg:pt-[88px]">
             <div style={{ marginBottom: '32px' }}>
               <h3
                 style={{
