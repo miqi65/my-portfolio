@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
-import businessMapImage from './method-assets/ChatGPT_Image_2026_6_7__19_25_23__1_.png'
-import decisionTreeImage from './method-assets/ChatGPT_Image_2026_6_7__19_25_24__3_.png'
-import prototypeFlowImage from './method-assets/ChatGPT_Image_2026_6_7__19_25_25__5_.png'
-import riskTableImage from './method-assets/ChatGPT_Image_2026_6_7__19_25_28__7_.png'
+import businessMapImage from './method-assets/method-card-1.png'
+import decisionTreeImage from './method-assets/method-card-2.png'
+import prototypeFlowImage from './method-assets/method-card-3.png'
+import riskTableImage from './method-assets/method-card-4.png'
 
 const SPOTIFY_GREEN = '#1ed760'
 const NEAR_BLACK = '#121212'
