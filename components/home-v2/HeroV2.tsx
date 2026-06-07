@@ -5,8 +5,6 @@ import { Fragment, useEffect, useState } from 'react'
 
 const ASSET = '/images/home-v2/hero'
 const RESUME_HREF = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
-const HERO_BACKGROUND_GLOW = `${ASSET}/ellipse-1.png`
-
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
 const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
@@ -228,7 +226,12 @@ function FlowStepCard({
           {step.id}
         </p>
         <div className="flex h-8 shrink-0 items-center justify-center py-1">
-          <HeroIcon src={step.icon} size={32} className="size-8 object-contain" />
+          <HeroIcon
+            src={step.icon}
+            size={32}
+            className="size-8 object-contain"
+            tone="native"
+          />
         </div>
         <h3 className="shrink-0 text-center text-[13px] font-bold leading-5 text-[#fdfdfd]">{step.title}</h3>
         <ul className="mt-2 flex min-h-[72px] flex-1 flex-col gap-1">
@@ -454,8 +457,11 @@ export default function HeroV2({
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-120px] top-[-112px] z-0 h-[360px] w-[280px] bg-[length:100%_100%] bg-no-repeat opacity-40 sm:right-[-96px] sm:h-[520px] sm:w-[404px] sm:opacity-50 lg:right-0 lg:top-[-120px] lg:h-[572px] lg:w-[444px] lg:opacity-55"
-        style={{ backgroundImage: `url(${HERO_BACKGROUND_GLOW})` }}
+        className="pointer-events-none absolute right-[-120px] top-[-112px] z-0 h-[360px] w-[280px] bg-no-repeat opacity-40 sm:right-[-96px] sm:h-[520px] sm:w-[404px] sm:opacity-50 lg:right-0 lg:top-[-120px] lg:h-[572px] lg:w-[444px] lg:opacity-55"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at 72% 30%, rgba(30, 215, 96, 0.42) 0%, rgba(30, 215, 96, 0.22) 24%, rgba(30, 215, 96, 0.1) 40%, rgba(30, 215, 96, 0) 68%), radial-gradient(circle at 78% 24%, rgba(166, 226, 46, 0.16) 0%, rgba(166, 226, 46, 0.08) 18%, rgba(166, 226, 46, 0) 56%)',
+        }}
       />
       <header className="relative z-20 border-b border-white/[0.08] bg-[rgba(8,8,8,0.45)] shadow-[0_1px_0_rgba(255,255,255,0.04)] backdrop-blur-[24px] backdrop-saturate-150">
         <div className={`${HERO_CONTAINER} flex h-16 items-center justify-between gap-4`}>
