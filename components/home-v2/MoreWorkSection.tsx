@@ -83,7 +83,7 @@ function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.5, delay: index * 0.04 }}
-      className="group flex h-full min-h-[404px] flex-col overflow-hidden rounded-[6px] border border-[#313131] bg-[#121212] p-3 transition duration-300 hover:border-[#4D4D4D] hover:bg-[#181818] motion-reduce:transition-none"
+      className="group flex h-full min-h-[428px] flex-col overflow-hidden rounded-[18px] border border-white/[0.04] bg-[#1F1F1F] p-3 shadow-[rgba(0,0,0,0.3)_0px_8px_8px] transition duration-300 hover:-translate-y-1 hover:bg-[#252525] hover:shadow-[rgba(0,0,0,0.5)_0px_8px_24px] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
       style={{ fontFamily: SPOTIFY_FONT_STACK }}
     >
       <a
@@ -91,7 +91,7 @@ function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
         className="flex h-full min-h-0 w-full flex-col text-left"
         aria-label={`查看案例：${work.title}`}
       >
-        <div className="relative h-[208px] overflow-hidden rounded-[4px] bg-[#1F1F1F]">
+        <div className="relative h-[214px] overflow-hidden rounded-[14px] bg-[#252525]">
           <Image
             src={work.image}
             alt={work.imageAlt}
@@ -100,12 +100,12 @@ function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
             sizes="(min-width: 1280px) 24vw, (min-width: 768px) 46vw, 100vw"
           />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(18,18,18,0.02)_0%,rgba(18,18,18,0.12)_55%,rgba(18,18,18,0.42)_100%)]" />
-          <div className="absolute left-3 top-3 text-[10px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
+          <div className="absolute left-4 top-4 text-[10px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
             {work.num}
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-1 flex-col pb-1 pt-4">
+        <div className="flex min-w-0 flex-1 flex-col px-1 pb-1 pt-5">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               <h3
@@ -130,10 +130,10 @@ function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
           </div>
 
           <p
-            className="mt-4 max-w-[26ch] text-[13px] leading-[1.6] text-[#B3B3B3]"
+            className="mt-4 text-[13px] leading-[1.6] text-[#B3B3B3] [--desc-lines:3] xl:max-w-[26ch] xl:[--desc-lines:2]"
             style={{
               display: '-webkit-box',
-              WebkitLineClamp: 2,
+              WebkitLineClamp: 'var(--desc-lines)',
               WebkitBoxOrient: 'vertical',
               overflow: 'hidden',
             }}
@@ -165,50 +165,46 @@ export default function MoreWorkSection() {
       />
 
       <div className={`relative ${SECTION_CONTAINER}`}>
-        <div className="space-y-8">
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.5 }}
-            className="max-w-[840px]"
-          >
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
-                04
-              </span>
-              <span className="text-[11px] font-normal uppercase leading-4 tracking-[0.2em] text-[#a7aea1]">
-                / More Work
-              </span>
-            </div>
-            <h2 className="mt-4 text-[clamp(44px,4.4vw,64px)] font-black leading-[0.96] tracking-[-0.04em] text-[#f2f5ef] sm:max-w-[720px]">
-              更多<span className="text-[#1ed760]">项目</span>经验
-            </h2>
-            <p className="mt-4 max-w-[760px] text-[15px] leading-7 text-[#b3b3b3] sm:text-[16px] sm:leading-7">
-              覆盖仓储系统、数据大屏、轨迹定位和 5G 消息交互规范等不同复杂度的产品场景。
-            </p>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.5 }}
+          className="relative overflow-hidden rounded-[24px] bg-[#181818] px-6 py-6 shadow-[rgba(0,0,0,0.5)_0px_8px_24px] sm:px-8 sm:py-8 lg:px-10 lg:py-10"
+          style={{ fontFamily: SPOTIFY_FONT_STACK }}
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,215,96,0.08),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(83,157,245,0.04),transparent_28%)]"
+          />
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.55 }}
-            className="relative overflow-hidden rounded-[8px] border border-[#2A2A2A] bg-[#121212] px-4 py-4 sm:px-5 sm:py-5 lg:px-6 lg:py-6"
-            style={{ fontFamily: SPOTIFY_FONT_STACK }}
-          >
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,215,96,0.06),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(83,157,245,0.03),transparent_28%)]"
-            />
+          <div className="relative space-y-8">
+            <motion.div className="max-w-[840px]">
+              <div className="flex items-center gap-2">
+                <span className="text-[11px] font-bold uppercase leading-4 tracking-[0.2em] text-[#1ed760]">
+                  04
+                </span>
+                <span className="text-[11px] font-normal uppercase leading-4 tracking-[0.2em] text-[#a7aea1]">
+                  / More Work
+                </span>
+              </div>
+              <h2 className="mt-4 text-[clamp(44px,4.4vw,64px)] font-black leading-[0.96] tracking-[-0.04em] text-[#f2f5ef] sm:max-w-[720px]">
+                更多<span className="text-[#1ed760]">项目</span>经验
+              </h2>
+              <p className="mt-4 max-w-[760px] text-[15px] leading-7 text-[#b3b3b3] sm:text-[16px] sm:leading-7">
+                覆盖仓储系统、数据大屏、轨迹定位和 5G 消息交互规范等不同复杂度的产品场景。
+              </p>
+            </motion.div>
 
-            <div className="relative grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-              {works.map((work, index) => (
-                <WorkCard key={work.title} work={work} index={index} />
-              ))}
+            <div className="pt-2">
+              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                {works.map((work, index) => (
+                  <WorkCard key={work.title} work={work} index={index} />
+                ))}
+              </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )
