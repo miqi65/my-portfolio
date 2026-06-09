@@ -8,6 +8,7 @@ import ContactCTA from './ContactCTA'
 import { MethodSection } from './MethodSection'
 import ProblemSolvingSection from './ProblemSolvingSection'
 import MoreWorkSection from './MoreWorkSection'
+import { GlobalFlowBackdrop } from './SectionGradientBackdrop'
 
 export default function HomeV2() {
   useEffect(() => {
@@ -49,7 +50,7 @@ export default function HomeV2() {
   }, [])
 
   return (
-    <main data-miki-v2 className="min-h-screen overflow-x-hidden bg-[#F8F7F3] text-[#111111]">
+    <main data-miki-v2 className="relative min-h-screen overflow-x-hidden bg-[#F8F7F3] text-[#111111]">
       <style jsx global>{`
         html:has(body.miki-v2-preview),
         body.miki-v2-preview,
@@ -133,14 +134,16 @@ export default function HomeV2() {
           font-weight: 500 !important;
         }
       `}</style>
-
-      <HeroV2 />
-      <CoreCasesSection />
-      <ProblemSolvingSection />
-      <MoreWorkSection />
-      <MethodSection />
-      <AboutMkSection />
-      <ContactCTA />
+      <GlobalFlowBackdrop />
+      <div className="relative z-10">
+        <HeroV2 />
+        <CoreCasesSection />
+        <ProblemSolvingSection />
+        <MoreWorkSection />
+        <MethodSection />
+        <AboutMkSection />
+        <ContactCTA />
+      </div>
     </main>
   )
 }

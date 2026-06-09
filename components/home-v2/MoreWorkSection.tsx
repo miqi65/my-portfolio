@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 
 type WorkCardItem = {
   num: '01' | '02' | '03' | '04'
@@ -153,6 +154,7 @@ export default function MoreWorkSection() {
       data-section-id="more-work"
       className="relative scroll-mt-16 overflow-hidden border-b border-[#222222] bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
     >
+      <SectionGradientBackdrop variant="more-work" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

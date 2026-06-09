@@ -2,6 +2,7 @@
 
 import type { CSSProperties, PointerEvent } from 'react'
 import { useRef } from 'react'
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 
 type CaseMeta = {
   label: string
@@ -236,6 +237,7 @@ export default function CoreCasesSection() {
       data-section-id="cases"
       className="relative scroll-mt-16 overflow-hidden border-b border-white/[0.08] bg-[#121212] py-14 sm:py-20 lg:scroll-mt-0 lg:py-24"
     >
+      <SectionGradientBackdrop variant="cases" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-[0.03] [background-image:linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:64px_64px]"

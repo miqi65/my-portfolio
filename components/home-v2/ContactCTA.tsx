@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 
 const resumeHref = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
 const portfolioHref = '/杨蜜萁_9年经验产品设计_13622962831.pdf'
@@ -251,10 +252,7 @@ export default function ContactCTA() {
       transition={{ duration: 0.52, ease: [0.16, 1, 0.3, 1] }}
       className="relative scroll-mt-16 overflow-hidden bg-[#121212] px-5 py-[92px] text-[#FDFDFD] sm:px-8 lg:scroll-mt-0 lg:px-12 xl:px-16"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(30,215,96,0.12),transparent_22%),radial-gradient(circle_at_top_left,rgba(255,255,255,0.03),transparent_24%)] opacity-80"
-      />
+      <SectionGradientBackdrop variant="contact" />
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid gap-12 lg:grid-cols-[minmax(300px,0.45fr)_minmax(0,1fr)] lg:gap-20">

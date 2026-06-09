@@ -1,5 +1,7 @@
 'use client'
 
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+
 const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
 type ProblemCard = {
@@ -94,6 +96,7 @@ export default function ProblemSolvingSection() {
       data-section-id="problems"
       className="relative scroll-mt-16 overflow-hidden bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
     >
+      <SectionGradientBackdrop variant="problems" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"

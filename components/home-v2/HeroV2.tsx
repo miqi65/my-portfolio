@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { Fragment, useEffect, useState } from 'react'
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 
 const ASSET = '/images/home-v2/hero'
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
@@ -424,6 +425,7 @@ export default function HeroV2({
       data-section-id="intro"
       className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#121212] text-[#fdfdfd] lg:scroll-mt-0"
     >
+      <SectionGradientBackdrop variant="hero" />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-[-120px] top-[-112px] z-0 h-[360px] w-[280px] bg-no-repeat opacity-40 sm:right-[-96px] sm:h-[520px] sm:w-[404px] sm:opacity-50 lg:right-0 lg:top-[-120px] lg:h-[572px] lg:w-[444px] lg:opacity-55"

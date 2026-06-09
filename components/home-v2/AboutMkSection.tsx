@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ImageWithFallback } from './figma/ImageWithFallback'
+import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 
 const PORTRAIT_URL =
   '/images/home-v2/about-portrait.png'
@@ -211,10 +212,11 @@ export default function AboutMkSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.52, ease: [0.16, 1, 0.3, 1] }}
-      className="scroll-mt-16 border-b border-[#222222] bg-[#121212] px-5 py-20 text-[#f2f5ef] sm:px-8 lg:scroll-mt-0 lg:px-12 lg:py-28 xl:px-16"
+      className="relative scroll-mt-16 overflow-hidden border-b border-[#222222] bg-[#121212] px-5 py-20 text-[#f2f5ef] sm:px-8 lg:scroll-mt-0 lg:px-12 lg:py-28 xl:px-16"
       style={{ fontFamily: "'Noto Sans SC', 'Inter', sans-serif" }}
     >
-      <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <SectionGradientBackdrop variant="about" />
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid gap-12 lg:grid-cols-[minmax(300px,0.45fr)_minmax(0,1fr)] lg:gap-20">
           <div className="flex flex-col gap-8">
             <div className="max-w-[840px]">
