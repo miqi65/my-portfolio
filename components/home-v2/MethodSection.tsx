@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
-import businessMapImage from './method-assets/method-card-1.png'
-import decisionTreeImage from './method-assets/method-card-2.png'
-import prototypeFlowImage from './method-assets/method-card-3.png'
-import riskTableImage from './method-assets/method-card-4.png'
+import methodCardOneImage from './method-assets/method-card-1-replacement.png'
+import methodCardTwoImage from './method-assets/method-card-2-replacement.png'
+import methodCardThreeImage from './method-assets/method-card-3-replacement.png'
+import methodCardFourImage from './method-assets/method-card-4-replacement.png'
 
 const SPOTIFY_GREEN = '#1ed760'
 const NEAR_BLACK = '#121212'
@@ -14,8 +14,27 @@ const MID_DARK = '#1f1f1f'
 const WHITE = '#ffffff'
 const SILVER = '#b3b3b3'
 const BORDER_GRAY = '#4d4d4d'
-const METHOD_IMAGE_FILTER = 'saturate(0.2) brightness(0.98) contrast(1.04)'
 const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
+const METHOD_IMAGE_FRAME_STYLE = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: '100%',
+  minHeight: 'clamp(140px, 14vw, 178px)',
+  background: '#050505',
+  borderRadius: 14,
+  border: `1px solid ${BORDER_GRAY}`,
+  overflow: 'hidden',
+  padding: 0,
+  boxSizing: 'border-box' as const,
+}
+const METHOD_REPLACEMENT_IMAGE_STYLE = {
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain' as const,
+  display: 'block',
+  filter: 'brightness(1.02) saturate(1.04) contrast(1.01)',
+}
 
 function useInView() {
   const ref = useRef<HTMLDivElement>(null)
@@ -160,103 +179,35 @@ function MethodCard({
       </div>
 
       {card.diagramType === 'map' ? (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            minHeight: 'clamp(140px, 14vw, 178px)',
-            background: MID_DARK,
-            borderRadius: 14,
-            border: `1px solid ${BORDER_GRAY}`,
-            overflow: 'hidden',
-          }}
-        >
+        <div style={METHOD_IMAGE_FRAME_STYLE}>
           <ImageWithFallback
-            src={businessMapImage.src}
-            alt="业务地图示意图"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: METHOD_IMAGE_FILTER,
-            }}
+            src={methodCardOneImage.src}
+            alt="业务拆解方法图"
+            style={METHOD_REPLACEMENT_IMAGE_STYLE}
           />
         </div>
       ) : card.diagramType === 'tree' ? (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            minHeight: 'clamp(140px, 14vw, 178px)',
-            background: MID_DARK,
-            borderRadius: 14,
-            border: `1px solid ${BORDER_GRAY}`,
-            overflow: 'hidden',
-          }}
-        >
+        <div style={METHOD_IMAGE_FRAME_STYLE}>
           <ImageWithFallback
-            src={decisionTreeImage.src}
-            alt="决策树示意图"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: METHOD_IMAGE_FILTER,
-            }}
+            src={methodCardTwoImage.src}
+            alt="方案判断方法图"
+            style={METHOD_REPLACEMENT_IMAGE_STYLE}
           />
         </div>
       ) : card.diagramType === 'flow' ? (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            minHeight: 'clamp(140px, 14vw, 178px)',
-            background: MID_DARK,
-            borderRadius: 14,
-            border: `1px solid ${BORDER_GRAY}`,
-            overflow: 'hidden',
-          }}
-        >
+        <div style={METHOD_IMAGE_FRAME_STYLE}>
           <ImageWithFallback
-            src={prototypeFlowImage.src}
-            alt="原型流程示意图"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: METHOD_IMAGE_FILTER,
-            }}
+            src={methodCardThreeImage.src}
+            alt="原型验证方法图"
+            style={METHOD_REPLACEMENT_IMAGE_STYLE}
           />
         </div>
       ) : card.diagramType === 'table' ? (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            height: '100%',
-            minHeight: 'clamp(140px, 14vw, 178px)',
-            background: MID_DARK,
-            borderRadius: 14,
-            border: `1px solid ${BORDER_GRAY}`,
-            overflow: 'hidden',
-          }}
-        >
+        <div style={METHOD_IMAGE_FRAME_STYLE}>
           <ImageWithFallback
-            src={riskTableImage.src}
-            alt="风险清单示意图"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              filter: METHOD_IMAGE_FILTER,
-            }}
+            src={methodCardFourImage.src}
+            alt="风险控制方法图"
+            style={METHOD_REPLACEMENT_IMAGE_STYLE}
           />
         </div>
       ) : null}

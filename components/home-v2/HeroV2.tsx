@@ -203,7 +203,7 @@ function FlowStepCard({
   className?: string
 }) {
   return (
-    <article className={`group flex h-[236px] min-w-0 w-full flex-col ${className}`}>
+    <article className={`group flex min-h-[280px] min-w-0 w-full flex-col sm:min-h-[236px] lg:h-[236px] lg:min-h-0 ${className}`}>
       <div
         className="flex h-full w-full flex-col rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 pb-4 pt-5 transition duration-200 group-hover:border-[#1ed760]/40 group-hover:bg-[#1f1f1f] group-hover:shadow-[0_0_28px_rgba(30,215,96,0.1)]"
       >
@@ -219,7 +219,7 @@ function FlowStepCard({
           />
         </div>
         <h3 className="shrink-0 text-center text-[13px] font-bold leading-5 text-[#fdfdfd]">{step.title}</h3>
-        <ul className="mt-2 flex min-h-[72px] flex-1 flex-col gap-1">
+        <ul className="mt-2 flex min-h-[104px] flex-1 flex-col gap-1 sm:min-h-[72px]">
           {step.items.map((item) => (
             <li key={item} className="flex gap-2 text-[11px] leading-4 text-[#b3b3b3]">
               <span className="mt-1 shrink-0 text-[8px] leading-none text-[#1ed760]">▸</span>
@@ -258,9 +258,9 @@ function FlowStepsRow() {
 
       {/* Mobile / tablet: horizontal scroll（不突破页面宽度） */}
       <div className="overflow-x-auto [scrollbar-width:none] lg:hidden [&::-webkit-scrollbar]:hidden">
-        <div className="flex w-max items-stretch gap-2 pr-4">
+        <div className="flex w-max snap-x snap-mandatory items-stretch gap-2 pr-4">
           {flowSteps.map((step) => (
-            <div key={step.id} className="w-[120px] shrink-0 sm:w-[124px]">
+            <div key={step.id} className="w-[160px] shrink-0 snap-start sm:w-[172px] md:w-[188px]">
               <FlowStepCard step={step} />
             </div>
           ))}
@@ -330,7 +330,12 @@ function CapabilityBar() {
               'lg:border-b-0',
             ].join(' ')}
           >
-            <HeroIcon src={card.icon} size={56} className="size-14 shrink-0 object-contain" />
+            <HeroIcon
+              src={card.icon}
+              size={56}
+              className="size-14 shrink-0 object-contain"
+              tone="native"
+            />
             <div className="flex min-w-0 flex-1 flex-col justify-center">
               <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-[1.6px] text-[#7c7c7c]">
                 {card.label}
