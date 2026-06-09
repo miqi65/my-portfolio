@@ -51,6 +51,21 @@ export default function HomeV2() {
   return (
     <main data-miki-v2 className="min-h-screen overflow-x-hidden bg-[#F8F7F3] text-[#111111]">
       <style jsx global>{`
+        html:has(body.miki-v2-preview),
+        body.miki-v2-preview,
+        html:has(body:has(main[data-miki-v2])),
+        body:has(main[data-miki-v2]) {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+        html:has(body.miki-v2-preview)::-webkit-scrollbar,
+        body.miki-v2-preview::-webkit-scrollbar,
+        html:has(body:has(main[data-miki-v2]))::-webkit-scrollbar,
+        body:has(main[data-miki-v2])::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+          display: none;
+        }
         body:has(main[data-miki-v2]) > header {
           display: none !important;
         }
