@@ -4,12 +4,11 @@ import Image from 'next/image'
 import { Fragment, useEffect, useState } from 'react'
 
 const ASSET = '/images/home-v2/hero'
-const RESUME_HREF = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
 const HERO_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
 const HERO_CTA_SIZE =
-  'inline-flex h-12 min-h-12 shrink-0 cursor-pointer items-center box-border py-0 text-[14px] leading-none'
+  'inline-flex h-[45px] min-h-[45px] shrink-0 cursor-pointer items-center box-border py-0 text-[14px] leading-none'
 
 const HERO_ICON_FILTER =
   'brightness(0) saturate(100%) invert(69%) sepia(94%) saturate(522%) hue-rotate(88deg) brightness(98%) contrast(95%)'
@@ -29,7 +28,7 @@ const heroIcons = {
     role: `${ASSET}/key-elements/icon-role.svg`,
     task: `${ASSET}/key-elements/icon-task.svg`,
     risk: `${ASSET}/key-elements/icon-risk.svg`,
-    verify: `${ASSET}/key-elements/icon-verify.png`,
+    verify: `${ASSET}/key-elements/icon-verify.svg`,
   },
   capability: {
     focus: `${ASSET}/capability/cap-focus.svg`,
@@ -83,28 +82,28 @@ const flowSteps: FlowStep[] = [
     id: '02',
     title: '流程拆解',
     items: ['业务流程梳理', '角色与任务映射', '信息流与数据流梳理'],
-    badge: '流程图 / 任务清单',
+    badge: '任务流程',
     icon: heroIcons.flow.step02,
   },
   {
     id: '03',
     title: '原型验证',
     items: ['低保真原型设计', '关键路径验证', '可用性快速测试'],
-    badge: '可验证 / 反馈记录',
+    badge: '验证/迭代',
     icon: heroIcons.flow.step03,
   },
   {
     id: '04',
     title: '风险识别',
     items: ['技术实现风险', '体验可行性风险', '人机协作边界校验'],
-    badge: '风险清单 / 应对策略',
+    badge: '应对风险策略',
     icon: heroIcons.flow.step04,
   },
   {
     id: '05',
     title: '决策支持',
     items: ['方案对比与取舍', '投入产出评估', '下一步行动建议'],
-    badge: '决策建议 / 路线图',
+    badge: '决策建议',
     icon: heroIcons.flow.step05,
   },
 ]
@@ -196,20 +195,6 @@ function HeroIcon({
   return <Image src={src} alt="" width={size} height={size} className={className} style={filterStyle ? { filter: filterStyle } : undefined} />
 }
 
-function FlowArrow() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4 shrink-0 text-[#1ed760]" fill="none">
-      <path
-        d="M4 8h7M9.5 4.5 13 8l-3.5 3.5"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.25"
-      />
-    </svg>
-  )
-}
-
 function FlowStepCard({
   step,
   className = '',
@@ -252,13 +237,12 @@ function FlowStepCard({
   )
 }
 
-const FLOW_ARROW_SLOT = 'w-4 shrink-0'
-const FLOW_STEP_DESKTOP_GRID = 'lg:grid-cols-[132px_1fr_132px_1fr_132px_1fr_132px_1fr_132px]'
+const FLOW_STEP_DESKTOP_GRID = 'lg:grid-cols-[124px_1fr_124px_1fr_124px_1fr_124px_1fr_124px]'
 
 function FlowStepsRow() {
   return (
     <>
-      {/* Desktop: card and arrow columns alternate so arrows stay centered in the interval. */}
+      {/* Desktop: keep spacer columns so card rhythm remains stable after removing connector arrows. */}
       <div className={`hidden w-full min-w-0 lg:grid lg:items-stretch ${FLOW_STEP_DESKTOP_GRID}`}>
         {flowSteps.map((step, index) => (
           <Fragment key={step.id}>
@@ -266,12 +250,7 @@ function FlowStepsRow() {
               <FlowStepCard step={step} />
             </div>
             {index < flowSteps.length - 1 ? (
-              <div
-                className="pointer-events-none flex min-w-0 items-center justify-center"
-                aria-hidden
-              >
-                <FlowArrow />
-              </div>
+              <div className="pointer-events-none min-w-0" aria-hidden />
             ) : null}
           </Fragment>
         ))}
@@ -280,17 +259,10 @@ function FlowStepsRow() {
       {/* Mobile / tablet: horizontal scroll（不突破页面宽度） */}
       <div className="overflow-x-auto [scrollbar-width:none] lg:hidden [&::-webkit-scrollbar]:hidden">
         <div className="flex w-max items-stretch gap-2 pr-4">
-          {flowSteps.map((step, index) => (
-            <Fragment key={step.id}>
-              <div className="w-[120px] shrink-0 sm:w-[124px]">
-                <FlowStepCard step={step} />
-              </div>
-              {index < flowSteps.length - 1 ? (
-                <div className={`flex ${FLOW_ARROW_SLOT} items-center justify-center self-center`}>
-                  <FlowArrow />
-                </div>
-              ) : null}
-            </Fragment>
+          {flowSteps.map((step) => (
+            <div key={step.id} className="w-[120px] shrink-0 sm:w-[124px]">
+              <FlowStepCard step={step} />
+            </div>
           ))}
         </div>
       </div>
@@ -307,19 +279,6 @@ function FlowDiagram() {
           <p className="mt-1 text-[13px] leading-5 text-[#b3b3b3]">
             从模糊需求到清晰方案，从原型验证到决策支持
           </p>
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className="font-['Space_Grotesk'] text-[9px] font-medium uppercase tracking-[1.44px] text-[#7c7c7c]">
-              Applied in
-            </span>
-            {appliedProjectTags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-md border border-white/[0.08] bg-[#1f1f1f] px-2 py-1 text-[10px] leading-[14px] text-[#cbcbcb]"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -336,7 +295,12 @@ function FlowDiagram() {
           <div className="grid min-w-0 flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-3">
             {keyElements.map((item) => (
               <div key={item.title} className="flex min-w-0 gap-2">
-                <HeroIcon src={item.icon} size={18} className="mt-0.5 size-[18px] shrink-0 object-contain" />
+                <HeroIcon
+                  src={item.icon}
+                  size={18}
+                  className="mt-0.5 size-[18px] shrink-0 object-contain"
+                  tone="native"
+                />
                 <div className="min-w-0">
                   <p className="text-[12px] font-bold leading-[18px] text-[#fdfdfd]">{item.title}</p>
                   <p className="mt-0.5 text-[10px] leading-[15px] text-[#b3b3b3]">{item.body}</p>
@@ -352,7 +316,7 @@ function FlowDiagram() {
 
 function CapabilityBar() {
   return (
-    <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#181818]">
+    <div className="overflow-hidden rounded-[8px] border border-white/[0.08] bg-[#181818]">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {capabilityCards.map((card, index) => (
           <div
@@ -548,7 +512,7 @@ export default function HeroV2({
       </header>
 
       <div className={`${HERO_CONTAINER} relative z-10 pb-12 pt-8 sm:pb-16 sm:pt-10 lg:pb-20 lg:pt-[88px]`}>
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[420px_minmax(0,1fr)] lg:items-start lg:gap-8 xl:gap-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[411px_minmax(0,1fr)] lg:items-start lg:gap-10 xl:gap-12">
           {/* 桌面：列宽仅由「高级产品设计师」决定；超出部分换行，余量给右侧流程图 */}
           <div className="relative w-full min-w-0 shrink-0">
             <div className="w-full lg:grid">
@@ -559,61 +523,62 @@ export default function HeroV2({
                 高级产品设计师
               </div>
               <div className="col-start-1 row-start-1 w-full min-w-0 break-words lg:w-0 lg:min-w-full lg:max-w-full">
-                <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[1.98px] text-[#7c7c7c]">
-                  <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
-                  Senior Product Designer
-                </p>
-
-                <h1 className="relative mt-3">
-                  <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
-                    高级产品设计师
-                  </span>
-                  <p className="hero-direction relative mt-1 text-[28px] font-normal leading-8 text-[#fdfdfd] sm:text-[32px] sm:leading-[40px]">
-                    <span className="block whitespace-nowrap">B端 / AI应用 / 智能硬件方向</span>
+                <div className="w-full max-w-[380px] lg:max-w-[411px]">
+                  <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[1.98px] text-[#bdbdbd]">
+                    <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
+                    Senior Product Designer
                   </p>
-                </h1>
 
-                <p className="mt-4 text-[20px] font-medium leading-8 sm:text-[24px]">
-                  <span className="text-[#1ed760]">AI辅助</span>
-                  <span className="text-[#b3b3b3]"> 原型验证与产品方案落地</span>
-                </p>
+                  <h1 className="relative mt-3">
+                    <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
+                      高级产品设计师
+                    </span>
+                    <p className="hero-direction relative mt-2 text-[28px] font-normal leading-8 text-[#fdfdfd] sm:text-[32px] sm:leading-[40px] lg:text-[40px] lg:leading-[46px]">
+                      <span className="block whitespace-nowrap">B端 / AI应用 /</span>
+                      <span className="block whitespace-nowrap">智能硬件方向</span>
+                    </p>
+                  </h1>
 
-                <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#b3b3b3] lg:max-w-none lg:text-pretty">
-                  把模糊需求变成可验证原型、清晰决策和可落地方案，帮助团队更快判断方向，减少沟通、返工和无效开发
-                </p>
+                  <p className="mt-5 text-[20px] font-medium leading-8 sm:text-[24px] sm:leading-[30px]">
+                    <span className="text-[#1ed760]">AI辅助</span>
+                    <span className="text-[#bdbdbd]"> 产品验证与方案落地</span>
+                  </p>
 
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {skillTags.map((tag, index) => (
-                    <span
-                      key={tag}
-                      className={`${index > 3 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center gap-2 rounded-[8px] border border-white/[0.08] bg-[#1f1f1f] px-3 text-[12px] tracking-[0.24px] text-[#b3b3b3]`}
+                  <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#bdbdbd] lg:max-w-[380px]">
+                    把复杂、模糊的产品需求，拆解为清晰流程、可演示原型、人机协作边界与可落地设计方案，帮助团队更快判断方向，减少沟通成本、返工成本和无效开发
+                  </p>
+
+                  <div className="mt-5 flex max-w-[380px] flex-wrap gap-2">
+                    {skillTags.map((tag, index) => (
+                      <span
+                        key={tag}
+                        className={`${index > 4 ? 'hidden sm:inline-flex' : 'inline-flex'} h-7 items-center rounded-[8px] border border-[rgba(234,234,234,0.12)] bg-[rgba(255,255,255,0.03)] px-3 text-[12px] tracking-[0.24px] text-[#bdbdbd]`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                    <a
+                      href={primaryCtaHref}
+                      className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-[8px] border border-transparent bg-[#1ed760] pl-6 pr-3 font-bold tracking-[1.4px] text-[#121212] transition hover:bg-[#32e06e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212] sm:min-w-[172px]`}
                     >
-                      <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                  <a
-                    href={primaryCtaHref}
-                    className={`${HERO_CTA_SIZE} group justify-between gap-3 rounded-lg border border-transparent bg-[#1ed760] pl-6 pr-2 font-bold text-[#121212] transition hover:bg-[#32e06e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212] sm:min-w-[148px]`}
-                  >
-                    {primaryCtaLabel}
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-md bg-[#121212]/10">
-                      <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none">
-                        <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                  </a>
-                  <a
-                    href={RESUME_HREF}
-                    download
-                    className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-lg border border-white/[0.12] bg-transparent px-6 font-medium text-[#fdfdfd] transition hover:border-[#1ed760]/40 hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760]`}
-                  >
-                    下载简历
-                    <span aria-hidden="true">↓</span>
-                  </a>
+                      {primaryCtaLabel}
+                      <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-[#121212]/5">
+                        <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none">
+                          <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </a>
+                    <a
+                      href="#method"
+                      className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-[8px] border border-[#616161] bg-transparent px-6 font-medium tracking-[1.4px] text-[#fdfdfd] transition hover:border-[#fdfdfd] hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760]`}
+                    >
+                      查看方法
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
