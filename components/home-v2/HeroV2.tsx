@@ -140,27 +140,23 @@ const keyElements = [
 
 const capabilityCards = [
   {
-    label: 'PROJECT',
-    title: 'AI 视觉质检系统',
-    body: '工业 AI / HMI / 机器视觉结果呈现',
+    title: '复杂产品 0→1',
+    body: '从模糊需求推进到可讨论方案',
     icon: heroIcons.capability.focus,
   },
   {
-    label: 'IMPACT',
-    title: 'PCB 系统 90+ 产线验证',
-    body: '管理效率 +28%，工程导入耗时 -17%',
+    title: 'AI / 硬件体验',
+    body: '处理算法/设备/数据与人工确认边界',
     icon: heroIcons.capability.experience,
   },
   {
-    label: 'METHOD',
-    title: '跨团队协同',
-    body: '流程、原型、Design System 与交付协作',
+    title: 'B端系统重构',
+    body: '梳理问题/需求与解决方案',
     icon: heroIcons.capability.method,
   },
   {
-    label: 'OUTPUT',
-    title: '方案落地闭环',
-    body: '决策依据、风险清单、路线图与交互规范',
+    title: '方案 Demo 验证',
+    body: '让协作团队先看懂再投入',
     icon: heroIcons.capability.delivery,
   },
 ] as const
@@ -322,7 +318,7 @@ function CapabilityBar() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {capabilityCards.map((card, index) => (
           <div
-            key={card.label}
+            key={card.title}
             className={[
               'flex min-h-[128px] items-start gap-3 border-white/[0.08] p-5 sm:p-8 lg:px-6',
               index < capabilityCards.length - 1 ? 'border-b sm:border-b-0' : '',
@@ -339,9 +335,6 @@ function CapabilityBar() {
               tone="native"
             />
             <div className="flex min-w-0 flex-1 flex-col justify-center">
-              <p className="text-[10px] font-medium uppercase tracking-[1.6px] text-[#7c7c7c]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>
-                {card.label}
-              </p>
               <p className="mt-2 text-[15px] font-bold leading-5 text-[#fdfdfd]">{card.title}</p>
               <p className="mt-2 text-[13px] leading-6 text-[#b3b3b3]">{card.body}</p>
             </div>
