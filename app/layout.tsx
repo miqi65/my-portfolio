@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: '从早期 IoT 冷库监控，到百万级 WMS/MES 系统重构，再到工业 AI 视觉质检机的软硬一体 HMI。',
   openGraph: {
     title: '杨蜜萁 — 高级产品设计师',
-    description: '11年复杂B端与智能硬件设计经验，工业AI / WMS / HMI 全端设计师。',
+    description: '10+年复杂B端与智能硬件设计经验，工业AI / WMS / HMI 全端设计师。',
     url: 'https://miki-portfolio.vercel.app',
     siteName: 'Miki Portfolio',
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '杨蜜萁 — 高级产品设计师',
-    description: '11年复杂B端与智能硬件设计经验，工业AI / WMS / HMI 全端设计师。',
+    description: '10+年复杂B端与智能硬件设计经验，工业AI / WMS / HMI 全端设计师。',
     images: ['/images/p1-cover-hero.png'],
   },
 }

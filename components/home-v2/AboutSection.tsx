@@ -27,7 +27,7 @@ const aboutCards = [
 
 const capabilityRows = [
   ['Focus', 'B端复杂系统 / AI应用 / 智能硬件'],
-  ['Experience', '8+ 年产品设计经验'],
+  ['Experience', '10+ 年产品设计经验'],
   ['Method', 'AI 辅助 × 结构化设计'],
   ['Delivery', '从原型到落地的闭环'],
 ] as const

@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 const stats = [
-  { number: '12', unit: '年', label: '行业经验', sub: 'Years of Experience' },
+  { number: '10+', unit: '年', label: '行业经验', sub: 'Years of Experience' },
   { number: '60', unit: '+', label: '落地项目', sub: 'Delivered Projects' },
   { number: '3', unit: '项', label: '国家级奖项', sub: 'National Awards' },
 ]

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
 import { V2_ENGLISH_UI_STACK } from './fontStacks'
 
-const resumeHref = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
-const portfolioHref = '/杨蜜萁_9年经验产品设计_13622962831.pdf'
+const resumeHref = '/杨蜜萁_高级UI_UX设计师.pdf'
+const portfolioHref = '/杨蜜萁_作品集与简历_2026.docx'
 const emailHref = 'mailto:miqi0723@gmail.com?subject=%E4%BA%A7%E5%93%81%E9%AA%8C%E8%AF%81%E6%B2%9F%E9%80%9A'
 const wechatHref = 'mailto:miqi0723@gmail.com?subject=%E5%BE%AE%E4%BF%A1%E8%81%94%E7%B3%BB%20%E4%BA%8C%E7%BB%B4%E7%A0%81'
 
@@ -119,15 +119,18 @@ function ActionCard({
   title,
   description,
   href,
+  download = false,
 }: {
   number: string
   title: string
   description: string
   href: string
+  download?: boolean
 }) {
   return (
     <a
       href={href}
+      download={download || undefined}
       className="group relative overflow-hidden rounded-[16px] border border-transparent bg-[#181818] p-6 text-left shadow-[rgba(0,0,0,0.3)_0px_8px_8px] transition duration-200 hover:-translate-y-1 motion-reduce:transform-none motion-reduce:transition-none"
     >
       <div
@@ -157,10 +160,10 @@ function ActionCard({
 function ActionCardGrid() {
   return (
     <div className="grid gap-3 sm:grid-cols-2">
-      <ActionCard number="01" title="下载简历 PDF" description="获取我的完整经历与技能" href={resumeHref} />
-      <ActionCard number="02" title="查看 PDF 作品集" description="完整项目案例与设计思考" href={portfolioHref} />
+      <ActionCard number="01" title="下载简历 PDF" description="获取我的完整经历与技能" href={resumeHref} download />
+      <ActionCard number="02" title="下载作品集文档" description="完整项目案例与设计思考" href={portfolioHref} download />
       <ActionCard number="03" title="发送邮件" description="与我聊聊你的项目或岗位" href={emailHref} />
-      <ActionCard number="04" title="微信联系" description="添加微信，快速沟通" href={wechatHref} />
+      <ActionCard number="04" title="微信联系" description="微信号：_00Y0Y_" href={wechatHref} />
     </div>
   )
 }
@@ -213,7 +216,7 @@ function ContactInfoPanel() {
 
       <div className="mt-5 divide-y divide-white/[0.08]">
         <ContactInfoRow label="Email" value="miqi0723@gmail.com" href="mailto:miqi0723@gmail.com" />
-        <ContactInfoRow label="WeChat" value="邮件联系后发送二维码" valueClassName="text-[#B3B3B3]" />
+        <ContactInfoRow label="WeChat" value="_00Y0Y_" valueClassName="text-[#1ED760]" />
         <ContactInfoRow label="Location" value="Shenzhen / Zhuhai" valueClassName="text-[#B3B3B3]" />
         <ContactInfoRow
           label="Availability"

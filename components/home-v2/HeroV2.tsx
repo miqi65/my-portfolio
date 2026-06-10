@@ -152,14 +152,14 @@ const capabilityCards = [
     icon: heroIcons.capability.experience,
   },
   {
-    label: 'ROLE',
-    title: '从需求拆解到原型验证',
+    label: 'METHOD',
+    title: '跨团队协同',
     body: '流程、原型、Design System 与交付协作',
     icon: heroIcons.capability.method,
   },
   {
     label: 'OUTPUT',
-    title: '可落地方案闭环',
+    title: '方案落地闭环',
     body: '决策依据、风险清单、路线图与交互规范',
     icon: heroIcons.capability.delivery,
   },
@@ -277,9 +277,9 @@ function FlowDiagram() {
     <div className="w-full min-w-0 overflow-hidden rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 py-6 shadow-[0_0_80px_rgba(30,215,96,0.04)] sm:px-5 sm:py-8 lg:px-6 lg:py-8">
       <div className="border-b border-white/[0.08] pb-4">
         <div className="min-w-0">
-          <h2 className="text-[18px] font-bold leading-6 text-[#fdfdfd]">产品验证流程</h2>
+          <h2 className="text-[18px] font-bold leading-6 text-[#fdfdfd]">产品验证路径</h2>
           <p className="mt-1 text-[13px] leading-5 text-[#b3b3b3]">
-            从模糊需求到清晰方案，从原型验证到决策支持
+            把需求判断、流程拆解、原型验证和决策收敛成一条可讨论的路径
           </p>
         </div>
       </div>
@@ -291,8 +291,8 @@ function FlowDiagram() {
       <div className="mt-6 hidden border-t border-white/[0.08] pt-5 sm:block">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:gap-6">
           <div className="shrink-0 text-[10px] leading-[15px] text-[#7c7c7c]">
-            <p>关键要素</p>
-            <p className="pt-0.5">全程贯穿</p>
+            <p>关注点</p>
+            <p className="pt-0.5">每一步都对齐</p>
           </div>
           <div className="grid min-w-0 flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5 lg:gap-3">
             {keyElements.map((item) => (
