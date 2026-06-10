@@ -44,7 +44,7 @@ const cases: CaseItem[] = [
   },
   {
     num: '02',
-    metaLabel: '02 / MES',
+    metaLabel: '02 / Saas',
     name: 'PCB 制造执行系统',
     description:
       '把老旧生产系统重构为可监控、可协同、可追踪的制造执行平台，提升生产过程透明度与协作效率。',
@@ -65,7 +65,7 @@ const cases: CaseItem[] = [
     name: 'AI 时代设计交付链路重构',
     description:
       '把设计规则、组件规范和原型验证转化为 Agent 可读取的交付系统，减少标注、解释和样式返工。',
-    tags: ['Design System', 'Figma MCP', 'Cursor'],
+    tags: ['Design System', 'Figma MCP', 'AI工作流'],
     href: '/Project_P3/index.html',
     previewMain: '/Project_P3/images/p3image-3.png',
     previewAlt: 'AI 设计交付链路重构封面图',

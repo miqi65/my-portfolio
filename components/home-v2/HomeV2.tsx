@@ -17,6 +17,7 @@ export default function HomeV2() {
     const previousDisplay = globalNavbar?.style.display
 
     document.body.classList.add('miki-v2-preview')
+    document.documentElement.classList.add('miki-v2-preview-html')
 
     if (globalNavbar) {
       globalNavbar.style.display = 'none'
@@ -24,7 +25,7 @@ export default function HomeV2() {
 
     const syncNavCurrent = () => {
       const hash = window.location.hash
-        const activeHash = ['#cases', '#method', '#about', '#contact'].includes(hash) ? hash : '#intro'
+      const activeHash = ['#cases', '#method', '#about', '#contact'].includes(hash) ? hash : '#intro'
 
       document.querySelectorAll<HTMLAnchorElement>('[data-miki-nav-href]').forEach((link) => {
         if (link.dataset.mikiNavHref === activeHash) {
@@ -41,6 +42,7 @@ export default function HomeV2() {
 
     return () => {
       document.body.classList.remove('miki-v2-preview')
+      document.documentElement.classList.remove('miki-v2-preview-html')
       window.clearTimeout(navSyncTimeout)
       window.removeEventListener('hashchange', syncNavCurrent)
 
@@ -57,20 +59,30 @@ export default function HomeV2() {
       style={{ fontFamily: V2_MIXED_TEXT_STACK }}
     >
       <style jsx global>{`
-        html:has(body.miki-v2-preview),
+        html.miki-v2-preview-html,
+        html.miki-v2-preview-html body,
         body.miki-v2-preview,
         html:has(body:has(main[data-miki-v2])),
         body:has(main[data-miki-v2]) {
-          scrollbar-width: none;
+          scrollbar-width: none !important;
+          scrollbar-color: transparent transparent !important;
           -ms-overflow-style: none;
         }
-        html:has(body.miki-v2-preview)::-webkit-scrollbar,
+        html.miki-v2-preview-html::-webkit-scrollbar,
+        html.miki-v2-preview-html body::-webkit-scrollbar,
         body.miki-v2-preview::-webkit-scrollbar,
         html:has(body:has(main[data-miki-v2]))::-webkit-scrollbar,
         body:has(main[data-miki-v2])::-webkit-scrollbar {
-          width: 0;
-          height: 0;
-          display: none;
+          width: 0 !important;
+          height: 0 !important;
+          display: none !important;
+        }
+        html.miki-v2-preview-html::-webkit-scrollbar-thumb,
+        html.miki-v2-preview-html body::-webkit-scrollbar-thumb,
+        body.miki-v2-preview::-webkit-scrollbar-thumb,
+        html:has(body:has(main[data-miki-v2]))::-webkit-scrollbar-thumb,
+        body:has(main[data-miki-v2])::-webkit-scrollbar-thumb {
+          background: transparent !important;
         }
         body:has(main[data-miki-v2]) > header {
           display: none !important;
@@ -119,7 +131,7 @@ export default function HomeV2() {
           height: 2px;
           width: 100%;
           border-radius: 2px;
-          background: #a6e22e;
+          background: #1ed760;
           opacity: 1 !important;
         }
         body:has(#cases:target) nav[aria-label='移动端导航'] a[data-miki-nav-href],
@@ -134,8 +146,8 @@ export default function HomeV2() {
         body:has(#method:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#method'],
         body:has(#about:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#about'],
         body:has(#contact:target) nav[aria-label='移动端导航'] a[data-miki-nav-href='#contact'] {
-          background: rgba(166, 226, 46, 0.12) !important;
-          color: #a6e22e !important;
+          background: rgba(30, 215, 96, 0.12) !important;
+          color: #1ed760 !important;
           font-weight: 500 !important;
         }
       `}</style>

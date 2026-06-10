@@ -424,7 +424,7 @@ export default function HeroV2({
     <section
       id="intro"
       data-section-id="intro"
-      className="relative w-full scroll-mt-16 overflow-x-hidden bg-[#121212] text-[#fdfdfd] lg:scroll-mt-0"
+      className="relative w-full scroll-mt-0 overflow-x-hidden bg-[#121212] text-[#fdfdfd]"
     >
       <SectionGradientBackdrop variant="hero" />
       <div
@@ -521,14 +521,14 @@ export default function HeroV2({
 
       <div className={`${HERO_CONTAINER} relative z-10 pb-12 pt-8 sm:pb-16 sm:pt-10 lg:pb-20 lg:pt-[88px]`}>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[411px_minmax(0,1fr)] lg:items-start lg:gap-10 xl:gap-12">
-          {/* 桌面：列宽仅由「高级 UI/UX 设计师」决定；超出部分换行，余量给右侧流程图 */}
+          {/* 桌面：列宽仅由「高级UI/UX设计师」决定；超出部分换行，余量给右侧流程图 */}
           <div className="relative w-full min-w-0 shrink-0">
             <div className="w-full lg:grid">
               <div
                 aria-hidden
                 className="pointer-events-none invisible col-start-1 row-start-1 hidden whitespace-nowrap text-[36px] font-bold tracking-normal sm:text-[48px] lg:block lg:text-[56px]"
               >
-                高级 UI/UX 设计师
+                高级UI/UX设计师
               </div>
               <div className="col-start-1 row-start-1 w-full min-w-0 break-words lg:w-0 lg:min-w-full lg:max-w-full">
                 <div className="w-full max-w-[380px] lg:max-w-[411px]">
@@ -539,7 +539,7 @@ export default function HeroV2({
 
                   <h1 className="relative mt-3">
                     <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
-                      高级 UI/UX 设计师
+                      高级UI/UX设计师
                     </span>
                     <p className="hero-direction relative mt-2 text-[28px] font-normal leading-8 text-[#fdfdfd] sm:text-[32px] sm:leading-[40px] lg:text-[40px] lg:leading-[46px]">
                       <span className="block whitespace-nowrap">B端 / AI应用 /</span>
