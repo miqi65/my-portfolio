@@ -55,13 +55,14 @@ export default function HomeV2() {
   return (
     <main
       data-miki-v2
-      className="relative min-h-screen overflow-x-hidden bg-[#F8F7F3] text-[#111111]"
+      className="relative min-h-screen overflow-x-hidden bg-[#121212] text-[#f2f5ef]"
       style={{ fontFamily: V2_MIXED_TEXT_STACK }}
     >
       <style jsx global>{`
         html.miki-v2-preview-html,
         html.miki-v2-preview-html body,
         body.miki-v2-preview {
+          background: #121212 !important;
           scrollbar-width: none !important;
           scrollbar-color: transparent transparent !important;
           -ms-overflow-style: none;

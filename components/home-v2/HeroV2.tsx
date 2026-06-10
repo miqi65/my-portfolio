@@ -447,7 +447,7 @@ export default function HeroV2({
                 className="whitespace-nowrap text-[14px] font-bold tracking-[0.6px] text-[#fdfdfd] sm:text-[15px]"
                 style={{ fontFamily: V2_ENGLISH_UI_STACK }}
               >
-                Miki- portfolio
+                Miki Portfolio
               </p>
               <p className="text-[9px] font-medium tracking-[1.26px] text-[#7c7c7c]">SENIOR PRODUCT DESIGNER</p>
             </div>
@@ -533,31 +533,31 @@ export default function HeroV2({
                 aria-hidden
                 className="pointer-events-none invisible col-start-1 row-start-1 hidden whitespace-nowrap text-[36px] font-bold tracking-normal sm:text-[48px] lg:block lg:text-[56px]"
               >
-                高级UI/UX设计师
+                高级UI/UX设计
               </div>
               <div className="col-start-1 row-start-1 w-full min-w-0 break-words lg:w-0 lg:min-w-full lg:max-w-full">
-                <div className="w-full max-w-[380px] lg:max-w-[411px]">
+                <div className="w-full max-w-[352px] sm:max-w-[380px] lg:max-w-[411px]">
                   <p className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] uppercase tracking-[1.98px] text-[#bdbdbd]">
                     <span className="size-1 shrink-0 rounded-full bg-[#1ed760]" aria-hidden="true" />
                     Senior Product Designer
                   </p>
 
                   <h1 className="relative mt-3">
-                    <span className="relative block whitespace-nowrap text-[36px] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
-                      高级UI/UX设计师
+                    <span className="relative block whitespace-nowrap text-[clamp(32px,8.5vw,56px)] font-bold leading-[1.05] tracking-normal text-[#fdfdfd] sm:text-[48px] lg:text-[56px]">
+                      高级UI/UX设计
                     </span>
-                    <p className="hero-direction relative mt-2 text-[28px] font-normal leading-8 text-[#fdfdfd] sm:text-[32px] sm:leading-[40px] lg:text-[40px] lg:leading-[46px]">
+                    <p className="hero-direction relative mt-2 text-[25px] font-normal leading-[1.15] text-[#fdfdfd] sm:text-[32px] sm:leading-[40px] lg:text-[40px] lg:leading-[46px]">
                       <span className="block whitespace-nowrap">B端 / AI应用 /</span>
                       <span className="block whitespace-nowrap">智能硬件方向</span>
                     </p>
                   </h1>
 
-                  <p className="mt-5 text-[20px] font-medium leading-8 sm:text-[24px] sm:leading-[30px]">
+                  <p className="mt-4 text-[20px] font-medium leading-8 text-[#c9c9c9] sm:mt-5 sm:text-[24px] sm:leading-[30px]">
                     <span className="text-[#1ed760]">AI辅助</span>
-                    <span className="text-[#bdbdbd]"> 产品验证与方案落地</span>
+                    <span className="text-[#c9c9c9]"> 产品验证与方案落地</span>
                   </p>
 
-                  <p className="mt-4 max-w-[32rem] text-[14px] leading-5 text-[#bdbdbd] lg:max-w-[380px]">
+                  <p className="mt-4 max-w-[32rem] text-[14px] leading-6 text-[#c9c9c9] lg:max-w-[380px]">
                     把复杂、模糊的产品需求，拆解为清晰流程、可演示原型、人机协作边界与可落地设计方案，帮助团队更快判断方向，减少沟通成本、返工成本和无效开发
                   </p>
 
