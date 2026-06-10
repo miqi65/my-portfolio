@@ -61,42 +61,36 @@ export default function HomeV2() {
       <style jsx global>{`
         html.miki-v2-preview-html,
         html.miki-v2-preview-html body,
-        body.miki-v2-preview,
-        html:has(body:has(main[data-miki-v2])),
-        body:has(main[data-miki-v2]) {
+        body.miki-v2-preview {
           scrollbar-width: none !important;
           scrollbar-color: transparent transparent !important;
           -ms-overflow-style: none;
         }
         html.miki-v2-preview-html::-webkit-scrollbar,
         html.miki-v2-preview-html body::-webkit-scrollbar,
-        body.miki-v2-preview::-webkit-scrollbar,
-        html:has(body:has(main[data-miki-v2]))::-webkit-scrollbar,
-        body:has(main[data-miki-v2])::-webkit-scrollbar {
+        body.miki-v2-preview::-webkit-scrollbar {
           width: 0 !important;
           height: 0 !important;
           display: none !important;
         }
         html.miki-v2-preview-html::-webkit-scrollbar-thumb,
         html.miki-v2-preview-html body::-webkit-scrollbar-thumb,
-        body.miki-v2-preview::-webkit-scrollbar-thumb,
-        html:has(body:has(main[data-miki-v2]))::-webkit-scrollbar-thumb,
-        body:has(main[data-miki-v2])::-webkit-scrollbar-thumb {
+        body.miki-v2-preview::-webkit-scrollbar-thumb {
           background: transparent !important;
         }
-        body:has(main[data-miki-v2]) > header {
+        body.miki-v2-preview > header {
           display: none !important;
         }
         @media (pointer: fine) {
-          body:has(main[data-miki-v2]),
-          body:has(main[data-miki-v2]) *,
-          body:has(main[data-miki-v2]) *::before,
-          body:has(main[data-miki-v2]) *::after {
+          body.miki-v2-preview,
+          body.miki-v2-preview *,
+          body.miki-v2-preview *::before,
+          body.miki-v2-preview *::after {
             cursor: auto !important;
           }
-          body:has(main[data-miki-v2]) a,
-          body:has(main[data-miki-v2]) button,
-          body:has(main[data-miki-v2]) select {
+          body.miki-v2-preview a,
+          body.miki-v2-preview button,
+          body.miki-v2-preview select {
             cursor: pointer !important;
           }
         }
