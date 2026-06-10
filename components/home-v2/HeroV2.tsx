@@ -16,7 +16,7 @@ const HERO_ICON_FILTER =
   'brightness(0) saturate(100%) invert(69%) sepia(94%) saturate(522%) hue-rotate(88deg) brightness(98%) contrast(95%)'
 
 const heroIcons = {
-  logo: `${ASSET}/logo.svg`,
+  logo: '/images/home-v2/hero/logo.svg',
   glow: `${ASSET}/glow-ellipse.png`,
   flow: {
     step01: `${ASSET}/flow/step-01.svg`,
@@ -443,7 +443,12 @@ export default function HeroV2({
           >
             <HeroIcon src={heroIcons.logo} size={32} className="size-8" tone="native" />
             <div>
-              <p className="text-[15px] font-bold tracking-[1.2px] text-[#fdfdfd]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>MIKI</p>
+              <p
+                className="whitespace-nowrap text-[14px] font-bold tracking-[0.6px] text-[#fdfdfd] sm:text-[15px]"
+                style={{ fontFamily: V2_ENGLISH_UI_STACK }}
+              >
+                Miki- portfolio
+              </p>
               <p className="text-[9px] font-medium tracking-[1.26px] text-[#7c7c7c]">SENIOR PRODUCT DESIGNER</p>
             </div>
           </a>
