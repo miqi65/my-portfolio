@@ -4,6 +4,8 @@ node_modules*/
 
 # Next.js build output
 .next
+.next-dev
+.next-build-*
 out
 
 # Environment variables

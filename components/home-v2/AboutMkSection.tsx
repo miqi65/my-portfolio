@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_ENGLISH_UI_STACK, V2_MIXED_TEXT_STACK } from './fontStacks'
 
 const PORTRAIT_URL =
   '/images/home-v2/about-portrait.png'
@@ -73,7 +74,7 @@ function SkillTag({ label }: { label: string }) {
         display: 'inline-block',
         transition: 'all 140ms cubic-bezier(0.3, 0, 0.4, 1)',
         cursor: 'pointer',
-        fontFamily: "'Noto Sans SC', 'Inter', sans-serif",
+        fontFamily: V2_MIXED_TEXT_STACK,
         lineHeight: 1.33,
         textTransform: 'uppercase',
         letterSpacing: '1.6px',
@@ -163,7 +164,7 @@ function TimelineItem({
           style={{
             fontSize: '12px',
             color: COLORS.silver,
-            fontFamily: "'Inter', sans-serif",
+            fontFamily: V2_ENGLISH_UI_STACK,
             fontWeight: 700,
             letterSpacing: '0.04em',
             marginBottom: '4px',
@@ -213,7 +214,7 @@ export default function AboutMkSection() {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.52, ease: [0.16, 1, 0.3, 1] }}
       className="relative scroll-mt-16 overflow-hidden border-b border-[#222222] bg-[#121212] px-5 py-20 text-[#f2f5ef] sm:px-8 lg:scroll-mt-0 lg:px-12 lg:py-28 xl:px-16"
-      style={{ fontFamily: "'Noto Sans SC', 'Inter', sans-serif" }}
+      style={{ fontFamily: V2_MIXED_TEXT_STACK }}
     >
       <SectionGradientBackdrop variant="about" />
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -224,7 +225,7 @@ export default function AboutMkSection() {
                 <span
                   style={{
                     fontSize: '11px',
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: V2_ENGLISH_UI_STACK,
                     fontWeight: 700,
                     color: COLORS.spotifyGreen,
                     letterSpacing: '0.2em',
@@ -237,7 +238,7 @@ export default function AboutMkSection() {
                 <span
                   style={{
                     fontSize: '11px',
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: V2_ENGLISH_UI_STACK,
                     fontWeight: 400,
                     color: COLORS.nearWhite,
                     letterSpacing: '0.2em',
@@ -251,7 +252,7 @@ export default function AboutMkSection() {
               <h2
                 style={{
                   fontSize: 'clamp(44px, 4.4vw, 64px)',
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: V2_ENGLISH_UI_STACK,
                   fontWeight: 900,
                   color: COLORS.white,
                   lineHeight: 0.96,
@@ -338,7 +339,7 @@ export default function AboutMkSection() {
               >
                 <div
                   style={{
-                    fontFamily: "'Dancing Script', cursive",
+                    fontFamily: V2_ENGLISH_UI_STACK,
                     fontSize: '28px',
                     fontWeight: 700,
                     color: COLORS.white,
@@ -351,7 +352,7 @@ export default function AboutMkSection() {
                 </div>
                 <div
                   style={{
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: V2_ENGLISH_UI_STACK,
                     fontSize: '10px',
                     fontWeight: 700,
                     color: COLORS.silver,

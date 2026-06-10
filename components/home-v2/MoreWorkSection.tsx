@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_MIXED_TEXT_STACK } from './fontStacks'
 
 type WorkCardItem = {
   num: '01' | '02' | '03' | '04'
@@ -14,9 +15,6 @@ type WorkCardItem = {
   imageAlt: string
   previewPosition?: 'object-center' | 'object-top'
 }
-
-const SPOTIFY_FONT_STACK =
-  '"CircularSp","SpotifyMixUI","SF Pro Display","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif'
 
 const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
@@ -85,7 +83,7 @@ function WorkCard({ work, index }: { work: WorkCardItem; index: number }) {
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.5, delay: index * 0.04 }}
       className="group flex h-full min-h-[428px] flex-col overflow-hidden rounded-[18px] border border-white/[0.04] bg-[#1F1F1F] p-3 shadow-[rgba(0,0,0,0.3)_0px_8px_8px] transition duration-300 hover:-translate-y-1 hover:bg-[#252525] hover:shadow-[rgba(0,0,0,0.5)_0px_8px_24px] motion-reduce:transition-none motion-reduce:hover:translate-y-0"
-      style={{ fontFamily: SPOTIFY_FONT_STACK }}
+      style={{ fontFamily: V2_MIXED_TEXT_STACK }}
     >
       <a
         href={work.href}
@@ -173,7 +171,7 @@ export default function MoreWorkSection() {
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.5 }}
           className="relative overflow-hidden rounded-[24px] bg-[#181818] px-6 py-6 shadow-[rgba(0,0,0,0.5)_0px_8px_24px] sm:px-8 sm:py-8 lg:px-10 lg:py-10"
-          style={{ fontFamily: SPOTIFY_FONT_STACK }}
+          style={{ fontFamily: V2_MIXED_TEXT_STACK }}
         >
           <div
             aria-hidden="true"

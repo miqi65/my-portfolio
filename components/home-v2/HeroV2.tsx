@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Fragment, useEffect, useState } from 'react'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_ENGLISH_UI_STACK } from './fontStacks'
 
 const ASSET = '/images/home-v2/hero'
 /** 1280 内容区，与 v2 其他 section 留白节奏一致 */
@@ -208,7 +209,7 @@ function FlowStepCard({
       <div
         className="flex h-full w-full flex-col rounded-[8px] border border-white/[0.08] bg-[#181818] px-4 pb-4 pt-5 transition duration-200 group-hover:border-[#1ed760]/40 group-hover:bg-[#1f1f1f] group-hover:shadow-[0_0_28px_rgba(30,215,96,0.1)]"
       >
-        <p className="font-['Space_Grotesk'] text-[11px] font-medium leading-4 tracking-[0.88px] text-[#1ed760]">
+        <p className="text-[11px] font-medium leading-4 tracking-[0.88px] text-[#1ed760]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>
           {step.id}
         </p>
         <div className="flex h-8 shrink-0 items-center justify-center py-1">
@@ -261,7 +262,7 @@ function FlowStepsRow() {
       <div className="overflow-x-auto [scrollbar-width:none] lg:hidden [&::-webkit-scrollbar]:hidden">
         <div className="flex w-max snap-x snap-mandatory items-stretch gap-2 pr-4">
           {flowSteps.map((step) => (
-            <div key={step.id} className="w-[160px] shrink-0 snap-start sm:w-[172px] md:w-[188px]">
+            <div key={step.id} className="w-[132px] shrink-0 snap-start">
               <FlowStepCard step={step} />
             </div>
           ))}
@@ -338,7 +339,7 @@ function CapabilityBar() {
               tone="native"
             />
             <div className="flex min-w-0 flex-1 flex-col justify-center">
-              <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase tracking-[1.6px] text-[#7c7c7c]">
+              <p className="text-[10px] font-medium uppercase tracking-[1.6px] text-[#7c7c7c]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>
                 {card.label}
               </p>
               <p className="mt-2 text-[15px] font-bold leading-5 text-[#fdfdfd]">{card.title}</p>
@@ -442,7 +443,7 @@ export default function HeroV2({
           >
             <HeroIcon src={heroIcons.logo} size={32} className="size-8" tone="native" />
             <div>
-              <p className="font-['Space_Grotesk'] text-[15px] font-bold tracking-[1.2px] text-[#fdfdfd]">MIKI</p>
+              <p className="text-[15px] font-bold tracking-[1.2px] text-[#fdfdfd]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>MIKI</p>
               <p className="text-[9px] font-medium tracking-[1.26px] text-[#7c7c7c]">SENIOR PRODUCT DESIGNER</p>
             </div>
           </a>
@@ -580,10 +581,14 @@ export default function HeroV2({
                     </a>
                     <a
                       href="#method"
-                      className={`${HERO_CTA_SIZE} justify-center gap-2 rounded-[8px] border border-[#616161] bg-transparent px-6 font-medium tracking-[1.4px] text-[#fdfdfd] transition hover:border-[#fdfdfd] hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760]`}
+                      className={`${HERO_CTA_SIZE} justify-between gap-3 rounded-[8px] border border-[#616161] bg-transparent pl-6 pr-3 font-medium tracking-[1.4px] text-[#fdfdfd] transition hover:border-[#fdfdfd] hover:bg-white/[0.04] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1ed760] sm:min-w-[172px]`}
                     >
-                      查看方法
-                      <span aria-hidden="true">→</span>
+                      <span>查看方法</span>
+                      <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-white/[0.06]">
+                        <svg aria-hidden="true" viewBox="0 0 16 16" className="size-4" fill="none">
+                          <path d="M3 8h9M8.5 3.5 13 8l-4.5 4.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                     </a>
                   </div>
                 </div>

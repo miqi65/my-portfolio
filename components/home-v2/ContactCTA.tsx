@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_ENGLISH_UI_STACK } from './fontStacks'
 
 const resumeHref = '/杨蜜萁_高级UI_UX设计师_13622962831.pdf'
 const portfolioHref = '/杨蜜萁_9年经验产品设计_13622962831.pdf'
@@ -29,7 +30,7 @@ function ContactSectionHeader() {
       <span
         style={{
           fontSize: '11px',
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: V2_ENGLISH_UI_STACK,
           fontWeight: 700,
           color: '#1ED760',
           letterSpacing: '0.2em',
@@ -42,7 +43,7 @@ function ContactSectionHeader() {
       <span
         style={{
           fontSize: '11px',
-          fontFamily: "'Inter', sans-serif",
+          fontFamily: V2_ENGLISH_UI_STACK,
           fontWeight: 400,
           color: '#B3B3B3',
           letterSpacing: '0.2em',
@@ -62,13 +63,13 @@ function SignatureBlock() {
       <div className="leading-none">
         <span
           style={{ fontFamily: "'Dancing Script', cursive" }}
-          className="block text-[52px] font-semibold italic leading-none text-[#1ED760] sm:text-[56px]"
+          className="block text-[52px] font-semibold italic leading-none text-[#FDFDFD] sm:text-[56px]"
         >
           Miki
         </span>
       </div>
       <div className="pb-1">
-        <div className="text-[14px] font-semibold text-[#1ED760]">Product Designer</div>
+        <div className="text-[14px] font-semibold text-[#FDFDFD]">Product Designer</div>
         <div className="mt-2 text-[14px] leading-7 text-[#B3B3B3]">
           10+ 年产品体验设计经验
           <br />

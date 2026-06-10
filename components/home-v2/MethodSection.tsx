@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { ImageWithFallback } from './figma/ImageWithFallback'
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_MIXED_TEXT_STACK } from './fontStacks'
 import methodCardOneImage from './method-assets/method-card-1-replacement.png'
 import methodCardTwoImage from './method-assets/method-card-2-replacement.png'
 import methodCardThreeImage from './method-assets/method-card-3-replacement.png'
@@ -231,7 +232,7 @@ export function MethodSection() {
       id="method"
       data-section-id="method"
       className="relative scroll-mt-16 overflow-hidden bg-[#121212] py-16 text-[#f2f5ef] sm:py-20 lg:scroll-mt-0 lg:py-[88px]"
-      style={{ fontFamily: 'system-ui, -apple-system, sans-serif' }}
+      style={{ fontFamily: V2_MIXED_TEXT_STACK }}
     >
       <SectionGradientBackdrop variant="method" />
       <div

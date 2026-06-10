@@ -1,6 +1,7 @@
 'use client'
 
 import { SectionGradientBackdrop } from './SectionGradientBackdrop'
+import { V2_ENGLISH_UI_STACK } from './fontStacks'
 
 const SECTION_CONTAINER = 'mx-auto w-full max-w-[1280px] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16'
 
@@ -74,7 +75,7 @@ function ProblemTrack({ card }: { card: ProblemCard }) {
             {card.number}
           </span>
           <div className="min-w-0">
-            <p className="font-['Space_Grotesk'] text-[10px] font-medium uppercase leading-4 tracking-[0.22em] text-[#a7aea1]">
+            <p className="text-[10px] font-medium uppercase leading-4 tracking-[0.22em] text-[#a7aea1]" style={{ fontFamily: V2_ENGLISH_UI_STACK }}>
               {card.englishTitle}
             </p>
             <h3 className="mt-2 text-[22px] font-bold leading-[1.12] tracking-[-0.03em] text-[#f2f5ef] sm:text-[24px]">
