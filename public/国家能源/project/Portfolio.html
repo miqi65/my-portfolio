@@ -35,67 +35,169 @@
     overflow-x: hidden;
   }
 
-  /* ── MIKI NAV (homepage-style) ── */
-  #miki-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 600;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 24px;
-    mix-blend-mode: difference;
-    transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
+  /* ── NAVBAR (homepage-style) ───────────────────────────── */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 16px 24px;
+    background: rgba(8, 8, 8, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
   }
-  #miki-nav.nav-hidden { transform: translateY(-110%); }
-  .miki-logo {
-    display: inline-flex; align-items: center;
-    min-height: 44px; min-width: 44px; text-decoration: none;
+  .nav a { text-decoration: none; }
+  .nav-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.2s;
   }
-  .miki-logo img { height: 28px; width: auto; display: block; }
-  .miki-nav-links { display: flex; align-items: center; gap: 32px; }
-  .miki-nav-links a {
-    color: #fff; text-decoration: none;
-    font-size: 18px; font-weight: 400; transition: opacity 0.2s;
+  .nav-logo:hover { opacity: 0.72; }
+  .nav-logo:focus-visible,
+  .nav-links a:focus-visible,
+  .nav-toggle:focus-visible,
+  .nav-overlay-links a:focus-visible {
+    outline: 2px solid #1ed760;
+    outline-offset: 4px;
+    border-radius: 8px;
+    opacity: 1;
   }
-  .miki-nav-links a:hover { opacity: 0.6; }
-  .miki-burger {
-    display: none; flex-direction: column;
-    justify-content: center; align-items: center;
-    width: 32px; height: 44px; gap: 5px;
-    background: none; border: none; cursor: pointer; padding: 0;
+  .nav-mark {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: block;
   }
-  .miki-burger span {
-    display: block; width: 24px; height: 2px; background: #fff;
+  .nav-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+  .nav-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #fdfdfd;
+    white-space: nowrap;
+  }
+  .nav-subtitle {
+    font-size: 9px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #7c7c7c;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .nav-links a {
+    position: relative;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.is-active,
+  .nav-links a[aria-current="page"] {
+    color: #fdfdfd;
+  }
+  .nav-links a.is-active::after,
+  .nav-links a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: #1ed760;
+  }
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    padding: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: #fdfdfd;
     transform-origin: center;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-  .miki-burger.open .b1 { transform: rotate(45deg) translate(5px, 5px); }
-  .miki-burger.open .b2 { opacity: 0; transform: scaleX(0); }
-  .miki-burger.open .b3 { transform: rotate(-45deg) translate(5px, -5px); }
-  .miki-overlay {
-    position: fixed; inset: 0; z-index: 590;
+  .nav-toggle.open .b1 { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open .b2 { opacity: 0; transform: scaleX(0); }
+  .nav-toggle.open .b3 { transform: translateY(-6px) rotate(-45deg); }
+  .nav-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #000;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(0.23,1,0.32,1);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .miki-overlay.open { opacity: 1; pointer-events: auto; }
-  .miki-overlay-nav {
-    display: flex; flex-direction: column;
-    align-items: center; gap: 40px;
+  .nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
   }
-  .miki-overlay-nav a {
-    color: #fff; text-decoration: none;
-    font-size: 32px; font-weight: 400; transition: opacity 0.2s;
+  .nav-overlay-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
-  .miki-overlay-nav a:hover { opacity: 0.5; }
+  .nav-overlay-links a {
+    color: #fdfdfd;
+    font-size: 32px;
+    font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
+    font-weight: 400;
+    transition: opacity 0.2s;
+  }
+  .nav-overlay-links a:hover {
+    opacity: 0.5;
+  }
   @media (max-width: 767px) {
-    .miki-nav-links { display: none; }
-    .miki-burger { display: flex; }
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
   }
   @media (min-width: 768px) {
-    #miki-nav { padding: 24px 48px; }
+    .nav { padding-left: 48px; padding-right: 48px; }
   }
   @media (min-width: 1280px) {
-    #miki-nav { padding: 24px 160px; }
+    .nav { padding-left: 160px; padding-right: 160px; }
   }
 
   /* ── SECTION RHYTHM ── */
@@ -529,26 +631,34 @@
 <body>
 
 <!-- MIKI NAV -->
-<header id="miki-nav">
-  <a href="/" class="miki-logo" aria-label="返回主页">
-    <img src="/images/miki_logo.svg" alt="miki" />
+<header class="nav" aria-label="主导航">
+  <a href="/" class="nav-logo" aria-label="返回首页 — Miki Portfolio">
+    <img class="nav-mark" src="/images/home-v2/hero/logo.svg" alt="" aria-hidden="true">
+    <span class="nav-copy">
+      <span class="nav-title">Miki Portfolio</span>
+      <span class="nav-subtitle">SENIOR PRODUCT DESIGNER</span>
+    </span>
   </a>
-  <nav class="miki-nav-links">
-    <a href="/">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
-  <button class="miki-burger" id="mikiBurger" aria-label="打开菜单">
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navOverlay">
     <span class="b1"></span>
     <span class="b2"></span>
     <span class="b3"></span>
   </button>
 </header>
-<div class="miki-overlay" id="mikiOverlay">
-  <nav class="miki-overlay-nav">
-    <a href="/">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <nav class="nav-overlay-links" aria-label="移动端导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
 </div>
 
@@ -1087,49 +1197,39 @@
 </script>
 <script>
 (function () {
-  var nav = document.getElementById('miki-nav');
-  var burger = document.getElementById('mikiBurger');
-  var overlay = document.getElementById('mikiOverlay');
-  var lastY = 0;
-  var menuOpen = false;
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('navOverlay');
+  if (!toggle || !overlay) return;
 
-  window.addEventListener('scroll', function () {
-    var y = window.scrollY;
-    var diff = y - lastY;
-    if (y < 80) {
-      nav.classList.remove('nav-hidden');
-    } else if (diff > 6) {
-      nav.classList.add('nav-hidden');
-      if (menuOpen) closeMenu();
-    } else if (diff < -6) {
-      nav.classList.remove('nav-hidden');
-    }
-    lastY = y;
-  }, { passive: true });
+  function openMenu() {
+    toggle.classList.add('open');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', '关闭菜单');
+    document.body.style.overflow = 'hidden';
+  }
 
-  burger.addEventListener('click', function () {
-    menuOpen ? closeMenu() : openMenu();
+  function closeMenu() {
+    toggle.classList.remove('open');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', '打开菜单');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function () {
+    overlay.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   overlay.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', closeMenu);
   });
 
-  function openMenu() {
-    menuOpen = true;
-    burger.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    burger.setAttribute('aria-label', '关闭菜单');
-  }
-
-  function closeMenu() {
-    menuOpen = false;
-    burger.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    burger.setAttribute('aria-label', '打开菜单');
-  }
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeMenu();
+  });
 })();
 </script>
 </body>

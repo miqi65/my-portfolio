@@ -13,27 +13,34 @@
 <body>
 
 <!-- ═══════════════ MIKI NAV ════════════════════════════ -->
-<header id="miki-nav">
-  <a href="/" class="miki-logo" aria-label="返回主页">
-    <img src="../../../images/miki_logo.svg" alt="miki" />
+<header class="nav" aria-label="主导航">
+  <a href="/" class="nav-logo" aria-label="返回首页 — Miki Portfolio">
+    <img class="nav-mark" src="/images/home-v2/hero/logo.svg" alt="" aria-hidden="true">
+    <span class="nav-copy">
+      <span class="nav-title">Miki Portfolio</span>
+      <span class="nav-subtitle">SENIOR PRODUCT DESIGNER</span>
+    </span>
   </a>
-  <nav class="miki-nav-links">
-    <a href="/">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
-  <button class="miki-burger" id="mikiBurger" aria-label="打开菜单">
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navOverlay">
     <span class="b1"></span>
     <span class="b2"></span>
     <span class="b3"></span>
   </button>
-  <div class="nav-progress"></div>
 </header>
-<div class="miki-overlay" id="mikiOverlay">
-  <nav class="miki-overlay-nav">
-    <a href="/">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <nav class="nav-overlay-links" aria-label="移动端导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
 </div>
 
@@ -430,49 +437,39 @@
 <script src="main.js"></script>
 <script>
 (function () {
-  var nav = document.getElementById('miki-nav');
-  var burger = document.getElementById('mikiBurger');
-  var overlay = document.getElementById('mikiOverlay');
-  var lastY = 0;
-  var menuOpen = false;
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('navOverlay');
+  if (!toggle || !overlay) return;
 
-  window.addEventListener('scroll', function () {
-    var y = window.scrollY;
-    var diff = y - lastY;
-    if (y < 80) {
-      nav.classList.remove('nav-hidden');
-    } else if (diff > 6) {
-      nav.classList.add('nav-hidden');
-      if (menuOpen) closeMenu();
-    } else if (diff < -6) {
-      nav.classList.remove('nav-hidden');
-    }
-    lastY = y;
-  }, { passive: true });
+  function openMenu() {
+    toggle.classList.add('open');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', '关闭菜单');
+    document.body.style.overflow = 'hidden';
+  }
 
-  burger.addEventListener('click', function () {
-    menuOpen ? closeMenu() : openMenu();
+  function closeMenu() {
+    toggle.classList.remove('open');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', '打开菜单');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', function () {
+    overlay.classList.contains('open') ? closeMenu() : openMenu();
   });
 
   overlay.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', closeMenu);
   });
 
-  function openMenu() {
-    menuOpen = true;
-    burger.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    burger.setAttribute('aria-label', '关闭菜单');
-  }
-
-  function closeMenu() {
-    menuOpen = false;
-    burger.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    burger.setAttribute('aria-label', '打开菜单');
-  }
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeMenu();
+  });
 })();
 </script>
 </body>

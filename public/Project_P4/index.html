@@ -46,49 +46,169 @@ button:focus-visible {
   border-radius: 3px;
 }
 
-/* ── NAVBAR ── */
-.navbar {
+/* ── NAVBAR (homepage-style) ───────────────────────────── */
+.nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 80px;
-  background: rgba(5, 11, 16, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255,255,255,0.07);
-  transition: background 0.3s ease;
+  gap: 24px;
+  padding: 16px 24px;
+  background: rgba(8, 8, 8, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
-
-.navbar-logo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 36px;
-  font-weight: 600;
+.nav a { text-decoration: none; }
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
   color: #fff;
   text-decoration: none;
-  line-height: 1;
+  transition: opacity 0.2s;
 }
-
-.navbar-links {
+.nav-logo:hover { opacity: 0.72; }
+.nav-logo:focus-visible,
+.nav-links a:focus-visible,
+.nav-toggle:focus-visible,
+.nav-overlay-links a:focus-visible {
+  outline: 2px solid #1ed760;
+  outline-offset: 4px;
+  border-radius: 8px;
+  opacity: 1;
+}
+.nav-mark {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: block;
+}
+.nav-copy {
   display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.nav-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #fdfdfd;
+  white-space: nowrap;
+}
+.nav-subtitle {
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7c7c7c;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.nav-links a {
+  position: relative;
+  color: #b3b3b3;
+  font-size: 14px;
+  font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-bottom: 4px;
+  transition: color 0.2s;
+}
+.nav-links a:hover,
+.nav-links a.is-active,
+.nav-links a[aria-current="page"] {
+  color: #fdfdfd;
+}
+.nav-links a.is-active::after,
+.nav-links a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: #1ed760;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fdfdfd;
+  transform-origin: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.nav-toggle.open .b1 { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.open .b2 { opacity: 0; transform: scaleX(0); }
+.nav-toggle.open .b3 { transform: translateY(-6px) rotate(-45deg); }
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.nav-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.nav-overlay-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 32px;
 }
-
-.navbar-links a {
+.nav-overlay-links a {
+  color: #fdfdfd;
+  font-size: 32px;
   font-family: 'PingFang SC', 'Noto Sans SC', sans-serif;
-  font-size: 16px;
   font-weight: 400;
-  color: var(--ink-3);
-  text-decoration: none;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s;
 }
-
-.navbar-links a:hover {
-  color: var(--ink);
+.nav-overlay-links a:hover {
+  opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: inline-flex; }
+}
+@media (min-width: 768px) {
+  .nav { padding-left: 48px; padding-right: 48px; }
+}
+@media (min-width: 1280px) {
+  .nav { padding-left: 160px; padding-right: 160px; }
 }
 
 /* ── PAGE CONTAINER ── */
@@ -472,16 +592,10 @@ button:focus-visible {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
-  .navbar { padding: 14px 32px; }
 }
 
 @media (max-width: 768px) {
   body { padding: 72px 12px 60px; }
-
-  .navbar { padding: 14px 20px; }
-  .navbar-logo { font-size: 28px; }
-  .navbar-links { gap: 20px; }
-  .navbar-links a { font-size: 14px; }
 
   .header { padding: 40px 24px 0; }
   .awards-section { padding: 32px 24px; }
@@ -515,7 +629,6 @@ button:focus-visible {
 }
 
 @media (max-width: 480px) {
-  .navbar-links a:not(:last-child) { display: none; }
   .project-title { font-size: 22px; }
 }
 
@@ -523,9 +636,9 @@ button:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .image-frame,
   .image-frame img,
-  .navbar,
   .back-link,
-  .navbar-links a {
+  .nav,
+  .nav-links a {
     transition: none;
   }
 
@@ -541,14 +654,36 @@ button:focus-visible {
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar" role="banner">
-  <a href="/" class="navbar-logo" aria-label="回到首页 — miki">miki.</a>
-  <nav class="navbar-links" aria-label="主导航">
-    <a href="/">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+<header class="nav" aria-label="主导航">
+  <a href="/" class="nav-logo" aria-label="返回首页 — Miki Portfolio">
+    <img class="nav-mark" src="/images/home-v2/hero/logo.svg" alt="" aria-hidden="true">
+    <span class="nav-copy">
+      <span class="nav-title">Miki Portfolio</span>
+      <span class="nav-subtitle">SENIOR PRODUCT DESIGNER</span>
+    </span>
+  </a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navOverlay">
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
+  </button>
 </header>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <nav class="nav-overlay-links" aria-label="移动端导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
+  </nav>
+</div>
 
 <main class="page">
 
@@ -672,6 +807,43 @@ button:focus-visible {
   );
 
   document.querySelectorAll('.animate-in').forEach((el) => observer.observe(el));
+</script>
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('navOverlay');
+  if (!toggle || !overlay) return;
+
+  function closeMenu() {
+    toggle.classList.remove('open');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', '打开菜单');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    toggle.classList.add('open');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', '关闭菜单');
+    document.body.style.overflow = 'hidden';
+  }
+
+  toggle.addEventListener('click', function () {
+    overlay.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  overlay.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  window.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeMenu();
+  });
+})();
 </script>
 </body>
 </html>

@@ -91,61 +91,95 @@
   .t-micro       { font-size: 10px; font-weight: 400; line-height: 1.3; letter-spacing: -0.08px; }
   .t-nav         { font-size: 12px; font-weight: 400; line-height: 1.0; letter-spacing: -0.12px; }
 
-  /* ── Navbar (matches homepage exactly) ───────────────────────── */
-  .navbar {
+  /* ── Navbar (homepage-style) ───────────────────────────── */
+  .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 20px 24px;
-    mix-blend-mode: difference;
-    transform: translateY(0);
-    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    gap: 24px;
+    padding: 16px 24px;
+    background: rgba(8, 8, 8, 0.88);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
   }
-  .navbar.nav-hidden { transform: translateY(-100%); }
-  .navbar a { text-decoration: none; }
-  .nav-logo img { height: 28px; width: auto; display: block; }
-  .nav-links-right {
-    display: flex; align-items: center; gap: 32px;
+  .nav a { text-decoration: none; }
+  .nav-logo {
+    display: inline-flex; align-items: center; gap: 12px;
+    min-height: 44px; color: #fff; text-decoration: none;
+    transition: opacity 0.2s;
   }
-  .nav-links-right a {
-    font-size: 18px; font-weight: 400; color: #fff;
-    opacity: 1; transition: opacity 0.2s;
-    font-family: "SF Pro Display", system-ui, -apple-system, sans-serif;
-    line-height: 1.6;
+  .nav-logo:hover { opacity: 0.72; }
+  .nav-logo:focus-visible,
+  .nav-links a:focus-visible,
+  .nav-toggle:focus-visible,
+  .nav-overlay-links a:focus-visible {
+    outline: 2px solid #1ed760;
+    outline-offset: 4px;
+    border-radius: 8px;
+    opacity: 1;
   }
-  .nav-links-right a:hover { opacity: 0.6; }
-  .nav-hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    cursor: pointer; background: none; border: none; padding: 8px;
+  .nav-mark { width: 32px; height: 32px; flex-shrink: 0; display: block; }
+  .nav-copy { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .nav-title {
+    font-size: 14px; font-weight: 700; line-height: 1.1; letter-spacing: 0.02em;
+    color: #fdfdfd; white-space: nowrap;
   }
-  .nav-hamburger span {
-    display: block; width: 24px; height: 2px; background: #fff;
-    transition: transform 0.3s, opacity 0.3s;
-    transform-origin: center;
+  .nav-subtitle {
+    font-size: 9px; font-weight: 600; line-height: 1.2; letter-spacing: 0.18em;
+    text-transform: uppercase; color: #7c7c7c; white-space: nowrap;
   }
-  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-  @media (min-width: 640px)  { .navbar { padding-left: 32px;  padding-right: 32px; } }
-  @media (min-width: 768px)  { .navbar { padding-left: 48px;  padding-right: 48px; padding-top: 24px; padding-bottom: 24px; } .nav-logo img { height: 32px; } }
-  @media (min-width: 1280px) { .navbar { padding-left: 160px; padding-right: 160px; } }
-
-  /* ── Mobile full-screen menu ──────────────────────────────────── */
-  .mobile-menu {
-    position: fixed; inset: 0; z-index: 90;
-    background: #000;
+  .nav-links { display: flex; align-items: center; gap: 40px; }
+  .nav-links a {
+    position: relative; color: #b3b3b3;
+    font-size: 14px; font-family: "SF Pro Display", system-ui, -apple-system, sans-serif;
+    font-weight: 400; line-height: 1.5; padding-bottom: 4px;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover,
+  .nav-links a.is-active,
+  .nav-links a[aria-current="page"] { color: #fdfdfd; }
+  .nav-links a.is-active::after,
+  .nav-links a[aria-current="page"]::after {
+    content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px;
+    border-radius: 999px; background: #1ed760;
+  }
+  .nav-toggle {
+    display: none; flex-direction: column; width: 40px; height: 40px; align-items: center; justify-content: center;
+    gap: 4px; border: 0; border-radius: 10px; background: rgba(255, 255, 255, 0.06);
+    cursor: pointer; padding: 0;
+  }
+  .nav-toggle span {
+    display: block; width: 18px; height: 2px; background: #fdfdfd;
+    transform-origin: center; transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav-toggle.open .b1 { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open .b2 { opacity: 0; transform: scaleX(0); }
+  .nav-toggle.open .b3 { transform: translateY(-6px) rotate(-45deg); }
+  .nav-overlay {
+    position: fixed; inset: 0; z-index: 99;
     display: flex; align-items: center; justify-content: center;
+    background: #000;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .mobile-menu.open { opacity: 1; pointer-events: auto; }
-  .mobile-menu nav { display: flex; flex-direction: column; align-items: center; gap: 40px; }
-  .mobile-menu nav a {
-    font-size: 32px; font-weight: 400; color: #fff;
-    font-family: "SF Pro Display", system-ui, -apple-system, sans-serif;
-    text-decoration: none; transition: opacity 0.2s;
+  .nav-overlay.open { opacity: 1; pointer-events: auto; }
+  .nav-overlay-links { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+  .nav-overlay-links a {
+    color: #fdfdfd; font-size: 32px; font-family: "SF Pro Display", system-ui, -apple-system, sans-serif;
+    font-weight: 400; transition: opacity 0.2s;
   }
-  .mobile-menu nav a:hover { opacity: 0.5; }
+  .nav-overlay-links a:hover { opacity: 0.5; }
+  @media (max-width: 767px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+  @media (min-width: 768px) {
+    .nav { padding: 24px 48px; }
+    .nav-mark { height: 32px; }
+  }
+  @media (min-width: 1280px) {
+    .nav { padding: 24px 160px; }
+  }
 
   /* ── Page offset for fixed nav ────────────────────────────────── */
   .nav-spacer { height: 80px; }
@@ -516,8 +550,8 @@
     .footer-top { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 833px) {
-    .nav-links-right { display: none; }
-    .nav-hamburger { display: flex; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
     .t-hero { font-size: 34px; }
     .t-display-lg { font-size: 28px; }
     .meta-strip { grid-template-columns: repeat(2, 1fr); gap: var(--sp-lg); }
@@ -545,28 +579,36 @@
 <body>
 
 <!-- ── Navbar ────────────────────────────────────────────────── -->
-<header class="navbar" id="navbar">
-  <a href="/" class="nav-logo">
-    <img src="/images/miki_logo.svg" alt="miki logo">
+<header class="nav" aria-label="主导航">
+  <a href="/" class="nav-logo" aria-label="返回首页 — Miki Portfolio">
+    <img class="nav-mark" src="/images/home-v2/hero/logo.svg" alt="" aria-hidden="true">
+    <span class="nav-copy">
+      <span class="nav-title">Miki Portfolio</span>
+      <span class="nav-subtitle">SENIOR PRODUCT DESIGNER</span>
+    </span>
   </a>
-  <nav class="nav-links-right">
-    <a href="/#about">主页</a>
-    <a href="/#works">项目</a>
-    <a href="/#contact">关于我</a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
-  <button class="nav-hamburger" id="nav-hamburger" aria-label="打开菜单">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class="nav-toggle" id="navToggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="navOverlay">
+    <span class="b1"></span>
+    <span class="b2"></span>
+    <span class="b3"></span>
   </button>
 </header>
 
 <!-- ── Mobile Menu ───────────────────────────────────────────── -->
-<div class="mobile-menu" id="mobile-menu">
-  <nav>
-    <a href="/#about" onclick="closeMobileMenu()">主页</a>
-    <a href="/#works" onclick="closeMobileMenu()">项目</a>
-    <a href="/#contact" onclick="closeMobileMenu()">关于我</a>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true">
+  <nav class="nav-overlay-links" aria-label="移动端导航">
+    <a href="/#intro">首页</a>
+    <a href="/#cases" class="is-active" aria-current="page">作品</a>
+    <a href="/#method">方法</a>
+    <a href="/#about">关于我</a>
+    <a href="/#contact">联系</a>
   </nav>
 </div>
 
@@ -1484,45 +1526,41 @@
 </script>
 
 <script>
-  // ── Navbar scroll hide/show (matches homepage behavior) ──────
   (function () {
-    const navbar = document.getElementById('navbar');
-    let lastY = 0;
+    const toggle = document.getElementById('navToggle');
+    const overlay = document.getElementById('navOverlay');
+    if (!toggle || !overlay) return;
 
-    window.addEventListener('scroll', function () {
-      const current = window.scrollY;
-      const diff = current - lastY;
+    function closeMenu() {
+      toggle.classList.remove('open');
+      overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', '打开菜单');
+      document.body.style.overflow = '';
+    }
 
-      if (current < 80) {
-        navbar.classList.remove('nav-hidden');
-      } else if (diff > 6) {
-        navbar.classList.add('nav-hidden');
-        // close mobile menu on hide
-        document.getElementById('mobile-menu').classList.remove('open');
-        document.getElementById('nav-hamburger').classList.remove('open');
-        document.body.style.overflow = '';
-      } else if (diff < -6) {
-        navbar.classList.remove('nav-hidden');
-      }
-      lastY = current;
-    }, { passive: true });
+    function openMenu() {
+      toggle.classList.add('open');
+      overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
+      toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', '关闭菜单');
+      document.body.style.overflow = 'hidden';
+    }
 
-    // ── Mobile menu toggle ──────────────────────────────────────
-    const hamburger = document.getElementById('nav-hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
+    toggle.addEventListener('click', function () {
+      overlay.classList.contains('open') ? closeMenu() : openMenu();
+    });
 
-    hamburger.addEventListener('click', function () {
-      const isOpen = mobileMenu.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    overlay.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeMenu();
     });
   })();
-
-  function closeMobileMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
-    document.getElementById('nav-hamburger').classList.remove('open');
-    document.body.style.overflow = '';
-  }
 </script>
 
 </body>
