@@ -11,7 +11,8 @@ const projects = [
     desc: '让 AI 辅助视觉检测。将机器视觉算法结果以对操作者友好的方式呈现，软硬件一体化 HMI 设计，适配工厂环境的强光与噪声干扰。',
     tags: ['HMI', 'Industrial AI', 'Vision Inspection', 'Embedded UI'],
     image: '/images/p1-cover-hero.png',
-    href: '/Project_P1/index.html',
+    href: '/projects/p1-new',
+    external: false,
   },
   {
     num: '02',
@@ -21,6 +22,7 @@ const projects = [
     tags: ['GIS', 'Tracking', 'Industrial'],
     image: '/国家能源/project/assets/bg-cover.png',
     href: '/国家能源/project/Portfolio.html',
+    external: true,
   },
   {
     num: '03',
@@ -30,6 +32,7 @@ const projects = [
     tags: ['WMS', 'B端设计', 'RF Terminal', 'Full-Stack Design'],
     image: '/Project_P2/images/P2_01_hero_mockup.png',
     href: '/Project_P2/index.html',
+    external: true,
   },
   {
     num: '04',
@@ -39,6 +42,7 @@ const projects = [
     tags: ['Dashboard', 'Data Viz', 'B端设计', 'Visual Design'],
     image: '/友讯达/project/友讯达大屏/友讯达封面图.jpg',
     href: '/友讯达/project/友讯达大屏/index.html',
+    external: true,
   },
   {
     num: '05',
@@ -48,6 +52,7 @@ const projects = [
     tags: ['Design System', 'Design Tokens', 'Engineering', 'Figma'],
     image: '/images/p3-cover.png',
     href: '/Project_P3/index.html',
+    external: true,
   },
   {
     num: '06',
@@ -57,6 +62,7 @@ const projects = [
     tags: ['Chatbot', '5G Message', 'Interaction Spec', 'Brand'],
     image: '/images/p4-cover.png',
     href: '/Project_P4/index.html',
+    external: true,
   },
   {
     num: '07',
@@ -66,6 +72,7 @@ const projects = [
     tags: ['B端设计', 'Industrial Software', 'HMI', 'MES', 'Design System'],
     image: '/images/pcb2026/f101-hero.png',
     href: '/pcb/portfolio-PCB-2026.html',
+    external: true,
   },
 ]
 
@@ -124,8 +131,8 @@ function ProjectRow({
       {/* Enlarged touch target: py-3 -my-3 */}
       <a
         href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={project.external ? '_blank' : undefined}
+        rel={project.external ? 'noopener noreferrer' : undefined}
         className="inline-block py-3 -my-3 w-fit"
       >
         <motion.div
@@ -152,8 +159,8 @@ function ProjectRow({
     >
       <a
         href={project.href}
-        target="_blank"
-        rel="noopener noreferrer"
+        target={project.external ? '_blank' : undefined}
+        rel={project.external ? 'noopener noreferrer' : undefined}
         className="relative block w-full h-full overflow-hidden group cursor-scale"
       >
         <Image

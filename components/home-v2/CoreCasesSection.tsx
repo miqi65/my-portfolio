@@ -32,8 +32,8 @@ const cases: CaseItem[] = [
     description:
       '把工程师工具界面重构为工厂现场可用的 AI 操作系统，让检测结果可理解、可接管、可追溯。',
     tags: ['工业视觉', '角色权限', '异常接管', '工控容错'],
-    href: '/Project_P1/index.html',
-    previewMain: '/Project_P1/images/p1-cover-hero.jpg',
+    href: '/projects/p1-new',
+    previewMain: '/images/p1/p1-hero-industrial-ai-hmi.png',
     previewAlt: '工业 AI 视觉质检系统封面图',
     previewPosition: 'object-center',
     info: [

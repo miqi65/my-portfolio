@@ -254,7 +254,7 @@ export default function WebGLProject() {
             ))}
           </div>
 
-          <a href="/Project_P1/index.html" target="_blank" rel="noopener noreferrer">
+          <a href="/projects/p1-new">
             <motion.div
               className="flex items-center gap-2 group w-fit"
               whileHover={{ gap: '12px' }}
@@ -288,9 +288,7 @@ export default function WebGLProject() {
             </Suspense>
           </Canvas>
           <a
-            href="/Project_P1/index.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/projects/p1-new"
             style={{ position: 'absolute', inset: 0, zIndex: 10 }}
             aria-label="查看AI 视觉质检系统案例"
           />
