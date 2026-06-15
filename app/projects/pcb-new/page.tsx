@@ -274,11 +274,11 @@ function HeroBgImage({ src, className, imgClassName }: { src: string, className?
 // ==========================================
 // SectionHeader
 // ==========================================
-function SectionHeader({ num, en, cn, dark = false }: { num: string, en: string, cn: string, dark?: boolean }) {
+function SectionHeader({ num, en, cn, dark = false, divider = true }: { num: string, en: string, cn: string, dark?: boolean, divider?: boolean }) {
   return (
     <motion.div 
       initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={revealUp}
-      className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-current opacity-90 pb-4"
+      className={`mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4 opacity-90 pb-4 ${divider ? "border-b border-current" : ""}`}
       style={{ borderColor: dark ? "rgba(255,255,255,0.1)" : "#E2E5E9" }}
     >
       <div>
@@ -530,8 +530,8 @@ export default function PCBProjectTemplate() {
               </div>
             </motion.div>
 
-            <SectionHeader num="04" en="Problem & Goal" cn="从现场问题到设计目标" />
-            <div className="border-t border-[#E2E5E9] pt-8 mb-12">
+            <SectionHeader num="04" en="Problem & Goal" cn="从现场问题到设计目标" divider={false} />
+            <div className="pt-8 mb-12">
               <div className="bg-[#FFFFFF] border border-[#E2E5E9] rounded-[8px] overflow-x-auto">
                 <table className="w-full text-left min-w-[700px]">
                   <thead>
@@ -628,98 +628,82 @@ export default function PCBProjectTemplate() {
                   </div>
                 </div>
                 <div className="lg:col-span-7">
-                  <ProductShotFrame src="/images/pcb2026/P10_img.png" alt="系统级数字预警事件分发" size="medium" theme="dark" onZoom={setZoomImage} caption="系统级数字预警事件分发" />
+                <ProductShotFrame src="/images/pcb新图/首页预警.png" alt="首页预警界面" size="medium" theme="dark" onZoom={setZoomImage} caption="首页预警界面" />
                 </div>
               </div>
             </motion.div>
 
-            {/* Solution 04 & 05 */}
-            <div className="flex flex-col gap-24 mb-16">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                <div className="md:col-span-7">
-                  <ProductShotFrame
-                    src="/images/pcb2026/pcb-engine-switch.mov"
-                    alt="工程切换动效视频"
-                    size="medium"
-                    theme="light"
-                    onZoom={setZoomImage}
-                    kind="video"
-                    poster="/images/pcb2026/P11_img.png"
-                    caption="Engineering Switch Motion Demo｜工程切换动效展示"
-                  />
+            {/* Solution 04 */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-7">
+                <ProductShotFrame
+                  src="/images/pcb2026/pcb-engine-switch.mov"
+                  alt="工程切换动效视频"
+                  size="medium"
+                  theme="dark"
+                  onZoom={setZoomImage}
+                  kind="video"
+                  poster="/images/pcb2026/P11_img.png"
+                  caption="Engineering Switch Motion Demo｜工程切换动效展示"
+                />
+              </div>
+              <div className="lg:col-span-5 flex flex-col gap-6">
+                <div>
+                  <span className="text-[#4DA3FF] text-[11px] font-mono tracking-widest uppercase block mb-2">Solution 04｜Engineering File Reuse</span>
+                  <h3 className="text-[26px] font-medium text-[#F4F7FB] mb-4">工程资料复用</h3>
+                  <p className="text-[14px] text-[#B8C3D6] leading-[1.75] text-justify">
+                    减少对外部存储导入的依赖，将标准化工程资料沉淀为可复用模板，支持新工单快速配置。
+                  </p>
                 </div>
-                <div className="md:col-span-5 flex flex-col gap-6">
-                  <div>
-                    <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-2">Solution 04｜Engineering File Reuse</span>
-                    <h3 className="text-[22px] font-medium text-[#111827] mb-4">工程资料复用</h3>
-                    <p className="text-[14px] text-[#374151] leading-[1.75] text-justify">
-                      减少对外部存储导入的依赖，将标准化工程资料沉淀为可复用模板，支持新工单快速配置。
-                    </p>
-                  </div>
-                  <div className="space-y-3 border-l border-[#4DA3FF]/40 pl-4 text-[13px] text-[#374151] leading-[1.7]">
-                    <div>
-                      <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-1">Problem</span>
-                      新工单仍依赖外部导入，资料复用链路断开。
-                    </div>
-                    <div>
-                      <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-1">Design Move</span>
-                      将工程资料统一沉淀到项目资料库，并支持模板复用。
-                    </div>
-                    <div>
-                      <span className="text-[#111827] font-mono text-[11px] uppercase tracking-wider block mb-1">Value</span>
-                      工程导入耗时 <strong className="text-[#2563EB]">-17%</strong>。
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono tracking-[0.14em] uppercase">
-                    <span className="text-[#64748B]">External Import｜外部导入</span>
-                    <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block" />
-                    <span className="text-[#2563EB]">Project Library｜项目资料库</span>
-                    <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block" />
-                    <span className="text-[#2563EB]">Template Reuse｜模板复用</span>
-                  </div>
+                <div className="bg-[#121722] border-l-2 border-[#4DA3FF] p-4 rounded-r-[6px] text-[13px] border-y border-r border-y-white/5 border-r-white/5">
+                  <div className="mb-2"><span className="text-[#8A96A8] font-mono block text-[11px] uppercase mb-0.5">Problem</span>新工单仍依赖外部导入，资料复用链路断开。</div>
+                  <div className="mb-2"><span className="text-[#4DA3FF] font-mono block text-[11px] uppercase mb-0.5">Design Move</span>将工程资料统一沉淀到项目资料库，并支持模板复用。</div>
+                  <div><span className="text-[#F4F7FB] font-mono block text-[11px] uppercase mb-0.5">Value</span>工程导入耗时 <strong className="text-[#4DA3FF] font-medium">-17%</strong>。</div>
                 </div>
-              </motion.div>
+                <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono tracking-[0.14em] uppercase mt-2">
+                  <span className="text-[#8A96A8] bg-[#121722] px-2 py-1 rounded border border-white/5">External Import</span>
+                  <ArrowRight size={14} className="text-[#4DA3FF]/50 hidden sm:block" />
+                  <span className="text-[#F4F7FB] bg-[#4DA3FF]/10 border border-[#4DA3FF]/20 px-2 py-1 rounded">Project Library</span>
+                  <ArrowRight size={14} className="text-[#4DA3FF]/50 hidden sm:block" />
+                  <span className="text-[#F4F7FB] bg-[#4DA3FF]/10 border border-[#4DA3FF]/20 px-2 py-1 rounded">Template Reuse</span>
+                </div>
+              </div>
+            </motion.div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                <div className="md:col-span-7 md:order-2">
-                  <ProductShotFrame
-                    src="/images/pcb2026/P12_img.png"
-                    alt="权责看板"
-                    size="medium"
-                    theme="light"
-                    onZoom={setZoomImage}
-                    caption="Permission Management Interface｜权限管理界面"
-                  />
+            {/* Solution 05 */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="mb-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              <div className="lg:col-span-7 lg:order-2">
+                <ProductShotFrame
+                  src="/images/pcb2026/P12_img.png"
+                  alt="权责看板"
+                  size="medium"
+                  theme="dark"
+                  onZoom={setZoomImage}
+                  caption="Permission Management Interface｜权限管理界面"
+                />
+              </div>
+              <div className="lg:col-span-5 lg:order-1 flex flex-col gap-6">
+                <div>
+                  <span className="text-[#4DA3FF] text-[11px] font-mono tracking-widest uppercase block mb-2">Solution 05｜Permission Management</span>
+                  <h3 className="text-[26px] font-medium text-[#F4F7FB] mb-4">系统内权限管理</h3>
+                  <p className="text-[14px] text-[#B8C3D6] leading-[1.75] text-justify">
+                    将人员、角色、工单与设备操作权限绑定到系统内，减少外部审批断层，并降低越权操作风险。
+                  </p>
                 </div>
-                <div className="md:col-span-5 md:order-1 flex flex-col gap-6">
-                  <div>
-                    <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-2">Solution 05｜Permission Management</span>
-                    <h3 className="text-[22px] font-medium text-[#111827] mb-4">系统内权限管理</h3>
-                    <p className="text-[14px] text-[#374151] leading-[1.75] text-justify max-w-[640px]">
-                      将人员、角色、工单与设备操作权限绑定到系统内，减少外部审批断层，并降低越权操作风险。
-                    </p>
-                  </div>
-                  <div className="space-y-3 border-l border-[#4DA3FF]/40 pl-4 text-[13px] text-[#374151] leading-[1.7] max-w-[640px]">
-                    <div className="flex items-start gap-3">
-                      <Users size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
-                      <span>操作员、角色、工单与设备权限统一绑定到系统内。</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <ShieldAlert size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
-                      <span>减少外部审批断层，降低越权操作风险。</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Layers size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
-                      <span>操作权限直接映射到机台任务路径。</span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 text-[11px] font-mono tracking-[0.14em] uppercase text-[#64748B]">
+                <div className="bg-[#121722] border-l-2 border-[#4DA3FF] p-4 rounded-r-[6px] text-[13px] border-y border-r border-y-white/5 border-r-white/5">
+                  <div className="mb-2"><span className="text-[#8A96A8] font-mono block text-[11px] uppercase mb-0.5">Problem</span>人员权限分配散落于外部 OA，管理断层。</div>
+                  <div className="mb-2"><span className="text-[#4DA3FF] font-mono block text-[11px] uppercase mb-0.5">Design Move</span>将操作员、角色、工单与设备权限统一绑定到系统内。</div>
+                  <div><span className="text-[#F4F7FB] font-mono block text-[11px] uppercase mb-0.5">Value</span>减少外部审批断层，降低越权操作风险。</div>
+                </div>
+                <div className="flex items-center gap-3 text-[11px] font-mono tracking-[0.14em] uppercase text-[#8A96A8] mt-2">
+                  <div className="flex items-center gap-2 bg-[#121722] px-3 py-1.5 rounded-full border border-white/5">
                     <Sliders size={14} className="text-[#4DA3FF]" />
-                    <span>Machine Interface｜机台操作接口</span>
+                    <span>Machine Interface Mapping</span>
                   </div>
                 </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
+
           </div>
         </section>
 
@@ -764,8 +748,24 @@ export default function PCBProjectTemplate() {
                 <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-2">Workflow Architecture｜流程重构</span>
                 <h3 className="text-[22px] font-medium text-[#111827] mb-4">物料选择与孔位确认合并路径</h3>
                 <p className="text-[14px] text-[#374151] leading-[1.65] text-justify mb-6">
-                  现场观察显示，操作员在执行插件任务时，物料选择和孔位确认是连续动作。旧系统把它们拆成多个界面，增加了短时记忆负担。新的设计将这两个动作合并到同一任务路径中，减少来回确认。
+                  现场观察显示，操作员在执行插件任务时，物料选择和孔位确认是连续动作。新设计打破了旧系统的界面隔离，将这两个动作合并到同一任务路径中。
                 </p>
+                <div className="bg-[#F6F7F8] border border-[#E2E5E9] rounded-[8px] p-5 flex flex-col gap-4">
+                  <div>
+                    <span className="text-[#64748B] font-mono text-[11px] uppercase block mb-1">Old Flow｜旧路径</span>
+                    <p className="text-[13px] text-[#374151] leading-[1.6]">物料选择与孔位确认被拆散，操作员需要跨界面确认。</p>
+                  </div>
+                  <div className="w-full h-[1px] bg-[#E2E5E9]"></div>
+                  <div>
+                    <span className="text-[#2563EB] font-mono text-[11px] uppercase block mb-1">New Flow｜新路径</span>
+                    <p className="text-[13px] text-[#111827] font-medium leading-[1.6]">合并到同一任务路径，减少短时记忆负担。</p>
+                  </div>
+                  <div className="w-full h-[1px] bg-[#E2E5E9]"></div>
+                  <div>
+                    <span className="text-[#2563EB] font-mono text-[11px] uppercase block mb-1">UX Value｜体验价值</span>
+                    <p className="text-[13px] text-[#374151] leading-[1.6]">降低来回切换，提升连续操作效率。</p>
+                  </div>
+                </div>
               </div>
               <div className="lg:col-span-7">
                 <ProductShotFrame
@@ -907,7 +907,7 @@ export default function PCBProjectTemplate() {
               </div>
             </div>
 
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealUp} className="border-t border-[#2563EB]/30 pt-24 pb-12 relative">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealUp} className="border-t border-white/10 pt-24 pb-12 relative">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[300px] bg-[#4DA3FF]/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
               
               <div className="relative z-10">
