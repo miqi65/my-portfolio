@@ -115,6 +115,12 @@
       "skillPath": "skills/minimalist-skill/SKILL.md",
       "computedHash": "08873a3131d3be27bef9bf3304b310b16b44ca6e3561aebe532797be3443f6bd"
     },
+    "qiaomu-goal-meta-skill": {
+      "source": "joeseesun/qiaomu-goal-meta-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "869e6348e7668a67836b2b2eba606a4321ba281055ccf7ed60f07450fcf2ebbd"
+    },
     "redesign-existing-projects": {
       "source": "Leonxlnx/taste-skill",
       "sourceType": "github",

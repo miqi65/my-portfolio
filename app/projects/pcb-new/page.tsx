@@ -169,12 +169,16 @@ export default function PCBProjectTemplate() {
             ========================================== */}
         <motion.section initial="hidden" animate="visible" variants={staggerFast} className="relative w-full min-h-screen lg:min-h-[900px] flex items-center bg-[#05070D] overflow-hidden pt-24 pb-16 lg:pt-0 lg:pb-0">
           
-          <motion.div variants={revealUp} className="hidden lg:block absolute inset-y-0 right-0 w-[68%] xl:w-[72%] h-full z-0 pointer-events-none"
+          <motion.div 
+            initial={{ opacity: 0, x: 24, scale: 1.02 }} 
+            animate={{ opacity: 1, x: 0, scale: 1 }} 
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="hidden lg:block absolute inset-y-0 right-0 w-[68%] xl:w-[72%] h-full z-0 pointer-events-none"
             style={{ maskImage: "linear-gradient(to right, transparent 0%, black 6%, black 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 6%, black 100%)" }}>
-            <HeroBgImage src="/images/pcb2026/P20_img1.png" className="absolute inset-0 w-full h-full" imgClassName="object-contain object-right py-16 pr-16" />
+            <HeroBgImage src="/images/pcb2026/pcb-new-hero.png" className="absolute inset-0 w-full h-full" imgClassName="object-contain object-right" />
           </motion.div>
 
-          <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none w-full" style={{ background: "linear-gradient(to right, #05070D 0%, rgba(5,7,13,0.96) 28%, rgba(5,7,13,0.6) 42%, transparent 58%)" }} />
+          <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none w-full" style={{ background: "linear-gradient(to right, #05070D 0%, rgba(5,7,13,0.96) 28%, rgba(5,7,13,0.55) 40%, rgba(5,7,13,0.16) 49%, rgba(5,7,13,0) 54%, rgba(5,7,13,0) 100%)" }} />
 
           <div className="max-w-[1280px] w-full mx-auto px-6 lg:px-8 relative z-20">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -185,7 +189,7 @@ export default function PCBProjectTemplate() {
                 </motion.div>
 
                 <motion.h1 variants={revealUp} className="text-[40px] md:text-[48px] lg:text-[62px] font-medium text-[#F4F7FB] leading-[1.12] tracking-tight mb-6">
-                  PCBA 插件机控制系统重设计
+                  PCBA 插件机系统
                 </motion.h1>
 
                 <motion.p variants={revealUp} className="text-[16px] lg:text-[17px] text-[#B8C3D6] leading-[1.75] mb-8 max-w-[600px]">
@@ -217,8 +221,7 @@ export default function PCBProjectTemplate() {
               </div>
               
               <motion.div variants={revealUp} className="lg:hidden relative w-full h-[300px] mt-4">
-                <HeroBgImage src="/images/pcb2026/p1_bg.png" className="absolute inset-0 w-full h-full rounded-[8px] overflow-hidden" imgClassName="object-cover object-center" />
-                <div className="absolute inset-0 bg-black/40 z-10"></div>
+                <HeroBgImage src="/images/pcb2026/pcb-new-hero.png" className="absolute inset-0 w-full h-full rounded-[16px] border border-white/10 overflow-hidden" imgClassName="object-contain object-center p-4 bg-[#0D111A]" />
               </motion.div>
 
             </div>
