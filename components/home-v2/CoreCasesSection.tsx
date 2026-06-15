@@ -50,7 +50,7 @@ const cases: CaseItem[] = [
       '把旧进口插件机控制流程重构为可监控、可配置、可追踪的生产管理体验，支撑产线落地。',
     tags: ['PCBA', '工业软件', '控制系统', '流程重构'],
     href: '/projects/pcb-new',
-    previewMain: '/images/pcb2026/pcb-new-hero.png',
+    previewMain: '/images/pcb2026/pcb-new-home-cover.png',
     previewAlt: 'PCBA 插件机系统封面图',
     previewPosition: 'object-center',
     info: [
