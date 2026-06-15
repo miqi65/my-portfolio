@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, CheckCircle2, Search, Layers, Database, FileCode, ZoomIn, X, ShieldAlert, Activity, RefreshCw, Sliders, Users } from "lucide-react";
 import Link from "next/link";
@@ -51,11 +51,19 @@ interface ProductShotFrameProps {
   size?: "large" | "medium" | "wide";
   theme?: "dark" | "light";
   onZoom: (src: string) => void;
+  kind?: "image" | "video";
+  poster?: string;
 }
 
-function ProductShotFrame({ src, alt, caption, size = "medium", theme = "dark", onZoom }: ProductShotFrameProps) {
+function ProductShotFrame({ src, alt, caption, size = "medium", theme = "dark", onZoom, kind = "image", poster }: ProductShotFrameProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const isVideo = kind === "video";
+  const handleVideoReady = () => {
+    setIsLoaded(true);
+    void videoRef.current?.play().catch(() => undefined);
+  };
 
   const sizeClasses = {
     large: "h-[340px] md:h-[520px]",
@@ -72,25 +80,171 @@ function ProductShotFrame({ src, alt, caption, size = "medium", theme = "dark", 
   return (
     <div className="w-full flex flex-col gap-3 group">
       <div 
-        className={`relative w-full overflow-hidden border transition-all duration-400 ease-out rounded-[8px] md:rounded-[12px] hover:-translate-y-[3px] hover:border-[#4DA3FF]/40 cursor-zoom-in ${sizeClasses[size]} ${bgClass} ${borderClass}`}
-        onClick={() => onZoom(src)}
+        className={`relative w-full overflow-hidden border transition-all duration-400 ease-out rounded-[8px] md:rounded-[12px] hover:-translate-y-[3px] ${isVideo ? "cursor-default hover:border-white/20" : "cursor-zoom-in hover:border-[#4DA3FF]/40"} ${sizeClasses[size]} ${bgClass} ${borderClass}`}
+        onClick={isVideo ? undefined : () => onZoom(src)}
       >
         {!isLoaded && !hasError && <div className={`absolute inset-0 animate-pulse z-0 ${pulseClass}`} />}
         {hasError ? (
-          <div className="absolute inset-0 flex items-center justify-center text-[11px] font-mono tracking-widest text-current opacity-50">IMAGE OFFLINE</div>
+          <div className="absolute inset-0 flex items-center justify-center text-[11px] font-mono tracking-widest text-current opacity-50">
+            {isVideo ? "VIDEO OFFLINE" : "IMAGE OFFLINE"}
+          </div>
         ) : (
           <>
-            <Image
-              src={src} alt={alt} fill sizes="(max-w: 1280px) 100vw, 1280px"
-              className={`object-contain p-2 md:p-6 transition-all duration-700 ease-out z-10 group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
-              onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
-            />
+            {isVideo ? (
+              <video
+                ref={videoRef}
+                src={src}
+                className={`absolute inset-0 h-full w-full object-contain p-2 md:p-6 transition-all duration-700 ease-out z-10 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                poster={poster}
+                aria-label={alt}
+                onLoadedData={handleVideoReady}
+                onCanPlay={handleVideoReady}
+                onError={() => setHasError(true)}
+              >
+              </video>
+            ) : (
+              <Image
+                src={src} alt={alt} fill sizes="(max-w: 1280px) 100vw, 1280px"
+                className={`object-contain p-2 md:p-6 transition-all duration-700 ease-out z-10 group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
+                onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
+              />
+            )}
             <div className="absolute inset-0 bg-[#4DA3FF]/0 group-hover:bg-[#4DA3FF]/5 transition-colors duration-300 z-20 pointer-events-none" />
-            <div className="absolute top-4 right-4 bg-[#05070D]/60 backdrop-blur border border-white/10 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 pointer-events-none">
-              <ZoomIn size={16} />
-            </div>
+            {isVideo ? (
+              <div className="absolute top-4 right-4 bg-[#05070D]/60 backdrop-blur border border-white/10 px-3 py-1.5 rounded-full text-[11px] tracking-[0.18em] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 pointer-events-none">
+                VIDEO
+              </div>
+            ) : (
+              <div className="absolute top-4 right-4 bg-[#05070D]/60 backdrop-blur border border-white/10 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30 pointer-events-none">
+                <ZoomIn size={16} />
+              </div>
+            )}
           </>
         )}
+      </div>
+      {caption && (
+        <p className={`text-[12px] font-mono tracking-wide text-center uppercase ${textClass}`}>
+          {caption}
+        </p>
+      )}
+    </div>
+  );
+}
+
+// ==========================================
+// MotionSequenceFrame 动效展示系统
+// ==========================================
+interface MotionSequenceFrameProps {
+  frames: Array<{
+    src: string;
+    alt: string;
+    label: string;
+  }>;
+  caption?: string;
+  size?: "large" | "medium" | "wide";
+  theme?: "dark" | "light";
+  onZoom: (src: string) => void;
+}
+
+function MotionSequenceFrame({ frames, caption, size = "medium", theme = "dark", onZoom }: MotionSequenceFrameProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const sizeClasses = {
+    large: "h-[340px] md:h-[520px]",
+    medium: "h-[300px] md:h-[440px]",
+    wide: "h-[360px] md:h-[620px]"
+  };
+
+  const isDark = theme === "dark";
+  const bgClass = isDark ? "bg-[#0D111A]" : "bg-[#FFFFFF]";
+  const borderClass = isDark ? "border-white/10" : "border-[#E2E5E9]";
+  const textClass = isDark ? "text-[#8A96A8]" : "text-[#64748B]";
+  const pulseClass = isDark ? "bg-[#121722]" : "bg-[#F6F7F8]";
+  const activeFrame = frames[activeIndex] ?? frames[0];
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [frames.length]);
+
+  useEffect(() => {
+    if (frames.length < 2) {
+      return;
+    }
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % frames.length);
+    }, 2800);
+
+    return () => window.clearInterval(intervalId);
+  }, [frames.length]);
+
+  useEffect(() => {
+    setIsLoaded(false);
+  }, [activeIndex]);
+
+  if (!activeFrame) {
+    return null;
+  }
+
+  return (
+    <div className="w-full flex flex-col gap-3 group">
+      <div
+        className={`relative w-full overflow-hidden border transition-all duration-400 ease-out rounded-[8px] md:rounded-[12px] hover:-translate-y-[3px] cursor-zoom-in ${sizeClasses[size]} ${bgClass} ${borderClass}`}
+        onClick={() => onZoom(activeFrame.src)}
+      >
+        {!isLoaded && <div className={`absolute inset-0 animate-pulse z-0 ${pulseClass}`} />}
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeIndex}
+            initial={{ opacity: 0, x: 18, scale: 1.02 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: -18, scale: 0.985 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={activeFrame.src}
+              alt={activeFrame.alt}
+              fill
+              sizes="(max-w: 1280px) 100vw, 1280px"
+              className={`object-contain p-2 md:p-6 transition-opacity duration-700 ease-out z-10 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+              onLoad={() => setIsLoaded(true)}
+              priority={activeIndex === 0}
+            />
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="absolute inset-0 bg-[#4DA3FF]/0 group-hover:bg-[#4DA3FF]/5 transition-colors duration-300 z-20 pointer-events-none" />
+        <div className="absolute top-4 left-4 z-30 rounded-full border border-white/10 bg-[#05070D]/60 px-3 py-1.5 text-[11px] tracking-[0.18em] text-white backdrop-blur">
+          MOTION DEMO
+        </div>
+        <div className="absolute top-4 right-4 z-30 rounded-full border border-white/10 bg-[#05070D]/60 px-3 py-1.5 text-[11px] tracking-[0.18em] text-white backdrop-blur">
+          {String(activeIndex + 1).padStart(2, "0")} / {String(frames.length).padStart(2, "0")}
+        </div>
+        <div className="absolute bottom-4 left-4 right-4 z-30 h-[2px] overflow-hidden rounded-full bg-white/10">
+          <motion.div
+            key={`progress-${activeIndex}`}
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: (activeIndex + 1) / frames.length }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="h-full origin-left bg-[#4DA3FF]"
+          />
+        </div>
+        <div className="absolute bottom-8 left-4 z-30 rounded-[6px] border border-white/10 bg-[#05070D]/60 px-3 py-1.5 text-[11px] tracking-[0.12em] text-white backdrop-blur">
+          {activeFrame.label}
+        </div>
+        <div className="absolute top-0 right-0 z-20 h-full w-full bg-[radial-gradient(circle_at_top_right,rgba(77,163,255,0.14),transparent_42%)] pointer-events-none" />
       </div>
       {caption && (
         <p className={`text-[12px] font-mono tracking-wide text-center uppercase ${textClass}`}>
@@ -440,7 +594,7 @@ export default function PCBProjectTemplate() {
             {/* Solution 02 */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="mb-32 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 lg:order-2">
-                <ProductShotFrame src="/images/pcb2026/P9_组图.png" alt="可视化映射面板" size="medium" theme="dark" onZoom={setZoomImage} caption="物料选择与孔位确认合并路径" />
+                <ProductShotFrame src="/images/pcb2026/pcb-nextjs-structure.mov" alt="Next.js 代码结构展示" size="medium" theme="dark" onZoom={setZoomImage} kind="video" caption="Next.js 代码结构展示" />
               </div>
               <div className="lg:col-span-5 lg:order-1 flex flex-col gap-6">
                 <div>
@@ -480,50 +634,89 @@ export default function PCBProjectTemplate() {
             </motion.div>
 
             {/* Solution 04 & 05 */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="bg-[#0D111A] border border-white/10 p-8 rounded-[12px] flex flex-col">
-                <div className="mb-8">
-                  <div className="flex justify-between items-center border-b border-white/10 pb-3 mb-4">
-                    <span className="text-[#4DA3FF] text-[12px] font-mono uppercase">Solution 04｜Engineering File Reuse</span>
-                    <span className="text-[11px] font-mono text-[#F4F7FB]">Value: 工程导入耗时 <strong className="text-[#4DA3FF]">-17%</strong></span>
+            <div className="flex flex-col gap-24 mb-16">
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div className="md:col-span-7">
+                  <ProductShotFrame
+                    src="/images/pcb2026/pcb-engine-switch.mov"
+                    alt="工程切换动效视频"
+                    size="medium"
+                    theme="light"
+                    onZoom={setZoomImage}
+                    kind="video"
+                    poster="/images/pcb2026/P11_img.png"
+                    caption="Engineering Switch Motion Demo｜工程切换动效展示"
+                  />
+                </div>
+                <div className="md:col-span-5 flex flex-col gap-6">
+                  <div>
+                    <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-2">Solution 04｜Engineering File Reuse</span>
+                    <h3 className="text-[22px] font-medium text-[#111827] mb-4">工程资料复用</h3>
+                    <p className="text-[14px] text-[#374151] leading-[1.75] text-justify">
+                      减少对外部存储导入的依赖，将标准化工程资料沉淀为可复用模板，支持新工单快速配置。
+                    </p>
                   </div>
-                  <h3 className="text-[22px] font-medium text-white mb-3">工程资料复用</h3>
-                  <p className="text-[13px] text-[#B8C3D6] leading-[1.65] text-justify">
-                    减少对外部存储导入的依赖，将标准化工程资料沉淀为可复用模板，支持新工单快速配置。
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] font-mono mb-8 bg-[#05070D] p-3 rounded-[6px] border border-white/5">
-                  <div className="flex items-center gap-2 text-[#8A96A8]"><Database size={14}/> External Import｜外部导入</div>
-                  <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block"/>
-                  <div className="flex items-center gap-2 text-[#F4F7FB] border border-[#2563EB] bg-[#2563EB]/20 px-2 py-1 rounded"><Layers size={14} className="text-[#4DA3FF]"/> Project Library｜项目资料库</div>
-                  <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block"/>
-                  <div className="flex items-center gap-2 text-[#F4F7FB] border border-[#2563EB] bg-[#2563EB]/20 px-2 py-1 rounded"><RefreshCw size={14} className="text-[#4DA3FF]"/> Template Reuse｜模板复用</div>
-                </div>
-                <div className="grid grid-cols-2 gap-4 mt-auto">
-                  <ProductShotFrame src="/images/pcb2026/P11_img.png" alt="复用1" size="medium" theme="dark" onZoom={setZoomImage} caption="External Import" />
-                  <ProductShotFrame src="/images/pcb2026/P11_img1.png" alt="复用2" size="medium" theme="dark" onZoom={setZoomImage} caption="Template Reuse" />
+                  <div className="space-y-3 border-l border-[#4DA3FF]/40 pl-4 text-[13px] text-[#374151] leading-[1.7]">
+                    <div>
+                      <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-1">Problem</span>
+                      新工单仍依赖外部导入，资料复用链路断开。
+                    </div>
+                    <div>
+                      <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-1">Design Move</span>
+                      将工程资料统一沉淀到项目资料库，并支持模板复用。
+                    </div>
+                    <div>
+                      <span className="text-[#111827] font-mono text-[11px] uppercase tracking-wider block mb-1">Value</span>
+                      工程导入耗时 <strong className="text-[#2563EB]">-17%</strong>。
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] font-mono tracking-[0.14em] uppercase">
+                    <span className="text-[#64748B]">External Import｜外部导入</span>
+                    <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block" />
+                    <span className="text-[#2563EB]">Project Library｜项目资料库</span>
+                    <ArrowRight size={14} className="text-[#4DA3FF] hidden sm:block" />
+                    <span className="text-[#2563EB]">Template Reuse｜模板复用</span>
+                  </div>
                 </div>
               </motion.div>
 
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="bg-[#0D111A] border border-white/10 p-8 rounded-[12px] flex flex-col">
-                <div className="mb-8">
-                  <div className="flex justify-between items-center border-b border-white/10 pb-3 mb-4">
-                    <span className="text-[#4DA3FF] text-[12px] font-mono uppercase">Solution 05｜Permission Management</span>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={revealUp} className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div className="md:col-span-7 md:order-2">
+                  <ProductShotFrame
+                    src="/images/pcb2026/P12_img.png"
+                    alt="权责看板"
+                    size="medium"
+                    theme="light"
+                    onZoom={setZoomImage}
+                    caption="Permission Management Interface｜权限管理界面"
+                  />
+                </div>
+                <div className="md:col-span-5 md:order-1 flex flex-col gap-6">
+                  <div>
+                    <span className="text-[#2563EB] font-mono text-[11px] uppercase tracking-wider block mb-2">Solution 05｜Permission Management</span>
+                    <h3 className="text-[22px] font-medium text-[#111827] mb-4">系统内权限管理</h3>
+                    <p className="text-[14px] text-[#374151] leading-[1.75] text-justify max-w-[640px]">
+                      将人员、角色、工单与设备操作权限绑定到系统内，减少外部审批断层，并降低越权操作风险。
+                    </p>
                   </div>
-                  <h3 className="text-[22px] font-medium text-white mb-3">系统内权限管理</h3>
-                  <p className="text-[13px] text-[#B8C3D6] leading-[1.65] text-justify">
-                    将人员、角色、工单与设备操作权限绑定到系统内，减少外部审批断层，并降低越权操作风险。
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2 p-4 bg-[#05070D] border border-white/5 rounded-[6px] font-mono text-[12px] mb-8 relative">
-                  <div className="absolute left-6 top-6 bottom-6 w-[1px] bg-[#2563EB]/50 z-0"></div>
-                  <div className="flex items-center gap-3 relative z-10"><Users size={16} className="text-[#4DA3FF] bg-[#05070D]"/> <span className="text-[#F4F7FB]">Operator｜操作员</span></div>
-                  <div className="flex items-center gap-3 relative z-10 my-1"><ShieldAlert size={16} className="text-[#4DA3FF] bg-[#05070D]"/> <span className="text-[#B8C3D6]">Role Policy｜角色权限</span></div>
-                  <div className="flex items-center gap-3 relative z-10 mb-1"><Layers size={16} className="text-[#4DA3FF] bg-[#05070D]"/> <span className="text-[#B8C3D6]">Work Order Scope｜工单范围</span></div>
-                  <div className="flex items-center gap-3 relative z-10"><Sliders size={16} className="text-[#4DA3FF] bg-[#05070D]"/> <span className="text-[#F4F7FB]">Machine Interface｜机台操作接口</span></div>
-                </div>
-                <div className="mt-auto">
-                  <ProductShotFrame src="/images/pcb2026/P12_img.png" alt="权责看板" size="medium" theme="dark" onZoom={setZoomImage} caption="Permission Management Interface｜权限管理界面" />
+                  <div className="space-y-3 border-l border-[#4DA3FF]/40 pl-4 text-[13px] text-[#374151] leading-[1.7] max-w-[640px]">
+                    <div className="flex items-start gap-3">
+                      <Users size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
+                      <span>操作员、角色、工单与设备权限统一绑定到系统内。</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <ShieldAlert size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
+                      <span>减少外部审批断层，降低越权操作风险。</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Layers size={16} className="mt-0.5 text-[#2563EB] shrink-0" />
+                      <span>操作权限直接映射到机台任务路径。</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-[11px] font-mono tracking-[0.14em] uppercase text-[#64748B]">
+                    <Sliders size={14} className="text-[#4DA3FF]" />
+                    <span>Machine Interface｜机台操作接口</span>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -575,7 +768,16 @@ export default function PCBProjectTemplate() {
                 </p>
               </div>
               <div className="lg:col-span-7">
-                <ProductShotFrame src="/images/pcb2026/P15_img.png" alt="合并操作面板的强证" size="large" theme="light" onZoom={setZoomImage} caption="物料选择与孔位确认合并路径" />
+                <ProductShotFrame
+                  src="/images/pcb2026/pcb-teach-tab-switch.mov"
+                  alt="流程切换动效视频"
+                  size="large"
+                  theme="light"
+                  onZoom={setZoomImage}
+                  kind="video"
+                  poster="/images/pcb2026/P15_img.png"
+                  caption="Workflow Switch Motion Demo｜流程切换动效展示"
+                />
               </div>
             </div>
 
