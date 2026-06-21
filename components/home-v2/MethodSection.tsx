@@ -174,10 +174,10 @@ function MethodCard({
       }}
     >
       <div className="min-w-0">
-        <h3 className="text-[20px] font-bold leading-[1.12] tracking-[-0.03em] text-[#f2f5ef] sm:text-[22px]">
+        <h3 className="pt-3 text-[20px] font-bold leading-[1.12] tracking-[-0.03em] text-[#f2f5ef] sm:text-[22px]">
           {card.title}
         </h3>
-        <p className="mt-2 text-[13px] leading-7 text-[#b3b3b3] sm:mt-3 sm:text-[14px]">{card.desc}</p>
+        <p className="mt-1 text-[13px] leading-5 text-[#b3b3b3] sm:text-[14px]">{card.desc}</p>
       </div>
 
       {card.diagramType === 'map' ? (
