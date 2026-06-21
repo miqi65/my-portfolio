@@ -54,15 +54,7 @@ export default function Navbar() {
         animate={{ opacity: 1, y: visible ? 0 : '-100%' }}
         transition={{ duration: 0.45, ease: [0.23, 1, 0.32, 1] }}
       >
-        {/* Logo — touch target ≥ 44×44px (Apple HIG), visual 28px mobile / 32px desktop */}
-        <motion.a
-          href="#"
-          className="cursor-scale small select-none inline-flex items-center min-h-[44px] min-w-[44px]"
-          whileHover={{ opacity: 0.6 }}
-          transition={{ duration: 0.2 }}
-        >
-          <img src="/images/miki_logo.svg" alt="miki logo" className="h-[28px] md:h-[32px] w-auto" />
-        </motion.a>
+        <div className="min-h-[44px] min-w-[44px]" aria-hidden="true" />
 
         {/* 桌面端导航链接 */}
         <nav className="hidden md:flex items-center gap-8">
