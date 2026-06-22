@@ -9,7 +9,7 @@ import Link from "next/link";
 // ==========================================
 // 全局控制开关：是否显示占位图
 // ==========================================
-const USE_PLACEHOLDER_EVIDENCE = true;
+const USE_PLACEHOLDER_EVIDENCE = false;
 
 // ==========================================
 // 1. 无障碍动效预设 (支持 prefers-reduced-motion)
@@ -80,7 +80,7 @@ function ImageLightbox({ data, onClose }: { data: LightboxData, onClose: () => v
         <X size={24} strokeWidth={1.5} />
       </button>
       <div className="relative w-full max-w-[95vw] h-[85vh]" onClick={(e) => e.stopPropagation()}>
-        <Image src={data.src} alt={data.alt} fill className="object-contain" sizes="100vw" priority />
+        <Image src={data.src} alt={data.alt} fill className="object-contain" sizes="100vw" priority unoptimized />
       </div>
     </motion.div>
   );
@@ -256,7 +256,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom, isPlace
         </span>
       </div>
       
-      <div className="relative w-full h-[360px] md:h-[420px] bg-[#E5E5E5] group border-b border-[rgba(21,21,21,0.18)]">
+      <div className="relative w-full h-[320px] md:h-[360px] bg-[#F4F4EF] group border-b border-[rgba(21,21,21,0.18)]">
         {isPlaceholder ? (
            <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-[#F4F4EF] z-10 border border-[rgba(21,21,21,0.05)]">
              <div className="text-[12px] font-mono font-bold bg-[#B8E351] text-[#151515] px-3 py-1 mb-6 uppercase tracking-widest">
@@ -281,12 +281,17 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom, isPlace
                 onClick={() => onZoom({ src, alt })}
                 aria-label={`放大查看方法证据: ${alt}`}
               >
-                <Image
-                  src={src} alt={alt} fill sizes="(max-width: 1280px) 100vw, 1280px"
-                  className={`object-contain transition-transform duration-[400ms] ease-out group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
-                  onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
-                />
-                <div className="absolute top-4 right-4 bg-[#151515] border border-[rgba(255,255,255,0.2)] p-2 text-[#FAFAF7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute inset-0 p-3 md:p-4">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={src} alt={alt} fill sizes="(max-width: 1280px) 100vw, 1280px"
+                      className={`object-contain transition-transform duration-[400ms] ease-out group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
+                      unoptimized
+                      onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
+                    />
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-[#151515] border border-[rgba(255,255,255,0.2)] p-2 text-[#FAFAF7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
                   <ZoomIn size={16} strokeWidth={1.5} />
                 </div>
               </button>
@@ -325,12 +330,12 @@ export default function AIWorkflowPage() {
             <span>返回作品集</span>
           </Link>
           <div className="text-[12px] tracking-[0.2em] text-[#A3A3A3] uppercase font-mono hidden sm:block">
-            P3 · AI 辅助产品验证 / PRODUCT VALIDATION
+            AI 辅助产品验证 / PRODUCT VALIDATION
           </div>
         </div>
       </nav>
 
-      <main className="pt-14 pb-24 overflow-x-hidden">
+      <main className="pt-14 overflow-x-hidden">
         
         {/* ==========================================
             01. HERO
@@ -338,22 +343,24 @@ export default function AIWorkflowPage() {
         <section className="w-full border-b border-[#151515] bg-[linear-gradient(to_right,rgba(21,21,21,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(21,21,21,0.03)_1px,transparent_1px)] bg-[size:40px_40px]">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex border-b border-[#151515] text-[12px] font-mono tracking-widest uppercase text-[#5C5C57] px-6 lg:px-8 py-3 bg-[#FAFAF7]">
-              <span className="font-bold text-[#151515]">P3 · AI 辅助产品验证 / PRODUCT VALIDATION</span>
+              <span className="font-bold text-[#151515]">AI 辅助产品验证 / PRODUCT VALIDATION</span>
             </div>
 
             <motion.div initial="hidden" animate="visible" variants={staggerFast} className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
               
               <div className="hidden md:flex flex-col items-center justify-between col-span-1 bg-[#B8E351] border-r border-[#151515] py-8">
                 <div className="w-4 h-4 bg-[#151515]"></div>
-                <div className="[writing-mode:vertical-lr] rotate-180 font-mono text-[12px] tracking-[0.3em] uppercase text-[#151515] font-bold">
-                  方法 / METHODOLOGY
+                <div className="flex flex-col items-center gap-3 font-mono text-[12px] tracking-[0.3em] uppercase text-[#151515] font-bold">
+                  <span className="[writing-mode:vertical-rl]">方法</span>
+                  <span className="h-5 w-px bg-[#151515]"></span>
+                  <span className="[writing-mode:vertical-lr] rotate-180">METHODOLOGY</span>
                 </div>
                 <div className="font-mono text-[12px] text-[#151515]">METHOD_01</div>
               </div>
 
               <div className="col-span-1 md:col-span-6 flex flex-col justify-center px-6 lg:px-12 py-16 border-r-0 md:border-r border-[#151515] bg-[#FAFAF7]/90">
                 <motion.h1 variants={revealUp} className="text-[clamp(32px,4vw,56px)] font-sans font-semibold text-[#151515] leading-[1.15] tracking-tight mb-4">
-                  AI辅助产品方案验证与交付方法
+                  AI 辅助产品方案验证与交付方法
                 </motion.h1>
                 <motion.div variants={revealUp} className="text-[15px] text-[#5C5C57] font-sans font-normal mb-8">
                   AI-Assisted Product Validation & Delivery Method
@@ -419,12 +426,12 @@ export default function AIWorkflowPage() {
         {/* ==========================================
             OWNERSHIP CALLOUT (可信说明)
             ========================================== */}
-        <div className="max-w-[1280px] mx-auto px-6 lg:px-8 mt-8 mb-16">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealUp} className="bg-[#CFE8F7] border border-[#151515] p-5 md:p-6 text-[#151515] text-[15px] font-sans font-medium flex items-start gap-3">
-             <div className="mt-1 shrink-0 w-2 h-2 bg-[#151515]"></div>
-             <div className="space-y-3">
-               <p><strong className="text-[#151515]">适用场景：</strong>B 端系统、AI 应用、工业软件、HMI、智能硬件后台等需要多角色、多状态、多异常路径判断的产品场景。</p>
-               <p><strong className="text-[#151515]">边界说明：</strong>本页是基于既有工业 AI 场景抽象的 AI 辅助产品方案验证方法演示，不代表原项目当时使用 AI 辅助交付。AI 用于加快探索、生成和检查；业务判断、路径定义、状态边界和交付质量仍由设计师负责。</p>
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-8 mt-6 mb-10">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealUp} className="bg-[#FAFAF7] border border-[rgba(21,21,21,0.18)] border-l-4 border-l-[#CFE8F7] p-4 md:p-5 text-[#151515] text-[13px] md:text-[14px] font-sans font-medium flex items-start gap-3">
+             <div className="mt-1.5 shrink-0 w-1.5 h-1.5 bg-[#151515]"></div>
+             <div className="space-y-2">
+               <p><strong className="text-[#151515]">适用场景：</strong>B 端系统、AI 应用、工业软件、HMI、智能硬件后台等多角色、多状态、多异常路径产品。</p>
+               <p><strong className="text-[#151515]">边界说明：</strong>本页为基于既有工业 AI 场景抽象的方法演示，不代表原项目当时使用 AI 辅助交付。AI 用于探索、生成和检查，最终判断由设计师负责。</p>
              </div>
           </motion.div>
         </div>
@@ -530,15 +537,16 @@ export default function AIWorkflowPage() {
               </div>
             </div>
             
-            <p className="text-[16px] text-[#444440] font-sans mb-10 leading-[1.65]">
-              <strong className="text-[#151515]">贯穿场景：</strong>工业 AI 质检异常处置。以下基于既有项目场景抽象，展示从模糊需求到风险清单的 AI 辅助方法演示，不代表原项目当时使用 AI 辅助交付。
+            <p className="text-[14px] md:text-[15px] text-[#444440] font-sans mb-10 leading-[1.65]">
+              <strong className="text-[#151515]">贯穿场景：</strong>工业 AI 质检异常处置。以下为基于既有项目场景抽象的方法演示，不代表原项目当时使用 AI 辅助交付。
             </p>
 
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-8">
+              {/* Row 1: Brief & Flow */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/evidence-01.webp" 
+                    src="/images/p3_assets/evidence-01.png" 
                     alt="业务决策简报示例" 
                     badge="FIG.01 / 决策简报 / DECISION BRIEF"
                     evidenceType="brief"
@@ -547,12 +555,12 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：业务决策简报"
                     placeholderDesc="展示模糊需求如何被拆成业务问题、待确认项和成功判断标准。"
-                    placeholderFile="/images/p3_assets/evidence-01.webp"
+                    placeholderFile="/images/p3_assets/evidence-01.png"
                   />
                 </motion.div>
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/evidence-02.webp" 
+                    src="/images/p3_assets/evidence-02.png" 
                     alt="屏幕目的与路径示例" 
                     badge="FIG.02 / 屏幕目的 / SCREEN PURPOSE"
                     evidenceType="flow"
@@ -561,55 +569,60 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：屏幕目的与异常路径"
                     placeholderDesc="展示正常监控、异常发现、查看原因、人工确认/接管之间的任务路径。"
-                    placeholderFile="/images/p3_assets/evidence-02.webp"
+                    placeholderFile="/images/p3_assets/evidence-02.png"
                   />
                 </motion.div>
               </div>
 
-              <motion.div variants={revealUp}>
-                <EvidenceFrame 
-                  src="/images/p3_assets/context-package.webp" 
-                  alt="产品上下文包" 
-                  badge="FIG.03 / 产品上下文包 / CONTEXT PACKAGE" 
-                  evidenceType="context"
-                  caption="把状态、权限、术语和业务规则整理成 AI 可读取的约束。" 
-                  onZoom={setLightboxData}
-                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
-                  placeholderTitle="待替换图：产品上下文包"
-                  placeholderDesc="展示业务目标、目标用户、状态规则、权限规则和语气规则如何被整理成 AI 可读取约束。"
-                  placeholderFile="/images/p3_assets/context-package.webp"
-                />
-              </motion.div>
+              {/* Row 2: Context & Compare */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <motion.div variants={revealUp}>
+                  <EvidenceFrame 
+                    src="/images/p3_assets/context-package.png" 
+                    alt="产品上下文包" 
+                    badge="FIG.03 / 产品上下文包 / CONTEXT PACKAGE" 
+                    evidenceType="context"
+                    caption="把状态、权限、术语和业务规则整理成 AI 可读取的约束。" 
+                    onZoom={setLightboxData}
+                    isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                    placeholderTitle="待替换图：产品上下文包"
+                    placeholderDesc="展示业务目标、目标用户、状态规则、权限规则和语气规则如何被整理成 AI 可读取约束。"
+                    placeholderFile="/images/p3_assets/context-package.png"
+                  />
+                </motion.div>
+                <motion.div variants={revealUp}>
+                  <EvidenceFrame 
+                    src="/images/p3_assets/ai-draft-vs-human.png" 
+                    alt="初稿对比与精修批注" 
+                    badge="FIG.04 / AI 初稿与人工精修 / RAW AI VS. HUMAN REFINED"
+                    evidenceType="compare"
+                    caption="保留 AI 的生成速度，但用人工判断修正优先级、异常状态和动作入口。" 
+                    onZoom={setLightboxData}
+                    isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                    placeholderTitle="待替换图：AI 初稿与人工精修对比"
+                    placeholderDesc="展示 AI 初稿的问题，以及人工如何修正优先级、异常状态和动作入口。"
+                    placeholderFile="/images/p3_assets/ai-draft-vs-human.png"
+                  />
+                </motion.div>
+              </div>
 
-              <motion.div variants={revealUp}>
-                <EvidenceFrame 
-                  src="/images/p3_assets/ai-draft-vs-human.webp" 
-                  alt="初稿对比与精修批注" 
-                  badge="FIG.04 / AI 初稿与人工精修 / RAW AI VS. HUMAN REFINED"
-                  evidenceType="compare"
-                  caption="保留 AI 的生成速度，但用人工判断修正优先级、异常状态和动作入口。" 
-                  onZoom={setLightboxData}
-                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
-                  placeholderTitle="待替换图：AI 初稿与人工精修对比"
-                  placeholderDesc="展示 AI 初稿的问题，以及人工如何修正优先级、异常状态和动作入口。"
-                  placeholderFile="/images/p3_assets/ai-draft-vs-human.webp"
-                />
-              </motion.div>
-
-              <motion.div variants={revealUp}>
-                <EvidenceFrame 
-                  src="/images/p3_assets/qa-checklist.webp" 
-                  alt="Demo 与交付风险清单" 
-                  badge="FIG.05 / Demo 与风险清单 / DEMO & RISK LIST" 
-                  evidenceType="demo"
-                  caption="在开发前暴露接口、数据、权限和异常状态风险。" 
-                  onZoom={setLightboxData}
-                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
-                  placeholderTitle="待替换图：Demo 与开发前风险清单"
-                  placeholderDesc="展示已验证路径、关键交互 Demo，以及接口、数据、权限、异常状态等开发前风险。"
-                  placeholderFile="/images/p3_assets/qa-checklist.webp"
-                />
-              </motion.div>
+              {/* Row 3: Demo (Half Width on Desktop) */}
+              <div className="w-full lg:w-[calc(50%-1rem)]">
+                <motion.div variants={revealUp}>
+                  <EvidenceFrame 
+                    src="/images/p3_assets/qa-checklist.png" 
+                    alt="Demo 与交付风险清单" 
+                    badge="FIG.05 / Demo 与风险清单 / DEMO & RISK LIST" 
+                    evidenceType="demo"
+                    caption="在开发前暴露接口、数据、权限和异常状态风险。" 
+                    onZoom={setLightboxData}
+                    isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                    placeholderTitle="待替换图：Demo 与开发前风险清单"
+                    placeholderDesc="展示已验证路径、关键交互 Demo，以及接口、数据、权限、异常状态等开发前风险。"
+                    placeholderFile="/images/p3_assets/qa-checklist.png"
+                  />
+                </motion.div>
+              </div>
             </div>
           </motion.section>
 
@@ -674,29 +687,88 @@ export default function AIWorkflowPage() {
             </div>
 
             {/* Top Warning Callout */}
-            <motion.div variants={revealUp} className="bg-[#FFF0ED] border border-[#9B302B] p-5 md:p-6 text-[#9B302B] text-[15px] font-sans font-medium mb-8 flex items-start gap-3">
-              <div className="mt-0.5 shrink-0"><AlertTriangle size={18} /></div>
-              <div>AI 不替代商业决策、真实用户研究、工程架构判断和生产级代码。所有 AI 初稿必须经过人工评估后才能进入交付。</div>
+            <motion.div variants={revealUp} className="bg-[#FFF0ED] border border-[#9B302B] p-4 md:p-5 text-[13px] md:text-[14px] text-[#9B302B] font-sans font-medium mb-8 flex items-start gap-3">
+              <div className="mt-0.5 shrink-0"><AlertTriangle size={16} strokeWidth={2} /></div>
+              <div>边界说明：AI 不替代商业决策、真实用户研究、工程架构判断和生产级代码；所有 AI 初稿必须经过人工评估后才能进入交付。</div>
             </motion.div>
 
-            <div className="border border-[#151515] bg-[#FAFAF7] flex flex-col font-sans">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-px bg-[#151515] border border-[#151515] font-sans">
               {[
-                { name: "业务对齐", check: "是否解决正确问题？", risk: "界面完整，但没有服务关键任务。", out: "业务决策简报" },
-                { name: "任务清晰", check: "用户是否知道下一步做什么？", risk: "信息很多，但操作路径不清楚。", out: "屏幕目的" },
-                { name: "状态完整", check: "空、加载、失败、离线、无权限是否覆盖？", risk: "只覆盖正常状态，后期容易返工。", out: "状态矩阵" },
-                { name: "规则一致", check: "术语、组件、状态和警告等级是否统一？", risk: "同类异常在不同页面表达不一致。", out: "产品上下文包" },
-                { name: "交付成熟", check: "接口、数据、权限和工程边界是否清楚？", risk: "Demo 可运行，但无法直接估算开发。", out: "开发前风险清单" }
+                {
+                  step: "GATE 01",
+                  name: "业务对齐",
+                  en: "Business Fit",
+                  check: "是否解决正确问题？",
+                  risk: "界面完整，但没有服务关键任务。",
+                  out: "业务决策简报"
+                },
+                {
+                  step: "GATE 02",
+                  name: "任务清晰",
+                  en: "Task Clarity",
+                  check: "用户是否知道下一步做什么？",
+                  risk: "信息很多，但操作路径不清楚。",
+                  out: "屏幕目的说明"
+                },
+                {
+                  step: "GATE 03",
+                  name: "状态完整",
+                  en: "State Coverage",
+                  check: "空、加载、失败、离线、无权限是否覆盖？",
+                  risk: "只覆盖正常状态，后期容易返工。",
+                  out: "状态矩阵"
+                },
+                {
+                  step: "GATE 04",
+                  name: "规则一致",
+                  en: "Rule Consistency",
+                  check: "术语、组件、状态和警告等级是否统一？",
+                  risk: "同类异常在不同页面表达不一致。",
+                  out: "产品上下文包"
+                },
+                {
+                  step: "GATE 05",
+                  name: "交付成熟",
+                  en: "Delivery Readiness",
+                  check: "接口、数据、权限和工程边界是否清楚？",
+                  risk: "Demo 可运行，但无法直接估算开发。",
+                  out: "开发前风险清单"
+                }
               ].map((gate, idx) => (
-                <motion.div key={idx} variants={revealUp} className="flex flex-col sm:flex-row sm:items-start gap-4 p-5 md:p-6 border-b border-[rgba(21,21,21,0.18)] last:border-0 hover:bg-[#F4F4EF] transition-colors">
-                  <div className="w-full sm:w-[140px] shrink-0 flex flex-col">
-                    <h4 className="font-bold text-[#151515] text-[16px]">{gate.name}</h4>
-                  </div>
-                  <div className="flex-1 text-[15px] leading-[1.65]">
-                    <div className="text-[#151515] font-bold mb-1">检查：{gate.check}</div>
-                    <div className="text-[#9B302B] mb-4">风险：{gate.risk}</div>
-                    <div className="text-[#151515] font-mono font-bold text-[12px] uppercase border border-[rgba(21,21,21,0.18)] inline-block px-2.5 py-1">
-                      对应交付物：{gate.out}
+                <motion.div key={idx} variants={revealUp} className={`relative bg-[#FAFAF7] p-5 md:p-6 min-h-[260px] flex flex-col hover:bg-[#F4F4EF] transition-colors group ${idx === 4 ? "md:col-span-2 xl:col-span-1" : ""}`}>
+                  {/* Subtle connection arrow for desktop */}
+                  {idx < 4 && (
+                    <div className="absolute top-6 right-5 hidden xl:block text-[#A3A3A3] font-mono text-[14px]">
+                      →
                     </div>
+                  )}
+                  
+                  <div className="font-mono text-[11px] tracking-widest text-[#5C5C57] mb-4">
+                    {gate.step}
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-bold text-[#151515] text-[16px] mb-1">{gate.name}</h4>
+                    <div className="font-mono text-[11px] text-[#A3A3A3] uppercase tracking-widest">{gate.en}</div>
+                  </div>
+                  
+                  <div className="flex-1 text-[13px] md:text-[14px] leading-[1.65] space-y-4 mb-6">
+                    <div>
+                      <div className="text-[#151515] font-bold mb-0.5">检查：</div>
+                      <div className="text-[#151515]">{gate.check}</div>
+                    </div>
+                    <div>
+                      <div className="text-[#9B302B] font-bold mb-0.5">风险：</div>
+                      <div className="text-[#9B302B]">{gate.risk}</div>
+                    </div>
+                  </div>
+
+                  <div className="mt-auto pt-4 border-t border-[rgba(21,21,21,0.08)] flex items-center justify-between">
+                    <div className="text-[11px] font-mono font-bold uppercase border border-[rgba(21,21,21,0.18)] px-2.5 py-1 text-[#151515] bg-[#FAFAF7] group-hover:bg-[#F4F4EF] transition-colors">
+                      {gate.out}
+                    </div>
+                    {/* Bottom subtle success block */}
+                    <div className="w-1.5 h-1.5 bg-[#B8E351] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                 </motion.div>
               ))}
@@ -708,7 +780,7 @@ export default function AIWorkflowPage() {
         {/* ==========================================
             06. BUSINESS VALUE (雇主能获得什么)
             ========================================== */}
-        <section className="w-full bg-[#FAFAF7] text-[#151515] border-t border-[#151515] mt-8 pt-12 pb-24">
+        <section className="w-full bg-[#FAFAF7] text-[#151515] border-t border-[#151515] mt-8 pt-12 pb-24 md:min-h-[910px] lg:min-h-[720px]">
           <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">06</span>
