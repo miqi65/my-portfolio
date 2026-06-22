@@ -3,9 +3,13 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-// [修改 P1.8] 删除未使用的 CheckSquare import
-import { ArrowLeft, X, ZoomIn, AlertTriangle, Cpu, XCircle } from "lucide-react";
+import { ArrowLeft, X, ZoomIn, AlertTriangle } from "lucide-react";
 import Link from "next/link";
+
+// ==========================================
+// 全局控制开关：是否显示占位图
+// ==========================================
+const USE_PLACEHOLDER_EVIDENCE = true;
 
 // ==========================================
 // 1. 无障碍动效预设 (支持 prefers-reduced-motion)
@@ -92,9 +96,13 @@ interface EvidenceFrameProps {
   badge?: string;
   evidenceType: 'brief' | 'flow' | 'context' | 'compare' | 'demo';
   onZoom: (data: LightboxData) => void;
+  isPlaceholder?: boolean;
+  placeholderTitle?: string;
+  placeholderDesc?: string;
+  placeholderFile?: string;
 }
 
-function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: EvidenceFrameProps) {
+function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom, isPlaceholder, placeholderTitle, placeholderDesc, placeholderFile }: EvidenceFrameProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
@@ -102,7 +110,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
     switch (evidenceType) {
       case 'brief':
         return (
-          <div className="absolute inset-0 bg-[#FAFAF7] flex flex-col md:flex-row text-[#151515] font-sans overflow-y-auto">
+          <div className="absolute inset-0 bg-[#FAFAF7] flex flex-col md:flex-row text-[#151515] font-sans overflow-y-auto z-10">
             <div className="md:w-1/2 bg-[#F4F4EF] p-6 md:p-8 border-b md:border-b-0 md:border-r border-[rgba(21,21,21,0.18)] flex flex-col">
               <span className="font-mono text-[12px] text-[#5C5C57] mb-3 uppercase tracking-widest">Fuzzy Request / 原始需求</span>
               <p className="text-[16px] font-medium leading-[1.7] mb-8">“希望首页能看到所有设备和检测情况。”</p>
@@ -115,7 +123,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
               </ul>
             </div>
             <div className="md:w-1/2 p-6 md:p-8 bg-[#FAFAF7] flex flex-col">
-              <span className="font-mono text-[12px] text-[#151515] bg-[#B8E351] px-2 py-0.5 w-fit mb-6 uppercase tracking-widest">Decision Brief</span>
+              <span className="font-mono text-[12px] text-[#151515] bg-[#B8E351] px-2 py-0.5 w-fit mb-6 uppercase tracking-widest">决策简报 / Decision Brief</span>
               <div className="space-y-6 text-[15px]">
                 <div>
                   <strong className="block mb-1 text-[#151515]">转化后的业务问题：</strong>
@@ -131,7 +139,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
         );
       case 'flow':
         return (
-          <div className="absolute inset-0 bg-[#FAFAF7] p-6 md:p-8 flex flex-col text-[#151515] font-sans overflow-y-auto">
+          <div className="absolute inset-0 bg-[#FAFAF7] p-6 md:p-8 flex flex-col text-[#151515] font-sans overflow-y-auto z-10">
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="bg-[#151515] text-[#F4F4EF] px-3 py-1 text-[14px] font-medium">目标用户：操作员</div>
               <div className="border border-[#151515] px-3 py-1 text-[14px] font-medium">目的：将复杂状态压缩为异常优先级与下一步动作</div>
@@ -156,24 +164,24 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
         );
       case 'context':
         return (
-          <div className="absolute inset-0 bg-[#151515] text-[#FAFAF7] p-6 md:p-8 flex flex-col font-mono overflow-y-auto">
-            <span className="text-[12px] text-[#B8E351] mb-6 uppercase tracking-widest border-b border-[#444440] pb-2">Context Package / 结构化上下文</span>
+          <div className="absolute inset-0 bg-[#151515] text-[#FAFAF7] p-6 md:p-8 flex flex-col font-mono overflow-y-auto z-10">
+            <span className="text-[12px] text-[#B8E351] mb-6 uppercase tracking-widest border-b border-[#444440] pb-2">结构化上下文 / Context Package</span>
             <div lang="en" className="text-[13px] md:text-[14px] leading-[1.7] text-[#A3A3A3] whitespace-pre-wrap">
-<span className="text-[#CFE8F7]">Business Goal:</span> Resolve anomalies, not just monitoring.<br/>
-<span className="text-[#CFE8F7]">Target User:</span> Line Operator.<br/>
-<span className="text-[#CFE8F7]">State Rules:</span><br/>
-&nbsp;&nbsp;<span className="text-[#B8E351]">- Offline:</span> Disable live feed, show grey placeholder, block write actions.<br/>
-&nbsp;&nbsp;<span className="text-[#B8E351]">- Low_Confidence:</span> Flag warning, require human manual confirmation.<br/>
-<span className="text-[#CFE8F7]">Permission Rules:</span> Operator can mark false positive. Supervisor handles system reset.<br/>
-<span className="text-[#CFE8F7]">Tone of Voice:</span> Concise, instructional, urgent for errors.
+<span className="text-[#CFE8F7]">业务目标 / Business Goal:</span> Resolve anomalies, not just monitoring.<br/>
+<span className="text-[#CFE8F7]">目标用户 / Target User:</span> Line Operator.<br/>
+<span className="text-[#CFE8F7]">状态规则 / State Rules:</span><br/>
+&nbsp;&nbsp;<span className="text-[#B8E351]">- 离线 / Offline:</span> Disable live feed, show grey placeholder, block write actions.<br/>
+&nbsp;&nbsp;<span className="text-[#B8E351]">- 低置信度 / Low Confidence:</span> Flag warning, require human manual confirmation.<br/>
+<span className="text-[#CFE8F7]">权限规则 / Permission Rules:</span> Operator can mark false positive. Supervisor handles system reset.<br/>
+<span className="text-[#CFE8F7]">语气规则 / Tone of Voice:</span> Concise, instructional, urgent for errors.
             </div>
           </div>
         );
       case 'compare':
         return (
-          <div className="absolute inset-0 flex flex-col md:flex-row bg-[#E5E5E5] gap-px overflow-y-auto font-sans">
+          <div className="absolute inset-0 flex flex-col md:flex-row bg-[#E5E5E5] gap-px overflow-y-auto font-sans z-10">
             <div className="md:w-1/2 bg-[#FAFAF7] p-6 flex flex-col relative">
-              <div className="absolute top-0 right-0 bg-[#9B302B] text-white text-[12px] px-3 py-1 font-mono tracking-widest">RAW AI DRAFT</div>
+              <div className="absolute top-0 right-0 bg-[#9B302B] text-white text-[12px] px-3 py-1 font-mono tracking-widest">AI 初稿 / RAW AI DRAFT</div>
               <div className="text-[15px] font-bold text-[#151515] mb-4">AI 初稿：KPI 堆叠</div>
               <div className="w-full h-8 bg-[#E5E5E5] mb-3"></div>
               <div className="flex gap-3 mb-4">
@@ -186,7 +194,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
               </div>
             </div>
             <div className="md:w-1/2 bg-[#FAFAF7] p-6 flex flex-col relative border-l-4 border-[#B8E351]">
-              <div className="absolute top-0 right-0 bg-[#151515] text-[#B8E351] text-[12px] px-3 py-1 font-mono tracking-widest">HUMAN REFINED</div>
+              <div className="absolute top-0 right-0 bg-[#151515] text-[#B8E351] text-[12px] px-3 py-1 font-mono tracking-widest">人工精修 / HUMAN REFINED</div>
               <div className="text-[15px] font-bold text-[#151515] mb-4">设计精修：异常与动作前置</div>
               <div className="w-full bg-[#FFF0ED] border border-[#9B302B] p-3 mb-4 flex justify-between items-center">
                 <span className="text-[14px] text-[#9B302B] font-bold">1 项待处理异常 (相机 03 离线)</span>
@@ -204,9 +212,9 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
         );
       case 'demo':
         return (
-          <div className="absolute inset-0 bg-[#FAFAF7] flex flex-col md:flex-row p-0 font-sans overflow-y-auto">
+          <div className="absolute inset-0 bg-[#FAFAF7] flex flex-col md:flex-row p-0 font-sans overflow-y-auto z-10">
             <div className="md:w-2/5 p-6 border-b md:border-b-0 md:border-r border-[rgba(21,21,21,0.18)] flex flex-col justify-center bg-[#F4F4EF]">
-              <span className="text-[12px] font-mono font-bold uppercase tracking-widest mb-3 border-b border-[rgba(21,21,21,0.18)] pb-2 text-[#151515]">Demo Verified / 已验证路径</span>
+              <span className="text-[12px] font-mono font-bold uppercase tracking-widest mb-3 border-b border-[rgba(21,21,21,0.18)] pb-2 text-[#151515]">已验证路径 / Demo Verified</span>
               <ul className="text-[14px] text-[#151515] space-y-2 font-medium">
                 <li>1. 异常高亮发现</li>
                 <li>2. 影响原因理解</li>
@@ -215,7 +223,7 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
               </ul>
             </div>
             <div className="md:w-3/5 p-6 bg-[#FAFAF7] flex flex-col">
-              <span className="text-[#9B302B] text-[12px] font-mono font-bold uppercase tracking-widest mb-4 border-b border-[rgba(21,21,21,0.18)] pb-2">Pre-development Risk List</span>
+              <span className="text-[#9B302B] text-[12px] font-mono font-bold uppercase tracking-widest mb-4 border-b border-[rgba(21,21,21,0.18)] pb-2">开发前风险清单 / Pre-development Risk List</span>
               <ul className="text-[14px] text-[#151515] space-y-4">
                 <li className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-[#9B302B] mt-1.5 shrink-0"></div>
@@ -244,28 +252,46 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom }: Evide
         <span className="font-mono text-[12px] tracking-widest uppercase">{badge}</span>
         <span className="font-mono text-[12px] opacity-60 flex items-center gap-1.5">
           <div className="w-1.5 h-1.5 bg-[#B8E351]"></div>
-          EVIDENCE
+          证据 / EVIDENCE
         </span>
       </div>
       
       <div className="relative w-full h-[360px] md:h-[420px] bg-[#E5E5E5] group border-b border-[rgba(21,21,21,0.18)]">
-        {!isLoaded && !hasError && <div className="absolute inset-0 animate-pulse motion-reduce:animate-none bg-[#F4F4EF] z-0" />}
-        {hasError ? renderHtmlEvidence() : (
-          <button 
-            type="button"
-            className="absolute inset-0 w-full h-full cursor-zoom-in outline-none focus-visible:ring-inset focus-visible:ring-4 focus-visible:ring-[#B8E351] z-10 block"
-            onClick={() => onZoom({ src, alt })}
-            aria-label={`放大查看产出凭证: ${alt}`}
-          >
-            <Image
-              src={src} alt={alt} fill sizes="(max-width: 1280px) 100vw, 1280px"
-              className={`object-contain transition-transform duration-[400ms] ease-out group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
-              onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
-            />
-            <div className="absolute top-4 right-4 bg-[#151515] border border-[rgba(255,255,255,0.2)] p-2 text-[#FAFAF7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              <ZoomIn size={16} strokeWidth={1.5} />
-            </div>
-          </button>
+        {isPlaceholder ? (
+           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-[#F4F4EF] z-10 border border-[rgba(21,21,21,0.05)]">
+             <div className="text-[12px] font-mono font-bold bg-[#B8E351] text-[#151515] px-3 py-1 mb-6 uppercase tracking-widest">
+               IMAGE PLACEHOLDER
+             </div>
+             <h4 className="text-[18px] font-sans font-bold text-[#151515] mb-3">{placeholderTitle}</h4>
+             <p className="text-[14px] font-sans text-[#5C5C57] mb-6 max-w-[420px] leading-[1.6]">
+               {placeholderDesc}
+             </p>
+             <div className="text-[12px] font-mono text-[#5C5C57] border border-[rgba(21,21,21,0.18)] px-4 py-3 bg-[#FAFAF7]">
+               <div className="mb-1">文件建议: {placeholderFile}</div>
+               <div>比例建议: 16:9 或 3:2</div>
+             </div>
+           </div>
+        ) : (
+          <>
+            {!isLoaded && !hasError && <div className="absolute inset-0 animate-pulse motion-reduce:animate-none bg-[#F4F4EF] z-0" />}
+            {hasError ? renderHtmlEvidence() : (
+              <button 
+                type="button"
+                className="absolute inset-0 w-full h-full cursor-zoom-in outline-none focus-visible:ring-inset focus-visible:ring-4 focus-visible:ring-[#B8E351] z-10 block"
+                onClick={() => onZoom({ src, alt })}
+                aria-label={`放大查看方法证据: ${alt}`}
+              >
+                <Image
+                  src={src} alt={alt} fill sizes="(max-width: 1280px) 100vw, 1280px"
+                  className={`object-contain transition-transform duration-[400ms] ease-out group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
+                  onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
+                />
+                <div className="absolute top-4 right-4 bg-[#151515] border border-[rgba(255,255,255,0.2)] p-2 text-[#FAFAF7] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <ZoomIn size={16} strokeWidth={1.5} />
+                </div>
+              </button>
+            )}
+          </>
         )}
       </div>
 
@@ -299,7 +325,7 @@ export default function AIWorkflowPage() {
             <span>返回作品集</span>
           </Link>
           <div className="text-[12px] tracking-[0.2em] text-[#A3A3A3] uppercase font-mono hidden sm:block">
-            MIKI PORTFOLIO / WORKFLOW
+            P3 · AI 辅助产品验证 / PRODUCT VALIDATION
           </div>
         </div>
       </nav>
@@ -307,12 +333,12 @@ export default function AIWorkflowPage() {
       <main className="pt-14 pb-24 overflow-x-hidden">
         
         {/* ==========================================
-            01. HERO (统一字体，主次分明)
+            01. HERO
             ========================================== */}
         <section className="w-full border-b border-[#151515] bg-[linear-gradient(to_right,rgba(21,21,21,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(21,21,21,0.03)_1px,transparent_1px)] bg-[size:40px_40px]">
           <div className="max-w-[1280px] mx-auto">
             <div className="flex border-b border-[#151515] text-[12px] font-mono tracking-widest uppercase text-[#5C5C57] px-6 lg:px-8 py-3 bg-[#FAFAF7]">
-              <span className="font-bold text-[#151515]">P3 · AI PRODUCT DESIGN DELIVERY</span>
+              <span className="font-bold text-[#151515]">P3 · AI 辅助产品验证 / PRODUCT VALIDATION</span>
             </div>
 
             <motion.div initial="hidden" animate="visible" variants={staggerFast} className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
@@ -320,29 +346,29 @@ export default function AIWorkflowPage() {
               <div className="hidden md:flex flex-col items-center justify-between col-span-1 bg-[#B8E351] border-r border-[#151515] py-8">
                 <div className="w-4 h-4 bg-[#151515]"></div>
                 <div className="[writing-mode:vertical-lr] rotate-180 font-mono text-[12px] tracking-[0.3em] uppercase text-[#151515] font-bold">
-                  METHODOLOGY
+                  方法 / METHODOLOGY
                 </div>
-                <div className="font-mono text-[12px] text-[#151515]">SYS_01</div>
+                <div className="font-mono text-[12px] text-[#151515]">METHOD_01</div>
               </div>
 
               <div className="col-span-1 md:col-span-6 flex flex-col justify-center px-6 lg:px-12 py-16 border-r-0 md:border-r border-[#151515] bg-[#FAFAF7]/90">
                 <motion.h1 variants={revealUp} className="text-[clamp(32px,4vw,56px)] font-sans font-semibold text-[#151515] leading-[1.15] tracking-tight mb-4">
-                  业务驱动、AI 辅助的<br />产品设计交付流
+                  AI辅助产品方案验证与交付方法
                 </motion.h1>
                 <motion.div variants={revealUp} className="text-[15px] text-[#5C5C57] font-sans font-normal mb-8">
-                  Business-Driven, AI-Assisted Product Design Workflow
+                  AI-Assisted Product Validation & Delivery Method
                 </motion.div>
 
                 <motion.p variants={revealUp} className="text-[16px] md:text-[17px] text-[#151515] font-sans leading-[1.7] max-w-[500px] mb-12">
-                  把模糊业务需求转化为可演示、可评估、可推进的产品方案。并通过产品上下文、设计判断、可验证 Demo 与 QA 规则控制交付质量。
+                  将模糊需求拆解为业务问题、用户路径、可演示 Demo 与开发前风险清单，帮助团队在投入开发前看清方向、边界和风险。
                 </motion.p>
 
                 <motion.div variants={revealUp} className="grid grid-cols-2 lg:grid-cols-4 gap-y-5 border-t border-[rgba(21,21,21,0.18)] pt-5 mt-auto">
                   {[
-                    ['案例性质', '方法验证案例'],
-                    ['经验来源', '工业 AI 真实场景（已脱敏抽象）'],
-                    ['我的角色', '工作流与原型设计'],
-                    ['核心输出', '简报 / Demo / 风险']
+                    ['案例类型', '方法型演示'],
+                    ['场景来源', '脱敏工业 AI 场景'],
+                    ['我的角色', '产品设计 / 工作流验证'],
+                    ['核心产出', '决策简报 / Demo / 风险清单']
                   ].map(([label, val], idx) => (
                     <div key={idx} className="flex flex-col border-l border-[rgba(21,21,21,0.18)] pl-3 first:border-l-0 first:pl-0">
                       <span className="text-[12px] font-sans text-[#5C5C57] mb-1">{label}</span>
@@ -355,37 +381,34 @@ export default function AIWorkflowPage() {
               <div className="col-span-1 md:col-span-5 flex flex-col bg-[#FAFAF7]">
                 <motion.div variants={revealUp} className="flex-1 p-6 lg:p-8 border-b border-[#151515] bg-[#FAFAF7]">
                   <div className="font-mono text-[12px] font-bold text-[#151515] mb-4 flex items-center gap-2 uppercase tracking-widest">
-                    <div className="w-2 h-2 bg-[#151515]"></div> 我定义什么 / WHAT I DEFINE
+                    <div className="w-2 h-2 bg-[#151515]"></div> 我判断什么 / WHAT I DECIDE
                   </div>
                   <ul className="text-[15px] text-[#151515] font-sans leading-[1.7] space-y-1 font-medium">
                     <li>- 业务问题</li>
-                    <li>- 屏幕目的</li>
                     <li>- 用户路径</li>
-                    <li>- 成功判断标准</li>
+                    <li>- 成功标准</li>
                   </ul>
                 </motion.div>
                 
                 <motion.div variants={revealUp} className="flex-1 p-6 lg:p-8 border-b border-[#151515] bg-[#CFE8F7]">
                   <div className="font-mono text-[12px] font-bold text-[#151515] mb-4 flex items-center gap-2 uppercase tracking-widest">
-                    <Cpu size={14} className="text-[#151515]"/> AI 加速什么 / WHAT AI ACCELERATES
+                    <div className="w-2 h-2 bg-[#151515] rounded-full"></div> AI 辅助什么 / WHAT AI HELPS
                   </div>
                   <ul className="text-[15px] text-[#444440] font-sans leading-[1.7] space-y-1">
                     <li>- 方案探索</li>
-                    <li>- UI 初稿</li>
-                    <li>- 原型代码</li>
-                    <li>- 重复性检查</li>
+                    <li>- 初稿生成</li>
+                    <li>- 规则检查</li>
                   </ul>
                 </motion.div>
 
                 <motion.div variants={revealUp} className="flex-1 p-6 lg:p-8 bg-[#FAFAF7] border-t-4 border-[#B8E351]">
                   <div className="font-mono text-[12px] font-bold text-[#151515] mb-4 flex items-center gap-2 uppercase tracking-widest">
-                    <div className="w-2 h-2 bg-[#B8E351] rounded-none"></div> 团队得到什么 / WHAT THE TEAM GETS
+                    <div className="w-2 h-2 bg-[#B8E351] rounded-none"></div> 团队拿到什么 / WHAT THE TEAM GETS
                   </div>
                   <ul className="text-[15px] text-[#151515] font-sans font-bold leading-[1.7] space-y-1">
-                    <li>- 业务决策简报</li>
-                    <li>- 可决策原型</li>
-                    <li>- 开发前风险清单</li>
-                    <li>- 产品上下文与规则</li>
+                    <li>- 决策简报</li>
+                    <li>- 可演示 Demo</li>
+                    <li>- 风险清单</li>
                   </ul>
                 </motion.div>
               </div>
@@ -393,53 +416,42 @@ export default function AIWorkflowPage() {
           </div>
         </section>
 
+        {/* ==========================================
+            OWNERSHIP CALLOUT (可信说明)
+            ========================================== */}
+        <div className="max-w-[1280px] mx-auto px-6 lg:px-8 mt-8 mb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={revealUp} className="bg-[#CFE8F7] border border-[#151515] p-5 md:p-6 text-[#151515] text-[15px] font-sans font-medium flex items-start gap-3">
+             <div className="mt-1 shrink-0 w-2 h-2 bg-[#151515]"></div>
+             <div className="space-y-3">
+               <p><strong className="text-[#151515]">适用场景：</strong>B 端系统、AI 应用、工业软件、HMI、智能硬件后台等需要多角色、多状态、多异常路径判断的产品场景。</p>
+               <p><strong className="text-[#151515]">边界说明：</strong>本页是基于既有工业 AI 场景抽象的 AI 辅助产品方案验证方法演示，不代表原项目当时使用 AI 辅助交付。AI 用于加快探索、生成和检查；业务判断、路径定义、状态边界和交付质量仍由设计师负责。</p>
+             </div>
+          </motion.div>
+        </div>
+
         <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
           
           {/* ==========================================
-              02. OWNERSHIP & WHY THIS MATTERS
+              01. WHY THIS MATTERS (为什么需要这套方法)
               ========================================== */}
-          <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16">
-            <div className="border border-[#151515] bg-[#151515] flex flex-col md:flex-row mb-16">
-               <div className="flex-1 p-6 lg:p-8 bg-[#FAFAF7] border-b md:border-b-0 md:border-r border-[rgba(21,21,21,0.18)]">
-                  <div className="text-[12px] font-mono text-[#151515] font-bold mb-4 flex items-center gap-2 tracking-widest">
-                    <div className="w-2 h-2 bg-[#151515]"></div> 我负责 / MY OWNERSHIP
-                  </div>
-                  <ul className="text-[15px] text-[#151515] font-sans font-medium leading-[1.7] space-y-1">
-                    <li>- 业务问题拆解与屏幕目的定义</li>
-                    <li>- Context 结构设计与 AI 方案筛选</li>
-                    <li>- Figma 人工精修与 Demo 验证</li>
-                    <li>- 状态与风险检查、Design QA</li>
-                  </ul>
-               </div>
-               
-               {/* [修改 P0] 修复对比度：将原来暗色背景上的半透明卡片 bg-[#CFE8F7]/20 替换为浅蓝实底 bg-[#CFE8F7]，增加 font-medium 保障字号清晰，并在移动端增加顶边框避免混淆。 */}
-               <div className="flex-1 p-6 lg:p-8 bg-[#CFE8F7] text-[#151515] border-t md:border-t-0 border-[#151515]">
-                  <div className="text-[12px] font-mono text-[#151515] font-bold mb-4 flex items-center gap-2 tracking-widest">
-                    <Cpu size={14} className="text-[#151515]" /> AI 辅助 / AI ASSISTANCE
-                  </div>
-                  <ul className="text-[15px] font-sans font-medium leading-[1.7] space-y-1 text-[#444440]">
-                    <li>- 结构化信息整理</li>
-                    <li>- UI 方案快速探索</li>
-                    <li>- 初稿与验证代码生成</li>
-                    <li>- 重复性设计规范检查</li>
-                    <li>- 交付文档初步整理</li>
-                  </ul>
-               </div>
-            </div>
-
+          <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="pb-16">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">01</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Observation / 问题判断</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">AI 提高了生成速度，也放大了错误方向的成本</h2>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Why This Matters / 问题判断</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">为什么需要这套方法</h2>
               </div>
             </div>
 
+            <p className="text-[16px] text-[#444440] font-sans mb-8">
+              AI 能快速生成界面，但复杂 B 端产品更需要先判断方向、边界和风险。
+            </p>
+
             <div className="grid grid-cols-1 md:grid-cols-3 border border-[#151515] bg-[#151515] gap-px">
               {[
-                { title: "方向偏离", text: "生成极快，但缺乏业务对齐，方向可能在起步时就未被充分验证。" },
-                { title: "边界缺失", text: "界面看似完整，但经常遗漏高风险的权限转移与极端异常状态。" },
-                { title: "交付错觉", text: "能点击的 Demo 不等于具备团队可顺利推进的开发与验收条件。" }
+                { title: "方向偏离", text: "生成很快，但不一定解决正确问题。" },
+                { title: "边界缺失", text: "界面完整，不代表状态、权限和异常路径完整。" },
+                { title: "交付错觉", text: "能点击的 Demo，不等于工程可以直接投入开发。" }
               ].map((item, idx) => (
                 <motion.div key={idx} variants={revealUp} className="p-6 md:p-8 flex flex-col bg-[#FAFAF7]">
                   <h4 className="text-[18px] font-sans font-bold text-[#151515] mb-4">{item.title}</h4>
@@ -450,87 +462,77 @@ export default function AIWorkflowPage() {
           </motion.section>
 
           {/* ==========================================
-              03. PROCESS (明确的人机分工交付流)
+              02. WORKFLOW (从模糊需求到可交付方案)
               ========================================== */}
           <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16 border-t border-[rgba(21,21,21,0.18)]">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">02</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Process / 过程说明</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">明确人工与 AI 分工的端到端交付流</h2>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Workflow / 人机分工</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">从模糊需求到可交付方案</h2>
               </div>
             </div>
 
-            <div className="flex flex-col border border-[#151515] bg-[#151515] gap-px">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#151515] border border-[#151515]">
               {[
                 {
-                  phase: "01 判断方向", en: "DECIDE", goal: "确认业务问题、用户任务和成功判断标准。",
-                  steps: [
-                    { name: "Align", judge: "确认业务目标、约束与成功标准", ai: "识别信息缺口", out: "业务决策简报" },
-                    { name: "Frame", judge: "定义屏幕目的、任务与异常路径", ai: "比较流程分歧", out: "屏幕目的说明" }
-                  ]
+                  step: "步骤 01 / STEP 01", title: "判断方向",
+                  judge: "确认业务问题、用户任务和成功标准。",
+                  ai: "整理信息缺口和流程分歧。",
+                  out: "业务决策简报"
                 },
                 {
-                  phase: "02 构建方案", en: "BUILD", goal: "组织产品上下文，生成多个方向并通过人工判断选择和精修。",
-                  steps: [
-                    { name: "Context", judge: "明确必须保持一致的设计与业务规则", ai: "上下文结构化", out: "产品上下文包" },
-                    { name: "Generate", judge: "判断优先级、删除无效方向与精修", ai: "快速探索初稿", out: "方案筛选对比" }
-                  ]
+                  step: "步骤 02 / STEP 02", title: "构建方案",
+                  judge: "定义状态规则、权限边界和关键路径。",
+                  ai: "快速生成多个方案初稿。",
+                  out: "产品上下文包 + 方案对比"
                 },
                 {
-                  phase: "03 验证交付", en: "VALIDATE", goal: "通过 Demo、风险清单和规则帮助团队判断是否值得投入开发。",
-                  steps: [
-                    { name: "Prototype", judge: "关键路径逻辑与状态完整性把控", ai: "辅助构建代码", out: "可决策原型" },
-                    { name: "Deliver", judge: "识别风险、明确前端与数据的交付边界", ai: "遗漏排查辅助", out: "开发前风险清单" }
-                  ]
+                  step: "步骤 03 / STEP 03", title: "验证交付",
+                  judge: "检查异常状态、数据依赖和开发边界。",
+                  ai: "辅助生成 Demo 和遗漏检查。",
+                  out: "可演示 Demo + 开发前风险清单"
                 }
               ].map((phase, idx) => (
-                <div key={idx} className="bg-[#FAFAF7] flex flex-col lg:flex-row">
-                  <div className="lg:w-1/4 p-6 border-b lg:border-b-0 lg:border-r border-[rgba(21,21,21,0.18)] bg-[#FAFAF7]">
-                    <h3 className="text-[18px] font-sans font-bold text-[#151515] mb-1">{phase.phase}</h3>
-                    <span className="font-mono text-[12px] text-[#5C5C57] block mb-3 uppercase tracking-widest">{phase.en}</span>
-                    <p className="text-[15px] font-sans text-[#444440] leading-[1.65]">{phase.goal}</p>
+                <motion.div key={idx} variants={revealUp} className="bg-[#FAFAF7] p-6 lg:p-8 flex flex-col">
+                  <span className="font-mono text-[12px] text-[#5C5C57] block mb-2 uppercase tracking-widest">{phase.step}</span>
+                  <h3 className="text-[20px] font-sans font-bold text-[#151515] mb-6">{phase.title}</h3>
+                  
+                  <div className="space-y-6 flex-1">
+                    <div>
+                      <div className="text-[12px] font-mono text-[#5C5C57] mb-1 font-bold">设计判断</div>
+                      <div className="text-[15px] font-sans text-[#151515] font-medium leading-[1.6]">{phase.judge}</div>
+                    </div>
+                    <div>
+                      <div className="text-[12px] font-mono text-[#5C5C57] mb-1 font-bold">AI 辅助</div>
+                      <div className="text-[15px] font-sans text-[#444440] leading-[1.6]">{phase.ai}</div>
+                    </div>
                   </div>
-                  <div className="lg:w-3/4 flex flex-col">
-                    {phase.steps.map((step, sIdx) => (
-                      <div key={sIdx} className="grid grid-cols-1 md:grid-cols-12 border-b border-[rgba(21,21,21,0.18)] last:border-b-0">
-                        <div className="col-span-1 md:col-span-5 p-5 border-b md:border-b-0 md:border-r border-[rgba(21,21,21,0.18)]">
-                          <h4 className="font-mono text-[12px] text-[#5C5C57] block mb-2 uppercase tracking-widest">{step.name}</h4>
-                          <div className="text-[14px] font-sans font-bold text-[#151515] mb-1">设计判断</div>
-                          <div className="text-[15px] font-sans text-[#444440] leading-[1.6]">{step.judge}</div>
-                        </div>
-                        <div className="col-span-1 md:col-span-4 p-5 border-b md:border-b-0 md:border-r border-[rgba(21,21,21,0.18)] bg-[#CFE8F7]/20 flex flex-col justify-center">
-                          <div className="text-[14px] font-sans font-bold text-[#151515] mb-1 mt-2 md:mt-0">AI 辅助</div>
-                          <div className="text-[15px] font-sans text-[#444440] leading-[1.6]">{step.ai}</div>
-                        </div>
-                        <div className="col-span-1 md:col-span-3 p-5 flex flex-col justify-center">
-                          <span className="font-mono text-[12px] text-[#5C5C57] block mb-1 uppercase tracking-widest">阶段产出</span>
-                          <div className="text-[15px] font-sans font-bold text-[#151515]">{step.out}</div>
-                        </div>
-                      </div>
-                    ))}
+                  
+                  <div className="mt-8 pt-4 border-t border-[rgba(21,21,21,0.18)]">
+                    <span className="font-mono text-[12px] text-[#5C5C57] block mb-1 uppercase tracking-widest">产出</span>
+                    <div className="text-[15px] font-sans font-bold text-[#151515]">{phase.out}</div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.section>
 
           {/* ==========================================
-              04. APPLIED EVIDENCE (具体场景贯穿)
+              03. APPLIED EVIDENCE (关键交付物节选)
               ========================================== */}
           <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16 border-t border-[rgba(21,21,21,0.18)]">
             <div className="mb-6 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">03</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Applied Evidence / 应用证据</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">贯穿全链路的真实方法产出</h2>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Applied Evidence / 方法证据</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">关键交付物节选</h2>
               </div>
             </div>
             
-            <div className="mb-10 text-[15px] text-[#444440] bg-[#FAFAF7] border border-[#151515] p-4 font-sans">
-              <strong className="text-[#151515]">贯穿场景：</strong> 工业 AI 质检异常处置 (基于真实项目抽象的脱敏方法演示，不代表新增上线项目)。<br/>
-              <strong className="text-[#151515]">核心问题：</strong> 如何帮助操作员在多设备和多状态环境中，优先发现、理解并处理高风险异常？
-            </div>
+            <p className="text-[16px] text-[#444440] font-sans mb-10 leading-[1.65]">
+              <strong className="text-[#151515]">贯穿场景：</strong>工业 AI 质检异常处置。以下基于既有项目场景抽象，展示从模糊需求到风险清单的 AI 辅助方法演示，不代表原项目当时使用 AI 辅助交付。
+            </p>
 
             <div className="flex flex-col gap-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -538,20 +540,28 @@ export default function AIWorkflowPage() {
                   <EvidenceFrame 
                     src="/images/p3_assets/evidence-01.webp" 
                     alt="业务决策简报示例" 
-                    badge="FIG.01 / DECISION BRIEF"
+                    badge="FIG.01 / 决策简报 / DECISION BRIEF"
                     evidenceType="brief"
-                    caption="从模糊需求到业务决策简报：明确业务目标、待确认事项与成功判断标准。" 
-                    onZoom={setLightboxData} 
+                    caption="将一句模糊需求转成可讨论的业务问题、确认项和成功标准。" 
+                    onZoom={setLightboxData}
+                    isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                    placeholderTitle="待替换图：业务决策简报"
+                    placeholderDesc="展示模糊需求如何被拆成业务问题、待确认项和成功判断标准。"
+                    placeholderFile="/images/p3_assets/evidence-01.webp"
                   />
                 </motion.div>
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
                     src="/images/p3_assets/evidence-02.webp" 
                     alt="屏幕目的与路径示例" 
-                    badge="FIG.02 / SCREEN PURPOSE"
+                    badge="FIG.02 / 屏幕目的 / SCREEN PURPOSE"
                     evidenceType="flow"
-                    caption="定义屏幕目的与异常处理路径：覆盖从正常监控到人工接管的完整异常阻断分支。" 
-                    onZoom={setLightboxData} 
+                    caption="明确这个屏幕解决什么任务，以及异常出现后用户该怎么处理。" 
+                    onZoom={setLightboxData}
+                    isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                    placeholderTitle="待替换图：屏幕目的与异常路径"
+                    placeholderDesc="展示正常监控、异常发现、查看原因、人工确认/接管之间的任务路径。"
+                    placeholderFile="/images/p3_assets/evidence-02.webp"
                   />
                 </motion.div>
               </div>
@@ -560,10 +570,14 @@ export default function AIWorkflowPage() {
                 <EvidenceFrame 
                   src="/images/p3_assets/context-package.webp" 
                   alt="产品上下文包" 
-                  badge="FIG.03 / CONTEXT PACKAGE" 
+                  badge="FIG.03 / 产品上下文包 / CONTEXT PACKAGE" 
                   evidenceType="context"
-                  caption="沉淀产品上下文包：将业务目标、状态机规则和权限拦截逻辑转换为清晰的约束结构供 AI 读取。" 
-                  onZoom={setLightboxData} 
+                  caption="把状态、权限、术语和业务规则整理成 AI 可读取的约束。" 
+                  onZoom={setLightboxData}
+                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                  placeholderTitle="待替换图：产品上下文包"
+                  placeholderDesc="展示业务目标、目标用户、状态规则、权限规则和语气规则如何被整理成 AI 可读取约束。"
+                  placeholderFile="/images/p3_assets/context-package.webp"
                 />
               </motion.div>
 
@@ -571,10 +585,14 @@ export default function AIWorkflowPage() {
                 <EvidenceFrame 
                   src="/images/p3_assets/ai-draft-vs-human.webp" 
                   alt="初稿对比与精修批注" 
-                  badge="FIG.04 / RAW AI VS. HUMAN REFINED"
+                  badge="FIG.04 / AI 初稿与人工精修 / RAW AI VS. HUMAN REFINED"
                   evidenceType="compare"
-                  caption="AI 初稿与人工精修：修正 AI 强加的无效 KPI，按业务重要性重构异常列队，并补全离线缺省态。" 
-                  onZoom={setLightboxData} 
+                  caption="保留 AI 的生成速度，但用人工判断修正优先级、异常状态和动作入口。" 
+                  onZoom={setLightboxData}
+                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                  placeholderTitle="待替换图：AI 初稿与人工精修对比"
+                  placeholderDesc="展示 AI 初稿的问题，以及人工如何修正优先级、异常状态和动作入口。"
+                  placeholderFile="/images/p3_assets/ai-draft-vs-human.webp"
                 />
               </motion.div>
 
@@ -582,64 +600,44 @@ export default function AIWorkflowPage() {
                 <EvidenceFrame 
                   src="/images/p3_assets/qa-checklist.webp" 
                   alt="Demo 与交付风险清单" 
-                  badge="FIG.05 / DEMO & RISK LIST" 
+                  badge="FIG.05 / Demo 与风险清单 / DEMO & RISK LIST" 
                   evidenceType="demo"
-                  caption="可决策原型与开发前风险清单：明确界面背后的接口延迟风险、置信度来源依赖，设定断网灰态的安全验收标准。" 
-                  onZoom={setLightboxData} 
+                  caption="在开发前暴露接口、数据、权限和异常状态风险。" 
+                  onZoom={setLightboxData}
+                  isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
+                  placeholderTitle="待替换图：Demo 与开发前风险清单"
+                  placeholderDesc="展示已验证路径、关键交互 Demo，以及接口、数据、权限、异常状态等开发前风险。"
+                  placeholderFile="/images/p3_assets/qa-checklist.webp"
                 />
               </motion.div>
             </div>
           </motion.section>
 
           {/* ==========================================
-              05. WHAT CHANGED (风险与取舍)
+              04. HUMAN JUDGMENT (我如何筛掉错误方案)
               ========================================== */}
           <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16 border-t border-[rgba(21,21,21,0.18)]">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">04</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Human Judgment / 风险与取舍</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">人工判断与被放弃的方案</h2>
-              </div>
-            </div>
-
-            {/* 被放弃的方案 */}
-            <div className="mb-10 bg-[#FAFAF7] border border-[#151515] p-6 md:p-8">
-              <div className="font-mono text-[12px] text-[#9B302B] font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
-                <XCircle size={16} /> 被放弃的方案 / REJECTED OPTIONS
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-sans">
-                <div>
-                  <h4 className="text-[16px] font-bold text-[#151515] mb-2">方案 A：KPI Dashboard</h4>
-                  <p className="text-[15px] text-[#9B302B] mb-2 font-medium">问题：视觉完整，但不能帮助操作员优先处理异常。</p>
-                  <p className="text-[15px] text-[#151515] mb-2"><strong className="text-[#444440]">放弃原因：</strong>数据展示没有转化为行动优先级。</p>
-                  <p className="text-[15px] text-[#444440]"><strong className="text-[#151515]">保留内容：</strong>仅保留少量必要指标。</p>
-                </div>
-                <div>
-                  <h4 className="text-[16px] font-bold text-[#151515] mb-2">方案 B：设备卡片平铺</h4>
-                  <p className="text-[15px] text-[#9B302B] mb-2 font-medium">问题：能看到设备，但无法理解异常影响和处理顺序。</p>
-                  <p className="text-[15px] text-[#151515] mb-2"><strong className="text-[#444440]">放弃原因：</strong>设备视角强于任务视角。</p>
-                  <p className="text-[15px] text-[#444440]"><strong className="text-[#151515]">保留内容：</strong>设备状态降级为异常上下文。</p>
-                </div>
-              </div>
-              <div className="mt-8 pt-5 border-t border-[rgba(21,21,21,0.18)] text-[15px] font-sans font-bold text-[#151515]">
-                最终决策：优先聚焦异常任务的信息结构。<span className="font-normal text-[#444440] ml-2 text-[15px]">结果并非由 AI 自动生成，而是基于业务风险与用户任务作出的取舍。</span>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Human Judgment / 方案取舍</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">我如何筛掉错误方案</h2>
               </div>
             </div>
 
             <div className="border border-[#151515] bg-[#FAFAF7]">
               <div className="hidden lg:grid grid-cols-12 border-b border-[#151515] bg-[#151515] text-[#FAFAF7] text-[12px] font-mono tracking-widest uppercase">
                 <div className="col-span-3 p-4 border-r border-[#444440]">原始方案</div>
-                <div className="col-span-3 p-4 border-r border-[#444440]">为什么不能推进</div>
+                <div className="col-span-3 p-4 border-r border-[#444440]">问题</div>
                 <div className="col-span-3 p-4 border-r border-[#444440]">设计判断</div>
-                <div className="col-span-3 p-4">最终决策 & 关联证据</div>
+                <div className="col-span-3 p-4">最终处理</div>
               </div>
 
               {[
-                { draft: "首页堆叠 KPI 和图表", why: "无法定位操作重点", judge: "用户需优先发现异常", final: "异常摘要与操作前置", link: "FIG.04" },
-                { draft: "只覆盖正常使用状态", why: "忽略生产真实环境", judge: "必须覆盖离线与错误", final: "补全离线等异常路径", link: "FIG.05" },
-                { draft: "危险操作入口平铺", why: "极易引发误触", judge: "高危动作需二次确认", final: "增加权限与阻断确认", link: "FIG.02" },
-                { draft: "Demo 可点但边界不清", why: "研发无法估算排期", judge: "可运行不代表可开发", final: "补充接口依赖与清单", link: "FIG.05" }
+                { draft: "首页堆满 KPI", why: "看似完整，但不能指导操作。", judge: "操作员需要先处理异常。", final: "异常摘要与操作入口前置。" },
+                { draft: "只覆盖正常状态", why: "不符合真实生产环境。", judge: "必须覆盖离线、延迟、无权限。", final: "补齐异常路径。" },
+                { draft: "高危操作平铺", why: "容易误触。", judge: "危险操作需要确认和权限拦截。", final: "增加阻断与二次确认。" },
+                { draft: "Demo 可点但边界不清", why: "工程无法估算投入。", judge: "可运行不等于可开发。", final: "补充接口依赖和风险清单。" }
               ].map((row, idx) => (
                 <motion.div key={idx} variants={revealUp} className="grid grid-cols-1 lg:grid-cols-12 border-b border-[rgba(21,21,21,0.18)] last:border-b-0 hover:bg-[#F4F4EF] transition-colors font-sans">
                   <div className="col-span-1 lg:col-span-3 p-5 lg:p-6 border-b lg:border-b-0 lg:border-r border-[rgba(21,21,21,0.18)]">
@@ -647,7 +645,7 @@ export default function AIWorkflowPage() {
                     <span className="text-[15px] text-[#5C5C57] line-through decoration-[rgba(21,21,21,0.4)]">{row.draft}</span>
                   </div>
                   <div className="col-span-1 lg:col-span-3 p-5 lg:p-6 border-b lg:border-b-0 lg:border-r border-[rgba(21,21,21,0.18)] bg-[#FFF0ED]">
-                    <span className="lg:hidden text-[12px] font-mono text-[#9B302B] block mb-2 uppercase tracking-widest">为什么不能推进</span>
+                    <span className="lg:hidden text-[12px] font-mono text-[#9B302B] block mb-2 uppercase tracking-widest">问题</span>
                     <span className="text-[15px] text-[#9B302B] font-medium">{row.why}</span>
                   </div>
                   <div className="col-span-1 lg:col-span-3 p-5 lg:p-6 border-b lg:border-b-0 lg:border-r border-[rgba(21,21,21,0.18)]">
@@ -655,9 +653,8 @@ export default function AIWorkflowPage() {
                     <span className="text-[15px] text-[#151515] font-bold">{row.judge}</span>
                   </div>
                   <div className="col-span-1 lg:col-span-3 p-5 lg:p-6 bg-[#FAFAF7] flex flex-col justify-center">
-                    <span className="lg:hidden text-[12px] font-mono text-[#151515] block mb-2 uppercase tracking-widest">最终决策</span>
-                    <span className="text-[15px] text-[#151515] leading-[1.65] mb-3">{row.final}</span>
-                    <span className="text-[12px] font-mono text-[#151515] border border-[#151515] w-fit px-2 py-0.5">关联 {row.link}</span>
+                    <span className="lg:hidden text-[12px] font-mono text-[#151515] block mb-2 uppercase tracking-widest">最终处理</span>
+                    <span className="text-[15px] text-[#151515] leading-[1.65]">{row.final}</span>
                   </div>
                 </motion.div>
               ))}
@@ -665,132 +662,68 @@ export default function AIWorkflowPage() {
           </motion.section>
 
           {/* ==========================================
-              06. QUALITY GATES & BOUNDARIES
+              05. QUALITY GATE (交付前质量检查)
               ========================================== */}
           <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16 border-t border-[rgba(21,21,21,0.18)]">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
               <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">05</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Quality & Boundary / 质量阀与边界</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">把控交付物质量，守住安全边界</h2>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Quality Gate / 质量阀</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">交付前质量检查</h2>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 border border-[#151515] bg-[#151515] gap-px">
-              <div className="lg:col-span-4 bg-[#FFF0ED] flex flex-col">
-                <div className="bg-[#151515] px-5 py-3 text-[#FFF0ED] font-mono text-[12px] tracking-widest uppercase font-bold flex items-center gap-2">
-                  <div className="w-2 h-2 bg-[#9B302B]"></div> 边界说明
-                </div>
-                <div className="p-6 md:p-8">
-                  <ul className="text-[15px] font-sans text-[#9B302B] leading-[1.7] font-medium list-none space-y-4">
-                    <li className="flex gap-3 items-start"><AlertTriangle size={18} className="mt-1 shrink-0" /> 不替代商业决策。</li>
-                    <li className="flex gap-3 items-start"><AlertTriangle size={18} className="mt-1 shrink-0" /> 不替代真实用户研究。</li>
-                    <li className="flex gap-3 items-start"><AlertTriangle size={18} className="mt-1 shrink-0" /> 不替代复杂工程架构判断。</li>
-                    <li className="flex gap-3 items-start"><AlertTriangle size={18} className="mt-1 shrink-0" /> 不生成完整生产级代码。</li>
-                    <li className="flex gap-3 items-start"><AlertTriangle size={18} className="mt-1 shrink-0" /> 不交付未经人工评估的 AI 初稿。</li>
-                  </ul>
-                </div>
-              </div>
+            {/* Top Warning Callout */}
+            <motion.div variants={revealUp} className="bg-[#FFF0ED] border border-[#9B302B] p-5 md:p-6 text-[#9B302B] text-[15px] font-sans font-medium mb-8 flex items-start gap-3">
+              <div className="mt-0.5 shrink-0"><AlertTriangle size={18} /></div>
+              <div>AI 不替代商业决策、真实用户研究、工程架构判断和生产级代码。所有 AI 初稿必须经过人工评估后才能进入交付。</div>
+            </motion.div>
 
-              <div className="lg:col-span-8 bg-[#FAFAF7] flex flex-col font-sans">
-                <div className="bg-[#151515] px-5 py-3 text-[#FAFAF7] font-mono text-[12px] tracking-widest uppercase">
-                  核心检查点
-                </div>
-                <div>
-                  {[
-                    { name: "业务对齐", en: "BUSINESS FIT", check: "是否解决了正确的操作流问题？", risk: "界面完整，但并未帮助操作员处理致命硬件异常。", out: "业务决策简报" },
-                    { name: "任务清晰度", en: "TASK CLARITY", check: "信息是否足以支撑用户判断下一步？", risk: "数据丰富，但用户不知点击哪里可以接管错误设备。", out: "屏幕目的" },
-                    { name: "状态完整性", en: "STATE COMPLETENESS", check: "空、加载、失败、无权限和离线状态是否完整？", risk: "AI 忽略了设备断网场景，导致后期逻辑大改。", out: "状态矩阵" },
-                    { name: "一致性检验", en: "CRAFT & CONSISTENCY", check: "组件与业务术语是否一致？", risk: "同一种异常在不同层级显示了不同的警告色。", out: "产品上下文包" },
-                    { name: "交付成熟度", en: "DELIVERY READINESS", check: "工程约束与数据接口边界是否清晰？", risk: "设计了动画，但后端接口存在 2 秒的强制延迟。", out: "开发前风险清单" }
-                  ].map((gate, idx) => (
-                    <motion.div key={idx} variants={revealUp} className="flex flex-col sm:flex-row sm:items-start gap-4 p-5 md:p-6 border-b border-[rgba(21,21,21,0.18)] last:border-0 hover:bg-[#F4F4EF] transition-colors">
-                      <div className="w-full sm:w-[140px] shrink-0 flex flex-col">
-                        <h4 className="font-bold text-[#151515] text-[16px]">{gate.name}</h4>
-                        <span className="font-mono text-[12px] text-[#5C5C57]">{gate.en}</span>
-                      </div>
-                      <div className="flex-1 text-[15px] leading-[1.65]">
-                        <div className="text-[#151515] font-bold mb-1">检查：{gate.check}</div>
-                        <div className="text-[#9B302B] mb-4">本场景风险：{gate.risk}</div>
-                        <div className="text-[#151515] font-mono font-bold text-[12px] uppercase border border-[rgba(21,21,21,0.18)] inline-block px-2.5 py-1">
-                          对应交付物：{gate.out}
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
-          {/* ==========================================
-              07. HEURISTICS & TOOLS
-              ========================================== */}
-          <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerFast} className="py-16 border-t border-[rgba(21,21,21,0.18)]">
-            <div className="mb-6 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
-              <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">06</span>
-              <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Heuristics & Tools / 启发式与工具</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">屏幕级判断与工具分工</h2>
-              </div>
-            </div>
-            <p className="text-[14px] text-[#5C5C57] mb-8 font-sans font-medium">声明：以下为辅助判断的启发式与工具示例，非固定公式或工具排名。</p>
-
-            <div className="flex flex-col lg:flex-row border border-[#151515] bg-[#151515] gap-px font-sans">
-              
-              <div className="lg:w-3/5 bg-[#FAFAF7] flex flex-col">
-                <div className="bg-[#151515] px-5 py-3 text-[#FAFAF7] font-mono text-[12px] tracking-widest uppercase">屏幕级判断示例</div>
-                {[
-                  { name: "Dashboard", rule: "对于需要快速判断和行动的看板，控制核心指标数量，提供可解释洞察与明确下一步动作。" },
-                  { name: "Empty State", rule: "帮助用户理解核心价值，看到示例结果，并顺畅完成第一步激活操作。" },
-                  { name: "Settings", rule: "重点处理账单、权限变更、系统集成、数据导出与退出路径等高风险任务。" }
-                ].map((pattern, idx) => (
-                  <div key={idx} className="p-5 border-b border-[rgba(21,21,21,0.18)] last:border-0">
-                    <h4 className="text-[16px] font-bold text-[#151515] mb-2">{pattern.name}</h4>
-                    <p className="text-[15px] text-[#444440] leading-[1.65]">{pattern.rule}</p>
+            <div className="border border-[#151515] bg-[#FAFAF7] flex flex-col font-sans">
+              {[
+                { name: "业务对齐", check: "是否解决正确问题？", risk: "界面完整，但没有服务关键任务。", out: "业务决策简报" },
+                { name: "任务清晰", check: "用户是否知道下一步做什么？", risk: "信息很多，但操作路径不清楚。", out: "屏幕目的" },
+                { name: "状态完整", check: "空、加载、失败、离线、无权限是否覆盖？", risk: "只覆盖正常状态，后期容易返工。", out: "状态矩阵" },
+                { name: "规则一致", check: "术语、组件、状态和警告等级是否统一？", risk: "同类异常在不同页面表达不一致。", out: "产品上下文包" },
+                { name: "交付成熟", check: "接口、数据、权限和工程边界是否清楚？", risk: "Demo 可运行，但无法直接估算开发。", out: "开发前风险清单" }
+              ].map((gate, idx) => (
+                <motion.div key={idx} variants={revealUp} className="flex flex-col sm:flex-row sm:items-start gap-4 p-5 md:p-6 border-b border-[rgba(21,21,21,0.18)] last:border-0 hover:bg-[#F4F4EF] transition-colors">
+                  <div className="w-full sm:w-[140px] shrink-0 flex flex-col">
+                    <h4 className="font-bold text-[#151515] text-[16px]">{gate.name}</h4>
                   </div>
-                ))}
-              </div>
-
-              <div className="lg:w-2/5 bg-[#FAFAF7] flex flex-col">
-                <div className="bg-[#151515] px-5 py-3 text-[#FAFAF7] font-mono text-[12px] tracking-widest uppercase border-t lg:border-t-0 border-[#151515]">工具分工</div>
-                {[
-                  { phase: "THINK", purpose: "需求整理、问题拆解与文案探索。", tools: "Claude / ChatGPT" },
-                  { phase: "MAKE", purpose: "UI 探索、原型生成和关键路径验证。", tools: "Figma / Claude Code / Cursor" },
-                  { phase: "VERIFY", purpose: "规则同步、状态检查和交付说明。", tools: "MCP / Design System / Manual QA" }
-                ].map((row, i) => (
-                  <div key={i} className="p-5 border-b border-[rgba(21,21,21,0.18)] last:border-0 bg-[#F4F4EF]">
-                    <h4 className="font-mono font-bold text-[#151515] text-[14px] mb-2">{row.phase}</h4>
-                    <div className="text-[15px] text-[#151515] mb-2 leading-[1.6] font-medium">{row.purpose}</div>
-                    <div className="font-mono text-[12px] text-[#5C5C57]">ex: {row.tools}</div>
+                  <div className="flex-1 text-[15px] leading-[1.65]">
+                    <div className="text-[#151515] font-bold mb-1">检查：{gate.check}</div>
+                    <div className="text-[#9B302B] mb-4">风险：{gate.risk}</div>
+                    <div className="text-[#151515] font-mono font-bold text-[12px] uppercase border border-[rgba(21,21,21,0.18)] inline-block px-2.5 py-1">
+                      对应交付物：{gate.out}
+                    </div>
                   </div>
-                ))}
-              </div>
-
+                </motion.div>
+              ))}
             </div>
           </motion.section>
 
         </div>
 
         {/* ==========================================
-            07. BUSINESS VALUE & EVOLUTION (收束锚点)
+            06. BUSINESS VALUE (雇主能获得什么)
             ========================================== */}
         <section className="w-full bg-[#FAFAF7] text-[#151515] border-t border-[#151515] mt-8 pt-12 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
             <div className="mb-8 flex flex-col md:flex-row md:items-end gap-4 border-b border-[#151515] pb-4">
-              <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">07</span>
+              <span className="text-[#151515] font-mono text-[32px] leading-none font-bold">06</span>
               <div>
-                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Business Value & Evolution / 业务价值与经验节点</span>
-                <h2 className="text-[20px] font-sans font-bold text-[#151515]">推动落地的商业价值与沉淀</h2>
+                <span className="text-[#5C5C57] font-mono text-[12px] uppercase tracking-widest block mb-1">Business Value / 业务价值</span>
+                <h2 className="text-[20px] font-sans font-bold text-[#151515]">雇主能获得什么</h2>
               </div>
             </div>
             
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerFast} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 font-sans">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerFast} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 font-sans">
               {[
-                { title: "业务决策简报", text: "帮助团队先确认问题和投入边界，再决定是否推进。" },
-                { title: "可决策原型", text: "让老板、产品、设计、销售和工程围绕同一个方案讨论。" },
-                { title: "开发前风险清单", text: "在开发投入前暴露状态、权限、数据和接口依赖。" },
-                { title: "产品上下文与规则", text: "减少不同角色和工具对同一规则的重复解释。" }
+                { title: "减少无效开发", text: "开发前先判断方向是否值得投入，避免做完才发现目标不清。" },
+                { title: "提高决策效率", text: "老板、产品、工程、销售围绕同一个 Demo 讨论，减少反复解释。" },
+                { title: "提前暴露落地风险", text: "在开发前识别接口、数据、权限和异常状态问题。" },
+                { title: "形成可复用规则", text: "把状态、组件、术语和交付规则整理成可复用上下文，减少重复沟通。" }
               ].map((item, idx) => (
                 <motion.div key={idx} variants={revealUp} className="p-8 border border-[#151515] flex flex-col h-full bg-[#F4F4EF] text-[#151515] relative">
                   <div className="font-mono text-[40px] font-bold leading-none mb-6 text-[#151515]">0{idx+1}</div>
@@ -800,25 +733,8 @@ export default function AIWorkflowPage() {
               ))}
             </motion.div>
 
-            <div className="border-t border-[#151515] pt-8">
-               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-4 font-mono text-[12px]">
-                 {[
-                   { year: "2019", name: "CYG WMS" },
-                   { year: "2025", name: "Industrial AI HMI" },
-                   { year: "2025+", name: "MCP MVP" },
-                   { year: "2026", name: "Business-driven AI Workflow", active: true }
-                 ].map((t, i) => (
-                    <div key={i} className={`flex flex-col border-l pl-4 ${t.active ? 'border-[#B8E351]' : 'border-[rgba(21,21,21,0.18)]'}`}>
-                      <div className="flex items-center gap-2 mb-2">
-                        {t.active && <div className="w-2 h-2 rounded-none bg-[#B8E351]"></div>}
-                        <span className={`font-bold ${t.active ? 'text-[#151515]' : 'text-[#5C5C57]'}`}>{t.year}</span>
-                      </div>
-                      <div className={`font-sans text-[15px] ${t.active ? 'text-[#151515] font-bold' : 'text-[#5C5C57]'}`}>
-                        {t.name}
-                      </div>
-                    </div>
-                 ))}
-               </div>
+            <div className="text-center">
+              <span className="text-[14px] text-[#5C5C57] font-sans font-medium">工具只用于辅助生成、检查和验证；最终判断由设计师完成。</span>
             </div>
           </div>
         </section>
