@@ -14,7 +14,7 @@ import Link from "next/link";
 // [IMAGE_ASSETS]
 // ==========================================
 const CYG_IMAGES = {
-  hero: "/images/cyg-wms/P2_01_hero_mockup.png",
+  hero: "/images/cyg-wms/cyg-wms-hero-20260624.png",
   sidebar: "/images/cyg-wms/p2_02_status_sidebar.png",
   webView: "/images/cyg-wms/p2_03_web_view.png",
   rfView: "/images/cyg-wms/p2_03_rf_view.png",
