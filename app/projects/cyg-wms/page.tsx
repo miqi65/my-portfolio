@@ -601,10 +601,10 @@ export default function CYGCaseStudySpec() {
         <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger} className="py-20 md:py-24 bg-white">
           <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.82fr_1.08fr_1.28fr] gap-8 xl:gap-12 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[0.78fr_1.30fr_1.08fr] gap-7 xl:gap-10 items-start">
               
               {/* Left Column: Editorial Intro */}
-              <motion.div variants={fadeUp} className="md:col-span-2 lg:col-span-1 flex flex-col lg:sticky lg:top-[96px]">
+              <motion.div variants={fadeUp} className="md:col-span-2 lg:col-span-1 flex flex-col lg:sticky lg:top-[96px] lg:pt-[72px]">
                 <div className="text-[11px] font-mono text-[#7C8792] uppercase tracking-widest mb-4">OPERATION RHYTHM</div>
                 <h2 className="text-[32px] md:text-[38px] lg:text-[44px] xl:text-[48px] font-semibold tracking-tight text-[#202326] leading-[1.2] lg:leading-[1.12]">
                   操作节奏分层<br className="hidden lg:block"/>
@@ -633,7 +633,7 @@ export default function CYGCaseStudySpec() {
               </motion.div>
 
               {/* Middle Column: Flow Cards + Timeline */}
-              <motion.div variants={fadeUp} className="md:col-span-1 lg:col-span-1 relative">
+              <motion.div variants={fadeUp} className="md:col-span-1 lg:col-span-1 relative lg:pt-[72px]">
                 
                 {/* Vertical Timeline Line */}
                 <div className="absolute left-[23px] top-[48px] bottom-[48px] w-[1px] border-l border-dashed border-[#C8D0D6]/60 z-0" />
@@ -685,7 +685,7 @@ export default function CYGCaseStudySpec() {
                                </span>
                              </div>
 
-                             <div className="text-[12px] font-mono font-medium text-[#515154] tracking-wide opacity-90 truncate bg-[#F3F5F7] px-2.5 py-1.5 rounded-md self-start border border-[#C8D0D6]/30 max-w-full">
+                             <div className="text-[12px] font-mono font-medium text-[#515154] tracking-wide opacity-90 whitespace-nowrap bg-[#F3F5F7] px-2.5 py-1.5 rounded-md self-start border border-[#C8D0D6]/30 max-w-full">
                                {item.nodes}
                              </div>
                              
@@ -703,7 +703,7 @@ export default function CYGCaseStudySpec() {
               {/* Right Column: Active Flow Preview Card (Showcase Panel) */}
               <motion.div 
                 variants={fadeUp} 
-                className="md:col-span-1 lg:col-span-1 bg-[#F7F9FA] border border-[#C8D0D6]/50 rounded-[28px] p-6 lg:p-7 flex items-center justify-center min-h-[auto] lg:min-h-[680px] lg:sticky lg:top-[96px] shadow-sm overflow-hidden"
+                className="md:col-span-1 lg:col-span-1 flex items-start justify-center min-h-[auto] lg:sticky lg:top-[96px] lg:pt-[72px] overflow-visible"
               >
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -712,12 +712,12 @@ export default function CYGCaseStudySpec() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -8, scale: 0.98 }}
                     transition={{ duration: 0.3 }}
-                    className="w-full h-full flex items-center justify-center"
+                    className="w-full flex items-start justify-center"
                   >
                     <DeviceMockup 
                       src={rhythmFlows[activeFlowIndex].src} 
                       mediaType="video" 
-                      className="max-w-[300px] xl:max-w-[340px]" 
+                      className="max-w-[290px] xl:max-w-[330px]" 
                     />
                   </motion.div>
                 </AnimatePresence>
