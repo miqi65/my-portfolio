@@ -231,7 +231,7 @@ export default function YuxundaDashboardCase() {
                   友讯达数据大屏
                 </motion.h1>
                 <motion.p variants={revealUp} className="text-[16px] lg:text-[17px] text-[#B8C3D6] leading-[1.75] mb-8 max-w-[600px]">
-                  我主导友讯达智能工厂数据大屏设计，在 2 个月内完成用户洞察、信息梳理、数据可视化与视觉方案输出。项目将分散的生产、质量、设备与环境数据整合到统一大屏，帮助管理者更快判断生产状态、识别异常并支持现场决策。
+                  主导数据大屏设计，在 2 个月内完成用户洞察、信息梳理、数据可视化与视觉方案输出。项目将分散的生产、质量、设备与环境数据整合到统一大屏，帮助管理者更快判断生产状态、识别异常并支持现场决策。
                 </motion.p>
                 <motion.div variants={revealUp} className="grid grid-cols-3 gap-y-6 gap-x-4 mb-10 pb-8 border-b border-white/10 max-w-[620px]">
                   <div className="flex flex-col group cursor-default"><span className="text-[32px] md:text-[40px] font-medium text-white group-hover:text-[#4DA3FF] transition-colors duration-300">+43<span className="text-[20px] font-normal text-[#4DA3FF] ml-0.5">%</span></span><span className="text-[12px] text-[#8A96A8] mt-1">生产效率提升</span></div>
