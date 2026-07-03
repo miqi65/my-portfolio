@@ -27,6 +27,11 @@ body {
     "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", monospace;
 }
 
+.font-home-card {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Source Han Sans SC",
+    "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
 /* 隐藏横向滚动条，保留滚动功能 */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

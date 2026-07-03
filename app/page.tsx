@@ -32,7 +32,7 @@ export default function Home() {
                   />
                 </div>
                 
-                <div className="mt-[16px] pl-[6px] flex flex-col gap-[4px]">
+                <div className="font-home-card mt-[16px] pl-[6px] flex flex-col gap-[4px]">
                   <h2 className="text-[14px] text-foreground">
                     {/* 根据当前语言动态显示标题 */}
                     {project.title[language]}
