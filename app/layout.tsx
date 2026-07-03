@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Miki Design | Portfolio",
+  title: "Miki Yang | Portfolio",
   description: "Product Designer based in Shenzhen.",
 };
 

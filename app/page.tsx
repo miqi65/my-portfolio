@@ -9,7 +9,13 @@ export default function Home() {
   const { language } = useLanguage(); // 获取当前语言状态 ("en" 或 "zh")
 
   return (
-    <div className="w-full min-h-screen bg-background overflow-hidden selection:bg-foreground selection:text-background">
+    <div
+      className="w-full min-h-screen bg-background overflow-hidden selection:bg-foreground selection:text-background"
+      style={{
+        fontFamily:
+          '"Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
+      }}
+    >
       <section className="h-screen w-full flex items-center">
         <div className="w-full overflow-x-auto hide-scrollbar">
           <div className="flex items-start gap-[24px] pl-[38vw] pr-[18vw]">
@@ -31,11 +37,11 @@ export default function Home() {
                 </div>
                 
                 <div className="mt-[16px] pl-[6px] flex flex-col gap-[4px]">
-                  <h2 className="text-[14px] font-serif text-foreground">
+                  <h2 className="text-[14px] text-foreground">
                     {/* 根据当前语言动态显示标题 */}
                     {project.title[language]}
                   </h2>
-                  <p className="text-[13px] text-muted font-serif opacity-80">
+                  <p className="text-[13px] text-muted opacity-80">
                     {/* 根据当前语言动态显示分类 */}
                     {project.category[language]}
                   </p>
