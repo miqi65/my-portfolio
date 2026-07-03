@@ -22,6 +22,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.font-english {
+  font-family: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", monospace;
+}
+
 /* 隐藏横向滚动条，保留滚动功能 */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

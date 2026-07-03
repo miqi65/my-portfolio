@@ -10,11 +10,7 @@ export default function Home() {
 
   return (
     <div
-      className="w-full min-h-screen bg-background overflow-hidden selection:bg-foreground selection:text-background"
-      style={{
-        fontFamily:
-          '"Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", Arial, sans-serif',
-      }}
+      className="font-english w-full min-h-screen bg-background overflow-hidden selection:bg-foreground selection:text-background"
     >
       <section className="h-screen w-full flex items-center">
         <div className="w-full overflow-x-auto hide-scrollbar">

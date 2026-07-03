@@ -8,7 +8,7 @@ export default function LanguageToggle() {
   return (
     <button
       onClick={toggleLanguage}
-      className="hover:opacity-60 transition-opacity uppercase font-serif tracking-wide"
+      className="font-english hover:opacity-60 transition-opacity uppercase tracking-wide"
       aria-label="Toggle Language"
     >
       {language === "en" ? "EN" : "中文"}
