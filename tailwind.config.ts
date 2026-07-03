@@ -1,29 +1,25 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['PingFang SC', 'Noto Sans SC', 'var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-        display: ['PingFang SC', 'Noto Sans SC', 'var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
-      },
       colors: {
-        ink: '#111111',
-        paper: '#FFFFFF',
-        muted: '#888888',
-        faint: '#CCCCCC',
-        'hero-bg': '#0f0f0f',
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        muted: "var(--muted)",
       },
-      cursor: {
-        none: 'none',
+      fontFamily: {
+        serif: ["Georgia", "Times New Roman", "serif"],
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;

@@ -23,12 +23,15 @@ import Link from "next/link";
 const GPS_IMAGES = {
   hero: "/images/gps/gps-hero.png",
   solutionOne: "/images/gps/gps-06-1.png",
+  solutionTwo: "/images/gps/gps-06-2.png",
+  solutionThree: "/images/gps/gps-06-3.png",
+  solutionFour: "/images/gps/gps-06-4.png",
   overview: "/国家能源/project/assets/solution-overview.png",
   zone: "/国家能源/project/assets/zone-management.png",
   trajectory: "/国家能源/project/assets/trajectory.png",
   alert: "/国家能源/project/assets/alert-list.png",
   stats: "/国家能源/project/assets/stats-screen.png",
-  mapBg: "/images/gps/gps-hero.png", 
+  mapBg: "/images/gps/gps-04-bg.png", 
 };
 
 const projectMeta = {
@@ -111,21 +114,21 @@ const solutions = [
   },
   {
     title: "用电子围栏定义区域边界",
-    image: GPS_IMAGES.zone,
+    image: GPS_IMAGES.solutionTwo,
     problem: "过去区域归属主要依赖文字字段，用户难以在地图上判断运输对象是否进入或偏离指定范围。",
     designMove: "通过电子围栏将区域规则可视化，在地图层直接呈现运输对象与管理边界的关系。",
     value: "降低人工记忆和电话确认成本，让越界、偏离等异常更容易被及时发现。"
   },
   {
     title: "按优先级组织告警",
-    image: GPS_IMAGES.alert,
+    image: GPS_IMAGES.solutionThree,
     problem: "常规消息与紧急告警混在同一列表中，管理员在手机端容易漏看关键风险。",
     designMove: "将告警信息先按异常等级分层，再按时间顺序展示。",
     value: "降低低优先级信息干扰，让管理员优先处理最高风险异常。"
   },
   {
     title: "用路径回溯补齐复盘链路",
-    image: GPS_IMAGES.trajectory,
+    image: GPS_IMAGES.solutionFour,
     problem: "仅有当前定位点无法还原运输过程。异常发生后，复盘路径和界定责任成本较高。",
     designMove: "增加历史轨迹回看能力，按时间和位置记录关键节点，支持异常过程复盘。",
     value: "将动态运输过程沉淀为可查看、可追溯的系统记录，补齐事后复盘链路。"
