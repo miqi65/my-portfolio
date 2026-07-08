@@ -30,7 +30,7 @@ const projects = [
     title: 'CYG 智能仓储管理系统',
     desc: '覆盖 Web 管理端与 RF 手持终端的双端全链路设计，打通入库、拣货、盘点全流程，在高密度信息环境下保持操作效率与可读性。',
     tags: ['WMS', 'B端设计', 'RF Terminal', 'Full-Stack Design'],
-    image: '/Project_P2/images/P2_01_hero_mockup.png',
+    image: '/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png',
     href: '/Project_P2/index.html',
     external: true,
   },

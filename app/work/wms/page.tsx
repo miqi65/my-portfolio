@@ -1,1 +1,5 @@
-export { default } from "@/app/_projects_backup/cyg-wms/page";
+import { redirect } from "next/navigation";
+
+export default function WmsWorkPage() {
+  redirect("/Project_P2/index.html");
+}

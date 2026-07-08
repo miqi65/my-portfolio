@@ -93,6 +93,43 @@ export interface Project {
 }
 
 const PLACEHOLDER_IMG = "/images/p1-cover.png";
+const WMS_HERO_IMG = "/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png";
+
+const PROJECT_PLACEHOLDER_OVERRIDES: Partial<Record<string, Partial<Project>>> = {
+  wms: {
+    title: {
+      zh: "WMS 智能仓储管理系统",
+      en: "WMS Warehouse Management System"
+    },
+    category: {
+      zh: "仓储管理系统 / Web 与 RF 终端",
+      en: "Warehouse Management System / Web & RF Terminal"
+    },
+    summary: {
+      zh: "将 Web 管理端与 RF 终端的高频结构、流程与权限边界，收敛为一套标准化、可扩展的仓储系统交付框架。",
+      en: "A standardized, scalable delivery framework for WMS web management and RF terminal workflows."
+    },
+    cover: WMS_HERO_IMG,
+    heroImage: WMS_HERO_IMG,
+    meta: [
+      { label: { en: "DELIVERABLES", zh: "交付成果" }, value: { en: "WMS Web & RF terminal", zh: "WMS Web 管理端与 RF 终端" } },
+      { label: { en: "CLIENT", zh: "客户" }, value: { en: "CYG", zh: "CYG" } },
+      { label: { en: "ROLE", zh: "我的角色" }, value: { en: "Product Designer", zh: "产品设计" } },
+      { label: { en: "SERVICES", zh: "服务范围" }, value: { en: "UI&UX Design", zh: "UI&UX 设计" } }
+    ],
+    overview: {
+      label: { en: "OVERVIEW", zh: "概览" },
+      headline: {
+        en: "Standardizing multi-warehouse workflows across web management and RF operations.",
+        zh: "把多客户、多仓库、多作业流程收敛为可复用的仓储系统框架。"
+      },
+      body: {
+        en: "The new WMS case is served as the dedicated static project page.",
+        zh: "新的 WMS 案例已接入为独立静态项目页。"
+      }
+    }
+  }
+};
 
 export const projects: Project[] = [
     {
@@ -230,6 +267,7 @@ export const projects: Project[] = [
         label: { en: "OVERVIEW", zh: "概览" },
         headline: { en: "Headline Placeholder", zh: "大标题占位" },
         body: { en: "Body Placeholder", zh: "正文占位" }
-      }
+      },
+      ...(PROJECT_PLACEHOLDER_OVERRIDES[slug] ?? {})
     }))
   ];

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { HOME_V3 } from './tokens'
 
 const works = [
-  { id: '01', name: 'WMS 仓储系统', type: 'WAREHOUSE SYSTEM', tags: 'WMS', href: '/Project_P2/index.html', img: '/Project_P2/images/P2_01_hero_mockup.png' },
+  { id: '01', name: 'WMS 仓储系统', type: 'WAREHOUSE SYSTEM', tags: 'WMS', href: '/Project_P2/index.html', img: '/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png' },
   { id: '02', name: '友讯达数据大屏', type: 'DATA VISUALIZATION', tags: 'Data Viz', href: '/友讯达/project/友讯达大屏/index.html', img: '/友讯达/project/友讯达大屏/友讯达封面图.jpg' },
   { id: '03', name: '轨迹定位系统', type: 'TRACKING PLATFORM', tags: 'Geo Tracking', href: '/国家能源/project/Portfolio.html', img: '/国家能源/project/assets/bg-cover.png' },
   { id: '04', name: 'Chatbot 设计规范', type: 'INTERACTION STANDARD', tags: 'AI Guide', href: '/Project_P4/index.html', img: '/images/p4-cover.png' },

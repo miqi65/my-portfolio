@@ -25,7 +25,7 @@ const works: WorkCardItem[] = [
     desc: '优化仓储作业流程与库存可视化，提升出入库效率与库存准确率。',
     caption: 'WAREHOUSE PRODUCT',
     href: '/Project_P2/index.html',
-    image: '/Project_P2/images/P2_01_hero_mockup.png',
+    image: '/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png',
     imageAlt: 'WMS 仓储系统',
     previewPosition: 'object-center',
   },

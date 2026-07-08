@@ -37,6 +37,7 @@
   "exclude": [
     "node_modules",
     "node_modules*",
+    "public/Project_P2/source",
     "public/pcb"
   ]
 }
