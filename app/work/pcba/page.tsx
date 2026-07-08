@@ -1,1 +1,5 @@
-export { default } from "@/app/_projects_backup/pcb-new/pcb_page";
+import PcbaHome from "@/components/pcba-home/PcbaHome";
+
+export default function PcbaProjectPage() {
+  return <PcbaHome />;
+}
