@@ -263,15 +263,21 @@ function Heading2() {
   );
 }
 
-function Text() {
+function MetricValue({ value }: { value: string }) {
   return (
     <div className="h-[60px] relative shrink-0 w-full" data-name="Text">
       <div className="[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid not-italic relative size-full text-[#111] whitespace-nowrap">
-        <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[60px] left-0 text-[40px] top-[0.5px] tracking-[0.3711px]">+28</p>
-        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[30px] left-[76.79px] text-[20px] top-[22.5px] tracking-[-0.4492px]">%</p>
+        <div className="absolute content-stretch flex gap-[4px] items-baseline left-0 top-[0.5px]">
+          <p className="font-['Inter:Medium',sans-serif] font-medium leading-[60px] text-[40px] tracking-[0.3711px]">{value}</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[30px] text-[20px] tracking-[-0.4492px]">%</p>
+        </div>
       </div>
     </div>
   );
+}
+
+function Text() {
+  return <MetricValue value="+28" />;
 }
 
 function Text1() {
@@ -294,14 +300,7 @@ function Container14() {
 }
 
 function Text2() {
-  return (
-    <div className="h-[60px] relative shrink-0 w-full" data-name="Text">
-      <div className="[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid not-italic relative size-full text-[#111] whitespace-nowrap">
-        <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[60px] left-0 text-[40px] top-[0.5px] tracking-[0.3711px]">17</p>
-        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[30px] left-[43px] text-[20px] top-[22.5px] tracking-[-0.4492px]">%</p>
-      </div>
-    </div>
-  );
+  return <MetricValue value="17" />;
 }
 
 function Text3() {
@@ -324,14 +323,7 @@ function Container15() {
 }
 
 function Text4() {
-  return (
-    <div className="h-[60px] relative shrink-0 w-full" data-name="Text">
-      <div className="[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid not-italic relative size-full text-[#111] whitespace-nowrap">
-        <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[60px] left-0 text-[40px] top-[0.5px] tracking-[0.3711px]">-10</p>
-        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[30px] left-[64px] text-[20px] top-[22.5px] tracking-[-0.4492px]">%</p>
-      </div>
-    </div>
-  );
+  return <MetricValue value="-10" />;
 }
 
 function Text5() {
@@ -354,14 +346,7 @@ function Container16() {
 }
 
 function Text6() {
-  return (
-    <div className="h-[60px] relative shrink-0 w-full" data-name="Text">
-      <div className="[word-break:break-word] bg-clip-padding border-0 border-[transparent] border-solid not-italic relative size-full text-[#111] whitespace-nowrap">
-        <p className="absolute font-['Inter:Medium',sans-serif] font-medium leading-[60px] left-0 text-[40px] top-[0.5px] tracking-[0.3711px]">-20</p>
-        <p className="absolute font-['Inter:Regular',sans-serif] font-normal leading-[30px] left-[69.01px] text-[20px] top-[22.5px] tracking-[-0.4492px]">%</p>
-      </div>
-    </div>
-  );
+  return <MetricValue value="-20" />;
 }
 
 function Text7() {
@@ -435,7 +420,7 @@ function Container22() {
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[18px] text-black whitespace-nowrap">
           <p className="leading-[25.2px] mb-0 whitespace-pre">{`产线控制系统 `}</p>
-          <p className="leading-[25.2px] whitespace-pre">{` Web/PC 端`}</p>
+          <p className="leading-[25.2px] ml-[-5px] whitespace-pre">{` Web/PC 端`}</p>
         </div>
       </div>
     </div>
@@ -520,7 +505,7 @@ function Container30() {
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[18px] text-black whitespace-nowrap">
           <p className="leading-[25.2px] mb-0 whitespace-pre">工业级 WMS /</p>
-          <p className="leading-[25.2px] whitespace-pre">{` 双端全链路架构设计`}</p>
+          <p className="leading-[25.2px] ml-[-5px] whitespace-pre">{` 双端全链路架构设计`}</p>
         </div>
       </div>
     </div>
@@ -1014,7 +999,7 @@ function Container64() {
         <Heading5 />
         <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[591px] text-[0px] text-white top-[337.63px] w-[620px]">
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[36px] mb-0 text-[32px]">上线后，系统通过 90+ 条真实产线订单验证了可用性，沉淀 80+ 条一线反馈用于后续迭代。试行产线在特定时段内，产能提升至原有的 1.5 倍。</p>
-          <p className="leading-[24px] mb-0 text-[16px]">这个项目证明的能力，是能在存量系统、真实产线约束和研发排期的挤压下，找到一条可上线、可验证、有数据支撑的重构路径——设计判断的价值，最终体现在管理效率、插件效率这些业务能读懂的数字上。</p>
+          <p className="leading-[24px] mb-0 pt-[16px] text-[16px]">这个项目证明的能力，是能在存量系统、真实产线约束和研发排期的挤压下，找到一条可上线、可验证、有数据支撑的重构路径——设计判断的价值，最终体现在管理效率、插件效率这些业务能读懂的数字上。</p>
           <p className="leading-[24px] mb-0 text-[16px]">(注：本案例所有项目数据与敏感信息均已做脱敏处理。)</p>
           <p className="leading-[24px] text-[16px]">​</p>
         </div>
@@ -1231,6 +1216,17 @@ function Container70() {
 
 function Container72() {
   return <div className="h-[48px] relative shrink-0 w-full" data-name="Container" />;
+}
+
+function Container90() {
+  return (
+    <div className="relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
+        <Container70 />
+        <Container72 />
+      </div>
+    </div>
+  );
 }
 
 function Heading6() {
@@ -1520,8 +1516,6 @@ function Container69() {
   return (
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
-        <Container70 />
-        <Container72 />
         <Container73 />
       </div>
     </div>
@@ -1545,6 +1539,7 @@ function Container() {
         <Container38 />
         <Container39 />
         <Container41 />
+        <Container90 />
         <Container42 />
         <Section4 />
         <Section5 />

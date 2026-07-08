@@ -93,6 +93,7 @@ export interface Project {
 }
 
 const PLACEHOLDER_IMG = "/images/p1-cover.png";
+const PCBA_HERO_IMG = "/images/pcba-home/pcba-hero.png";
 const WMS_HERO_IMG = "/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png";
 
 const PROJECT_PLACEHOLDER_OVERRIDES: Partial<Record<string, Partial<Project>>> = {
@@ -255,7 +256,7 @@ export const projects: Project[] = [
       title: { en: `${slug.toUpperCase()} Project`, zh: `${slug.toUpperCase()} 项目` },
       category: { en: "Category Placeholder", zh: "分类占位" },
       summary: { en: "Summary placeholder", zh: "摘要占位" },
-      cover: PLACEHOLDER_IMG,
+      cover: slug === "pcba" ? PCBA_HERO_IMG : PLACEHOLDER_IMG,
       heroImage: PLACEHOLDER_IMG,
       meta: [
         { label: { en: "DELIVERABLES", zh: "交付成果" }, value: { en: "Placeholder", zh: "占位" } },
