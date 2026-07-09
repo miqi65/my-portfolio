@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import ProjectNextSection from "@/components/ProjectNextSection";
 import svgPaths from "./svg-g4y8famgkp";
 
 const DESIGN_WIDTH = 1728;
@@ -1419,14 +1420,7 @@ function Container73() {
 }
 
 function Container70() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
-        <Container71 />
-        <Container73 />
-      </div>
-    </div>
-  );
+  return <ProjectNextSection currentSlug="gps-2" />;
 }
 
 function Container89() {
@@ -1454,7 +1448,6 @@ function Container() {
         <Container64 />
         <Container69 />
         <Container70 />
-        <Container89 />
       </div>
     </div>
   );
@@ -1482,6 +1475,35 @@ function Body() {
 
 export default function Component() {
   const scale = useResponsiveScale();
+  const [contentHeight, setContentHeight] = useState(DESIGN_HEIGHT);
+  const canvasRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const measureContent = () => {
+      const canvas = canvasRef.current;
+      const footer = canvas?.querySelector<HTMLElement>("[data-project-next]");
+
+      if (!canvas || !footer || scale <= 0) {
+        return;
+      }
+
+      const canvasRect = canvas.getBoundingClientRect();
+      const footerRect = footer.getBoundingClientRect();
+      const nextHeight = Math.ceil((footerRect.bottom - canvasRect.top) / scale);
+
+      if (Number.isFinite(nextHeight) && nextHeight > 0) {
+        setContentHeight(Math.min(DESIGN_HEIGHT, nextHeight));
+      }
+    };
+
+    const frame = window.requestAnimationFrame(measureContent);
+    window.addEventListener("resize", measureContent);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", measureContent);
+    };
+  }, [scale]);
 
   return (
     <div
@@ -1492,13 +1514,14 @@ export default function Component() {
         className="mx-auto origin-top-left"
         style={{
           width: DESIGN_WIDTH * scale,
-          height: DESIGN_HEIGHT * scale,
+          height: contentHeight * scale,
         }}
       >
         <div
+          ref={canvasRef}
           style={{
             width: DESIGN_WIDTH,
-            height: DESIGN_HEIGHT,
+            height: contentHeight,
             transform: `scale(${scale})`,
             transformOrigin: "top left",
           }}

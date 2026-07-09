@@ -5,6 +5,7 @@ import Image from "next/image";
 import { projects } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider"; // 引入语言钩子
 import fiveGHero from "@/app/work/5G/src/imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
+import factoryHero from "@/app/work/factory/src/imports/友讯达数据大屏/c5559afa8d754117b73a27710273be81c1fdc7c6.png";
 
 const INDUSTRIAL_AI_SLUG = "ai-hmi";
 const INDUSTRIAL_AI_HREF = "/work/industrial-ai-detection";
@@ -34,9 +35,46 @@ const FIVE_G_CATEGORY = {
   zh: "5G通信 / 交互规范体系",
   en: "5G Communication / UX Standards"
 };
+const FACTORY_SLUG = "factory";
+const FACTORY_HREF = "/work/factory";
+const FACTORY_TITLE = {
+  zh: "友讯达数据大屏",
+  en: "YXD Factory Data Dashboard"
+};
+const FACTORY_CATEGORY = {
+  zh: "智能工厂数据可视化 / 决策大屏",
+  en: "Smart Factory Data Visualization / Decision Dashboard"
+};
+const DS_AI_SLUG = "ds-ai";
+const DS_AI_CARD_HERO = "/images/ds-ai/card.png";
+const DS_AI_TITLE = {
+  zh: "AI辅助工作流",
+  en: "AI-Assisted Workflow"
+};
+const DS_AI_CATEGORY = {
+  zh: "产品方法验证与交付",
+  en: "Product Method Validation & Delivery"
+};
+const HOME_PROJECT_ORDER = [
+  INDUSTRIAL_AI_SLUG,
+  PCBA_SLUG,
+  "wms",
+  GPS_SLUG,
+  FIVE_G_SLUG,
+  FACTORY_SLUG,
+  DS_AI_SLUG
+];
 
 export default function Home() {
   const { language } = useLanguage(); // 获取当前语言状态 ("en" 或 "zh")
+  const projectBySlug = new Map(projects.map((project) => [project.slug, project]));
+  const orderedSlugs = new Set(HOME_PROJECT_ORDER);
+  const orderedProjects = [
+    ...HOME_PROJECT_ORDER.map((slug) => projectBySlug.get(slug)).filter(
+      (project): project is (typeof projects)[number] => Boolean(project)
+    ),
+    ...projects.filter((project) => !orderedSlugs.has(project.slug))
+  ];
 
   return (
     <div
@@ -45,15 +83,19 @@ export default function Home() {
       <section className="h-screen w-full flex items-center">
         <div className="w-full overflow-x-auto hide-scrollbar">
           <div className="flex items-start gap-[24px] pl-[38vw] pr-[18vw]">
-            {projects.map((project, index) => {
+            {orderedProjects.map((project, index) => {
               const isIndustrialAi = project.slug === INDUSTRIAL_AI_SLUG;
               const isPcba = project.slug === PCBA_SLUG;
               const isGps = project.slug === GPS_SLUG;
               const isFiveG = project.slug === FIVE_G_SLUG;
+              const isFactory = project.slug === FACTORY_SLUG;
+              const isDsAi = project.slug === DS_AI_SLUG;
               const projectHref = isIndustrialAi
                 ? INDUSTRIAL_AI_HREF
                 : isGps
                   ? GPS_HREF
+                  : isFactory
+                    ? FACTORY_HREF
                   : isFiveG
                     ? FIVE_G_HREF
                   : `/work/${project.slug}`;
@@ -61,22 +103,34 @@ export default function Home() {
                 ? INDUSTRIAL_AI_HERO
                 : isGps
                   ? GPS_HERO
+                  : isFactory
+                  ? factoryHero
                   : isFiveG
                     ? fiveGHero
+                  : isDsAi
+                    ? DS_AI_CARD_HERO
                   : project.cover;
               const projectTitle =
                 isPcba
                   ? PCBA_TITLE[language]
+                  : isFactory
+                  ? FACTORY_TITLE[language]
                   : isFiveG
                     ? FIVE_G_TITLE[language]
+                  : isDsAi
+                    ? DS_AI_TITLE[language]
                   : isGps && language === "zh"
                   ? GPS_ZH_TITLE
                   : project.title[language];
               const projectCategory =
                 isPcba
                   ? PCBA_CATEGORY[language]
+                  : isFactory
+                    ? FACTORY_CATEGORY[language]
                   : isFiveG
                     ? FIVE_G_CATEGORY[language]
+                  : isDsAi
+                    ? DS_AI_CATEGORY[language]
                   : isGps && language === "zh"
                   ? GPS_ZH_CATEGORY
                   : project.category[language];

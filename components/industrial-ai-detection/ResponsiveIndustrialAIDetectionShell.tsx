@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import IndustrialAIDetectionPage from "./IndustrialAIDetectionPage";
 
 const CANVAS_WIDTH = 1728;
@@ -16,6 +16,8 @@ function getViewportWidth() {
 
 export default function ResponsiveIndustrialAIDetectionShell() {
   const [scale, setScale] = useState(1);
+  const [contentHeight, setContentHeight] = useState(CANVAS_HEIGHT);
+  const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateScale = () => {
@@ -32,6 +34,35 @@ export default function ResponsiveIndustrialAIDetectionShell() {
     };
   }, []);
 
+  useEffect(() => {
+    const measureContent = () => {
+      const canvas = canvasRef.current;
+      const footer = canvas?.querySelector<HTMLElement>("[data-project-next]");
+
+      if (!canvas || !footer || scale <= 0) {
+        return;
+      }
+
+      const canvasRect = canvas.getBoundingClientRect();
+      const footerRect = footer.getBoundingClientRect();
+      const nextHeight = Math.ceil((footerRect.bottom - canvasRect.top) / scale);
+
+      if (Number.isFinite(nextHeight) && nextHeight > 0) {
+        setContentHeight(Math.min(CANVAS_HEIGHT, nextHeight));
+      }
+    };
+
+    const frame = window.requestAnimationFrame(measureContent);
+    window.addEventListener("resize", measureContent);
+    window.visualViewport?.addEventListener("resize", measureContent);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", measureContent);
+      window.visualViewport?.removeEventListener("resize", measureContent);
+    };
+  }, [scale]);
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white text-[#111]">
       <div
@@ -39,15 +70,16 @@ export default function ResponsiveIndustrialAIDetectionShell() {
         className="relative mx-auto w-full overflow-hidden"
         style={{
           maxWidth: CANVAS_WIDTH,
-          height: Math.ceil(CANVAS_HEIGHT * scale),
+          height: Math.ceil(contentHeight * scale),
         }}
       >
         <div
           data-industrial-ai-canvas
+          ref={canvasRef}
           className="absolute left-0 top-0"
           style={{
             width: CANVAS_WIDTH,
-            height: CANVAS_HEIGHT,
+            height: contentHeight,
             transform: `scale(${scale})`,
             transformOrigin: "top left",
           }}

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ArrowLeft, X, ZoomIn, AlertTriangle } from "lucide-react";
-import Link from "next/link";
+import ProjectNextSection from "@/components/ProjectNextSection";
 
 // ==========================================
 // 全局控制开关：是否显示占位图
@@ -323,19 +323,9 @@ export default function AIWorkflowPage() {
         {lightboxData && <ImageLightbox data={lightboxData} onClose={() => setLightboxData(null)} />}
       </AnimatePresence>
 
-      <nav className="fixed top-0 w-full z-50 bg-[#151515] text-[#FAFAF7] h-14 border-b border-[#444440] flex items-center">
-        <div className="max-w-[1280px] w-full mx-auto px-6 lg:px-8 flex items-center justify-between">
-          <Link href="/#cases" className="flex items-center gap-2 text-[14px] font-medium text-[#A3A3A3] hover:text-[#FAFAF7] transition-colors group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B8E351]">
-            <ArrowLeft size={16} strokeWidth={1.5} className="group-hover:-translate-x-1 transition-transform duration-300" />
-            <span>返回作品集</span>
-          </Link>
-          <div className="text-[12px] tracking-[0.2em] text-[#A3A3A3] uppercase font-mono hidden sm:block">
-            AI 辅助产品验证 / PRODUCT VALIDATION
-          </div>
-        </div>
-      </nav>
+      <div aria-hidden className="h-14 bg-[#F4F4EF]" />
 
-      <main className="pt-14 overflow-x-hidden">
+      <main className="overflow-x-hidden">
         
         {/* ==========================================
             01. HERO
@@ -810,6 +800,8 @@ export default function AIWorkflowPage() {
             </div>
           </div>
         </section>
+
+        <ProjectNextSection currentSlug="ds-ai" />
 
       </main>
     </div>

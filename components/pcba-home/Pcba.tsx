@@ -1,3 +1,4 @@
+import ProjectNextSection from "@/components/ProjectNextSection";
 import svgPaths from "./svg-b1xkrhket4";
 import imgContainerData from "./336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
 import imgContainer1Data from "./675995c2c82521a0dc62189b26c8ee62ca24f27c.png";
@@ -1513,13 +1514,7 @@ function Container73() {
 }
 
 function Container69() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
-        <Container73 />
-      </div>
-    </div>
-  );
+  return <ProjectNextSection currentSlug="pcba" />;
 }
 
 function Container89() {
@@ -1548,7 +1543,6 @@ function Container() {
         <Container63 />
         <Container66 />
         <Container69 />
-        <Container89 />
       </div>
     </div>
   );

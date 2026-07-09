@@ -1,1 +1,5 @@
-export { default } from "@/app/_projects_backup/HMI/page";
+import FactoryCasePage from "./src/app/App";
+
+export default function FactoryProjectPage() {
+  return <FactoryCasePage />;
+}

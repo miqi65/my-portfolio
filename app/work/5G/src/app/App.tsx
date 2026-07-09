@@ -1,14 +1,12 @@
 "use client";
 
-import svgPaths from "../imports/5Gchatbot/svg-x5lekoojnc";
+import ProjectNextSection from "@/components/ProjectNextSection";
 import imgHero from "../imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
 import imgChallenges from "../imports/5Gchatbot/a169984832e56fd99a6974db941e6246f6758413.png";
 import imgStrategy1 from "../imports/5Gchatbot/c6d713bf855a8399cbf3882240f2ed94e204cc6e.png";
 import imgSpec from "../imports/5Gchatbot/f21bc47bf40d6c7af0e89e41b96507852425354c.png";
 import imgStrategy2 from "../imports/5Gchatbot/f8eb217af3bca6a7db483191f74f0068285aac8e.png";
 import imgDeliverables from "../imports/5Gchatbot/449724633cc62d0afe68e79ac547f710cc5249c1.png";
-import imgNextProject from "../imports/5Gchatbot/3829fadc0e9472939fa554b8f2710edd317813fe.png";
-import imgNextProjectOverlay from "../imports/5Gchatbot/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
 
 type ImageAsset = string | { src: string };
 
@@ -230,47 +228,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── Next Project ── */}
-      <section className="mt-20 md:mt-28 bg-[#111] relative overflow-hidden">
-        <div className="relative flex flex-col items-center justify-center py-20 md:py-28 lg:py-36 px-6 text-center">
-          <p className="font-['Noto_Sans_SC',sans-serif] text-[#474747] text-[16px] sm:text-[20px] md:text-[24px] uppercase tracking-wide mb-4">下一个项目</p>
-          <h2 className="font-['Noto_Sans_SC',sans-serif] font-bold text-[#111] text-[28px] sm:text-[36px] md:text-[46px] uppercase text-white mb-10">
-            PCBA 插件机控制系统
-          </h2>
-
-          {/* Preview card */}
-          <div className="relative w-[200px] sm:w-[280px] md:w-[349px] rounded-lg overflow-hidden group cursor-pointer">
-            <p className="font-['Noto_Sans_SC',sans-serif] text-[#fafafa] text-[13px] mb-2 text-left">[UI/UX]</p>
-            <div className="w-full h-[120px] sm:h-[160px] md:h-[198px] relative rounded-lg overflow-hidden">
-              <img src={imageSrc(imgNextProject)} alt="PCBA 项目预览" className="absolute inset-0 w-full h-full object-cover" />
-              <img src={imageSrc(imgNextProjectOverlay)} alt="" className="absolute inset-0 w-full h-full object-cover" />
-            </div>
-            <div className="flex justify-between mt-2">
-              <p className="font-['Noto_Sans_SC',sans-serif] text-[#fafafa] text-[13px]">WILD</p>
-              <p className="font-['Noto_Sans_SC',sans-serif] text-[#fafafa] text-[13px] opacity-50">RESPONSIVE WEB</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Footer bar */}
-        <div className="border-t border-white/10 flex items-center justify-between px-6 md:px-10 py-4">
-          <p className="font-['Roboto_Mono',monospace] text-[#2f2f2f] text-[13px] md:text-[14px]">COLLECTION OF WORK</p>
-          <p className="font-['Roboto_Mono',monospace] text-[#2f2f2f] text-[13px] md:text-[14px]">COPYRIGHT 2026</p>
-          {/* Scroll to top */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex flex-col items-center gap-1 hover:opacity-70 transition-opacity"
-            aria-label="回到顶部"
-          >
-            <svg width="18" height="21" viewBox="0 0 18 21" fill="none">
-              <path d={svgPaths.p15b83e00} stroke="#2F2F2F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path clipRule="evenodd" d={svgPaths.p33198480} fill="#2F2F2F" fillRule="evenodd" />
-            </svg>
-          </button>
-        </div>
-      </section>
+      <ProjectNextSection currentSlug="5G" />
 
     </div>
   );

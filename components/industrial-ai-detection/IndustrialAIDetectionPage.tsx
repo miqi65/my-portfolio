@@ -1,3 +1,4 @@
+import ProjectNextSection from "@/components/ProjectNextSection";
 import svgPaths from "./svg-xv7l13cwhu";
 const imgContainer = "/images/industrial-ai-detection/a1925cfcd1b376841168c4a647d62506c5e54411.png";
 const imgContainer1 = "/images/industrial-ai-detection/7ff1541c3c112892a91494819379750e14ac3783.png";
@@ -1176,14 +1177,7 @@ function Container74() {
 }
 
 function Container71() {
-  return (
-    <div className="relative shrink-0 w-full" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
-        <Container72 />
-        <Container74 />
-      </div>
-    </div>
-  );
+  return <ProjectNextSection currentSlug="industrial-ai-detection" />;
 }
 
 function Container90() {
@@ -1218,8 +1212,6 @@ function Container() {
         <Section7 />
         <Container70 />
         <Container71 />
-        <Container90 />
-        <Container91 />
       </div>
     </div>
   );
