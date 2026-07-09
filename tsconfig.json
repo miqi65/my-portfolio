@@ -38,6 +38,10 @@
     "node_modules",
     "node_modules*",
     "public/Project_P2/source",
-    "public/pcb"
+    "public/pcb",
+    "app/work/5G/vite.config.ts",
+    "app/work/5G/src/main.tsx",
+    "app/work/5G/src/app/components",
+    "app/work/5G/src/imports/5Gchatbot/index.tsx"
   ]
 }

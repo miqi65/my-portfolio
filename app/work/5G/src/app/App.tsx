@@ -1,29 +1,23 @@
-import svgPaths from "@/imports/5Gchatbot/svg-x5lekoojnc";
-import imgHero from "@/imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
-import imgChallenges from "@/imports/5Gchatbot/a169984832e56fd99a6974db941e6246f6758413.png";
-import imgStrategy1 from "@/imports/5Gchatbot/c6d713bf855a8399cbf3882240f2ed94e204cc6e.png";
-import imgSpec from "@/imports/5Gchatbot/f21bc47bf40d6c7af0e89e41b96507852425354c.png";
-import imgStrategy2 from "@/imports/5Gchatbot/f8eb217af3bca6a7db483191f74f0068285aac8e.png";
-import imgDeliverables from "@/imports/5Gchatbot/449724633cc62d0afe68e79ac547f710cc5249c1.png";
-import imgNextProject from "@/imports/5Gchatbot/3829fadc0e9472939fa554b8f2710edd317813fe.png";
-import imgNextProjectOverlay from "@/imports/5Gchatbot/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
+"use client";
+
+import svgPaths from "../imports/5Gchatbot/svg-x5lekoojnc";
+import imgHero from "../imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
+import imgChallenges from "../imports/5Gchatbot/a169984832e56fd99a6974db941e6246f6758413.png";
+import imgStrategy1 from "../imports/5Gchatbot/c6d713bf855a8399cbf3882240f2ed94e204cc6e.png";
+import imgSpec from "../imports/5Gchatbot/f21bc47bf40d6c7af0e89e41b96507852425354c.png";
+import imgStrategy2 from "../imports/5Gchatbot/f8eb217af3bca6a7db483191f74f0068285aac8e.png";
+import imgDeliverables from "../imports/5Gchatbot/449724633cc62d0afe68e79ac547f710cc5249c1.png";
+import imgNextProject from "../imports/5Gchatbot/3829fadc0e9472939fa554b8f2710edd317813fe.png";
+import imgNextProjectOverlay from "../imports/5Gchatbot/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
+
+type ImageAsset = string | { src: string };
+
+const imageSrc = (image: ImageAsset) => (typeof image === "string" ? image : image.src);
 
 export default function App() {
   return (
     <div className="bg-white min-h-screen w-full font-sans">
-
-      {/* ── Header ── */}
-      <header className="flex items-center justify-between px-6 py-5 md:px-10 lg:px-16">
-        <span className="font-['Roboto_Mono',monospace] text-[15px] tracking-[0.025em] text-[#080808]">
-          Miki Yang
-        </span>
-        <nav className="flex items-center gap-5 md:gap-6">
-          <a href="#" className="font-['Roboto_Mono',monospace] text-[15px] text-[#080808] hover:opacity-60 transition-opacity">Work</a>
-          <a href="#" className="font-['Roboto_Mono',monospace] text-[15px] text-[#080808] hover:opacity-60 transition-opacity">Info</a>
-          <span className="font-['Roboto_Mono',monospace] text-[15px] uppercase tracking-[0.025em] text-[#080808]">EN</span>
-          <span className="ml-2 inline-block size-3 rounded-full bg-[#080808]" />
-        </nav>
-      </header>
+      <div aria-hidden className="h-[88px] md:h-[96px]" />
 
       {/* ── Hero Section ── */}
       <section className="px-6 md:px-10 lg:px-16 pt-10 pb-0">
@@ -32,7 +26,7 @@ export default function App() {
         </h1>
         <div className="w-full rounded-2xl overflow-hidden">
           <img
-            src={imgHero}
+            src={imageSrc(imgHero)}
             alt="5G Chatbot 项目封面"
             className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
           />
@@ -51,7 +45,7 @@ export default function App() {
             </p>
 
             <p className="font-['Noto_Sans_SC',sans-serif] text-[#717171] text-[16px] leading-[1.4] mb-4">项目成果</p>
-            <div className="flex flex-row gap-10 sm:gap-16">
+            <div className="flex flex-row flex-wrap gap-x-10 gap-y-8 sm:gap-x-16">
               <div>
                 <div className="flex items-end gap-1">
                   <span className="font-['Inter',sans-serif] font-medium text-[40px] leading-[1] text-[#111]">15</span>
@@ -110,7 +104,7 @@ export default function App() {
       <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28">
         <div className="w-full rounded-2xl overflow-hidden relative">
           <img
-            src={imgChallenges}
+            src={imageSrc(imgChallenges)}
             alt="核心挑战背景"
             className="w-full h-[420px] sm:h-[560px] md:h-[680px] lg:h-[787px] object-cover"
           />
@@ -143,7 +137,7 @@ export default function App() {
           {/* Image left */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
             <img
-              src={imgStrategy1}
+              src={imageSrc(imgStrategy1)}
               alt="设计策略截图"
               className="w-full h-[360px] sm:h-[480px] lg:h-[660px] xl:h-[798px] object-cover"
             />
@@ -171,7 +165,7 @@ export default function App() {
       <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
         <div className="w-full rounded-2xl overflow-hidden">
           <img
-            src={imgSpec}
+            src={imageSrc(imgSpec)}
             alt="规范文档截图"
             className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
           />
@@ -184,7 +178,7 @@ export default function App() {
           {/* Image right */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
             <img
-              src={imgStrategy2}
+              src={imageSrc(imgStrategy2)}
               alt="组织推行截图"
               className="w-full h-[360px] sm:h-[480px] lg:h-[660px] xl:h-[798px] object-cover"
             />
@@ -216,7 +210,7 @@ export default function App() {
       <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16 pb-0">
         <div className="w-full rounded-2xl overflow-hidden">
           <img
-            src={imgDeliverables}
+            src={imageSrc(imgDeliverables)}
             alt="交付物截图"
             className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
           />
@@ -248,8 +242,8 @@ export default function App() {
           <div className="relative w-[200px] sm:w-[280px] md:w-[349px] rounded-lg overflow-hidden group cursor-pointer">
             <p className="font-['Noto_Sans_SC',sans-serif] text-[#fafafa] text-[13px] mb-2 text-left">[UI/UX]</p>
             <div className="w-full h-[120px] sm:h-[160px] md:h-[198px] relative rounded-lg overflow-hidden">
-              <img src={imgNextProject} alt="PCBA 项目预览" className="absolute inset-0 w-full h-full object-cover" />
-              <img src={imgNextProjectOverlay} alt="" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={imageSrc(imgNextProject)} alt="PCBA 项目预览" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={imageSrc(imgNextProjectOverlay)} alt="" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="flex justify-between mt-2">
               <p className="font-['Noto_Sans_SC',sans-serif] text-[#fafafa] text-[13px]">WILD</p>

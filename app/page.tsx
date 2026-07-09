@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider"; // 引入语言钩子
+import fiveGHero from "@/app/work/5G/src/imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
 
 const INDUSTRIAL_AI_SLUG = "ai-hmi";
 const INDUSTRIAL_AI_HREF = "/work/industrial-ai-detection";
@@ -23,6 +24,16 @@ const GPS_HREF = "/work/gps-2";
 const GPS_HERO = "/images/gps-2/hero.png";
 const GPS_ZH_TITLE = "载体轨迹定位系统";
 const GPS_ZH_CATEGORY = "GIS 定位追踪 / 移动端 UX 设计";
+const FIVE_G_SLUG = "5g";
+const FIVE_G_HREF = "/work/5G";
+const FIVE_G_TITLE = {
+  zh: "5G消息Chatbot交互规范体系",
+  en: "5G Messaging Chatbot Interaction Standards"
+};
+const FIVE_G_CATEGORY = {
+  zh: "5G通信 / 交互规范体系",
+  en: "5G Communication / UX Standards"
+};
 
 export default function Home() {
   const { language } = useLanguage(); // 获取当前语言状态 ("en" 或 "zh")
@@ -38,25 +49,34 @@ export default function Home() {
               const isIndustrialAi = project.slug === INDUSTRIAL_AI_SLUG;
               const isPcba = project.slug === PCBA_SLUG;
               const isGps = project.slug === GPS_SLUG;
+              const isFiveG = project.slug === FIVE_G_SLUG;
               const projectHref = isIndustrialAi
                 ? INDUSTRIAL_AI_HREF
                 : isGps
                   ? GPS_HREF
+                  : isFiveG
+                    ? FIVE_G_HREF
                   : `/work/${project.slug}`;
               const projectCover = isIndustrialAi
                 ? INDUSTRIAL_AI_HERO
                 : isGps
                   ? GPS_HERO
+                  : isFiveG
+                    ? fiveGHero
                   : project.cover;
               const projectTitle =
                 isPcba
                   ? PCBA_TITLE[language]
+                  : isFiveG
+                    ? FIVE_G_TITLE[language]
                   : isGps && language === "zh"
                   ? GPS_ZH_TITLE
                   : project.title[language];
               const projectCategory =
                 isPcba
                   ? PCBA_CATEGORY[language]
+                  : isFiveG
+                    ? FIVE_G_CATEGORY[language]
                   : isGps && language === "zh"
                   ? GPS_ZH_CATEGORY
                   : project.category[language];
