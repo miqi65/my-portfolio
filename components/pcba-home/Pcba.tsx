@@ -504,7 +504,7 @@ function Container30() {
     <div className="relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
         <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[18px] text-black whitespace-nowrap">
-          <p className="leading-[25.2px] mb-0 whitespace-pre">工业级 WMS /</p>
+          <p className="leading-[25.2px] mb-0 whitespace-pre">工业级系统 /</p>
           <p className="leading-[25.2px] ml-[-5px] whitespace-pre">{` 双端全链路架构设计`}</p>
         </div>
       </div>
