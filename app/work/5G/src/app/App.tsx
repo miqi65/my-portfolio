@@ -18,7 +18,7 @@ export default function App() {
       <div aria-hidden className="h-[88px] md:h-[96px]" />
 
       {/* ── Hero Section ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-10 pb-0">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-10 pb-0">
         <h1 className="font-['Noto_Sans_SC',sans-serif] font-bold text-[#111] text-2xl sm:text-3xl md:text-4xl lg:text-[46px] leading-tight mb-12 md:mb-16 lg:mb-20">
           5G消息Chatbot交互规范体系
         </h1>
@@ -26,13 +26,13 @@ export default function App() {
           <img
             src={imageSrc(imgHero)}
             alt="5G Chatbot 项目封面"
-            className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
+            className="w-full h-[clamp(280px,56vw,787px)] object-cover"
           />
         </div>
       </section>
 
       {/* ── Project Overview ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28 pb-0">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28 pb-0">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 lg:justify-between">
 
           {/* Left: description + results */}
@@ -99,12 +99,12 @@ export default function App() {
       </section>
 
       {/* ── Core Challenges ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28">
         <div className="w-full rounded-2xl overflow-hidden relative">
           <img
             src={imageSrc(imgChallenges)}
             alt="核心挑战背景"
-            className="w-full h-[420px] sm:h-[560px] md:h-[680px] lg:h-[787px] object-cover"
+            className="w-full h-[clamp(520px,56vw,787px)] object-cover"
           />
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-[rgba(0,0,0,0.77)] backdrop-blur-[3px] rounded-2xl" />
@@ -130,14 +130,14 @@ export default function App() {
       </section>
 
       {/* ── Design Strategy #1 & #2 ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* Image left */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
             <img
               src={imageSrc(imgStrategy1)}
               alt="设计策略截图"
-              className="w-full h-[360px] sm:h-[480px] lg:h-[660px] xl:h-[798px] object-cover"
+              className="w-full h-[clamp(360px,46vw,798px)] object-cover"
             />
           </div>
           {/* Text right */}
@@ -160,25 +160,25 @@ export default function App() {
       </section>
 
       {/* ── Spec full-width image ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
         <div className="w-full rounded-2xl overflow-hidden">
           <img
             src={imageSrc(imgSpec)}
             alt="规范文档截图"
-            className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
+            className="w-full h-[clamp(280px,56vw,787px)] object-cover"
           />
         </div>
       </section>
 
       {/* ── Design Strategy #3 ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
         <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start">
           {/* Image right */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
             <img
               src={imageSrc(imgStrategy2)}
               alt="组织推行截图"
-              className="w-full h-[360px] sm:h-[480px] lg:h-[660px] xl:h-[798px] object-cover"
+              className="w-full h-[clamp(360px,46vw,798px)] object-cover"
             />
           </div>
           {/* Text left */}
@@ -193,11 +193,11 @@ export default function App() {
       </section>
 
       {/* ── Deliverables text ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-16 md:pt-24">
         <div className="max-w-[620px] ml-auto mr-0 lg:mr-16 xl:mr-28">
           <div className="font-['Noto_Sans_SC',sans-serif] text-[#111] text-[16px] leading-[1.5] space-y-2">
             <p>交付资产</p>
-            <p className="text-transparent select-none">​</p>
+            <p className="select-none text-[1px] leading-none text-transparent">​</p>
             <p>Fig. 01 — Interaction Flow (交互链路重构)：基于「贴近用户真实物理环境」原则，输出标准化的线性对话流程模板与节点信息传达策略。</p>
             <p>Fig. 02 — Design System (视觉最小公约数)：定义色彩语义、系统级字体降级方案、图片自适应安全区的全套规范。</p>
           </div>
@@ -205,18 +205,18 @@ export default function App() {
       </section>
 
       {/* ── Deliverables full-width image ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-12 md:pt-16 pb-0">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16 pb-0">
         <div className="w-full rounded-2xl overflow-hidden">
           <img
             src={imageSrc(imgDeliverables)}
             alt="交付物截图"
-            className="w-full h-[280px] sm:h-[400px] md:h-[540px] lg:h-[680px] xl:h-[787px] object-cover"
+            className="w-full h-[clamp(280px,56vw,787px)] object-cover"
           />
         </div>
       </section>
 
       {/* ── Awards ── */}
-      <section className="px-6 md:px-10 lg:px-16 pt-16 md:pt-24">
+      <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-16 md:pt-24">
         <div className="max-w-[620px]">
           <p className="font-['Noto_Sans_SC',sans-serif] text-[#717171] text-[16px] leading-[1.4] mb-4">业务结果与行业认可</p>
           <div className="font-['Noto_Sans_SC',sans-serif] text-[#111] text-[16px] leading-[1.5] space-y-1.5">

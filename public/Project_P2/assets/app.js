@@ -127,7 +127,7 @@ function Container5() {
 function Container7() {
   return (
     React.createElement('div', { className: "h-[786px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 129}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer, __self: this, __source: {fileName: _jsxFileName, lineNumber: 130}} )
+      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full wms-hero-thumbnail-image"         , src: imgContainer, __self: this, __source: {fileName: _jsxFileName, lineNumber: 130}} )
     )
   );
 }
@@ -472,7 +472,7 @@ function Container26() {
 }
 
 function Container30() {
-  return React.createElement('div', { className: "absolute h-[129.92px] left-[210px] top-[205px] w-[112.961px]"    , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 475}} );
+  return React.createElement('div', { className: "wms-meta-placeholder absolute h-[129.92px] left-[210px] top-[205px] w-[112.961px]"    , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 475}} );
 }
 
 function Container32() {
@@ -635,8 +635,8 @@ function Container44() {
       , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer2, __self: this, __source: {fileName: _jsxFileName, lineNumber: 635}} )
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 636}}
         , React.createElement('div', { className: "absolute backdrop-blur-[4.85px] bg-[rgba(0,0,0,0.3)] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]"       , __self: this, __source: {fileName: _jsxFileName, lineNumber: 637}} )
-        , React.createElement('p', { className: "[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[476px] text-[16px] text-white top-[278.13px] whitespace-nowrap"         , __self: this, __source: {fileName: _jsxFileName, lineNumber: 638}}, `产品愿景 `)
-        , React.createElement('div', { className: "[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[476px] text-[0px] text-white top-[317.13px] w-[560px] whitespace-pre-wrap"          , __self: this, __source: {fileName: _jsxFileName, lineNumber: 639}}
+        , React.createElement('p', { className: "wms-vision-label [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[476px] text-[16px] text-white top-[278.13px] whitespace-nowrap"         , __self: this, __source: {fileName: _jsxFileName, lineNumber: 638}}, `产品愿景 `)
+        , React.createElement('div', { className: "wms-vision-copy [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[476px] text-[0px] text-white top-[317.13px] w-[560px] whitespace-pre-wrap"          , __self: this, __source: {fileName: _jsxFileName, lineNumber: 639}}
           , React.createElement('p', { className: "font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[40px] mb-0 text-[32px]"    , __self: this, __source: {fileName: _jsxFileName, lineNumber: 640}}, `将一次性原型转化为可持续维护的双端业务架构。 `)
           , React.createElement('p', { className: "mb-0 text-[16px]" , __self: this, __source: {fileName: _jsxFileName, lineNumber: 641}}
             , React.createElement('span', { className: "leading-[40px]", __self: this, __source: {fileName: _jsxFileName, lineNumber: 642}}, "We")
@@ -677,7 +677,7 @@ function Heading4() {
   return (
     React.createElement('div', { className: "relative shrink-0 w-full"  , 'data-name': "Heading 2" , __self: this, __source: {fileName: _jsxFileName, lineNumber: 678}}
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start px-[283px] relative size-full"          , __self: this, __source: {fileName: _jsxFileName, lineNumber: 679}}
-        , React.createElement('p', { className: "[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap"         , __self: this, __source: {fileName: _jsxFileName, lineNumber: 680}}, `架构与交互策略 `)
+        , React.createElement('p', { className: "[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap wms-architecture-strategy-label"         , __self: this, __source: {fileName: _jsxFileName, lineNumber: 680}}, `架构与交互策略 `)
       )
     )
   );
@@ -1196,7 +1196,7 @@ function Section8() {
 }
 
 function Container89() {
-  return React.createElement('div', { className: "h-[120px] relative shrink-0 w-full"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1199}} );
+  return React.createElement('div', { className: "wms-before-next-image-spacer h-[120px] relative shrink-0 w-full"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1199}} );
 }
 
 function Container93() {
@@ -1527,7 +1527,7 @@ function Container90() {
 }
 
 function Container111() {
-  return React.createElement('div', { className: "h-[48px] relative shrink-0 w-full"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1530}} );
+  return React.createElement('div', { className: "wms-after-footer-spacer h-[48px] relative shrink-0 w-full"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1530}} );
 }
 
 function Container() {

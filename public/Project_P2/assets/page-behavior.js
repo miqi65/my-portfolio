@@ -1,30 +1,20 @@
 (function () {
-  var DESIGN_WIDTH = 1728;
-  var DESIGN_HEIGHT = 12066;
-
-  function updateScale(attempt) {
-    var scale = Math.min(1, window.innerWidth / DESIGN_WIDTH);
+  function refreshLayout(attempt) {
     var shell = document.getElementById("wms-responsive-shell");
     var stage = document.getElementById("wms-responsive-stage");
-    var contentHeight = getContentHeight(scale);
 
-    document.documentElement.style.setProperty("--wms-scale", String(scale));
-
-    if (shell) {
-      shell.style.height = contentHeight * scale + "px";
-      if (stage) {
-        stage.style.height = contentHeight + "px";
-      }
-      if (contentHeight === DESIGN_HEIGHT && attempt < 20) {
+    if (!shell || !stage) {
+      if (attempt < 20) {
         requestAnimationFrame(function () {
-          updateScale(attempt + 1);
+          refreshLayout(attempt + 1);
         });
       }
-    } else if (attempt < 20) {
-      requestAnimationFrame(function () {
-        updateScale(attempt + 1);
-      });
+      return;
     }
+
+    shell.style.height = "auto";
+    stage.style.width = "100%";
+    stage.style.height = "auto";
   }
 
   function bindHomeLink(attempt) {
@@ -81,25 +71,6 @@
     }
 
     return footerBar;
-  }
-
-  function getContentHeight(scale) {
-    var stage = document.getElementById("wms-responsive-stage");
-    var footerBar = findFooterBar();
-
-    if (!stage || !footerBar || scale <= 0) {
-      return DESIGN_HEIGHT;
-    }
-
-    var stageRect = stage.getBoundingClientRect();
-    var footerRect = footerBar.getBoundingClientRect();
-    var nextHeight = Math.ceil((footerRect.bottom - stageRect.top) / scale);
-
-    if (!Number.isFinite(nextHeight) || nextHeight <= 0) {
-      return DESIGN_HEIGHT;
-    }
-
-    return Math.min(DESIGN_HEIGHT, nextHeight);
   }
 
   function findAncestorContainingImage(node) {
@@ -185,6 +156,15 @@
       return;
     }
 
+    footerBar.id = "wms-next-project-footer";
+    Array.prototype.forEach.call(footerBar.children, function (child) {
+      var text = child.textContent || "";
+
+      if (text.indexOf("COLLECTION OF WORK") === -1 && text.indexOf("COPYRIGHT 2026") === -1) {
+        child.setAttribute("data-wms-generated-footer-control", "true");
+      }
+    });
+
     var button = document.createElement("button");
     button.id = "wms-scroll-top";
     button.type = "button";
@@ -196,11 +176,11 @@
     });
 
     footerBar.appendChild(button);
-    updateScale(0);
+    refreshLayout(0);
   }
 
   function init() {
-    updateScale(0);
+    refreshLayout(0);
     bindHomeLink(0);
     bindNextProject(0);
     bindScrollTop(0);
@@ -209,14 +189,14 @@
   window.addEventListener(
     "resize",
     function () {
-      updateScale(0);
+      refreshLayout(0);
     },
     { passive: true }
   );
   window.addEventListener(
     "orientationchange",
     function () {
-      updateScale(0);
+      refreshLayout(0);
     },
     { passive: true }
   );

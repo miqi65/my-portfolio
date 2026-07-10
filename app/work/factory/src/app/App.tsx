@@ -21,7 +21,7 @@ const imageSrc = (image: ImageAsset) => (typeof image === "string" ? image : ima
 // ─── Hero section ─────────────────────────────────────────────────────────────
 function HeroSection() {
   return (
-    <section className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-[164px]">
+    <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px]">
       <div className="w-full max-w-[1398px] flex flex-col gap-[80px] items-start">
         {/* Title */}
         <h1 className={`${notoSCBold} text-[#111] text-[32px] sm:text-[40px] lg:text-[46px] leading-[1.4]`}>
@@ -43,7 +43,7 @@ function HeroSection() {
 // ─── Project info section ─────────────────────────────────────────────────────
 function ProjectInfoSection() {
   return (
-    <section className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-[164px] mt-[120px]">
+    <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px] mt-[120px]">
       <div className="w-full max-w-[1398px] flex flex-col xl:flex-row gap-12 xl:gap-0 items-start">
         {/* Left: overview + results */}
         <div className="w-full lg:max-w-[680px] flex flex-col">
@@ -93,8 +93,8 @@ function ProjectInfoSection() {
         </div>
 
         {/* Right: metadata */}
-        <div className="xl:ml-auto flex flex-col gap-8 xl:gap-0 xl:relative xl:w-[420px]">
-          <div className="flex flex-row flex-wrap gap-8 xl:gap-0 xl:block">
+        <div className="flex w-full flex-col gap-8 xl:ml-auto xl:w-[420px] xl:gap-0 xl:relative">
+          <div className="grid w-full grid-cols-1 gap-x-10 gap-y-8 sm:grid-cols-2 xl:block xl:gap-0">
             {/* 交付物 */}
             <div className="xl:absolute xl:left-0 xl:top-0">
               <p className={`${notoSC} text-[#717171] text-[16px] leading-[22.4px]`}>交付物</p>
@@ -147,7 +147,7 @@ function SplitSection({ imageLeft = true, image, label, content }: SplitSectionP
   );
 
   return (
-    <section className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-[164px] mt-[120px]">
+    <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px] mt-[120px]">
       <div className="w-full max-w-[1398px]">
         <div className={`flex flex-col ${imageLeft ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-0 items-stretch`}>
           {imagePanel}
@@ -207,7 +207,7 @@ function UserInsightsSection() {
 // ─── Vision & strategy (dark) section ────────────────────────────────────────
 function VisionStrategySection() {
   return (
-    <section className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-[164px] mt-[48px]">
+    <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px] mt-[48px]">
       <div className="w-full max-w-[1400px] rounded-[16px] overflow-hidden relative" style={{ minHeight: 560 }}>
         {/* Background image */}
         <img
@@ -274,7 +274,7 @@ function InteractionSection() {
 // ─── Full-width screenshot sections ───────────────────────────────────────────
 function ScreenshotSection({ image, alt }: { image: ImageAsset; alt: string }) {
   return (
-    <section className="w-full flex flex-col items-center px-4 sm:px-8 lg:px-[164px]">
+    <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px]">
       <div className="w-full max-w-[1398px] rounded-[16px] overflow-hidden">
         <img alt={alt} className="w-full h-auto object-cover" src={imageSrc(image)} />
       </div>

@@ -1,4 +1,12 @@
-import ProjectNextSection from "@/components/ProjectNextSection";
+import {
+  CaseImageGrid,
+  CaseMediaBlock,
+  CaseMetaGrid,
+  CaseNextProject,
+  CasePageShell,
+  CaseSplitSection,
+  CaseTextBlock
+} from "@/components/case-study";
 import svgPaths from "./svg-b1xkrhket4";
 import imgContainerData from "./336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
 import imgContainer1Data from "./675995c2c82521a0dc62189b26c8ee62ca24f27c.png";
@@ -133,7 +141,7 @@ function Container3() {
 
 function Header() {
   return (
-    <div className="absolute content-stretch flex items-center justify-between left-0 px-[24px] py-[22px] top-0 w-[1728px]" data-name="Header">
+    <div className="absolute content-stretch flex items-center justify-between left-0 px-[24px] py-[22px] top-0 w-full" data-name="Header">
       <Container2 />
       <Container3 />
     </div>
@@ -152,7 +160,7 @@ function Heading() {
   return (
     <div className="relative shrink-0 w-full" data-name="Heading 1">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
-        <p className="[word-break:break-word] font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[64.4px] relative shrink-0 text-[#111] text-[46px] whitespace-nowrap">PCBA 插件机控制系统</p>
+        <p className="[word-break:break-word] font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[1.15] md:leading-[64.4px] relative shrink-0 text-[#111] text-[clamp(34px,4vw,46px)] md:whitespace-nowrap">PCBA 插件机控制系统</p>
       </div>
     </div>
   );
@@ -170,7 +178,7 @@ function Container5() {
 
 function Container7() {
   return (
-    <div className="h-[786px] relative shrink-0 w-[1400px]" data-name="Container">
+    <div className="aspect-[1400/786] h-auto relative shrink-0 w-full" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer} />
     </div>
   );
@@ -178,22 +186,22 @@ function Container7() {
 
 function Container6() {
   return (
-    <div className="h-[787px] relative rounded-[16px] shrink-0 w-[1400px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1400/787]" gutters="none" className="h-auto" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center overflow-clip relative rounded-[inherit] size-full">
         <Container7 />
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
 function Container4() {
   return (
-    <div className="max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
+    <CasePageShell maxWidth="wide" gutters="viewport" className="shrink-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[80px] items-start max-w-[inherit] relative size-full">
         <Container5 />
         <Container6 />
       </div>
-    </div>
+    </CasePageShell>
   );
 }
 
@@ -224,7 +232,7 @@ function Heading1() {
 function Paragraph() {
   return (
     <div className="content-stretch flex flex-col items-start pb-[16px] relative shrink-0 w-full" data-name="Paragraph">
-      <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[30.8px] relative shrink-0 text-[#111] text-[22px] w-[680px]">把长期闲置的进口控制系统，重构为可度量、可持续扩展的产线管理系统。系统面向 PCBA 数字化产线，核心目标是把原本分散、依赖人工确认的产线操作，整合为统一管理生产任务、物料选择、异常预警与工程资料的生产管理系统。</p>
+      <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[1.55] md:leading-[30.8px] relative shrink-0 text-[#111] text-[clamp(17px,1.35vw,22px)] w-full max-w-[680px]">把长期闲置的进口控制系统，重构为可度量、可持续扩展的产线管理系统。系统面向 PCBA 数字化产线，核心目标是把原本分散、依赖人工确认的产线操作，整合为统一管理生产任务、物料选择、异常预警与工程资料的生产管理系统。</p>
     </div>
   );
 }
@@ -372,7 +380,7 @@ function Container17() {
 function ParagraphMargin1() {
   return (
     <div className="relative shrink-0" data-name="Paragraph:margin">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center relative size-full">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-wrap gap-y-[20px] items-center relative size-full md:flex-nowrap">
         <Container14 />
         <Container15 />
         <Container16 />
@@ -395,7 +403,7 @@ function Container13() {
 
 function Container10() {
   return (
-    <div className="max-w-[680px] relative shrink-0 w-[680px]" data-name="Container">
+    <div className="max-w-[680px] relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start max-w-[inherit] relative size-full">
         <Container11 />
         <Container12 />
@@ -441,7 +449,7 @@ function Container20() {
 
 function Container19() {
   return (
-    <div className="absolute content-stretch flex items-center left-0 top-[-0.38px] w-[112.961px]" data-name="Container">
+    <div className="content-stretch flex items-center relative w-full lg:absolute lg:left-0 lg:top-[-0.38px] lg:w-[112.961px]" data-name="Container">
       <Container20 />
     </div>
   );
@@ -484,7 +492,7 @@ function Container24() {
 
 function Container23() {
   return (
-    <div className="absolute content-stretch flex items-center left-[210px] top-[-0.38px] w-[112.961px]" data-name="Container">
+    <div className="content-stretch flex items-center relative w-full lg:absolute lg:left-[210px] lg:top-[-0.38px] lg:w-[112.961px]" data-name="Container">
       <Container24 />
     </div>
   );
@@ -526,7 +534,7 @@ function Container28() {
 
 function Container27() {
   return (
-    <div className="absolute content-stretch flex items-center left-0 top-[103.54px] w-[112.961px]" data-name="Container">
+    <div className="content-stretch flex items-center relative w-full lg:absolute lg:left-0 lg:top-[103.54px] lg:w-[112.961px]" data-name="Container">
       <Container28 />
     </div>
   );
@@ -554,7 +562,7 @@ function Container33() {
 
 function Container31() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[5.92px] items-start left-0 top-[207.46px] w-[167px]" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[5.92px] items-start relative w-full lg:absolute lg:left-0 lg:top-[207.46px] lg:w-[167px]" data-name="Container">
       <Container32 />
       <Container33 />
     </div>
@@ -563,25 +571,25 @@ function Container31() {
 
 function Container18() {
   return (
-    <div className="h-[410px] max-w-[256px] relative shrink-0 w-[210px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+    <div className="h-auto max-w-none relative shrink-0 w-full lg:h-[410px] lg:max-w-[256px] lg:w-[210px]" data-name="Container">
+      <CaseMetaGrid layout="sidebar" className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container19 />
         <Container23 />
         <Container27 />
         <Container31 />
-      </div>
+      </CaseMetaGrid>
     </div>
   );
 }
 
 function Container9() {
   return (
-    <div className="h-[334px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[272px] items-start max-w-[inherit] pr-[128px] relative size-full">
+    <CasePageShell maxWidth="wide" gutters="viewport" className="h-auto shrink-0 lg:h-[334px]" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[48px] items-start max-w-[inherit] pr-0 relative size-full lg:flex-row lg:gap-[272px] lg:pr-[128px]">
         <Container10 />
         <Container18 />
       </div>
-    </div>
+    </CasePageShell>
   );
 }
 
@@ -601,12 +609,12 @@ function Container34() {
 
 function Container37() {
   return (
-    <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
+    <div className="h-full relative shrink-0 w-full" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer1} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute backdrop-blur-[4.85px] bg-[rgba(0,0,0,0.69)] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]" />
-        <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[688px] text-[16px] text-white top-[238.5px] whitespace-nowrap">核心挑战</p>
-        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[688px] text-[0px] text-white top-[277.5px] w-[560px] whitespace-pre-wrap">
+        <div className="absolute backdrop-blur-[4.85px] bg-[rgba(0,0,0,0.69)] inset-0 rounded-[15px]" />
+        <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[32px] text-[16px] text-white top-[72px] whitespace-nowrap md:left-[64px] lg:left-[688px] lg:top-[238.5px]">核心挑战</p>
+        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[32px] right-[32px] text-[0px] text-white top-[112px] whitespace-pre-wrap md:left-[64px] md:right-[64px] lg:left-[688px] lg:right-auto lg:top-[277.5px] lg:w-[560px]">
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0 text-[32px]">#1.操作惯性</p>
           <p className="leading-[24px] mb-0 pt-[16px] text-[16px]">一线人员对旧系统的操作逻辑已经形成肌肉记忆，强行替换全新交互逻辑，会增加培训成本和误操作风险。</p>
           <p className="leading-[24px] mb-0 text-[16px]">​</p>
@@ -625,11 +633,11 @@ function Container37() {
 
 function Container36() {
   return (
-    <div className="h-[788px] max-h-[788px] max-w-[1400px] relative rounded-[16px] shrink-0 w-[1400px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1400/788]" className="min-h-[760px] md:min-h-[620px] lg:min-h-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center max-h-[inherit] max-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <Container37 />
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
@@ -650,7 +658,7 @@ function Container38() {
 function Heading3() {
   return (
     <div className="relative shrink-0 w-full" data-name="Heading 2">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pl-[276px] pr-[513px] relative size-full">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full lg:pl-[118px] lg:pr-[671px]">
         <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap">关键决策</p>
       </div>
     </div>
@@ -659,13 +667,13 @@ function Heading3() {
 
 function Container40() {
   return (
-    <div className="max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start max-w-[inherit] pl-[118px] pr-[355px] relative size-full">
-        <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[#111] text-[16px] w-[560px]">
+    <div className="max-w-[1398px] relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start max-w-[inherit] relative size-full lg:pl-[118px] lg:pr-[355px]">
+        <CaseTextBlock unstyled className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[#111] text-[16px] w-full max-w-[560px]">
           <p className="leading-[24px] mb-0">面对这三个约束，我没有选择推翻旧系统、从零设计一套新逻辑，而是选择保留底层逻辑、重构关键流程。这个判断具体体现在两处取舍：</p>
           <p className="leading-[24px] mb-0">1.现场观察证实，物料选择与孔位确认在真实作业中是连续发生的，因此把它们从跨界面确认合并为同一任务路径；</p>
           <p className="leading-[24px]">2.机台异常原本依赖红黄灯和人工巡检，问题发现滞后、处理优先级也不清楚，因此改为分层数字预警，让异常类型、设备状态和处理优先级同时可见。</p>
-        </div>
+        </CaseTextBlock>
       </div>
     </div>
   );
@@ -673,18 +681,18 @@ function Container40() {
 
 function Section2() {
   return (
-    <div className="h-[175px] relative shrink-0 w-[1713px]" data-name="Section">
+    <CasePageShell as="section" maxWidth="wide" gutters="viewport" className="h-auto shrink-0 lg:h-[175px]" data-name="Section">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-center relative size-full">
         <Heading3 />
         <Container40 />
       </div>
-    </div>
+    </CasePageShell>
   );
 }
 
 function Container39() {
   return (
-    <div className="h-[175px] relative shrink-0 w-full" data-name="Container">
+    <div className="h-auto relative shrink-0 w-full lg:h-[175px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
         <Section2 />
       </div>
@@ -698,15 +706,15 @@ function Container41() {
 
 function Container45() {
   return (
-    <div className="bg-[#e2e5e9] h-[680px] relative shrink-0 w-[679px]" data-name="Container">
+    <div className="bg-[#e2e5e9] aspect-square h-auto relative shrink-0 w-full lg:h-[680px] lg:w-[679px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute h-[360px] left-[47.5px] rounded-[8px] top-[171px] w-[576px]" data-name="示教-物料列表 1">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[25%] w-[85%] lg:h-[360px] lg:left-[47.5px] lg:top-[171px] lg:w-[576px]" data-name="示教-物料列表 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img1} />
         </div>
-        <div className="absolute h-[360px] left-[51.5px] rounded-[8px] top-[171px] w-[576px]" data-name="首页3 2">
+        <div className="absolute aspect-[576/360] h-auto left-[7.5%] rounded-[8px] top-[25%] w-[85%] lg:h-[360px] lg:left-[51.5px] lg:top-[171px] lg:w-[576px]" data-name="首页3 2">
           <div aria-hidden className="absolute border-6 border-[#ccc] border-solid inset-[-6px] pointer-events-none rounded-[14px]" />
         </div>
-        <div className="absolute h-[360px] left-[51.5px] rounded-[8px] top-[171px] w-[576px]" data-name="首页3 3">
+        <div className="absolute aspect-[576/360] h-auto left-[7.5%] rounded-[8px] top-[25%] w-[85%] lg:h-[360px] lg:left-[51.5px] lg:top-[171px] lg:w-[576px]" data-name="首页3 3">
           <div aria-hidden className="absolute border-6 border-black border-solid inset-[-3px] pointer-events-none rounded-[11px]" />
         </div>
       </div>
@@ -716,7 +724,7 @@ function Container45() {
 
 function Container44() {
   return (
-    <div className="absolute content-stretch flex items-center justify-center left-[719px] overflow-clip rounded-[16px] size-[680px] top-0" data-name="Container">
+    <div className="aspect-square content-stretch flex items-center justify-center overflow-clip relative rounded-[16px] w-full lg:absolute lg:left-[719px] lg:size-[680px] lg:top-0" data-name="Container">
       <Container45 />
     </div>
   );
@@ -734,9 +742,9 @@ function Heading4() {
 
 function Container46() {
   return (
-    <div className="absolute content-stretch flex flex-col gap-[10px] items-start justify-center left-[63px] px-[54px] top-[145px] w-[587px]" data-name="Container">
+    <div className="content-stretch flex flex-col gap-[10px] items-start justify-center max-w-[587px] relative w-full lg:absolute lg:left-[63px] lg:px-[54px] lg:top-[145px] lg:w-[587px]" data-name="Container">
       <Heading4 />
-      <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[#111] text-[16px] w-[480px] whitespace-pre-wrap">
+      <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[#111] text-[16px] w-full max-w-[480px] whitespace-pre-wrap">
         <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">集中监控看板</p>
         <p className="leading-[24px] mb-0">{`管理者过去要翻查日志、询问现场，才能判断产线状态和异常优先级。设计将产线进度、机台状态、订单信息和异常警报整合为统一监控入口。 `}</p>
         <p className="leading-[24px] mb-0">结果：管理效率提升 +28%。</p>
@@ -755,12 +763,12 @@ function Container46() {
 
 function Container43() {
   return (
-    <div className="h-[680px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+    <CasePageShell maxWidth="wide" gutters="viewport" className="h-auto shrink-0 lg:h-[680px]" data-name="Container">
+      <CaseSplitSection layout="desktopAbsolute" className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container44 />
         <Container46 />
-      </div>
-    </div>
+      </CaseSplitSection>
+    </CasePageShell>
   );
 }
 
@@ -791,15 +799,15 @@ function Container42() {
 
 function Container50() {
   return (
-    <div className="bg-[#e2e5e9] h-[680px] relative shrink-0 w-[679px]" data-name="Container">
+    <div className="bg-[#e2e5e9] aspect-square h-auto relative shrink-0 w-full lg:h-[680px] lg:w-[679px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute h-[360px] left-[47.5px] rounded-[8px] top-[151px] w-[576px]" data-name="示教-物料列表 1">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[47.5px] lg:top-[151px] lg:w-[576px]" data-name="示教-物料列表 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img2} />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 2">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 2">
           <div aria-hidden className="absolute border-6 border-[#ccc] border-solid inset-[-6px] pointer-events-none rounded-[14px]" />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 3">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 3">
           <div aria-hidden className="absolute border-6 border-black border-solid inset-[-3px] pointer-events-none rounded-[11px]" />
         </div>
       </div>
@@ -809,7 +817,7 @@ function Container50() {
 
 function Container49() {
   return (
-    <div className="absolute content-stretch flex items-center justify-center left-0 overflow-clip rounded-[16px] size-[680px] top-0" data-name="Container">
+    <div className="aspect-square content-stretch flex items-center justify-center overflow-clip relative rounded-[16px] w-full lg:absolute lg:left-0 lg:size-[680px] lg:top-0" data-name="Container">
       <Container50 />
     </div>
   );
@@ -817,15 +825,15 @@ function Container49() {
 
 function Container52() {
   return (
-    <div className="bg-[#f5f5f7] h-[680px] relative shrink-0 w-[679px]" data-name="Container">
+    <div className="bg-[#f5f5f7] aspect-square h-auto relative shrink-0 w-full lg:h-[680px] lg:w-[679px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 1">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img31} />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 2">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 2">
           <div aria-hidden className="absolute border-6 border-[#ccc] border-solid inset-[-6px] pointer-events-none rounded-[14px]" />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 3">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 3">
           <div aria-hidden className="absolute border-6 border-black border-solid inset-[-3px] pointer-events-none rounded-[11px]" />
         </div>
       </div>
@@ -835,7 +843,7 @@ function Container52() {
 
 function Container51() {
   return (
-    <div className="absolute content-stretch flex items-center justify-center left-[719px] overflow-clip rounded-[16px] size-[680px] top-0" data-name="Container">
+    <div className="aspect-square content-stretch flex items-center justify-center overflow-clip relative rounded-[16px] w-full lg:absolute lg:left-[719px] lg:size-[680px] lg:top-0" data-name="Container">
       <Container52 />
     </div>
   );
@@ -843,12 +851,12 @@ function Container51() {
 
 function Container48() {
   return (
-    <div className="h-[680px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+    <CasePageShell maxWidth="wide" gutters="viewport" className="h-auto shrink-0 lg:h-[680px]" data-name="Container">
+      <CaseImageGrid layout="desktopAbsolute" className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container49 />
         <Container51 />
-      </div>
-    </div>
+      </CaseImageGrid>
+    </CasePageShell>
   );
 }
 
@@ -869,15 +877,15 @@ function Section4() {
 
 function Container56() {
   return (
-    <div className="bg-[#f5f5f7] h-[680px] relative shrink-0 w-[679px]" data-name="Container">
+    <div className="bg-[#f5f5f7] aspect-square h-auto relative shrink-0 w-full lg:h-[680px] lg:w-[679px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute h-[360px] left-[47.5px] rounded-[8px] top-[151px] w-[576px]" data-name="示教-物料列表 1">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[47.5px] lg:top-[151px] lg:w-[576px]" data-name="示教-物料列表 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img3} />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 2">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 2">
           <div aria-hidden className="absolute border-6 border-[#ccc] border-solid inset-[-6px] pointer-events-none rounded-[14px]" />
         </div>
-        <div className="absolute h-[360px] left-[46.5px] rounded-[8px] top-[151px] w-[576px]" data-name="首页3 3">
+        <div className="absolute aspect-[576/360] h-auto left-[7%] rounded-[8px] top-[22%] w-[85%] lg:h-[360px] lg:left-[46.5px] lg:top-[151px] lg:w-[576px]" data-name="首页3 3">
           <div aria-hidden className="absolute border-6 border-black border-solid inset-[-3px] pointer-events-none rounded-[11px]" />
         </div>
       </div>
@@ -887,28 +895,28 @@ function Container56() {
 
 function Container55() {
   return (
-    <div className="absolute content-stretch flex items-center justify-center left-[-1px] overflow-clip rounded-[16px] size-[680px] top-[-0.38px]" data-name="Container">
+    <div className="aspect-square content-stretch flex items-center justify-center overflow-clip relative rounded-[16px] w-full lg:absolute lg:left-[-1px] lg:size-[680px] lg:top-[-0.38px]" data-name="Container">
       <Container56 />
     </div>
   );
 }
 
 function Container57() {
-  return <div className="absolute h-[240px] left-[774.5px] max-w-[1398px] top-[30.82px] w-[516px]" data-name="Container" />;
+  return <div className="hidden lg:absolute lg:block lg:h-[240px] lg:left-[774.5px] lg:max-w-[1398px] lg:top-[30.82px] lg:w-[516px]" data-name="Container" />;
 }
 
 function Container54() {
   return (
-    <div className="h-[680px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+    <CasePageShell maxWidth="wide" gutters="viewport" className="h-auto shrink-0 lg:h-[680px]" data-name="Container">
+      <CaseSplitSection layout="desktopAbsolute" className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container55 />
         <Container57 />
-        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[805px] text-[#111] text-[16px] top-[270.05px] w-[480px]">
+        <div className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] max-w-[480px] relative text-[#111] text-[16px] w-full lg:absolute lg:left-[805px] lg:top-[270.05px] lg:w-[480px]">
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">研发效率资产</p>
           <p className="leading-[24px]">将标准化工程资料沉淀为项目资料库与配置模板，减少重复导入，工程导入耗时降低 -17%。</p>
         </div>
-      </div>
-    </div>
+      </CaseSplitSection>
+    </CasePageShell>
   );
 }
 
@@ -929,27 +937,27 @@ function Section5() {
 
 function Container61() {
   return (
-    <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
+    <div className="h-full relative shrink-0 w-full" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-        <div className="absolute bg-[#fafafa] h-[707px] left-[54px] rounded-[8px] top-[36.31px] w-[1296px]" />
-        <div className="absolute h-[343px] left-[704px] rounded-[8px] top-[46.31px] w-[610px]" data-name="竞品分析 1">
+        <div className="absolute bg-[#fafafa] bottom-[5%] left-[4%] right-[4%] rounded-[8px] top-[5%] lg:h-[707px] lg:left-[54px] lg:right-auto lg:top-[36.31px] lg:w-[1296px]" />
+        <div className="absolute aspect-[610/343] h-auto left-[8%] rounded-[8px] top-[56%] w-[40%] md:left-[52%] md:top-[8%] md:w-[43.5%] lg:h-[343px] lg:left-[704px] lg:top-[46.31px] lg:w-[610px]" data-name="竞品分析 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img4} />
         </div>
-        <div className="absolute h-[344px] left-[703px] rounded-[8px] top-[399.31px] w-[611px]" data-name="ab测试 1">
+        <div className="absolute aspect-[611/344] h-auto left-[52%] rounded-[8px] top-[56%] w-[40%] md:left-[52%] md:top-[51%] md:w-[43.5%] lg:h-[344px] lg:left-[703px] lg:top-[399.31px] lg:w-[611px]" data-name="ab测试 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={imgAb1} />
         </div>
-        <div className="absolute h-[343px] left-[73px] rounded-[8px] top-[399.31px] w-[610px]" data-name="上线验证 1">
+        <div className="absolute aspect-[610/343] h-auto left-[8%] rounded-[8px] top-[74%] w-[40%] md:left-[6%] md:top-[51%] md:w-[43.5%] lg:h-[343px] lg:left-[73px] lg:top-[399.31px] lg:w-[610px]" data-name="上线验证 1">
           <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full" src={img5} />
         </div>
-        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[119px] text-[#111] text-[16px] top-[137.31px] w-[480px] whitespace-pre-wrap">
+        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[8%] right-[8%] text-[#111] text-[16px] top-[18%] whitespace-pre-wrap md:left-[8%] md:right-auto md:top-[18%] md:w-[42%] lg:left-[119px] lg:top-[137.31px] lg:w-[480px]">
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">竞品对标与用户测试</p>
           <p className="leading-[24px] mb-0">对标 YAMAHA、Universal 等行业方案，结合现场操作频率与上线风险，确定首版核心能力；面向 12 位操作员与组长做 A/B 可用性测试，验证横版布局更符合工业屏幕视距和操作习惯。</p>
           <p className="leading-[24px] mb-0">​</p>
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">上线前风险验证</p>
           <p className="leading-[24px]">针对工程导入压测、预警并发、越权拦截三类高风险场景做专项测试，均通过验证——基础操作员越权写入被系统拦截，结果记录进审计日志。</p>
         </div>
-        <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[24px] left-[119px] text-[#111] text-[16px] top-[87.31px] w-[480px]">标准化资产与系统校验</p>
+        <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[24px] left-[8%] right-[8%] text-[#111] text-[16px] top-[12%] md:left-[8%] md:right-auto md:w-[42%] lg:left-[119px] lg:top-[87.31px] lg:w-[480px]">标准化资产与系统校验</p>
       </div>
     </div>
   );
@@ -957,12 +965,12 @@ function Container61() {
 
 function Container60() {
   return (
-    <div className="h-[786.375px] max-w-[1398px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1398/786.375]" maxWidth="wide" className="min-h-[760px] md:min-h-[620px] lg:min-h-0" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgContainer2} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center max-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <Container61 />
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
@@ -982,7 +990,7 @@ function Container62() {
 
 function Heading5() {
   return (
-    <div className="absolute content-stretch flex flex-col items-start left-[591px] pr-[576px] top-[298.63px] w-[607px]" data-name="Heading 2">
+    <div className="absolute content-stretch flex flex-col items-start left-[32px] right-[32px] top-[96px] md:left-[64px] md:right-[64px] lg:left-[591px] lg:pr-[576px] lg:right-auto lg:top-[298.63px] lg:w-[607px]" data-name="Heading 2">
       <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#f5f5f7] text-[16px] text-center whitespace-nowrap">项目结果与复盘</p>
     </div>
   );
@@ -990,22 +998,22 @@ function Heading5() {
 
 function Container64() {
   return (
-    <div className="h-[780px] relative rounded-[16px] shrink-0 w-[1400px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1400/780]" className="min-h-[640px] md:min-h-[560px] lg:min-h-0" data-name="Container">
       <div aria-hidden className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none rounded-[16px]">
         <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover rounded-[16px] size-full" src={imgContainer4} />
         <div className="absolute bg-[rgba(0,0,0,0.6)] bg-clip-padding border-0 border-[transparent] border-solid inset-0 rounded-[16px]" />
       </div>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
-        <div className="absolute bg-[rgba(24,24,24,0.5)] h-[913px] left-0 top-[-0.38px] w-[1398px]" />
+        <div className="absolute bg-[rgba(24,24,24,0.5)] inset-0" />
         <Heading5 />
-        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[591px] text-[0px] text-white top-[337.63px] w-[620px]">
+        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[32px] right-[32px] text-[0px] text-white top-[136px] md:left-[64px] md:right-[64px] lg:left-[591px] lg:right-auto lg:top-[337.63px] lg:w-[620px]">
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[36px] mb-0 text-[32px]">上线后，系统通过 90+ 条真实产线订单验证了可用性，沉淀 80+ 条一线反馈用于后续迭代。试行产线在特定时段内，产能提升至原有的 1.5 倍。</p>
           <p className="leading-[24px] mb-0 pt-[16px] text-[16px]">这个项目证明的能力，是能在存量系统、真实产线约束和研发排期的挤压下，找到一条可上线、可验证、有数据支撑的重构路径——设计判断的价值，最终体现在管理效率、插件效率这些业务能读懂的数字上。</p>
           <p className="leading-[24px] mb-0 text-[16px]">(注：本案例所有项目数据与敏感信息均已做脱敏处理。)</p>
           <p className="leading-[24px] text-[16px]">​</p>
         </div>
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
@@ -1173,11 +1181,11 @@ function Group() {
 
 function Container67() {
   return (
-    <div className="h-[913px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1398/913]" maxWidth="wide" className="min-h-[360px] md:min-h-[520px] lg:min-h-0" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
         <Group />
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
@@ -1198,7 +1206,7 @@ function Container66() {
 
 function Container71() {
   return (
-    <div className="absolute h-[786px] left-0 top-[0.13px] w-[1400px]" data-name="Container">
+    <div className="absolute inset-0" data-name="Container">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer6} />
     </div>
   );
@@ -1206,12 +1214,12 @@ function Container71() {
 
 function Container70() {
   return (
-    <div className="h-[780px] relative rounded-[16px] shrink-0 w-[1400px]" data-name="Container">
+    <CaseMediaBlock aspect="aspect-[1400/780]" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgContainer5} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid overflow-clip relative rounded-[inherit] size-full">
         <Container71 />
       </div>
-    </div>
+    </CaseMediaBlock>
   );
 }
 
@@ -1242,7 +1250,7 @@ function Heading6() {
 
 function Container74() {
   return (
-    <div className="h-[21.602px] relative shrink-0 w-[1680px]" data-name="Container">
+    <div className="h-[21.602px] relative shrink-0 w-full max-w-[1680px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center overflow-clip relative rounded-[inherit] size-full">
         <Heading6 />
       </div>
@@ -1262,7 +1270,7 @@ function Heading7() {
 
 function Container75() {
   return (
-    <div className="h-[150.297px] relative shrink-0 w-[1680px]" data-name="Container">
+    <div className="h-[150.297px] relative shrink-0 w-full max-w-[1680px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center overflow-clip relative rounded-[inherit] size-full">
         <Heading7 />
       </div>
@@ -1375,7 +1383,7 @@ function Link2() {
 }
 
 function Container81() {
-  return <div className="h-[20px] min-h-[20px] relative shrink-0 w-[1680px]" data-name="Container" />;
+  return <div className="h-[20px] min-h-[20px] relative shrink-0 w-full max-w-[1680px]" data-name="Container" />;
 }
 
 function Paragraph4() {
@@ -1489,7 +1497,7 @@ function Container83() {
 
 function Container82() {
   return (
-    <div className="absolute h-[53px] left-0 top-[738.9px] w-[1680px]" data-name="Container">
+    <div className="absolute h-[53px] left-0 right-0 top-[738.9px] w-full max-w-[1680px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-between overflow-clip py-[16px] relative rounded-[inherit] size-full">
         <Paragraph4 />
         <Paragraph5 />
@@ -1501,7 +1509,7 @@ function Container82() {
 
 function Container73() {
   return (
-    <div className="h-[791.898px] relative shrink-0 w-[1680px]" data-name="Container">
+    <div className="h-[791.898px] relative shrink-0 w-full max-w-[1680px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[24px] items-center justify-center overflow-clip py-[150px] relative rounded-[inherit] size-full">
         <Container74 />
         <Container75 />
@@ -1514,7 +1522,7 @@ function Container73() {
 }
 
 function Container69() {
-  return <ProjectNextSection currentSlug="pcba" />;
+  return <CaseNextProject currentSlug="pcba" />;
 }
 
 function Container89() {
@@ -1523,8 +1531,8 @@ function Container89() {
 
 function Container() {
   return (
-    <div className="h-[12055px] relative shrink-0 w-full" data-name="Container">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+    <div className="h-auto relative shrink-0 w-full" data-name="Container">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative w-full">
         <Container1 />
         <Section />
         <Container8 />
@@ -1550,8 +1558,8 @@ function Container() {
 
 function MainContent() {
   return (
-    <div className="h-[9296px] relative shrink-0 w-full" data-name="Main Content">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+    <div className="h-auto relative shrink-0 w-full" data-name="Main Content">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative w-full">
         <Container />
       </div>
     </div>
@@ -1560,8 +1568,8 @@ function MainContent() {
 
 function Body() {
   return (
-    <div className="bg-[#fafafa] h-[9296px] min-h-[962px] relative shrink-0 w-[1728px]" data-name="Body">
-      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-h-[inherit] overflow-clip relative rounded-[inherit] size-full">
+    <div className="bg-[#fafafa] min-h-[962px] relative shrink-0 w-full" data-name="Body">
+      <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start min-h-[inherit] overflow-x-hidden relative rounded-[inherit] w-full">
         <MainContent />
       </div>
     </div>

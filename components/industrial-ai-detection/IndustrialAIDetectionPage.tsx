@@ -373,7 +373,7 @@ function Heading2() {
   return (
     <div className="relative shrink-0 w-full" data-name="Heading 2">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pl-[845px] pr-[513px] relative size-full">
-        <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap">核心挑战</p>
+        <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap xl:ml-[-64px]">核心挑战</p>
       </div>
     </div>
   );
@@ -401,7 +401,7 @@ function Container35() {
 
 function Section2() {
   return (
-    <div className="h-[319px] relative shrink-0 w-[1713px]" data-name="Section">
+    <div className="min-h-[319px] relative shrink-0 w-[1713px]" data-name="Section">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[8px] items-center relative size-full">
         <Heading2 />
         <Container35 />
@@ -412,7 +412,7 @@ function Section2() {
 
 function Container34() {
   return (
-    <div className="h-[295px] relative shrink-0 w-full" data-name="Container">
+    <div className="min-h-[295px] relative shrink-0 w-full" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-center relative size-full">
         <Section2 />
       </div>
@@ -466,7 +466,7 @@ function Container40() {
 
 function Image() {
   return (
-    <div className="absolute h-[805px] left-0 rounded-[4px] top-[-0.06px] w-[1406px]" data-name="Image">
+    <div className="industrial-system-media-image absolute h-[805px] left-0 rounded-[4px] top-[-0.06px] w-[1406px]" data-name="Image">
       <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[4px] size-full" src={imgImage} />
     </div>
   );
@@ -474,7 +474,7 @@ function Image() {
 
 function Container43() {
   return (
-    <div className="bg-[#0b0c0e] h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
+    <div className="industrial-system-media-canvas bg-[#0b0c0e] h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Image />
       </div>
@@ -484,7 +484,7 @@ function Container43() {
 
 function Container42() {
   return (
-    <div className="h-[786.375px] max-w-[1398px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
+    <div className="industrial-system-media-frame h-[786.375px] max-w-[1398px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center max-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <Container43 />
       </div>

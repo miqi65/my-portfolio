@@ -1,11 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import ProjectNextSection from "@/components/ProjectNextSection";
 import svgPaths from "./svg-g4y8famgkp";
 
-const DESIGN_WIDTH = 1728;
-const DESIGN_HEIGHT = 9721;
 const imgContainer = "/images/project-gps-2/5479f65d6abe97f21b99c7efb59f599dbb01e1bc.png";
 const img1 = "/images/project-gps-2/0ad3598a1bb924f5ad4091a724980ccb08506b91.png";
 const imgContainer1 = "/images/project-gps-2/66b8726b5ed08e4a8dc2767d44e20519f6b4ebee.png";
@@ -27,25 +24,6 @@ const imgContainer8 = "/images/project-gps-2/91fb763dea378ed2e49aebc19c5f3a3ec3a
 const imgContainer9 = "/images/project-gps-2/7fe295df83399d569038760dda9cf61bf545625d.png";
 const imgImage = "/images/project-gps-2/3829fadc0e9472939fa554b8f2710edd317813fe.png";
 const imgImage1 = "/images/project-gps-2/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
-
-function useResponsiveScale() {
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const updateScale = () => {
-      setScale(Math.min(1, window.innerWidth / DESIGN_WIDTH));
-    };
-
-    updateScale();
-    window.addEventListener("resize", updateScale);
-
-    return () => {
-      window.removeEventListener("resize", updateScale);
-    };
-  }, []);
-
-  return scale;
-}
 
 function Container2() {
   return (
@@ -620,7 +598,7 @@ function Heading3() {
   return (
     <div className="relative shrink-0 w-full" data-name="Heading 2">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start pl-[845px] pr-[513px] relative size-full">
-        <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap">核心挑战</p>
+        <p className="[word-break:break-word] font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] relative shrink-0 text-[#717171] text-[16px] text-center whitespace-nowrap lg:ml-[-65px]">核心挑战</p>
       </div>
     </div>
   );
@@ -785,7 +763,7 @@ function Group3() {
 
 function Container46() {
   return (
-    <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
+    <div className="gps-decision-media-canvas h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
       <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[3.3px] bg-[rgba(0,0,0,0.37)] h-[656px] left-[72px] rounded-[28px] top-[77.94px] w-[1252px]" />
@@ -800,7 +778,7 @@ function Container46() {
 
 function Container45() {
   return (
-    <div className="h-[786.375px] max-w-[1398px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
+    <div className="gps-decision-media-frame h-[786.375px] max-w-[1398px] relative rounded-[16px] shrink-0 w-[1398px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex items-center justify-center max-w-[inherit] overflow-clip relative rounded-[inherit] size-full">
         <Container46 />
       </div>
@@ -836,7 +814,7 @@ function Container51() {
 
 function Container50() {
   return (
-    <div className="absolute content-stretch flex h-[798.82px] items-center justify-center left-0 overflow-clip rounded-[16px] top-0 w-[679px]" data-name="Container">
+    <div className="gps-strategy-media absolute content-stretch flex h-[798.82px] items-center justify-center left-0 overflow-clip rounded-[16px] top-0 w-[679px]" data-name="Container">
       <Container51 />
     </div>
   );
@@ -844,10 +822,10 @@ function Container50() {
 
 function Container49() {
   return (
-    <div className="h-[798.82px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
+    <div className="gps-strategy-panel h-[798.82px] max-w-[1398px] relative shrink-0 w-[1398px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container50 />
-        <div className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[808px] text-[#111] text-[16px] top-[250.25px] w-[480px] whitespace-pre-wrap">
+        <div className="gps-strategy-copy [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[0] left-[808px] text-[#111] text-[16px] top-[250.25px] w-[480px] whitespace-pre-wrap">
           <p className="leading-[24px] mb-0">设计不仅要解决理想状态下的问题，更要覆盖“低基站、弱信号”的极端物理环境</p>
           <p className="leading-[24px] mb-0">​</p>
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">#1:智能电子围栏</p>
@@ -856,7 +834,7 @@ function Container49() {
           <p className="font-['Noto_Sans_SC:Bold',sans-serif] font-bold leading-[24px] mb-0">#2:分级预警机制</p>
           <p className="leading-[24px]">建立强视觉梯度的告警体系。将海量消息按“紧急程度+时间线”进行强过滤，确保致命威胁一秒破防，直达管理层。</p>
         </div>
-        <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[840px] text-[#717171] text-[16px] text-center top-[211.25px] whitespace-nowrap">设计策略</p>
+        <p className="gps-strategy-label -translate-x-1/2 [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[840px] text-[#717171] text-[16px] text-center top-[211.25px] whitespace-nowrap">设计策略</p>
       </div>
     </div>
   );
@@ -1079,7 +1057,7 @@ function Container66() {
 }
 
 function Container68() {
-  return <div className="flex-[1_0_0] h-[786.375px] min-w-px relative" data-name="Container" />;
+  return <div className="gps-ending-blank-panel flex-[1_0_0] h-[786.375px] min-w-px relative" data-name="Container" />;
 }
 
 function Container65() {
@@ -1104,7 +1082,7 @@ function Container64() {
 }
 
 function Container69() {
-  return <div className="h-[48px] relative shrink-0 w-full" data-name="Container" />;
+  return <div className="gps-before-next-spacer h-[48px] relative shrink-0 w-full" data-name="Container" />;
 }
 
 function Container72() {
@@ -1474,61 +1452,12 @@ function Body() {
 }
 
 export default function Component() {
-  const scale = useResponsiveScale();
-  const [contentHeight, setContentHeight] = useState(DESIGN_HEIGHT);
-  const canvasRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const measureContent = () => {
-      const canvas = canvasRef.current;
-      const footer = canvas?.querySelector<HTMLElement>("[data-project-next]");
-
-      if (!canvas || !footer || scale <= 0) {
-        return;
-      }
-
-      const canvasRect = canvas.getBoundingClientRect();
-      const footerRect = footer.getBoundingClientRect();
-      const nextHeight = Math.ceil((footerRect.bottom - canvasRect.top) / scale);
-
-      if (Number.isFinite(nextHeight) && nextHeight > 0) {
-        setContentHeight(Math.min(DESIGN_HEIGHT, nextHeight));
-      }
-    };
-
-    const frame = window.requestAnimationFrame(measureContent);
-    window.addEventListener("resize", measureContent);
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.removeEventListener("resize", measureContent);
-    };
-  }, [scale]);
-
   return (
     <div
-      className="bg-[#fafafa] overflow-x-hidden relative w-full"
+      className="case-export-responsive gps-case-responsive bg-[#fafafa] overflow-x-hidden relative w-full"
       data-name="国家能源集团：载体轨迹定位系统"
     >
-      <div
-        className="mx-auto origin-top-left"
-        style={{
-          width: DESIGN_WIDTH * scale,
-          height: contentHeight * scale,
-        }}
-      >
-        <div
-          ref={canvasRef}
-          style={{
-            width: DESIGN_WIDTH,
-            height: contentHeight,
-            transform: `scale(${scale})`,
-            transformOrigin: "top left",
-          }}
-        >
-          <Body />
-        </div>
-      </div>
+      <Body />
     </div>
   );
 }

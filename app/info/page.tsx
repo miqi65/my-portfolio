@@ -5,56 +5,58 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 export default function InfoPage() {
   const { language } = useLanguage();
+  const isChinese = language === "zh";
 
   return (
-    <div className="min-h-screen pt-[15vh] pb-[20vh] px-[24px] md:px-0 flex justify-end bg-background text-foreground selection:bg-foreground selection:text-background">
-      <div className="w-full md:w-[65vw] max-w-[900px] md:pr-[10vw]">
-        
-        {/* 主介绍文案：动态读取 en 或 zh */}
-        <p className="text-[28px] sm:text-[38px] lg:text-[44px] leading-[1.3] md:leading-[1.35] text-foreground mb-24 md:mb-32 font-serif">
+    <div
+      lang={isChinese ? "zh-CN" : "en"}
+      className={`info-page ${isChinese ? "info-page-chinese" : "info-page-english"} min-h-screen bg-background px-6 pb-32 pt-[clamp(112px,15vh,176px)] text-foreground selection:bg-foreground selection:text-background sm:px-8 sm:pb-40 lg:px-12 lg:pb-48`}
+    >
+      <div className="mx-auto w-full max-w-[1120px] lg:ml-auto lg:mr-[5vw] lg:max-w-[980px]">
+        <p className="max-w-[900px] text-[clamp(28px,4.4vw,54px)] leading-[1.28] tracking-[-0.035em] text-foreground">
           {profile.intro[language]}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 mb-32 text-[13px] md:text-[14px] leading-relaxed font-serif">
+        <div className="mt-20 grid grid-cols-1 gap-16 text-[13px] leading-[1.65] sm:mt-24 sm:gap-20 sm:text-[14px] lg:grid-cols-2 lg:gap-x-20 lg:gap-y-24">
           <div>
-            <h3 className="italic mb-6 opacity-70">
-              {language === "en" ? "Experience" : "工作经历"}
+            <h3 className="mb-6 text-[12px] uppercase tracking-[0.08em] opacity-60 sm:text-[13px]">
+              {isChinese ? "工作经历" : "Experience"}
             </h3>
             <ul className="flex flex-col gap-5">
               {profile.experience.map((exp, i) => (
-                <li key={i} className="flex flex-col">
-                  <span>{exp.title}</span>
-                  <span>{exp.company}</span>
-                  <span className="text-muted mt-0.5">{exp.year}</span>
+                <li key={i} className="flex min-w-0 flex-col">
+                  <span>{exp.title[language]}</span>
+                  <span>{exp.company[language]}</span>
+                  <span className="mt-0.5 text-muted">{exp.year[language]}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="italic mb-6 opacity-70">
-              {language === "en" ? "Focus" : "核心领域"}
+            <h3 className="mb-6 text-[12px] uppercase tracking-[0.08em] opacity-60 sm:text-[13px]">
+              {isChinese ? "核心领域" : "Focus"}
             </h3>
             <ul className="flex flex-col gap-5">
               {profile.focus.map((item, i) => (
-                <li key={i} className="flex flex-col">
-                  <span>{item.title}</span>
-                  <span className="text-muted mt-0.5">{item.desc}</span>
+                <li key={i} className="flex min-w-0 flex-col">
+                  <span>{item.title[language]}</span>
+                  <span className="mt-0.5 text-muted">{item.desc[language]}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-[13px] md:text-[14px] font-serif">
+        <div className="info-contact-grid mt-24 grid grid-cols-1 gap-10 text-[13px] leading-[1.6] sm:grid-cols-2 sm:gap-x-12 sm:gap-y-12 sm:text-[14px] lg:mt-32 lg:grid-cols-3 lg:gap-x-16">
           {profile.contact.map((item, i) => (
-            <div key={i} className="flex flex-col gap-1">
-              <span className="text-muted">{item.label}</span>
+            <div key={i} className="info-contact-item flex min-w-0 flex-col gap-1">
+              <span className="text-muted">{item.label[language]}</span>
               {item.href === "#" ? (
-                <span>{item.value}</span>
+                <span>{item.value[language]}</span>
               ) : (
-                <a href={item.href} target="_blank" rel="noreferrer" className="hover:opacity-60 transition-opacity">
-                  {item.value}
+                <a href={item.href} target="_blank" rel="noreferrer" className="info-contact-value break-words transition-opacity hover:opacity-60">
+                  {item.value[language]}
                 </a>
               )}
             </div>
