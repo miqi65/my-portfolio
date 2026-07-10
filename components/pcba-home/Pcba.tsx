@@ -355,7 +355,7 @@ function Container16() {
 }
 
 function Text6() {
-  return <MetricValue value="-20" />;
+  return <MetricValue value="+17" />;
 }
 
 function Text7() {
