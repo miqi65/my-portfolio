@@ -93,8 +93,8 @@ export interface Project {
 }
 
 const PLACEHOLDER_IMG = "/images/p1-cover.png";
-const PCBA_HERO_IMG = "/images/pcba-home/pcba-hero.png";
-const WMS_HERO_IMG = "/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png";
+const PCBA_HERO_IMG = "/images/work/pcba/00-card.webp";
+const WMS_HERO_IMG = "/images/work/wms/00-card.webp";
 
 const PROJECT_PLACEHOLDER_OVERRIDES: Partial<Record<string, Partial<Project>>> = {
   wms: {

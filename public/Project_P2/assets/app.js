@@ -4,18 +4,18 @@ p33198480: "M2.9637 8.7363C2.79498 8.56752 2.70019 8.33865 2.70019 8.1C2.70019 7
 }
 
 
-const imgContainer = "./source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png";
-const imgContainer1 = "./source/src/imports/Wms/b68591649a0c5b43bd7be4f181ad6cdf25343e21.png";
-const imgContainer2 = "./source/src/imports/Wms/23db8f8988371344f84784807220c5d6a8d983d7.png";
-const imgRectangle11 = "./source/src/imports/Wms/0a47443951c4caecf5be305a8a7407e048a33a6b.png";
-const imgContainer3 = "./source/src/imports/Wms/d7e53d8267efccb18d7d4fe8b83acbe3cf988548.png";
-const imgContainer4 = "./source/src/imports/Wms/8f7228e72dbc01354c8ea444c4f893f671624be5.png";
-const imgVideo = "./source/src/imports/Wms/5bf999b8ed489032f7552203d35f645d1fa67a08.png";
-const imgContainer5 = "./source/src/imports/Wms/2600512d4e2103f088c39cd0d6a317dc37041951.png";
-const imgContainer6 = "./source/src/imports/Wms/6abd3ce5edb43a085e7d1698973ee1cae4c9b145.png";
-const imgContainer7 = "./source/src/imports/Wms/4eb63c54b41f18338aeec748c0640b917e3d744f.png";
-const imgImage = "./source/src/imports/Wms/3829fadc0e9472939fa554b8f2710edd317813fe.png";
-const imgImage1 = "./source/src/imports/Wms/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
+const imgContainer = "/images/work/wms/01-hero.webp";
+const imgContainer1 = "/images/work/wms/02-dashboard-overview.webp";
+const imgContainer2 = "/images/work/wms/03-web-view.webp";
+const imgRectangle11 = "/images/work/wms/04-rf-view.webp";
+const imgContainer3 = "/images/work/wms/05-template-all.webp";
+const imgContainer4 = "/images/work/wms/06-rf-main.webp";
+const imgVideo = "/images/work/wms/07-mode-lite.webp";
+const imgContainer5 = "/images/work/wms/08-mode-standard.webp";
+const imgContainer6 = "/images/work/wms/09-mode-complex.webp";
+const imgContainer7 = "/images/work/wms/10-flow-1.webp";
+const imgImage = "/images/work/wms/11-flow-2.webp";
+const imgImage1 = "/images/work/wms/12-flow-3.webp";
 
 
 function Container2() {

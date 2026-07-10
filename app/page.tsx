@@ -4,13 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import { useLanguage } from "@/components/LanguageProvider"; // 引入语言钩子
-import fiveGHero from "@/app/work/5G/src/imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
-import factoryHero from "@/app/work/factory/src/imports/友讯达数据大屏/c5559afa8d754117b73a27710273be81c1fdc7c6.png";
 
 const INDUSTRIAL_AI_SLUG = "ai-hmi";
 const INDUSTRIAL_AI_HREF = "/work/industrial-ai-detection";
-const INDUSTRIAL_AI_HERO =
-  "/images/industrial-ai-detection/7ff1541c3c112892a91494819379750e14ac3783.png";
+const INDUSTRIAL_AI_HERO = "/images/work/industrial-ai-detection/00-card.webp";
 const PCBA_SLUG = "pcba";
 const PCBA_TITLE = {
   zh: "PCBA 插件机控制系统",
@@ -22,11 +19,12 @@ const PCBA_CATEGORY = {
 };
 const GPS_SLUG = "gps";
 const GPS_HREF = "/work/gps-2";
-const GPS_HERO = "/images/gps-2/hero.png";
+const GPS_HERO = "/images/work/gps-2/00-card.webp";
 const GPS_ZH_TITLE = "载体轨迹定位系统";
 const GPS_ZH_CATEGORY = "GIS 定位追踪 / 移动端 UX 设计";
 const FIVE_G_SLUG = "5g";
 const FIVE_G_HREF = "/work/5G";
+const FIVE_G_HERO = "/images/work/5g-chatbot/00-card.webp";
 const FIVE_G_TITLE = {
   zh: "5G消息Chatbot交互规范体系",
   en: "5G Messaging Chatbot Interaction Standards"
@@ -37,6 +35,7 @@ const FIVE_G_CATEGORY = {
 };
 const FACTORY_SLUG = "factory";
 const FACTORY_HREF = "/work/factory";
+const FACTORY_HERO = "/images/work/factory-dashboard/00-card.webp";
 const FACTORY_TITLE = {
   zh: "友讯达数据大屏",
   en: "YXD Factory Data Dashboard"
@@ -46,7 +45,7 @@ const FACTORY_CATEGORY = {
   en: "Smart Factory Data Visualization / Decision Dashboard"
 };
 const DS_AI_SLUG = "ds-ai";
-const DS_AI_CARD_HERO = "/images/ds-ai/card.png";
+const DS_AI_CARD_HERO = "/images/work/ds-ai/00-card.webp";
 const DS_AI_TITLE = {
   zh: "AI辅助工作流",
   en: "AI-Assisted Workflow"
@@ -103,9 +102,9 @@ export default function Home() {
                 : isGps
                   ? GPS_HERO
                   : isFactory
-                  ? factoryHero
+                  ? FACTORY_HERO
                   : isFiveG
-                    ? fiveGHero
+                    ? FIVE_G_HERO
                   : isDsAi
                     ? DS_AI_CARD_HERO
                   : project.cover;

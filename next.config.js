@@ -27,6 +27,10 @@ const nextConfig = {
 
     return [
       {
+        source: '/images/work/:path*',
+        headers: immutableImageCache,
+      },
+      {
         source: '/images/project-gps-2/:path*',
         headers: immutableImageCache,
       },

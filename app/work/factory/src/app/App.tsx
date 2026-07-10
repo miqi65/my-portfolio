@@ -1,11 +1,11 @@
 import ProjectNextSection from "@/components/ProjectNextSection";
-import imgContainer from "../imports/友讯达数据大屏/c5559afa8d754117b73a27710273be81c1fdc7c6.png";
-import imgContainer1 from "../imports/友讯达数据大屏/af642686dce3013c8b19020aaeb8e39891ce0f8d.png";
-import imgContainer2 from "../imports/友讯达数据大屏/05bdfedb9f5eab215358879e4eeea132b944bb9d.png";
-import imgContainer3 from "../imports/友讯达数据大屏/289409ed7f5d42c956c81efa0421804f97c7abac.png";
-import imgContainer4 from "../imports/友讯达数据大屏/c6a4717dc9a15f634e8f8ab3dd89d3b98e177bec.png";
-import imgContainer5 from "../imports/友讯达数据大屏/7b809cfff199bef8cf9e7d4a5fb52dccb822722a.png";
-import imgContainer6 from "../imports/友讯达数据大屏/ec4c6095fd6a350f08b58788a4065275f3c24293.png";
+const imgContainer = "/images/work/factory-dashboard/01-hero.webp";
+const imgContainer1 = "/images/work/factory-dashboard/02-overview.webp";
+const imgContainer2 = "/images/work/factory-dashboard/03-data-dashboard.webp";
+const imgContainer3 = "/images/work/factory-dashboard/04-production-analysis.webp";
+const imgContainer4 = "/images/work/factory-dashboard/05-alert-system.webp";
+const imgContainer5 = "/images/work/factory-dashboard/06-management-view.webp";
+const imgContainer6 = "/images/work/factory-dashboard/07-final-screen.webp";
 
 // ─── Typography helpers ───────────────────────────────────────────────────────
 const robotoMono = "font-['Roboto_Mono',monospace] font-normal";

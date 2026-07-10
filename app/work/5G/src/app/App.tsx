@@ -1,12 +1,12 @@
 "use client";
 
 import ProjectNextSection from "@/components/ProjectNextSection";
-import imgHero from "../imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
-import imgChallenges from "../imports/5Gchatbot/a169984832e56fd99a6974db941e6246f6758413.png";
-import imgStrategy1 from "../imports/5Gchatbot/c6d713bf855a8399cbf3882240f2ed94e204cc6e.png";
-import imgSpec from "../imports/5Gchatbot/f21bc47bf40d6c7af0e89e41b96507852425354c.png";
-import imgStrategy2 from "../imports/5Gchatbot/f8eb217af3bca6a7db483191f74f0068285aac8e.png";
-import imgDeliverables from "../imports/5Gchatbot/449724633cc62d0afe68e79ac547f710cc5249c1.png";
+const imgHero = "/images/work/5g-chatbot/01-hero.webp";
+const imgChallenges = "/images/work/5g-chatbot/02-challenges.webp";
+const imgStrategy1 = "/images/work/5g-chatbot/03-strategy-flow.webp";
+const imgSpec = "/images/work/5g-chatbot/04-design-spec.webp";
+const imgStrategy2 = "/images/work/5g-chatbot/05-strategy-detail.webp";
+const imgDeliverables = "/images/work/5g-chatbot/06-deliverables.webp";
 
 type ImageAsset = string | { src: string };
 

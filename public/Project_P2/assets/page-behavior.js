@@ -102,7 +102,7 @@
 
     var nextHref = "/work/gps-2";
     var nextTitle = "载体轨迹定位系统";
-    var nextHero = "/images/gps-2/hero.png";
+    var nextHero = "/images/work/gps-2/00-card.webp";
     var target = findAncestorContainingImage(title) || title;
     var images = Array.prototype.slice.call(target.querySelectorAll("img"));
 

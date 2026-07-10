@@ -1,16 +1,16 @@
 import svgPaths from "./svg-v32uxjvhke";
-import imgContainer from "./a1925cfcd1b376841168c4a647d62506c5e54411.png";
-import imgContainer1 from "./b68591649a0c5b43bd7be4f181ad6cdf25343e21.png";
-import imgContainer2 from "./23db8f8988371344f84784807220c5d6a8d983d7.png";
-import imgRectangle11 from "./0a47443951c4caecf5be305a8a7407e048a33a6b.png";
-import imgContainer3 from "./d7e53d8267efccb18d7d4fe8b83acbe3cf988548.png";
-import imgContainer4 from "./8f7228e72dbc01354c8ea444c4f893f671624be5.png";
-import imgVideo from "./5bf999b8ed489032f7552203d35f645d1fa67a08.png";
-import imgContainer5 from "./2600512d4e2103f088c39cd0d6a317dc37041951.png";
-import imgContainer6 from "./6abd3ce5edb43a085e7d1698973ee1cae4c9b145.png";
-import imgContainer7 from "./4eb63c54b41f18338aeec748c0640b917e3d744f.png";
-import imgImage from "./3829fadc0e9472939fa554b8f2710edd317813fe.png";
-import imgImage1 from "./336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
+const imgContainer = "/images/work/wms/01-hero.webp";
+const imgContainer1 = "/images/work/wms/02-dashboard-overview.webp";
+const imgContainer2 = "/images/work/wms/03-web-view.webp";
+const imgRectangle11 = "/images/work/wms/04-rf-view.webp";
+const imgContainer3 = "/images/work/wms/05-template-all.webp";
+const imgContainer4 = "/images/work/wms/06-rf-main.webp";
+const imgVideo = "/images/work/wms/07-mode-lite.webp";
+const imgContainer5 = "/images/work/wms/08-mode-standard.webp";
+const imgContainer6 = "/images/work/wms/09-mode-complex.webp";
+const imgContainer7 = "/images/work/wms/10-flow-1.webp";
+const imgImage = "/images/work/wms/11-flow-2.webp";
+const imgImage1 = "/images/work/wms/12-flow-3.webp";
 
 function OptimizedCaseImage({
   loading = "lazy",

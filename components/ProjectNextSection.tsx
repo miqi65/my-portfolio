@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import fiveGHero from "@/app/work/5G/src/imports/5Gchatbot/902bd9cb5345e95748b19b0a35ef01cb4f60a3f5.png";
-import factoryHero from "@/app/work/factory/src/imports/友讯达数据大屏/c5559afa8d754117b73a27710273be81c1fdc7c6.png";
 
 type ImageAsset = string | { src: string };
 
@@ -18,43 +16,43 @@ const PROJECT_SEQUENCE: ProjectNextItem[] = [
     slug: "industrial-ai-detection",
     href: "/work/industrial-ai-detection",
     title: "工业 AI 视觉质检系统",
-    hero: "/images/industrial-ai-detection/7ff1541c3c112892a91494819379750e14ac3783.png"
+    hero: "/images/work/industrial-ai-detection/00-card.webp"
   },
   {
     slug: "pcba",
     href: "/work/pcba",
     title: "PCBA 插件机控制系统",
-    hero: "/images/pcba-home/pcba-hero.png"
+    hero: "/images/work/pcba/00-card.webp"
   },
   {
     slug: "wms",
     href: "/work/wms",
     title: "WMS 智能仓储管理系统",
-    hero: "/Project_P2/source/src/imports/Wms/a1925cfcd1b376841168c4a647d62506c5e54411.png"
+    hero: "/images/work/wms/00-card.webp"
   },
   {
     slug: "gps-2",
     href: "/work/gps-2",
     title: "载体轨迹定位系统",
-    hero: "/images/gps-2/hero.png"
+    hero: "/images/work/gps-2/00-card.webp"
   },
   {
     slug: "5G",
     href: "/work/5G",
     title: "5G消息Chatbot交互规范体系",
-    hero: fiveGHero
+    hero: "/images/work/5g-chatbot/00-card.webp"
   },
   {
     slug: "factory",
     href: "/work/factory",
     title: "友讯达数据大屏",
-    hero: factoryHero
+    hero: "/images/work/factory-dashboard/00-card.webp"
   },
   {
     slug: "ds-ai",
     href: "/work/ds-ai",
     title: "DS-AI 项目",
-    hero: "/images/p3_assets/p3-card-cover.png"
+    hero: "/images/work/ds-ai/00-card.webp"
   }
 ];
 

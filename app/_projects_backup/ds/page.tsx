@@ -535,7 +535,7 @@ export default function AIWorkflowPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/evidence-01.png" 
+                    src="/images/work/ds-ai/01-evidence-01.webp"
                     alt="业务决策简报示例" 
                     badge="FIG.01 / 决策简报 / DECISION BRIEF"
                     evidenceType="brief"
@@ -544,12 +544,12 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：业务决策简报"
                     placeholderDesc="展示模糊需求如何被拆成业务问题、待确认项和成功判断标准。"
-                    placeholderFile="/images/p3_assets/evidence-01.png"
+                    placeholderFile="/images/work/ds-ai/01-evidence-01.webp"
                   />
                 </motion.div>
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/evidence-02.png" 
+                    src="/images/work/ds-ai/02-evidence-02.webp"
                     alt="屏幕目的与路径示例" 
                     badge="FIG.02 / 屏幕目的 / SCREEN PURPOSE"
                     evidenceType="flow"
@@ -558,7 +558,7 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：屏幕目的与异常路径"
                     placeholderDesc="展示正常监控、异常发现、查看原因、人工确认/接管之间的任务路径。"
-                    placeholderFile="/images/p3_assets/evidence-02.png"
+                    placeholderFile="/images/work/ds-ai/02-evidence-02.webp"
                   />
                 </motion.div>
               </div>
@@ -567,7 +567,7 @@ export default function AIWorkflowPage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/context-package.png" 
+                    src="/images/work/ds-ai/03-context-package.webp"
                     alt="产品上下文包" 
                     badge="FIG.03 / 产品上下文包 / CONTEXT PACKAGE" 
                     evidenceType="context"
@@ -576,12 +576,12 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：产品上下文包"
                     placeholderDesc="展示业务目标、目标用户、状态规则、权限规则和语气规则如何被整理成 AI 可读取约束。"
-                    placeholderFile="/images/p3_assets/context-package.png"
+                    placeholderFile="/images/work/ds-ai/03-context-package.webp"
                   />
                 </motion.div>
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/ai-draft-vs-human.png" 
+                    src="/images/work/ds-ai/04-ai-draft-vs-human.webp"
                     alt="初稿对比与精修批注" 
                     badge="FIG.04 / AI 初稿与人工精修 / RAW AI VS. HUMAN REFINED"
                     evidenceType="compare"
@@ -590,7 +590,7 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：AI 初稿与人工精修对比"
                     placeholderDesc="展示 AI 初稿的问题，以及人工如何修正优先级、异常状态和动作入口。"
-                    placeholderFile="/images/p3_assets/ai-draft-vs-human.png"
+                    placeholderFile="/images/work/ds-ai/04-ai-draft-vs-human.webp"
                   />
                 </motion.div>
               </div>
@@ -599,7 +599,7 @@ export default function AIWorkflowPage() {
               <div className="w-full lg:w-[calc(50%-1rem)]">
                 <motion.div variants={revealUp}>
                   <EvidenceFrame 
-                    src="/images/p3_assets/qa-checklist.png" 
+                    src="/images/work/ds-ai/05-qa-checklist.webp"
                     alt="Demo 与交付风险清单" 
                     badge="FIG.05 / Demo 与风险清单 / DEMO & RISK LIST" 
                     evidenceType="demo"
@@ -608,7 +608,7 @@ export default function AIWorkflowPage() {
                     isPlaceholder={USE_PLACEHOLDER_EVIDENCE}
                     placeholderTitle="待替换图：Demo 与开发前风险清单"
                     placeholderDesc="展示已验证路径、关键交互 Demo，以及接口、数据、权限、异常状态等开发前风险。"
-                    placeholderFile="/images/p3_assets/qa-checklist.png"
+                    placeholderFile="/images/work/ds-ai/05-qa-checklist.webp"
                   />
                 </motion.div>
               </div>

@@ -14,6 +14,14 @@ build/
 .cache/
 *.tsbuildinfo
 
+# Legacy generated WebP copies; canonical optimized assets live in public/images/work/.
+app/work/5G/src/imports/5Gchatbot/*.webp
+app/work/factory/src/imports/友讯达数据大屏/*.webp
+components/pcba-home/*.webp
+public/Project_P2/source/src/imports/Wms/*.webp
+public/images/industrial-ai-detection/*.webp
+public/images/project-gps-2/*.webp
+
 # Environment variables
 .env
 .env.local
