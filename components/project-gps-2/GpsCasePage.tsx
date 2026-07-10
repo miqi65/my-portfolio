@@ -25,6 +25,14 @@ const imgContainer9 = "/images/project-gps-2/7fe295df83399d569038760dda9cf61bf54
 const imgImage = "/images/project-gps-2/3829fadc0e9472939fa554b8f2710edd317813fe.png";
 const imgImage1 = "/images/project-gps-2/336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
 
+function OptimizedCaseImage({
+  loading = "lazy",
+  decoding = "async",
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return <img loading={loading} decoding={decoding} {...props} />;
+}
+
 function Container2() {
   return (
     <div className="relative shrink-0" data-name="Container">
@@ -128,10 +136,10 @@ function Container5() {
 function Container7() {
   return (
     <div className="h-[786px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer} />
+      <OptimizedCaseImage loading="eager" fetchPriority="high" alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute h-[567px] left-[963px] rounded-[16px] shadow-[0px_4px_6px_0px_rgba(0,0,0,0.25)] top-[126.5px] w-[262px]" data-name="告警信息-两种状态 1">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={img1} />
+          <OptimizedCaseImage loading="eager" alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={img1} />
         </div>
       </div>
     </div>
@@ -565,7 +573,7 @@ function Container33() {
 function Container36() {
   return (
     <div className="h-[786px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer1} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer1} />
     </div>
   );
 }
@@ -655,7 +663,7 @@ function Container40() {
 function Container43() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer2} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer2} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[3px] bg-[rgba(0,0,0,0.39)] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]" />
         <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[451px] text-[16px] text-white top-[194.13px] whitespace-nowrap">关键决策：15秒的取舍</p>
@@ -693,15 +701,15 @@ function Group() {
   return (
     <div className="absolute contents left-[719px] top-[153.94px]">
       <div className="absolute h-[513px] left-[719px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[719px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[719px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle6} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle6} />
       </div>
     </div>
   );
@@ -711,15 +719,15 @@ function Group1() {
   return (
     <div className="absolute contents left-[1003px] top-[153.94px]">
       <div className="absolute h-[513px] left-[1003px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[1003px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[1003px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle7} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle7} />
       </div>
     </div>
   );
@@ -729,15 +737,15 @@ function Group2() {
   return (
     <div className="absolute contents left-[151px] top-[153.94px]">
       <div className="absolute h-[513px] left-[151px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[151px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[151px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle8} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle8} />
       </div>
     </div>
   );
@@ -747,15 +755,15 @@ function Group3() {
   return (
     <div className="absolute contents left-[435px] top-[153.94px]">
       <div className="absolute h-[513px] left-[435px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[435px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[435px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle9} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle9} />
       </div>
     </div>
   );
@@ -764,7 +772,7 @@ function Group3() {
 function Container46() {
   return (
     <div className="gps-decision-media-canvas h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[3.3px] bg-[rgba(0,0,0,0.37)] h-[656px] left-[72px] rounded-[28px] top-[77.94px] w-[1252px]" />
         <Group />
@@ -806,7 +814,7 @@ function Container51() {
   return (
     <div className="h-[798.82px] relative shrink-0 w-[679px]" data-name="Container">
       <div aria-hidden className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none">
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer5} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer5} />
       </div>
     </div>
   );
@@ -870,8 +878,8 @@ function Container56() {
   return (
     <div className="h-[798.82px] relative shrink-0 w-[679px]" data-name="Container">
       <div aria-hidden className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none">
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer4} />
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer6} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer4} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgContainer6} />
       </div>
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full" />
     </div>
@@ -932,15 +940,15 @@ function Group4() {
   return (
     <div className="absolute contents left-[579px] top-[153.94px]">
       <div className="absolute h-[513px] left-[579px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[579px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[579px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle10} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle10} />
       </div>
     </div>
   );
@@ -950,15 +958,15 @@ function Group5() {
   return (
     <div className="absolute contents left-[259px] top-[153.94px]">
       <div className="absolute h-[513px] left-[259px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[259px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[259px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle11} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle11} />
       </div>
     </div>
   );
@@ -968,15 +976,15 @@ function Group6() {
   return (
     <div className="absolute contents left-[899px] top-[153.94px]">
       <div className="absolute h-[513px] left-[899px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-12 border-[#343434] border-solid inset-[-6px] rounded-[22px]" />
       </div>
       <div className="absolute h-[513px] left-[899px] pointer-events-none rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover rounded-[16px] size-full" src={imgRectangle4} />
         <div aria-hidden className="absolute border-8 border-[#1e1e1e] border-solid inset-[-4px] rounded-[20px]" />
       </div>
       <div className="absolute h-[513px] left-[899px] rounded-[16px] top-[153.94px] w-[242px]">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle12} />
+        <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none rounded-[16px] size-full" src={imgRectangle12} />
       </div>
     </div>
   );
@@ -985,7 +993,7 @@ function Group6() {
 function Container62() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer7} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer7} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[3.3px] bg-[rgba(0,0,0,0.37)] h-[657px] left-[105px] rounded-[28px] top-[80.49px] w-[1207px]" />
         <Group4 />
@@ -1041,7 +1049,7 @@ function Container63() {
 function Container67() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer8} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer8} />
     </div>
   );
 }
@@ -1088,7 +1096,7 @@ function Container69() {
 function Container72() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer9} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer9} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[6.7px] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]" style={{ backgroundImage: "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 1400 787' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='0.28999999165534973'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(-0.0000042761 -42.8 156.26 -0.000015612 700 428.23)'><stop stop-color='rgba(102,102,102,1)' offset='0'/><stop stop-color='rgba(77,77,77,1)' offset='0.14784'/><stop stop-color='rgba(51,51,51,1)' offset='0.29567'/><stop stop-color='rgba(26,26,26,1)' offset='0.44351'/><stop stop-color='rgba(13,13,13,1)' offset='0.51743'/><stop stop-color='rgba(6,6,6,1)' offset='0.55439'/><stop stop-color='rgba(0,0,0,1)' offset='0.59135'/></radialGradient></defs></svg>\")" }} />
         <p className="[word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[451px] text-[16px] text-white top-[222.36px] whitespace-nowrap">深度复盘与认知迭代</p>
@@ -1178,8 +1186,8 @@ function Image() {
   return (
     <div className="flex-[198.359_0_0] min-h-px relative w-[349px]" data-name="Image">
       <div aria-hidden className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none">
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage} />
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage1} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage1} />
       </div>
     </div>
   );

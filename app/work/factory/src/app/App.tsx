@@ -18,6 +18,14 @@ type ImageAsset = string | { src: string };
 
 const imageSrc = (image: ImageAsset) => (typeof image === "string" ? image : image.src);
 
+function OptimizedCaseImage({
+  loading = "lazy",
+  decoding = "async",
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return <img loading={loading} decoding={decoding} {...props} />;
+}
+
 // ─── Hero section ─────────────────────────────────────────────────────────────
 function HeroSection() {
   return (
@@ -29,7 +37,9 @@ function HeroSection() {
         </h1>
         {/* Hero image */}
         <div className="w-full rounded-[16px] overflow-hidden">
-          <img
+          <OptimizedCaseImage
+            loading="eager"
+            fetchPriority="high"
             alt="友讯达数据大屏 hero"
             className="w-full h-auto object-cover"
             src={imageSrc(imgContainer)}
@@ -135,7 +145,7 @@ interface SplitSectionProps {
 function SplitSection({ imageLeft = true, image, label, content }: SplitSectionProps) {
   const imagePanel = (
     <div className="w-full lg:w-1/2 rounded-[16px] overflow-hidden shrink-0 self-stretch min-h-[300px] lg:min-h-0">
-      <img alt={label} className="w-full h-full object-cover" src={imageSrc(image)} />
+      <OptimizedCaseImage alt={label} className="w-full h-full object-cover" src={imageSrc(image)} />
     </div>
   );
 
@@ -210,7 +220,7 @@ function VisionStrategySection() {
     <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px] mt-[48px]">
       <div className="w-full max-w-[1400px] rounded-[16px] overflow-hidden relative" style={{ minHeight: 560 }}>
         {/* Background image */}
-        <img
+        <OptimizedCaseImage
           alt="strategy background"
           className="absolute inset-0 w-full h-full object-cover"
           src={imageSrc(imgContainer3)}
@@ -276,7 +286,7 @@ function ScreenshotSection({ image, alt }: { image: ImageAsset; alt: string }) {
   return (
     <section className="w-full flex flex-col items-center px-5 sm:px-8 lg:px-16 xl:px-[164px]">
       <div className="w-full max-w-[1398px] rounded-[16px] overflow-hidden">
-        <img alt={alt} className="w-full h-auto object-cover" src={imageSrc(image)} />
+        <OptimizedCaseImage alt={alt} className="w-full h-auto object-cover" src={imageSrc(image)} />
       </div>
       <div className="h-[48px]" />
     </section>

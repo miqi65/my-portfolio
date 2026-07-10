@@ -11,6 +11,8 @@ export default function SafeImage({ src, alt = "", className = "" }: { src: stri
 
   return (
     <img
+      loading="lazy"
+      decoding="async"
       src={src}
       alt={alt}
       className={`${className} block object-cover text-transparent`}

@@ -19,6 +19,9 @@ export default function ProjectHero({ title, summary, heroImage, language }: Pro
       
       <div className="w-full relative aspect-video md:aspect-[21/9] bg-muted/10 overflow-hidden">
         <img
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           src={heroImage}
           alt=""
           className="w-full h-full object-cover block text-transparent"

@@ -127,7 +127,7 @@ function Container5() {
 function Container7() {
   return (
     React.createElement('div', { className: "h-[786px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 129}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full wms-hero-thumbnail-image"         , src: imgContainer, __self: this, __source: {fileName: _jsxFileName, lineNumber: 130}} )
+      , React.createElement('img', { loading: "eager", fetchPriority: "high", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full wms-hero-thumbnail-image"         , src: imgContainer, __self: this, __source: {fileName: _jsxFileName, lineNumber: 130}} )
     )
   );
 }
@@ -546,7 +546,7 @@ function Container34() {
 function Container37() {
   return (
     React.createElement('div', { className: "h-[786px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 548}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer1, __self: this, __source: {fileName: _jsxFileName, lineNumber: 549}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer1, __self: this, __source: {fileName: _jsxFileName, lineNumber: 549}} )
     )
   );
 }
@@ -632,7 +632,7 @@ function Container41() {
 function Container44() {
   return (
     React.createElement('div', { className: "h-[787px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 634}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer2, __self: this, __source: {fileName: _jsxFileName, lineNumber: 635}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer2, __self: this, __source: {fileName: _jsxFileName, lineNumber: 635}} )
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 636}}
         , React.createElement('div', { className: "absolute backdrop-blur-[4.85px] bg-[rgba(0,0,0,0.3)] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]"       , __self: this, __source: {fileName: _jsxFileName, lineNumber: 637}} )
         , React.createElement('p', { className: "wms-vision-label [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[476px] text-[16px] text-white top-[278.13px] whitespace-nowrap"         , __self: this, __source: {fileName: _jsxFileName, lineNumber: 638}}, `产品愿景 `)
@@ -718,7 +718,7 @@ function Container50() {
     React.createElement('div', { className: "bg-[#0b0c0e] h-[787px] relative shrink-0 w-[1400px]"    , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 718}}
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 719}}
         , React.createElement('div', { className: "absolute h-[750px] left-[32px] top-[18.94px] w-[1335px]"    , __self: this, __source: {fileName: _jsxFileName, lineNumber: 720}}
-          , React.createElement('img', { alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgRectangle11, __self: this, __source: {fileName: _jsxFileName, lineNumber: 721}} )
+          , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgRectangle11, __self: this, __source: {fileName: _jsxFileName, lineNumber: 721}} )
         )
       )
     )
@@ -782,7 +782,7 @@ function Container53() {
 function Container56() {
   return (
     React.createElement('div', { className: "h-[787px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 784}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer3, __self: this, __source: {fileName: _jsxFileName, lineNumber: 785}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer3, __self: this, __source: {fileName: _jsxFileName, lineNumber: 785}} )
     )
   );
 }
@@ -814,7 +814,7 @@ function Container57() {
 function Video() {
   return (
     React.createElement('div', { className: "absolute h-[495.72px] left-[-2.86px] top-[-4.86px] w-[291.72px]"    , 'data-name': "Video", __self: this, __source: {fileName: _jsxFileName, lineNumber: 816}}
-      , React.createElement('img', { alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgVideo, __self: this, __source: {fileName: _jsxFileName, lineNumber: 817}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgVideo, __self: this, __source: {fileName: _jsxFileName, lineNumber: 817}} )
     )
   );
 }
@@ -862,7 +862,7 @@ function Container62() {
 function Container61() {
   return (
     React.createElement('div', { className: "h-[799px] relative shrink-0 w-[680px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 864}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer4, __self: this, __source: {fileName: _jsxFileName, lineNumber: 865}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer4, __self: this, __source: {fileName: _jsxFileName, lineNumber: 865}} )
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 866}}
         , React.createElement(Container62, {__self: this, __source: {fileName: _jsxFileName, lineNumber: 867}} )
       )
@@ -947,7 +947,7 @@ function Container68() {
 function Video1() {
   return (
     React.createElement('div', { className: "absolute h-[495.72px] left-[-2.86px] top-[-4.86px] w-[291.72px]"    , 'data-name': "Video", __self: this, __source: {fileName: _jsxFileName, lineNumber: 949}}
-      , React.createElement('img', { alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgVideo, __self: this, __source: {fileName: _jsxFileName, lineNumber: 950}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none size-full"     , src: imgVideo, __self: this, __source: {fileName: _jsxFileName, lineNumber: 950}} )
     )
   );
 }
@@ -995,7 +995,7 @@ function Container72() {
 function Container71() {
   return (
     React.createElement('div', { className: "h-[799px] relative shrink-0 w-[680px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 997}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer4, __self: this, __source: {fileName: _jsxFileName, lineNumber: 998}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer4, __self: this, __source: {fileName: _jsxFileName, lineNumber: 998}} )
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 999}}
         , React.createElement(Container72, {__self: this, __source: {fileName: _jsxFileName, lineNumber: 1000}} )
       )
@@ -1051,7 +1051,7 @@ function Section6() {
 function Container80() {
   return (
     React.createElement('div', { className: "h-[787px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1053}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer5, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1054}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer5, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1054}} )
       , React.createElement('div', { className: "bg-clip-padding border-0 border-[transparent] border-solid relative size-full"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 1055}}
         , React.createElement('div', { className: "absolute bg-[rgba(0,0,0,0.36)] h-[787px] left-0 top-[-0.45px] w-[1400px]"     , __self: this, __source: {fileName: _jsxFileName, lineNumber: 1056}} )
       )
@@ -1121,7 +1121,7 @@ function Container83() {
 function Container86() {
   return (
     React.createElement('div', { className: "h-[787px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1123}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer6, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1124}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer6, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1124}} )
     )
   );
 }
@@ -1202,7 +1202,7 @@ function Container89() {
 function Container93() {
   return (
     React.createElement('div', { className: "h-[787px] relative shrink-0 w-[1400px]"   , 'data-name': "Container", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1204}}
-      , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer7, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1205}} )
+      , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full"         , src: imgContainer7, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1205}} )
     )
   );
 }
@@ -1296,8 +1296,8 @@ function Image() {
   return (
     React.createElement('div', { className: "flex-[198.359_0_0] min-h-px relative w-[349px]"   , 'data-name': "Image", __self: this, __source: {fileName: _jsxFileName, lineNumber: 1297}}
       , React.createElement('div', { 'aria-hidden': true, className: "absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none"      , __self: this, __source: {fileName: _jsxFileName, lineNumber: 1298}}
-        , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full"       , src: imgImage, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1299}} )
-        , React.createElement('img', { alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full"       , src: imgImage1, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1300}} )
+        , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full"       , src: imgImage, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1299}} )
+        , React.createElement('img', { loading: "lazy", decoding: "async", alt: "", className: "absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full"       , src: imgImage1, __self: this, __source: {fileName: _jsxFileName, lineNumber: 1300}} )
       )
     )
   );

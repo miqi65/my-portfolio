@@ -64,7 +64,6 @@ const HOME_PROJECT_ORDER = [
   FACTORY_SLUG,
   DS_AI_SLUG
 ];
-
 export default function Home() {
   const { language } = useLanguage(); // 获取当前语言状态 ("en" 或 "zh")
   const projectBySlug = new Map(projects.map((project) => [project.slug, project]));
@@ -134,7 +133,6 @@ export default function Home() {
                   : isGps && language === "zh"
                   ? GPS_ZH_CATEGORY
                   : project.category[language];
-
               return (
                 <Link
                   key={project.slug}
@@ -148,7 +146,7 @@ export default function Home() {
                       fill
                       className="object-cover grayscale contrast-[0.95] brightness-[1.02] transition-all duration-700 ease-out group-hover:scale-[1.015] group-hover:grayscale-0"
                       sizes="(max-width: 768px) 82vw, clamp(460px,28vw,520px)"
-                      priority={index < 3}
+                      priority={index === 0}
                     />
                   </div>
 

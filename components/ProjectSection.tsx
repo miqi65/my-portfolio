@@ -37,6 +37,8 @@ export default function ProjectSection({ title, items, language }: Props) {
           const ImageBlock = () => item.image ? (
             <div className="w-full bg-muted/5 relative overflow-hidden flex-1">
               <img 
+                loading="lazy"
+                decoding="async"
                 src={item.image} 
                 alt="" 
                 className="w-full h-auto block object-cover text-transparent"

@@ -80,7 +80,7 @@ function ImageLightbox({ data, onClose }: { data: LightboxData, onClose: () => v
         <X size={24} strokeWidth={1.5} />
       </button>
       <div className="relative w-full max-w-[95vw] h-[85vh]" onClick={(e) => e.stopPropagation()}>
-        <Image src={data.src} alt={data.alt} fill className="object-contain" sizes="100vw" priority unoptimized />
+        <Image src={data.src} alt={data.alt} fill className="object-contain" sizes="100vw" priority />
       </div>
     </motion.div>
   );
@@ -286,7 +286,6 @@ function EvidenceFrame({ src, alt, caption, badge, evidenceType, onZoom, isPlace
                     <Image
                       src={src} alt={alt} fill sizes="(max-width: 1280px) 100vw, 1280px"
                       className={`object-contain transition-transform duration-[400ms] ease-out group-hover:scale-[1.015] ${isLoaded ? "opacity-100" : "opacity-0"}`}
-                      unoptimized
                       onLoad={() => setIsLoaded(true)} onError={() => setHasError(true)}
                     />
                   </div>

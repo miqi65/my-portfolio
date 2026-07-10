@@ -12,6 +12,14 @@ import imgContainer7 from "./4eb63c54b41f18338aeec748c0640b917e3d744f.png";
 import imgImage from "./3829fadc0e9472939fa554b8f2710edd317813fe.png";
 import imgImage1 from "./336dc2de0822a7a75df8a866a9095bc6d6d4c1e1.png";
 
+function OptimizedCaseImage({
+  loading = "lazy",
+  decoding = "async",
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return <img loading={loading} decoding={decoding} {...props} />;
+}
+
 function Container2() {
   return (
     <div className="relative shrink-0" data-name="Container">
@@ -121,7 +129,7 @@ function Container5() {
 function Container7() {
   return (
     <div className="h-[786px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full wms-hero-thumbnail-image" src={imgContainer} />
+      <OptimizedCaseImage loading="eager" fetchPriority="high" alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full wms-hero-thumbnail-image" src={imgContainer} />
     </div>
   );
 }
@@ -540,7 +548,7 @@ function Container34() {
 function Container37() {
   return (
     <div className="h-[786px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer1} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer1} />
     </div>
   );
 }
@@ -626,7 +634,7 @@ function Container41() {
 function Container44() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer2} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer2} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute backdrop-blur-[4.85px] bg-[rgba(0,0,0,0.3)] h-[787px] left-0 rounded-[15px] top-[0.13px] w-[1400px]" />
         <p className="wms-vision-label [word-break:break-word] absolute font-['Noto_Sans_SC:Regular',sans-serif] font-normal leading-[22.4px] left-[476px] text-[16px] text-white top-[278.13px] whitespace-nowrap">{`产品愿景 `}</p>
@@ -712,7 +720,7 @@ function Container50() {
     <div className="bg-[#0b0c0e] h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute h-[750px] left-[32px] top-[18.94px] w-[1335px]">
-          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle11} />
+          <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle11} />
         </div>
       </div>
     </div>
@@ -776,7 +784,7 @@ function Container53() {
 function Container56() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer3} />
     </div>
   );
 }
@@ -808,7 +816,7 @@ function Container57() {
 function Video() {
   return (
     <div className="absolute h-[495.72px] left-[-2.86px] top-[-4.86px] w-[291.72px]" data-name="Video">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgVideo} />
+      <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgVideo} />
     </div>
   );
 }
@@ -856,7 +864,7 @@ function Container62() {
 function Container61() {
   return (
     <div className="h-[799px] relative shrink-0 w-[680px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer4} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer4} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container62 />
       </div>
@@ -941,7 +949,7 @@ function Container68() {
 function Video1() {
   return (
     <div className="absolute h-[495.72px] left-[-2.86px] top-[-4.86px] w-[291.72px]" data-name="Video">
-      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgVideo} />
+      <OptimizedCaseImage alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgVideo} />
     </div>
   );
 }
@@ -989,7 +997,7 @@ function Container72() {
 function Container71() {
   return (
     <div className="h-[799px] relative shrink-0 w-[680px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer4} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer4} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <Container72 />
       </div>
@@ -1045,7 +1053,7 @@ function Section6() {
 function Container80() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer5} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer5} />
       <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
         <div className="absolute bg-[rgba(0,0,0,0.36)] h-[787px] left-0 top-[-0.45px] w-[1400px]" />
       </div>
@@ -1115,7 +1123,7 @@ function Container83() {
 function Container86() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer6} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer6} />
     </div>
   );
 }
@@ -1196,7 +1204,7 @@ function Container89() {
 function Container93() {
   return (
     <div className="h-[787px] relative shrink-0 w-[1400px]" data-name="Container">
-      <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer7} />
+      <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 max-w-none object-cover pointer-events-none size-full" src={imgContainer7} />
     </div>
   );
 }
@@ -1290,8 +1298,8 @@ function Image() {
   return (
     <div className="flex-[198.359_0_0] min-h-px relative w-[349px]" data-name="Image">
       <div aria-hidden className="absolute bg-clip-padding border-0 border-[transparent] border-solid inset-0 pointer-events-none">
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage} />
-        <img alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage1} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage} />
+        <OptimizedCaseImage alt="" className="absolute bg-clip-padding border-0 border-[transparent] border-solid max-w-none object-cover size-full" src={imgImage1} />
       </div>
     </div>
   );

@@ -101,6 +101,8 @@ export default function ProjectNextSection({ currentSlug }: { currentSlug: strin
             </p>
             <div className="relative aspect-[349/198] w-full overflow-hidden rounded-[8px] bg-[#111]">
               <img
+                loading="lazy"
+                decoding="async"
                 alt={`${nextProject.title} hero`}
                 className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                 src={imageSrc(nextProject.hero)}

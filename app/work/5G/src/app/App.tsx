@@ -12,6 +12,14 @@ type ImageAsset = string | { src: string };
 
 const imageSrc = (image: ImageAsset) => (typeof image === "string" ? image : image.src);
 
+function OptimizedCaseImage({
+  loading = "lazy",
+  decoding = "async",
+  ...props
+}: React.ImgHTMLAttributes<HTMLImageElement>) {
+  return <img loading={loading} decoding={decoding} {...props} />;
+}
+
 export default function App() {
   return (
     <div className="bg-white min-h-screen w-full font-sans">
@@ -23,7 +31,9 @@ export default function App() {
           5G消息Chatbot交互规范体系
         </h1>
         <div className="w-full rounded-2xl overflow-hidden">
-          <img
+          <OptimizedCaseImage
+            loading="eager"
+            fetchPriority="high"
             src={imageSrc(imgHero)}
             alt="5G Chatbot 项目封面"
             className="w-full h-[clamp(280px,56vw,787px)] object-cover"
@@ -101,7 +111,7 @@ export default function App() {
       {/* ── Core Challenges ── */}
       <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-16 md:pt-24 lg:pt-28">
         <div className="w-full rounded-2xl overflow-hidden relative">
-          <img
+          <OptimizedCaseImage
             src={imageSrc(imgChallenges)}
             alt="核心挑战背景"
             className="w-full h-[clamp(520px,56vw,787px)] object-cover"
@@ -134,7 +144,7 @@ export default function App() {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* Image left */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
-            <img
+            <OptimizedCaseImage
               src={imageSrc(imgStrategy1)}
               alt="设计策略截图"
               className="w-full h-[clamp(360px,46vw,798px)] object-cover"
@@ -162,7 +172,7 @@ export default function App() {
       {/* ── Spec full-width image ── */}
       <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16">
         <div className="w-full rounded-2xl overflow-hidden">
-          <img
+          <OptimizedCaseImage
             src={imageSrc(imgSpec)}
             alt="规范文档截图"
             className="w-full h-[clamp(280px,56vw,787px)] object-cover"
@@ -175,7 +185,7 @@ export default function App() {
         <div className="flex flex-col lg:flex-row-reverse gap-10 lg:gap-16 items-start">
           {/* Image right */}
           <div className="w-full lg:w-1/2 rounded-2xl overflow-hidden shrink-0">
-            <img
+            <OptimizedCaseImage
               src={imageSrc(imgStrategy2)}
               alt="组织推行截图"
               className="w-full h-[clamp(360px,46vw,798px)] object-cover"
@@ -207,7 +217,7 @@ export default function App() {
       {/* ── Deliverables full-width image ── */}
       <section className="mx-auto max-w-[1526px] px-6 md:px-10 lg:px-16 pt-12 md:pt-16 pb-0">
         <div className="w-full rounded-2xl overflow-hidden">
-          <img
+          <OptimizedCaseImage
             src={imageSrc(imgDeliverables)}
             alt="交付物截图"
             className="w-full h-[clamp(280px,56vw,787px)] object-cover"
