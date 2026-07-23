@@ -1,0 +1,871 @@
+{
+  "capturedAt": "2026-07-22T15:32:46.470Z",
+  "source": "Computed styles from the stable rendered page at https://billysweeney.com/",
+  "font": {
+    "cssAlias": "Billy Sans",
+    "sourceFamily": "Roobert Medium",
+    "declaredWeight": 500,
+    "format": "WOFF2",
+    "sourceUrl": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+    "localFileArchived": false,
+    "reason": "Commercial font binary intentionally not copied; CSS declaration and request metadata are archived.",
+    "fallbackStack": "system-ui, sans-serif"
+  },
+  "viewportStyles": {
+    "desktop-1440": {
+      "viewport": {
+        "key": "desktop-1440",
+        "width": 1440,
+        "height": 900
+      },
+      "logo": {
+        "element": "div",
+        "className": "brand",
+        "sample": "Billy Sweeney",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "maxWidth": "none",
+          "textAlign": "start"
+        }
+      },
+      "navigation": null,
+      "hero": {
+        "element": "h1",
+        "className": "text anyone is--visible",
+        "sample": "Hello there, I’m a\ndesigner who cares\nabout making\nbeautiful things that\nhelp people.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "74.016px",
+          "lineHeight": "72.1656px",
+          "letterSpacing": "-1.48032px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "audienceTab": null,
+      "valuesTitle": {
+        "element": "h1",
+        "className": null,
+        "sample": "Useful",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "74.016px",
+          "lineHeight": "72.1656px",
+          "letterSpacing": "-1.48032px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceCompany": {
+        "element": "h2",
+        "className": "company",
+        "sample": "Figma",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26.064px",
+          "lineHeight": "30.2342px",
+          "letterSpacing": "-0.26064px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceRole": {
+        "element": "h1",
+        "className": "role",
+        "sample": "Product Designer",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "74.016px",
+          "lineHeight": "72.1656px",
+          "letterSpacing": "-1.48032px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceDescription": {
+        "element": null,
+        "className": null,
+        "sample": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strategy, and zooming in on details. I’m always improving, growing, and executing to the highest standard possible. All while achieving a larger mission, connecting my work to something deeper, tethered to improving the world, leaving it better than when I began.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "referenceQuote": {
+        "element": "h2",
+        "className": "quote",
+        "sample": "“Truly one of the best design collaborators I’ve ever worked with.”",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26.064px",
+          "lineHeight": "30.2342px",
+          "letterSpacing": "-0.26064px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeHeading": {
+        "element": "h2",
+        "className": null,
+        "sample": "Accolades",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26.064px",
+          "lineHeight": "30.2342px",
+          "letterSpacing": "-0.26064px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeList": null,
+      "pressList": null,
+      "footerStatus": null,
+      "footerHeadline": {
+        "element": "h2",
+        "className": null,
+        "sample": "I’ve recently joined Figma.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26.064px",
+          "lineHeight": "30.2342px",
+          "letterSpacing": "-0.26064px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      }
+    },
+    "desktop-1280": {
+      "viewport": {
+        "key": "desktop-1280",
+        "width": 1280,
+        "height": 800
+      },
+      "logo": {
+        "element": "div",
+        "className": "brand",
+        "sample": "Billy Sweeney",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "maxWidth": "none",
+          "textAlign": "start"
+        }
+      },
+      "navigation": null,
+      "hero": {
+        "element": "h1",
+        "className": "text anyone is--visible",
+        "sample": "Hello there, I’m a\ndesigner who cares\nabout making\nbeautiful things that\nhelp people.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "81.28px",
+          "lineHeight": "79.248px",
+          "letterSpacing": "-1.6256px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "audienceTab": null,
+      "valuesTitle": {
+        "element": "h1",
+        "className": null,
+        "sample": "Useful",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "81.28px",
+          "lineHeight": "79.248px",
+          "letterSpacing": "-1.6256px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceCompany": {
+        "element": "h2",
+        "className": "company",
+        "sample": "Figma",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "28.672px",
+          "lineHeight": "33.2595px",
+          "letterSpacing": "-0.28672px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceRole": {
+        "element": "h1",
+        "className": "role",
+        "sample": "Product Designer",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "81.28px",
+          "lineHeight": "79.248px",
+          "letterSpacing": "-1.6256px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceDescription": {
+        "element": null,
+        "className": null,
+        "sample": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strategy, and zooming in on details. I’m always improving, growing, and executing to the highest standard possible. All while achieving a larger mission, connecting my work to something deeper, tethered to improving the world, leaving it better than when I began.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "referenceQuote": {
+        "element": "h2",
+        "className": "quote",
+        "sample": "“Truly one of the best design collaborators I’ve ever worked with.”",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "28.672px",
+          "lineHeight": "33.2595px",
+          "letterSpacing": "-0.28672px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeHeading": {
+        "element": "h2",
+        "className": null,
+        "sample": "Accolades",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "28.672px",
+          "lineHeight": "33.2595px",
+          "letterSpacing": "-0.28672px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeList": null,
+      "pressList": null,
+      "footerStatus": null,
+      "footerHeadline": {
+        "element": "h2",
+        "className": null,
+        "sample": "I’ve recently joined Figma.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "28.672px",
+          "lineHeight": "33.2595px",
+          "letterSpacing": "-0.28672px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      }
+    },
+    "tablet-1024": {
+      "viewport": {
+        "key": "tablet-1024",
+        "width": 1024,
+        "height": 768
+      },
+      "logo": {
+        "element": "div",
+        "className": "brand",
+        "sample": "Billy Sweeney",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "maxWidth": "none",
+          "textAlign": "start"
+        }
+      },
+      "navigation": null,
+      "hero": {
+        "element": "h1",
+        "className": "text anyone is--visible",
+        "sample": "Hello there, I’m a\ndesigner who cares\nabout making\nbeautiful things that\nhelp people.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "65.024px",
+          "lineHeight": "63.3984px",
+          "letterSpacing": "-1.30048px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "audienceTab": null,
+      "valuesTitle": {
+        "element": "h1",
+        "className": null,
+        "sample": "Useful",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "65.024px",
+          "lineHeight": "63.3984px",
+          "letterSpacing": "-1.30048px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceCompany": {
+        "element": "h2",
+        "className": "company",
+        "sample": "Figma",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26px",
+          "lineHeight": "30.16px",
+          "letterSpacing": "-0.26px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceRole": {
+        "element": "h1",
+        "className": "role",
+        "sample": "Product Designer",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "65.024px",
+          "lineHeight": "63.3984px",
+          "letterSpacing": "-1.30048px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceDescription": {
+        "element": null,
+        "className": null,
+        "sample": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strategy, and zooming in on details. I’m always improving, growing, and executing to the highest standard possible. All while achieving a larger mission, connecting my work to something deeper, tethered to improving the world, leaving it better than when I began.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "referenceQuote": {
+        "element": "h2",
+        "className": "quote",
+        "sample": "“Truly one of the best design collaborators I’ve ever worked with.”",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26px",
+          "lineHeight": "30.16px",
+          "letterSpacing": "-0.26px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeHeading": {
+        "element": "h2",
+        "className": null,
+        "sample": "Accolades",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26px",
+          "lineHeight": "30.16px",
+          "letterSpacing": "-0.26px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeList": null,
+      "pressList": null,
+      "footerStatus": null,
+      "footerHeadline": {
+        "element": "h2",
+        "className": null,
+        "sample": "I’ve recently joined Figma.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "26px",
+          "lineHeight": "30.16px",
+          "letterSpacing": "-0.26px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      }
+    },
+    "tablet-768": {
+      "viewport": {
+        "key": "tablet-768",
+        "width": 768,
+        "height": 1024
+      },
+      "logo": {
+        "element": "div",
+        "className": "brand",
+        "sample": "Billy Sweeney",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "maxWidth": "none",
+          "textAlign": "start"
+        }
+      },
+      "navigation": null,
+      "hero": {
+        "element": "h1",
+        "className": "text anyone is--visible",
+        "sample": "Hello there, I’m a\ndesigner who cares\nabout making\nbeautiful things that\nhelp people.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "59.6736px",
+          "lineHeight": "58.1818px",
+          "letterSpacing": "-1.19347px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "audienceTab": null,
+      "valuesTitle": {
+        "element": "h1",
+        "className": null,
+        "sample": "Useful",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "59.6736px",
+          "lineHeight": "58.1818px",
+          "letterSpacing": "-1.19347px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceCompany": {
+        "element": "h2",
+        "className": "company",
+        "sample": "Figma",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceRole": {
+        "element": "h1",
+        "className": "role",
+        "sample": "Product Designer",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "59.6736px",
+          "lineHeight": "58.1818px",
+          "letterSpacing": "-1.19347px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceDescription": {
+        "element": null,
+        "className": null,
+        "sample": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strategy, and zooming in on details. I’m always improving, growing, and executing to the highest standard possible. All while achieving a larger mission, connecting my work to something deeper, tethered to improving the world, leaving it better than when I began.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "referenceQuote": {
+        "element": "h2",
+        "className": "quote",
+        "sample": "“Truly one of the best design collaborators I’ve ever worked with.”",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeHeading": {
+        "element": "h2",
+        "className": null,
+        "sample": "Accolades",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeList": null,
+      "pressList": null,
+      "footerStatus": null,
+      "footerHeadline": {
+        "element": "h2",
+        "className": null,
+        "sample": "I’ve recently joined Figma.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      }
+    },
+    "mobile-390": {
+      "viewport": {
+        "key": "mobile-390",
+        "width": 390,
+        "height": 844
+      },
+      "logo": {
+        "element": "div",
+        "className": "brand",
+        "sample": "Billy Sweeney",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "fontWeight": "500",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "color": "rgb(0, 0, 0)",
+          "maxWidth": "none",
+          "textAlign": "start"
+        }
+      },
+      "navigation": null,
+      "hero": {
+        "element": "h1",
+        "className": "text anyone is--visible",
+        "sample": "Hello there, I’m a\ndesigner who cares\nabout making\nbeautiful things that\nhelp people.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "32px",
+          "lineHeight": "32px",
+          "letterSpacing": "-0.64px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "audienceTab": null,
+      "valuesTitle": {
+        "element": "h1",
+        "className": null,
+        "sample": "Useful",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "32px",
+          "lineHeight": "32px",
+          "letterSpacing": "-0.64px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceCompany": {
+        "element": "h2",
+        "className": "company",
+        "sample": "Figma",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceRole": {
+        "element": "h1",
+        "className": "role",
+        "sample": "Product Designer",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "32px",
+          "lineHeight": "32px",
+          "letterSpacing": "-0.64px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "experienceDescription": {
+        "element": null,
+        "className": null,
+        "sample": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strategy, and zooming in on details. I’m always improving, growing, and executing to the highest standard possible. All while achieving a larger mission, connecting my work to something deeper, tethered to improving the world, leaving it better than when I began.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "16px",
+          "lineHeight": "20px",
+          "letterSpacing": "normal",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "referenceQuote": {
+        "element": "h2",
+        "className": "quote",
+        "sample": "“Truly one of the best design collaborators I’ve ever worked with.”",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeHeading": {
+        "element": "h2",
+        "className": null,
+        "sample": "Accolades",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      },
+      "accoladeList": null,
+      "pressList": null,
+      "footerStatus": null,
+      "footerHeadline": {
+        "element": "h2",
+        "className": null,
+        "sample": "I’ve recently joined Figma.",
+        "typography": {
+          "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+          "fontWeight": "500",
+          "fontStyle": "normal",
+          "fontSize": "22px",
+          "lineHeight": "25.52px",
+          "letterSpacing": "-0.22px",
+          "textTransform": "none",
+          "textDecoration": "none",
+          "color": "rgb(0, 0, 0)",
+          "textAlign": "start",
+          "maxWidth": "none"
+        }
+      }
+    }
+  }
+}

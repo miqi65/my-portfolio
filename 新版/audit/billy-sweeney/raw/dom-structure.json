@@ -1,0 +1,4932 @@
+{
+  "tag": "body",
+  "id": null,
+  "className": "theme--16",
+  "role": null,
+  "ariaLabel": null,
+  "text": null,
+  "children": [
+    {
+      "tag": "header",
+      "id": null,
+      "className": "app-header",
+      "role": null,
+      "ariaLabel": null,
+      "text": null,
+      "children": [
+        {
+          "tag": "div",
+          "id": null,
+          "className": "content",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "brand",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "h3",
+                  "id": null,
+                  "className": "",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "B",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "i",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "l",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "l",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "y",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "S",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "w",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "e",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "e",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "n",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "e",
+                      "children": []
+                    },
+                    {
+                      "tag": "span",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "y",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "actions",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "option navigation",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "content",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "icon",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "div",
+                              "id": null,
+                              "className": "line",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "id": null,
+                                  "className": "content",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "div",
+                              "id": null,
+                              "className": "line",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "div",
+                                  "id": null,
+                                  "className": "content",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "nav",
+      "id": null,
+      "className": "app-nav",
+      "role": null,
+      "ariaLabel": null,
+      "text": null,
+      "children": [
+        {
+          "tag": "div",
+          "id": null,
+          "className": "content",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item intro is--active",
+              "role": null,
+              "ariaLabel": null,
+              "text": "Intro",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item work",
+              "role": null,
+              "ariaLabel": null,
+              "text": "Work",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item values",
+              "role": null,
+              "ariaLabel": null,
+              "text": "Values",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item background",
+              "role": null,
+              "ariaLabel": null,
+              "text": "Background",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item references",
+              "role": null,
+              "ariaLabel": null,
+              "text": "References",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item about",
+              "role": null,
+              "ariaLabel": null,
+              "text": "About",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "item contact",
+              "role": null,
+              "ariaLabel": null,
+              "text": "Contact",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "main",
+      "id": null,
+      "className": "app-main",
+      "role": null,
+      "ariaLabel": null,
+      "text": null,
+      "children": [
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section cover",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "h1",
+                  "id": null,
+                  "className": "",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "br",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section intro",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "gradient-mask left",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "gradient-mask right is--visible",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": "",
+                  "children": []
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "options",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option anyone is--active",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "For anyone",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option recruiters",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Recruiters",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option design-directors",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Design Directors",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option product-designers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Product Designers",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option product-managers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Product Managers",
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "option engineers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Engineers",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "texts",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text anyone is--visible",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "br",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "br",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "br",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "br",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text recruiters",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I’m a product designer with 15 years of experience across brand and product, at companies large and small. I’m not actively looking for a new role.",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text design-directors",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I take pride in my craft, and love mentoring earlier career designers. I develop cross functional partnerships, and thrive in complex, ambiguous environments.",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text product-designers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I’m a systems thinker with a high bar for quality. From process to pixels, I’ll collaborate with you, learn from you, and help make something we’re proud of.",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text product-managers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I bring end-to-end product acumen, from vision and strategy to discovery and delivery. I’ll partner closely with you to generate the highest impact possible.",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "text engineers",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "this.site",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "this.one",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "this.too",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section work",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "hero-image",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "image",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "image-overlay-01",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "image-overlay-02",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section values",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "title",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Useful",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Considered",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Beautiful",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Well made",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "description",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "These are my core design values, and I strive to imbue them in all of the work I do. I’ve always been making things and inventing ways to improve my surroundings. Solving a tangible need with a beautiful solution is a practice I love and resides in my core. Collaborating with a team to create a far better outcome than otherwise possible alone gives me energy. I like thinking big, working fast, yet carefully, holistically, long-term, sustainably, cross-functionally, zooming out on company strateg",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section background",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "description",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I studied visual communication design, got my start in branding, marketing, and web design, then evolved to specialize in product design. Leveraging my visual design foundation and deep user empathy, I’ve established myself as a well rounded design leader who creates human-centered platforms with cohesive throughlines at every touchpoint: from vision and strategy, to brand awareness and marketing, to product development and delightful micro interactions. Throughout my 15 years of professional ex",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Figma",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Product Designer",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Now",
+                          "children": []
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Seattle",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Working on design systems products.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Cocoon",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Director of Design",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "2023",
+                          "children": []
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Seattle",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I led and executed design across product and brand, built a team from the ground up, significantly increased conversion, and directed a company rebrand, as we worked to build the leave management platform our loved ones deserve.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Dropbox",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Staff Product Designer",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "2020–2022",
+                          "children": []
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Seattle",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I led the design of a complete web product redesign, several emerging zero to one products, as well as global navigation systems and information architecture for the company’s multi-product strategy.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Facebook",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Product Designer",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Seattle",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I worked on Marketplace, leading design for the browse feed, buyer platform, vehicles category, and design systems, enabling dozens of teams to ship with consistency and performance to hundreds of millions of users.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Thread",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Head of Design",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "London",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I was brought on to both lead and individually execute design across all company initiatives as we built a deeply personalized online shopping product which blended a team of human stylists with machine learning.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Squarespace",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Design Lead",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "2011–2017",
+                          "children": []
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "New York · Portland",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "As an early design hire, I wore many hats across brand and product design during my tenure, helping to redefine web publishing and establish the company into household name.",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "logo",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "content",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "svg",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": null,
+                              "children": [
+                                {
+                                  "tag": "path",
+                                  "id": null,
+                                  "className": "",
+                                  "role": null,
+                                  "ariaLabel": null,
+                                  "text": "",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "company",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Freelance",
+                      "children": []
+                    },
+                    {
+                      "tag": "h1",
+                      "id": null,
+                      "className": "role",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Designer and Director",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "metadata",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "time",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "location",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "New York · London · Seattle · Portland · Tempe",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "description",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "I’ve been commissioned to create custom websites, apps, and identity systems for select clients including National Geographic photographers, Academy award-winning film-makers, and global entrepreneurs.",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section references",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Grace Erickson",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Director of Marketing",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Seth Fields",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Senior UX Program Manager",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Dionne Ong",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Product Designer",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Kait Smith Lowden",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Director of Product Design",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Ryan Quintal",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Staff Product Designer",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "item",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "quote",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "opening-quote-mark",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "“",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "person",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Bec Lai",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "role",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Staff Product Designer",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section about",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "biography",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Figma",
+                          "children": []
+                        },
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Cocoon",
+                          "children": []
+                        },
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Dropbox",
+                          "children": []
+                        },
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Facebook",
+                          "children": []
+                        },
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Thread",
+                          "children": []
+                        },
+                        {
+                          "tag": "a",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "Squarespace",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "awards",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Accolades",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Award",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "press",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Press",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Article",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "numeral-8",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "8",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Article",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Article",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Article",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "title",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "View Article",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "colophon",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "h2",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "Colophon",
+                      "children": []
+                    },
+                    {
+                      "tag": "p",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Billy Sweeney",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "description",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Roobert Medium",
+                              "children": []
+                            },
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "Displaay Type Foundry",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            },
+                            {
+                              "tag": "br",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "id": null,
+                          "className": "copyright",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "span",
+                              "id": null,
+                              "className": "year",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "2026",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "className": "section contact",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "content",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "text",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "content",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "look",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "div",
+                              "id": null,
+                              "className": "radius",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            },
+                            {
+                              "tag": "div",
+                              "id": null,
+                              "className": "dot",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "status",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "h3",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "No longer exploring new opportunities",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "interest",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "h2",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "I’ve recently joined Figma.",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "actions",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "item",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "billy.sweeney@gmail.com",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "item",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": null,
+                          "children": [
+                            {
+                              "tag": "a",
+                              "id": null,
+                              "className": "",
+                              "role": null,
+                              "ariaLabel": null,
+                              "text": "LinkedIn",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "image",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "figure",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "img",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "image-overlay-01",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "image-overlay-02",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "aside",
+      "id": null,
+      "className": "app-aside",
+      "role": null,
+      "ariaLabel": null,
+      "text": null,
+      "children": [
+        {
+          "tag": "div",
+          "id": null,
+          "className": "options",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "option theme",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "icon-container",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "path",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "slider-container",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "div",
+                      "id": null,
+                      "className": "dots",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        },
+                        {
+                          "tag": "div",
+                          "id": null,
+                          "className": "dot",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "input",
+                      "id": null,
+                      "className": "slider",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": "",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "option grid",
+              "role": null,
+              "ariaLabel": null,
+              "text": null,
+              "children": [
+                {
+                  "tag": "div",
+                  "id": null,
+                  "className": "content",
+                  "role": null,
+                  "ariaLabel": null,
+                  "text": null,
+                  "children": [
+                    {
+                      "tag": "svg",
+                      "id": null,
+                      "className": "",
+                      "role": null,
+                      "ariaLabel": null,
+                      "text": null,
+                      "children": [
+                        {
+                          "tag": "path",
+                          "id": null,
+                          "className": "",
+                          "role": null,
+                          "ariaLabel": null,
+                          "text": "",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "div",
+      "id": null,
+      "className": "app-grid-overlay",
+      "role": null,
+      "ariaLabel": null,
+      "text": null,
+      "children": [
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "id": null,
+          "className": "column",
+          "role": null,
+          "ariaLabel": null,
+          "text": null,
+          "children": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "line",
+              "role": null,
+              "ariaLabel": null,
+              "text": "",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

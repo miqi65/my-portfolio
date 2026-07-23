@@ -1,0 +1,211 @@
+{
+  "capturedAt": "2026-07-22T15:32:46.470Z",
+  "source": "https://billysweeney.com/",
+  "counts": {
+    "archivedExternalFiles": 6,
+    "archivedInlineSvgDefinitions": 9,
+    "totalVisualDefinitions": 15,
+    "archivedStylesheets": 8,
+    "archivedFirstPartyScripts": 4
+  },
+  "externalAssets": [
+    {
+      "id": "work-collage-1440",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "localPath": "assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "type": "image/jpeg",
+      "width": 1440,
+      "height": 2960,
+      "usage": "Work section responsive background below 1000px viewport width",
+      "alt": null,
+      "archived": true,
+      "fileSize": 307268
+    },
+    {
+      "id": "work-collage-2880",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "localPath": "assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "type": "image/jpeg",
+      "width": 2880,
+      "height": 5920,
+      "usage": "Work section responsive background from 1000px through 1999px viewport width",
+      "alt": null,
+      "archived": true,
+      "fileSize": 907138
+    },
+    {
+      "id": "work-collage-mask",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "localPath": "assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "type": "image/svg+xml",
+      "width": 2880,
+      "height": 5920,
+      "usage": "CSS mask for the Work collage silhouette",
+      "alt": null,
+      "archived": true,
+      "fileSize": 223
+    },
+    {
+      "id": "portrait",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "localPath": "assets/portrait/Billy-Sweeney-1600x1600.jpg",
+      "type": "image/jpeg",
+      "width": 1600,
+      "height": 1600,
+      "usage": "Contact section portrait",
+      "alt": "Profile photo of Billy Sweeney",
+      "archived": true,
+      "fileSize": 262735
+    },
+    {
+      "id": "favicon",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "localPath": "assets/icons/favicon-32x32.png",
+      "type": "image/png",
+      "width": 32,
+      "height": 32,
+      "usage": "Browser shortcut icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 205
+    },
+    {
+      "id": "sharing-image",
+      "url": "https://billysweeney.com/assets/app/sharing-image-2400x2400.png",
+      "localPath": "assets/misc/sharing-image-2400x2400.png",
+      "type": "image/png",
+      "width": 2400,
+      "height": 2400,
+      "usage": "Open Graph and Twitter sharing image",
+      "alt": null,
+      "archived": true,
+      "fileSize": 49630
+    }
+  ],
+  "inlineSvgAssets": [
+    {
+      "id": "inline-svg-0-figma",
+      "url": null,
+      "localPath": "raw/svgs.json#0",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 1351
+    },
+    {
+      "id": "inline-svg-1-cocoon",
+      "url": null,
+      "localPath": "raw/svgs.json#1",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 13470
+    },
+    {
+      "id": "inline-svg-2-dropbox",
+      "url": null,
+      "localPath": "raw/svgs.json#2",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 586
+    },
+    {
+      "id": "inline-svg-3-facebook",
+      "url": null,
+      "localPath": "raw/svgs.json#3",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 546
+    },
+    {
+      "id": "inline-svg-4-thread",
+      "url": null,
+      "localPath": "raw/svgs.json#4",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 643
+    },
+    {
+      "id": "inline-svg-5-squarespace",
+      "url": null,
+      "localPath": "raw/svgs.json#5",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 1265
+    },
+    {
+      "id": "inline-svg-6-freelance",
+      "url": null,
+      "localPath": "raw/svgs.json#6",
+      "type": "image/svg+xml; inline",
+      "width": 64,
+      "height": 64,
+      "usage": "Background timeline company icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 1485
+    },
+    {
+      "id": "inline-svg-7-theme",
+      "url": null,
+      "localPath": "raw/svgs.json#7",
+      "type": "image/svg+xml; inline",
+      "width": 32,
+      "height": 32,
+      "usage": "Fixed theme/grid control icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 688
+    },
+    {
+      "id": "inline-svg-8-grid",
+      "url": null,
+      "localPath": "raw/svgs.json#8",
+      "type": "image/svg+xml; inline",
+      "width": 32,
+      "height": 32,
+      "usage": "Fixed theme/grid control icon",
+      "alt": null,
+      "archived": true,
+      "fileSize": 225
+    }
+  ],
+  "recordedButNotArchived": [
+    {
+      "id": "roobert-medium-font",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "type": "font/woff2",
+      "usage": "Billy Sans, weight 500",
+      "reason": "Commercial font binary intentionally not copied."
+    },
+    {
+      "id": "work-collage-5760",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-5760.jpg",
+      "type": "image/jpeg",
+      "usage": "CSS-declared Work background at 2000px and wider",
+      "reason": "No requested audit viewport loaded this source, so it was recorded but not downloaded."
+    }
+  ]
+}

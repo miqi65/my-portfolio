@@ -1,0 +1,123 @@
+export type AudienceKey =
+  | "anyone"
+  | "recruiters"
+  | "design-directors"
+  | "product-designers"
+  | "product-managers"
+  | "engineers";
+
+export const audiences: Array<{ key: AudienceKey; label: string; copy: string }> = [
+  {
+    key: "anyone",
+    label: "For anyone",
+    copy: "你好，我是 Miki。是一名在意产品是否清晰、好用，并且真正能够落地的设计师。",
+  },
+  {
+    key: "recruiters",
+    label: "Recruiters",
+    copy: "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
+  },
+  {
+    key: "design-directors",
+    label: "Design Directors",
+    copy: "我重视设计质量，也重视团队如何做出稳定判断。愿意把经验沉淀为规则，并帮助协作更顺畅。",
+  },
+  {
+    key: "product-designers",
+    label: "Product Designers",
+    copy: "我喜欢从复杂约束中建立秩序，把模糊问题转化为清晰流程、可演示原型和可复用的设计规则。",
+  },
+  {
+    key: "product-managers",
+    label: "Product Managers",
+    copy: "我会从目标、角色、流程和风险开始，与产品和研发共同缩小不确定性，再推进到可验证方案。",
+  },
+  {
+    key: "engineers",
+    label: "Engineers",
+    copy: "我理解前端实现和工程约束，愿意把交互边界、状态和交付规则说明白，减少开发阶段的来回返工。",
+  },
+];
+
+export const projects = [
+  {
+    title: "工业 AI 视觉质检系统",
+    category: "工业 AI 表面质检 HMI / 工业软件系统",
+    role: "产品设计",
+    summary: "把偏工程师工具的检测系统，重构为能支撑工厂多角色协作的工业 AI 质检 HMI 标准产品。",
+    image: "/images/work/industrial-ai.webp",
+    tone: "graphite",
+  },
+  {
+    title: "PCBA 插件机控制系统",
+    category: "B2B 控制系统 / 智能制造",
+    role: "产品设计",
+    summary: "重构关键控制流程和系统体验，让设备状态、生产任务与风险操作更容易理解和管理。",
+    image: "/images/work/pcba.webp",
+    tone: "slate",
+  },
+  {
+    title: "WMS 智能仓储管理系统",
+    category: "仓储管理系统 / Web 与 RF 终端",
+    role: "产品设计",
+    summary: "将 Web 管理端与 RF 终端的高频结构、流程与权限边界，收敛为标准化、可扩展的交付框架。",
+    image: "/images/work/wms.webp",
+    tone: "blue",
+  },
+];
+
+export const explorations = [
+  {
+    title: "生成式形态实验",
+    description: "项目说明、使用工具与实验过程待补充。",
+    image: "/images/explorations/generative-form.webp",
+    className: "exploration-featured",
+  },
+  {
+    title: "AI 原型流程实验",
+    description: "项目说明、使用工具与实验过程待补充。",
+    image: "/images/explorations/prototype-collage.webp",
+    className: "exploration-wide",
+  },
+  {
+    title: "材质与视觉研究",
+    description: "项目说明、使用工具与实验过程待补充。",
+    image: "/images/explorations/material-study.webp",
+    className: "exploration-small",
+  },
+  {
+    title: "AI 工具探索",
+    description: "项目说明、使用工具与实验过程待补充。",
+    image: "/images/explorations/tool-study.webp",
+    className: "exploration-small",
+  },
+];
+
+export const experience = [
+  { company: "珠海市万门科技有限公司", role: "产品设计", year: "2022.07 - 至今" },
+  { company: "珠海小源科技", role: "用户体验经理 / 产品设计师", year: "2021.06 - 2022.06" },
+  { company: "珠海达明科技，长园集团", role: "UI/UX 设计师", year: "2019.03 - 2020.10" },
+  { company: "罗西尼", role: "产品 / 视觉设计师", year: "2017.09 - 2018.05" },
+  { company: "银泰贸易", role: "UI / 视觉设计师", year: "2015.03 - 2017.06" },
+  { company: "广东点控科技", role: "UI 设计师", year: "2014.04 - 2015.02" },
+];
+
+export const themes = [
+  { bg: "#f7f7f4", ink: "#11110f", muted: "#67675f", card: "#20211f", cardInk: "#f6f6f2", accent: "#11110f" },
+  { bg: "#f4efe6", ink: "#1f1b16", muted: "#736b61", card: "#28231e", cardInk: "#f7f0e6", accent: "#aa503e" },
+  { bg: "#e8f0ea", ink: "#122018", muted: "#5d6d62", card: "#183126", cardInk: "#edf5ef", accent: "#26724b" },
+  { bg: "#e9eef6", ink: "#111927", muted: "#647084", card: "#18263c", cardInk: "#eef4ff", accent: "#365fb7" },
+  { bg: "#f3ebf2", ink: "#241522", muted: "#766575", card: "#372134", cardInk: "#fff2fc", accent: "#9a467d" },
+  { bg: "#f4ebe8", ink: "#251714", muted: "#796760", card: "#452a24", cardInk: "#fff5f1", accent: "#c34e32" },
+  { bg: "#f3f0da", ink: "#211f11", muted: "#746f52", card: "#36321a", cardInk: "#fffce5", accent: "#8b7c16" },
+  { bg: "#e4f2f1", ink: "#102322", muted: "#587170", card: "#173837", cardInk: "#eefffd", accent: "#1d7d78" },
+  { bg: "#f0e9db", ink: "#251e13", muted: "#756b59", card: "#3c3222", cardInk: "#fff7e8", accent: "#9b6b28" },
+  { bg: "#f4e7ec", ink: "#28151d", muted: "#7b606a", card: "#452432", cardInk: "#fff3f7", accent: "#ba3f6a" },
+  { bg: "#e8ecdf", ink: "#182010", muted: "#66705c", card: "#2c361f", cardInk: "#f5faee", accent: "#657f2e" },
+  { bg: "#e5edf0", ink: "#102028", muted: "#5b6c74", card: "#1c333d", cardInk: "#effbff", accent: "#39788e" },
+  { bg: "#f0e7df", ink: "#241a14", muted: "#75665d", card: "#392821", cardInk: "#fff5ef", accent: "#a75b38" },
+  { bg: "#efeee8", ink: "#191918", muted: "#6b6a65", card: "#2a2a28", cardInk: "#f8f8f4", accent: "#6e6e69" },
+  { bg: "#161715", ink: "#f1f2ec", muted: "#a5a79f", card: "#272925", cardInk: "#f5f6f0", accent: "#c7e769" },
+  { bg: "#1d2130", ink: "#f0f2fa", muted: "#abb1c5", card: "#30374c", cardInk: "#f6f7ff", accent: "#8aabff" },
+  { bg: "#281d1d", ink: "#faefea", muted: "#c2aba5", card: "#402c2b", cardInk: "#fff4ef", accent: "#ff8066" },
+];

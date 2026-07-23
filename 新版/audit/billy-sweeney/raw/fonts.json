@@ -1,0 +1,65 @@
+{
+  "usage": [
+    {
+      "fontFamily": "\"Billy Sans\", system-ui, sans-serif",
+      "fontWeight": "500",
+      "fontStyle": "normal",
+      "count": 315,
+      "examples": [
+        "Billy Sweeney\nIntro\nWork\nValues\nBackground\nReferences\nAbout\nContact\nFor anyone\nRecruiters\nDesign Directors\nProduct Desig",
+        "Billy Sweeney\nIntro\nWork\nValues\nBackground\nReferences\nAbout\nContact\nFor anyone\nRecruiters\nDesign Directors\nProduct Desig",
+        "Billy Sweeney",
+        "Billy Sweeney",
+        "Billy Sweeney"
+      ]
+    }
+  ],
+  "fontFaces": [
+    {
+      "stylesheet": "https://billysweeney.com/styles/font.css",
+      "cssText": "@font-face { src: url(\"../assets/fonts/Roobert-Medium.woff2\") format(\"woff2\"); font-family: \"Billy Sans\"; font-style: normal; font-weight: 500; }"
+    }
+  ],
+  "requests": [
+    {
+      "name": "https://billysweeney.com/styles/font.css",
+      "initiatorType": "link",
+      "duration": 468.2,
+      "transferSize": 1280,
+      "encodedBodySize": 980,
+      "decodedBodySize": 980,
+      "startTime": 2486.2,
+      "responseEnd": 2954.4
+    },
+    {
+      "name": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "initiatorType": "css",
+      "duration": 552.1,
+      "transferSize": 523,
+      "encodedBodySize": 223,
+      "decodedBodySize": 223,
+      "startTime": 3485.7,
+      "responseEnd": 4037.8
+    },
+    {
+      "name": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "initiatorType": "css",
+      "duration": 1659.4,
+      "transferSize": 907438,
+      "encodedBodySize": 907138,
+      "decodedBodySize": 907138,
+      "startTime": 3486.3,
+      "responseEnd": 5145.7
+    },
+    {
+      "name": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "initiatorType": "css",
+      "duration": 1107.1,
+      "transferSize": 43920,
+      "encodedBodySize": 43620,
+      "decodedBodySize": 43620,
+      "startTime": 3490.1,
+      "responseEnd": 4597.2
+    }
+  ]
+}

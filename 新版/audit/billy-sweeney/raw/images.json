@@ -1,0 +1,73 @@
+{
+  "images": [
+    {
+      "src": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "currentSrc": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "srcset": null,
+      "sizes": null,
+      "alt": "Profile photo of Billy Sweeney",
+      "title": null,
+      "loading": "auto",
+      "naturalWidth": 1600,
+      "naturalHeight": 1600,
+      "section": null,
+      "rect": {
+        "x": 960,
+        "y": 12303.44,
+        "width": 440,
+        "height": 440,
+        "viewportX": 960,
+        "viewportY": 12303.44,
+        "right": 1400,
+        "bottom": 12743.44
+      },
+      "style": {
+        "display": "block",
+        "position": "static",
+        "overflow": "clip",
+        "overflowX": "clip",
+        "gridTemplateColumns": "none",
+        "gridTemplateRows": "none",
+        "gridAutoFlow": "row",
+        "columnGap": "normal",
+        "rowGap": "normal",
+        "flexDirection": "row",
+        "flexWrap": "nowrap",
+        "alignItems": "normal",
+        "justifyContent": "normal",
+        "width": "440px",
+        "maxWidth": "none",
+        "minHeight": "0px",
+        "padding": "0px",
+        "margin": "0px",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "backgroundImage": "none",
+        "borderRadius": "0px",
+        "borderColor": "rgb(0, 0, 0)",
+        "boxShadow": "none",
+        "opacity": "1",
+        "transform": "none"
+      }
+    }
+  ],
+  "backgrounds": [
+    {
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "section": null,
+      "tag": "div",
+      "id": null,
+      "className": "image",
+      "rect": {
+        "x": 0,
+        "y": 1288.16,
+        "width": 1440,
+        "height": 2960,
+        "viewportX": 0,
+        "viewportY": 1288.16,
+        "right": 1440,
+        "bottom": 4248.16
+      },
+      "backgroundImage": "url(\"https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg\")"
+    }
+  ]
+}

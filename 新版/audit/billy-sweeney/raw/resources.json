@@ -1,0 +1,1028 @@
+{
+  "performance": [
+    {
+      "name": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "initiatorType": "link",
+      "duration": 468.1,
+      "transferSize": 1903,
+      "encodedBodySize": 1603,
+      "decodedBodySize": 6138,
+      "startTime": 2486,
+      "responseEnd": 2954.1
+    },
+    {
+      "name": "https://billysweeney.com/styles/reset.css",
+      "initiatorType": "link",
+      "duration": 462.7,
+      "transferSize": 669,
+      "encodedBodySize": 369,
+      "decodedBodySize": 369,
+      "startTime": 2486.2,
+      "responseEnd": 2948.9
+    },
+    {
+      "name": "https://billysweeney.com/styles/variables.css",
+      "initiatorType": "link",
+      "duration": 468.1,
+      "transferSize": 767,
+      "encodedBodySize": 467,
+      "decodedBodySize": 1619,
+      "startTime": 2486.2,
+      "responseEnd": 2954.3
+    },
+    {
+      "name": "https://billysweeney.com/styles/font.css",
+      "initiatorType": "link",
+      "duration": 468.2,
+      "transferSize": 1280,
+      "encodedBodySize": 980,
+      "decodedBodySize": 980,
+      "startTime": 2486.2,
+      "responseEnd": 2954.4
+    },
+    {
+      "name": "https://billysweeney.com/styles/grid.css",
+      "initiatorType": "link",
+      "duration": 462,
+      "transferSize": 783,
+      "encodedBodySize": 483,
+      "decodedBodySize": 5007,
+      "startTime": 2486.4,
+      "responseEnd": 2948.4
+    },
+    {
+      "name": "https://billysweeney.com/styles/color.css",
+      "initiatorType": "link",
+      "duration": 462.6,
+      "transferSize": 1302,
+      "encodedBodySize": 1002,
+      "decodedBodySize": 11476,
+      "startTime": 2486.4,
+      "responseEnd": 2949
+    },
+    {
+      "name": "https://billysweeney.com/styles/style.css",
+      "initiatorType": "link",
+      "duration": 813.6,
+      "transferSize": 3984,
+      "encodedBodySize": 3684,
+      "decodedBodySize": 27347,
+      "startTime": 2486.4,
+      "responseEnd": 3300
+    },
+    {
+      "name": "https://billysweeney.com/styles/media-queries.css",
+      "initiatorType": "link",
+      "duration": 467.5,
+      "transferSize": 1558,
+      "encodedBodySize": 1258,
+      "decodedBodySize": 6756,
+      "startTime": 2486.5,
+      "responseEnd": 2954
+    },
+    {
+      "name": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "initiatorType": "script",
+      "duration": 813.9,
+      "transferSize": 1438,
+      "encodedBodySize": 1138,
+      "decodedBodySize": 4153,
+      "startTime": 2486.5,
+      "responseEnd": 3300.4
+    },
+    {
+      "name": "https://billysweeney.com/scripts/script.js",
+      "initiatorType": "script",
+      "duration": 813.9,
+      "transferSize": 3428,
+      "encodedBodySize": 3128,
+      "decodedBodySize": 19228,
+      "startTime": 2486.5,
+      "responseEnd": 3300.4
+    },
+    {
+      "name": "https://billysweeney.com/scripts/modernizr.js",
+      "initiatorType": "script",
+      "duration": 814.1,
+      "transferSize": 1511,
+      "encodedBodySize": 1211,
+      "decodedBodySize": 2730,
+      "startTime": 2486.5,
+      "responseEnd": 3300.6
+    },
+    {
+      "name": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "initiatorType": "script",
+      "duration": 977.4,
+      "transferSize": 30246,
+      "encodedBodySize": 29946,
+      "decodedBodySize": 87533,
+      "startTime": 2486.5,
+      "responseEnd": 3463.9
+    },
+    {
+      "name": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "initiatorType": "script",
+      "duration": 4583.5,
+      "transferSize": 0,
+      "encodedBodySize": 0,
+      "decodedBodySize": 0,
+      "startTime": 2486.6,
+      "responseEnd": 7070.1
+    },
+    {
+      "name": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "initiatorType": "img",
+      "duration": 2195.5,
+      "transferSize": 263035,
+      "encodedBodySize": 262735,
+      "decodedBodySize": 262735,
+      "startTime": 2670.7,
+      "responseEnd": 4866.2
+    },
+    {
+      "name": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "initiatorType": "css",
+      "duration": 552.1,
+      "transferSize": 523,
+      "encodedBodySize": 223,
+      "decodedBodySize": 223,
+      "startTime": 3485.7,
+      "responseEnd": 4037.8
+    },
+    {
+      "name": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "initiatorType": "css",
+      "duration": 1659.4,
+      "transferSize": 907438,
+      "encodedBodySize": 907138,
+      "decodedBodySize": 907138,
+      "startTime": 3486.3,
+      "responseEnd": 5145.7
+    },
+    {
+      "name": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "initiatorType": "css",
+      "duration": 1107.1,
+      "transferSize": 43920,
+      "encodedBodySize": 43620,
+      "decodedBodySize": 43620,
+      "startTime": 3490.1,
+      "responseEnd": 4597.2
+    },
+    {
+      "name": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734370312&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1690950445.1784734374&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1440x900&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118395334~118897920~118897930~118981135~119773332~119896802&sid=1784734373&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=7116",
+      "initiatorType": "fetch",
+      "duration": 1705.8,
+      "transferSize": 0,
+      "encodedBodySize": 0,
+      "decodedBodySize": 0,
+      "startTime": 7117,
+      "responseEnd": 8822.8
+    },
+    {
+      "name": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "initiatorType": "other",
+      "duration": 567.7,
+      "transferSize": 505,
+      "encodedBodySize": 205,
+      "decodedBodySize": 205,
+      "startTime": 7123.1,
+      "responseEnd": 7690.8
+    }
+  ],
+  "responses": [
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/grid.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/reset.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/color.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/media-queries.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/variables.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/font.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/styles/style.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/scripts/script.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/scripts/modernizr.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734370312&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1690950445.1784734374&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1440x900&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115616986~115938465~115938469~118395334~118897920~118897930~118981135~119773332~119896802&sid=1784734373&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=7116",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "desktop-1440",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734370312&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=1690950445.1784734374&frm=0&ngs=1&pscdl=noapi&rcb=9&sr=1440x900&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=2&tag_exp=115616986~115938465~115938469~118395334~118897920~118897930~118981135~119773332~119896802&sid=1784734373&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=scroll&epn.percent_scrolled=90&_et=4535&tfd=16655",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/font.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/variables.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/color.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/style.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/media-queries.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/grid.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/styles/reset.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/scripts/modernizr.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/scripts/script.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734387733&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=862812007.1784734390&frm=0&ngs=1&pscdl=noapi&rcb=17&sr=1280x800&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938468~118897920~118897930~119724321~119773331~119896802&sid=1784734390&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5367",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png"
+    },
+    {
+      "viewport": "desktop-1280",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/reset.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/font.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/color.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/grid.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/variables.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/style.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/scripts/script.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/styles/media-queries.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/scripts/modernizr.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734403417&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=400623688.1784734408&frm=0&ngs=1&pscdl=noapi&rcb=6&sr=1024x768&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115938465~115938469~118897920~118897930~118981136~119259605~119724320~119773331~119896802&sid=1784734408&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=7964",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    },
+    {
+      "viewport": "tablet-1024",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/reset.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/style.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/font.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/grid.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/color.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/scripts/modernizr.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/variables.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/styles/media-queries.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/scripts/script.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png"
+    },
+    {
+      "viewport": "tablet-768",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734418963&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1825338559.1784734422&frm=0&ngs=1&pscdl=noapi&rcb=13&sr=768x1024&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115616985~115938465~115938468~118395335~118897920~118897930~119724320~119773332~119896803&sid=1784734421&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5286",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "document",
+      "contentType": "text/html; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/reset.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/font.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/grid.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/color.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/variables.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/scripts/script.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/scripts/modernizr.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/style.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/styles/media-queries.css",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "contentType": "text/css; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/svg+xml"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-1440.jpg",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "image",
+      "contentType": "image/jpeg"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/assets/fonts/Roobert-Medium.woff2",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "font",
+      "contentType": "font/woff2"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-QD6JDESCLJ",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "script",
+      "contentType": "application/javascript; charset=UTF-8"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "status": 200,
+      "method": "GET",
+      "resourceType": "other",
+      "contentType": "image/png"
+    },
+    {
+      "viewport": "mobile-390",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-QD6JDESCLJ&gtm=45je67k1v9105324481za200zd9105324481&_p=1784734435874&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=98994255.1784734439&frm=0&ngs=1&pscdl=noapi&rcb=8&sr=390x844&uaa=arm&uab=64&uafvl=Not%253BA%253DBrand%3B8.0.0.0%7CChromium%3B150.0.7871.181%7CGoogle%2520Chrome%3B150.0.7871.181&uam=&uamb=0&uap=macOS&uapv=26.0.1&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938468~118897920~118897930~119724321~119773331~119896802&sid=1784734439&sct=1&seg=0&dl=https%3A%2F%2Fbillysweeney.com%2F&dt=Billy%20Sweeney%20%E2%80%94%20Designer&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5617",
+      "status": 204,
+      "method": "POST",
+      "resourceType": "fetch",
+      "contentType": "text/plain"
+    }
+  ]
+}

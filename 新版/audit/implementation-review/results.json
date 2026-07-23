@@ -1,0 +1,286 @@
+[
+  {
+    "viewport": {
+      "name": "desktop-1440",
+      "width": 1440,
+      "height": 900
+    },
+    "status": 200,
+    "state": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "horizontalOverflow": false,
+      "loadingHidden": true,
+      "themeBackground": "#f7f7f4",
+      "workCards": 3,
+      "explorationCards": 4,
+      "audienceTabs": 6,
+      "images": [
+        {
+          "alt": "工业 AI 视觉质检系统项目界面",
+          "complete": true,
+          "naturalWidth": 806
+        },
+        {
+          "alt": "PCBA 插件机控制系统项目界面",
+          "complete": true,
+          "naturalWidth": 806
+        },
+        {
+          "alt": "WMS 智能仓储管理系统项目界面",
+          "complete": true,
+          "naturalWidth": 806
+        },
+        {
+          "alt": "生成式形态实验占位视觉",
+          "complete": true,
+          "naturalWidth": 576
+        },
+        {
+          "alt": "AI 原型流程实验占位视觉",
+          "complete": true,
+          "naturalWidth": 576
+        },
+        {
+          "alt": "材质与视觉研究占位视觉",
+          "complete": true,
+          "naturalWidth": 576
+        },
+        {
+          "alt": "AI 工具探索占位视觉",
+          "complete": true,
+          "naturalWidth": 576
+        },
+        {
+          "alt": "Miki Yang 肖像",
+          "complete": true,
+          "naturalWidth": 518
+        }
+      ],
+      "notoSansLoaded": true
+    },
+    "interactionState": {
+      "gridVisible": true,
+      "selectedTab": "Recruiters",
+      "themeIndex": "09"
+    },
+    "mobileMenuWorks": null,
+    "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
+    "failedResponses": [],
+    "consoleErrors": [],
+    "screenshot": "audit/implementation-review/desktop-1440.png"
+  },
+  {
+    "viewport": {
+      "name": "desktop-1536",
+      "width": 1536,
+      "height": 960
+    },
+    "status": 200,
+    "state": {
+      "scrollWidth": 1536,
+      "clientWidth": 1536,
+      "horizontalOverflow": false,
+      "loadingHidden": true,
+      "themeBackground": "#f7f7f4",
+      "workCards": 3,
+      "explorationCards": 4,
+      "audienceTabs": 6,
+      "images": [
+        {
+          "alt": "工业 AI 视觉质检系统项目界面",
+          "complete": true,
+          "naturalWidth": 860
+        },
+        {
+          "alt": "PCBA 插件机控制系统项目界面",
+          "complete": true,
+          "naturalWidth": 860
+        },
+        {
+          "alt": "WMS 智能仓储管理系统项目界面",
+          "complete": true,
+          "naturalWidth": 860
+        },
+        {
+          "alt": "生成式形态实验占位视觉",
+          "complete": true,
+          "naturalWidth": 614
+        },
+        {
+          "alt": "AI 原型流程实验占位视觉",
+          "complete": true,
+          "naturalWidth": 614
+        },
+        {
+          "alt": "材质与视觉研究占位视觉",
+          "complete": true,
+          "naturalWidth": 614
+        },
+        {
+          "alt": "AI 工具探索占位视觉",
+          "complete": true,
+          "naturalWidth": 614
+        },
+        {
+          "alt": "Miki Yang 肖像",
+          "complete": true,
+          "naturalWidth": 552
+        }
+      ],
+      "notoSansLoaded": true
+    },
+    "interactionState": {
+      "gridVisible": true,
+      "selectedTab": "Recruiters",
+      "themeIndex": "09"
+    },
+    "mobileMenuWorks": null,
+    "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
+    "failedResponses": [],
+    "consoleErrors": [],
+    "screenshot": "audit/implementation-review/desktop-1536.png"
+  },
+  {
+    "viewport": {
+      "name": "desktop-1600",
+      "width": 1600,
+      "height": 1000
+    },
+    "status": 200,
+    "state": {
+      "scrollWidth": 1600,
+      "clientWidth": 1600,
+      "horizontalOverflow": false,
+      "loadingHidden": true,
+      "themeBackground": "#f7f7f4",
+      "workCards": 3,
+      "explorationCards": 4,
+      "audienceTabs": 6,
+      "images": [
+        {
+          "alt": "工业 AI 视觉质检系统项目界面",
+          "complete": true,
+          "naturalWidth": 895
+        },
+        {
+          "alt": "PCBA 插件机控制系统项目界面",
+          "complete": true,
+          "naturalWidth": 895
+        },
+        {
+          "alt": "WMS 智能仓储管理系统项目界面",
+          "complete": true,
+          "naturalWidth": 895
+        },
+        {
+          "alt": "生成式形态实验占位视觉",
+          "complete": true,
+          "naturalWidth": 640
+        },
+        {
+          "alt": "AI 原型流程实验占位视觉",
+          "complete": true,
+          "naturalWidth": 640
+        },
+        {
+          "alt": "材质与视觉研究占位视觉",
+          "complete": true,
+          "naturalWidth": 640
+        },
+        {
+          "alt": "AI 工具探索占位视觉",
+          "complete": true,
+          "naturalWidth": 640
+        },
+        {
+          "alt": "Miki Yang 肖像",
+          "complete": true,
+          "naturalWidth": 576
+        }
+      ],
+      "notoSansLoaded": true
+    },
+    "interactionState": {
+      "gridVisible": true,
+      "selectedTab": "Recruiters",
+      "themeIndex": "09"
+    },
+    "mobileMenuWorks": null,
+    "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
+    "failedResponses": [],
+    "consoleErrors": [],
+    "screenshot": "audit/implementation-review/desktop-1600.png"
+  },
+  {
+    "viewport": {
+      "name": "mobile-390",
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "state": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "horizontalOverflow": false,
+      "loadingHidden": true,
+      "themeBackground": "#f7f7f4",
+      "workCards": 3,
+      "explorationCards": 4,
+      "audienceTabs": 6,
+      "images": [
+        {
+          "alt": "工业 AI 视觉质检系统项目界面",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "PCBA 插件机控制系统项目界面",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "WMS 智能仓储管理系统项目界面",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "生成式形态实验占位视觉",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "AI 原型流程实验占位视觉",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "材质与视觉研究占位视觉",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "AI 工具探索占位视觉",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "Miki Yang 肖像",
+          "complete": true,
+          "naturalWidth": 390
+        }
+      ],
+      "notoSansLoaded": true
+    },
+    "interactionState": {
+      "gridVisible": true,
+      "selectedTab": "Recruiters",
+      "themeIndex": "09"
+    },
+    "mobileMenuWorks": true,
+    "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
+    "failedResponses": [],
+    "consoleErrors": [],
+    "screenshot": "audit/implementation-review/mobile-390.png"
+  }
+]

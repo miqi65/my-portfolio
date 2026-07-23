@@ -1,0 +1,130 @@
+[
+  {
+    "url": "https://billysweeney.com/styles/normalize-8.0.1.css",
+    "localPath": "raw/site-styles/64a4a01740-normalize-8.0.1.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 6138,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/reset.css",
+    "localPath": "raw/site-styles/371476e218-reset.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 369,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/font.css",
+    "localPath": "raw/site-styles/a41c5e379a-font.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 980,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/variables.css",
+    "localPath": "raw/site-styles/181ee5c376-variables.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 1619,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/color.css",
+    "localPath": "raw/site-styles/eff45eab3b-color.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 11476,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/style.css",
+    "localPath": "raw/site-styles/2ff0cb6b72-style.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 27347,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/grid.css",
+    "localPath": "raw/site-styles/3a1db3071d-grid.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 5007,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/styles/media-queries.css",
+    "localPath": "raw/site-styles/ef8845e8c9-media-queries.css",
+    "contentType": "text/css; charset=UTF-8",
+    "fileSize": 6756,
+    "downloaded": true,
+    "kind": "stylesheet"
+  },
+  {
+    "url": "https://billysweeney.com/scripts/modernizr.js",
+    "localPath": "raw/site-scripts/ad4ccf3f8f-modernizr.js",
+    "contentType": "application/javascript; charset=UTF-8",
+    "fileSize": 2730,
+    "downloaded": true,
+    "kind": "script"
+  },
+  {
+    "url": "https://billysweeney.com/scripts/jquery-3.7.1.min.js",
+    "localPath": "raw/site-scripts/bb8a729563-jquery-3.7.1.min.js",
+    "contentType": "application/javascript; charset=UTF-8",
+    "fileSize": 87533,
+    "downloaded": true,
+    "kind": "script"
+  },
+  {
+    "url": "https://billysweeney.com/scripts/jquery-easing-1.4.1.js",
+    "localPath": "raw/site-scripts/55ed14243a-jquery-easing-1.4.1.js",
+    "contentType": "application/javascript; charset=UTF-8",
+    "fileSize": 4153,
+    "downloaded": true,
+    "kind": "script"
+  },
+  {
+    "url": "https://billysweeney.com/scripts/script.js",
+    "localPath": "raw/site-scripts/0d66e805d8-script.js",
+    "contentType": "application/javascript; charset=UTF-8",
+    "fileSize": 19228,
+    "downloaded": true,
+    "kind": "script"
+  },
+  {
+    "url": "https://billysweeney.com/assets/profile/Billy-Sweeney-1600x1600.jpg",
+    "localPath": "raw/site-assets/3b6dcfa4c9-Billy-Sweeney-1600x1600.jpg",
+    "contentType": "image/jpeg",
+    "fileSize": 262735,
+    "downloaded": true,
+    "kind": "image"
+  },
+  {
+    "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-shape.svg",
+    "localPath": "raw/site-assets/1bcf0c0fb5-Billy-Sweeney-work-collage-shape.svg",
+    "contentType": "image/svg+xml",
+    "fileSize": 223,
+    "downloaded": true,
+    "kind": "image"
+  },
+  {
+    "url": "https://billysweeney.com/assets/work/Billy-Sweeney-work-collage-2880.jpg",
+    "localPath": "raw/site-assets/1a568f9959-Billy-Sweeney-work-collage-2880.jpg",
+    "contentType": "image/jpeg",
+    "fileSize": 907138,
+    "downloaded": true,
+    "kind": "image"
+  },
+  {
+    "url": "https://billysweeney.com/assets/app/favicon-32x32.png",
+    "localPath": "raw/site-assets/ed4e2b8fc7-favicon-32x32.png",
+    "contentType": "image/png",
+    "fileSize": 205,
+    "downloaded": true,
+    "kind": "image"
+  }
+]

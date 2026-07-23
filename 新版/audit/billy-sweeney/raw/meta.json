@@ -1,0 +1,110 @@
+{
+  "title": "Billy Sweeney — Designer",
+  "canonical": "https://billysweeney.com/",
+  "meta": [
+    {
+      "name": null,
+      "property": null,
+      "httpEquiv": null,
+      "content": null
+    },
+    {
+      "name": null,
+      "property": null,
+      "httpEquiv": "X-UA-Compatible",
+      "content": "IE=edge,chrome=1"
+    },
+    {
+      "name": "viewport",
+      "property": null,
+      "httpEquiv": null,
+      "content": "width=device-width, initial-scale=1"
+    },
+    {
+      "name": "description",
+      "property": null,
+      "httpEquiv": null,
+      "content": "Hello there, I’m a designer who cares about making beautiful things that help people."
+    },
+    {
+      "name": "keywords",
+      "property": null,
+      "httpEquiv": null,
+      "content": "designer, product designer, brand designer, design director, seattle, best designers"
+    },
+    {
+      "name": null,
+      "property": "og:site_name",
+      "httpEquiv": null,
+      "content": "Billy Sweeney"
+    },
+    {
+      "name": null,
+      "property": "og:title",
+      "httpEquiv": null,
+      "content": "Billy Sweeney — Designer"
+    },
+    {
+      "name": null,
+      "property": "og:description",
+      "httpEquiv": null,
+      "content": "Hello there, I’m a designer who cares about making beautiful things that help people."
+    },
+    {
+      "name": null,
+      "property": "og:type",
+      "httpEquiv": null,
+      "content": "website"
+    },
+    {
+      "name": null,
+      "property": "og:image",
+      "httpEquiv": null,
+      "content": "https://billysweeney.com/assets/app/sharing-image-2400x2400.png"
+    },
+    {
+      "name": null,
+      "property": "og:url",
+      "httpEquiv": null,
+      "content": "https://billysweeney.com"
+    },
+    {
+      "name": "twitter:title",
+      "property": null,
+      "httpEquiv": null,
+      "content": "Billy Sweeney — Designer"
+    },
+    {
+      "name": "twitter:description",
+      "property": null,
+      "httpEquiv": null,
+      "content": "Hello there, I’m a designer who cares about making beautiful things that help people."
+    },
+    {
+      "name": "twitter:card",
+      "property": null,
+      "httpEquiv": null,
+      "content": "summary_large_image"
+    },
+    {
+      "name": "twitter:image",
+      "property": null,
+      "httpEquiv": null,
+      "content": "https://billysweeney.com/assets/app/sharing-image-2400x2400.png"
+    },
+    {
+      "name": "twitter:url",
+      "property": null,
+      "httpEquiv": null,
+      "content": "https://billysweeney.com"
+    }
+  ],
+  "icons": [
+    {
+      "rel": "shortcut icon",
+      "href": "https://billysweeney.com/assets/app/favicon-32x32.png",
+      "sizes": "",
+      "type": "image/x-icon"
+    }
+  ]
+}
