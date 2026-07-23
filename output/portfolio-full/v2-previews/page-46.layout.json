@@ -1,0 +1,1928 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/qv1usv",
+    "id": "qv1usv",
+    "slide": 46,
+    "layoutId": "bf67ff96-9025-4684-851f-a1bbaf2f3f9b",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "084149c7-b5ea-445a-994f-8aa74760ba69",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F4F1EA",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial Unicode MS"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "bf67ff96-9025-4684-851f-a1bbaf2f3f9b",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "084149c7-b5ea-445a-994f-8aa74760ba69",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "084149c7-b5ea-445a-994f-8aa74760ba69",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2dcfq1sn",
+      "id": "1",
+      "bbox": [
+        64,
+        28,
+        500,
+        22
+      ],
+      "geometry": "rect",
+      "text": "12 / SELECTED ARCHIVE",
+      "textPreview": "12 / SELECTED ARCHIVE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "12 / SELECTED ARCHIVE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "12 / SELECTED ARCHIVE",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "12 / SELECTED ARCHIVE",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pg3y1wre",
+      "id": "2",
+      "bbox": [
+        1124,
+        676,
+        92,
+        18
+      ],
+      "geometry": "rect",
+      "text": "46 / 47",
+      "textPreview": "46 / 47",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "46 / 47"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "46 / 47",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "46 / 47",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ofuxsbat",
+      "id": "3",
+      "bbox": [
+        64,
+        676,
+        300,
+        18
+      ],
+      "geometry": "rect",
+      "text": "杨蜜萁 Miki · Product Designer",
+      "textPreview": "杨蜜萁 Miki · Product Designer",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "杨蜜萁 Miki · Product Designer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "杨蜜萁 Miki · Product Designer",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "杨蜜萁 Miki · Product Designer",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/falgvm9c",
+      "id": "4",
+      "bbox": [
+        64,
+        72,
+        1152,
+        58
+      ],
+      "geometry": "rect",
+      "text": "早期经历补足 12 年职业积累。",
+      "textPreview": "早期经历补足 12 年职业积累。",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "早期经历补足 12 年职业积累。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "早期经历补足 12 年职业积累。",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "早期经历补足 12 年职业积累。",
+              "fontSize": 38,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9sfmhsr",
+      "id": "5",
+      "bbox": [
+        64,
+        142,
+        1080,
+        52
+      ],
+      "geometry": "rect",
+      "text": "这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。",
+      "textPreview": "这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。",
+              "fontSize": 18,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1c3yxwri",
+      "id": "6",
+      "bbox": [
+        64,
+        224,
+        128,
+        26
+      ],
+      "geometry": "rect",
+      "text": "2014—2015",
+      "textPreview": "2014—2015",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#C9673F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2014—2015"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2014—2015",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#C9673F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2014—2015",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#C9673F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0buxorax",
+      "id": "7",
+      "bbox": [
+        216,
+        222,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "OA 办公系统",
+      "textPreview": "OA 办公系统",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "OA 办公系统"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "OA 办公系统",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "OA 办公系统",
+              "fontSize": 21,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rm1grm90",
+      "id": "8",
+      "bbox": [
+        500,
+        224,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "企业软件 · UI 设计",
+      "textPreview": "企业软件 · UI 设计",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "企业软件 · UI 设计"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "企业软件 · UI 设计",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "企业软件 · UI 设计",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qlsfihsv",
+      "id": "9",
+      "bbox": [
+        772,
+        224,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "审批流程、页面设计、切图标注与开发验收",
+      "textPreview": "审批流程、页面设计、切图标注与开发验收",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "审批流程、页面设计、切图标注与开发验收"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "审批流程、页面设计、切图标注与开发验收",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "审批流程、页面设计、切图标注与开发验收",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o32d0jih",
+      "id": "10",
+      "bbox": [
+        64,
+        278,
+        1152,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#CDC6BA",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pove9oj2",
+      "id": "11",
+      "bbox": [
+        64,
+        306,
+        128,
+        26
+      ],
+      "geometry": "rect",
+      "text": "2014—2015",
+      "textPreview": "2014—2015",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#C9673F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2014—2015"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2014—2015",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#C9673F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2014—2015",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#C9673F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/21kvy90b",
+      "id": "12",
+      "bbox": [
+        216,
+        304,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "儿童乐园门店管理",
+      "textPreview": "儿童乐园门店管理",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "儿童乐园门店管理"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "儿童乐园门店管理",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "儿童乐园门店管理",
+              "fontSize": 21,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32tw7e1w",
+      "id": "13",
+      "bbox": [
+        500,
+        306,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "门店系统 · UI 设计",
+      "textPreview": "门店系统 · UI 设计",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "门店系统 · UI 设计"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "门店系统 · UI 设计",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "门店系统 · UI 设计",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gz2dwjil",
+      "id": "14",
+      "bbox": [
+        772,
+        306,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "会员、门店管理与运营数据模块",
+      "textPreview": "会员、门店管理与运营数据模块",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "会员、门店管理与运营数据模块"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "会员、门店管理与运营数据模块",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "会员、门店管理与运营数据模块",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/10bu5oj6",
+      "id": "15",
+      "bbox": [
+        64,
+        360,
+        1152,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#CDC6BA",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/exkvu90f",
+      "id": "16",
+      "bbox": [
+        64,
+        388,
+        128,
+        26
+      ],
+      "geometry": "rect",
+      "text": "2015—2017",
+      "textPreview": "2015—2017",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#168B61",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2015—2017"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2015—2017",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#168B61",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2015—2017",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#168B61",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fytc3e10",
+      "id": "17",
+      "bbox": [
+        216,
+        386,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "冷库监控系统",
+      "textPreview": "冷库监控系统",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "冷库监控系统"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "冷库监控系统",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "冷库监控系统",
+              "fontSize": 21,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0v6d83ip",
+      "id": "18",
+      "bbox": [
+        500,
+        388,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "IoT · Web / 移动端",
+      "textPreview": "IoT · Web / 移动端",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "IoT · Web / 移动端"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "IoT · Web / 移动端",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "IoT · Web / 移动端",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwfeh8ja",
+      "id": "19",
+      "bbox": [
+        772,
+        388,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "温度、设备状态、异常告警与数据展示",
+      "textPreview": "温度、设备状态、异常告警与数据展示",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "温度、设备状态、异常告警与数据展示"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "温度、设备状态、异常告警与数据展示",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "温度、设备状态、异常告警与数据展示",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9cbe18be",
+      "id": "20",
+      "bbox": [
+        64,
+        442,
+        1152,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#CDC6BA",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8b2ds3at",
+      "id": "21",
+      "bbox": [
+        64,
+        470,
+        128,
+        26
+      ],
+      "geometry": "rect",
+      "text": "2017—2018",
+      "textPreview": "2017—2018",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#168B61",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2017—2018"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2017—2018",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#168B61",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2017—2018",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#168B61",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7atczyt8",
+      "id": "22",
+      "bbox": [
+        216,
+        468,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "罗西尼电商视觉",
+      "textPreview": "罗西尼电商视觉",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "罗西尼电商视觉"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "罗西尼电商视觉",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "罗西尼电商视觉",
+              "fontSize": 21,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m90vqtsn",
+      "id": "23",
+      "bbox": [
+        500,
+        470,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "C 端 · 视觉运营",
+      "textPreview": "C 端 · 视觉运营",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "C 端 · 视觉运营"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "C 端 · 视觉运营",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "C 端 · 视觉运营",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l8ruxobi",
+      "id": "24",
+      "bbox": [
+        772,
+        470,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "活动页面、Banner、详情页与品牌视觉",
+      "textPreview": "活动页面、Banner、详情页与品牌视觉",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "活动页面、Banner、详情页与品牌视觉"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "活动页面、Banner、详情页与品牌视觉",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "活动页面、Banner、详情页与品牌视觉",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/knidojax",
+      "id": "25",
+      "bbox": [
+        64,
+        524,
+        1152,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#CDC6BA",
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zm9cvytc",
+      "id": "26",
+      "bbox": [
+        64,
+        552,
+        128,
+        26
+      ],
+      "geometry": "rect",
+      "text": "2019—2020",
+      "textPreview": "2019—2020",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#168B61",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2019—2020"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2019—2020",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#168B61",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2019—2020",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#168B61",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yl0vmtsr",
+      "id": "27",
+      "bbox": [
+        216,
+        550,
+        260,
+        30
+      ],
+      "geometry": "rect",
+      "text": "智能储物柜",
+      "textPreview": "智能储物柜",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "智能储物柜"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "智能储物柜",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "智能储物柜",
+              "fontSize": 21,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xkrutob6",
+      "id": "28",
+      "bbox": [
+        500,
+        552,
+        250,
+        24
+      ],
+      "geometry": "rect",
+      "text": "智能硬件 · UI/UX",
+      "textPreview": "智能硬件 · UI/UX",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "智能硬件 · UI/UX"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "智能硬件 · UI/UX",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "智能硬件 · UI/UX",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cjidkjal",
+      "id": "29",
+      "bbox": [
+        772,
+        552,
+        444,
+        42
+      ],
+      "geometry": "rect",
+      "text": "柜机端投递取货与后台管理",
+      "textPreview": "柜机端投递取货与后台管理",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "柜机端投递取货与后台管理"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "柜机端投递取货与后台管理",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "柜机端投递取货与后台管理",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2pwbup8j",
+      "id": "30",
+      "bbox": [
+        64,
+        606,
+        1152,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#CDC6BA",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

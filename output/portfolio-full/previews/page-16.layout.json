@@ -1,0 +1,927 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/lj9889",
+    "id": "lj9889",
+    "slide": 16,
+    "layoutId": "f69bdd20-f301-467b-9f82-30e3c2efe2b5",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "00bdeb84-fe81-433d-8920-bc6772d3da45",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F4F1EA",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial Unicode MS"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "f69bdd20-f301-467b-9f82-30e3c2efe2b5",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "00bdeb84-fe81-433d-8920-bc6772d3da45",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "00bdeb84-fe81-433d-8920-bc6772d3da45",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh87u10z",
+      "id": "1",
+      "bbox": [
+        64,
+        28,
+        500,
+        22
+      ],
+      "geometry": "rect",
+      "text": "06 / CASE 02 · PCBA",
+      "textPreview": "06 / CASE 02 · PCBA",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "06 / CASE 02 · PCBA"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "06 / CASE 02 · PCBA",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "06 / CASE 02 · PCBA",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dkj6pgjq",
+      "id": "2",
+      "bbox": [
+        1124,
+        676,
+        92,
+        18
+      ],
+      "geometry": "rect",
+      "text": "16 / 47",
+      "textPreview": "16 / 47",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "16 / 47"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "16 / 47",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "right",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "16 / 47",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "right",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cjapwbi5",
+      "id": "3",
+      "bbox": [
+        64,
+        676,
+        300,
+        18
+      ],
+      "geometry": "rect",
+      "text": "杨蜜萁 Miki · Product Designer",
+      "textPreview": "杨蜜萁 Miki · Product Designer",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "杨蜜萁 Miki · Product Designer"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "杨蜜萁 Miki · Product Designer",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "杨蜜萁 Miki · Product Designer",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zm1orq1w",
+      "id": "4",
+      "bbox": [
+        64,
+        72,
+        1152,
+        58
+      ],
+      "geometry": "rect",
+      "text": "现场任务是连续的，原系统却把它们拆散。",
+      "textPreview": "现场任务是连续的，原系统却把它们拆散。",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "现场任务是连续的，原系统却把它们拆散。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "现场任务是连续的，原系统却把它们拆散。",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "现场任务是连续的，原系统却把它们拆散。",
+              "fontSize": 38,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/els7yl0b",
+      "id": "5",
+      "bbox": [
+        64,
+        142,
+        1080,
+        52
+      ],
+      "geometry": "rect",
+      "text": "现场观察与用户旅程显示：物料选择、孔位确认和在制状态需要在同一任务上下文中完成。",
+      "textPreview": "现场观察与用户旅程显示：物料选择、孔位确认和在制状态需要在同一任务上下文中完成。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "现场观察与用户旅程显示：物料选择、孔位确认和在制状态需要在同一任务上下文中完成。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "现场观察与用户旅程显示：物料选择、孔位确认和在制状态需要在同一任务上下文中完成。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "现场观察与用户旅程显示：物料选择、孔位确认和在制状态需要在同一任务上下文中完成。",
+              "fontSize": 18,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1ojqt0jm",
+      "id": "6",
+      "bbox": [
+        64,
+        220,
+        280,
+        20
+      ],
+      "geometry": "rect",
+      "text": "WORKFLOW DIAGNOSIS",
+      "textPreview": "WORKFLOW DIAGNOSIS",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#C9673F",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WORKFLOW DIAGNOSIS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WORKFLOW DIAGNOSIS",
+          "lineSpacingPercent": 116000,
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#C9673F",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.16
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WORKFLOW DIAGNOSIS",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#C9673F",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.16
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nap0vi1",
+      "id": "7",
+      "bbox": [
+        64,
+        252,
+        420,
+        92
+      ],
+      "geometry": "rect",
+      "text": "关键判断：保留底层控制逻辑，重构任务之间的连接方式。",
+      "textPreview": "关键判断：保留底层控制逻辑，重构任务之间的连接方式。",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial Unicode MS",
+        "color": "#151716",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "关键判断：保留底层控制逻辑，重构任务之"
+          },
+          {
+            "index": 2,
+            "text": "间的连接方式。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "关键判断：保留底层控制逻辑，重构任务之间的连接方式。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial Unicode MS",
+            "color": "#151716",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "关键判断：保留底层控制逻辑，重构任务之间的连接方式。",
+              "fontSize": 22,
+              "typeface": "Arial Unicode MS",
+              "color": "#151716",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fqxofm1c",
+      "id": "8",
+      "bbox": [
+        64,
+        378,
+        7,
+        7
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#C9673F",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upo7mh0r",
+      "id": "9",
+      "bbox": [
+        82,
+        370,
+        412,
+        50
+      ],
+      "geometry": "rect",
+      "text": "把跨页面确认合并为连续任务路径。",
+      "textPreview": "把跨页面确认合并为连续任务路径。",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把跨页面确认合并为连续任务路径。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把跨页面确认合并为连续任务路径。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把跨页面确认合并为连续任务路径。",
+              "fontSize": 17,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ovmdwfi9",
+      "id": "10",
+      "bbox": [
+        64,
+        450,
+        7,
+        7
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#C9673F",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwvupkju",
+      "id": "11",
+      "bbox": [
+        82,
+        442,
+        412,
+        50
+      ],
+      "geometry": "rect",
+      "text": "把依赖人工巡检的异常转成数字预警。",
+      "textPreview": "把依赖人工巡检的异常转成数字预警。",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把依赖人工巡检的异常转成数字预警。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把依赖人工巡检的异常转成数字预警。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把依赖人工巡检的异常转成数字预警。",
+              "fontSize": 17,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2t4vu50j",
+      "id": "12",
+      "bbox": [
+        64,
+        522,
+        7,
+        7
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#C9673F",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3udcna1o",
+      "id": "13",
+      "bbox": [
+        82,
+        514,
+        412,
+        50
+      ],
+      "geometry": "rect",
+      "text": "把高风险动作纳入权限、确认和审计。",
+      "textPreview": "把高风险动作纳入权限、确认和审计。",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把高风险动作纳入权限、确认和审计。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把高风险动作纳入权限、确认和审计。",
+          "lineSpacingPercent": 125000,
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.25
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把高风险动作纳入权限、确认和审计。",
+              "fontSize": 17,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.25
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/bmxwrqtc",
+      "id": "14",
+      "bbox": [
+        532,
+        218,
+        684,
+        382
+      ],
+      "geometry": "roundRect",
+      "alt": "PCBA 用户旅程与问题地图",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "imageMask": {
+        "geometry": "roundRect",
+        "adjustmentList": [
+          {
+            "name": "adj",
+            "formula": "val 2094"
+          }
+        ]
+      },
+      "asset": {
+        "assetId": "1b4fcf51-31c1-470a-b14e-c8a35143c83a",
+        "contentType": "image/png",
+        "byteLength": 1645566
+      }
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0futkz6",
+      "id": "15",
+      "bbox": [
+        532,
+        614,
+        684,
+        48
+      ],
+      "geometry": "rect",
+      "text": "观看重点｜旅程图连接用户动作、痛点和解决方案，避免只从页面层面修补旧系统。",
+      "textPreview": "观看重点｜旅程图连接用户动作、痛点和解决方案，避免只从页面层面修补旧系统。",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 16,
+        "typeface": "Arial Unicode MS",
+        "color": "#686D68",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "shrinkText",
+        "autoFitScale": 1,
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "观看重点｜旅程图连接用户动作、痛点和解决方案，避免只从页面层面修补旧系统。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "观看重点｜旅程图连接用户动作、痛点和解决方案，避免只从页面层面修补旧系统。",
+          "lineSpacingPercent": 120000,
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Arial Unicode MS",
+            "color": "#686D68",
+            "alignment": "left",
+            "lineSpacing": 1.2
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "观看重点｜旅程图连接用户动作、痛点和解决方案，避免只从页面层面修补旧系统。",
+              "fontSize": 16,
+              "typeface": "Arial Unicode MS",
+              "color": "#686D68",
+              "alignment": "left",
+              "lineSpacing": 1.2
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

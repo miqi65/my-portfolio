@@ -94,12 +94,68 @@ export const explorations = [
 ];
 
 export const experience = [
-  { company: "珠海市万门科技有限公司", role: "产品设计", year: "2022.07 - 至今" },
-  { company: "珠海小源科技", role: "用户体验经理 / 产品设计师", year: "2021.06 - 2022.06" },
-  { company: "珠海达明科技，长园集团", role: "UI/UX 设计师", year: "2019.03 - 2020.10" },
-  { company: "罗西尼", role: "产品 / 视觉设计师", year: "2017.09 - 2018.05" },
-  { company: "银泰贸易", role: "UI / 视觉设计师", year: "2015.03 - 2017.06" },
-  { company: "广东点控科技", role: "UI 设计师", year: "2014.04 - 2015.02" },
+  {
+    company: "珠海市万门科技有限公司",
+    role: "产品设计",
+    year: "2022.07 - 至今",
+    area: "工业 AI / HMI / AI 工作流",
+    description: "负责功能梳理、信息架构、UI/UX、状态与权限规则，并与研发协作落地工业 AI 视觉质检等产品。",
+  },
+  {
+    company: "珠海小源科技",
+    role: "用户体验经理 / 产品设计师",
+    year: "2021.06 - 2022.06",
+    area: "5G 消息 / 体验规范 / 团队协作",
+    description: "主导核心产品体验、规范、评审与团队能力建设；管理 2 名设计师，并面向产品部门组织用户体验培训。",
+  },
+  {
+    company: "珠海达明科技，长园集团",
+    role: "UI/UX 设计师",
+    year: "2019.03 - 2020.10",
+    area: "PCBA / WMS / GPS / 工业系统",
+    description: "参与多类工业系统，覆盖现场访谈、流程重构、UI/UX、Design System、可用性测试与研发落地。",
+  },
+  {
+    company: "罗西尼",
+    role: "产品 / 视觉设计师",
+    year: "2017.09 - 2018.05",
+    area: "电商 / 品牌视觉",
+    description: "负责电商活动页面、Banner、详情页与品牌视觉等视觉运营工作。",
+  },
+  {
+    company: "银泰贸易",
+    role: "UI / 视觉设计师",
+    year: "2015.03 - 2017.06",
+    area: "冷库监控 / 智能硬件",
+    description: "负责冷库监控 Web 与移动端，以及智能硬件配套界面的 UI/UX 设计。",
+  },
+  {
+    company: "广东点控科技",
+    role: "UI 设计师",
+    year: "2014.04 - 2015.02",
+    area: "OA / 门店管理",
+    description: "负责 OA 办公系统与儿童乐园门店管理系统的 UI 设计。",
+  },
+];
+
+export const capabilities = [
+  { title: "工业 AI HMI", description: "AI 辅助检测、异常状态、角色接管与高风险操作设计。" },
+  { title: "复杂 B 端系统", description: "信息架构、跨角色任务流、权限模型与仪表盘体验。" },
+  { title: "Design System", description: "组件、设计令牌、可复用模式、交付规范与设计验收。" },
+  { title: "AI 辅助工作流", description: "从问题整理、原型变体到规则检查的人机协作流程。" },
+  { title: "产品原型", description: "将模糊需求转化为可演示、可验证的关键路径。" },
+  { title: "研究与结构", description: "现场访谈、功能盘点、信息架构与流程重构。" },
+  { title: "状态与风险", description: "异常反馈、权限边界、操作阻力与人工接管规则。" },
+  { title: "前端协作", description: "实现约束、状态说明、交付检查与开发前风险识别。" },
+];
+
+export const methods = [
+  { title: "先对齐目标", description: "先确认业务目标、真实使用者、场景和实现约束。" },
+  { title: "再建立结构", description: "把角色、任务、信息和风险整理成可讨论的系统。" },
+  { title: "用原型缩小不确定性", description: "先验证关键路径，再投入完整视觉与开发。" },
+  { title: "把判断变成规则", description: "沉淀状态、权限、组件与交付规则，支持团队复用。" },
+  { title: "保留人的控制权", description: "AI 与自动化场景中明确置信度、复核和接管边界。" },
+  { title: "在落地前验收", description: "结合实现约束检查视觉、交互、响应式和风险状态。" },
 ];
 
 export const themes = [

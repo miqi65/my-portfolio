@@ -17,6 +17,7 @@ export const test = base.extend<VisualFixtures>({
     await use(context);
   },
   page: async ({ page, visualContext: _visualContext }, use) => {
+    void _visualContext;
     await page.emulateMedia({ reducedMotion: "reduce" });
     await use(page);
   },

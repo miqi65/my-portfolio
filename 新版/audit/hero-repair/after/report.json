@@ -1,0 +1,112 @@
+[
+  {
+    "viewport": {
+      "key": "2048",
+      "width": 2048,
+      "height": 1123
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/2048.png",
+    "baseMetrics": {
+      "scrollWidth": 2048,
+      "clientWidth": 2048,
+      "intro": {
+        "y": 0,
+        "height": 1051.4375,
+        "bottom": 1051.4375
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1440",
+      "width": 1440,
+      "height": 900
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/1440.png",
+    "baseMetrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "intro": {
+        "y": 0,
+        "height": 838.15625,
+        "bottom": 838.15625
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1536",
+      "width": 1536,
+      "height": 900
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/1536.png",
+    "baseMetrics": {
+      "scrollWidth": 1536,
+      "clientWidth": 1536,
+      "intro": {
+        "y": 0,
+        "height": 871.828125,
+        "bottom": 871.828125
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1600",
+      "width": 1600,
+      "height": 900
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/1600.png",
+    "baseMetrics": {
+      "scrollWidth": 1600,
+      "clientWidth": 1600,
+      "intro": {
+        "y": 0,
+        "height": 894.28125,
+        "bottom": 894.28125
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1024",
+      "width": 1024,
+      "height": 768
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/1024.png",
+    "baseMetrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "intro": {
+        "y": 0,
+        "height": 776.78125,
+        "bottom": 776.78125
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "390",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/after/390.png",
+    "baseMetrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "intro": {
+        "y": 0,
+        "height": 497,
+        "bottom": 497
+      }
+    }
+  }
+]

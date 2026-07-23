@@ -1,0 +1,209 @@
+{
+  "capturedAt": "2026-07-23T08:45:11.688Z",
+  "targets": {
+    "reference": {
+      "390": {
+        "viewport": {
+          "key": "390",
+          "width": 390,
+          "height": 844
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/reference/390.png",
+        "metrics": {
+          "title": "Billy Sweeney — Designer",
+          "scrollWidth": 390,
+          "scrollHeight": 11169,
+          "clientWidth": 390,
+          "horizontalOverflow": false,
+          "imageCount": 1,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "768": {
+        "viewport": {
+          "key": "768",
+          "width": 768,
+          "height": 1024
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/reference/768.png",
+        "metrics": {
+          "title": "Billy Sweeney — Designer",
+          "scrollWidth": 768,
+          "scrollHeight": 11282,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "imageCount": 1,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1024": {
+        "viewport": {
+          "key": "1024",
+          "width": 1024,
+          "height": 768
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/reference/1024.png",
+        "metrics": {
+          "title": "Billy Sweeney — Designer",
+          "scrollWidth": 1024,
+          "scrollHeight": 11933,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "imageCount": 1,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1280": {
+        "viewport": {
+          "key": "1280",
+          "width": 1280,
+          "height": 800
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/reference/1280.png",
+        "metrics": {
+          "title": "Billy Sweeney — Designer",
+          "scrollWidth": 1280,
+          "scrollHeight": 12578,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "imageCount": 1,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1440": {
+        "viewport": {
+          "key": "1440",
+          "width": 1440,
+          "height": 900
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/reference/1440.png",
+        "metrics": {
+          "title": "Billy Sweeney — Designer",
+          "scrollWidth": 1440,
+          "scrollHeight": 12783,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "imageCount": 1,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      }
+    },
+    "current": {
+      "390": {
+        "viewport": {
+          "key": "390",
+          "width": 390,
+          "height": 844
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/current/390.png",
+        "metrics": {
+          "title": "Miki Yang - Product Designer",
+          "scrollWidth": 390,
+          "scrollHeight": 10778,
+          "clientWidth": 390,
+          "horizontalOverflow": false,
+          "imageCount": 8,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "768": {
+        "viewport": {
+          "key": "768",
+          "width": 768,
+          "height": 1024
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/current/768.png",
+        "metrics": {
+          "title": "Miki Yang - Product Designer",
+          "scrollWidth": 768,
+          "scrollHeight": 9306,
+          "clientWidth": 768,
+          "horizontalOverflow": false,
+          "imageCount": 8,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1024": {
+        "viewport": {
+          "key": "1024",
+          "width": 1024,
+          "height": 768
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/current/1024.png",
+        "metrics": {
+          "title": "Miki Yang - Product Designer",
+          "scrollWidth": 1024,
+          "scrollHeight": 8918,
+          "clientWidth": 1024,
+          "horizontalOverflow": false,
+          "imageCount": 8,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1280": {
+        "viewport": {
+          "key": "1280",
+          "width": 1280,
+          "height": 800
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/current/1280.png",
+        "metrics": {
+          "title": "Miki Yang - Product Designer",
+          "scrollWidth": 1280,
+          "scrollHeight": 9196,
+          "clientWidth": 1280,
+          "horizontalOverflow": false,
+          "imageCount": 8,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      },
+      "1440": {
+        "viewport": {
+          "key": "1440",
+          "width": 1440,
+          "height": 900
+        },
+        "status": 200,
+        "screenshot": "audit/billy-fidelity/current/1440.png",
+        "metrics": {
+          "title": "Miki Yang - Product Designer",
+          "scrollWidth": 1440,
+          "scrollHeight": 9767,
+          "clientWidth": 1440,
+          "horizontalOverflow": false,
+          "imageCount": 8,
+          "brokenImages": []
+        },
+        "failedResponses": [],
+        "consoleErrors": []
+      }
+    }
+  }
+}

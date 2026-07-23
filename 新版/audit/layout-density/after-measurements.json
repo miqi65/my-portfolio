@@ -1,0 +1,488 @@
+[
+  {
+    "viewport": {
+      "key": "2048x1140",
+      "width": 2048,
+      "height": 1140
+    },
+    "status": 200,
+    "sections": {
+      "intro": {
+        "top": 0,
+        "bottom": 795.3,
+        "height": 795.3,
+        "contentTop": 209,
+        "contentBottom": 699.3,
+        "contentHeight": 490.3,
+        "topBlankSpace": 209,
+        "bottomBlankSpace": 96,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "795.297px"
+      },
+      "work": {
+        "top": 795.3,
+        "bottom": 2595.77,
+        "height": 1800.47,
+        "contentTop": 891.3,
+        "contentBottom": 2475.77,
+        "contentHeight": 1584.47,
+        "topBlankSpace": 96,
+        "bottomBlankSpace": 120,
+        "paddingTop": "96px",
+        "paddingBottom": "120px",
+        "minHeight": "0px",
+        "cssHeight": "1800.47px"
+      },
+      "values": {
+        "top": 2595.77,
+        "bottom": 3470.27,
+        "height": 874.5,
+        "contentTop": 2755.77,
+        "contentBottom": 3470.27,
+        "contentHeight": 714.5,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 0,
+        "paddingTop": "160px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "874.5px"
+      },
+      "background": {
+        "top": 3470.27,
+        "bottom": 5710.27,
+        "height": 2240,
+        "contentTop": 3630.27,
+        "contentBottom": 5630.27,
+        "contentHeight": 2000,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 80,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "2240px"
+      },
+      "explorations": {
+        "top": 5710.27,
+        "bottom": 7107.23,
+        "height": 1396.97,
+        "contentTop": 5870.27,
+        "contentBottom": 6987.23,
+        "contentHeight": 1116.97,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1396.97px"
+      },
+      "about": {
+        "top": 7107.23,
+        "bottom": 8197.2,
+        "height": 1089.97,
+        "contentTop": 7267.23,
+        "contentBottom": 8077.2,
+        "contentHeight": 809.97,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1089.97px"
+      },
+      "contact": {
+        "top": 8197.2,
+        "bottom": 9039.88,
+        "height": 842.67,
+        "contentTop": 8357.2,
+        "contentBottom": 8999.88,
+        "contentHeight": 642.67,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 40,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "842.672px"
+      }
+    },
+    "page": {
+      "scrollHeight": 9040,
+      "scrollWidth": 2048,
+      "clientWidth": 2048,
+      "horizontalOverflow": false
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    }
+  },
+  {
+    "viewport": {
+      "key": "1440x900",
+      "width": 1440,
+      "height": 900
+    },
+    "status": 200,
+    "sections": {
+      "intro": {
+        "top": 0,
+        "bottom": 677.05,
+        "height": 677.05,
+        "contentTop": 209,
+        "contentBottom": 581.05,
+        "contentHeight": 372.05,
+        "topBlankSpace": 209,
+        "bottomBlankSpace": 96,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "677.047px"
+      },
+      "work": {
+        "top": 677.05,
+        "bottom": 2477.52,
+        "height": 1800.47,
+        "contentTop": 773.05,
+        "contentBottom": 2357.52,
+        "contentHeight": 1584.47,
+        "topBlankSpace": 96,
+        "bottomBlankSpace": 120,
+        "paddingTop": "96px",
+        "paddingBottom": "120px",
+        "minHeight": "0px",
+        "cssHeight": "1800.47px"
+      },
+      "values": {
+        "top": 2477.52,
+        "bottom": 3230.14,
+        "height": 752.63,
+        "contentTop": 2637.52,
+        "contentBottom": 3230.14,
+        "contentHeight": 592.63,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 0,
+        "paddingTop": "160px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "752.625px"
+      },
+      "background": {
+        "top": 3230.14,
+        "bottom": 5470.14,
+        "height": 2240,
+        "contentTop": 3390.14,
+        "contentBottom": 5390.14,
+        "contentHeight": 2000,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 80,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "2240px"
+      },
+      "explorations": {
+        "top": 5470.14,
+        "bottom": 6651.11,
+        "height": 1180.97,
+        "contentTop": 5630.14,
+        "contentBottom": 6531.11,
+        "contentHeight": 900.97,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1180.97px"
+      },
+      "about": {
+        "top": 6651.11,
+        "bottom": 7781.08,
+        "height": 1129.97,
+        "contentTop": 6811.11,
+        "contentBottom": 7661.08,
+        "contentHeight": 849.97,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1129.97px"
+      },
+      "contact": {
+        "top": 7781.08,
+        "bottom": 8421.08,
+        "height": 640,
+        "contentTop": 7941.08,
+        "contentBottom": 8381.08,
+        "contentHeight": 440,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 40,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "640px"
+      }
+    },
+    "page": {
+      "scrollHeight": 8421,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "horizontalOverflow": false
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    }
+  },
+  {
+    "viewport": {
+      "key": "1024x768",
+      "width": 1024,
+      "height": 768
+    },
+    "status": 200,
+    "sections": {
+      "intro": {
+        "top": 0,
+        "bottom": 661.39,
+        "height": 661.39,
+        "contentTop": 209,
+        "contentBottom": 565.39,
+        "contentHeight": 356.39,
+        "topBlankSpace": 209,
+        "bottomBlankSpace": 96,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "661.391px"
+      },
+      "work": {
+        "top": 661.39,
+        "bottom": 2401.8,
+        "height": 1740.41,
+        "contentTop": 757.39,
+        "contentBottom": 2281.8,
+        "contentHeight": 1524.41,
+        "topBlankSpace": 96,
+        "bottomBlankSpace": 120,
+        "paddingTop": "96px",
+        "paddingBottom": "120px",
+        "minHeight": "0px",
+        "cssHeight": "1740.41px"
+      },
+      "values": {
+        "top": 2401.8,
+        "bottom": 3159.36,
+        "height": 757.56,
+        "contentTop": 2561.8,
+        "contentBottom": 3159.36,
+        "contentHeight": 597.56,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 0,
+        "paddingTop": "160px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "757.562px"
+      },
+      "background": {
+        "top": 3159.36,
+        "bottom": 5439.36,
+        "height": 2280,
+        "contentTop": 3319.36,
+        "contentBottom": 5359.36,
+        "contentHeight": 2040,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 80,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "2280px"
+      },
+      "explorations": {
+        "top": 5439.36,
+        "bottom": 6580.14,
+        "height": 1140.78,
+        "contentTop": 5599.36,
+        "contentBottom": 6460.14,
+        "contentHeight": 860.78,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1140.78px"
+      },
+      "about": {
+        "top": 6580.14,
+        "bottom": 7709.95,
+        "height": 1129.81,
+        "contentTop": 6740.14,
+        "contentBottom": 7589.95,
+        "contentHeight": 849.81,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1129.81px"
+      },
+      "contact": {
+        "top": 7709.95,
+        "bottom": 8291.63,
+        "height": 581.67,
+        "contentTop": 7869.95,
+        "contentBottom": 8251.63,
+        "contentHeight": 381.67,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 40,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "581.672px"
+      }
+    },
+    "page": {
+      "scrollHeight": 8292,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "horizontalOverflow": false
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    }
+  },
+  {
+    "viewport": {
+      "key": "390x844",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "status": 200,
+    "sections": {
+      "intro": {
+        "top": 0,
+        "bottom": 493,
+        "height": 493,
+        "contentTop": 209,
+        "contentBottom": 461,
+        "contentHeight": 252,
+        "topBlankSpace": 209,
+        "bottomBlankSpace": 32,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "493px"
+      },
+      "work": {
+        "top": 493,
+        "bottom": 2797.83,
+        "height": 2304.83,
+        "contentTop": 573,
+        "contentBottom": 2709.83,
+        "contentHeight": 2136.83,
+        "topBlankSpace": 80,
+        "bottomBlankSpace": 88,
+        "paddingTop": "80px",
+        "paddingBottom": "88px",
+        "minHeight": "0px",
+        "cssHeight": "2304.83px"
+      },
+      "values": {
+        "top": 2797.83,
+        "bottom": 3406.58,
+        "height": 608.75,
+        "contentTop": 2957.83,
+        "contentBottom": 3406.58,
+        "contentHeight": 448.75,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 0,
+        "paddingTop": "160px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "608.75px"
+      },
+      "background": {
+        "top": 3406.58,
+        "bottom": 5526.58,
+        "height": 2120,
+        "contentTop": 3526.58,
+        "contentBottom": 5446.58,
+        "contentHeight": 1920,
+        "topBlankSpace": 120,
+        "bottomBlankSpace": 80,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "2120px"
+      },
+      "explorations": {
+        "top": 5526.58,
+        "bottom": 6981.53,
+        "height": 1454.95,
+        "contentTop": 5646.58,
+        "contentBottom": 6885.53,
+        "contentHeight": 1238.95,
+        "topBlankSpace": 120,
+        "bottomBlankSpace": 96,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1454.95px"
+      },
+      "about": {
+        "top": 6981.53,
+        "bottom": 8380.88,
+        "height": 1399.34,
+        "contentTop": 7141.53,
+        "contentBottom": 8260.88,
+        "contentHeight": 1119.34,
+        "topBlankSpace": 160,
+        "bottomBlankSpace": 120,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "1399.34px"
+      },
+      "contact": {
+        "top": 8380.88,
+        "bottom": 9063.47,
+        "height": 682.59,
+        "contentTop": 8500.88,
+        "contentBottom": 9047.47,
+        "contentHeight": 546.59,
+        "topBlankSpace": 120,
+        "bottomBlankSpace": 16,
+        "paddingTop": "0px",
+        "paddingBottom": "0px",
+        "minHeight": "0px",
+        "cssHeight": "682.594px"
+      }
+    },
+    "page": {
+      "scrollHeight": 9063,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "horizontalOverflow": false
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    }
+  }
+]

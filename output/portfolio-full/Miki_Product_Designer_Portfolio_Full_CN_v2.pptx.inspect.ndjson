@@ -1,0 +1,1011 @@
+{"kind":"deck","id":"pr/im653c","name":"Deck"}
+{"kind":"layout","layoutId":"084149c7-b5ea-445a-994f-8aa74760ba69","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"bf67ff96-9025-4684-851f-a1bbaf2f3f9b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/l0ryta","slide":1,"title":"PORTFOLIO / 2026","textShapes":7}
+{"kind":"shape","id":"sh/fexszup4","slide":1,"bbox":[0,0,760,720]}
+{"kind":"shape","id":"sh/udobqp8j","slide":1,"bbox":[64,70,48,5]}
+{"kind":"textbox","id":"sh/tcvaxk7y","slide":1,"text":"PORTFOLIO / 2026","textPreview":"PORTFOLIO / 2026","textChars":16,"textLines":1,"bbox":[64,96,300,24]}
+{"kind":"textbox","id":"sh/srmtofqd","slide":1,"text":"杨蜜萁\nMiki Yang","textPreview":"杨蜜萁 | Miki Yang","textChars":13,"textLines":2,"bbox":[64,160,560,148]}
+{"kind":"textbox","id":"sh/7qdsvups","slide":1,"text":"Product Designer / 高级产品设计师","textPreview":"Product Designer / 高级产品设计师","textChars":26,"textLines":1,"bbox":[64,334,570,42]}
+{"kind":"textbox","id":"sh/6p4bmp87","slide":1,"text":"复杂 B 端 · 工业软件 / HMI · 智能硬件 · AI 产品体验","textPreview":"复杂 B 端 · 工业软件 / HMI · 智能硬件 · AI 产品体验","textChars":36,"textLines":1,"bbox":[64,392,610,46]}
+{"kind":"shape","id":"sh/5ovatk7m","slide":1,"bbox":[64,570,560,1]}
+{"kind":"textbox","id":"sh/knmtkfq1","slide":1,"text":"12 年产品与视觉设计经验","textPreview":"12 年产品与视觉设计经验","textChars":13,"textLines":1,"bbox":[64,592,300,26]}
+{"kind":"textbox","id":"sh/y14j6xo3","slide":1,"text":"miqi723@163.com  ·  mikistudio.com.cn","textPreview":"miqi723@163.com  ·  mikistudio.com.cn","textChars":37,"textLines":1,"bbox":[64,628,440,26]}
+{"kind":"textbox","id":"sh/z2dkf2po","slide":1,"text":"01 / 47","textPreview":"01 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"image","id":"im/lw7ixwny","slide":1,"name":"","geometry":"roundRect","alt":"PCBA 插件机控制系统界面","bbox":[700,0,580,720]}
+{"kind":"notes","id":"nt/l0ryta","slide":1,"text":""}
+{"kind":"slide","id":"sl/i4xvl7","slide":2,"title":"01 / POSITIONING","textShapes":21}
+{"kind":"textbox","id":"sh/876hs7e5","slide":2,"text":"01 / POSITIONING","textPreview":"01 / POSITIONING","textChars":16,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/n6dgj2dk","slide":2,"text":"02 / 47","textPreview":"02 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/m54zqxwf","slide":2,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/hwfypcv2","slide":2,"text":"我处理的是复杂产品判断，不只是界面。","textPreview":"我处理的是复杂产品判断，不只是界面。","textChars":18,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/wv6hw7eh","slide":2,"text":"从模糊需求、角色任务和技术约束出发，完成结构、流程、状态、权限、界面、验证与研发落地。","textPreview":"从模糊需求、角色任务和技术约束出发，完成结构、流程、状态、权限、界面、验证与研发落地。","textChars":43,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/vuxgnmdw","slide":2,"bbox":[64,238,548,158]}
+{"kind":"textbox","id":"sh/utozuhwb","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[84,256,55,36]}
+{"kind":"textbox","id":"sh/d0vydsvi","slide":2,"text":"复杂系统","textPreview":"复杂系统","textChars":4,"textLines":1,"bbox":[156,257,320,34]}
+{"kind":"textbox","id":"sh/czmxknex","slide":2,"text":"把角色任务、权限边界和异常路径组织成清晰结构。","textPreview":"把角色任务、权限边界和异常路径组织成清晰结构。","textChars":23,"textLines":1,"bbox":[84,306,500,48]}
+{"kind":"textbox","id":"sh/29svyxgj","slide":2,"text":"工业 AI · PCBA · WMS","textPreview":"工业 AI · PCBA · WMS","textChars":18,"textLines":1,"bbox":[84,366,500,20]}
+{"kind":"shape","id":"sh/na1c72x4","slide":2,"bbox":[644,238,548,158]}
+{"kind":"textbox","id":"sh/obad07yp","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[664,256,55,36]}
+{"kind":"textbox","id":"sh/pcju9cfa","slide":2,"text":"工业 HMI","textPreview":"工业 HMI","textChars":6,"textLines":1,"bbox":[736,257,320,34]}
+{"kind":"textbox","id":"sh/adsv2hgf","slide":2,"text":"在算法、设备、渲染和现场安全约束下做产品取舍。","textPreview":"在算法、设备、渲染和现场安全约束下做产品取舍。","textChars":23,"textLines":1,"bbox":[664,306,500,48]}
+{"kind":"textbox","id":"sh/be1cb2x0","slide":2,"text":"工业 AI · 智能硬件","textPreview":"工业 AI · 智能硬件","textChars":12,"textLines":1,"bbox":[664,366,500,20]}
+{"kind":"shape","id":"sh/cfad47yl","slide":2,"bbox":[64,426,548,158]}
+{"kind":"textbox","id":"sh/xg3edcf6","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[84,444,55,36]}
+{"kind":"textbox","id":"sh/yhcv6hgr","slide":2,"text":"移动与视觉","textPreview":"移动与视觉","textChars":5,"textLines":1,"bbox":[156,445,320,34]}
+{"kind":"textbox","id":"sh/zilwfmxc","slide":2,"text":"处理地图、原生短信、小屏操作、多端适配与电商视觉。","textPreview":"处理地图、原生短信、小屏操作、多端适配与电商视觉。","textChars":25,"textLines":1,"bbox":[84,494,500,48]}
+{"kind":"textbox","id":"sh/v6lc3md4","slide":2,"text":"GPS · 5G 消息 · Selected Experience","textPreview":"GPS · 5G 消息 · Selected Experience","textChars":33,"textLines":1,"bbox":[84,554,500,20]}
+{"kind":"shape","id":"sh/ulcbuhcz","slide":2,"bbox":[644,426,548,158]}
+{"kind":"textbox","id":"sh/h8nu5wva","slide":2,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[664,444,55,36]}
+{"kind":"textbox","id":"sh/g7etwrup","slide":2,"text":"设计工程化","textPreview":"设计工程化","textChars":5,"textLines":1,"bbox":[736,445,320,34]}
+{"kind":"textbox","id":"sh/7ilczmd8","slide":2,"text":"用规范、组件、QA 和 AI 辅助工具降低交付风险。","textPreview":"用规范、组件、QA 和 AI 辅助工具降低交付风险。","textChars":26,"textLines":1,"bbox":[664,494,500,48]}
+{"kind":"textbox","id":"sh/6hcbqhcn","slide":2,"text":"WMS · AI 辅助设计工程实践","textPreview":"WMS · AI 辅助设计工程实践","textChars":17,"textLines":1,"bbox":[664,554,500,20]}
+{"kind":"notes","id":"nt/i4xvl7","slide":2,"text":""}
+{"kind":"slide","id":"sl/5pj7tn","slide":3,"title":"02 / CAREER","textShapes":29}
+{"kind":"textbox","id":"sh/ep0vyd8r","slide":3,"text":"02 / CAREER","textPreview":"02 / CAREER","textChars":11,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/1sbuts7i","slide":3,"text":"03 / 47","textPreview":"03 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/gr2d0nqx","slide":3,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/3utcv2po","slide":3,"text":"12 年，从视觉执行走到复杂产品与体验管理。","textPreview":"12 年，从视觉执行走到复杂产品与体验管理。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/2tkv2x83","slide":3,"text":"职位、行业和责任不断变化，但主线一直是把信息组织成可理解、可执行的产品体验。","textPreview":"职位、行业和责任不断变化，但主线一直是把信息组织成可理解、可执行的产品体验。","textChars":38,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/pwbuxc7e","slide":3,"bbox":[64,232,352,160]}
+{"kind":"textbox","id":"sh/ov2d47qt","slide":3,"text":"2014—2015","textPreview":"2014—2015","textChars":9,"textLines":1,"bbox":[82,250,160,24]}
+{"kind":"textbox","id":"sh/bydwz2pk","slide":3,"text":"广东点控科技","textPreview":"广东点控科技","textChars":6,"textLines":1,"bbox":[82,286,310,30]}
+{"kind":"textbox","id":"sh/qxkv6hoz","slide":3,"text":"UI 设计师","textPreview":"UI 设计师","textChars":6,"textLines":1,"bbox":[82,322,310,24]}
+{"kind":"textbox","id":"sh/grydk7yl","slide":3,"text":"OA / 门店管理","textPreview":"OA / 门店管理","textChars":9,"textLines":1,"bbox":[82,357,310,22]}
+{"kind":"shape","id":"sh/hs7utcf6","slide":3,"bbox":[448,232,352,160]}
+{"kind":"textbox","id":"sh/upwvixgv","slide":3,"text":"2015—2017","textPreview":"2015—2017","textChars":9,"textLines":1,"bbox":[466,250,160,24]}
+{"kind":"textbox","id":"sh/fq5cr2xg","slide":3,"text":"珠海银泰贸易","textPreview":"珠海银泰贸易","textChars":6,"textLines":1,"bbox":[466,286,310,30]}
+{"kind":"textbox","id":"sh/4vydo7yx","slide":3,"text":"UI/UX 设计师","textPreview":"UI/UX 设计师","textChars":9,"textLines":1,"bbox":[466,322,310,24]}
+{"kind":"textbox","id":"sh/pw7uxcfi","slide":3,"text":"冷库监控 / 智能硬件","textPreview":"冷库监控 / 智能硬件","textChars":11,"textLines":1,"bbox":[466,357,310,22]}
+{"kind":"shape","id":"sh/2tgvmxgr","slide":3,"bbox":[832,232,352,160]}
+{"kind":"textbox","id":"sh/3upcv2xc","slide":3,"text":"2017—2018","textPreview":"2017—2018","textChars":9,"textLines":1,"bbox":[850,250,160,24]}
+{"kind":"textbox","id":"sh/cjidsryt","slide":3,"text":"珠海罗西尼","textPreview":"珠海罗西尼","textChars":5,"textLines":1,"bbox":[850,286,310,30]}
+{"kind":"textbox","id":"sh/dkre1wfe","slide":3,"text":"视觉运营设计师","textPreview":"视觉运营设计师","textChars":7,"textLines":1,"bbox":[850,322,310,24]}
+{"kind":"textbox","id":"sh/lgnu5c7i","slide":3,"text":"电商 / 品牌视觉","textPreview":"电商 / 品牌视觉","textChars":9,"textLines":1,"bbox":[850,357,310,22]}
+{"kind":"shape","id":"sh/0fedcrqx","slide":3,"bbox":[64,424,352,160]}
+{"kind":"textbox","id":"sh/ze5c3mps","slide":3,"text":"2019—2020","textPreview":"2019—2020","textChars":9,"textLines":1,"bbox":[82,442,160,24]}
+{"kind":"textbox","id":"sh/ydcvah87","slide":3,"text":"珠海达明科技","textPreview":"珠海达明科技","textChars":6,"textLines":1,"bbox":[82,478,310,30]}
+{"kind":"textbox","id":"sh/94nu9w7u","slide":3,"text":"UI/UX 设计师","textPreview":"UI/UX 设计师","textChars":9,"textLines":1,"bbox":[82,514,310,24]}
+{"kind":"textbox","id":"sh/83edgrq9","slide":3,"text":"PCBA / GPS / WMS / 工业","textPreview":"PCBA / GPS / WMS / 工业","textChars":21,"textLines":1,"bbox":[82,549,310,22]}
+{"kind":"shape","id":"sh/n25c7mpo","slide":3,"bbox":[448,424,352,160]}
+{"kind":"textbox","id":"sh/m1wveh83","slide":3,"text":"2021—2022","textPreview":"2021—2022","textChars":9,"textLines":1,"bbox":[466,442,160,24]}
+{"kind":"textbox","id":"sh/p83uxs7a","slide":3,"text":"珠海小源科技","textPreview":"珠海小源科技","textChars":6,"textLines":1,"bbox":[466,478,310,30]}
+{"kind":"textbox","id":"sh/o7ut4nq5","slide":3,"text":"用户体验经理","textPreview":"用户体验经理","textChars":6,"textLines":1,"bbox":[466,514,310,24]}
+{"kind":"textbox","id":"sh/u18ji9kr","slide":3,"text":"5G 消息 / 团队管理","textPreview":"5G 消息 / 团队管理","textChars":12,"textLines":1,"bbox":[466,549,310,22]}
+{"kind":"shape","id":"sh/v2h0re1w","slide":3,"bbox":[832,424,352,160]}
+{"kind":"textbox","id":"sh/g3q1kj2h","slide":3,"text":"2022—至今","textPreview":"2022—至今","textChars":7,"textLines":1,"bbox":[850,442,160,24]}
+{"kind":"textbox","id":"sh/h4zit4j2","slide":3,"text":"万门科技","textPreview":"万门科技","textChars":4,"textLines":1,"bbox":[850,478,310,30]}
+{"kind":"textbox","id":"sh/258jm9kn","slide":3,"text":"产品设计师","textPreview":"产品设计师","textChars":5,"textLines":1,"bbox":[850,514,310,24]}
+{"kind":"textbox","id":"sh/36h0ve18","slide":3,"text":"工业 AI / HMI / AI 工作流","textPreview":"工业 AI / HMI / AI 工作流","textChars":20,"textLines":1,"bbox":[850,549,310,22]}
+{"kind":"notes","id":"nt/5pj7tn","slide":3,"text":""}
+{"kind":"slide","id":"sl/l9km1f","slide":4,"title":"03 / CAPABILITY MAP","textShapes":21}
+{"kind":"textbox","id":"sh/qp0nq5cj","slide":4,"text":"03 / CAPABILITY MAP","textPreview":"03 / CAPABILITY MAP","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/dsr610vu","slide":4,"text":"04 / 47","textPreview":"04 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/cripsvu9","slide":4,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/zuto3ad0","slide":4,"text":"四类能力都有后续项目证据。","textPreview":"四类能力都有后续项目证据。","textChars":13,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/ytk7u5cf","slide":4,"text":"页码不是目录装饰；它让招聘者直接跳到最相关的项目判断与界面证据。","textPreview":"页码不是目录装饰；它让招聘者直接跳到最相关的项目判断与界面证据。","textChars":32,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/lwb65kv6","slide":4,"bbox":[64,308,1152,1]}
+{"kind":"textbox","id":"sh/0v2pwful","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,220,56,34]}
+{"kind":"textbox","id":"sh/fyporqdw","slide":4,"text":"复杂 B 端与流程","textPreview":"复杂 B 端与流程","textChars":9,"textLines":1,"bbox":[144,220,300,34]}
+{"kind":"textbox","id":"sh/exgnilwb","slide":4,"text":"信息架构 · 任务流 · 状态 · 异常 · 权限","textPreview":"信息架构 · 任务流 · 状态 · 异常 · 权限","textChars":25,"textLines":1,"bbox":[458,222,380,56]}
+{"kind":"textbox","id":"sh/0rqdozex","slide":4,"text":"PCBA P06–13 · 工业 AI P14–21 · WMS P22–29","textPreview":"PCBA P06–13 · 工业 AI P14–21 · WMS P22–29","textChars":39,"textLines":1,"bbox":[850,222,366,56]}
+{"kind":"shape","id":"sh/1szexkfi","slide":4,"bbox":[64,413,1152,1]}
+{"kind":"textbox","id":"sh/epovmpwr","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,325,56,34]}
+{"kind":"textbox","id":"sh/zqxwvuxc","slide":4,"text":"工业 HMI 与智能硬件","textPreview":"工业 HMI 与智能硬件","textChars":12,"textLines":1,"bbox":[144,325,300,34]}
+{"kind":"textbox","id":"sh/ovqdszet","slide":4,"text":"设备状态 · 算法边界 · 高风险操作 · 安全接管","textPreview":"设备状态 · 算法边界 · 高风险操作 · 安全接管","textChars":26,"textLines":1,"bbox":[458,327,380,56]}
+{"kind":"textbox","id":"sh/9wze14fe","slide":4,"text":"PCBA P06–13 · 工业 AI P14–21","textPreview":"PCBA P06–13 · 工业 AI P14–21","textChars":26,"textLines":1,"bbox":[850,327,366,56]}
+{"kind":"shape","id":"sh/mt8vqpwn","slide":4,"bbox":[64,518,1152,1]}
+{"kind":"textbox","id":"sh/nuhwzux8","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,430,56,34]}
+{"kind":"textbox","id":"sh/4zmdgfep","slide":4,"text":"移动端与多端体验","textPreview":"移动端与多端体验","textChars":8,"textLines":1,"bbox":[144,430,300,34]}
+{"kind":"textbox","id":"sh/p0fep0fa","slide":4,"text":"地图定位 · RF 扫码 · 原生短信 · 跨设备适配","textPreview":"地图定位 · RF 扫码 · 原生短信 · 跨设备适配","textChars":27,"textLines":1,"bbox":[458,432,380,56]}
+{"kind":"textbox","id":"sh/l4n2xc3m","slide":4,"text":"5G P30–33 · GPS P34–37 · WMS P22–29","textPreview":"5G P30–33 · GPS P34–37 · WMS P22–29","textChars":35,"textLines":1,"bbox":[850,432,366,56]}
+{"kind":"shape","id":"sh/k3el47m1","slide":4,"bbox":[64,623,1152,1]}
+{"kind":"textbox","id":"sh/jilkv2lw","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[64,535,56,34]}
+{"kind":"textbox","id":"sh/yhc32x4b","slide":4,"text":"Design System 与交付","textPreview":"Design System 与交付","textChars":17,"textLines":1,"bbox":[144,535,300,34]}
+{"kind":"textbox","id":"sh/t8n21c3y","slide":4,"text":"组件 · 规则 · QA · 设计到代码 · AI 输出审查","textPreview":"组件 · 规则 · QA · 设计到代码 · AI 输出审查","textChars":30,"textLines":1,"bbox":[458,537,380,56]}
+{"kind":"textbox","id":"sh/87el87md","slide":4,"text":"WMS P28–29 · 5G P31–33 · AI 实践 P41–45","textPreview":"WMS P28–29 · 5G P31–33 · AI 实践 P41–45","textChars":37,"textLines":1,"bbox":[850,537,366,56]}
+{"kind":"notes","id":"nt/l9km1f","slide":4,"text":""}
+{"kind":"slide","id":"sl/jdnqwj","slide":5,"title":"04 / SELECTED WORK","textShapes":30}
+{"kind":"textbox","id":"sh/4f6lsz6t","slide":5,"text":"04 / SELECTED WORK","textPreview":"04 / SELECTED WORK","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/jexkjup8","slide":5,"text":"05 / 47","textPreview":"05 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/ido3qpon","slide":5,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/hcv2hk7i","slide":5,"text":"三个深度系统案例建立主线，四项实践补足宽度。","textPreview":"三个深度系统案例建立主线，四项实践补足宽度。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/wbmloz6x","slide":5,"text":"主案例证明复杂度和落地；其他案例证明移动端、数据可视化、团队影响力和 AI 辅助交付。","textPreview":"主案例证明复杂度和落地；其他案例证明移动端、数据可视化、团队影响力和 AI 辅助交付。","textChars":43,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/vadkfupc","slide":5,"bbox":[64,218,730,106]}
+{"kind":"textbox","id":"sh/18zmto7m","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[292,232,54,25]}
+{"kind":"textbox","id":"sh/07ql0j61","slide":5,"text":"PCBA 插件机控制","textPreview":"PCBA 插件机控制","textChars":10,"textLines":1,"bbox":[350,230,330,30]}
+{"kind":"textbox","id":"sh/mp43ilcf","slide":5,"text":"真实产线中的流程重构、测试、上线与结果","textPreview":"真实产线中的流程重构、测试、上线与结果","textChars":19,"textLines":1,"bbox":[292,269,420,38]}
+{"kind":"textbox","id":"sh/nqxkr6t0","slide":5,"text":"P06–13","textPreview":"P06–13","textChars":6,"textLines":1,"bbox":[706,230,70,24]}
+{"kind":"shape","id":"sh/or6lkbul","slide":5,"bbox":[64,343,730,106]}
+{"kind":"textbox","id":"sh/el43e1c3","slide":5,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[292,357,54,25]}
+{"kind":"textbox","id":"sh/zmdkn6to","slide":5,"text":"工业 AI 视觉质检","textPreview":"工业 AI 视觉质检","textChars":10,"textLines":1,"bbox":[350,355,330,30]}
+{"kind":"textbox","id":"sh/0nmlgbu9","slide":5,"text":"算法结果如何被现场理解、复核和安全接管","textPreview":"算法结果如何被现场理解、复核和安全接管","textChars":19,"textLines":1,"bbox":[292,394,420,38]}
+{"kind":"textbox","id":"sh/1ov2pgbu","slide":5,"text":"P14–21","textPreview":"P14–21","textChars":6,"textLines":1,"bbox":[706,355,70,24]}
+{"kind":"shape","id":"sh/yh83q5cn","slide":5,"bbox":[64,468,730,106]}
+{"kind":"textbox","id":"sh/vm90ri9k","slide":5,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[292,482,54,25]}
+{"kind":"textbox","id":"sh/u10zixsz","slide":5,"text":"WMS 智能仓储","textPreview":"WMS 智能仓储","textChars":8,"textLines":1,"bbox":[350,480,330,30]}
+{"kind":"textbox","id":"sh/horitsrq","slide":5,"text":"Web / RF 双端任务重组与设计系统","textPreview":"Web / RF 双端任务重组与设计系统","textChars":20,"textLines":1,"bbox":[292,519,420,38]}
+{"kind":"textbox","id":"sh/gnihkna5","slide":5,"text":"P22–29","textPreview":"P22–29","textChars":6,"textLines":1,"bbox":[706,480,70,24]}
+{"kind":"textbox","id":"sh/3qt0v29g","slide":5,"text":"ADDITIONAL / PRACTICE","textPreview":"ADDITIONAL / PRACTICE","textChars":21,"textLines":1,"bbox":[840,218,280,20]}
+{"kind":"textbox","id":"sh/ip0zmxsv","slide":5,"text":"5G 消息体验规范","textPreview":"5G 消息体验规范","textChars":9,"textLines":1,"bbox":[840,252,300,28]}
+{"kind":"textbox","id":"sh/psbixcrm","slide":5,"text":"ToC 服务交互 · 适配 · 培训","textPreview":"ToC 服务交互 · 适配 · 培训","textChars":18,"textLines":1,"bbox":[840,284,300,24]}
+{"kind":"textbox","id":"sh/4r2ho7a1","slide":5,"text":"P30–33","textPreview":"P30–33","textChars":6,"textLines":1,"bbox":[1142,252,74,24]}
+{"kind":"shape","id":"sh/rut0zm9s","slide":5,"bbox":[840,318,376,1]}
+{"kind":"textbox","id":"sh/qtkzqhs7","slide":5,"text":"GPS 轨迹定位","textPreview":"GPS 轨迹定位","textChars":8,"textLines":1,"bbox":[840,339,300,28]}
+{"kind":"textbox","id":"sh/ozmhgr65","slide":5,"text":"地图 · 告警 · 技术取舍","textPreview":"地图 · 告警 · 技术取舍","textChars":14,"textLines":1,"bbox":[840,371,300,24]}
+{"kind":"textbox","id":"sh/9kvypc7q","slide":5,"text":"P34–37","textPreview":"P34–37","textChars":6,"textLines":1,"bbox":[1142,339,74,24]}
+{"kind":"shape","id":"sh/mxkzehof","slide":5,"bbox":[840,405,376,1]}
+{"kind":"textbox","id":"sh/nydgnmp0","slide":5,"text":"智能工厂数据大屏","textPreview":"智能工厂数据大屏","textChars":8,"textLines":1,"bbox":[840,426,300,28]}
+{"kind":"textbox","id":"sh/0v2hc769","slide":5,"text":"数据可视化 · 异常发现","textPreview":"数据可视化 · 异常发现","textChars":12,"textLines":1,"bbox":[840,458,300,24]}
+{"kind":"textbox","id":"sh/1wbylc7u","slide":5,"text":"P38–40","textPreview":"P38–40","textChars":6,"textLines":1,"bbox":[1142,426,74,24]}
+{"kind":"shape","id":"sh/etkzax83","slide":5,"bbox":[840,492,376,1]}
+{"kind":"textbox","id":"sh/zutgj2po","slide":5,"text":"AI 辅助设计工程实践","textPreview":"AI 辅助设计工程实践","textChars":11,"textLines":1,"bbox":[840,513,300,28]}
+{"kind":"textbox","id":"sh/cr2h87qx","slide":5,"text":"设计到代码 · 规则 · QA","textPreview":"设计到代码 · 规则 · QA","textChars":15,"textLines":1,"bbox":[840,545,300,24]}
+{"kind":"textbox","id":"sh/dsbyhs7i","slide":5,"text":"P41–45","textPreview":"P41–45","textChars":6,"textLines":1,"bbox":[1142,513,74,24]}
+{"kind":"shape","id":"sh/hw7e9ona","slide":5,"bbox":[840,579,376,1]}
+{"kind":"image","id":"im/zmp0fi54","slide":5,"name":"","geometry":"roundRect","alt":"PCBA 插件机控制","bbox":[76,228,190,86]}
+{"kind":"image","id":"im/ad0bmhkn","slide":5,"name":"","geometry":"roundRect","alt":"工业 AI 视觉质检","bbox":[76,353,190,86]}
+{"kind":"image","id":"im/07ytg72l","slide":5,"name":"","geometry":"roundRect","alt":"WMS 智能仓储","bbox":[76,478,190,86]}
+{"kind":"notes","id":"nt/jdnqwj","slide":5,"text":""}
+{"kind":"slide","id":"sl/fv103l","slide":6,"title":"05 / CASE 01 · PCBA","textShapes":17}
+{"kind":"textbox","id":"sh/gv6ls3ud","slide":6,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/fux4zyts","slide":6,"text":"06 / 47","textPreview":"06 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/eto3qtc7","slide":6,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/t8vmxobm","slide":6,"text":"PCBA：真实产线中的重构、测试与上线。","textPreview":"PCBA：真实产线中的重构、测试与上线。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/s7mloju1","slide":6,"text":"核心设计约 2—3 个月 · 设计负责人 · 系统已上线","textPreview":"核心设计约 2—3 个月 · 设计负责人 · 系统已上线","textChars":28,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/r6d4vetg","slide":6,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/6543m9cv","slide":6,"text":"保留现场已经形成的底层操作逻辑，重构物料、任务、预警和高风险操作；方案经过 12 位一线使用者对比测试，并进入真实产线。","textPreview":"保留现场已经形成的底层操作逻辑，重构物料、任务、预警和高风险操作；方案经过 12 位一线使用者对比测试，并进入真实产线。","textChars":60,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/54vmt4bq","slide":6,"text":"使用者","textPreview":"使用者","textChars":3,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/43mlkzu5","slide":6,"text":"操作员 / 组长 / 工程师","textPreview":"操作员 / 组长 / 工程师","textChars":14,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/ypcfex0b","slide":6,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/zqlw721w","slide":6,"text":"设计负责人","textPreview":"设计负责人","textChars":5,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/0buxg7i1","slide":6,"text":"验证","textPreview":"验证","textChars":2,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/lc3e9cjm","slide":6,"text":"方案对比可用性测试","textPreview":"方案对比可用性测试","textChars":9,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/qlsfax0z","slide":6,"text":"上线","textPreview":"上线","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/bm1w321k","slide":6,"text":"90+ 订单 / 80+ 记录与反馈","textPreview":"90+ 订单 / 80+ 记录与反馈","textChars":18,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/doje5cjq","slide":6,"text":"第一眼看主界面：产线进度、设备状态、订单与操作入口进入同一判断视野。","textPreview":"第一眼看主界面：产线进度、设备状态、订单与操作入口进入同一判断视野。","textChars":34,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"textbox","id":"sh/2hsf6d03","slide":6,"text":"项目整体周期资料存在不同口径，因此正文仅写核心设计周期。","textPreview":"项目整体周期资料存在不同口径，因此正文仅写核心设计周期。","textChars":28,"textLines":1,"bbox":[64,590,470,44]}
+{"kind":"image","id":"im/bu1g7yps","slide":6,"name":"","geometry":"roundRect","alt":"PCBA 上线控制系统主界面","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/fv103l","slide":6,"text":""}
+{"kind":"slide","id":"sl/1n5ooh","slide":7,"title":"05 / CASE 01 · PCBA","textShapes":11}
+{"kind":"textbox","id":"sh/etwnydwz","slide":7,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/1w7m9sva","slide":7,"text":"07 / 47","textPreview":"07 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/gvy50ne5","slide":7,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/rq543id8","slide":7,"text":"不能推翻旧系统：一线习惯、研发排期和生产风险共同限定方案。","textPreview":"不能推翻旧系统：一线习惯、研发排期和生产风险共同限定方案。","textChars":29,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/6pwnudwn","slide":7,"text":"设计自由度来自对约束的理解，而不是任意改变现场逻辑。","textPreview":"设计自由度来自对约束的理解，而不是任意改变现场逻辑。","textChars":26,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/tsnm58ve","slide":7,"text":"现实约束","textPreview":"现实约束","textChars":4,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/sre5w3et","slide":7,"text":"进口控制系统长期闲置，但一线人员已对既有底层操作形成肌肉记忆。","textPreview":"进口控制系统长期闲置，但一线人员已对既有底层操作形成肌肉记忆。","textChars":31,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/j2l4zydc","slide":7,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/i1c3qtwr","slide":7,"text":"全部替换会增加培训与误操作风险。","textPreview":"全部替换会增加培训与误操作风险。","textChars":16,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/sfehorat","slide":7,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/dgnihwbe","slide":7,"text":"复杂交互与研发排期强耦合。","textPreview":"复杂交互与研发排期强耦合。","textChars":13,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/qdwzmhs3","slide":7,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/re50fmt8","slide":7,"text":"系统直连产线，高风险动作必须校验和兜底。","textPreview":"系统直连产线，高风险动作必须校验和兜底。","textChars":20,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/5cnidcbi","slide":7,"text":"旧界面证明存量结构和路径依赖；最终方案只重构高频生产任务。","textPreview":"旧界面证明存量结构和路径依赖；最终方案只重构高频生产任务。","textChars":29,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/ved8jidg","slide":7,"name":"","geometry":"roundRect","alt":"PCBA 旧控制系统界面","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/1n5ooh","slide":7,"text":""}
+{"kind":"slide","id":"sl/m44ksn","slide":8,"title":"05 / CASE 01 · PCBA","textShapes":11}
+{"kind":"textbox","id":"sh/dkbih0jq","slide":8,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/qx0jmlkf","slide":8,"text":"08 / 47","textPreview":"08 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/ryt0fq1k","slide":8,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/4vi1kb29","slide":8,"text":"保留底层控制逻辑，只重构任务之间的连接方式。","textPreview":"保留底层控制逻辑，只重构任务之间的连接方式。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/5wridgju","slide":8,"text":"现场任务连续发生，旧系统却把物料、孔位、在制状态和异常确认拆散。","textPreview":"现场任务连续发生，旧系统却把物料、孔位、在制状态和异常确认拆散。","textChars":32,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/it0jilk3","slide":8,"text":"流程判断","textPreview":"流程判断","textChars":4,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/3u90b61o","slide":8,"text":"用户旅程把动作、等待、误判和风险连接到后续方案。","textPreview":"用户旅程把动作、等待、误判和风险连接到后续方案。","textChars":24,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/orm1wf2d","slide":8,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/9sv2pkjy","slide":8,"text":"跨页面确认合并为连续任务路径。","textPreview":"跨页面确认合并为连续任务路径。","textChars":15,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/hcrq1k7m","slide":8,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/gbip8fqh","slide":8,"text":"人工巡检信号转为分层数字预警。","textPreview":"人工巡检信号转为分层数字预警。","textChars":15,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/fa98zapw","slide":8,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/u907658b","slide":8,"text":"高风险动作进入权限、确认和审计。","textPreview":"高风险动作进入权限、确认和审计。","textChars":16,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/snyp4fq5","slide":8,"text":"旅程图证明流程问题如何对应任务重组、预警和权限方案。","textPreview":"旅程图证明流程问题如何对应任务重组、预警和权限方案。","textChars":26,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/qp0f2xcr","slide":8,"name":"","geometry":"roundRect","alt":"PCBA 用户旅程与问题地图","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/m44ksn","slide":8,"text":""}
+{"kind":"slide","id":"sl/61euiy","slide":9,"title":"05 / CASE 01 · PCBA","textShapes":6}
+{"kind":"textbox","id":"sh/50zepozm","slide":9,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/ixovu9gv","slide":9,"text":"09 / 47","textPreview":"09 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/3yhwnehg","slide":9,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/snqd03yx","slide":9,"text":"集中监控让管理者先看到进度、状态和异常。","textPreview":"集中监控让管理者先看到进度、状态和异常。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/dozet8zi","slide":9,"text":"过去需要翻日志和询问现场；现在从统一入口判断产线运行与处理优先级。","textPreview":"过去需要翻日志和询问现场；现在从统一入口判断产线运行与处理优先级。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/rmhwryhc","slide":9,"text":"产线进度、机台状态、订单和操作控制被收敛到一个管理视野。","textPreview":"产线进度、机台状态、订单和操作控制被收敛到一个管理视野。","textChars":28,"textLines":1,"bbox":[64,616,1152,48]}
+{"kind":"image","id":"im/ba94nqh4","slide":9,"name":"","geometry":"roundRect","alt":"PCBA 集中监控与系统概览","bbox":[64,214,1152,388]}
+{"kind":"notes","id":"nt/61euiy","slide":9,"text":""}
+{"kind":"slide","id":"sl/a3b1ul","slide":10,"title":"05 / CASE 01 · PCBA","textShapes":11}
+{"kind":"textbox","id":"sh/a5cfy5g3","slide":10,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/x83y9kze","slide":10,"text":"10 / 47","textPreview":"10 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/c7ux0fy9","slide":10,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/n21w3ahc","slide":10,"text":"物料选择与孔位确认合并为连续操作。","textPreview":"物料选择与孔位确认合并为连续操作。","textChars":17,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/2hsfu5gr","slide":10,"text":"减少跨界面确认，同时保留操作员熟悉的底层作业逻辑。","textPreview":"减少跨界面确认，同时保留操作员熟悉的底层作业逻辑。","textChars":25,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/p43e50zi","slide":10,"text":"任务重构","textPreview":"任务重构","textChars":4,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/o3uxwfyx","slide":10,"text":"物料、孔位和在制状态不再分散在机台端与后台系统。","textPreview":"物料、孔位和在制状态不再分散在机台端与后台系统。","textChars":24,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/7y5gzuxw","slide":10,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/mdwf6pgb","slide":10,"text":"同一任务路径完成选择、确认和状态查看。","textPreview":"同一任务路径完成选择、确认和状态查看。","textChars":19,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/w7y5c3y1","slide":10,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/xs7658fm","slide":10,"text":"异常物料直接进入当前任务上下文。","textPreview":"异常物料直接进入当前任务上下文。","textChars":16,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/a5gnadgv","slide":10,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/v6p43yxg","slide":10,"text":"工程资料沉淀为可复用配置资产。","textPreview":"工程资料沉淀为可复用配置资产。","textChars":15,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/947m18fa","slide":10,"text":"物料信息、在制状态、异常提示和操作入口共享同一上下文。","textPreview":"物料信息、在制状态、异常提示和操作入口共享同一上下文。","textChars":27,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/zq98ruds","slide":10,"name":"","geometry":"roundRect","alt":"PCBA 物料与在制状态模块","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/a3b1ul","slide":10,"text":""}
+{"kind":"slide","id":"sl/izxb7w","slide":11,"title":"05 / CASE 01 · PCBA","textShapes":9}
+{"kind":"textbox","id":"sh/fml0jetc","slide":11,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/0nu1cjux","slide":11,"text":"11 / 47","textPreview":"11 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/1o3ilobi","slide":11,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/2pcjetcn","slide":11,"text":"异常先进入数字预警，高风险动作再进入权限校验。","textPreview":"异常先进入数字预警，高风险动作再进入权限校验。","textChars":23,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/nq50nyt8","slide":11,"text":"不再只依赖红黄灯与人工巡检；越权写入必须被拦截并留下记录。","textPreview":"不再只依赖红黄灯与人工巡检；越权写入必须被拦截并留下记录。","textChars":29,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/psn2pobe","slide":11,"text":"分层数字预警","textPreview":"分层数字预警","textChars":6,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/itsz2pcj","slide":11,"text":"异常类型、设备状态和优先级同时可见，帮助现场先处理高风险问题。","textPreview":"异常类型、设备状态和优先级同时可见，帮助现场先处理高风险问题。","textChars":31,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/nm9w3m54","slide":11,"text":"角色与权限","textPreview":"角色与权限","textChars":5,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/2l0fuh4j","slide":11,"text":"不同角色进入不同操作范围；高风险动作增加权限校验和审计记录。","textPreview":"不同角色进入不同操作范围；高风险动作增加权限校验和审计记录。","textChars":30,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/9cr2lsni","slide":11,"name":"","geometry":"roundRect","alt":"PCBA 数字预警界面","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/65k3mh4b","slide":11,"name":"","geometry":"roundRect","alt":"PCBA 角色与登录界面","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/izxb7w","slide":11,"text":""}
+{"kind":"slide","id":"sl/gish7n","slide":12,"title":"05 / CASE 01 · PCBA","textShapes":21}
+{"kind":"textbox","id":"sh/cbexszq9","slide":12,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/ra5wju9o","slide":12,"text":"12 / 47","textPreview":"12 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/q9wfq98j","slide":12,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/poneh4ry","slide":12,"text":"12 位一线使用者验证：横版更快读懂，也更少误操作。","textPreview":"12 位一线使用者验证：横版更快读懂，也更少误操作。","textChars":26,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/4nexozqd","slide":12,"text":"方案对比可用性测试｜参与者为操作员与组长；比较竖版信息分散与横版信息集中两种方案。","textPreview":"方案对比可用性测试｜参与者为操作员与组长；比较竖版信息分散与横版信息集中两种方案。","textChars":41,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/2lcvmp87","slide":12,"bbox":[64,226,720,68]}
+{"kind":"textbox","id":"sh/hk3edkrm","slide":12,"text":"方案 A｜竖版","textPreview":"方案 A｜竖版","textChars":7,"textLines":1,"bbox":[84,248,210,28]}
+{"kind":"textbox","id":"sh/gjudkfq1","slide":12,"text":"方案 B｜横版","textPreview":"方案 B｜横版","textChars":7,"textLines":1,"bbox":[360,248,220,28]}
+{"kind":"textbox","id":"sh/ep43ep8b","slide":12,"text":"测试任务","textPreview":"测试任务","textChars":4,"textLines":1,"bbox":[824,226,160,24]}
+{"kind":"shape","id":"sh/fqdknupw","slide":12,"bbox":[824,266,7,7]}
+{"kind":"textbox","id":"sh/grmlgzqh","slide":12,"text":"读取关键生产信息","textPreview":"读取关键生产信息","textChars":8,"textLines":1,"bbox":[842,258,342,50]}
+{"kind":"shape","id":"sh/1sv2p47m","slide":12,"bbox":[824,310,7,7]}
+{"kind":"textbox","id":"sh/61k3ap8z","slide":12,"text":"判断设备状态与异常","textPreview":"判断设备状态与异常","textChars":9,"textLines":1,"bbox":[842,302,342,50]}
+{"kind":"shape","id":"sh/r2tkjapk","slide":12,"bbox":[824,354,7,7]}
+{"kind":"textbox","id":"sh/s32lcfq5","slide":12,"text":"完成高频操作路径","textPreview":"完成高频操作路径","textChars":8,"textLines":1,"bbox":[842,346,342,50]}
+{"kind":"shape","id":"sh/tob2lk7q","slide":12,"bbox":[824,398,7,7]}
+{"kind":"textbox","id":"sh/ix0j6583","slide":12,"text":"识别高风险操作","textPreview":"识别高风险操作","textChars":7,"textLines":1,"bbox":[842,390,342,50]}
+{"kind":"shape","id":"sh/jytkfapo","slide":12,"bbox":[824,438,360,1]}
+{"kind":"textbox","id":"sh/nq58r214","slide":12,"text":"92%","textPreview":"92%","textChars":3,"textLines":1,"bbox":[824,466,160,34]}
+{"kind":"textbox","id":"sh/mpwryhkj","slide":12,"text":"横版方案偏好","textPreview":"横版方案偏好","textChars":6,"textLines":1,"bbox":[824,504,160,24]}
+{"kind":"textbox","id":"sh/9snqtcja","slide":12,"text":"+34%","textPreview":"+34%","textChars":4,"textLines":1,"bbox":[1008,466,160,34]}
+{"kind":"textbox","id":"sh/8re9072p","slide":12,"text":"信息读取效率","textPreview":"信息读取效率","textChars":6,"textLines":1,"bbox":[1008,504,160,24]}
+{"kind":"textbox","id":"sh/vup8vm1g","slide":12,"text":"+27%","textPreview":"+27%","textChars":4,"textLines":1,"bbox":[824,548,160,34]}
+{"kind":"textbox","id":"sh/atgr2hkv","slide":12,"text":"操作准确率","textPreview":"操作准确率","textChars":5,"textLines":1,"bbox":[824,586,160,24]}
+{"kind":"textbox","id":"sh/xw7qxwj6","slide":12,"text":"+41%","textPreview":"+41%","textChars":4,"textLines":1,"bbox":[1008,548,160,34]}
+{"kind":"textbox","id":"sh/wvy94r2l","slide":12,"text":"主观满意度","textPreview":"主观满意度","textChars":5,"textLines":1,"bbox":[1008,586,160,24]}
+{"kind":"textbox","id":"sh/byl8jilw","slide":12,"text":"观看重点｜偏好只是一个结果；读取效率、准确率与满意度共同支持横版方案。","textPreview":"观看重点｜偏好只是一个结果；读取效率、准确率与满意度共同支持横版方案。","textChars":35,"textLines":1,"bbox":[824,630,360,36]}
+{"kind":"image","id":"im/i5s3ml4n","slide":12,"name":"","geometry":"roundRect","alt":"PCBA 方案对比可用性测试证据","bbox":[64,226,720,406]}
+{"kind":"notes","id":"nt/gish7n","slide":12,"text":""}
+{"kind":"slide","id":"sl/a20dhz","slide":13,"title":"05 / CASE 01 · PCBA","textShapes":23}
+{"kind":"textbox","id":"sh/l0rqlwf2","slide":13,"text":"05 / CASE 01 · PCBA","textPreview":"05 / CASE 01 · PCBA","textChars":19,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/ydgrahwb","slide":13,"text":"13 / 47","textPreview":"13 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/zep8jmxw","slide":13,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/83i9gbed","slide":13,"text":"系统已上线；真实验证与项目预估结果分层表达。","textPreview":"系统已上线；真实验证与项目预估结果分层表达。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/94rapgfy","slide":13,"text":"不把订单、设备、运营和界面设计混成单一归因。","textPreview":"不把订单、设备、运营和界面设计混成单一归因。","textChars":22,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/m10re1w7","slide":13,"text":"真实验证规模","textPreview":"真实验证规模","textChars":6,"textLines":1,"bbox":[64,214,280,20]}
+{"kind":"shape","id":"sh/n298n6xs","slide":13,"bbox":[64,246,346,116]}
+{"kind":"textbox","id":"sh/o7y947e9","slide":13,"text":"90+","textPreview":"90+","textChars":3,"textLines":1,"bbox":[84,266,306,42]}
+{"kind":"textbox","id":"sh/p87qdcfu","slide":13,"text":"真实产线订单","textPreview":"真实产线订单","textChars":6,"textLines":1,"bbox":[84,316,306,24]}
+{"kind":"shape","id":"sh/lkzihcni","slide":13,"bbox":[438,246,346,116]}
+{"kind":"textbox","id":"sh/kjqho76x","slide":13,"text":"80+","textPreview":"80+","textChars":3,"textLines":1,"bbox":[458,266,306,42]}
+{"kind":"textbox","id":"sh/jih0f2pc","slide":13,"text":"一线操作记录与反馈","textPreview":"一线操作记录与反馈","textChars":9,"textLines":1,"bbox":[458,316,306,24]}
+{"kind":"shape","id":"sh/yh8zmxor","slide":13,"bbox":[812,246,346,116]}
+{"kind":"textbox","id":"sh/t8jilcne","slide":13,"text":"已上线","textPreview":"已上线","textChars":3,"textLines":1,"bbox":[832,266,306,42]}
+{"kind":"textbox","id":"sh/87ahs769","slide":13,"text":"系统功能","textPreview":"系统功能","textChars":4,"textLines":1,"bbox":[832,316,306,24]}
+{"kind":"textbox","id":"sh/7m10j25o","slide":13,"text":"项目整体预估结果","textPreview":"项目整体预估结果","textChars":8,"textLines":1,"bbox":[64,402,280,20]}
+{"kind":"textbox","id":"sh/6lszqxo3","slide":13,"text":"+28%","textPreview":"+28%","textChars":4,"textLines":1,"bbox":[64,442,250,42]}
+{"kind":"textbox","id":"sh/hcjipwnq","slide":13,"text":"管理效率","textPreview":"管理效率","textChars":4,"textLines":1,"bbox":[64,490,250,26]}
+{"kind":"textbox","id":"sh/gba1wr65","slide":13,"text":"+17%","textPreview":"+17%","textChars":4,"textLines":1,"bbox":[352,442,250,42]}
+{"kind":"textbox","id":"sh/0r2t8zid","slide":13,"text":"插件效率","textPreview":"插件效率","textChars":4,"textLines":1,"bbox":[352,490,250,26]}
+{"kind":"textbox","id":"sh/1sbuhkzy","slide":13,"text":"−10%","textPreview":"−10%","textChars":4,"textLines":1,"bbox":[640,442,250,42]}
+{"kind":"textbox","id":"sh/epkb6p0n","slide":13,"text":"人工介入率","textPreview":"人工介入率","textChars":5,"textLines":1,"bbox":[640,490,250,26]}
+{"kind":"textbox","id":"sh/fqtsfuh8","slide":13,"text":"−17%","textPreview":"−17%","textChars":4,"textLines":1,"bbox":[928,442,250,42]}
+{"kind":"textbox","id":"sh/ovmtczip","slide":13,"text":"工程导入耗时","textPreview":"工程导入耗时","textChars":6,"textLines":1,"bbox":[928,490,250,26]}
+{"kind":"shape","id":"sh/9wvul4za","slide":13,"bbox":[64,544,760,82]}
+{"kind":"shape","id":"sh/mtkbap0j","slide":13,"bbox":[64,544,7,82]}
+{"kind":"textbox","id":"sh/nudcjuh4","slide":13,"text":"Miki 主导流程、界面、状态、权限、方案对比可用性测试与交付规范；上线和效率属于项目整体。","textPreview":"Miki 主导流程、界面、状态、权限、方案对比可用性测试与交付规范；上线和效率属于项目整体。","textChars":46,"textLines":1,"bbox":[86,562,720,52]}
+{"kind":"textbox","id":"sh/4zit0vil","slide":13,"text":"数据基于方案前后对比、可用性测试及项目阶段复盘，为项目整体预估结果，不单独归因于界面设计。","textPreview":"数据基于方案前后对比、可用性测试及项目阶段复盘，为项目整体预估结果，不单独归因于界面设计。","textChars":45,"textLines":1,"bbox":[850,552,366,68]}
+{"kind":"notes","id":"nt/a20dhz","slide":13,"text":""}
+{"kind":"slide","id":"sl/lbhdhw","slide":14,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":17}
+{"kind":"textbox","id":"sh/bmpk3a9k","slide":14,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/wny1cfq5","slide":14,"text":"14 / 47","textPreview":"14 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/xo725krq","slide":14,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/ypgje58b","slide":14,"text":"工业 AI：让算法结果可理解、可复核、可接管。","textPreview":"工业 AI：让算法结果可理解、可复核、可接管。","textChars":23,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/japk7a9w","slide":14,"text":"铝材挤压视觉检测设备 · 约 2 个月 · 已上线并验收","textPreview":"铝材挤压视觉检测设备 · 约 2 个月 · 已上线并验收","textChars":28,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/kby1gfqh","slide":14,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/lc729kr2","slide":14,"text":"面向操作员、工程师、维护和质检四类角色，重组检测、设备、权限和异常处理，让算法输出成为现场可执行的信息。","textPreview":"面向操作员、工程师、维护和质检四类角色，重组检测、设备、权限和异常处理，让算法输出成为现场可执行的信息。","textChars":52,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/etcj2l87","slide":14,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/zel0vq9s","slide":14,"text":"设计负责人","textPreview":"设计负责人","textChars":5,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/j29obi9c","slide":14,"text":"复杂度","textPreview":"复杂度","textChars":3,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/i10n2dsr","slide":14,"text":"16 路相机 / 11 类缺陷","textPreview":"16 路相机 / 11 类缺陷","textChars":15,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/54b6dsri","slide":14,"text":"范围","textPreview":"范围","textChars":2,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/k3i54nax","slide":14,"text":"结构 / UI/UX / 状态 / 权限","textPreview":"结构 / UI/UX / 状态 / 权限","textChars":20,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/ve9o7itg","slide":14,"text":"结果","textPreview":"结果","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/ad0nydsv","slide":14,"text":"11 个核心模块上线验收","textPreview":"11 个核心模块上线验收","textChars":12,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/wfi503a1","slide":14,"text":"开场先说明设备与 HMI 场景；后续页面用真实界面和权限矩阵证明判断。","textPreview":"开场先说明设备与 HMI 场景；后续页面用真实界面和权限矩阵证明判断。","textChars":35,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"textbox","id":"sh/napo3yt4","slide":14,"text":"角色信息基于 107 页工程资料，以及与产品、算法、开发和客户团队的需求梳理。","textPreview":"角色信息基于 107 页工程资料，以及与产品、算法、开发和客户团队的需求梳理。","textChars":39,"textLines":1,"bbox":[64,590,470,44]}
+{"kind":"image","id":"im/2dgfm9gf","slide":14,"name":"","geometry":"roundRect","alt":"工业 AI 视觉质检系统项目界面","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/lbhdhw","slide":14,"text":""}
+{"kind":"slide","id":"sl/5fzv1s","slide":15,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":11}
+{"kind":"textbox","id":"sh/rmhsb6xw","slide":15,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/c7a94byh","slide":15,"text":"15 / 47","textPreview":"15 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/d8jadgfm","slide":15,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/2h8ry1gz","slide":15,"text":"16 路相机、11 类缺陷和四类角色必须共享一个判断视野。","textPreview":"16 路相机、11 类缺陷和四类角色必须共享一个判断视野。","textChars":29,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/3ihs76xk","slide":15,"text":"系统同时承载 2D / 3D 检测、设备状态、参数配置和结果追溯。","textPreview":"系统同时承载 2D / 3D 检测、设备状态、参数配置和结果追溯。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/4jq90by5","slide":15,"text":"系统复杂度","textPreview":"系统复杂度","textChars":5,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/pkza9wfq","slide":15,"text":"界面不能按功能简单堆砌，必须先决定谁在何时看什么、能做什么。","textPreview":"界面不能按功能简单堆砌，必须先决定谁在何时看什么、能做什么。","textChars":30,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/udoruhg3","slide":15,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/fexs3mxo","slide":15,"text":"操作员：监控与预警处理。","textPreview":"操作员：监控与预警处理。","textChars":12,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/jipgv2lw","slide":15,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/yhgz2x4r","slide":15,"text":"工程师：参数、阈值与检测条件。","textPreview":"工程师：参数、阈值与检测条件。","textChars":15,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/lkryxc32","slide":15,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/kjyh47mh","slide":15,"text":"维护 / 质检：设备恢复、复核与追溯。","textPreview":"维护 / 质检：设备恢复、复核与追溯。","textChars":19,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/6l0z6h4n","slide":15,"text":"实时画面、缺陷结果、设备状态和统计信息进入同一主监控界面。","textPreview":"实时画面、缺陷结果、设备状态和统计信息进入同一主监控界面。","textChars":29,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/0vapcbul","slide":15,"name":"","geometry":"roundRect","alt":"工业 AI 主监控界面","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/5fzv1s","slide":15,"text":""}
+{"kind":"slide","id":"sl/4ilesy","slide":16,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":17}
+{"kind":"textbox","id":"sh/itsjud0b","slide":16,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/5wj25sjm","slide":16,"text":"16 / 47","textPreview":"16 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/kva1wnih","slide":16,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/vq10zy1k","slide":16,"text":"四个现场矛盾决定了界面、权限和安全方案。","textPreview":"四个现场矛盾决定了界面、权限和安全方案。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/apsjqtkz","slide":16,"text":"每个问题都在后续页面找到对应证据。","textPreview":"每个问题都在后续页面找到对应证据。","textChars":17,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/xsji18jq","slide":16,"bbox":[64,218,548,162]}
+{"kind":"textbox","id":"sh/wra1s3i5","slide":16,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[82,236,50,28]}
+{"kind":"textbox","id":"sh/n2h0vy1o","slide":16,"text":"高密度信息","textPreview":"高密度信息","textChars":5,"textLines":1,"bbox":[144,236,420,30]}
+{"kind":"textbox","id":"sh/m18jmtk3","slide":16,"text":"多路画面、缺陷和设备状态高频输出；直接平铺会推高判断成本。","textPreview":"多路画面、缺陷和设备状态高频输出；直接平铺会推高判断成本。","textChars":29,"textLines":1,"bbox":[82,284,510,76]}
+{"kind":"shape","id":"sh/kzehg7md","slide":16,"bbox":[644,218,548,162]}
+{"kind":"textbox","id":"sh/l0nipcny","slide":16,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[662,236,50,28]}
+{"kind":"textbox","id":"sh/yxwzex47","slide":16,"text":"算法判定边界","textPreview":"算法判定边界","textChars":6,"textLines":1,"bbox":[724,236,420,30]}
+{"kind":"textbox","id":"sh/zy5gn25s","slide":16,"text":"算法输出不能直接等于最终业务判定，需要条件、结果与追溯信息。","textPreview":"算法输出不能直接等于最终业务判定，需要条件、结果与追溯信息。","textChars":30,"textLines":1,"bbox":[662,284,510,76]}
+{"kind":"shape","id":"sh/cbehcnmh","slide":16,"bbox":[64,410,548,162]}
+{"kind":"textbox","id":"sh/xwnylsn2","slide":16,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[82,428,50,28]}
+{"kind":"textbox","id":"sh/a9czad4b","slide":16,"text":"四类角色","textPreview":"四类角色","textChars":4,"textLines":1,"bbox":[144,428,420,30]}
+{"kind":"textbox","id":"sh/ba5gji5w","slide":16,"text":"操作员、工程师、维护和质检看到的信息与能执行的动作不同。","textPreview":"操作员、工程师、维护和质检看到的信息与能执行的动作不同。","textChars":28,"textLines":1,"bbox":[82,476,510,76]}
+{"kind":"shape","id":"sh/w7yhorml","slide":16,"bbox":[644,410,548,162]}
+{"kind":"textbox","id":"sh/hsrixwn6","slide":16,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[662,428,50,28]}
+{"kind":"textbox","id":"sh/5c3qlsry","slide":16,"text":"异常与安全","textPreview":"异常与安全","textChars":5,"textLines":1,"bbox":[724,428,420,30]}
+{"kind":"textbox","id":"sh/4bupsnad","slide":16,"text":"数据擦除、系统重置和急停相关动作几乎没有现场容错空间。","textPreview":"数据擦除、系统重置和急停相关动作几乎没有现场容错空间。","textChars":27,"textLines":1,"bbox":[662,476,510,76]}
+{"kind":"notes","id":"nt/4ilesy","slide":16,"text":""}
+{"kind":"slide","id":"sl/945sxd","slide":17,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":6}
+{"kind":"textbox","id":"sh/1onmp4ju","slide":17,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/elc3u9k3","slide":17,"text":"17 / 47","textPreview":"17 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/fmlknulo","slide":17,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/obel0j25","slide":17,"text":"操作员先知道哪台设备异常，再查看对应画面。","textPreview":"操作员先知道哪台设备异常，再查看对应画面。","textChars":21,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/pcnmtojq","slide":17,"text":"否决独立平铺 16 路画面：渲染成本高，也不符合对物理点位的判断习惯。","textPreview":"否决独立平铺 16 路画面：渲染成本高，也不符合对物理点位的判断习惯。","textChars":35,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/nq54re10","slide":17,"text":"相机按实际方位分组；关键状态、缺陷结果和设备信息位于同一判断视野。","textPreview":"相机按实际方位分组；关键状态、缺陷结果和设备信息位于同一判断视野。","textChars":33,"textLines":1,"bbox":[64,616,1152,48]}
+{"kind":"image","id":"im/jyp0ji94","slide":17,"name":"","geometry":"roundRect","alt":"按产线方位组织的工业 AI 主监控界面","bbox":[64,214,1152,388]}
+{"kind":"notes","id":"nt/945sxd","slide":17,"text":""}
+{"kind":"slide","id":"sl/dfm9px","slide":18,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":9}
+{"kind":"textbox","id":"sh/a50zi9kf","slide":18,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/x8ridojq","slide":18,"text":"18 / 47","textPreview":"18 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/c7ihkj25","slide":18,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/za90fe1w","slide":18,"text":"算法负责识别，系统负责解释条件并保留追溯。","textPreview":"算法负责识别，系统负责解释条件并保留追溯。","textChars":21,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/y90zmtkb","slide":18,"text":"设计不修改算法模型；设计让检测条件、结果和执行记录对现场人员可见。","textPreview":"设计不修改算法模型；设计让检测条件、结果和执行记录对现场人员可见。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/kbihoj2h","slide":18,"text":"检测条件与阈值","textPreview":"检测条件与阈值","textChars":7,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/fep03uls","slide":18,"text":"模型、参数、检测条件和执行结果可见，避免黑箱式判断。","textPreview":"模型、参数、检测条件和执行结果可见，避免黑箱式判断。","textChars":26,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/o3exgr2h","slide":18,"text":"日志与追溯","textPreview":"日志与追溯","textChars":5,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/pone9w3m","slide":18,"text":"按时间、对象和结果保留记录，为异常排查和责任追溯提供依据。","textPreview":"按时间、对象和结果保留记录，为异常排查和责任追溯提供依据。","textChars":29,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/oraxofut","slide":18,"name":"","geometry":"roundRect","alt":"工业 AI 检测条件与阈值界面","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/zm1wbadc","slide":18,"name":"","geometry":"roundRect","alt":"工业 AI 日志管理界面","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/dfm9px","slide":18,"text":""}
+{"kind":"slide","id":"sl/1aplzt","slide":19,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":26}
+{"kind":"textbox","id":"sh/a147upwf","slide":19,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/x4v6p4f6","slide":19,"text":"19 / 47","textPreview":"19 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/c3mpgzel","slide":19,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/nydojax4","slide":19,"text":"四类角色按任务与权限进入系统，而不是共享同一套界面。","textPreview":"四类角色按任务与权限进入系统，而不是共享同一套界面。","textChars":26,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/2x47q5wj","slide":19,"text":"信息来源：基于 107 页工程资料，以及与产品、算法、开发和客户团队的需求梳理。","textPreview":"信息来源：基于 107 页工程资料，以及与产品、算法、开发和客户团队的需求梳理。","textChars":40,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/p0v6lkfu","slide":19,"bbox":[64,216,132,44]}
+{"kind":"textbox","id":"sh/ozmpsfe9","slide":19,"text":"角色","textPreview":"角色","textChars":2,"textLines":1,"bbox":[76,228,108,22]}
+{"kind":"shape","id":"sh/fatofaxs","slide":19,"bbox":[212,216,366,44]}
+{"kind":"textbox","id":"sh/e9knm5w7","slide":19,"text":"核心任务","textPreview":"核心任务","textChars":4,"textLines":1,"bbox":[224,228,342,22]}
+{"kind":"shape","id":"sh/w3qx4j29","slide":19,"bbox":[594,216,294,44]}
+{"kind":"textbox","id":"sh/x4zexoju","slide":19,"text":"可进入模块","textPreview":"可进入模块","textChars":5,"textLines":1,"bbox":[606,228,270,22]}
+{"kind":"shape","id":"sh/a18f29k3","slide":19,"bbox":[904,216,312,44]}
+{"kind":"textbox","id":"sh/b2hwve1o","slide":19,"text":"受限动作","textPreview":"受限动作","textChars":4,"textLines":1,"bbox":[916,228,288,22]}
+{"kind":"shape","id":"sh/ofqx0j2d","slide":19,"bbox":[64,260,132,76]}
+{"kind":"textbox","id":"sh/9gzet4jy","slide":19,"text":"操作员","textPreview":"操作员","textChars":3,"textLines":1,"bbox":[76,274,108,50]}
+{"kind":"shape","id":"sh/mdofy9k7","slide":19,"bbox":[212,260,366,76]}
+{"kind":"textbox","id":"sh/nehwre1s","slide":19,"text":"监控设备状态与预警，处理当前任务","textPreview":"监控设备状态与预警，处理当前任务","textChars":16,"textLines":1,"bbox":[224,274,342,50]}
+{"kind":"shape","id":"sh/8baxc32h","slide":19,"bbox":[594,260,294,76]}
+{"kind":"textbox","id":"sh/tcjy58j2","slide":19,"text":"监控、预警、任务","textPreview":"监控、预警、任务","textChars":8,"textLines":1,"bbox":[606,274,270,50]}
+{"kind":"shape","id":"sh/hszep8b6","slide":19,"bbox":[904,260,312,76]}
+{"kind":"textbox","id":"sh/gr6xg3ul","slide":19,"text":"不调整检测参数与系统设置","textPreview":"不调整检测参数与系统设置","textChars":12,"textLines":1,"bbox":[916,274,288,50]}
+{"kind":"shape","id":"sh/fqxwnyt0","slide":19,"bbox":[64,344,132,76]}
+{"kind":"textbox","id":"sh/upofetcf","slide":19,"text":"工程师","textPreview":"工程师","textChars":3,"textLines":1,"bbox":[76,358,108,50]}
+{"kind":"shape","id":"sh/tofeloba","slide":19,"bbox":[212,344,366,76]}
+{"kind":"textbox","id":"sh/sn6xcjup","slide":19,"text":"调整检测参数、阈值与检测条件","textPreview":"调整检测参数、阈值与检测条件","textChars":14,"textLines":1,"bbox":[224,358,342,50]}
+{"kind":"shape","id":"sh/7mxwjyt4","slide":19,"bbox":[594,344,294,76]}
+{"kind":"textbox","id":"sh/61ofatcj","slide":19,"text":"参数、模型、检测规则","textPreview":"参数、模型、检测规则","textChars":10,"textLines":1,"bbox":[606,358,270,50]}
+{"kind":"shape","id":"sh/50fehoby","slide":19,"bbox":[904,344,312,76]}
+{"kind":"textbox","id":"sh/kzmx8jud","slide":19,"text":"不承担用户与系统管理","textPreview":"不承担用户与系统管理","textChars":10,"textLines":1,"bbox":[916,358,288,50]}
+{"kind":"shape","id":"sh/at032loz","slide":19,"bbox":[64,428,132,76]}
+{"kind":"textbox","id":"sh/bu9kvq5k","slide":19,"text":"维护人员","textPreview":"维护人员","textChars":4,"textLines":1,"bbox":[76,442,108,50]}
+{"kind":"shape","id":"sh/wv2l4v65","slide":19,"bbox":[212,428,366,76]}
+{"kind":"textbox","id":"sh/xwbmx0nq","slide":19,"text":"处理设备故障、通讯异常和急停恢复","textPreview":"处理设备故障、通讯异常和急停恢复","textChars":16,"textLines":1,"bbox":[224,442,342,50]}
+{"kind":"shape","id":"sh/mp03ylo3","slide":19,"bbox":[594,428,294,76]}
+{"kind":"textbox","id":"sh/nq9krq5o","slide":19,"text":"设备、通讯、维护","textPreview":"设备、通讯、维护","textChars":8,"textLines":1,"bbox":[606,442,270,50]}
+{"kind":"shape","id":"sh/oril0b6t","slide":19,"bbox":[904,428,312,76]}
+{"kind":"textbox","id":"sh/9sr2tgne","slide":19,"text":"不修改检测结果","textPreview":"不修改检测结果","textChars":7,"textLines":1,"bbox":[916,442,288,50]}
+{"kind":"shape","id":"sh/elg3u1or","slide":19,"bbox":[64,512,132,76]}
+{"kind":"textbox","id":"sh/zmpkn65c","slide":19,"text":"质检人员","textPreview":"质检人员","textChars":4,"textLines":1,"bbox":[76,526,108,50]}
+{"kind":"shape","id":"sh/re90z298","slide":19,"bbox":[212,512,366,76]}
+{"kind":"textbox","id":"sh/qd0z6hsn","slide":19,"text":"查看、复核并追溯检测结果","textPreview":"查看、复核并追溯检测结果","textChars":12,"textLines":1,"bbox":[224,526,342,50]}
+{"kind":"shape","id":"sh/dgri1cre","slide":19,"bbox":[594,512,294,76]}
+{"kind":"textbox","id":"sh/sfih87at","slide":19,"text":"结果、日志、统计","textPreview":"结果、日志、统计","textChars":8,"textLines":1,"bbox":[606,526,270,50]}
+{"kind":"shape","id":"sh/3a9gv29w","slide":19,"bbox":[904,512,312,76]}
+{"kind":"textbox","id":"sh/i90z2xsr","slide":19,"text":"不修改设备与算法配置","textPreview":"不修改设备与算法配置","textChars":10,"textLines":1,"bbox":[916,526,288,50]}
+{"kind":"shape","id":"sh/5crixcr2","slide":19,"bbox":[64,612,1152,50]}
+{"kind":"shape","id":"sh/4bih47ah","slide":19,"bbox":[64,612,7,50]}
+{"kind":"textbox","id":"sh/vmpgri90","slide":19,"text":"权限矩阵把角色任务转成可实现、可测试的模块边界；高风险动作继续由确认、日志和物理安全机制约束。","textPreview":"权限矩阵把角色任务转成可实现、可测试的模块边界；高风险动作继续由确认、日志和物理安全机制约束。","textChars":47,"textLines":1,"bbox":[86,630,1112,20]}
+{"kind":"notes","id":"nt/1aplzt","slide":19,"text":""}
+{"kind":"slide","id":"sl/e92ymr","slide":20,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":19}
+{"kind":"textbox","id":"sh/qhkf21w7","slide":20,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/dkbydgvy","slide":20,"text":"20 / 47","textPreview":"20 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/cj2x4bud","slide":20,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/zmdgfqdo","slide":20,"text":"自动化越强，越需要人工接管和安全冗余。","textPreview":"自动化越强，越需要人工接管和安全冗余。","textChars":19,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/yl4f6lcj","slide":20,"text":"把已上线、未完整落地和设备安全机制分开表达，避免把设计方案写成既成成果。","textPreview":"把已上线、未完整落地和设备安全机制分开表达，避免把设计方案写成既成成果。","textChars":36,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/lovyh0vu","slide":20,"bbox":[64,232,720,102]}
+{"kind":"textbox","id":"sh/0nmx8vu9","slide":20,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[84,254,60,40]}
+{"kind":"textbox","id":"sh/fq9w3mdk","slide":20,"text":"在线调参","textPreview":"在线调参","textChars":4,"textLines":1,"bbox":[162,250,230,30]}
+{"kind":"textbox","id":"sh/ep0fuhwz","slide":20,"text":"已上线","textPreview":"已上线","textChars":3,"textLines":1,"bbox":[418,252,220,24]}
+{"kind":"textbox","id":"sh/of2d0zi5","slide":20,"text":"不中断任务调整检测条件和参数。","textPreview":"不中断任务调整检测条件和参数。","textChars":15,"textLines":1,"bbox":[162,290,560,30]}
+{"kind":"shape","id":"sh/9gbe94jq","slide":20,"bbox":[64,358,720,102]}
+{"kind":"textbox","id":"sh/md0vyp0z","slide":20,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[84,380,60,40]}
+{"kind":"textbox","id":"sh/netw7u1k","slide":20,"text":"人工复判 / 接管","textPreview":"人工复判 / 接管","textChars":9,"textLines":1,"bbox":[162,376,230,30]}
+{"kind":"textbox","id":"sh/wj2d4zih","slide":20,"text":"设计但未完整落地","textPreview":"设计但未完整落地","textChars":8,"textLines":1,"bbox":[418,378,220,24]}
+{"kind":"textbox","id":"sh/xkbed4jm","slide":20,"text":"异常进入人工确认路径；受工期限制。","textPreview":"异常进入人工确认路径；受工期限制。","textChars":17,"textLines":1,"bbox":[162,416,560,30]}
+{"kind":"shape","id":"sh/ahkv2p0b","slide":20,"bbox":[64,484,720,102]}
+{"kind":"textbox","id":"sh/bitwbu1w","slide":20,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[84,506,60,40]}
+{"kind":"textbox","id":"sh/cnidsfix","slide":20,"text":"物理急停","textPreview":"物理急停","textChars":4,"textLines":1,"bbox":[162,502,230,30]}
+{"kind":"textbox","id":"sh/doru10ji","slide":20,"text":"设备安全机制","textPreview":"设备安全机制","textChars":6,"textLines":1,"bbox":[418,504,220,24]}
+{"kind":"textbox","id":"sh/t8z29c7a","slide":20,"text":"极端情况下保留最终人工控制。","textPreview":"极端情况下保留最终人工控制。","textChars":14,"textLines":1,"bbox":[162,542,560,30]}
+{"kind":"shape","id":"sh/87q1g7qp","slide":20,"bbox":[824,232,392,150]}
+{"kind":"shape","id":"sh/76hk72p4","slide":20,"bbox":[824,232,7,150]}
+{"kind":"textbox","id":"sh/65ojex8j","slide":20,"text":"算法负责输出结果；系统负责呈现状态和约束；现场人员保留确认与接管责任。","textPreview":"算法负责输出结果；系统负责呈现状态和约束；现场人员保留确认与接管责任。","textChars":35,"textLines":1,"bbox":[846,250,352,120]}
+{"kind":"shape","id":"sh/hwz2dc76","slide":20,"bbox":[824,410,392,150]}
+{"kind":"shape","id":"sh/gvqlk76l","slide":20,"bbox":[824,410,7,150]}
+{"kind":"textbox","id":"sh/vahkb2p0","slide":20,"text":"中度接管没有完整上线，因此只作为设计边界展示，不计入项目交付成果。","textPreview":"中度接管没有完整上线，因此只作为设计边界展示，不计入项目交付成果。","textChars":33,"textLines":1,"bbox":[846,428,352,120]}
+{"kind":"notes","id":"nt/e92ymr","slide":20,"text":""}
+{"kind":"slide","id":"sl/9ih1d2","slide":21,"title":"06 / CASE 02 · INDUSTRIAL AI","textShapes":21}
+{"kind":"textbox","id":"sh/rihkrepg","slide":21,"text":"06 / CASE 02 · INDUSTRIAL AI","textPreview":"06 / CASE 02 · INDUSTRIAL AI","textChars":28,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/sjq1kj61","slide":21,"text":"21 / 47","textPreview":"21 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/tkz2to7m","slide":21,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/el8jm9o7","slide":21,"text":"11 个核心模块上线验收，未完整落地方案不计入成果。","textPreview":"11 个核心模块上线验收，未完整落地方案不计入成果。","textChars":26,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/fm1kveps","slide":21,"text":"项目差异化来自工业 HMI、算法边界、四类角色和安全接管的整体判断。","textPreview":"项目差异化来自工业 HMI、算法边界、四类角色和安全接管的整体判断。","textChars":34,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/gna1oj6d","slide":21,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[72,232,255,52]}
+{"kind":"textbox","id":"sh/1oj2xo7i","slide":21,"text":"核心模块","textPreview":"核心模块","textChars":4,"textLines":1,"bbox":[72,286,255,42]}
+{"kind":"textbox","id":"sh/2psjqto3","slide":21,"text":"上线并验收","textPreview":"上线并验收","textChars":5,"textLines":1,"bbox":[72,330,255,42]}
+{"kind":"textbox","id":"sh/3q1kzy5o","slide":21,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[347,232,255,52]}
+{"kind":"textbox","id":"sh/rip8f69c","slide":21,"text":"工业相机","textPreview":"工业相机","textChars":4,"textLines":1,"bbox":[347,286,255,42]}
+{"kind":"textbox","id":"sh/qxg76lsr","slide":21,"text":"统一进入 HMI","textPreview":"统一进入 HMI","textChars":8,"textLines":1,"bbox":[347,330,255,42]}
+{"kind":"textbox","id":"sh/dk7qhgr2","slide":21,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[622,232,255,52]}
+{"kind":"textbox","id":"sh/sjyp8bah","slide":21,"text":"缺陷类型","textPreview":"缺陷类型","textChars":4,"textLines":1,"bbox":[622,286,255,42]}
+{"kind":"textbox","id":"sh/3u58b690","slide":21,"text":"检测结果可追溯","textPreview":"检测结果可追溯","textChars":7,"textLines":1,"bbox":[622,330,255,42]}
+{"kind":"textbox","id":"sh/itw721sf","slide":21,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[897,232,255,52]}
+{"kind":"textbox","id":"sh/5w7qdgr6","slide":21,"text":"现场角色","textPreview":"现场角色","textChars":4,"textLines":1,"bbox":[897,286,255,42]}
+{"kind":"textbox","id":"sh/4vyp4bal","slide":21,"text":"任务与权限分离","textPreview":"任务与权限分离","textChars":7,"textLines":1,"bbox":[897,330,255,42]}
+{"kind":"shape","id":"sh/nq98nq94","slide":21,"bbox":[64,364,1152,1]}
+{"kind":"textbox","id":"sh/2p0re5sz","slide":21,"text":"CONTRIBUTION BOUNDARY","textPreview":"CONTRIBUTION BOUNDARY","textChars":21,"textLines":1,"bbox":[64,398,280,20]}
+{"kind":"textbox","id":"sh/yx4j2tg3","slide":21,"text":"Miki 主导功能梳理、信息架构、UI/UX、状态与权限规则，并协同产品、算法、开发、硬件和客户团队落地。","textPreview":"Miki 主导功能梳理、信息架构、UI/UX、状态与权限规则，并协同产品、算法、开发、硬件和客户团队落地。","textChars":53,"textLines":1,"bbox":[64,432,740,126]}
+{"kind":"shape","id":"sh/jydkvyxo","slide":21,"bbox":[842,400,374,168]}
+{"kind":"shape","id":"sh/kj6143y9","slide":21,"bbox":[842,400,7,168]}
+{"kind":"textbox","id":"sh/lkf2x8fu","slide":21,"text":"在线调参已上线；人工复判 / 接管设计未完整落地；物理急停属于设备安全机制。","textPreview":"在线调参已上线；人工复判 / 接管设计未完整落地；物理急停属于设备安全机制。","textChars":38,"textLines":1,"bbox":[864,418,334,138]}
+{"kind":"textbox","id":"sh/6loj6dgf","slide":21,"text":"不将未完整落地的人工复判路径写入项目交付结果。","textPreview":"不将未完整落地的人工复判路径写入项目交付结果。","textChars":23,"textLines":1,"bbox":[64,598,1152,40]}
+{"kind":"notes","id":"nt/9ih1d2","slide":21,"text":""}
+{"kind":"slide","id":"sl/k9zdwt","slide":22,"title":"07 / CASE 03 · WMS","textShapes":16}
+{"kind":"textbox","id":"sh/xc7qlc3a","slide":22,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/a9g7ax4j","slide":22,"text":"22 / 47","textPreview":"22 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/vap8j2l4","slide":22,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/kfi9g7ml","slide":22,"text":"WMS：Web 负责配置查询，RF 负责现场任务。","textPreview":"WMS：Web 负责配置查询，RF 负责现场任务。","textChars":25,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/50rqpc36","slide":22,"text":"两位设计师参与 · Miki 主导 RF、参与部分 Web · 双端已上线","textPreview":"两位设计师参与 · Miki 主导 RF、参与部分 Web · 双端已上线","textChars":37,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/idg7ex4v","slide":22,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/je98n2lg","slide":22,"text":"将多客户、多仓库流程拆成 Web 高密度管理与 RF 小屏作业，并把模板、流程和组件规则沉淀为可复用资产。","textPreview":"将多客户、多仓库流程拆成 Web 高密度管理与 RF 小屏作业，并把模板、流程和组件规则沉淀为可复用资产。","textChars":53,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/0jep4nmh","slide":22,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/lknqds32","slide":22,"text":"RF 主导 / 部分 Web 参与","textPreview":"RF 主导 / 部分 Web 参与","textChars":17,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/xojm1sz2","slide":22,"text":"团队","textPreview":"团队","textChars":2,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/wnalsnyh","slide":22,"text":"两位设计师","textPreview":"两位设计师","textChars":5,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/vm14zihw","slide":22,"text":"范围","textPreview":"范围","textChars":2,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/als3qdgb","slide":22,"text":"双端流程 / 权限 / 规范","textPreview":"双端流程 / 权限 / 规范","textChars":14,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/5s3m5szy","slide":22,"text":"状态","textPreview":"状态","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/kru5wnyt","slide":22,"text":"Web + RF 已上线","textPreview":"Web + RF 已上线","textChars":12,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/ipsnuxgn","slide":22,"text":"双端不是同一界面的缩放版本；后续页面分别证明任务重组与复用逻辑。","textPreview":"双端不是同一界面的缩放版本；后续页面分别证明任务重组与复用逻辑。","textChars":32,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"image","id":"im/s7edsjix","slide":22,"name":"","geometry":"roundRect","alt":"WMS Web 与 RF 双端界面","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/k9zdwt","slide":22,"text":""}
+{"kind":"slide","id":"sl/w90ai5","slide":23,"title":"07 / CASE 03 · WMS","textShapes":9}
+{"kind":"textbox","id":"sh/hwj298by","slide":23,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/utsjyds7","slide":23,"text":"23 / 47","textPreview":"23 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/vu1k7its","slide":23,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/4jul4nap","slide":23,"text":"Web 与 RF 的信息密度由任务决定。","textPreview":"Web 与 RF 的信息密度由任务决定。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/5k32xsba","slide":23,"text":"Web 承载配置、查询和高密度表格；RF 只保留扫码、核对、异常和提交。","textPreview":"Web 承载配置、查询和高密度表格；RF 只保留扫码、核对、异常和提交。","textChars":36,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/3i1kbit4","slide":23,"text":"Web 管理端","textPreview":"Web 管理端","textChars":7,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/knq1s3a5","slide":23,"text":"全局查询、字段配置、表格和多仓库信息需要较高密度。","textPreview":"全局查询、字段配置、表格和多仓库信息需要较高密度。","textChars":25,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/hsz6dgza","slide":23,"text":"RF 现场端","textPreview":"RF 现场端","textChars":6,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/g7q54byp","slide":23,"text":"只暴露当前动作所需字段和扫码入口，减少单手操作负担。","textPreview":"只暴露当前动作所需字段和扫码入口，减少单手操作负担。","textChars":26,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/7elkj2xg","slide":23,"name":"","geometry":"roundRect","alt":"WMS Web 管理端","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/cbelore5","slide":23,"name":"","geometry":"roundRect","alt":"WMS RF 现场端","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/w90ai5","slide":23,"text":""}
+{"kind":"slide","id":"sl/q13rul","slide":24,"title":"07 / CASE 03 · WMS","textShapes":14}
+{"kind":"textbox","id":"sh/c32lwj6p","slide":24,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/r2tk3ep4","slide":24,"text":"24 / 47","textPreview":"24 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/qhk3u9oj","slide":24,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/18v29o76","slide":24,"text":"Web 模板复用页面骨架，字段、列表和权限按场景组合。","textPreview":"Web 模板复用页面骨架，字段、列表和权限按场景组合。","textChars":27,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/072l0j6l","slide":24,"text":"保留模板全貌，同时放大高频结构，避免用缩略图证明工作量。","textPreview":"保留模板全貌，同时放大高频结构，避免用缩略图证明工作量。","textChars":28,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/e5k3ytov","slide":24,"text":"模板全貌","textPreview":"模板全貌","textChars":4,"textLines":1,"bbox":[64,494,180,26]}
+{"kind":"textbox","id":"sh/9cv2d87i","slide":24,"text":"多个客户页面共享导航、表单和列表骨架。","textPreview":"多个客户页面共享导航、表单和列表骨架。","textChars":19,"textLines":1,"bbox":[64,526,470,48]}
+{"kind":"shape","id":"sh/m50729cv","slide":24,"bbox":[570,224,112,30]}
+{"kind":"textbox","id":"sh/n698vetg","slide":24,"text":"字段","textPreview":"字段","textChars":2,"textLines":1,"bbox":[580,230,94,18]}
+{"kind":"textbox","id":"sh/o7ip4zu1","slide":24,"text":"字段分组、输入类型和状态规则复用。","textPreview":"字段分组、输入类型和状态规则复用。","textChars":17,"textLines":1,"bbox":[560,390,306,34]}
+{"kind":"shape","id":"sh/a90769cr","slide":24,"bbox":[900,224,112,30]}
+{"kind":"textbox","id":"sh/bu98zetc","slide":24,"text":"列表 / 权限","textPreview":"列表 / 权限","textChars":7,"textLines":1,"bbox":[910,230,94,18]}
+{"kind":"textbox","id":"sh/wvi98jux","slide":24,"text":"列结构、开关与操作入口按权限显示。","textPreview":"列结构、开关与操作入口按权限显示。","textChars":17,"textLines":1,"bbox":[890,390,306,34]}
+{"kind":"shape","id":"sh/qdg7upcn","slide":24,"bbox":[570,442,88,30]}
+{"kind":"textbox","id":"sh/ryp8nad8","slide":24,"text":"弹窗","textPreview":"弹窗","textChars":2,"textLines":1,"bbox":[580,448,72,18]}
+{"kind":"textbox","id":"sh/v61wfmpo","slide":24,"text":"复杂选择按需展开，不挤压主任务。","textPreview":"复杂选择按需展开，不挤压主任务。","textChars":16,"textLines":1,"bbox":[560,608,306,34]}
+{"kind":"shape","id":"sh/u5sv6ho3","slide":24,"bbox":[890,432,306,168]}
+{"kind":"shape","id":"sh/h83ehw7u","slide":24,"bbox":[890,432,7,168]}
+{"kind":"textbox","id":"sh/w7ad8r69","slide":24,"text":"复用顺序：先复用导航与页面骨架，再按客户场景组合字段、列表、权限和弹窗。","textPreview":"复用顺序：先复用导航与页面骨架，再按客户场景组合字段、列表、权限和弹窗。","textChars":36,"textLines":1,"bbox":[912,450,266,138]}
+{"kind":"image","id":"im/q9ov6tkf","slide":24,"name":"","geometry":"roundRect","alt":"WMS Web 模板全貌","bbox":[64,214,470,268]}
+{"kind":"image","id":"im/tgbe5o3m","slide":24,"name":"","geometry":"roundRect","alt":"WMS 字段局部放大","bbox":[560,214,306,168]}
+{"kind":"image","id":"im/ydsb6tkz","slide":24,"name":"","geometry":"roundRect","alt":"WMS 列表 / 权限局部放大","bbox":[890,214,306,168]}
+{"kind":"image","id":"im/6hsbadkv","slide":24,"name":"","geometry":"roundRect","alt":"WMS 弹窗局部放大","bbox":[560,432,306,168]}
+{"kind":"notes","id":"nt/q13rul","slide":24,"text":""}
+{"kind":"slide","id":"sl/q4a4u0","slide":25,"title":"07 / CASE 03 · WMS","textShapes":11}
+{"kind":"textbox","id":"sh/lwzut43y","slide":25,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/yt8vyp4n","slide":25,"text":"25 / 47","textPreview":"25 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/zuhcruls","slide":25,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/8jad4zmp","slide":25,"text":"RF 只显示当前动作所需的信息。","textPreview":"RF 只显示当前动作所需的信息。","textChars":16,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/9kjux43a","slide":25,"text":"照搬 Web 会让手持机过载，增加现场核对、扫码与误触成本。","textPreview":"照搬 Web 会让手持机过载，增加现场核对、扫码与误触成本。","textChars":30,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/mh8v2p4j","slide":25,"text":"RF 任务模型","textPreview":"RF 任务模型","textChars":7,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/ni1cvul4","slide":25,"text":"RF 的信息架构围绕当前任务，而不是后台模块。","textPreview":"RF 的信息架构围绕当前任务，而不是后台模块。","textChars":23,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/on6tsfm5","slide":25,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/pofulk3q","slide":25,"text":"待办入口减少多层级查找。","textPreview":"待办入口减少多层级查找。","textChars":12,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/1ova18ju","slide":25,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/gnm9s329","slide":25,"text":"扫码后只显示核对与提交字段。","textPreview":"扫码后只显示核对与提交字段。","textChars":14,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/fmdszy1o","slide":25,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/ul4rqtk3","slide":25,"text":"异常和修改按需展开。","textPreview":"异常和修改按需展开。","textChars":10,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/or69w325","slide":25,"text":"任务对象、数量、异常状态和下一步动作被放在手持机首要位置。","textPreview":"任务对象、数量、异常状态和下一步动作被放在手持机首要位置。","textChars":29,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/qdcn6hgj","slide":25,"name":"","geometry":"roundRect","alt":"WMS RF 当前任务界面","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/q4a4u0","slide":25,"text":""}
+{"kind":"slide","id":"sl/5xmr1l","slide":26,"title":"07 / CASE 03 · WMS","textShapes":6}
+{"kind":"textbox","id":"sh/vqd8by14","slide":26,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/wrmp43i9","slide":26,"text":"26 / 47","textPreview":"26 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/xsvqdoju","slide":26,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/m1k7y907","slide":26,"text":"四种 RF 作业模式共享组件，但保留不同流程节奏。","textPreview":"四种 RF 作业模式共享组件，但保留不同流程节奏。","textChars":25,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/n2d87e1s","slide":26,"text":"待办、标准、按箱和按单模式使用统一组件外壳，再按业务复杂度组合字段与步骤。","textPreview":"待办、标准、按箱和按单模式使用统一组件外壳，再按业务复杂度组合字段与步骤。","textChars":37,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/94vq9ojy","slide":26,"text":"复用导航、字段和反馈组件；不同模式按任务深度保留不同确认步骤。","textPreview":"复用导航、字段和反馈组件；不同模式按任务深度保留不同确认步骤。","textChars":31,"textLines":1,"bbox":[64,616,1152,48]}
+{"kind":"image","id":"im/ho3210bi","slide":26,"name":"","geometry":"roundRect","alt":"WMS 四种 RF 作业模式","bbox":[64,214,1152,388]}
+{"kind":"notes","id":"nt/5xmr1l","slide":26,"text":""}
+{"kind":"slide","id":"sl/26ndic","slide":27,"title":"07 / CASE 03 · WMS","textShapes":9}
+{"kind":"textbox","id":"sh/gz6hcruh","slide":27,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/vyxg36tc","slide":27,"text":"27 / 47","textPreview":"27 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/uxoza1cr","slide":27,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/54fi9gbe","slide":27,"text":"操作阻力必须匹配库存风险。","textPreview":"操作阻力必须匹配库存风险。","textChars":13,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/436hgbut","slide":27,"text":"轻流程快确认；删除、修改等危险动作增加防误触、二次确认和结果反馈。","textPreview":"轻流程快确认；删除、修改等危险动作增加防误触、二次确认和结果反馈。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/i1oze1cn","slide":27,"text":"任务核对","textPreview":"任务核对","textChars":4,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/l8vyxcbu","slide":27,"text":"低风险操作减少停顿，需要修改时再展开明细与数量确认。","textPreview":"低风险操作减少停顿，需要修改时再展开明细与数量确认。","textChars":26,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/29o7uxwz","slide":27,"text":"危险操作反馈","textPreview":"危险操作反馈","textChars":6,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/3ax832xk","slide":27,"text":"滑动防误触、二次确认和结果反馈共同降低库存数据风险。","textPreview":"滑动防误触、二次确认和结果反馈共同降低库存数据风险。","textChars":26,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/yt4ri5kb","slide":27,"name":"","geometry":"roundRect","alt":"WMS RF 收货核对","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/x8vq9036","slide":27,"name":"","geometry":"roundRect","alt":"WMS 危险操作反馈","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/26ndic","slide":27,"text":""}
+{"kind":"slide","id":"sl/vqoja1","slide":28,"title":"07 / CASE 03 · WMS","textShapes":22}
+{"kind":"textbox","id":"sh/c7y1k3i5","slide":28,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/b6p0ry1k","slide":28,"text":"28 / 47","textPreview":"28 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/q5gjit0f","slide":28,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/lcrix8z2","slide":28,"text":"复用资产按模块—场景—客户需求重新组合。","textPreview":"复用资产按模块—场景—客户需求重新组合。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/0by1o3ih","slide":28,"text":"沉淀的不是固定页面数量，而是 Web 模板、RF 流程与组件规则之间的映射关系。","textPreview":"沉淀的不是固定页面数量，而是 Web 模板、RF 流程与组件规则之间的映射关系。","textChars":40,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/zap0vihw","slide":28,"bbox":[64,218,272,44]}
+{"kind":"textbox","id":"sh/y9gjmd0b","slide":28,"text":"复用模块","textPreview":"复用模块","textChars":4,"textLines":1,"bbox":[76,230,248,22]}
+{"kind":"shape","id":"sh/90ri1szy","slide":28,"bbox":[352,218,324,44]}
+{"kind":"textbox","id":"sh/8zi1snid","slide":28,"text":"适用场景","textPreview":"适用场景","textChars":4,"textLines":1,"bbox":[364,230,300,22]}
+{"kind":"shape","id":"sh/2xgrux83","slide":28,"bbox":[692,218,298,44]}
+{"kind":"textbox","id":"sh/3ypsn2po","slide":28,"text":"客户差异如何进入","textPreview":"客户差异如何进入","textChars":8,"textLines":1,"bbox":[704,230,274,22]}
+{"kind":"shape","id":"sh/4zy9wnq9","slide":28,"bbox":[1006,218,210,44]}
+{"kind":"textbox","id":"sh/p0raps7u","slide":28,"text":"交付价值","textPreview":"交付价值","textChars":4,"textLines":1,"bbox":[1018,230,186,22]}
+{"kind":"shape","id":"sh/q10ryx8f","slide":28,"bbox":[64,262,272,88]}
+{"kind":"textbox","id":"sh/r29sr2p0","slide":28,"text":"Web 列表 / 表单 / 弹窗","textPreview":"Web 列表 / 表单 / 弹窗","textChars":16,"textLines":1,"bbox":[76,280,248,58]}
+{"kind":"shape","id":"sh/c3i907q5","slide":28,"bbox":[352,262,324,88]}
+{"kind":"textbox","id":"sh/d4ratc7q","slide":28,"text":"配置、查询、异常处理","textPreview":"配置、查询、异常处理","textChars":10,"textLines":1,"bbox":[364,280,300,58]}
+{"kind":"shape","id":"sh/65wrmd8v","slide":28,"bbox":[692,262,298,88]}
+{"kind":"textbox","id":"sh/7658fipg","slide":28,"text":"字段、筛选和权限按客户组合","textPreview":"字段、筛选和权限按客户组合","textChars":13,"textLines":1,"bbox":[704,280,274,58]}
+{"kind":"shape","id":"sh/valone58","slide":28,"bbox":[1006,262,210,88]}
+{"kind":"textbox","id":"sh/a9c7e9on","slide":28,"text":"减少页面重画","textPreview":"减少页面重画","textChars":6,"textLines":1,"bbox":[1018,280,186,58]}
+{"kind":"shape","id":"sh/xc36p4ne","slide":28,"bbox":[64,358,272,88]}
+{"kind":"textbox","id":"sh/wbupgj6t","slide":28,"text":"RF 任务导航 / 扫码 / 反馈","textPreview":"RF 任务导航 / 扫码 / 反馈","textChars":17,"textLines":1,"bbox":[76,376,248,58]}
+{"kind":"shape","id":"sh/n61oju5c","slide":28,"bbox":[352,358,324,88]}
+{"kind":"textbox","id":"sh/m5snapor","slide":28,"text":"收货、核对、提交、异常","textPreview":"收货、核对、提交、异常","textChars":11,"textLines":1,"bbox":[364,376,300,58]}
+{"kind":"shape","id":"sh/98j6l4ni","slide":28,"bbox":[692,358,298,88]}
+{"kind":"textbox","id":"sh/87apcz6x","slide":28,"text":"按 4 种作业模式重组步骤","textPreview":"按 4 种作业模式重组步骤","textChars":13,"textLines":1,"bbox":[704,376,274,58]}
+{"kind":"shape","id":"sh/725ovy5g","slide":28,"bbox":[1006,358,210,88]}
+{"kind":"textbox","id":"sh/61w7mtov","slide":28,"text":"保持现场节奏","textPreview":"保持现场节奏","textChars":6,"textLines":1,"bbox":[1018,376,186,58]}
+{"kind":"shape","id":"sh/4n6lgvmd","slide":28,"bbox":[64,454,272,88]}
+{"kind":"textbox","id":"sh/pofmpg3y","slide":28,"text":"状态 / 权限 / 交互规则","textPreview":"状态 / 权限 / 交互规则","textChars":14,"textLines":1,"bbox":[76,472,248,58]}
+{"kind":"shape","id":"sh/2lo3el47","slide":28,"bbox":[352,454,324,88]}
+{"kind":"textbox","id":"sh/3mx4nqls","slide":28,"text":"危险操作、结果反馈、数据边界","textPreview":"危险操作、结果反馈、数据边界","textChars":14,"textLines":1,"bbox":[364,472,300,58]}
+{"kind":"shape","id":"sh/cbqlkvmp","slide":28,"bbox":[692,454,298,88]}
+{"kind":"textbox","id":"sh/dczmt03a","slide":28,"text":"菜单、用户、仓库三级配置","textPreview":"菜单、用户、仓库三级配置","textChars":12,"textLines":1,"bbox":[704,472,274,58]}
+{"kind":"shape","id":"sh/qpo3il4j","slide":28,"bbox":[1006,454,210,88]}
+{"kind":"textbox","id":"sh/rah4rql4","slide":28,"text":"降低沟通与测试风险","textPreview":"降低沟通与测试风险","textChars":9,"textLines":1,"bbox":[1018,472,186,58]}
+{"kind":"shape","id":"sh/0fqlofml","slide":28,"bbox":[64,574,1152,74]}
+{"kind":"shape","id":"sh/1gzmx036","slide":28,"bbox":[64,574,7,74]}
+{"kind":"textbox","id":"sh/lc7uhw3a","slide":28,"text":"基于模块复用与项目复盘，预计减少约 40% 的重复设计与开发工作。该数字不是长期工时统计。","textPreview":"基于模块复用与项目复盘，预计减少约 40% 的重复设计与开发工作。该数字不是长期工时统计。","textChars":45,"textLines":1,"bbox":[86,592,1112,44]}
+{"kind":"notes","id":"nt/vqoja1","slide":28,"text":""}
+{"kind":"slide","id":"sl/sc3obv","slide":29,"title":"07 / CASE 03 · WMS","textShapes":21}
+{"kind":"textbox","id":"sh/61s3idcv","slide":29,"text":"07 / CASE 03 · WMS","textPreview":"07 / CASE 03 · WMS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/t4jmdsvm","slide":29,"text":"29 / 47","textPreview":"29 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/s3alknu1","slide":29,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/f6l4f2ds","slide":29,"text":"双端交付规模与复用价值分开表达。","textPreview":"双端交付规模与复用价值分开表达。","textChars":16,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/u5cnmxc7","slide":29,"text":"工作量数字证明交付范围；约 40% 是项目复盘后的预估，不是长期工时统计。","textPreview":"工作量数字证明交付范围；约 40% 是项目复盘后的预估，不是长期工时统计。","textChars":37,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/h83mhsvi","slide":29,"text":"28","textPreview":"28","textChars":2,"textLines":1,"bbox":[72,232,255,52]}
+{"kind":"textbox","id":"sh/g7u5o7ux","slide":29,"text":"Web 管理端页面","textPreview":"Web 管理端页面","textChars":9,"textLines":1,"bbox":[72,286,255,42]}
+{"kind":"textbox","id":"sh/3ul4j2do","slide":29,"text":"当前交付记录","textPreview":"当前交付记录","textChars":6,"textLines":1,"bbox":[72,330,255,42]}
+{"kind":"textbox","id":"sh/29cnqxc3","slide":29,"text":"48+","textPreview":"48+","textChars":3,"textLines":1,"bbox":[347,232,255,52]}
+{"kind":"textbox","id":"sh/ovyl0nmx","slide":29,"text":"弹窗与组件","textPreview":"弹窗与组件","textChars":5,"textLines":1,"bbox":[347,286,255,42]}
+{"kind":"textbox","id":"sh/pw7mts32","slide":29,"text":"当前交付记录","textPreview":"当前交付记录","textChars":6,"textLines":1,"bbox":[347,330,255,42]}
+{"kind":"textbox","id":"sh/2tg3yx4r","slide":29,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[622,232,255,52]}
+{"kind":"textbox","id":"sh/nup4rilc","slide":29,"text":"RF 作业模式","textPreview":"RF 作业模式","textChars":7,"textLines":1,"bbox":[622,286,255,42]}
+{"kind":"textbox","id":"sh/cjyl47mt","slide":29,"text":"已落地","textPreview":"已落地","textChars":3,"textLines":1,"bbox":[622,330,255,42]}
+{"kind":"textbox","id":"sh/xkrmxc3e","slide":29,"text":"约 40%","textPreview":"约 40%","textChars":5,"textLines":1,"bbox":[897,232,255,52]}
+{"kind":"textbox","id":"sh/axg32x4n","slide":29,"text":"重复工作减少","textPreview":"重复工作减少","textChars":6,"textLines":1,"bbox":[897,286,255,42]}
+{"kind":"textbox","id":"sh/byp4v2l8","slide":29,"text":"项目复盘预估","textPreview":"项目复盘预估","textChars":6,"textLines":1,"bbox":[897,330,255,42]}
+{"kind":"shape","id":"sh/knil87m5","slide":29,"bbox":[64,364,1152,1]}
+{"kind":"textbox","id":"sh/lorm1c3a","slide":29,"text":"CONTRIBUTION BOUNDARY","textPreview":"CONTRIBUTION BOUNDARY","textChars":21,"textLines":1,"bbox":[64,398,280,20]}
+{"kind":"textbox","id":"sh/t4nmlcve","slide":29,"text":"Miki 主导 RF 端任务、模式、反馈和权限，参与部分 Web 模板；另一位设计师共同完成双端交付。","textPreview":"Miki 主导 RF 端任务、模式、反馈和权限，参与部分 Web 模板；另一位设计师共同完成双端交付。","textChars":51,"textLines":1,"bbox":[64,432,740,126]}
+{"kind":"shape","id":"sh/8jels7e9","slide":29,"bbox":[842,400,374,168]}
+{"kind":"shape","id":"sh/7i54j2do","slide":29,"bbox":[842,400,7,168]}
+{"kind":"textbox","id":"sh/6hw3qxw3","slide":29,"text":"Web 模板、RF 流程与组件规则被沉淀为可复用资产。","textPreview":"Web 模板、RF 流程与组件规则被沉淀为可复用资产。","textChars":27,"textLines":1,"bbox":[864,418,334,138]}
+{"kind":"textbox","id":"sh/h87mpwvq","slide":29,"text":"基于模块复用与项目复盘，预计减少约 40% 的重复设计与开发工作。","textPreview":"基于模块复用与项目复盘，预计减少约 40% 的重复设计与开发工作。","textChars":33,"textLines":1,"bbox":[64,598,1152,40]}
+{"kind":"notes","id":"nt/sc3obv","slide":29,"text":""}
+{"kind":"slide","id":"sl/eh1o1w","slide":30,"title":"08 / CASE 04 · 5G MESSAGE","textShapes":16}
+{"kind":"textbox","id":"sh/xsv2l4b2","slide":30,"text":"08 / CASE 04 · 5G MESSAGE","textPreview":"08 / CASE 04 · 5G MESSAGE","textChars":25,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/apk3apsr","slide":30,"text":"30 / 47","textPreview":"30 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/bqtkjutw","slide":30,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/kfmlgjat","slide":30,"text":"5G 消息：在原生短信与安卓限制下建立移动服务体验。","textPreview":"5G 消息：在原生短信与安卓限制下建立移动服务体验。","textChars":26,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/lgvmp4be","slide":30,"text":"用户体验经理 · 15 人产品部门 · 补充案例","textPreview":"用户体验经理 · 15 人产品部门 · 补充案例","textChars":24,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/yd43e9sn","slide":30,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/zedknet8","slide":30,"text":"在无法像 App 一样自由使用控件、且安卓终端渲染差异明显的条件下，建立可复用规范，并推动评审、培训和规模化交付。","textPreview":"在无法像 App 一样自由使用控件、且安卓终端渲染差异明显的条件下，建立可复用规范，并推动评审、培训和规模化交付。","textChars":57,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/8j6lkjap","slide":30,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/9kfmtora","slide":30,"text":"用户体验经理","textPreview":"用户体验经理","textChars":6,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/pczud4b6","slide":30,"text":"产品形态","textPreview":"产品形态","textChars":4,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/obqdkza1","slide":30,"text":"原生短信 Chatbot","textPreview":"原生短信 Chatbot","textChars":12,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/nahcbutg","slide":30,"text":"核心约束","textPreview":"核心约束","textChars":4,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/298vipsv","slide":30,"text":"安卓终端差异 / 线性流程","textPreview":"安卓终端差异 / 线性流程","textChars":13,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/xgjuh4bi","slide":30,"text":"项目定位","textPreview":"项目定位","textChars":4,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/cfqdozax","slide":30,"text":"ToC 服务交互 + 规范","textPreview":"ToC 服务交互 + 规范","textChars":13,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/ad8vmpsr","slide":30,"text":"此项目证明移动端 ToC 服务交互与规范体系，不包装为增长型案例。","textPreview":"此项目证明移动端 ToC 服务交互与规范体系，不包装为增长型案例。","textChars":33,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"image","id":"im/kn2x4f61","slide":30,"name":"","geometry":"roundRect","alt":"5G 消息移动端服务场景","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/eh1o1w","slide":30,"text":""}
+{"kind":"slide","id":"sl/zz50bx","slide":31,"title":"08 / CASE 04 · 5G MESSAGE","textShapes":22}
+{"kind":"textbox","id":"sh/behknqxk","slide":31,"text":"08 / CASE 04 · 5G MESSAGE","textPreview":"08 / CASE 04 · 5G MESSAGE","textChars":25,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/cfq1gvy5","slide":31,"text":"31 / 47","textPreview":"31 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/dgz2p0fq","slide":31,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/298jalg3","slide":31,"text":"7 类规范用安全区和组件规则守住跨终端一致性。","textPreview":"7 类规范用安全区和组件规则守住跨终端一致性。","textChars":23,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/3ahkjqx8","slide":31,"text":"不追求单台设备上的完美视觉，而是先定义安卓终端都能稳定呈现的边界。","textPreview":"不追求单台设备上的完美视觉，而是先定义安卓终端都能稳定呈现的边界。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/obq1cvyt","slide":31,"text":"7 类可复用规则","textPreview":"7 类可复用规则","textChars":8,"textLines":1,"bbox":[64,214,280,20]}
+{"kind":"shape","id":"sh/pcz2l0fe","slide":31,"bbox":[64,248,150,54]}
+{"kind":"textbox","id":"sh/m5s3mpg7","slide":31,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[78,264,34,24]}
+{"kind":"textbox","id":"sh/761kvaxs","slide":31,"text":"颜色与对比","textPreview":"颜色与对比","textChars":5,"textLines":1,"bbox":[112,263,92,26]}
+{"kind":"shape","id":"sh/7at83yxc","slide":31,"bbox":[228,248,150,54]}
+{"kind":"textbox","id":"sh/m9kratgr","slide":31,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[242,264,34,24]}
+{"kind":"textbox","id":"sh/9cbq58fi","slide":31,"text":"图片与裁切","textPreview":"图片与裁切","textChars":5,"textLines":1,"bbox":[276,263,92,26]}
+{"kind":"shape","id":"sh/8b29c3yx","slide":31,"bbox":[64,318,150,54]}
+{"kind":"textbox","id":"sh/vet87ix8","slide":31,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[78,334,34,24]}
+{"kind":"textbox","id":"sh/udkredgn","slide":31,"text":"卡片消息","textPreview":"卡片消息","textChars":4,"textLines":1,"bbox":[112,333,92,26]}
+{"kind":"shape","id":"sh/hgbq98fe","slide":31,"bbox":[228,318,150,54]}
+{"kind":"textbox","id":"sh/wf29g3yt","slide":31,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[242,334,34,24]}
+{"kind":"textbox","id":"sh/jid8bixk","slide":31,"text":"位置与地图","textPreview":"位置与地图","textChars":5,"textLines":1,"bbox":[276,333,92,26]}
+{"kind":"shape","id":"sh/ih4ridgz","slide":31,"bbox":[64,388,150,54]}
+{"kind":"textbox","id":"sh/e983ql4j","slide":31,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[78,404,34,24]}
+{"kind":"textbox","id":"sh/zahkzqlo","slide":31,"text":"文件消息","textPreview":"文件消息","textChars":4,"textLines":1,"bbox":[112,403,92,26]}
+{"kind":"shape","id":"sh/0bqlsbm9","slide":31,"bbox":[228,388,150,54]}
+{"kind":"textbox","id":"sh/1cz21g3u","slide":31,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[242,404,34,24]}
+{"kind":"textbox","id":"sh/qlojm147","slide":31,"text":"音频 / 视频","textPreview":"音频 / 视频","textChars":7,"textLines":1,"bbox":[276,403,92,26]}
+{"kind":"shape","id":"sh/rmhkv6ls","slide":31,"bbox":[64,458,150,54]}
+{"kind":"textbox","id":"sh/cnqlobmd","slide":31,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[78,474,34,24]}
+{"kind":"textbox","id":"sh/doz2xg3y","slide":31,"text":"输入控件","textPreview":"输入控件","textChars":4,"textLines":1,"bbox":[112,473,92,26]}
+{"kind":"shape","id":"sh/ahs3y54r","slide":31,"bbox":[64,548,314,92]}
+{"kind":"shape","id":"sh/bi1k7alw","slide":31,"bbox":[64,548,7,92]}
+{"kind":"textbox","id":"sh/lc36x4ne","slide":31,"text":"安全区、按钮、内容裁切与终端适配成为设计和交付共同遵守的规则。","textPreview":"安全区、按钮、内容裁切与终端适配成为设计和交付共同遵守的规则。","textChars":31,"textLines":1,"bbox":[86,566,274,62]}
+{"kind":"textbox","id":"sh/jalovu58","slide":31,"text":"原始规范板展示组件、内容类型与适配边界。","textPreview":"原始规范板展示组件、内容类型与适配边界。","textChars":20,"textLines":1,"bbox":[400,638,816,48]}
+{"kind":"image","id":"im/ret8z6xg","slide":31,"name":"","geometry":"roundRect","alt":"5G 消息设计规范证据","bbox":[400,210,816,424]}
+{"kind":"notes","id":"nt/zz50bx","slide":31,"text":""}
+{"kind":"slide","id":"sl/5rbxqa","slide":32,"title":"08 / CASE 04 · 5G MESSAGE","textShapes":6}
+{"kind":"textbox","id":"sh/jy1s3i5g","slide":32,"text":"08 / CASE 04 · 5G MESSAGE","textPreview":"08 / CASE 04 · 5G MESSAGE","textChars":25,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/kzatw3m1","slide":32,"text":"32 / 47","textPreview":"32 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/l0ju58nm","slide":32,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/61cbyd47","slide":32,"text":"Chatbot 流程每一步只保留当前服务决策。","textPreview":"Chatbot 流程每一步只保留当前服务决策。","textChars":23,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/72lc7i5s","slide":32,"text":"信息卡片建立入口，悬浮菜单引导操作，预约状态与结果反馈持续可见。","textPreview":"信息卡片建立入口，悬浮菜单引导操作，预约状态与结果反馈持续可见。","textChars":32,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/t43u9sny","slide":32,"text":"观看重点｜入口识别 → 服务选择 → 预约确认 → 结果反馈","textPreview":"观看重点｜入口识别 → 服务选择 → 预约确认 → 结果反馈","textChars":30,"textLines":1,"bbox":[64,620,1152,28]}
+{"kind":"image","id":"im/dkja1g3u","slide":32,"name":"","geometry":"roundRect","alt":"5G 消息 Chatbot 关键流程节点","bbox":[64,208,1152,402]}
+{"kind":"notes","id":"nt/5rbxqa","slide":32,"text":""}
+{"kind":"slide","id":"sl/ssu6i1","slide":33,"title":"08 / CASE 04 · 5G MESSAGE","textShapes":15}
+{"kind":"textbox","id":"sh/3uxo7exk","slide":33,"text":"08 / CASE 04 · 5G MESSAGE","textPreview":"08 / CASE 04 · 5G MESSAGE","textChars":25,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/4v650ze5","slide":33,"text":"33 / 47","textPreview":"33 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/pwf694fq","slide":33,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/qxon29wb","slide":33,"text":"规范通过 15 人团队、持续培训和 200+ 方案进入规模化交付。","textPreview":"规范通过 15 人团队、持续培训和 200+ 方案进入规模化交付。","textChars":33,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/ryxobexw","slide":33,"text":"一年内持续开展周度分享、月度培训及交互评审，累计 40+ 场团队能力建设活动。","textPreview":"一年内持续开展周度分享、月度培训及交互评审，累计 40+ 场团队能力建设活动。","textChars":39,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/d0f6dof2","slide":33,"text":"15 人团队与能力建设","textPreview":"15 人团队与能力建设","textChars":11,"textLines":1,"bbox":[64,416,408,26]}
+{"kind":"textbox","id":"sh/e1on6tw7","slide":33,"text":"Miki 管理 2 名设计师，并推动规范、评审与培训进入部门协作。","textPreview":"Miki 管理 2 名设计师，并推动规范、评审与培训进入部门协作。","textChars":33,"textLines":1,"bbox":[64,448,408,48]}
+{"kind":"textbox","id":"sh/z2hofyxs","slide":33,"text":"15 人","textPreview":"15 人","textChars":4,"textLines":1,"bbox":[64,530,124,34]}
+{"kind":"textbox","id":"sh/n6907itw","slide":33,"text":"产品部门","textPreview":"产品部门","textChars":4,"textLines":1,"bbox":[64,568,124,38]}
+{"kind":"textbox","id":"sh/m50jedcr","slide":33,"text":"40+","textPreview":"40+","textChars":3,"textLines":1,"bbox":[200,530,124,34]}
+{"kind":"textbox","id":"sh/98bi98b2","slide":33,"text":"能力建设活动","textPreview":"能力建设活动","textChars":6,"textLines":1,"bbox":[200,568,124,38]}
+{"kind":"textbox","id":"sh/o7i1g3uh","slide":33,"text":"200+","textPreview":"200+","textChars":4,"textLines":1,"bbox":[336,530,124,34]}
+{"kind":"textbox","id":"sh/z2903yt0","slide":33,"text":"方案与 Demo","textPreview":"方案与 Demo","textChars":8,"textLines":1,"bbox":[336,568,124,38]}
+{"kind":"textbox","id":"sh/14ri58b6","slide":33,"text":"团队成果与公开证据","textPreview":"团队成果与公开证据","textChars":9,"textLines":1,"bbox":[508,610,708,24]}
+{"kind":"textbox","id":"sh/03i1c3ul","slide":33,"text":"行业奖项和国家试点属于团队与项目整体成果。","textPreview":"行业奖项和国家试点属于团队与项目整体成果。","textChars":21,"textLines":1,"bbox":[508,638,708,48]}
+{"kind":"image","id":"im/pc7ux8zy","slide":33,"name":"","geometry":"roundRect","alt":"5G 消息团队结构与能力建设","bbox":[64,222,408,182]}
+{"kind":"image","id":"im/povi1sri","slide":33,"name":"","geometry":"roundRect","alt":"5G 消息奖项与国家试点公开证据","bbox":[508,208,708,396]}
+{"kind":"notes","id":"nt/ssu6i1","slide":33,"text":""}
+{"kind":"slide","id":"sl/0r15a2","slide":34,"title":"09 / CASE 05 · GPS","textShapes":16}
+{"kind":"textbox","id":"sh/721wrydw","slide":34,"text":"09 / CASE 05 · GPS","textPreview":"09 / CASE 05 · GPS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/s3axk3eh","slide":34,"text":"34 / 47","textPreview":"34 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/tojet8vm","slide":34,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/ix8fetwz","slide":34,"text":"GPS：定位要等 12—15 秒，所以先给概览。","textPreview":"GPS：定位要等 12—15 秒，所以先给概览。","textChars":24,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/jyhwnyxk","slide":34,"text":"设计负责人 · 约 1 个月 · 已上线 · 补充案例","textPreview":"设计负责人 · 约 1 个月 · 已上线 · 补充案例","textChars":27,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/kzqxg3e5","slide":34,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/50jepofq","slide":34,"text":"否决启动即加载全部载体，改为默认概览 + 按需精准定位，并用围栏、告警和轨迹回溯覆盖运行与事故场景。","textPreview":"否决启动即加载全部载体，改为默认概览 + 按需精准定位，并用围栏、告警和轨迹回溯覆盖运行与事故场景。","textChars":50,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/2tcfqdwj","slide":34,"text":"使用者","textPreview":"使用者","textChars":3,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/3ulgzid4","slide":34,"text":"巡检 / 调度 / 管理","textPreview":"巡检 / 调度 / 管理","textChars":12,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/72tovapw","slide":34,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/61k72p8b","slide":34,"text":"设计负责人","textPreview":"设计负责人","textChars":5,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/t4b6xk72","slide":34,"text":"关键约束","textPreview":"关键约束","textChars":4,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/832p4fqh","slide":34,"text":"精准定位 12—15 秒","textPreview":"精准定位 12—15 秒","textChars":12,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/v6dozup8","slide":34,"text":"状态","textPreview":"状态","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/u5476pon","slide":34,"text":"移动端已上线","textPreview":"移动端已上线","textChars":6,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/g7mp8z6d","slide":34,"text":"开场直接使用真实地图界面，证明定位、辖区与状态信息。","textPreview":"开场直接使用真实地图界面，证明定位、辖区与状态信息。","textChars":26,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"image","id":"im/ihk3ud4n","slide":34,"name":"","geometry":"roundRect","alt":"GPS 真实地图定位界面","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/0r15a2","slide":34,"text":""}
+{"kind":"slide","id":"sl/tbckih","slide":35,"title":"09 / CASE 05 · GPS","textShapes":9}
+{"kind":"textbox","id":"sh/hs3u5kfm","slide":35,"text":"09 / CASE 05 · GPS","textPreview":"09 / CASE 05 · GPS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/upcvu5wb","slide":35,"text":"35 / 47","textPreview":"35 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/vqlc3axw","slide":35,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/8nadsve5","slide":35,"text":"默认概览保证主任务流畅，精准定位只在需要时发生。","textPreview":"默认概览保证主任务流畅，精准定位只在需要时发生。","textChars":24,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/toju10fq","slide":35,"text":"把等待成本留给明确的排查任务，而不是让所有用户在启动时承担。","textPreview":"把等待成本留给明确的排查任务，而不是让所有用户在启动时承担。","textChars":30,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/7m1czqxk","slide":35,"text":"默认概览","textPreview":"默认概览","textChars":4,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/sjed4ze9","slide":35,"text":"优先显示运行与异常载体，让用户先获得可操作的全局状态。","textPreview":"优先显示运行与异常载体，让用户先获得可操作的全局状态。","textChars":27,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/d0bihwn2","slide":35,"text":"按需精准定位","textPreview":"按需精准定位","textChars":6,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/cz2hor6h","slide":35,"text":"排查特定载体时再发起请求，避免全量加载造成长等待。","textPreview":"排查特定载体时再发起请求，避免全量加载造成长等待。","textChars":25,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/bulsneho","slide":35,"name":"","geometry":"roundRect","alt":"GPS 默认概览","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/kje9kjil","slide":35,"name":"","geometry":"roundRect","alt":"GPS 按需精准定位","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/tbckih","slide":35,"text":""}
+{"kind":"slide","id":"sl/lamg8g","slide":36,"title":"09 / CASE 05 · GPS","textShapes":11}
+{"kind":"textbox","id":"sh/0nedw3mt","slide":36,"text":"09 / CASE 05 · GPS","textPreview":"09 / CASE 05 · GPS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/zm5wnyl8","slide":36,"text":"36 / 47","textPreview":"36 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/elwvut4n","slide":36,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/d0nel832","slide":36,"text":"定位、告警与轨迹回溯覆盖运行和事故场景。","textPreview":"定位、告警与轨迹回溯覆盖运行和事故场景。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/czeds3mx","slide":36,"text":"地图界面背后是状态、异常、辖区和责任追溯链路。","textPreview":"地图界面背后是状态、异常、辖区和责任追溯链路。","textChars":23,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/qxcvqt4r","slide":36,"text":"定位","textPreview":"定位","textChars":2,"textLines":1,"bbox":[360,238,110,50]}
+{"kind":"textbox","id":"sh/pw3uhon6","slide":36,"text":"地区折叠与地图状态帮助调度理解辖区。","textPreview":"地区折叠与地图状态帮助调度理解辖区。","textChars":18,"textLines":1,"bbox":[360,304,110,170]}
+{"kind":"textbox","id":"sh/2pw76tsj","slide":36,"text":"告警","textPreview":"告警","textChars":2,"textLines":1,"bbox":[750,238,110,50]}
+{"kind":"textbox","id":"sh/3qpofyt4","slide":36,"text":"按紧急程度和时间过滤消息，减少过载。","textPreview":"按紧急程度和时间过滤消息，减少过载。","textChars":18,"textLines":1,"bbox":[750,304,110,170]}
+{"kind":"textbox","id":"sh/ps76h8ba","slide":36,"text":"轨迹","textPreview":"轨迹","textChars":2,"textLines":1,"bbox":[1140,238,110,50]}
+{"kind":"textbox","id":"sh/elwn29sn","slide":36,"text":"历史路径回放支持事故复盘与追溯。","textPreview":"历史路径回放支持事故复盘与追溯。","textChars":16,"textLines":1,"bbox":[1140,304,110,170]}
+{"kind":"image","id":"im/apcfu18n","slide":36,"name":"","geometry":"roundRect","alt":"GPS 地图定位","bbox":[94,214,250,410]}
+{"kind":"image","id":"im/twjydc7a","slide":36,"name":"","geometry":"roundRect","alt":"GPS 告警筛选","bbox":[484,214,250,410]}
+{"kind":"image","id":"im/329cz2xs","slide":36,"name":"","geometry":"roundRect","alt":"GPS 历史轨迹","bbox":[874,214,250,410]}
+{"kind":"notes","id":"nt/lamg8g","slide":36,"text":""}
+{"kind":"slide","id":"sl/n91iku","slide":37,"title":"09 / CASE 05 · GPS","textShapes":11}
+{"kind":"textbox","id":"sh/3e1czux8","slide":37,"text":"09 / CASE 05 · GPS","textPreview":"09 / CASE 05 · GPS","textChars":18,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/ofat8zyt","slide":37,"text":"37 / 47","textPreview":"37 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/pgju14fy","slide":37,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/qhcva9gj","slide":37,"text":"产品已上线，但工具不会瞬间改写协作习惯。","textPreview":"产品已上线，但工具不会瞬间改写协作习惯。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/bilc3ex4","slide":37,"text":"上线初期，部分业务员仍使用电话确认运载细节；界面能降低信息不确定，行为迁移仍需要时间。","textPreview":"上线初期，部分业务员仍使用电话确认运载细节；界面能降低信息不确定，行为迁移仍需要时间。","textChars":43,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/cjudcjyp","slide":37,"text":"项目收尾","textPreview":"项目收尾","textChars":4,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/dk3u54fa","slide":37,"text":"这个案例最有价值的证据，是对定位延迟的明确取舍。","textPreview":"这个案例最有价值的证据，是对定位延迟的明确取舍。","textChars":24,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/6l8by5gf","slide":37,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/rmhcrax0","slide":37,"text":"12—15 秒延迟来自产品与开发协同测试。","textPreview":"12—15 秒延迟来自产品与开发协同测试。","textChars":21,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/3a5cn2d4","slide":37,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/i9wbexwj","slide":37,"text":"默认概览保证主任务流畅度。","textPreview":"默认概览保证主任务流畅度。","textChars":13,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/5cnupcva","slide":37,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/4betg7ep","slide":37,"text":"精准定位按需触发。","textPreview":"精准定位按需触发。","textChars":9,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/ulwbadwn","slide":37,"text":"真实地图、状态和操作入口共同证明移动端产品落地。","textPreview":"真实地图、状态和操作入口共同证明移动端产品落地。","textChars":24,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/gzmhwbud","slide":37,"name":"","geometry":"roundRect","alt":"GPS 上线移动端真实界面","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/n91iku","slide":37,"text":""}
+{"kind":"slide","id":"sl/3ro92o","slide":38,"title":"10 / CASE 06 · FACTORY DASHBOARD","textShapes":16}
+{"kind":"textbox","id":"sh/47ep8fi5","slide":38,"text":"10 / CASE 06 · FACTORY DASHBOARD","textPreview":"10 / CASE 06 · FACTORY DASHBOARD","textChars":32,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/36lofa1k","slide":38,"text":"38 / 47","textPreview":"38 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/i5c76p0z","slide":38,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/h436dkje","slide":38,"text":"工厂大屏：把分散指标组织成异常发现入口。","textPreview":"工厂大屏：把分散指标组织成异常发现入口。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/g3up4fit","slide":38,"text":"设计负责人 · 约 2 个月 · 数据可视化补充案例","textPreview":"设计负责人 · 约 2 个月 · 数据可视化补充案例","textChars":26,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/v2loba18","slide":38,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/u1c7250n","slide":38,"text":"完成两块管理大屏的 UI/UX 设计与交付，覆盖生产、设备、质量与异常，帮助管理人员集中查看状态并快速发现问题。","textPreview":"完成两块管理大屏的 UI/UX 设计与交付，覆盖生产、设备、质量与异常，帮助管理人员集中查看状态并快速发现问题。","textChars":56,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/107qp4ji","slide":38,"text":"使用者","textPreview":"使用者","textChars":3,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/0zypgzix","slide":38,"text":"管理人员","textPreview":"管理人员","textChars":4,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/u1ob6hs3","slide":38,"text":"我的角色","textPreview":"我的角色","textChars":4,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/v2xczm9o","slide":38,"text":"设计负责人","textPreview":"设计负责人","textChars":5,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/g36t8ra9","slide":38,"text":"交付","textPreview":"交付","textChars":2,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/h4fu1wru","slide":38,"text":"2 块管理大屏","textPreview":"2 块管理大屏","textChars":7,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/6d4b2hs7","slide":38,"text":"范围","textPreview":"范围","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/7edsvm9s","slide":38,"text":"数据结构 / UI / UX","textPreview":"数据结构 / UI / UX","textChars":14,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/t0vuxcri","slide":38,"text":"大屏证明工业数据可视化和视觉完成度，不使用缺少样本支持的精确百分比。","textPreview":"大屏证明工业数据可视化和视觉完成度，不使用缺少样本支持的精确百分比。","textChars":34,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"image","id":"im/fexsvutg","slide":38,"name":"","geometry":"roundRect","alt":"智能工厂最终数据大屏","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/3ro92o","slide":38,"text":""}
+{"kind":"slide","id":"sl/o6zcv7","slide":39,"title":"10 / CASE 06 · FACTORY DASHBOARD","textShapes":9}
+{"kind":"textbox","id":"sh/t8bux0f2","slide":39,"text":"10 / CASE 06 · FACTORY DASHBOARD","textPreview":"10 / CASE 06 · FACTORY DASHBOARD","textChars":32,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/650v25wb","slide":39,"text":"39 / 47","textPreview":"39 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/769cvqxw","slide":39,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/gv2d8fed","slide":39,"text":"先按全局—趋势—异常分级，再选择图表。","textPreview":"先按全局—趋势—异常分级，再选择图表。","textChars":19,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/hwbu1kvy","slide":39,"text":"管理者需要看见产线状态、趋势变化和故障来源，而不是更多图表。","textPreview":"管理者需要看见产线状态、趋势变化和故障来源，而不是更多图表。","textChars":30,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/fatczax8","slide":39,"text":"问题与数据结构","textPreview":"问题与数据结构","textChars":7,"textLines":1,"bbox":[64,598,540,26]}
+{"kind":"textbox","id":"sh/4zmdcfep","slide":39,"text":"生产、设备、质量和异常被连接到管理判断。","textPreview":"生产、设备、质量和异常被连接到管理判断。","textChars":20,"textLines":1,"bbox":[64,628,540,34]}
+{"kind":"textbox","id":"sh/xgzup83m","slide":39,"text":"信息需求","textPreview":"信息需求","textChars":4,"textLines":1,"bbox":[652,598,540,26]}
+{"kind":"textbox","id":"sh/wfqtg3m1","slide":39,"text":"不同管理任务对全局、趋势、告警和追溯的需求不同。","textPreview":"不同管理任务对全局、趋势、告警和追溯的需求不同。","textChars":24,"textLines":1,"bbox":[652,628,540,34]}
+{"kind":"image","id":"im/zml076dw","slide":39,"name":"","geometry":"roundRect","alt":"工厂大屏问题与数据结构","bbox":[64,206,540,382]}
+{"kind":"image","id":"im/8rehkbed","slide":39,"name":"","geometry":"roundRect","alt":"工厂管理用户信息需求","bbox":[652,206,540,382]}
+{"kind":"notes","id":"nt/o6zcv7","slide":39,"text":""}
+{"kind":"slide","id":"sl/lf8g08","slide":40,"title":"10 / CASE 06 · FACTORY DASHBOARD","textShapes":9}
+{"kind":"textbox","id":"sh/bmlozypk","slide":40,"text":"10 / CASE 06 · FACTORY DASHBOARD","textPreview":"10 / CASE 06 · FACTORY DASHBOARD","textChars":32,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/wnu5s365","slide":40,"text":"40 / 47","textPreview":"40 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/xo361o7q","slide":40,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/ypwnutob","slide":40,"text":"两块大屏完成交付，小范围阶段回访整体正向。","textPreview":"两块大屏完成交付，小范围阶段回访整体正向。","textChars":21,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/ja5o3ypw","slide":40,"text":"结果只保留可解释的交付事实与阶段反馈，不使用样本不足的精确比例。","textPreview":"结果只保留可解释的交付事实与阶段反馈，不使用样本不足的精确比例。","textChars":32,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/lcn65872","slide":40,"text":"生产与设备","textPreview":"生产与设备","textChars":5,"textLines":1,"bbox":[64,566,550,30]}
+{"kind":"textbox","id":"sh/6dwnydo7","slide":40,"text":"集中查看全局状态、趋势与设备健康度。","textPreview":"集中查看全局状态、趋势与设备健康度。","textChars":18,"textLines":1,"bbox":[64,604,550,48]}
+{"kind":"textbox","id":"sh/7epwjq9g","slide":40,"text":"质量与异常","textPreview":"质量与异常","textChars":5,"textLines":1,"bbox":[650,566,550,30]}
+{"kind":"textbox","id":"sh/6dwvql8v","slide":40,"text":"状态色和阈值帮助管理人员快速发现异常。","textPreview":"状态色和阈值帮助管理人员快速发现异常。","textChars":19,"textLines":1,"bbox":[650,604,550,48]}
+{"kind":"image","id":"im/5gb2x8f2","slide":40,"name":"","geometry":"roundRect","alt":"智能工厂生产与设备大屏","bbox":[64,220,550,330]}
+{"kind":"image","id":"im/yhgjq9g7","slide":40,"name":"","geometry":"roundRect","alt":"智能工厂质量与异常大屏","bbox":[650,220,550,330]}
+{"kind":"notes","id":"nt/lf8g08","slide":40,"text":""}
+{"kind":"slide","id":"sl/7mo96u","slide":41,"title":"11 / AI-ASSISTED DESIGN ENGINEERING","textShapes":17}
+{"kind":"textbox","id":"sh/t4325cni","slide":41,"text":"11 / AI-ASSISTED DESIGN ENGINEERING","textPreview":"11 / AI-ASSISTED DESIGN ENGINEERING","textChars":35,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/61sjax4r","slide":41,"text":"41 / 47","textPreview":"41 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/r21k325c","slide":41,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/4za18nm1","slide":41,"text":"AI 辅助设计工程实践：个人作品集网站。","textPreview":"AI 辅助设计工程实践：个人作品集网站。","textChars":20,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/50ji1snm","slide":41,"text":"真实独立实践 · Figma → Codex 首版 → 人工判断 → 规则重构 → QA","textPreview":"真实独立实践 · Figma → Codex 首版 → 人工判断 → 规则重构 → QA","textChars":44,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/ixsj6d4v","slide":41,"text":"PROJECT CONCLUSION","textPreview":"PROJECT CONCLUSION","textChars":18,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/jy10zi5g","slide":41,"text":"AI 加速了首版实现，但 Miki 负责识别结构与响应式问题、重新定义布局和组件规则，并完成 QA 与交付。","textPreview":"AI 加速了首版实现，但 Miki 负责识别结构与响应式问题、重新定义布局和组件规则，并完成 QA 与交付。","textChars":54,"textLines":1,"bbox":[64,252,470,112]}
+{"kind":"textbox","id":"sh/ove1krm5","slide":41,"text":"设计输入","textPreview":"设计输入","textChars":4,"textLines":1,"bbox":[64,392,220,20]}
+{"kind":"textbox","id":"sh/pwn2dwnq","slide":41,"text":"原始 Figma","textPreview":"原始 Figma","textChars":8,"textLines":1,"bbox":[64,416,220,44]}
+{"kind":"textbox","id":"sh/p4bqp8zm","slide":41,"text":"首版实现","textPreview":"首版实现","textChars":4,"textLines":1,"bbox":[304,392,220,20]}
+{"kind":"textbox","id":"sh/o329g3i1","slide":41,"text":"Codex","textPreview":"Codex","textChars":5,"textLines":1,"bbox":[304,416,220,44]}
+{"kind":"textbox","id":"sh/32t8nyhg","slide":41,"text":"人工责任","textPreview":"人工责任","textChars":4,"textLines":1,"bbox":[64,468,220,20]}
+{"kind":"textbox","id":"sh/21k7et0v","slide":41,"text":"结构 / 响应式 / 组件","textPreview":"结构 / 响应式 / 组件","textChars":13,"textLines":1,"bbox":[64,492,220,44]}
+{"kind":"textbox","id":"sh/10bqloza","slide":41,"text":"交付","textPreview":"交付","textChars":2,"textLines":1,"bbox":[304,468,220,20]}
+{"kind":"textbox","id":"sh/gz2pcjip","slide":41,"text":"最终网站 + QA","textPreview":"最终网站 + QA","textChars":9,"textLines":1,"bbox":[304,492,220,44]}
+{"kind":"textbox","id":"sh/ex07at0z","slide":41,"text":"最早可验证视觉证据：首版已能运行，但更像线性展示，结构与响应式规则仍不完整。","textPreview":"最早可验证视觉证据：首版已能运行，但更像线性展示，结构与响应式规则仍不完整。","textChars":38,"textLines":1,"bbox":[596,584,620,48]}
+{"kind":"textbox","id":"sh/lwvqxszu","slide":41,"text":"当前公开资料未包含可直接导出的完整 Figma 画板，因此不伪造截图；以真实首版实现作为最早视觉证据。","textPreview":"当前公开资料未包含可直接导出的完整 Figma 画板，因此不伪造截图；以真实首版实现作为最早视觉证据。","textChars":51,"textLines":1,"bbox":[64,590,470,44]}
+{"kind":"image","id":"im/ofq983ap","slide":41,"name":"","geometry":"roundRect","alt":"Codex 首版作品集网站","bbox":[596,218,620,350]}
+{"kind":"notes","id":"nt/7mo96u","slide":41,"text":""}
+{"kind":"slide","id":"sl/6ajygh","slide":42,"title":"11 / AI-ASSISTED DESIGN ENGINEERING","textShapes":9}
+{"kind":"textbox","id":"sh/3ylczm9g","slide":42,"text":"11 / AI-ASSISTED DESIGN ENGINEERING","textPreview":"11 / AI-ASSISTED DESIGN ENGINEERING","textChars":35,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/ozuts7q1","slide":42,"text":"42 / 47","textPreview":"42 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/p03u1crm","slide":42,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/q1cbuh87","slide":42,"text":"首版能运行，最终版才形成可浏览的产品作品集。","textPreview":"首版能运行，最终版才形成可浏览的产品作品集。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/b2lc3m9s","slide":42,"text":"对比不评价 AI 好坏，只显示设计师如何审查输出并把问题转成规则。","textPreview":"对比不评价 AI 好坏，只显示设计师如何审查输出并把问题转成规则。","textChars":33,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/do3u5wri","slide":42,"text":"Codex 首版","textPreview":"Codex 首版","textChars":8,"textLines":1,"bbox":[64,598,540,26]}
+{"kind":"textbox","id":"sh/658bixsn","slide":42,"text":"层级过度集中在巨型标题，页面更像演示稿，网站浏览路径不清。","textPreview":"层级过度集中在巨型标题，页面更像演示稿，网站浏览路径不清。","textChars":29,"textLines":1,"bbox":[64,628,540,34]}
+{"kind":"textbox","id":"sh/fm1kr65w","slide":42,"text":"规则重构后","textPreview":"规则重构后","textChars":5,"textLines":1,"bbox":[652,598,540,26]}
+{"kind":"textbox","id":"sh/ulsji1ob","slide":42,"text":"项目、验证、方法和联系路径按网站节奏组织，组件与视觉语言更统一。","textPreview":"项目、验证、方法和联系路径按网站节奏组织，组件与视觉语言更统一。","textChars":32,"textLines":1,"bbox":[652,628,540,34]}
+{"kind":"image","id":"im/xovyh0vi","slide":42,"name":"","geometry":"roundRect","alt":"Codex 首版作品集网站","bbox":[64,206,540,382]}
+{"kind":"image","id":"im/yp4zq5c3","slide":42,"name":"","geometry":"roundRect","alt":"重构后的作品集网站","bbox":[652,206,540,382]}
+{"kind":"notes","id":"nt/6ajygh","slide":42,"text":""}
+{"kind":"slide","id":"sl/pa2hv3","slide":43,"title":"11 / AI-ASSISTED DESIGN ENGINEERING","textShapes":23}
+{"kind":"textbox","id":"sh/8jqtkz2l","slide":43,"text":"11 / AI-ASSISTED DESIGN ENGINEERING","textPreview":"11 / AI-ASSISTED DESIGN ENGINEERING","textChars":35,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/7ihsrulg","slide":43,"text":"43 / 47","textPreview":"43 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/6x8bi94v","slide":43,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/lwzap43a","slide":43,"text":"AI 生成页面之后，设计师重新定义三类规则。","textPreview":"AI 生成页面之后，设计师重新定义三类规则。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/kvqtgzmp","slide":43,"text":"首版能运行，但结构、响应式和组件节奏仍需要人工判断。","textPreview":"首版能运行，但结构、响应式和组件节奏仍需要人工判断。","textChars":26,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/zuhsnul4","slide":43,"bbox":[64,222,352,364]}
+{"kind":"textbox","id":"sh/ytorep4j","slide":43,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[86,242,52,34]}
+{"kind":"textbox","id":"sh/5sju1o3e","slide":43,"text":"结构","textPreview":"结构","textChars":2,"textLines":1,"bbox":[146,240,220,34]}
+{"kind":"textbox","id":"sh/4ratsj2t","slide":43,"text":"问题","textPreview":"问题","textChars":2,"textLines":1,"bbox":[86,308,80,24]}
+{"kind":"textbox","id":"sh/qhgvyd4f","slide":43,"text":"首版更像线性 PPT，案例、方法和转化路径缺少网站浏览节奏。","textPreview":"首版更像线性 PPT，案例、方法和转化路径缺少网站浏览节奏。","textChars":30,"textLines":1,"bbox":[86,342,308,90]}
+{"kind":"textbox","id":"sh/ripcri50","slide":43,"text":"判断","textPreview":"判断","textChars":2,"textLines":1,"bbox":[86,456,80,24]}
+{"kind":"textbox","id":"sh/cjid0nml","slide":43,"text":"按问题—案例—验证—信任重新组织首页。","textPreview":"按问题—案例—验证—信任重新组织首页。","textChars":19,"textLines":1,"bbox":[86,490,308,70]}
+{"kind":"shape","id":"sh/dkrutsn6","slide":43,"bbox":[448,222,352,364]}
+{"kind":"textbox","id":"sh/2tgbud4j","slide":43,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[470,242,52,34]}
+{"kind":"textbox","id":"sh/3upcni54","slide":43,"text":"响应式","textPreview":"响应式","textChars":3,"textLines":1,"bbox":[530,240,220,34]}
+{"kind":"textbox","id":"sh/4vytwnm9","slide":43,"text":"问题","textPreview":"问题","textChars":2,"textLines":1,"bbox":[470,308,80,24]}
+{"kind":"textbox","id":"sh/pg7up8nu","slide":43,"text":"大字号、横向内容和固定宽度在小屏存在溢出与阅读断裂。","textPreview":"大字号、横向内容和固定宽度在小屏存在溢出与阅读断裂。","textChars":26,"textLines":1,"bbox":[470,342,308,90]}
+{"kind":"textbox","id":"sh/mp0v6x4n","slide":43,"text":"判断","textPreview":"判断","textChars":2,"textLines":1,"bbox":[470,456,80,24]}
+{"kind":"textbox","id":"sh/nq9cz258","slide":43,"text":"定义断点、容器、字号、换行与内容降级规则。","textPreview":"定义断点、容器、字号、换行与内容降级规则。","textChars":21,"textLines":1,"bbox":[470,490,308,70]}
+{"kind":"shape","id":"sh/ji10bah8","slide":43,"bbox":[832,222,352,364]}
+{"kind":"textbox","id":"sh/yhsj25g3","slide":43,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[854,242,52,34]}
+{"kind":"textbox","id":"sh/lkjid0ze","slide":43,"text":"组件","textPreview":"组件","textChars":2,"textLines":1,"bbox":[914,240,220,34]}
+{"kind":"textbox","id":"sh/kja14fyt","slide":43,"text":"问题","textPreview":"问题","textChars":2,"textLines":1,"bbox":[854,308,80,24]}
+{"kind":"textbox","id":"sh/7m10fahk","slide":43,"text":"卡片、间距、状态和交互反馈缺少统一约束。","textPreview":"卡片、间距、状态和交互反馈缺少统一约束。","textChars":20,"textLines":1,"bbox":[854,342,308,90]}
+{"kind":"textbox","id":"sh/6lsj65gz","slide":43,"text":"判断","textPreview":"判断","textChars":2,"textLines":1,"bbox":[854,456,80,24]}
+{"kind":"textbox","id":"sh/to3ihkzq","slide":43,"text":"将重复界面整理为组件、状态和 QA 检查项。","textPreview":"将重复界面整理为组件、状态和 QA 检查项。","textChars":22,"textLines":1,"bbox":[854,490,308,70]}
+{"kind":"notes","id":"nt/pa2hv3","slide":43,"text":""}
+{"kind":"slide","id":"sl/vkg7mx","slide":44,"title":"11 / AI-ASSISTED DESIGN ENGINEERING","textShapes":19}
+{"kind":"textbox","id":"sh/m9kra10b","slide":44,"text":"11 / AI-ASSISTED DESIGN ENGINEERING","textPreview":"11 / AI-ASSISTED DESIGN ENGINEERING","textChars":35,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/9cva5gzm","slide":44,"text":"44 / 47","textPreview":"44 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/ob29cbih","slide":44,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/z6tsz6hk","slide":44,"text":"QA 清单把 AI 输出审查变成交付步骤。","textPreview":"QA 清单把 AI 输出审查变成交付步骤。","textChars":21,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/e5kr610z","slide":44,"text":"AI 负责加速实现与修改；Miki 负责定义标准、识别问题、取舍优先级和最终验收。","textPreview":"AI 负责加速实现与修改；Miki 负责定义标准、识别问题、取舍优先级和最终验收。","textChars":41,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"shape","id":"sh/18ba1wzq","slide":44,"bbox":[64,234,246,318]}
+{"kind":"textbox","id":"sh/07298ri5","slide":44,"text":"版式","textPreview":"版式","textChars":2,"textLines":1,"bbox":[82,254,200,28]}
+{"kind":"shape","id":"sh/ri98vm1o","slide":44,"bbox":[82,316,7,7]}
+{"kind":"textbox","id":"sh/qh0r2h03","slide":44,"text":"1440 / 1536 / 1600 桌面宽度","textPreview":"1440 / 1536 / 1600 桌面宽度","textChars":23,"textLines":1,"bbox":[100,308,192,50]}
+{"kind":"shape","id":"sh/0rq5gr6h","slide":44,"bbox":[82,382,7,7]}
+{"kind":"textbox","id":"sh/1szmpw72","slide":44,"text":"移动端横向溢出","textPreview":"移动端横向溢出","textChars":7,"textLines":1,"bbox":[100,374,192,50]}
+{"kind":"shape","id":"sh/ep8ne1or","slide":44,"bbox":[82,448,7,7]}
+{"kind":"textbox","id":"sh/zqh4nmpc","slide":44,"text":"标题换行与最小字号","textPreview":"标题换行与最小字号","textChars":9,"textLines":1,"bbox":[100,440,192,50]}
+{"kind":"shape","id":"sh/cnq5cr6l","slide":44,"bbox":[334,234,246,318]}
+{"kind":"textbox","id":"sh/dozmlw76","slide":44,"text":"组件","textPreview":"组件","textChars":2,"textLines":1,"bbox":[352,254,200,28]}
+{"kind":"shape","id":"sh/q1onahof","slide":44,"bbox":[352,316,7,7]}
+{"kind":"textbox","id":"sh/r2h4jmp0","slide":44,"text":"间距和容器规则","textPreview":"间距和容器规则","textChars":7,"textLines":1,"bbox":[370,308,192,50]}
+{"kind":"shape","id":"sh/wja5ob6p","slide":44,"bbox":[352,382,7,7]}
+{"kind":"textbox","id":"sh/xkj6xg7a","slide":44,"text":"卡片状态与反馈","textPreview":"卡片状态与反馈","textChars":7,"textLines":1,"bbox":[370,374,192,50]}
+{"kind":"shape","id":"sh/5gzm1gze","slide":44,"bbox":[352,448,7,7]}
+{"kind":"textbox","id":"sh/kf658by9","slide":44,"text":"重复样式统一","textPreview":"重复样式统一","textChars":6,"textLines":1,"bbox":[370,440,192,50]}
+{"kind":"shape","id":"sh/jex4z6ho","slide":44,"bbox":[604,234,246,318]}
+{"kind":"textbox","id":"sh/idon61g3","slide":44,"text":"交付","textPreview":"交付","textChars":2,"textLines":1,"bbox":[622,254,200,28]}
+{"kind":"shape","id":"sh/xcfmxgzi","slide":44,"bbox":[622,316,7,7]}
+{"kind":"textbox","id":"sh/wb654byx","slide":44,"text":"目标页面返回 200","textPreview":"目标页面返回 200","textChars":10,"textLines":1,"bbox":[640,308,192,50]}
+{"kind":"shape","id":"sh/vax4v6hc","slide":44,"bbox":[622,382,7,7]}
+{"kind":"textbox","id":"sh/a9on21gr","slide":44,"text":"静态资源无 404","textPreview":"静态资源无 404","textChars":9,"textLines":1,"bbox":[640,374,192,50]}
+{"kind":"shape","id":"sh/98fmtwz6","slide":44,"bbox":[622,448,7,7]}
+{"kind":"textbox","id":"sh/87ml0ry1","slide":44,"text":"生产构建通过","textPreview":"生产构建通过","textChars":6,"textLines":1,"bbox":[640,440,192,50]}
+{"kind":"textbox","id":"sh/z29snyts","slide":44,"text":"最终网站通过结构、响应式、组件与交付检查。","textPreview":"最终网站通过结构、响应式、组件与交付检查。","textChars":21,"textLines":1,"bbox":[900,568,316,48]}
+{"kind":"shape","id":"sh/032tg3ad","slide":44,"bbox":[64,596,788,62]}
+{"kind":"shape","id":"sh/14bap8by","slide":44,"bbox":[64,596,7,62]}
+{"kind":"textbox","id":"sh/qd0batsb","slide":44,"text":"设计到代码并不是接受首版输出，而是把审查结果转成可重复的布局、组件和 QA 规则。","textPreview":"设计到代码并不是接受首版输出，而是把审查结果转成可重复的布局、组件和 QA 规则。","textChars":41,"textLines":1,"bbox":[86,614,748,32]}
+{"kind":"image","id":"im/lwf2xo76","slide":44,"name":"","geometry":"roundRect","alt":"最终个人作品集网站","bbox":[900,234,316,318]}
+{"kind":"notes","id":"nt/vkg7mx","slide":44,"text":""}
+{"kind":"slide","id":"sl/wkn2ox","slide":45,"title":"11 / AI-ASSISTED DESIGN ENGINEERING","textShapes":11}
+{"kind":"textbox","id":"sh/tk3qhcvq","slide":45,"text":"11 / AI-ASSISTED DESIGN ENGINEERING","textPreview":"11 / AI-ASSISTED DESIGN ENGINEERING","textChars":35,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/6hc7mxcf","slide":45,"text":"45 / 47","textPreview":"45 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/7ilof2dk","slide":45,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/g7ups7uh","slide":45,"text":"AI 提高实现速度，设计师对结果与交付负责。","textPreview":"AI 提高实现速度，设计师对结果与交付负责。","textChars":22,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/h8nqlcv2","slide":45,"text":"该实践证明设计到代码、AI 输出审查、响应式与组件规则、QA 和最终交付。","textPreview":"该实践证明设计到代码、AI 输出审查、响应式与组件规则、QA 和最终交付。","textChars":37,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/u5c7qhcb","slide":45,"text":"最终产出","textPreview":"最终产出","textChars":4,"textLines":1,"bbox":[64,220,280,20]}
+{"kind":"textbox","id":"sh/f6l8jmdw","slide":45,"text":"最终网站不是首版生成结果，而是多轮判断、修改和验证后的产品。","textPreview":"最终网站不是首版生成结果，而是多轮判断、修改和验证后的产品。","textChars":30,"textLines":1,"bbox":[64,252,420,92]}
+{"kind":"shape","id":"sh/wbapgnux","slide":45,"bbox":[64,378,7,7]}
+{"kind":"textbox","id":"sh/xcj69svi","slide":45,"text":"AI：生成首版、辅助修改与规则检查。","textPreview":"AI：生成首版、辅助修改与规则检查。","textChars":18,"textLines":1,"bbox":[82,370,412,50]}
+{"kind":"shape","id":"sh/p4rapgje","slide":45,"bbox":[64,450,7,7]}
+{"kind":"textbox","id":"sh/43i9wb2t","slide":45,"text":"Miki：问题判断、布局与组件规则、优先级和验收。","textPreview":"Miki：问题判断、布局与组件规则、优先级和验收。","textChars":25,"textLines":1,"bbox":[82,442,412,50]}
+{"kind":"shape","id":"sh/329sn618","slide":45,"bbox":[64,522,7,7]}
+{"kind":"textbox","id":"sh/2h0ru1kn","slide":45,"text":"交付：可运行网站、响应式规则与 QA 清单。","textPreview":"交付：可运行网站、响应式规则与 QA 清单。","textChars":22,"textLines":1,"bbox":[82,514,412,50]}
+{"kind":"textbox","id":"sh/c7i90b25","slide":45,"text":"最终页面把复杂产品定位、项目证据和联系路径组织为可浏览的求职材料。","textPreview":"最终页面把复杂产品定位、项目证据和联系路径组织为可浏览的求职材料。","textChars":33,"textLines":1,"bbox":[532,614,684,48]}
+{"kind":"image","id":"im/25gr25k7","slide":45,"name":"","geometry":"roundRect","alt":"最终个人作品集网站","bbox":[532,218,684,382]}
+{"kind":"notes","id":"nt/wkn2ox","slide":45,"text":""}
+{"kind":"slide","id":"sl/qv1usv","slide":46,"title":"12 / SELECTED ARCHIVE","textShapes":25}
+{"kind":"textbox","id":"sh/2dcfq1sn","slide":46,"text":"12 / SELECTED ARCHIVE","textPreview":"12 / SELECTED ARCHIVE","textChars":21,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/pg3y1wre","slide":46,"text":"46 / 47","textPreview":"46 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/ofuxsbat","slide":46,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"textbox","id":"sh/falgvm9c","slide":46,"text":"早期经历补足 12 年职业积累。","textPreview":"早期经历补足 12 年职业积累。","textChars":16,"textLines":1,"bbox":[64,72,1152,58]}
+{"kind":"textbox","id":"sh/e9sfmhsr","slide":46,"text":"这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。","textPreview":"这些项目只有简历级事实，没有足够公开截图，因此保留为职业档案，不包装成深度案例。","textChars":40,"textLines":1,"bbox":[64,142,1080,52]}
+{"kind":"textbox","id":"sh/1c3yxwri","slide":46,"text":"2014—2015","textPreview":"2014—2015","textChars":9,"textLines":1,"bbox":[64,224,128,26]}
+{"kind":"textbox","id":"sh/0buxorax","slide":46,"text":"OA 办公系统","textPreview":"OA 办公系统","textChars":7,"textLines":1,"bbox":[216,222,260,30]}
+{"kind":"textbox","id":"sh/rm1grm90","slide":46,"text":"企业软件 · UI 设计","textPreview":"企业软件 · UI 设计","textChars":12,"textLines":1,"bbox":[500,224,250,24]}
+{"kind":"textbox","id":"sh/qlsfihsv","slide":46,"text":"审批流程、页面设计、切图标注与开发验收","textPreview":"审批流程、页面设计、切图标注与开发验收","textChars":19,"textLines":1,"bbox":[772,224,444,42]}
+{"kind":"shape","id":"sh/o32d0jih","slide":46,"bbox":[64,278,1152,1]}
+{"kind":"textbox","id":"sh/pove9oj2","slide":46,"text":"2014—2015","textPreview":"2014—2015","textChars":9,"textLines":1,"bbox":[64,306,128,26]}
+{"kind":"textbox","id":"sh/21kvy90b","slide":46,"text":"儿童乐园门店管理","textPreview":"儿童乐园门店管理","textChars":8,"textLines":1,"bbox":[216,304,260,30]}
+{"kind":"textbox","id":"sh/32tw7e1w","slide":46,"text":"门店系统 · UI 设计","textPreview":"门店系统 · UI 设计","textChars":12,"textLines":1,"bbox":[500,306,250,24]}
+{"kind":"textbox","id":"sh/gz2dwjil","slide":46,"text":"会员、门店管理与运营数据模块","textPreview":"会员、门店管理与运营数据模块","textChars":14,"textLines":1,"bbox":[772,306,444,42]}
+{"kind":"shape","id":"sh/10bu5oj6","slide":46,"bbox":[64,360,1152,1]}
+{"kind":"textbox","id":"sh/exkvu90f","slide":46,"text":"2015—2017","textPreview":"2015—2017","textChars":9,"textLines":1,"bbox":[64,388,128,26]}
+{"kind":"textbox","id":"sh/fytc3e10","slide":46,"text":"冷库监控系统","textPreview":"冷库监控系统","textChars":6,"textLines":1,"bbox":[216,386,260,30]}
+{"kind":"textbox","id":"sh/0v6d83ip","slide":46,"text":"IoT · Web / 移动端","textPreview":"IoT · Web / 移动端","textChars":15,"textLines":1,"bbox":[500,388,250,24]}
+{"kind":"textbox","id":"sh/lwfeh8ja","slide":46,"text":"温度、设备状态、异常告警与数据展示","textPreview":"温度、设备状态、异常告警与数据展示","textChars":17,"textLines":1,"bbox":[772,388,444,42]}
+{"kind":"shape","id":"sh/9cbe18be","slide":46,"bbox":[64,442,1152,1]}
+{"kind":"textbox","id":"sh/8b2ds3at","slide":46,"text":"2017—2018","textPreview":"2017—2018","textChars":9,"textLines":1,"bbox":[64,470,128,26]}
+{"kind":"textbox","id":"sh/7atczyt8","slide":46,"text":"罗西尼电商视觉","textPreview":"罗西尼电商视觉","textChars":7,"textLines":1,"bbox":[216,468,260,30]}
+{"kind":"textbox","id":"sh/m90vqtsn","slide":46,"text":"C 端 · 视觉运营","textPreview":"C 端 · 视觉运营","textChars":10,"textLines":1,"bbox":[500,470,250,24]}
+{"kind":"textbox","id":"sh/l8ruxobi","slide":46,"text":"活动页面、Banner、详情页与品牌视觉","textPreview":"活动页面、Banner、详情页与品牌视觉","textChars":20,"textLines":1,"bbox":[772,470,444,42]}
+{"kind":"shape","id":"sh/knidojax","slide":46,"bbox":[64,524,1152,1]}
+{"kind":"textbox","id":"sh/zm9cvytc","slide":46,"text":"2019—2020","textPreview":"2019—2020","textChars":9,"textLines":1,"bbox":[64,552,128,26]}
+{"kind":"textbox","id":"sh/yl0vmtsr","slide":46,"text":"智能储物柜","textPreview":"智能储物柜","textChars":5,"textLines":1,"bbox":[216,550,260,30]}
+{"kind":"textbox","id":"sh/xkrutob6","slide":46,"text":"智能硬件 · UI/UX","textPreview":"智能硬件 · UI/UX","textChars":12,"textLines":1,"bbox":[500,552,250,24]}
+{"kind":"textbox","id":"sh/cjidkjal","slide":46,"text":"柜机端投递取货与后台管理","textPreview":"柜机端投递取货与后台管理","textChars":12,"textLines":1,"bbox":[772,552,444,42]}
+{"kind":"shape","id":"sh/2pwbup8j","slide":46,"bbox":[64,606,1152,1]}
+{"kind":"notes","id":"nt/qv1usv","slide":46,"text":""}
+{"kind":"slide","id":"sl/d4hae5","slide":47,"title":"13 / CONTACT","textShapes":17}
+{"kind":"textbox","id":"sh/1cfudo7m","slide":47,"text":"13 / CONTACT","textPreview":"13 / CONTACT","textChars":12,"textLines":1,"bbox":[64,28,500,22]}
+{"kind":"textbox","id":"sh/e94v298b","slide":47,"text":"47 / 47","textPreview":"47 / 47","textChars":7,"textLines":1,"bbox":[1124,676,92,18]}
+{"kind":"textbox","id":"sh/zadcbepw","slide":47,"text":"杨蜜萁 Miki · Product Designer","textPreview":"杨蜜萁 Miki · Product Designer","textChars":27,"textLines":1,"bbox":[64,676,300,18]}
+{"kind":"shape","id":"sh/of6d83qd","slide":47,"bbox":[64,84,48,5]}
+{"kind":"textbox","id":"sh/9gfeh87y","slide":47,"text":"联系 Miki","textPreview":"联系 Miki","textChars":7,"textLines":1,"bbox":[64,132,620,76]}
+{"kind":"textbox","id":"sh/mdov6t87","slide":47,"text":"高级产品设计师 · 复杂 B 端 · 工业 HMI · 智能硬件 · AI 产品体验","textPreview":"高级产品设计师 · 复杂 B 端 · 工业 HMI · 智能硬件 · AI 产品体验","textChars":42,"textLines":1,"bbox":[64,222,760,46]}
+{"kind":"shape","id":"sh/nexcfyps","slide":47,"bbox":[64,300,1152,1]}
+{"kind":"textbox","id":"sh/w3qdc369","slide":47,"text":"电话","textPreview":"电话","textChars":2,"textLines":1,"bbox":[64,342,220,20]}
+{"kind":"textbox","id":"sh/x4zel87u","slide":47,"text":"13622962831","textPreview":"13622962831","textChars":11,"textLines":1,"bbox":[64,372,350,32]}
+{"kind":"textbox","id":"sh/pwby1836","slide":47,"text":"邮箱","textPreview":"邮箱","textChars":2,"textLines":1,"bbox":[454,342,220,20]}
+{"kind":"textbox","id":"sh/ov2h8n2l","slide":47,"text":"miqi723@163.com","textPreview":"miqi723@163.com","textChars":15,"textLines":1,"bbox":[454,372,350,32]}
+{"kind":"textbox","id":"sh/3utgzil0","slide":47,"text":"网站","textPreview":"网站","textChars":2,"textLines":1,"bbox":[64,434,220,20]}
+{"kind":"textbox","id":"sh/2tkz6dkf","slide":47,"text":"mikistudio.com.cn","textPreview":"mikistudio.com.cn","textChars":17,"textLines":1,"bbox":[64,464,350,32]}
+{"kind":"textbox","id":"sh/xkvy5s32","slide":47,"text":"所在 / 意向城市","textPreview":"所在 / 意向城市","textChars":9,"textLines":1,"bbox":[454,434,220,20]}
+{"kind":"textbox","id":"sh/cjmhcn2h","slide":47,"text":"深圳","textPreview":"深圳","textChars":2,"textLines":1,"bbox":[454,464,350,32]}
+{"kind":"textbox","id":"sh/bitg3ilw","slide":47,"text":"求职方向","textPreview":"求职方向","textChars":4,"textLines":1,"bbox":[64,526,220,20]}
+{"kind":"textbox","id":"sh/ahkzadkb","slide":47,"text":"高级产品设计师 / 高级 UI/UX","textPreview":"高级产品设计师 / 高级 UI/UX","textChars":18,"textLines":1,"bbox":[64,556,350,32]}
+{"kind":"textbox","id":"sh/snih032d","slide":47,"text":"扫码查看在线作品集","textPreview":"扫码查看在线作品集","textChars":9,"textLines":1,"bbox":[980,552,190,24]}
+{"kind":"textbox","id":"sh/k7mhg3a9","slide":47,"text":"本作品集使用脱敏项目材料；待确认信息未进入正文。","textPreview":"本作品集使用脱敏项目材料；待确认信息未进入正文。","textChars":24,"textLines":1,"bbox":[64,622,760,24]}
+{"kind":"image","id":"im/upof218r","slide":47,"name":"","geometry":"roundRect","alt":"mikistudio.com.cn 网站二维码","bbox":[980,348,190,190]}
+{"kind":"notes","id":"nt/d4hae5","slide":47,"text":""}

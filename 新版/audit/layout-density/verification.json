@@ -1,0 +1,512 @@
+[
+  {
+    "viewport": {
+      "width": 2048,
+      "height": 1140
+    },
+    "heroStyle": {
+      "fontSize": "82px",
+      "lineHeight": "84.46px",
+      "fontWeight": "500",
+      "letterSpacing": "-3.69px",
+      "maxWidth": "980px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "480px"
+    },
+    "themedCard": {
+      "color": "rgb(241, 242, 236)",
+      "background": "color(srgb 0.120627 0.124549 0.116078)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 795.3,
+        "workY": 795.3
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 795.3,
+        "workY": 795.3
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 795.3,
+        "workY": 795.3
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 795.3,
+        "workY": 795.3
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 795.3,
+        "workY": 795.3
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 795.3,
+        "workY": 795.3
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "heroStyle": {
+      "fontSize": "59.04px",
+      "lineHeight": "60.8112px",
+      "fontWeight": "500",
+      "letterSpacing": "-2.6568px",
+      "maxWidth": "980px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "480px"
+    },
+    "themedCard": {
+      "color": "rgb(241, 242, 236)",
+      "background": "color(srgb 0.120627 0.124549 0.116078)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 677.05,
+        "workY": 677.05
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 677.05,
+        "workY": 677.05
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 677.05,
+        "workY": 677.05
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 677.05,
+        "workY": 677.05
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 677.05,
+        "workY": 677.05
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 677.05,
+        "workY": 677.05
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1536,
+      "height": 900
+    },
+    "heroStyle": {
+      "fontSize": "62.976px",
+      "lineHeight": "64.8653px",
+      "fontWeight": "500",
+      "letterSpacing": "-2.83392px",
+      "maxWidth": "980px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "480px"
+    },
+    "themedCard": {
+      "color": "rgb(241, 242, 236)",
+      "background": "color(srgb 0.120627 0.124549 0.116078)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 697.31,
+        "workY": 697.31
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 697.31,
+        "workY": 697.31
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 697.31,
+        "workY": 697.31
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 697.31,
+        "workY": 697.31
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 697.31,
+        "workY": 697.31
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 697.31,
+        "workY": 697.31
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1600,
+      "height": 900
+    },
+    "heroStyle": {
+      "fontSize": "65.6px",
+      "lineHeight": "67.568px",
+      "fontWeight": "500",
+      "letterSpacing": "-2.952px",
+      "maxWidth": "980px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "480px"
+    },
+    "themedCard": {
+      "color": "rgb(241, 242, 236)",
+      "background": "color(srgb 0.120627 0.124549 0.116078)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 710.83,
+        "workY": 710.83
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 710.83,
+        "workY": 710.83
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 710.83,
+        "workY": 710.83
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 710.83,
+        "workY": 710.83
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 710.83,
+        "workY": 710.83
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 710.83,
+        "workY": 710.83
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "heroStyle": {
+      "fontSize": "56px",
+      "lineHeight": "57.68px",
+      "fontWeight": "500",
+      "letterSpacing": "-2.52px",
+      "maxWidth": "980px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "460px"
+    },
+    "themedCard": {
+      "color": "rgb(241, 242, 236)",
+      "background": "color(srgb 0.120627 0.124549 0.116078)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 661.39,
+        "workY": 661.39
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 661.39,
+        "workY": 661.39
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 661.39,
+        "workY": 661.39
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 661.39,
+        "workY": 661.39
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 661.39,
+        "workY": 661.39
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 661.39,
+        "workY": 661.39
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "heroStyle": {
+      "fontSize": "32px",
+      "lineHeight": "32.96px",
+      "fontWeight": "500",
+      "letterSpacing": "-1.12px",
+      "maxWidth": "850px"
+    },
+    "counts": {
+      "projects": 3,
+      "experiences": 6,
+      "experienceNumbers": 0,
+      "explorations": 3,
+      "capabilities": 8,
+      "methods": 6
+    },
+    "images": {
+      "work": [
+        "/images/work/industrial-ai.webp",
+        "/images/work/pcba.webp",
+        "/images/work/wms.webp"
+      ],
+      "explorations": [
+        "/images/explorations/generative-form.webp",
+        "/images/explorations/prototype-collage.webp",
+        "/images/explorations/material-study.webp"
+      ]
+    },
+    "cardStyle": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)",
+      "minHeight": "0px"
+    },
+    "themedCard": {
+      "color": "rgb(0, 0, 0)",
+      "background": "color(srgb 0.96 0.96 0.96)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 493,
+        "workY": 493
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 493,
+        "workY": 493
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 493,
+        "workY": 493
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 493,
+        "workY": 493
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 493,
+        "workY": 493
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 493,
+        "workY": 493
+      }
+    ],
+    "checks": {
+      "status": true,
+      "stableAudience": true,
+      "counts": true,
+      "workImagesPreserved": true,
+      "explorationImagesPreserved": true,
+      "lightCard": true,
+      "darkThemeCardContrast": true,
+      "aboutHeightReleased": true,
+      "noHorizontalOverflow": true
+    }
+  }
+]

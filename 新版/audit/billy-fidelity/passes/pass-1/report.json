@@ -1,0 +1,72 @@
+[
+  {
+    "key": "1440",
+    "width": 1440,
+    "height": 900,
+    "status": 200,
+    "screenshot": "audit/billy-fidelity/passes/pass-1/1440.png",
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 9766,
+    "brokenImages": 0,
+    "horizontalOverflow": false,
+    "failedResponses": [],
+    "consoleErrors": []
+  },
+  {
+    "key": "1280",
+    "width": 1280,
+    "height": 800,
+    "status": 200,
+    "screenshot": "audit/billy-fidelity/passes/pass-1/1280.png",
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "scrollHeight": 9195,
+    "brokenImages": 0,
+    "horizontalOverflow": false,
+    "failedResponses": [],
+    "consoleErrors": []
+  },
+  {
+    "key": "1024",
+    "width": 1024,
+    "height": 768,
+    "status": 200,
+    "screenshot": "audit/billy-fidelity/passes/pass-1/1024.png",
+    "scrollWidth": 1024,
+    "clientWidth": 1024,
+    "scrollHeight": 8917,
+    "brokenImages": 0,
+    "horizontalOverflow": false,
+    "failedResponses": [],
+    "consoleErrors": []
+  },
+  {
+    "key": "768",
+    "width": 768,
+    "height": 1024,
+    "status": 200,
+    "screenshot": "audit/billy-fidelity/passes/pass-1/768.png",
+    "scrollWidth": 768,
+    "clientWidth": 768,
+    "scrollHeight": 9304,
+    "brokenImages": 0,
+    "horizontalOverflow": false,
+    "failedResponses": [],
+    "consoleErrors": []
+  },
+  {
+    "key": "390",
+    "width": 390,
+    "height": 844,
+    "status": 200,
+    "screenshot": "audit/billy-fidelity/passes/pass-1/390.png",
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 10770,
+    "brokenImages": 0,
+    "horizontalOverflow": false,
+    "failedResponses": [],
+    "consoleErrors": []
+  }
+]

@@ -3,7 +3,7 @@ import { defineConfig } from "@playwright/test";
 const previewUrl = process.env.PREVIEW_URL ?? "http://127.0.0.1:3017";
 
 export default defineConfig({
-  testDir: "./tests/visual",
+  testDir: "./tests",
   testMatch: /.*\.spec\.ts/,
   timeout: 60_000,
   expect: {
@@ -20,7 +20,7 @@ export default defineConfig({
   workers: 1,
   outputDir: "test-results/visual",
   snapshotPathTemplate:
-    "{testDir}/fixtures/snapshots/{projectName}/{testFilePath}/{arg}{ext}",
+    "{testDir}/visual/fixtures/snapshots/{projectName}/{testFileName}/{arg}{ext}",
   reporter: [
     ["list"],
     ["html", { open: "never", outputFolder: "playwright-report" }],

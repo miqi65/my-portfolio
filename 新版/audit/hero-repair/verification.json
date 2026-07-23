@@ -1,0 +1,520 @@
+[
+  {
+    "viewport": {
+      "width": 2048,
+      "height": 1123
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 2048,
+        "height": 1051.44,
+        "bottom": 1051.44
+      },
+      "work": {
+        "x": 0,
+        "y": 1051.44,
+        "width": 2048,
+        "height": 2240.47,
+        "bottom": 3291.91
+      },
+      "hero": {
+        "x": 695.3,
+        "y": 253,
+        "width": 1312.7,
+        "height": 718.44,
+        "bottom": 971.44
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 1051.44,
+        "workY": 1051.44
+      }
+    ],
+    "theme": {
+      "openHeight": 368,
+      "dotCount": 17,
+      "backgroundAfter": "rgb(250, 247, 242)",
+      "introAfter": 1051.44,
+      "workYAfter": 1051.44,
+      "closedHeight": 48
+    },
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 12
+    },
+    "mobileMenu": null,
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 838.16,
+        "bottom": 838.16
+      },
+      "work": {
+        "x": 0,
+        "y": 838.16,
+        "width": 1440,
+        "height": 2240.47,
+        "bottom": 3078.63
+      },
+      "hero": {
+        "x": 494.83,
+        "y": 253,
+        "width": 905.17,
+        "height": 505.16,
+        "bottom": 758.16
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 838.16,
+        "workY": 838.16
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 838.16,
+        "workY": 838.16
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 838.16,
+        "workY": 838.16
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 838.16,
+        "workY": 838.16
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 838.16,
+        "workY": 838.16
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 838.16,
+        "workY": 838.16
+      }
+    ],
+    "theme": {
+      "openHeight": 368,
+      "dotCount": 17,
+      "backgroundAfter": "rgb(249, 246, 240)",
+      "introAfter": 838.16,
+      "workYAfter": 838.16,
+      "closedHeight": 48
+    },
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 12
+    },
+    "mobileMenu": null,
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1536,
+      "height": 900
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 1536,
+        "height": 871.83,
+        "bottom": 871.83
+      },
+      "work": {
+        "x": 0,
+        "y": 871.83,
+        "width": 1536,
+        "height": 2240.47,
+        "bottom": 3112.3
+      },
+      "hero": {
+        "x": 526.48,
+        "y": 253,
+        "width": 969.52,
+        "height": 538.83,
+        "bottom": 791.83
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 871.83,
+        "workY": 871.83
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 871.83,
+        "workY": 871.83
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 871.83,
+        "workY": 871.83
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 871.83,
+        "workY": 871.83
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 871.83,
+        "workY": 871.83
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 871.83,
+        "workY": 871.83
+      }
+    ],
+    "theme": {
+      "openHeight": 368,
+      "dotCount": 17,
+      "backgroundAfter": "rgb(250, 247, 242)",
+      "introAfter": 871.83,
+      "workYAfter": 871.83,
+      "closedHeight": 48
+    },
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 12
+    },
+    "mobileMenu": null,
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1600,
+      "height": 900
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 1600,
+        "height": 894.28,
+        "bottom": 894.28
+      },
+      "work": {
+        "x": 0,
+        "y": 894.28,
+        "width": 1600,
+        "height": 2240.47,
+        "bottom": 3134.75
+      },
+      "hero": {
+        "x": 547.58,
+        "y": 253,
+        "width": 1012.42,
+        "height": 561.28,
+        "bottom": 814.28
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 894.28,
+        "workY": 894.28
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 894.28,
+        "workY": 894.28
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 894.28,
+        "workY": 894.28
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 894.28,
+        "workY": 894.28
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 894.28,
+        "workY": 894.28
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 894.28,
+        "workY": 894.28
+      }
+    ],
+    "theme": {
+      "openHeight": 368,
+      "dotCount": 17,
+      "backgroundAfter": "rgb(250, 247, 242)",
+      "introAfter": 894.28,
+      "workYAfter": 894.28,
+      "closedHeight": 48
+    },
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 12
+    },
+    "mobileMenu": null,
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 776.78,
+        "bottom": 776.78
+      },
+      "work": {
+        "x": 0,
+        "y": 776.78,
+        "width": 1024,
+        "height": 2060.41,
+        "bottom": 2837.19
+      },
+      "hero": {
+        "x": 196.11,
+        "y": 253,
+        "width": 787.89,
+        "height": 443.78,
+        "bottom": 696.78
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 776.78,
+        "workY": 776.78
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 776.78,
+        "workY": 776.78
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 776.78,
+        "workY": 776.78
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 776.78,
+        "workY": 776.78
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 776.78,
+        "workY": 776.78
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 776.78,
+        "workY": 776.78
+      }
+    ],
+    "theme": {
+      "openHeight": 368,
+      "dotCount": 17,
+      "backgroundAfter": "rgb(250, 247, 242)",
+      "introAfter": 776.78,
+      "workYAfter": 776.78,
+      "closedHeight": 48
+    },
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 12
+    },
+    "mobileMenu": null,
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "status": 200,
+    "base": {
+      "intro": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 497,
+        "bottom": 497
+      },
+      "work": {
+        "x": 0,
+        "y": 497,
+        "width": 390,
+        "height": 3138.02,
+        "bottom": 3635.02
+      },
+      "hero": {
+        "x": 13.77,
+        "y": 253,
+        "width": 360.23,
+        "height": 224,
+        "bottom": 477
+      },
+      "background": "rgb(255, 255, 255)"
+    },
+    "audience": [
+      {
+        "label": "For anyone",
+        "introHeight": 497,
+        "workY": 497
+      },
+      {
+        "label": "Recruiters",
+        "introHeight": 497,
+        "workY": 497
+      },
+      {
+        "label": "Design Directors",
+        "introHeight": 497,
+        "workY": 497
+      },
+      {
+        "label": "Product Designers",
+        "introHeight": 497,
+        "workY": 497
+      },
+      {
+        "label": "Product Managers",
+        "introHeight": 497,
+        "workY": 497
+      },
+      {
+        "label": "Engineers",
+        "introHeight": 497,
+        "workY": 497
+      }
+    ],
+    "theme": {},
+    "grid": {
+      "pressed": "true",
+      "visibleClass": true,
+      "lineCount": 24,
+      "visibleColumnCount": 2
+    },
+    "mobileMenu": {
+      "opened": true,
+      "closed": true
+    },
+    "horizontalOverflow": false,
+    "checks": {
+      "stableAudience": true,
+      "stableTheme": true,
+      "themeGeometry": true,
+      "gridGeometry": true,
+      "noHorizontalOverflow": true,
+      "mobileMenu": true
+    }
+  }
+]

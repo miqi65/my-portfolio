@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { CSSProperties, useEffect, useMemo, useState } from "react";
-import { audiences, experience, explorations, projects, themes, type AudienceKey } from "@/data/site";
+import { audiences, capabilities, experience, explorations, methods, projects, themes, type AudienceKey } from "@/data/site";
 
 const navItems = [
   ["Intro", "intro"],
@@ -47,27 +47,34 @@ export default function Portfolio() {
   const activeSection = useActiveSection();
 
   useEffect(() => {
+    let restoreThemeTimer: number | undefined;
     const stored = window.localStorage.getItem("miki-theme-index");
     if (stored !== null) {
       const parsed = Number(stored);
-      if (Number.isInteger(parsed) && parsed >= 0 && parsed < themes.length) setThemeIndex(parsed);
+      if (Number.isInteger(parsed) && parsed >= 0 && parsed < themes.length) {
+        restoreThemeTimer = window.setTimeout(() => setThemeIndex(parsed), 0);
+      }
     }
     const timer = window.setTimeout(() => setLoading(false), 1750);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      if (restoreThemeTimer !== undefined) window.clearTimeout(restoreThemeTimer);
+    };
   }, []);
 
   const currentTheme = themes[themeIndex];
+  const isDefaultTheme = themeIndex === 0;
   const style = useMemo(
     () =>
       ({
-        "--page-bg": currentTheme.bg,
-        "--ink": currentTheme.ink,
-        "--muted": currentTheme.muted,
+        "--page-bg": isDefaultTheme ? "#ffffff" : currentTheme.bg,
+        "--ink": isDefaultTheme ? "#000000" : currentTheme.ink,
+        "--muted": isDefaultTheme ? "rgb(0 0 0 / 33.3%)" : currentTheme.muted,
         "--card": currentTheme.card,
         "--card-ink": currentTheme.cardInk,
         "--accent": currentTheme.accent,
       }) as CSSProperties,
-    [currentTheme],
+    [currentTheme, isDefaultTheme],
   );
 
   const audienceCopy = audiences.find((item) => item.key === audience)?.copy ?? audiences[0].copy;
@@ -83,17 +90,24 @@ export default function Portfolio() {
     <main className="site-shell" style={style}>
       <div className={`loading-cover ${loading ? "is-visible" : ""}`} aria-hidden={!loading}>
         <div className="loading-mark">
-          <span>Miki Yang</span>
+          <span>Miki Yang<br />—Product Designer</span>
           <i />
         </div>
       </div>
 
-      <div className={`grid-overlay ${gridVisible ? "is-visible" : ""}`} aria-hidden="true" />
+      <div className={`grid-overlay ${gridVisible ? "is-visible" : ""}`} aria-hidden="true">
+        {Array.from({ length: 12 }, (_, index) => (
+          <span className="grid-column" key={index}>
+            <i />
+            <i />
+          </span>
+        ))}
+      </div>
 
       <header className="site-header">
         <a className="brand" href="#intro" aria-label="回到首页">
-          <span className="brand-short">Miki</span>
-          <span className="brand-long"> Yang</span>
+          <span className="brand-short">M</span>
+          <span className="brand-long">iki Yang</span>
         </a>
 
         <nav className="desktop-nav" aria-label="主导航">
@@ -111,7 +125,11 @@ export default function Portfolio() {
           aria-controls="mobile-menu"
           onClick={() => setMobileOpen((value) => !value)}
         >
-          {mobileOpen ? "Close" : "Menu"}
+          <span className="menu-icon" aria-hidden="true">
+            <i />
+            <i />
+          </span>
+          <span className="sr-only">{mobileOpen ? "Close" : "Menu"}</span>
         </button>
       </header>
 
@@ -124,8 +142,16 @@ export default function Portfolio() {
       </nav>
 
       <aside className="site-controls" aria-label="外观设置">
-        <div className={`theme-control ${themeOpen ? "is-open" : ""}`}>
+        <div
+          className={`theme-control ${themeOpen ? "is-open" : ""}`}
+          style={{ "--theme-position": `${themeIndex * 20}px` } as CSSProperties}
+          onMouseEnter={() => setThemeOpen(true)}
+          onMouseLeave={() => setThemeOpen(false)}
+        >
           <div className="theme-slider-wrap">
+            <div className="theme-dots" aria-hidden="true">
+              {themes.map((_, index) => <i key={index} />)}
+            </div>
             <input
               aria-label="选择颜色主题"
               type="range"
@@ -135,15 +161,19 @@ export default function Portfolio() {
               value={themeIndex}
               onChange={(event) => selectTheme(Number(event.target.value))}
             />
-            <span>{String(themeIndex + 1).padStart(2, "0")}</span>
+            <span className="theme-value sr-only">{String(themeIndex + 1).padStart(2, "0")}</span>
           </div>
-          <button type="button" onClick={() => setThemeOpen((value) => !value)} aria-expanded={themeOpen}>
-            <span className="theme-icon" />
-            <span className="sr-only">打开颜色主题选择器</span>
+          <button className="theme-trigger" type="button" onClick={() => setThemeOpen((value) => !value)} aria-expanded={themeOpen}>
+            <svg className="theme-icon" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32">
+              <path d="M17 2h-2v6h2V2zm-1 8c-3.31372 0-6 2.68628-6 6s2.68628 6 6 6 6-2.68628 6-6-2.68628-6-6-6zm0 10c-2.20911 0-4-1.79089-4-4s1.79089-4 4-4 4 1.79089 4 4-1.79089 4-4 4zm-1 10h2v-6h-2v6zM11.05029 9.63605 6.80762 5.39337 5.39337 6.80762l4.24268 4.24268 1.41424-1.41425zm9.89954 12.72796 4.24255 4.24261 1.41425-1.41425-4.24261-4.24268-1.41419 1.41432zM8 15H2v2h6v-2zm16 0v2h6v-2h-6zM5.39337 25.19238l1.41425 1.41425 4.24268-4.24261-1.41425-1.41431-4.24268 4.24267zM26.60663 6.80762l-1.41425-1.41425-4.24268 4.24268 1.41431 1.41412 4.24262-4.24255z" />
+            </svg>
+            <span className="sr-only">{themeOpen ? "关闭颜色主题选择器" : "打开颜色主题选择器"}</span>
           </button>
         </div>
         <button type="button" className="grid-toggle" aria-pressed={gridVisible} onClick={() => setGridVisible((value) => !value)}>
-          <span className="grid-icon" />
+          <svg className="grid-icon" aria-hidden="true" width="32" height="32" viewBox="0 0 32 32">
+            <path d="M5 28h2V4H5v24zm5 0h2V4h-2v24zm5 0h2V4h-2v24zm5 0h2V4h-2v24zm5-24v24h2V4h-2z" />
+          </svg>
           <span className="sr-only">切换网格显示</span>
         </button>
       </aside>
@@ -176,7 +206,7 @@ export default function Portfolio() {
           <p>真实项目内容来自现有作品集。尚未确认的年份与成果数据暂不展示。</p>
         </div>
         <div className="work-list">
-          {projects.map((project, index) => (
+          {projects.slice(0, 3).map((project, index) => (
             <article key={project.title} className={`project-card project-${project.tone}`}>
               <div className="project-copy">
                 <div>
@@ -206,39 +236,45 @@ export default function Portfolio() {
           <h2>能落地</h2>
         </div>
         <div className="content-column value-notes">
-          <p>
-            我擅长把模糊需求转化为清晰流程、可演示原型、设计规则与开发前风险识别，帮助团队减少沟通与返工。
-          </p>
-          <p>
-            工作横跨复杂 B 端系统、工业 HMI、AI 辅助工作流与 Design System，并保持对实现约束和最终体验的关注。
-          </p>
+          <div className="value-description">
+            <p>
+              我擅长把模糊需求转化为清晰流程、可演示原型、设计规则与开发前风险识别，帮助团队减少沟通与返工。
+            </p>
+            <p>
+              工作横跨复杂 B 端系统、工业 HMI、AI 辅助工作流与 Design System，并保持对实现约束和最终体验的关注。
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="background" className="section background-section">
         <div className="content-column experience-list">
-          {experience.map((item, index) => (
+          <p className="background-intro">
+            我有 12 年产品与视觉设计经验，经历从品牌视觉、消费端界面到复杂 B 端系统与工业 AI 产品。以下职责与领域来自现有简历和作品集事实审计。
+          </p>
+          {experience.map((item) => (
             <article className="experience-item" key={`${item.company}-${item.year}`}>
-              <div className="experience-icon" aria-hidden="true">
-                {String(index + 1).padStart(2, "0")}
-              </div>
               <p className="experience-company">{item.company}</p>
               <h2>{item.role}</h2>
-              <p className="experience-year">{item.year}</p>
+              <p className="experience-year">
+                <span>{item.year}</span>
+                <span>{item.area}</span>
+              </p>
+              <p className="experience-description">{item.description}</p>
             </article>
           ))}
         </div>
       </section>
 
       <section id="explorations" className="section explorations-section">
-        <div className="explorations-layout">
+        <div className="content-column explorations-layout">
           <div className="explorations-intro">
             <p>AI personal explorations</p>
             <h2>探索人与 AI 一起思考、设计和制作的新方式。</h2>
             <p>以下为个人兴趣拓展区域。具体项目名称、工具与过程将在资料确认后补充。</p>
           </div>
           <div className="exploration-grid">
-            {explorations.map((item) => (
+            {explorations.slice(0, 3).map((item) => (
               <article className={`exploration-card ${item.className}`} key={item.title}>
                 <div className="exploration-media">
                   <Image src={item.image} alt={`${item.title}占位视觉`} fill sizes="(max-width: 760px) 100vw, 40vw" />
@@ -254,41 +290,50 @@ export default function Portfolio() {
       </section>
 
       <section id="about" className="section about-section">
-        <div className="content-column about-intro">
-          <h2>我关注复杂问题背后的结构，也在意最终呈现是否足够简单。</h2>
-          <p>
-            杨蜜萁是一名产品设计师，专注复杂 B 端系统、AI 应用工作流与 Design System。工作方式覆盖 UX 策略、视觉系统和前端协作。
-          </p>
-        </div>
-        <div className="content-column about-columns">
-          <div>
-            <h3>Focus</h3>
-            <ul>
-              <li>工业 AI HMI</li>
-              <li>复杂 B 端系统</li>
-              <li>Design System</li>
-              <li>AI 辅助工作流</li>
-              <li>前端协作与设计验收</li>
-            </ul>
+        <div className="content-column about-grid">
+          <div className="about-intro">
+            <p>
+              杨蜜萁是一名拥有 12 年产品与视觉设计经验的产品设计师，专注复杂 B 端系统、工业 HMI、AI 应用工作流与 Design System。她把模糊需求转化为清晰流程、可演示原型、设计规则与开发前风险识别，并在 UX 策略、视觉系统和前端协作之间推进产品落地。
+            </p>
           </div>
-          <div>
-            <h3>Working approach</h3>
-            <ul>
-              <li>先对齐业务目标与真实约束</li>
-              <li>用流程和原型缩小不确定性</li>
-              <li>明确人机协作与风险边界</li>
-              <li>把高频判断沉淀为设计规则</li>
-              <li>在开发前识别交付风险</li>
-            </ul>
+          <div className="about-list capabilities">
+            <h2>Capabilities</h2>
+            {capabilities.map((item) => (
+              <p key={item.title}>
+                <span>{item.title}</span>
+                <small>{item.description}</small>
+              </p>
+            ))}
+          </div>
+          <div className="about-list methods">
+            <h2>Methods</h2>
+            {methods.map((item) => (
+              <p key={item.title}>
+                <span>{item.title}</span>
+                <small>{item.description}</small>
+              </p>
+            ))}
+          </div>
+          <div className="colophon">
+            <h2>Colophon</h2>
+            <p>
+              内容与设计方向：Miki Yang
+              <br />
+              使用 Next.js、React、TypeScript、Geist 与 Noto Sans SC 构建
+              <br />
+              <br /><span className="copyright">© {new Date().getFullYear()} Miki Yang</span>
+            </p>
           </div>
         </div>
       </section>
 
       <section id="contact" className="section contact-section">
-        <div className="contact-layout">
+        <div className="content-column contact-layout">
           <div className="contact-copy">
-            <p className="contact-kicker">开放产品设计相关机会</p>
-            <h2>如果你正在推进复杂的 B 端、工业 AI 或智能硬件产品，欢迎联系我。</h2>
+            <div>
+              <p className="contact-kicker">开放深圳产品设计相关机会</p>
+              <h2>关注工业 AI、HMI 与复杂 B 端产品。</h2>
+            </div>
             <div className="contact-links">
               <a href="mailto:miqi723@163.com">miqi723@163.com</a>
               <a href="https://mikistudio.com.cn" target="_blank" rel="noreferrer">mikistudio.com.cn</a>
@@ -298,10 +343,6 @@ export default function Portfolio() {
             <Image src="/images/about/miki.webp" alt="Miki Yang 肖像" fill sizes="(max-width: 760px) 100vw, 36vw" />
           </div>
         </div>
-        <footer className="site-footer">
-          <span>© {new Date().getFullYear()} Miki Yang</span>
-          <span>Product Designer</span>
-        </footer>
       </section>
     </main>
   );

@@ -1,0 +1,76 @@
+[
+  {
+    "viewport": {
+      "key": "2048",
+      "width": 2048,
+      "height": 1123
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/reference/2048.png",
+    "baseMetrics": {
+      "scrollWidth": 2048,
+      "clientWidth": 2048,
+      "intro": {
+        "y": 0,
+        "height": 1051.4375,
+        "bottom": 1051.4375
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1440",
+      "width": 1440,
+      "height": 900
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/reference/1440.png",
+    "baseMetrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "intro": {
+        "y": 0,
+        "height": 838.15625,
+        "bottom": 838.15625
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "1024",
+      "width": 1024,
+      "height": 768
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/reference/1024.png",
+    "baseMetrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "intro": {
+        "y": 0,
+        "height": 776.78125,
+        "bottom": 776.78125
+      }
+    }
+  },
+  {
+    "viewport": {
+      "key": "390",
+      "width": 390,
+      "height": 844,
+      "isMobile": true,
+      "hasTouch": true
+    },
+    "status": 200,
+    "screenshot": "audit/hero-repair/reference/390.png",
+    "baseMetrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "intro": {
+        "y": 0,
+        "height": 497,
+        "bottom": 497
+      }
+    }
+  }
+]
