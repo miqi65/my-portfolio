@@ -42,7 +42,7 @@ fs.mkdirSync(outputDir, { recursive: true });
     const state = await page.evaluate(() => {
       const shell = document.querySelector(".site-shell");
       const root = document.documentElement;
-      const workCards = document.querySelectorAll(".project-card").length;
+      const workCards = document.querySelectorAll(".project-row").length;
       const explorationCards = document.querySelectorAll(".exploration-card").length;
       const audienceTabs = document.querySelectorAll(".audience-tabs [role=tab]").length;
       return {

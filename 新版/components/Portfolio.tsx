@@ -69,7 +69,7 @@ export default function Portfolio() {
       ({
         "--page-bg": isDefaultTheme ? "#ffffff" : currentTheme.bg,
         "--ink": isDefaultTheme ? "#000000" : currentTheme.ink,
-        "--muted": isDefaultTheme ? "rgb(0 0 0 / 33.3%)" : currentTheme.muted,
+        "--muted": isDefaultTheme ? "rgb(0 0 0 / 58%)" : currentTheme.muted,
         "--card": currentTheme.card,
         "--card-ink": currentTheme.cardInk,
         "--accent": currentTheme.accent,
@@ -181,14 +181,27 @@ export default function Portfolio() {
       <section id="intro" className="section intro-section">
         <div className="content-column intro-inner">
           <div className="audience-tabs" role="tablist" aria-label="选择浏览视角">
-            {audiences.map((item) => (
+            {audiences.map((item, index) => (
               <button
                 key={item.key}
                 type="button"
                 role="tab"
                 aria-selected={audience === item.key}
+                tabIndex={audience === item.key ? 0 : -1}
                 className={audience === item.key ? "is-active" : ""}
                 onClick={() => setAudience(item.key)}
+                onKeyDown={(event) => {
+                  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+                  event.preventDefault();
+                  const nextIndex = event.key === "Home"
+                    ? 0
+                    : event.key === "End"
+                      ? audiences.length - 1
+                      : (index + (event.key === "ArrowRight" ? 1 : -1) + audiences.length) % audiences.length;
+                  setAudience(audiences[nextIndex].key);
+                  const tabs = event.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+                  window.requestAnimationFrame(() => tabs?.[nextIndex]?.focus());
+                }}
               >
                 {item.label}
               </button>
@@ -206,22 +219,23 @@ export default function Portfolio() {
           <p>真实项目内容来自现有作品集。尚未确认的年份与成果数据暂不展示。</p>
         </div>
         <div className="work-list">
-          {projects.slice(0, 3).map((project, index) => (
-            <article key={project.title} className={`project-card project-${project.tone}`}>
-              <div className="project-copy">
-                <div>
-                  <p className="project-index">{String(index + 1).padStart(2, "0")}</p>
-                  <h3>{project.title}</h3>
-                  <p className="project-meta">{project.category}</p>
-                  <p className="project-summary">{project.summary}</p>
+          {projects.map((project, index) => (
+            <article key={project.title} className="project-row">
+              <div className="project-info">
+                <div className="project-info-main">
+                  <p className="project-client">{project.client}</p>
+                  <h3 className="project-title">{project.title}</h3>
+                  <div className="project-tags" aria-label="项目标签">
+                    {project.category.split("/").map((tag) => (
+                      <span key={tag}>{tag.trim()}</span>
+                    ))}
+                    <span>{project.role}</span>
+                  </div>
                 </div>
-                <div className="project-footer">
-                  <span>{project.role}</span>
-                  <span>案例详情待接入&nbsp; →</span>
-                </div>
+                <a className="project-link" href="#contact">索取案例详情&nbsp; →</a>
               </div>
               <div className="project-media">
-                <Image src={project.image} alt={`${project.title}项目界面`} fill sizes="(max-width: 760px) 100vw, 56vw" priority={index === 0} />
+                <Image src={project.image} alt={`${project.title}项目界面`} fill sizes="(max-width: 760px) 100vw, 62vw" priority={index === 0} />
               </div>
             </article>
           ))}
@@ -274,10 +288,10 @@ export default function Portfolio() {
             <p>以下为个人兴趣拓展区域。具体项目名称、工具与过程将在资料确认后补充。</p>
           </div>
           <div className="exploration-grid">
-            {explorations.slice(0, 3).map((item) => (
+            {explorations.slice(0, 2).map((item) => (
               <article className={`exploration-card ${item.className}`} key={item.title}>
                 <div className="exploration-media">
-                  <Image src={item.image} alt={`${item.title}占位视觉`} fill sizes="(max-width: 760px) 100vw, 40vw" />
+                  <Image src={item.image} alt={`${item.title}实验视觉`} fill sizes="(max-width: 760px) 100vw, 40vw" />
                 </div>
                 <div className="exploration-copy">
                   <h3>{item.title}</h3>
@@ -314,7 +328,12 @@ export default function Portfolio() {
               </p>
             ))}
           </div>
-          <div className="colophon">
+        </div>
+      </section>
+
+      <section id="contact" className="section contact-section">
+        <div className="content-column contact-layout">
+          <div className="contact-colophon">
             <h2>Colophon</h2>
             <p>
               内容与设计方向：Miki Yang
@@ -324,14 +343,9 @@ export default function Portfolio() {
               <br /><span className="copyright">© {new Date().getFullYear()} Miki Yang</span>
             </p>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" className="section contact-section">
-        <div className="content-column contact-layout">
           <div className="contact-copy">
             <div>
-              <p className="contact-kicker">开放深圳产品设计相关机会</p>
+              <p className="contact-kicker"><i aria-hidden="true" />跟我一起工作吧</p>
               <h2>关注工业 AI、HMI 与复杂 B 端产品。</h2>
             </div>
             <div className="contact-links">
@@ -340,7 +354,7 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="portrait-wrap">
-            <Image src="/images/about/miki.webp" alt="Miki Yang 肖像" fill sizes="(max-width: 760px) 100vw, 36vw" />
+            <Image src="/images/about/miki-portrait.webp" alt="Miki Yang 肖像" fill sizes="(max-width: 760px) 100vw, 36vw" />
           </div>
         </div>
       </section>

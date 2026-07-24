@@ -11,43 +11,48 @@
       "clientWidth": 1440,
       "horizontalOverflow": false,
       "loadingHidden": true,
-      "themeBackground": "#f7f7f4",
-      "workCards": 3,
-      "explorationCards": 4,
+      "themeBackground": "#ffffff",
+      "workCards": 6,
+      "explorationCards": 2,
       "audienceTabs": 6,
       "images": [
         {
           "alt": "工业 AI 视觉质检系统项目界面",
           "complete": true,
-          "naturalWidth": 806
+          "naturalWidth": 892
         },
         {
           "alt": "PCBA 插件机控制系统项目界面",
           "complete": true,
-          "naturalWidth": 806
+          "naturalWidth": 892
         },
         {
           "alt": "WMS 智能仓储管理系统项目界面",
           "complete": true,
-          "naturalWidth": 806
+          "naturalWidth": 892
         },
         {
-          "alt": "生成式形态实验占位视觉",
+          "alt": "国家能源集团：载体轨迹定位系统项目界面",
+          "complete": true,
+          "naturalWidth": 892
+        },
+        {
+          "alt": "5G 消息 Chatbot 交互规范体系项目界面",
+          "complete": true,
+          "naturalWidth": 892
+        },
+        {
+          "alt": "友讯达数据大屏项目界面",
+          "complete": true,
+          "naturalWidth": 892
+        },
+        {
+          "alt": "生成式形态实验实验视觉",
           "complete": true,
           "naturalWidth": 576
         },
         {
-          "alt": "AI 原型流程实验占位视觉",
-          "complete": true,
-          "naturalWidth": 576
-        },
-        {
-          "alt": "材质与视觉研究占位视觉",
-          "complete": true,
-          "naturalWidth": 576
-        },
-        {
-          "alt": "AI 工具探索占位视觉",
+          "alt": "AI 原型流程实验实验视觉",
           "complete": true,
           "naturalWidth": 576
         },
@@ -62,7 +67,7 @@
     "interactionState": {
       "gridVisible": true,
       "selectedTab": "Recruiters",
-      "themeIndex": "09"
+      "themeIndex": "02"
     },
     "mobileMenuWorks": null,
     "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
@@ -82,43 +87,48 @@
       "clientWidth": 1536,
       "horizontalOverflow": false,
       "loadingHidden": true,
-      "themeBackground": "#f7f7f4",
-      "workCards": 3,
-      "explorationCards": 4,
+      "themeBackground": "#ffffff",
+      "workCards": 6,
+      "explorationCards": 2,
       "audienceTabs": 6,
       "images": [
         {
           "alt": "工业 AI 视觉质检系统项目界面",
           "complete": true,
-          "naturalWidth": 860
+          "naturalWidth": 952
         },
         {
           "alt": "PCBA 插件机控制系统项目界面",
           "complete": true,
-          "naturalWidth": 860
+          "naturalWidth": 952
         },
         {
           "alt": "WMS 智能仓储管理系统项目界面",
           "complete": true,
-          "naturalWidth": 860
+          "naturalWidth": 952
         },
         {
-          "alt": "生成式形态实验占位视觉",
+          "alt": "国家能源集团：载体轨迹定位系统项目界面",
+          "complete": true,
+          "naturalWidth": 952
+        },
+        {
+          "alt": "5G 消息 Chatbot 交互规范体系项目界面",
+          "complete": true,
+          "naturalWidth": 952
+        },
+        {
+          "alt": "友讯达数据大屏项目界面",
+          "complete": true,
+          "naturalWidth": 952
+        },
+        {
+          "alt": "生成式形态实验实验视觉",
           "complete": true,
           "naturalWidth": 614
         },
         {
-          "alt": "AI 原型流程实验占位视觉",
-          "complete": true,
-          "naturalWidth": 614
-        },
-        {
-          "alt": "材质与视觉研究占位视觉",
-          "complete": true,
-          "naturalWidth": 614
-        },
-        {
-          "alt": "AI 工具探索占位视觉",
+          "alt": "AI 原型流程实验实验视觉",
           "complete": true,
           "naturalWidth": 614
         },
@@ -133,7 +143,7 @@
     "interactionState": {
       "gridVisible": true,
       "selectedTab": "Recruiters",
-      "themeIndex": "09"
+      "themeIndex": "02"
     },
     "mobileMenuWorks": null,
     "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
@@ -153,43 +163,48 @@
       "clientWidth": 1600,
       "horizontalOverflow": false,
       "loadingHidden": true,
-      "themeBackground": "#f7f7f4",
-      "workCards": 3,
-      "explorationCards": 4,
+      "themeBackground": "#ffffff",
+      "workCards": 6,
+      "explorationCards": 2,
       "audienceTabs": 6,
       "images": [
         {
           "alt": "工业 AI 视觉质检系统项目界面",
           "complete": true,
-          "naturalWidth": 895
+          "naturalWidth": 991
         },
         {
           "alt": "PCBA 插件机控制系统项目界面",
           "complete": true,
-          "naturalWidth": 895
+          "naturalWidth": 991
         },
         {
           "alt": "WMS 智能仓储管理系统项目界面",
           "complete": true,
-          "naturalWidth": 895
+          "naturalWidth": 991
         },
         {
-          "alt": "生成式形态实验占位视觉",
+          "alt": "国家能源集团：载体轨迹定位系统项目界面",
+          "complete": true,
+          "naturalWidth": 991
+        },
+        {
+          "alt": "5G 消息 Chatbot 交互规范体系项目界面",
+          "complete": true,
+          "naturalWidth": 991
+        },
+        {
+          "alt": "友讯达数据大屏项目界面",
+          "complete": true,
+          "naturalWidth": 991
+        },
+        {
+          "alt": "生成式形态实验实验视觉",
           "complete": true,
           "naturalWidth": 640
         },
         {
-          "alt": "AI 原型流程实验占位视觉",
-          "complete": true,
-          "naturalWidth": 640
-        },
-        {
-          "alt": "材质与视觉研究占位视觉",
-          "complete": true,
-          "naturalWidth": 640
-        },
-        {
-          "alt": "AI 工具探索占位视觉",
+          "alt": "AI 原型流程实验实验视觉",
           "complete": true,
           "naturalWidth": 640
         },
@@ -204,7 +219,7 @@
     "interactionState": {
       "gridVisible": true,
       "selectedTab": "Recruiters",
-      "themeIndex": "09"
+      "themeIndex": "02"
     },
     "mobileMenuWorks": null,
     "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",
@@ -224,9 +239,9 @@
       "clientWidth": 390,
       "horizontalOverflow": false,
       "loadingHidden": true,
-      "themeBackground": "#f7f7f4",
-      "workCards": 3,
-      "explorationCards": 4,
+      "themeBackground": "#ffffff",
+      "workCards": 6,
+      "explorationCards": 2,
       "audienceTabs": 6,
       "images": [
         {
@@ -245,22 +260,27 @@
           "naturalWidth": 390
         },
         {
-          "alt": "生成式形态实验占位视觉",
+          "alt": "国家能源集团：载体轨迹定位系统项目界面",
           "complete": true,
           "naturalWidth": 390
         },
         {
-          "alt": "AI 原型流程实验占位视觉",
+          "alt": "5G 消息 Chatbot 交互规范体系项目界面",
           "complete": true,
           "naturalWidth": 390
         },
         {
-          "alt": "材质与视觉研究占位视觉",
+          "alt": "友讯达数据大屏项目界面",
           "complete": true,
           "naturalWidth": 390
         },
         {
-          "alt": "AI 工具探索占位视觉",
+          "alt": "生成式形态实验实验视觉",
+          "complete": true,
+          "naturalWidth": 390
+        },
+        {
+          "alt": "AI 原型流程实验实验视觉",
           "complete": true,
           "naturalWidth": 390
         },
@@ -275,7 +295,7 @@
     "interactionState": {
       "gridVisible": true,
       "selectedTab": "Recruiters",
-      "themeIndex": "09"
+      "themeIndex": "02"
     },
     "mobileMenuWorks": true,
     "recruiterCopy": "我是一名产品设计师，长期专注复杂 B 端系统、工业 HMI、AI 工作流与设计系统。",

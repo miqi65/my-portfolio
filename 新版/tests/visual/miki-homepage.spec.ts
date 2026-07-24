@@ -17,8 +17,8 @@ test.describe("Miki homepage", () => {
 
   test("renders the intended content without viewport overflow", async ({ page }) => {
     await expect(page.locator(".hero-title")).toContainText("Miki");
-    await expect(page.locator(".project-card")).toHaveCount(3);
-    await expect(page.locator(".exploration-card")).toHaveCount(4);
+    await expect(page.locator(".project-row")).toHaveCount(6);
+    await expect(page.locator(".exploration-card")).toHaveCount(2);
     await expect(page.locator('.audience-tabs [role="tab"]')).toHaveCount(6);
     await expectNoHorizontalOverflow(page);
 

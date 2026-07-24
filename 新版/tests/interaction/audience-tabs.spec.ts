@@ -8,6 +8,11 @@ test("switches the audience copy while retaining all audience options", async ({
   await expect(tabs).toHaveCount(6);
   await expect(page.getByRole("tab", { name: "For anyone" })).toHaveAttribute("aria-selected", "true");
 
+  await page.getByRole("tab", { name: "For anyone" }).focus();
+  await page.getByRole("tab", { name: "For anyone" }).press("ArrowRight");
+  await expect(page.getByRole("tab", { name: "Recruiters" })).toBeFocused();
+  await expect(page.getByRole("tab", { name: "Recruiters" })).toHaveAttribute("aria-selected", "true");
+
   await page.getByRole("tab", { name: "Engineers" }).click();
   await expect(page.getByRole("tab", { name: "Engineers" })).toHaveAttribute("aria-selected", "true");
   await expect(page.locator(".hero-title")).toContainText("工程约束");
