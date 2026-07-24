@@ -63,18 +63,24 @@ export default function Portfolio() {
   }, []);
 
   const currentTheme = themes[themeIndex];
-  const isDefaultTheme = themeIndex === 0;
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.style.setProperty("--page-background", currentTheme.bg);
+    root.style.setProperty("--page-foreground", currentTheme.ink);
+  }, [currentTheme]);
+
   const style = useMemo(
     () =>
       ({
-        "--page-bg": isDefaultTheme ? "#ffffff" : currentTheme.bg,
-        "--ink": isDefaultTheme ? "#000000" : currentTheme.ink,
-        "--muted": isDefaultTheme ? "rgb(0 0 0 / 58%)" : currentTheme.muted,
+        "--page-bg": currentTheme.bg,
+        "--ink": currentTheme.ink,
+        "--muted": currentTheme.muted,
         "--card": currentTheme.card,
         "--card-ink": currentTheme.cardInk,
         "--accent": currentTheme.accent,
       }) as CSSProperties,
-    [currentTheme, isDefaultTheme],
+    [currentTheme],
   );
 
   const audienceCopy = audiences.find((item) => item.key === audience)?.copy ?? audiences[0].copy;

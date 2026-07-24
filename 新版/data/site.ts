@@ -189,7 +189,7 @@ export const methods = [
 ];
 
 export const themes = [
-  { bg: "#f7f7f4", ink: "#11110f", muted: "#67675f", card: "#20211f", cardInk: "#f6f6f2", accent: "#11110f" },
+  { bg: "#ffffff", ink: "#000000", muted: "#6b6b6b", card: "#20211f", cardInk: "#f6f6f2", accent: "#000000" },
   { bg: "#f4efe6", ink: "#1f1b16", muted: "#736b61", card: "#28231e", cardInk: "#f7f0e6", accent: "#aa503e" },
   { bg: "#e8f0ea", ink: "#122018", muted: "#5d6d62", card: "#183126", cardInk: "#edf5ef", accent: "#26724b" },
   { bg: "#e9eef6", ink: "#111927", muted: "#5f6b7e", card: "#18263c", cardInk: "#eef4ff", accent: "#365fb7" },
