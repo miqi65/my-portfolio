@@ -46,7 +46,7 @@ export const projects = [
     category: "工业 AI 表面质检 HMI / 工业软件系统",
     role: "产品设计",
     summary: "把偏工程师工具的检测系统，重构为能支撑工厂多角色协作的工业 AI 质检 HMI 标准产品。",
-    image: "/images/work/industrial-ai-detection/00-card.webp",
+    image: "/images/work/industrial-ai-detection/00-card-green-laptop.webp",
     tone: "graphite",
   },
   {
@@ -55,7 +55,7 @@ export const projects = [
     category: "B2B 控制系统 / 智能制造",
     role: "产品设计",
     summary: "重构关键控制流程和系统体验，让设备状态、生产任务与风险操作更容易理解和管理。",
-    image: "/images/work/pcba/00-card.webp",
+    image: "/images/work/pcba/00-card-blue-laptop.webp",
     tone: "slate",
   },
   {
@@ -64,7 +64,7 @@ export const projects = [
     category: "仓储管理系统 / Web 与 RF 终端",
     role: "产品设计",
     summary: "将 Web 管理端与 RF 终端的高频结构、流程与权限边界，收敛为标准化、可扩展的交付框架。",
-    image: "/images/work/wms/00-card.webp",
+    image: "/images/work/wms/00-card-red-devices.webp",
     tone: "blue",
   },
   {
@@ -73,7 +73,7 @@ export const projects = [
     category: "GIS 定位追踪 / 移动端 UX 设计",
     role: "主设计师",
     summary: "重塑移动端载体跟踪与预警机制，覆盖现场巡检、后台调度和管理层三类核心用户角色。",
-    image: "/images/work/gps-2/00-card.webp",
+    image: "/images/work/gps-2/00-card-green-phones.webp",
     tone: "graphite",
   },
   {
@@ -82,7 +82,7 @@ export const projects = [
     category: "5G 通信 / 交互规范体系",
     role: "交互设计负责人",
     summary: "针对受限入口和碎片化设备渲染，建立可跨项目复用的最小公约数适配规范。",
-    image: "/images/work/5g-chatbot/00-card.webp",
+    image: "/images/work/5g-chatbot/00-card-campus.webp",
     tone: "slate",
   },
   {
@@ -91,22 +91,22 @@ export const projects = [
     category: "智能工厂数据可视化 / 决策大屏",
     role: "主设计师",
     summary: "将产能、设备、质量与异常状态转化为集中化的大屏监控体验，为管理决策提供清晰依据。",
-    image: "/images/work/factory-dashboard/00-card.webp",
+    image: "/images/work/factory-dashboard/00-card-display.webp",
     tone: "blue",
   },
 ];
 
 export const explorations = [
   {
-    title: "生成式形态实验",
-    description: "项目说明、使用工具与实验过程待补充。",
-    image: "/images/explorations/generative-form.webp",
+    title: "AI试验站",
+    description: "ai拓展小实验",
+    image: "/images/explorations/despair-academy-cover.webp",
     className: "exploration-featured",
   },
   {
     title: "AI 原型流程实验",
-    description: "项目说明、使用工具与实验过程待补充。",
-    image: "/images/explorations/prototype-collage.webp",
+    description: "项目说明、使用工具与过程。",
+    image: "/images/ds-ai/card.webp",
     className: "exploration-wide",
   },
   {

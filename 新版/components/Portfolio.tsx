@@ -222,7 +222,7 @@ export default function Portfolio() {
       <section id="work" className="section work-section">
         <div className="section-heading content-column">
           <h2>Selected work</h2>
-          <p>真实项目内容来自现有作品集。尚未确认的年份与成果数据暂不展示。</p>
+          <p>真实项目内容来自现有作品集</p>
         </div>
         <div className="work-list">
           {projects.map((project, index) => (
@@ -291,7 +291,6 @@ export default function Portfolio() {
           <div className="explorations-intro">
             <p>AI personal explorations</p>
             <h2>探索人与 AI 一起思考、设计和制作的新方式。</h2>
-            <p>以下为个人兴趣拓展区域。具体项目名称、工具与过程将在资料确认后补充。</p>
           </div>
           <div className="exploration-grid">
             {explorations.slice(0, 2).map((item) => (
