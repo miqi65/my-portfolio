@@ -250,10 +250,8 @@ export default function Portfolio() {
 
       <section id="values" className="section values-section">
         <div className="content-column values-title">
-          <h2>清晰</h2>
-          <h2>周到</h2>
-          <h2>有用</h2>
-          <h2>能落地</h2>
+          <h2>把复杂变清晰</h2>
+          <h2>把设计做成结果</h2>
         </div>
         <div className="content-column value-notes">
           <div className="value-description">
@@ -270,7 +268,7 @@ export default function Portfolio() {
       <section id="background" className="section background-section">
         <div className="content-column experience-list">
           <p className="background-intro">
-            我有 12 年产品与视觉设计经验，经历从品牌视觉、消费端界面到复杂 B 端系统与工业 AI 产品。以下职责与领域来自现有简历和作品集事实审计。
+            我有 10+ 年产品与视觉设计经验，经历从品牌视觉、消费端界面到复杂 B 端系统与工业 AI 产品。以下职责与领域来自现有简历和作品集事实审计。
           </p>
           {experience.map((item) => (
             <article className="experience-item" key={`${item.company}-${item.year}`}>
@@ -290,7 +288,7 @@ export default function Portfolio() {
         <div className="content-column explorations-layout">
           <div className="explorations-intro">
             <p>AI personal explorations</p>
-            <h2>探索人与 AI 一起思考、设计和制作的新方式。</h2>
+            <h2>探索人与 AI 一起思考、设计和落地的新方式。</h2>
           </div>
           <div className="exploration-grid">
             {explorations.slice(0, 2).map((item) => (
@@ -312,7 +310,7 @@ export default function Portfolio() {
         <div className="content-column about-grid">
           <div className="about-intro">
             <p>
-              杨蜜萁是一名拥有 12 年产品与视觉设计经验的产品设计师，专注复杂 B 端系统、工业 HMI、AI 应用工作流与 Design System。她把模糊需求转化为清晰流程、可演示原型、设计规则与开发前风险识别，并在 UX 策略、视觉系统和前端协作之间推进产品落地。
+              我是一名拥有10+年产品与视觉设计经验的产品设计师，专注B端系统、工业 HMI、AI 应用工作流与 Design System。把模糊需求转化为清晰流程、可演示原型、设计规则与开发前风险识别，并在 UX 策略、视觉系统和前端协作之间推进产品落地。
             </p>
           </div>
           <div className="about-list capabilities">
@@ -351,7 +349,7 @@ export default function Portfolio() {
           <div className="contact-copy">
             <div>
               <p className="contact-kicker"><i aria-hidden="true" />跟我一起工作吧</p>
-              <h2>关注工业 AI、HMI 与复杂 B 端产品。</h2>
+              <h2>关注AI、系统设计与设计转化</h2>
             </div>
             <div className="contact-links">
               <a href="mailto:miqi723@163.com">miqi723@163.com</a>
